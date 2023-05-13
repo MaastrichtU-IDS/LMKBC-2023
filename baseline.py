@@ -2,8 +2,18 @@ import argparse
 import csv
 import json
 import logging
+import os
 import requests
 import random
+
+import config
+
+local_cache_path = f'{config.DATA_PATH}\\item_cache.json'
+local_cache = dict()
+if  os.path.exists(local_cache_path):
+    local_cache = json.load(open(local_cache_path))
+
+    
 
 from transformers import (
     AutoModelForMaskedLM,
@@ -33,11 +43,17 @@ def read_lm_kbc_jsonl(file_path: str):
 
 # Disambiguation baseline
 def disambiguation_baseline(item):
+    if item in local_cache:
+        return local_cache[item]
     try:
         url = f"https://www.wikidata.org/w/api.php?action=wbsearchentities&search={item}&language=en&format=json"
         data = requests.get(url).json()
         # Return the first id (Could upgrade this in the future)
-        return data['search'][0]['id']
+        first_id = data['search'][0]['id']
+        local_cache[item]=first_id
+        with open(local_cache_path,"w") as f:
+            json.dump(local_cache,f)
+        return first_id
     except:
         return item
 
