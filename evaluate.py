@@ -13,20 +13,24 @@ def is_none_gts(gts: List[str]) -> bool:
 
 
 def is_none_preds(preds: List[str]) -> bool:
-    return preds is None or len(preds) == 0 or (
-            len(preds) == 1 and
-            (
-                    list(preds)[0] is None or
-                    list(preds)[0] is np.nan or
-                    list(preds)[0].lower() in {"", "none", "null"}
+    return (
+        preds is None
+        or len(preds) == 0
+        or (
+            len(preds) == 1
+            and (
+                list(preds)[0] is None
+                or list(preds)[0] is np.nan
+                or list(preds)[0].lower() in {"", "none", "null"}
             )
+        )
     )
 
 
 def true_positives(preds: List[str], gts: List[str]) -> int:
     tp = 0
     for pred in preds:
-        if (pred in gts):
+        if pred in gts:
             tp += 1
 
     return tp
@@ -57,6 +61,7 @@ def recall(preds: List[str], gts: List[str]) -> float:
     try:
         return true_positives(preds, gts) / len(gts)
     except TypeError:
+        print(f"recall 0.0 gts={gts}")
         return 0.0
 
 
@@ -74,13 +79,13 @@ def rows_to_dict(rows: List[Dict]) -> Dict:
 def evaluate_per_sr_pair(pred_rows, gt_rows) -> List[Dict[str, float]]:
     pred_dict = rows_to_dict(pred_rows)
     gt_dict = rows_to_dict(gt_rows)
-    
+
     results = []
 
-    for subj, rel in gt_dict:
+    for subj, rel in gt_dict.keys():
         # get the ground truth objects
         gts = gt_dict[(subj, rel)]
-        
+
         # get the predictions
         preds = pred_dict[(subj, rel)]
 
@@ -89,13 +94,9 @@ def evaluate_per_sr_pair(pred_rows, gt_rows) -> List[Dict[str, float]]:
         r = recall(preds, gts)
         f1 = f1_score(p, r)
 
-        results.append({
-            "SubjectEntity": subj,
-            "Relation": rel,
-            "p": p,
-            "r": r,
-            "f1": f1
-        })
+        results.append(
+            {"SubjectEntity": subj, "Relation": rel, "p": p, "r": r, "f1": f1}
+        )
 
         # if p > 1.0 or r > 1.0:
         #     print(f"{subj} {rel} {p} {r} {f1} {gts} {preds}")
@@ -108,11 +109,13 @@ def combine_scores_per_relation(scores_per_sr: List[Dict[str, float]]) -> dict:
     for r in scores_per_sr:
         if r["Relation"] not in scores:
             scores[r["Relation"]] = []
-        scores[r["Relation"]].append({
-            "p": r["p"],
-            "r": r["r"],
-            "f1": r["f1"],
-        })
+        scores[r["Relation"]].append(
+            {
+                "p": r["p"],
+                "r": r["r"],
+                "f1": r["f1"],
+            }
+        )
 
     for rel in scores:
         scores[rel] = {
@@ -125,21 +128,23 @@ def combine_scores_per_relation(scores_per_sr: List[Dict[str, float]]) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate Precision, Recall and F1-score of predictions")
+    parser = argparse.ArgumentParser(
+        description="Evaluate Precision, Recall and F1-score of predictions"
+    )
 
     parser.add_argument(
         "-p",
         "--predictions",
         type=str,
         required=True,
-        help="Path to the predictions file (required)"
+        help="Path to the predictions file (required)",
     )
     parser.add_argument(
         "-g",
         "--ground_truth",
         type=str,
         required=True,
-        help="Path to the ground truth file (required)"
+        help="Path to the ground truth file (required)",
     )
 
     args = parser.parse_args()
@@ -151,9 +156,12 @@ def main():
     scores_per_relation = combine_scores_per_relation(scores_per_sr_pair)
 
     scores_per_relation["*** Average ***"] = {
-        "p": sum([x["p"] for x in scores_per_relation.values()]) / len(scores_per_relation),
-        "r": sum([x["r"] for x in scores_per_relation.values()]) / len(scores_per_relation),
-        "f1": sum([x["f1"] for x in scores_per_relation.values()]) / len(scores_per_relation),
+        "p": sum([x["p"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
+        "r": sum([x["r"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
+        "f1": sum([x["f1"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
     }
 
     print(pd.DataFrame(scores_per_relation).transpose().round(3))

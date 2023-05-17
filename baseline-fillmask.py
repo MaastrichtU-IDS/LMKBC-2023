@@ -5,21 +5,26 @@ import logging
 import os
 import requests
 import random
-
+import torch
 import config
+from torch.utils.data import Dataset, DataLoader
+from transformers import TrainingArguments
+
+from transformers import Trainer
 
 local_cache_path = f'{config.DATA_DIR}\\item_cache.json'
 local_cache = dict()
 if os.path.exists(local_cache_path):
     local_cache = json.load(open(local_cache_path))
 
-MAX_LENGTH = 512
 
 from transformers import (
     AutoModelForMaskedLM,
     AutoModelForCausalLM,
     AutoTokenizer,
     pipeline,
+    TextDataset,
+    BertTokenizer,
 )
 from typing import List
 
@@ -56,6 +61,17 @@ def disambiguation_baseline(item):
         return first_id
     except:
         return item
+
+
+def train(model, train_dataset, eval_dataset):
+    training_args = TrainingArguments("test_trainer")
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        train_dataset=train_dataset,
+        eval_dataset=eval_dataset,
+    )
+    trainer.train()
 
 
 # Read prompt templates from a CSV file
@@ -104,16 +120,11 @@ def run(args):
     # Load the model
     model_type = args.model
     logger.info(f"Loading the model \"{model_type}\"...")
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_type,
-        padding_side='left',
-    )
+    tokenizer = AutoTokenizer.from_pretrained(model_type)
     model = (
         AutoModelForMaskedLM.from_pretrained(model_type)
         if "bert" in model_type.lower()
-        else AutoModelForCausalLM.from_pretrained(
-            model_type,
-        )
+        else AutoModelForCausalLM.from_pretrained(model_type)
     )
     task = "fill-mask" if "bert" in model_type.lower() else "text-generation"
     # pipe = pipeline(task=task, model=model, tokenizer=tokenizer, top_k=args.top_k, device=args.gpu, fp16=args.fp16)
@@ -134,6 +145,20 @@ def run(args):
     # Instantiate templates with train data
     instantiated_templates = []
     if task == "text-generation":
+        logger.info(f"Reading train data from \"{args.train_data}\"...")
+        train_data = read_train_data_from_csv(args.train_data)
+        logger.info("Instantiating templates with train data...")
+        for row in train_data:
+            relation = row['Relation']
+            prompt_template = prompt_templates[relation]
+            object_entities = row['ObjectEntities']
+            answers = ', '.join(object_entities)
+            instantiated_example = (
+                prompt_template.format(subject_entity=row["SubjectEntity"])
+                + f" {answers}"
+            )
+            instantiated_templates.append(instantiated_example)
+    else:
         logger.info(f"Reading train data from \"{args.train_data}\"...")
         train_data = read_train_data_from_csv(args.train_data)
         logger.info("Instantiating templates with train data...")
@@ -171,9 +196,18 @@ def run(args):
     # Run the model
     logger.info(f"Running the model...")
     if task == 'fill-mask':
-        outputs = pipe(prompts, batch_size=args.batch_size)
+        training_args = TrainingArguments("test_trainer")
+        trainer = Trainer(
+            model=model,
+            args=training_args,
+            train_dataset=train_dataset,
+            eval_dataset=eval_dataset,
+        )
+        trainer.train()
+        outputs = trainer.predict()
+        # outputs = pipe(prompts, batch_size=args.batch_size)
     else:
-        outputs = pipe(prompts, batch_size=args.batch_size, max_length=512)
+        outputs = pipe(prompts, batch_size=args.batch_size, max_length=256)
 
     results = []
     for row, output, prompt in zip(input_rows, outputs, prompts):
