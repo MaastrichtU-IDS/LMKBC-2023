@@ -69,13 +69,7 @@ class MLMDataset(Dataset):
         return len(self.data)
 
 
-def train(
-    # model_name: str,
-    # train_fns: str,
-    # dev_fn: str,
-    # test_fn: str,
-    # template_fn: str,
-):
+def train():
     bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
     bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
         args.pretrain_model_name, config=bert_config
@@ -148,72 +142,8 @@ def train(
     print(f"dev results: ")
     print(dev_results)
 
-    return
 
-
-def test(
-    test_fn: str,
-    bin_dir: str,
-    template_fn: str,
-):
-    bert_config = transformers.AutoConfig.from_pretrained(bin_dir)
-    bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
-        bin_dir, config=bert_config
-    )
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(bin_dir)
-    bert_collator = transformers.DataCollatorForTokenClassification(
-        tokenizer=bert_tokenizer, padding="max_length", max_length=128
-    )
-
-    training_args = transformers.TrainingArguments(
-        output_dir=config.BIN_DIR,
-        overwrite_output_dir=False,
-        evaluation_strategy='epoch',
-        per_device_train_batch_size=16,
-        per_device_eval_batch_size=64,
-        per_gpu_eval_batch_size=64,
-        gradient_accumulation_steps=1,
-        eval_accumulation_steps=8,
-        eval_delay=0,
-        learning_rate=4e-4,
-        weight_decay=0,
-        num_train_epochs=args.train_epoch,
-        lr_scheduler_type='linear',
-        warmup_ratio=0.1,
-        log_level='debug',
-        logging_dir=config.LOGGING_DIR,
-        logging_strategy='epoch',
-        save_strategy='epoch',
-        save_total_limit=2,
-        fp16=True,
-        dataloader_num_workers=0,
-        auto_find_batch_size=False,
-        greater_is_better=False,
-        load_best_model_at_end=True,
-        no_cuda=False,
-    )
-    trainer = transformers.Trainer(
-        model=bert_model,
-        data_collator=bert_collator,
-        tokenizer=bert_tokenizer,
-        args=training_args,
-    )
-
-    inference_dataset = MLMDataset(
-        data_fn=test_fn, tokenizer=bert_tokenizer, template_fn=template_fn
-    )
-    print(f"eval dataset size: {len(inference_dataset)}")
-
-    inference_results = trainer.predict(inference_dataset)
-    print(inference_results.keys())
-
-
-def test_pipeline(
-    # test_fn: str,
-    # bin_dir: str,
-    # template_fn: str,
-    # output,
-):
+def test_pipeline():
     bert_config = transformers.AutoConfig.from_pretrained(args.bin_dir)
     bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
         args.bin_dir, config=bert_config

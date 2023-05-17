@@ -12,7 +12,7 @@ def run():
     #     '''
 
     cmd_run_fillmask = f"""
-   python model_fillmask.py  --test_fn {TEST_FILE} --template_fn prompts.csv  --output {OUTPUT_FILE} --train_fn data/train.jsonl --pretrain_model_name bert-large-cased --train_batch_size 128 --gpu 0 --top_k 15 --threshold 0.1  --dev_fn  data/train_tiny.jsonl --mode "test" --bin_dir {config.BIN_DIR}\\best_ckpt  --train_epoch 10 --test_batch_size 64
+   python src\\model_fillmask.py  --test_fn {TEST_FILE} --template_fn prompts.csv  --output {OUTPUT_FILE} --train_fn data/train.jsonl --pretrain_model_name bert-large-cased --train_batch_size 128 --gpu 0 --top_k 10 --threshold 0.3  --dev_fn  data/train_tiny.jsonl --mode "test" --bin_dir {config.BIN_DIR}\\best_ckpt  --train_epoch 10 --test_batch_size 64
     
     """
     #     cmd_run_qa = f'''
