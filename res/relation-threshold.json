@@ -1,0 +1,23 @@
+{
+    "band-has-member": 0.01,
+    "book-has-genre": 0.1,
+    "company-parent-org": 0.1,
+    "compound-has-parts": 0.1,
+    "country-borders-country": 0.1,
+    "country-has-states": 0.00001,
+    "country-official-language": 0.1,
+    "drug-treats-condition": 0.01,
+    "footballer-play-position": 0.1,
+    "literarywork-has-translation-in-language": 0.1,
+    "person-cause-of-death": 0.1,
+    "person-has-autobiography": 0.1,
+    "person-has-employer": 0.1,
+    "person-has-noble-prize": 0.2,
+    "person-has-profession": 0.1,
+    "person-has-spouse": 0.05,
+    "person-place-of-death": 0.1,
+    "person-plays-instrument": 0.1,
+    "person-speaks-language": 0.1,
+    "river-basins-country": 0.01,
+    "state-shares-borders": 0.02
+}

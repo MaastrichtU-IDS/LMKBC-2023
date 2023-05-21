@@ -39,39 +39,32 @@ def true_positives(preds: List[str], gts: List[str]) -> int:
 def precision(preds: List[str], gts: List[str]) -> float:
     # when nothing is predicted, precision 1 irrespective of the ground truth value
     if is_none_preds(preds):
-        if is_none_preds(gts):
-            return 1.0
-        else:
-            return 0.0
+        return 1
+
+    # When the ground truth object is none
+    if is_none_preds(gts):
+        return 1.0 if is_none_preds(preds) else 0.0
 
     # When the ground truth object is not none
     try:
-        return true_positives(preds, gts) / len(preds)
-    except TypeError as e:
-        e.with_traceback()
+        return min(true_positives(preds, gts) / len(preds), 1.0)
+    except TypeError:
         return 0.0
 
 
 def recall(preds: List[str], gts: List[str]) -> float:
     # When the ground truth object is none return 1 even if there are predictions (edge case)
     if is_none_preds(gts):
-        if is_none_preds(preds):
-            return 1.0
-        else:
-            return 0.0
+        return 1.0
 
     # When the ground truth object is not none
     try:
         return true_positives(preds, gts) / len(gts)
-    except TypeError as e:
-        e.with_traceback()
-        print(f"recall 0.0 gts={gts}")
+    except TypeError:
         return 0.0
 
 
 def f1_score(p: float, r: float) -> float:
-    if p < 0.00001 and r < 0.00001:
-        return 0.0
     try:
         return (2 * p * r) / (p + r)
     except ZeroDivisionError:
@@ -88,7 +81,7 @@ def evaluate_per_sr_pair(pred_rows, gt_rows) -> List[Dict[str, float]]:
 
     results = []
 
-    for subj, rel in gt_dict.keys():
+    for subj, rel in gt_dict:
         # get the ground truth objects
         gts = gt_dict[(subj, rel)]
 
@@ -161,7 +154,7 @@ def main():
     scores_per_sr_pair = evaluate_per_sr_pair(pred_rows, gt_rows)
     scores_per_relation = combine_scores_per_relation(scores_per_sr_pair)
 
-    scores_per_relation["*** Relation Average ***"] = {
+    scores_per_relation["*** Average ***"] = {
         "p": sum([x["p"] for x in scores_per_relation.values()])
         / len(scores_per_relation),
         "r": sum([x["r"] for x in scores_per_relation.values()])
@@ -170,10 +163,7 @@ def main():
         / len(scores_per_relation),
     }
 
-    scores_per_relation_pd = pd.DataFrame(scores_per_relation)
-
-    print(scores_per_relation_pd.transpose().round(3))
-    average_pd = scores_per_relation_pd.a
+    print(pd.DataFrame(scores_per_relation).transpose().round(3))
 
 
 if __name__ == "__main__":

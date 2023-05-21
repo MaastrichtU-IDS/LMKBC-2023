@@ -63,3 +63,11 @@ def create_prompt(
             subject_entity=subject_entity, mask_token=tokenizer.mask_token
         )
     return prompt
+
+
+def recover_mask_word_func(mask_word, bert_tokenizer):
+    word_resume = bert_tokenizer.convert_tokens_to_string(mask_word)
+    index_padding = word_resume.find(bert_tokenizer.padding_token)
+    if index_padding > -1:
+        word_resume = word_resume[:index_padding]
+    return word_resume
