@@ -37,53 +37,37 @@ class MLMDataset(Dataset):
                 prompt_templates = {
                     row['Relation']: row['PromptTemplate'] for row in reader
                 }
-            mask_pad = [tokenizer.mask_token] * config.MASK_TOKEN_SIZE
             for row in train_data:
                 relation = row['Relation']
                 prompt_template = prompt_templates[relation]
                 object_entities = row['ObjectEntities']
                 subject = row["SubjectEntity"]
-                # if subject not in tokenizer.vocab:
-                #     tokenizer.add_tokens(subject)
+                if subject not in tokenizer.vocab:
+                    tokenizer.add_tokens(subject)
                 for obj in object_entities:
-                    # if obj not in tokenizer.vocab:
-                    #     tokenizer.add_tokens(obj)
-                    word_tokens = tokenizer.tokenize(obj)
-                    if len(word_tokens) > max_obj_length:
-                        max_obj_length = len(word_tokens)
-                    word_tokens.extend(
-                        [tokenizer.pad_token]
-                        * (config.MASK_TOKEN_SIZE - len(word_tokens))
+                    if obj == '':
+                        obj = config.EMPTY_TOKEN
+                    if obj not in tokenizer.vocab:
+                        tokenizer.add_tokens(obj)
+                    label_sentence = prompt_template.format(
+                        subject_entity=subject, mask_token=obj
                     )
-                    # word_pad, mask_pad = mask_word_func(obj, tokenizer)
-                    # label_sentence = prompt_template.format(
-                    #     subject_entity=subject, mask_token=word_pad
-                    # )
-                    # obj_token = tokenizer.tokenize(obj)
-                    # mask_token = " ".join([tokenizer.mask_token] * len(obj_token))
-
                     input_sentence = prompt_template.format(
                         subject_entity=subject, mask_token=tokenizer.mask_token
                     )
-                    # label_tokens = tokenizer.tokenize(label_sentence)
+                    label_tokens = tokenizer.tokenize(label_sentence)
 
                     input_tokens = tokenizer.tokenize(input_sentence)
-
-                    mask_input_tokens = list_replace_func(
-                        input_tokens, tokenizer.mask_token, mask_pad
-                    )
-                    mask_label_tokens = list_replace_func(
-                        input_tokens, tokenizer.mask_token, word_tokens
-                    )
-                    label_ids = tokenizer.convert_tokens_to_ids(mask_label_tokens)
-                    input_ids = tokenizer.convert_tokens_to_ids(mask_input_tokens)
+                    label_ids = tokenizer.convert_tokens_to_ids(label_tokens)
+                    input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
                     attention_mask = [
-                        0 if v == tokenizer.mask_token else 1 for v in mask_input_tokens
+                        0 if v == tokenizer.mask_token else 1 for v in input_tokens
                     ]
                     if len(label_ids) != len(input_ids):
-                        print("mask_label_tokens", mask_label_tokens)
-                        print("mask_input_tokens", mask_input_tokens)
-                        print("word_tokens length", len(word_tokens))
+                        print("label_tokens ", label_tokens)
+                        print("input_tokens ", input_tokens)
+                        print("obj ", obj)
+                        # print("word_tokens length", len(word_tokens))
                         raise Exception("length of label and input is not equal")
 
                     if len(input_ids) > max_sentence_length:
@@ -92,11 +76,11 @@ class MLMDataset(Dataset):
                     item = {
                         "labels": label_ids,
                         "input_ids": input_ids,
-                        "attention_mask": attention_mask,
+                        # "attention_mask": attention_mask,
                     }
                     self.data.append(item)
-                    with open(pickle_fn, 'wb') as f:
-                        pickle.dump(self.data, f)
+            with open(pickle_fn, 'wb') as f:
+                pickle.dump(self.data, f)
             print("max_sentence_length", max_sentence_length)
             print("max_obj_length", max_obj_length)
 

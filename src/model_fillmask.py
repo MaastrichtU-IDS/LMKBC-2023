@@ -22,7 +22,7 @@ from transformers import (
 import os
 from dataset import MLMDataset
 import config
-from old_evaluate import combine_scores_per_relation, evaluate_per_sr_pair
+from evaluate import combine_scores_per_relation, evaluate_per_sr_pair
 from file_io import read_lm_kbc_jsonl
 import util
 
@@ -42,12 +42,14 @@ entity_fn = f"{config.DATA_DIR}\\entity_set.json"
 
 
 def train():
-    if os.path.exists(args.bin_dir):
-        bert_config = transformers.AutoConfig.from_pretrained(args.bin_dir)
+    output_dir = f"{config.BIN_DIR}\\{args.pretrain_model_name}"
+    best_dir = f"{output_dir}\\{args.bin_dir}"
+    if os.path.exists(best_dir):
+        bert_config = transformers.AutoConfig.from_pretrained(best_dir)
         bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
-            args.bin_dir, config=bert_config
+            best_dir, config=bert_config
         )
-        bert_tokenizer = transformers.AutoTokenizer.from_pretrained(args.bin_dir)
+        bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
     else:
         bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
         # print(bert_config)
@@ -60,7 +62,7 @@ def train():
     bert_collator = transformers.DataCollatorForTokenClassification(
         tokenizer=bert_tokenizer,
         padding="max_length",
-        max_length=128,
+        max_length=config.MAX_LENGTH,
     )
     train_dataset = MLMDataset(
         data_fn=args.train_fn, tokenizer=bert_tokenizer, template_fn=args.template_fn
@@ -74,21 +76,17 @@ def train():
         template_fn=args.template_fn,
     )
     bert_model.resize_token_embeddings(len(bert_tokenizer))
+
     training_args = transformers.TrainingArguments(
-        output_dir=config.BIN_DIR,
+        output_dir=output_dir,
         overwrite_output_dir=True,
         evaluation_strategy='epoch',
         per_device_train_batch_size=args.train_batch_size,
         per_device_eval_batch_size=64,
-        gradient_accumulation_steps=1,
         eval_accumulation_steps=8,
-        eval_delay=0,
-        learning_rate=4e-5,
-        weight_decay=0,
+        learning_rate=args.learning_rate,
         num_train_epochs=args.train_epoch,
-        lr_scheduler_type='linear',
         warmup_ratio=0.1,
-        log_level='debug',
         logging_dir=config.LOGGING_DIR,
         logging_strategy='epoch',
         save_strategy='epoch',
@@ -111,7 +109,7 @@ def train():
     )
     # compute_metrics=compute_metrics)
     trainer.train()
-    trainer.save_model(output_dir=args.bin_dir)
+    trainer.save_model(output_dir=best_dir)
     # bert_tokenizer.save_pretrained(args.bin_dir)
     dev_results = trainer.evaluate(dev_dataset)
     # trainer.model
@@ -119,88 +117,14 @@ def train():
     print(dev_results)
 
 
-def softmax(vec):
-    exponential = np.exp(vec)
-    probabilities = exponential / np.sum(exponential)
-    return probabilities
-
-
-def predict():
-    bert_config = transformers.AutoConfig.from_pretrained(args.bin_dir)
-    bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
-        args.bin_dir, config=bert_config
-    )
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(args.bin_dir)
-    bert_collator = transformers.DataCollatorForTokenClassification(
-        tokenizer=bert_tokenizer, padding="max_length", max_length=128
-    )
-    dev_dataset = MLMDataset(
-        data_fn=args.dev_fn,
-        tokenizer=bert_tokenizer,
-        template_fn=args.template_fn,
-    )
-    bert_model.resize_token_embeddings(len(bert_tokenizer))
-    training_args = transformers.TrainingArguments(
-        output_dir=config.BIN_DIR,
-        overwrite_output_dir=True,
-        evaluation_strategy='epoch',
-        per_device_train_batch_size=args.train_batch_size,
-        per_device_eval_batch_size=64,
-        gradient_accumulation_steps=1,
-        eval_accumulation_steps=8,
-        eval_delay=0,
-        learning_rate=4e-5,
-        weight_decay=0,
-        num_train_epochs=args.train_epoch,
-        lr_scheduler_type='linear',
-        warmup_ratio=0.1,
-        log_level='debug',
-        logging_dir=config.LOGGING_DIR,
-        logging_strategy='epoch',
-        save_strategy='epoch',
-        save_total_limit=2,
-        fp16=True,
-        dataloader_num_workers=0,
-        auto_find_batch_size=False,
-        greater_is_better=False,
-        load_best_model_at_end=True,
-        no_cuda=False,
-    )
-
-    trainer = transformers.Trainer(
-        model=bert_model,
-        data_collator=bert_collator,
-        args=training_args,
-        eval_dataset=dev_dataset,
-        tokenizer=bert_tokenizer,
-    )
-    outputs = trainer.predict(dev_dataset)
-    predictions, labels, _ = outputs
-    pred = predictions[0][:30]
-    label = labels[0][:30]
-    print(pred)
-    print(label)
-    pred_top = pred[7, :10]
-    pred_exp = softmax(pred_top)
-    # pred_index = np.argmax(pred, axis=1)
-    pred_tokens = bert_tokenizer.convert_ids_to_tokens(pred_index)
-    label_tpkens = bert_tokenizer.convert_ids_to_tokens(label)
-    print(pred_tokens)
-    print(label_tpkens)
-    # predicted_index = [np.argmax(pred[0, i]).item() for i in range(0, 24)]
-    # predicted_token = [
-    #     bert_tokenizer.convert_ids_to_tokens([predicted_index[x]]) for x in range(1, 24)
-    # ]
-    # print(predicted_token)
-    # print(outputs[0])
-
-
 def test_pipeline():
-    bert_config = transformers.AutoConfig.from_pretrained(args.bin_dir)
+    model_dir = f"{config.BIN_DIR}\\{args.pretrain_model_name}"
+    best_dir = f"{model_dir}\\{args.bin_dir}"
+    bert_config = transformers.AutoConfig.from_pretrained(best_dir)
     bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
-        args.bin_dir, config=bert_config
+        best_dir, config=bert_config
     )
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(args.bin_dir)
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
     bert_collator = transformers.DataCollatorForTokenClassification(
         tokenizer=bert_tokenizer, padding="max_length", max_length=128
     )
@@ -218,7 +142,7 @@ def test_pipeline():
     for row in test_rows:
         prompt = prompt_templates[row["Relation"]].format(
             subject_entity=row["SubjectEntity"],
-            mask_token=" ".join([bert_tokenizer.mask_token] * config.MASK_TOKEN_SIZE),
+            mask_token=bert_tokenizer.mask_token,
         )
         prompts.append(prompt)
         # entity_set.update(row[KEY_OBJS])
@@ -247,13 +171,11 @@ def test_pipeline():
         # print(row[KEY_OBJS])
         for seq in output:
             # if row[KEY_REL] in printed_relation:
-            print("seq", seq)
+            # print("seq", seq)
             if seq["score"] > rel_thres_dict[row[KEY_REL]]:
-                obj = util.recover_mask_word_func(
-                    seq["token_str"], bert_tokenizer=bert_tokenizer
-                )
-
-                print("obj:", obj)
+                obj = seq["token_str"]
+                if obj == config.EMPTY_TOKEN:
+                    obj = ''
                 if obj not in entity_set:
                     num_filtered += 1
                     continue
@@ -269,15 +191,19 @@ def test_pipeline():
         results.append(result_row)
     print("filtered entity number: ", num_filtered)
     # Save the results
-    logger.info(f"Saving the results to \"{args.output}\"...")
-    with open(args.output, "w") as f:
+    output_fn = f"{config.OUTPUT_DIR}\\{args.pretrain_model_name}_ressult.jsonl"
+    # if not os.path.exists(output_dir):
+    #     os.makedirs(output_dir)
+    logger.info(f"Saving the results to \"{output_fn}\"...")
+    with open(output_fn, "w") as f:
         for result in results:
             f.write(json.dumps(result) + "\n")
     evaluate()
 
 
 def evaluate():
-    pred_rows = read_lm_kbc_jsonl(args.output)
+    output_fn = f"{config.OUTPUT_DIR}\\{args.pretrain_model_name}_ressult.jsonl"
+    pred_rows = read_lm_kbc_jsonl(output_fn)
     gt_rows = read_lm_kbc_jsonl(args.test_fn)
 
     scores_per_sr_pair = evaluate_per_sr_pair(pred_rows, gt_rows)
@@ -343,6 +269,14 @@ if __name__ == "__main__":
         "--threshold",
         type=float,
         default=0.5,
+        help="Probability threshold (default: 0.5)",
+    )
+
+    parser.add_argument(
+        "-lr",
+        "--learning_rate",
+        type=float,
+        default=4e-5,
         help="Probability threshold (default: 0.5)",
     )
     parser.add_argument(
@@ -421,6 +355,3 @@ if __name__ == "__main__":
 
     if "test" in args.mode:
         test_pipeline()
-
-    if "predict" in args.mode:
-        predict()
