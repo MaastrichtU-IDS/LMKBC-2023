@@ -153,7 +153,7 @@ def test_pipeline():
             if obj not in entity_set:
                 num_entity_escape += 1
     print("escaped entity number: ", num_entity_escape)
-
+    "1 2 3 [maxk] [mask] [mask] 4  5 6"
     # Run the model
     logger.info(f"Running the model...")
 
