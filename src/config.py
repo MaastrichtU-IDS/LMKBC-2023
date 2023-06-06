@@ -12,7 +12,15 @@ LOGGING_DIR = f"{ROOT_PATH}\\logging"
 
 EMPTY_TOKEN = 'Empty Toke'
 MASK_TOKEN_SIZE = 50
-MAX_LENGTH = 16
+MAX_LENGTH = 512
+
+TRAIN_FN = f'{DATA_DIR}\\train.jsonl'
+TRAIN_TINY_FN = f'{DATA_DIR}\\train_tiny.jsonl'
+VAL_FN = f'{DATA_DIR}\\val.jsonl'
+
+KEY_OBJS = "ObjectEntities"
+KEY_REL = "Relation"
+KEY_SUB = "SubjectEntity"
 
 check_dir_list = [
     BIN_DIR,

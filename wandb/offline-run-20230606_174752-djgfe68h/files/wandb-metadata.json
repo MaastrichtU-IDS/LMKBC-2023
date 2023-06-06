@@ -1,0 +1,81 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.10.11",
+    "heartbeatAt": "2023-06-06T15:47:53.122166",
+    "startedAt": "2023-06-06T15:47:52.969074",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--test_fn",
+        "d:\\WorkSpace\\Maastricht\\LMKBC2023\\LMKBC_2023_WIN\\\\data\\triple_classification_test.jsonl",
+        "--template_fn",
+        "res\\prompts.csv",
+        "--output",
+        "d:\\WorkSpace\\Maastricht\\LMKBC2023\\LMKBC_2023_WIN\\\\output\\test_run-bert.jsonl",
+        "--train_fn",
+        "d:\\WorkSpace\\Maastricht\\LMKBC2023\\LMKBC_2023_WIN\\\\data\\triple_classification_train.jsonl",
+        "--pretrain_model_name",
+        "bert-base-cased",
+        "--train_batch_size",
+        "32",
+        "--gpu",
+        "0",
+        "--top_k",
+        "20",
+        "--threshold",
+        "0.1",
+        "--dev_fn",
+        "d:\\WorkSpace\\Maastricht\\LMKBC2023\\LMKBC_2023_WIN\\\\data\\triple_classification_dev.jsonl",
+        "--mode",
+        "train test",
+        "--bin_dir",
+        "best_ckpt",
+        "--train_epoch",
+        "30",
+        "--test_batch_size",
+        "128",
+        "--learning_rate",
+        "4e-5"
+    ],
+    "state": "running",
+    "program": "D:\\WorkSpace\\Maastricht\\LMKBC2023\\LMKBC_2023_WIN\\src\\nsp_model.py",
+    "codePath": "src\\nsp_model.py",
+    "git": {
+        "remote": "https://github.com/dongyang-cs/LMKBC_2023-WIN.git",
+        "commit": "1c30696f62e1247e642f0f89d07dfdc4e5d3845d"
+    },
+    "email": "dongyang-cs@outlook.com",
+    "root": "D:/WorkSpace/Maastricht/LMKBC2023/LMKBC_2023_WIN",
+    "host": "dy8p",
+    "username": "dongyang",
+    "executable": "D:\\Promgram\\Dev\\Miniconda\\envs\\LMKBC\\python.exe",
+    "cpu_count": 16,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 2000.0,
+        "min": 0.0,
+        "max": 2000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2000.0,
+            "min": 0.0,
+            "max": 2000.0
+        }
+    ],
+    "disk": {
+        "total": 1875.4853477478027,
+        "used": 1528.958179473877
+    },
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 31.672962188720703
+    }
+}

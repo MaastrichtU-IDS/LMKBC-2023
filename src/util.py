@@ -32,11 +32,23 @@ def disambiguation_baseline(item):
 
 
 # Read prompt templates from a CSV file
-def read_prompt_templates_from_csv(file_path: str):
+def file_read_prompt(file_path: str):
     with open(file_path, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         prompt_templates = {row['Relation']: row['PromptTemplate'] for row in reader}
     return prompt_templates
+
+
+def file_read_train(data_fn):
+    with open(data_fn, "r") as file:
+        train_data = [json.loads(line) for line in file]
+        return train_data
+
+
+def file_write_json_line(data_fn, results):
+    with open(data_fn, "w") as f:
+        for result in results:
+            f.write(json.dumps(result) + "\n")
 
 
 def create_prompt(
