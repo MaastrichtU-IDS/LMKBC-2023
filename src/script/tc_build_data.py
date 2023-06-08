@@ -92,6 +92,6 @@ if __name__ == "__main__":
         if item['label'] == 1:
             positive_number += 1
     print("positive_number", positive_number)
-
+    print()
     data_fn = f"{config.DATA_DIR}\\triple_classification_val.jsonl"
     util.file_write_json_line(data_fn, corpus)
