@@ -11,7 +11,7 @@ import config
 import util
 
 
-def build_knowledge_graph(data_fn) -> dict:
+def build_knowledge_graph(data_fn):
     train_line = util.file_read_train(data_fn)
     print('length of file ', len(train_line))
     kg = dict()
@@ -79,13 +79,12 @@ def build_adversarial_corpus(kg: dict, relation_set):
                 # 1 mears true, while 0 means false
             # print(subject, relation, obj)
     print("length of data list is ", len(data_list))
-    print(data_list[:3])
+    # print(data_list[:3])
     random.shuffle(data_list)
     return data_list
 
-
-if __name__ == "__main__":
-    relation_set, kg = build_knowledge_graph(config.VAL_FN)
+def generate_corpus(data_path, new_fn):
+    relation_set, kg = build_knowledge_graph(data_path)
     corpus = build_adversarial_corpus(kg, relation_set)
     positive_number = 0
     for item in corpus:
@@ -93,5 +92,12 @@ if __name__ == "__main__":
             positive_number += 1
     print("positive_number", positive_number)
     print()
-    data_fn = f"{config.DATA_DIR}\\triple_classification_val.jsonl"
+    data_fn = f"{config.DATA_DIR}/{new_fn}"
     util.file_write_json_line(data_fn, corpus)
+
+if __name__ == "__main__":
+
+    generate_corpus(config.VAL_FN, "triple_classification_val.jsonl" )
+    generate_corpus(config.TRAIN_FN, "triple_classification_train.jsonl" )
+    generate_corpus(config.TRAIN_TINY_FN, "triple_classification_dev.jsonl" )
+

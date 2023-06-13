@@ -27,7 +27,6 @@ from file_io import read_lm_kbc_jsonl
 import util
 
 import sklearn.metrics as metrics
-from sklearn.metrics import precision_score, recall_score
 
 task = 'nsp'
 logging.basicConfig(
@@ -37,13 +36,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-entity_set = set()
-entity_fn = f"{config.DATA_DIR}\\entity_set.json"
-
 
 def train():
-    output_dir = f"{config.BIN_DIR}\\{task}\\{args.pretrain_model_name}"
-    best_dir = f"{output_dir}\\{args.bin_dir}"
+    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
+    best_dir = f"{output_dir}/{args.bin_dir}"
     if os.path.exists(best_dir):
         bert_config = transformers.AutoConfig.from_pretrained(best_dir)
         bert_model: BertModel = (
@@ -51,6 +47,7 @@ def train():
                 best_dir, config=bert_config
             )
         )
+
         bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
     else:
         bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
@@ -94,7 +91,7 @@ def train():
         load_best_model_at_end=True,
         no_cuda=False,
     )
-    bert_model
+
     trainer = transformers.Trainer(
         model=bert_model,
         # data_collator=bert_collator,
@@ -114,8 +111,8 @@ def train():
 
 
 def predict():
-    output_dir = f"{config.BIN_DIR}\\{task}\\{args.pretrain_model_name}"
-    best_dir = f"{output_dir}\\{args.bin_dir}"
+    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
+    best_dir = f"{output_dir}/{args.bin_dir}"
 
     bert_config = transformers.AutoConfig.from_pretrained(best_dir)
     bert_model: BertModel = transformers.BertForNextSentencePrediction.from_pretrained(
@@ -172,8 +169,8 @@ def predict():
 
 
 def test_pipeline():
-    model_dir = f"{config.BIN_DIR}\\{args.pretrain_model_name}"
-    best_dir = f"{model_dir}\\{args.bin_dir}"
+    model_dir = f"{config.BIN_DIR}/{args.pretrain_model_name}"
+    best_dir = f"{model_dir}/{args.bin_dir}"
     bert_config = transformers.AutoConfig.from_pretrained(best_dir)
     bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
         best_dir, config=bert_config
@@ -216,7 +213,7 @@ def test_pipeline():
     results = []
     num_filtered = 0
     printed_relation = {"person-has-spouse"}
-    rel_thres_fn = f"{config.RES_PATH}\\relation-threshold.json"
+    rel_thres_fn = f"{config.RES_PATH}/relation-threshold.json"
     with open(rel_thres_fn, 'r') as f:
         rel_thres_dict = json.load(f)
     for row, output, prompt in zip(test_rows, outputs, prompts):
@@ -245,7 +242,7 @@ def test_pipeline():
         results.append(result_row)
     print("filtered entity number: ", num_filtered)
     # Save the results
-    output_fn = f"{config.OUTPUT_DIR}\\{args.pretrain_model_name}_ressult.jsonl"
+    output_fn = f"{config.OUTPUT_DIR}/{args.pretrain_model_name}_ressult.jsonl"
     # if not os.path.exists(output_dir):
     #     os.makedirs(output_dir)
     logger.info(f"Saving the results to \"{output_fn}\"...")
@@ -256,7 +253,7 @@ def test_pipeline():
 
 
 def evaluate():
-    output_fn = f"{config.OUTPUT_DIR}\\{args.pretrain_model_name}_ressult.jsonl"
+    output_fn = f"{config.OUTPUT_DIR}/{args.pretrain_model_name}_ressult.jsonl"
     pred_rows = read_lm_kbc_jsonl(output_fn)
     gt_rows = read_lm_kbc_jsonl(args.test_fn)
 
@@ -394,15 +391,6 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-
-    if not os.path.exists(entity_fn):
-        build_entity_set(args.train_fn)
-        build_entity_set(args.dev_fn)
-        with open(entity_fn, 'w') as f:
-            json.dump(list(entity_set), f)
-    else:
-        with open(entity_fn, 'r') as f:
-            entity_set = set(json.load(f))
 
     if "train" in args.mode:
         train()
