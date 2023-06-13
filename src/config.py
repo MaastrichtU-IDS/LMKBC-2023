@@ -10,7 +10,7 @@ BIN_DIR = f"{ROOT_PATH}/bin"
 LOGGING_DIR = f"{ROOT_PATH}/logging"
 
 
-EMPTY_TOKEN = 'Empty Toke'
+EMPTY_TOKEN = 'Empty Token'
 MASK_TOKEN_SIZE = 50
 MAX_LENGTH = 512
 

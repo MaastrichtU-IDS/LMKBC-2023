@@ -37,13 +37,14 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-entity_set = set()
-entity_fn = f"{config.DATA_DIR}\\entity_set.json"
+# entity_set = set()
+# entity_fn = f"{config.DATA_DIR}/entity_set.json"
+print(torch.cuda.is_available())
 
 
 def train():
-    output_dir = f"{config.BIN_DIR}\\{task}\\{args.pretrain_model_name}"
-    best_dir = f"{output_dir}\\{args.bin_dir}"
+    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
+    best_dir = f"{output_dir}/{args.bin_dir}"
     if os.path.exists(best_dir):
         bert_config = transformers.AutoConfig.from_pretrained(best_dir)
         bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
@@ -118,8 +119,8 @@ def train():
 
 
 def test_pipeline():
-    model_dir = f"{config.BIN_DIR}\\{args.pretrain_model_name}"
-    best_dir = f"{model_dir}\\{args.bin_dir}"
+    model_dir = f"{config.BIN_DIR}/{args.pretrain_model_name}"
+    best_dir = f"{model_dir}/{args.bin_dir}"
     bert_config = transformers.AutoConfig.from_pretrained(best_dir)
     bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
         best_dir, config=bert_config
@@ -162,7 +163,7 @@ def test_pipeline():
     results = []
     num_filtered = 0
     printed_relation = {"person-has-spouse"}
-    rel_thres_fn = f"{config.RES_PATH}\\relation-threshold.json"
+    rel_thres_fn = f"{config.RES_PATH}/relation-threshold.json"
     with open(rel_thres_fn, 'r') as f:
         rel_thres_dict = json.load(f)
     for row, output, prompt in zip(test_rows, outputs, prompts):
@@ -176,9 +177,9 @@ def test_pipeline():
                 obj = seq["token_str"]
                 if obj == config.EMPTY_TOKEN:
                     obj = ''
-                if obj not in entity_set:
-                    num_filtered += 1
-                    continue
+                # if obj not in entity_set:
+                #     num_filtered += 1
+                #     continue
                 wikidata_id = util.disambiguation_baseline(obj)
                 objects_wikiid.append(wikidata_id)
 
@@ -191,7 +192,7 @@ def test_pipeline():
         results.append(result_row)
     print("filtered entity number: ", num_filtered)
     # Save the results
-    output_fn = f"{config.OUTPUT_DIR}\\{args.pretrain_model_name}_ressult.jsonl"
+    output_fn = f"{config.OUTPUT_DIR}/{args.pretrain_model_name}_ressult.jsonl"
     # if not os.path.exists(output_dir):
     #     os.makedirs(output_dir)
     logger.info(f"Saving the results to \"{output_fn}\"...")
@@ -202,7 +203,7 @@ def test_pipeline():
 
 
 def evaluate():
-    output_fn = f"{config.OUTPUT_DIR}\\{args.pretrain_model_name}_ressult.jsonl"
+    output_fn = f"{config.OUTPUT_DIR}/{args.pretrain_model_name}_ressult.jsonl"
     pred_rows = read_lm_kbc_jsonl(output_fn)
     gt_rows = read_lm_kbc_jsonl(args.test_fn)
 
@@ -224,15 +225,15 @@ def evaluate():
     # print(average_pd.round(3))
 
 
-def build_entity_set(fn):
-    with open(args.train_fn, "r") as file:
-        for line in file:
-            line_json = json.loads(line)
-            object_entities = line_json['ObjectEntities']
-            subject = line_json["SubjectEntity"]
+# def build_entity_set(fn):
+#     with open(args.train_fn, "r") as file:
+#         for line in file:
+#             line_json = json.loads(line)
+#             object_entities = line_json['ObjectEntities']
+#             subject = line_json["SubjectEntity"]
 
-            entity_set.add(subject)
-            entity_set.update(object_entities)
+#             entity_set.add(subject)
+#             entity_set.update(object_entities)
 
 
 if __name__ == "__main__":
@@ -341,14 +342,14 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if not os.path.exists(entity_fn):
-        build_entity_set(args.train_fn)
-        build_entity_set(args.dev_fn)
-        with open(entity_fn, 'w') as f:
-            json.dump(list(entity_set), f)
-    else:
-        with open(entity_fn, 'r') as f:
-            entity_set = set(json.load(f))
+    # if not os.path.exists(entity_fn):
+    #     build_entity_set(args.train_fn)
+    #     build_entity_set(args.dev_fn)
+    #     with open(entity_fn, 'w') as f:
+    #         json.dump(list(entity_set), f)
+    # else:
+    #     with open(entity_fn, 'r') as f:
+    #         entity_set = set(json.load(f))
 
     if "train" in args.mode:
         train()
