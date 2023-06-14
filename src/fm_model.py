@@ -37,8 +37,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# entity_set = set()
-# entity_fn = f"{config.DATA_DIR}/entity_set.json"
+entity_set = set()
+entity_fn = f"{config.DATA_DIR}/entity_set.json"
 print(torch.cuda.is_available())
 
 
@@ -225,15 +225,15 @@ def evaluate():
     # print(average_pd.round(3))
 
 
-# def build_entity_set(fn):
-#     with open(args.train_fn, "r") as file:
-#         for line in file:
-#             line_json = json.loads(line)
-#             object_entities = line_json['ObjectEntities']
-#             subject = line_json["SubjectEntity"]
+def build_entity_set(fn):
+    with open(args.train_fn, "r") as file:
+        for line in file:
+            line_json = json.loads(line)
+            object_entities = line_json['ObjectEntities']
+            subject = line_json["SubjectEntity"]
 
-#             entity_set.add(subject)
-#             entity_set.update(object_entities)
+            entity_set.add(subject)
+            entity_set.update(object_entities)
 
 
 if __name__ == "__main__":
@@ -342,14 +342,14 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # if not os.path.exists(entity_fn):
-    #     build_entity_set(args.train_fn)
-    #     build_entity_set(args.dev_fn)
-    #     with open(entity_fn, 'w') as f:
-    #         json.dump(list(entity_set), f)
-    # else:
-    #     with open(entity_fn, 'r') as f:
-    #         entity_set = set(json.load(f))
+    if not os.path.exists(entity_fn):
+        build_entity_set(args.train_fn)
+        build_entity_set(args.dev_fn)
+        with open(entity_fn, 'w') as f:
+            json.dump(list(entity_set), f)
+    else:
+        with open(entity_fn, 'r') as f:
+            entity_set = set(json.load(f))
 
     if "train" in args.mode:
         train()
