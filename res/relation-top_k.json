@@ -1,0 +1,23 @@
+{
+    "CompanyHasParentOrganisation": 0.001,
+    "CountryBordersCountry": 0.001,
+    "CountryHasOfficialLanguage": 0.001,
+    "PersonHasNumberOfChildren": 0.001,
+    "PersonHasPlaceOfDeath": 0.001,
+    "PersonHasProfession": 0.001,
+    "PersonPlaysInstrument": 0.001,
+    "PersonSpeaksLanguage": 0.001,
+    "RiverBasinsCountry": 0.001,
+    "SeriesHasNumberOfEpisodes": 0.001,
+    "StateBordersState": 0.001,
+    "BandHasMember": 0.001,
+    "CityLocatedAtRiver": 0.001,
+    "FootballerPlaysPosition": 0.001,
+    "PersonCauseOfDeath": 0.001,
+    "PersonHasAutobiography": 0.001,
+    "PersonHasEmployer": 0.001,
+    "PersonHasNoblePrize": 0.001,
+    "PersonHasSpouse": 0.001,
+    "CountryHasStates": 0.001,
+    "CompoundHasParts": 0.001
+}

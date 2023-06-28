@@ -110,7 +110,7 @@ def train():
     print(dev_results)
 
 
-def predict():
+def filter():
     output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
     best_dir = f"{output_dir}/{args.bin_dir}"
 
@@ -167,6 +167,63 @@ def predict():
     print("recall: ", recall)
     print("f1: ", f1)
 
+
+def predict():
+    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
+    best_dir = f"{output_dir}/{args.bin_dir}"
+
+    bert_config = transformers.AutoConfig.from_pretrained(best_dir)
+    bert_model: BertModel = transformers.BertForNextSentencePrediction.from_pretrained(
+        best_dir, config=bert_config
+    )
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
+
+    test_dataset = NSPDataset(data_fn=args.test_fn, tokenizer=bert_tokenizer)
+    bert_model.resize_token_embeddings(len(bert_tokenizer))
+
+    training_args = transformers.TrainingArguments(
+        output_dir=output_dir,
+        overwrite_output_dir=True,
+        evaluation_strategy='epoch',
+        per_device_train_batch_size=args.train_batch_size,
+        per_device_eval_batch_size=64,
+        eval_accumulation_steps=8,
+        learning_rate=args.learning_rate,
+        num_train_epochs=args.train_epoch,
+        warmup_ratio=0.1,
+        logging_dir=config.LOGGING_DIR,
+        logging_strategy='epoch',
+        save_strategy='epoch',
+        save_total_limit=2,
+        fp16=True,
+        dataloader_num_workers=0,
+        auto_find_batch_size=False,
+        greater_is_better=False,
+        load_best_model_at_end=True,
+        no_cuda=False,
+    )
+
+    trainer = transformers.Trainer(
+        model=bert_model,
+        args=training_args,
+        eval_dataset=test_dataset,
+        tokenizer=bert_tokenizer,
+    )
+
+    predicts = trainer.predict(test_dataset)
+    print(predicts)
+    pre = np.argmax(predicts.predictions, axis=-1)
+    label_ids = predicts.label_ids.reshape(-1, 1)
+    print("pre shape", pre.shape)
+    print("label_ids shape", label_ids.shape)
+    print("positive label", np.sum(label_ids == 1))
+    print("positive pre", np.sum(pre == 1))
+    precision = metrics.precision_score(label_ids, pre)
+    recall = metrics.recall_score(label_ids, pre)
+    f1 = metrics.f1_score(label_ids, pre)
+    print("precision: ", precision)
+    print("recall: ", recall)
+    print("f1: ", f1)
 
 
 if __name__ == "__main__":

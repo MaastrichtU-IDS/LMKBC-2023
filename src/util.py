@@ -33,13 +33,14 @@ def disambiguation_baseline(item):
 
 # Read prompt templates from a CSV file
 def file_read_prompt(file_path: str):
+    # print('file_path', file_path)
     with open(file_path, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         prompt_templates = {row['Relation']: row['PromptTemplate'] for row in reader}
     return prompt_templates
 
 
-def file_read_train(data_fn):
+def file_read_json_line(data_fn):
     with open(data_fn, "r") as file:
         train_data = [json.loads(line) for line in file]
         return train_data
@@ -83,3 +84,44 @@ def recover_mask_word_func(mask_word, bert_tokenizer):
     if index_padding > -1:
         word_resume = word_resume[:index_padding]
     return word_resume
+
+
+TO = 'to'
+FROM = 'from'
+
+
+def check_kg(kg: dict, key, relation):
+    if key not in kg:
+        kg[key] = dict()
+    if TO not in kg[key]:
+        kg[key][TO] = dict()
+    if FROM not in kg[key]:
+        kg[key][FROM] = dict()
+
+    if TO not in kg[key]:
+        kg[key][TO] = dict()
+    kg[key][TO][relation] = set()
+
+    if FROM not in kg[key]:
+        kg[key][FROM] = dict()
+    kg[key][FROM][relation] = set()
+
+
+def build_knowledge_graph(data_fn, kg=None):
+    train_line = file_read_json_line(data_fn)
+    if kg is None:
+        kg = dict()
+    for row in train_line:
+        relation = row['Relation']
+        object_entities = row['ObjectEntities']
+        subject = row["SubjectEntity"]
+        check_kg(kg, subject, relation)
+        if relation not in kg[subject][TO]:
+            kg[subject][TO][relation] = set()
+        kg[subject][TO][relation].update(object_entities)
+
+        for obj in object_entities:
+            check_kg(kg, obj, relation)
+            kg[subject][FROM][relation].add(subject)
+    print('length of subjects ', len(kg))
+    return kg

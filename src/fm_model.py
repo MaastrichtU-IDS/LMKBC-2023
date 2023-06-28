@@ -1,35 +1,24 @@
-import csv
 import json
 import argparse
 import logging
-import random
-import copy
 import numpy as np
 import pandas as pd
-import requests
 
 import torch
 from torch.utils.data import Dataset
 import transformers
 from transformers import (
-    AutoTokenizer,
-    AutoModelForMaskedLM,
     pipeline,
     BertTokenizer,
-    BertForMaskedLM,
     BertModel,
 )
 import os
 from fm_dataset import MLMDataset
 import config
-from evaluate import combine_scores_per_relation, evaluate_per_sr_pair
-from file_io import read_lm_kbc_jsonl
+from evaluate import evaluate
 import util
 
 task = "fill-mask"
-KEY_OBJS = "ObjectEntities"
-KEY_REL = "Relation"
-KEY_SUB = "SubjectEntity"
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -  %(message)s",
     datefmt="%m/%d/%Y %H:%M:%S",
@@ -43,8 +32,6 @@ print(torch.cuda.is_available())
 
 
 def train():
-    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
-    best_dir = f"{output_dir}/{args.bin_dir}"
     if os.path.exists(best_dir):
         bert_config = transformers.AutoConfig.from_pretrained(best_dir)
         bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
@@ -63,7 +50,7 @@ def train():
     bert_collator = transformers.DataCollatorForTokenClassification(
         tokenizer=bert_tokenizer,
         padding="max_length",
-        max_length=config.MAX_LENGTH,
+        max_length=config.FM_MAX_LENGTH,
     )
     train_dataset = MLMDataset(
         data_fn=args.train_fn, tokenizer=bert_tokenizer, template_fn=args.template_fn
@@ -96,7 +83,7 @@ def train():
         dataloader_num_workers=0,
         auto_find_batch_size=False,
         greater_is_better=False,
-        load_best_model_at_end=True,
+        # load_best_model_at_end=True,
         no_cuda=False,
     )
 
@@ -119,16 +106,11 @@ def train():
 
 
 def test_pipeline():
-    model_dir = f"{config.BIN_DIR}/{args.pretrain_model_name}"
-    best_dir = f"{model_dir}/{args.bin_dir}"
     bert_config = transformers.AutoConfig.from_pretrained(best_dir)
     bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
         best_dir, config=bert_config
     )
     bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
-    bert_collator = transformers.DataCollatorForTokenClassification(
-        tokenizer=bert_tokenizer, padding="max_length", max_length=128
-    )
 
     pipe = pipeline(
         task=task,
@@ -137,8 +119,8 @@ def test_pipeline():
         top_k=args.top_k,
         device=args.gpu,
     )
-    prompt_templates = util.read_prompt_templates_from_csv(args.template_fn)
-    test_rows = [json.loads(line) for line in open(args.test_fn, "r")]
+    prompt_templates = util.file_read_prompt(args.template_fn)
+    test_rows = util.file_read_json_line(args.test_fn)
     prompts = []
     for row in test_rows:
         prompt = prompt_templates[row["Relation"]].format(
@@ -147,33 +129,45 @@ def test_pipeline():
         )
         prompts.append(prompt)
         # entity_set.update(row[KEY_OBJS])
-    num_entity_escape = 0
+    entity_escape_set = set()
+    entity_in_set = set()
     for row in test_rows:
-        objs = row[KEY_OBJS]
+        objs = row[config.KEY_OBJS]
         for obj in objs:
             if obj not in entity_set:
-                num_entity_escape += 1
-    print("escaped entity number: ", num_entity_escape)
+                entity_escape_set.add(obj)
+            else:
+                entity_in_set.add(obj)
+    print("escaped entity number: ", len(entity_escape_set))
+    print("entity_in_set number: ", len(entity_in_set))
+    # print("entity_escape_set", entity_escape_set)
     "1 2 3 [maxk] [mask] [mask] 4  5 6"
     # Run the model
     logger.info(f"Running the model...")
 
     outputs = pipe(prompts, batch_size=args.test_batch_size)
-
+    logger.info(f"End the model...")
     results = []
     num_filtered = 0
-    printed_relation = {"person-has-spouse"}
     rel_thres_fn = f"{config.RES_PATH}/relation-threshold.json"
-    with open(rel_thres_fn, 'r') as f:
-        rel_thres_dict = json.load(f)
+    if os.path.exists(rel_thres_fn):
+        with open(rel_thres_fn, 'r') as f:
+            rel_thres_dict = json.load(f)
+    else:
+        rel_thres_dict = dict()
+
     for row, output, prompt in zip(test_rows, outputs, prompts):
         objects_wikiid = []
+        objects = []
         # print()
         # print(row[KEY_OBJS])
         for seq in output:
             # if row[KEY_REL] in printed_relation:
             # print("seq", seq)
-            if seq["score"] > rel_thres_dict[row[KEY_REL]]:
+            if row[config.KEY_REL] not in rel_thres_dict:
+                print(f"{row[config.KEY_REL]} not in rel_thres_dict")
+                rel_thres_dict[row[config.KEY_REL]] = args.threshold
+            if seq["score"] > rel_thres_dict[row[config.KEY_REL]]:
                 obj = seq["token_str"]
                 if obj == config.EMPTY_TOKEN:
                     obj = ''
@@ -182,11 +176,13 @@ def test_pipeline():
                 #     continue
                 wikidata_id = util.disambiguation_baseline(obj)
                 objects_wikiid.append(wikidata_id)
+                objects.append(obj)
 
         result_row = {
             "SubjectEntityID": row["SubjectEntityID"],
             "SubjectEntity": row["SubjectEntity"],
             "ObjectEntitiesID": objects_wikiid,
+            "ObjectEntities": objects,
             "Relation": row["Relation"],
         }
         results.append(result_row)
@@ -195,34 +191,15 @@ def test_pipeline():
     output_fn = f"{config.OUTPUT_DIR}/{args.pretrain_model_name}_ressult.jsonl"
     # if not os.path.exists(output_dir):
     #     os.makedirs(output_dir)
-    logger.info(f"Saving the results to \"{output_fn}\"...")
-    with open(output_fn, "w") as f:
+    logger.info(f"Saving the results to \"{args.output}\"...")
+    with open(args.output, "w") as f:
         for result in results:
             f.write(json.dumps(result) + "\n")
-    evaluate()
 
-
-def evaluate():
-    output_fn = f"{config.OUTPUT_DIR}/{args.pretrain_model_name}_ressult.jsonl"
-    pred_rows = read_lm_kbc_jsonl(output_fn)
-    gt_rows = read_lm_kbc_jsonl(args.test_fn)
-
-    scores_per_sr_pair = evaluate_per_sr_pair(pred_rows, gt_rows)
-    scores_per_relation = combine_scores_per_relation(scores_per_sr_pair)
-
-    scores_per_relation["*** Average ***---"] = {
-        "p": sum([x["p"] for x in scores_per_relation.values()])
-        / len(scores_per_relation),
-        "r": sum([x["r"] for x in scores_per_relation.values()])
-        / len(scores_per_relation),
-        "f1": sum([x["f1"] for x in scores_per_relation.values()])
-        / len(scores_per_relation),
-    }
-    scores_per_relation_pd = pd.DataFrame(scores_per_relation)
-
-    print(scores_per_relation_pd.transpose().round(3))
-    # average_pd = scores_per_relation_pd.mean(axis=1)
-    # print(average_pd.round(3))
+    with open(rel_thres_fn, 'w') as f:
+        json.dump(rel_thres_dict, f)
+    logger.info(f"Start Evaluate ...")
+    evaluate(args.output, args.test_fn)
 
 
 def build_entity_set(fn):
@@ -269,7 +246,7 @@ if __name__ == "__main__":
         "-t",
         "--threshold",
         type=float,
-        default=0.5,
+        default=0.1,
         help="Probability threshold (default: 0.5)",
     )
 
@@ -295,13 +272,7 @@ if __name__ == "__main__":
         required=True,
         help="CSV file containing fill-mask prompt templates (required)",
     )
-    parser.add_argument(
-        "-f",
-        "--few_shot",
-        type=int,
-        default=5,
-        help="Number of few-shot examples (default: 5)",
-    )
+
     parser.add_argument(
         "--train_fn",
         type=str,
@@ -341,7 +312,8 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-
+    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
+    best_dir = f"{output_dir}/{args.bin_dir}"
     if not os.path.exists(entity_fn):
         build_entity_set(args.train_fn)
         build_entity_set(args.dev_fn)

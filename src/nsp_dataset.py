@@ -24,7 +24,7 @@ prompt = '{subject} is {relation} with {object}'
 
 
 class NSPDataset(Dataset):
-    def __init__(self, tokenizer: BertTokenizerFast, data_fn) -> None:
+    def __init__(self, tokenizer: BertTokenizerFast, data_fn, kg_fn) -> None:
         super().__init__()
 
         base_name = os.path.basename(data_fn)
@@ -37,9 +37,10 @@ class NSPDataset(Dataset):
         else:
             self.data = []
             # print(data_fn)
-            train_data = util.file_read_train(data_fn)
+            train_data = util.file_read_json_line(data_fn)
             # print(train_data[0])
             max_length = 0
+            kg = util.build_knowledge_graph(data_fn=kg_fn)
             for row in train_data:
                 given_subject = row['given_subject']
                 given_object = row['given_object']
@@ -47,14 +48,14 @@ class NSPDataset(Dataset):
                 label = row['label']
                 subject_sentence = self.given_to_sentence(given_subject)
                 object_sentence = self.given_to_sentence(given_object)
-                triple_sentence = self.triple_to_sentenct(*triple)
+                triple_sentence = self.triple_to_sentence(*triple)
                 text = f"{subject_sentence} while {object_sentence}"
                 encoded = tokenizer.encode_plus(
                     text=text,
                     text_pair=triple_sentence,
                     return_tensors='pt',
                     padding="max_length",
-                    max_length=config.MAX_LENGTH,
+                    max_length=config.FM_MAX_LENGTH,
                 )
                 input_ids = encoded['input_ids'].squeeze()
                 attention_mask = encoded['attention_mask'].squeeze()
@@ -90,12 +91,12 @@ class NSPDataset(Dataset):
             relation = d[config.KEY_REL]
             objs = d[config.KEY_OBJS]
             for obj in objs:
-                sentence = self.triple_to_sentenct(subject, relation, obj)
+                sentence = self.triple_to_sentence(subject, relation, obj)
                 sentence_list.append(sentence)
         result = ";".join(sentence_list)
         return result
 
-    def triple_to_sentenct(self, subject, relation, object):
+    def triple_to_sentence(self, subject, relation, object):
         if len(subject) > 20:
             self.tokenizer.add_tokens(subject)
         if len(object) > 20:

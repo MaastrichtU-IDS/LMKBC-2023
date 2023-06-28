@@ -31,7 +31,7 @@ class MLMDataset(Dataset):
             max_sentence_length = 0
             max_obj_length = 0
             self.data = []
-            train_data = util.file_read_train(data_fn)
+            train_data = util.file_read_json_line(data_fn)
             prompt_templates = util.file_read_prompt(template_fn)
 
             for row in train_data:
