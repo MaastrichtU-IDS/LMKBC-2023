@@ -65,21 +65,13 @@ class MLMDataset(Dataset):
                     if len(label_ids) != len(input_ids):
                         print("label_sentence ", label_sentence)
                         print("input_sentence ", input_sentence)
-
                         print("label_tokens ", label_tokens)
                         print("input_tokens ", input_tokens)
                         print("obj ", obj)
-                        # print(obj in tokenizer.get_vocab())
-                        # tokenizer.save_vocabulary(config.OUTPUT_DIR, "vocab.txt")
-
-                        # enco_o = tokenizer.encode_plus(text=label_sentence)
-                        # print("enco_o ", enco_o)
-                        print(tokenizer.add_tokens(obj))
-                        print(tokenizer.tokenize(obj))
+                        print("add_tokens", tokenizer.add_tokens(obj))
+                        print("tokenize", tokenizer.tokenize(obj))
                         # print("word_tokens length", len(word_tokens))
                         continue
-                        # raise Exception("length of label and input is not equal")
-
                     if len(input_ids) > max_sentence_length:
                         max_sentence_length = len(input_ids)
 

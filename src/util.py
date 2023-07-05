@@ -46,10 +46,17 @@ def file_read_json_line(data_fn):
         return train_data
 
 
+class SetEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, set):
+            return list(obj)
+        return json.JSONEncoder.default(self, obj)
+
+
 def file_write_json_line(data_fn, results):
     with open(data_fn, "w") as f:
         for result in results:
-            f.write(json.dumps(result) + "\n")
+            f.write(json.dumps(result, cls=SetEncoder) + "\n")
 
 
 def create_prompt(

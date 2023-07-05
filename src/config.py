@@ -13,6 +13,7 @@ LOGGING_DIR = f"{ROOT_PATH}/logging"
 EMPTY_TOKEN = 'Empty Token'
 MASK_TOKEN_SIZE = 50
 FM_MAX_LENGTH = 32
+TA_MAX_LENGTH = 64
 
 GE_MAX_LENGTH = 512
 
@@ -24,6 +25,7 @@ KEY_OBJS = "ObjectEntities"
 KEY_REL = "Relation"
 KEY_SUB = "SubjectEntity"
 
+TOKENIZER_PATH = 'res/tokenizer/bert'
 check_dir_list = [
     BIN_DIR,
     OUTPUT_DIR,
