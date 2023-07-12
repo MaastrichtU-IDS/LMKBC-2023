@@ -2,21 +2,15 @@ import json
 import argparse
 import logging
 
-import numpy as np
-import pandas as pd
-from tokenizers import Tokenizer
-
 import torch
 from torch.utils.data import Dataset
 import transformers
 from transformers import pipeline, BertTokenizerFast, BertModel
 import os
 
-from transformers.utils import PaddingStrategy
 import config
 from evaluate import evaluate
 import util
-import tqdm
 
 task = "fill-mask"
 logging.basicConfig(
