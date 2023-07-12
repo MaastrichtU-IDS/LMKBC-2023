@@ -5,10 +5,14 @@ import random
 from typing import List
 
 import requests
+import torch
+from transformers import BertTokenizerFast
 
 import config
 
-local_cache_path = f'{config.DATA_DIR}\\item_cache.json'
+from typing import List, Union, Dict, Any, Optional, Mapping
+
+local_cache_path = f'{config.RES_DIR}/item_cache.json'
 local_cache = dict()
 if os.path.exists(local_cache_path):
     local_cache = json.load(open(local_cache_path))
@@ -40,10 +44,32 @@ def file_read_prompt(file_path: str):
     return prompt_templates
 
 
-def file_read_json_line(data_fn):
-    with open(data_fn, "r") as file:
-        train_data = [json.loads(line) for line in file]
+def line_to_json(line: str):
+    train_data = []
+    if len(line) == 0:
         return train_data
+    try:
+        if line.find('}{') != -1:
+            line = line.replace('}{', '}\n{')
+            line_list = line.split('\n')
+            for l in line_list:
+                train_data.extend(line_to_json(l))
+        else:
+            train_data.append(json.loads(line))
+    except Exception as e:
+        print(line)
+        raise e
+    return train_data
+
+
+def file_read_json_line(data_fn):
+    train_data = []
+    with open(data_fn, "r") as file:
+        lines = file.readlines()
+        for line in lines:
+            train_data.extend(line_to_json(line))
+
+    return train_data
 
 
 class SetEncoder(json.JSONEncoder):
@@ -53,10 +79,28 @@ class SetEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, obj)
 
 
-def file_write_json_line(data_fn, results):
-    with open(data_fn, "w") as f:
-        for result in results:
-            f.write(json.dumps(result, cls=SetEncoder) + "\n")
+def flat_list(data_list: list):
+    datas = []
+    for data in data_list:
+        if isinstance(data, list):
+            datas.extend(flat_list(data))
+        else:
+            datas.append(data)
+    return datas
+
+
+def file_write_json_line(data_fn, results, mode='auto'):
+    results = flat_list(results)
+    json_text_list = [json.dumps(aj, cls=SetEncoder) for aj in results]
+    file_write_line(data_fn, json_text_list, mode)
+
+
+def file_write_line(data_fn, results, mode='auto'):
+    if mode == 'auto':
+        mode = 'a' if os.path.exists(data_fn) else 'w'
+    with open(data_fn, mode) as f:
+        text = '\n'.join(results)
+        f.write(text)
 
 
 def create_prompt(
@@ -132,3 +176,53 @@ def build_knowledge_graph(data_fn, kg=None):
             kg[subject][FROM][relation].add(subject)
     print('length of subjects ', len(kg))
     return kg
+
+
+class DataCollatorKBC:
+    def __init__(self, tokenizer: BertTokenizerFast):
+        self.tokenizer = tokenizer
+
+    def __call__(
+        self, examples: List[Union[List[int], Any, Dict[str, Any]]]
+    ) -> Dict[str, Any]:
+        # examples = examples.clone()
+        batch = self.tokenizer.pad(
+            examples,
+            padding=True,
+            return_attention_mask=True,
+        )
+        max_length = len(batch['input_ids'][0])
+        label_list = []
+        for label in batch['labels']:
+            length_diff = max_length - len(label)
+            label1 = label.copy()
+            if length_diff > 0:
+                pad_list = [-100] * (length_diff)
+                label1.extend(pad_list)
+
+            label_list.append(label1)
+        batch['labels'] = label_list
+        batch_pt = dict()
+        for k, v in batch.items():
+            batch_pt[k] = torch.tensor(v)
+
+        return batch_pt
+
+
+def tokenize_sentence(tokenizer, input_sentence: str):
+    input_tokens = (
+        [tokenizer.cls_token]
+        + tokenizer.tokenize(input_sentence)
+        + [tokenizer.sep_token]
+    )
+    # input_tokens = tokenizer.tokenize(input_sentence)
+    input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
+    attention_mask = [0 if v == tokenizer.mask_token else 1 for v in input_tokens]
+
+    return input_ids, attention_mask
+
+
+if __name__ == "__main__":
+    list_1 = [[1], [1, 2], [[1], [2], [2, 3, [4, 5, [7]]]]]
+    list_flat = flat_list(list_1)
+    print(list_flat)

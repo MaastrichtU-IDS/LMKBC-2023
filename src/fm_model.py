@@ -1,22 +1,22 @@
 import json
 import argparse
 import logging
+
 import numpy as np
 import pandas as pd
+from tokenizers import Tokenizer
 
 import torch
 from torch.utils.data import Dataset
 import transformers
-from transformers import (
-    pipeline,
-    BertTokenizer,
-    BertModel,
-)
+from transformers import pipeline, BertTokenizerFast, BertModel
 import os
-from fm_dataset import MLMDataset
+
+from transformers.utils import PaddingStrategy
 import config
 from evaluate import evaluate
 import util
+import tqdm
 
 task = "fill-mask"
 logging.basicConfig(
@@ -29,9 +29,63 @@ logger = logging.getLogger(__name__)
 print(torch.cuda.is_available())
 
 
+class MLMDataset(Dataset):
+    def __init__(self, tokenizer: BertTokenizerFast, data_fn, template_fn) -> None:
+        super().__init__()
+        self.data = []
+        train_data = util.file_read_json_line(data_fn)
+        prompt_templates = util.file_read_prompt(template_fn)
+        for row in train_data:
+            relation = row['Relation']
+            prompt_template = prompt_templates[relation]
+            object_entities = row['ObjectEntities']
+            subject = row["SubjectEntity"]
+            for obj in object_entities:
+                if obj == '':
+                    obj = config.EMPTY_TOKEN
+                input_sentence = prompt_template.format(
+                    subject_entity=subject, mask_token=tokenizer.mask_token
+                )
+                obj_id = tokenizer.convert_tokens_to_ids(obj)
+                input_ids, attention_mask = util.tokenize_sentence(
+                    tokenizer, input_sentence
+                )
+                label_ids = [
+                    obj_id if t == tokenizer.mask_token_id else -100 for t in input_ids
+                ]
+                if len(self.data) % 500 == 0:
+                    print("input_sentence", input_sentence)
+                    print("obj", obj, obj_id, tokenizer.convert_ids_to_tokens(obj_id))
+
+                item = {
+                    "labels": label_ids,
+                    "input_ids": input_ids,
+                    "attention_mask": attention_mask,
+                }
+                self.data.append(item)
+
+        print(self.data[0])
+
+    def __getitem__(self, index):
+        return self.data[index]
+
+    def __len__(self):
+        return len(self.data)
+
+
 def train():
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_load_dir)
+    bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
+        args.model_load_dir, config=bert_config
+    )
+
+    is_train = os.path.isdir(args.model_load_dir)
+
     train_dataset = MLMDataset(
         data_fn=args.train_fn, tokenizer=bert_tokenizer, template_fn=args.template_fn
+    )
+    bert_collator = util.DataCollatorKBC(
+        tokenizer=bert_tokenizer,
     )
     print(f"train dataset size: {len(train_dataset)}")
     # we extend the mask window only for training set, in evaluation, we only really care about the object tokens themselves;
@@ -44,7 +98,7 @@ def train():
     bert_model.resize_token_embeddings(len(bert_tokenizer))
 
     training_args = transformers.TrainingArguments(
-        output_dir=bin_save_dir,
+        output_dir=args.model_save_dir,
         overwrite_output_dir=True,
         evaluation_strategy='epoch',
         per_device_train_batch_size=args.train_batch_size,
@@ -61,7 +115,7 @@ def train():
         dataloader_num_workers=0,
         auto_find_batch_size=False,
         greater_is_better=False,
-        # load_best_model_at_end=True,
+        load_best_model_at_end=True,
         no_cuda=False,
     )
 
@@ -73,17 +127,22 @@ def train():
         eval_dataset=dev_dataset,
         tokenizer=bert_tokenizer,
     )
+
     # compute_metrics=compute_metrics)
+
     trainer.train()
-    trainer.save_model(output_dir=f"{bin_save_dir}/best_ckpt")
-    # bert_tokenizer.save_pretrained(args.bin_dir)
-    dev_results = trainer.evaluate(dev_dataset)
-    # trainer.model
-    print(f"dev results: ")
-    print(dev_results)
+
+    trainer.save_model(output_dir=args.model_best_dir)
+    print(f"model_best_dir: ", args.model_best_dir)
+    # print(dev_results)
 
 
 def test_pipeline():
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
+    bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
+        args.model_best_dir, config=bert_config
+    )
+
     pipe = pipeline(
         task=task,
         model=bert_model,
@@ -103,11 +162,11 @@ def test_pipeline():
 
     logger.info(f"Running the model...")
 
-    outputs = pipe(prompts, batch_size=args.test_batch_size)
+    outputs = pipe(prompts, batch_size=args.train_batch_size * 4)
     logger.info(f"End the model...")
     results = []
     num_filtered = 0
-    rel_thres_fn = f"{config.RES_PATH}/relation-threshold.json"
+    rel_thres_fn = f"{config.RES_DIR}/relation-threshold.json"
     if os.path.exists(rel_thres_fn):
         with open(rel_thres_fn, 'r') as f:
             rel_thres_dict = json.load(f)
@@ -124,11 +183,15 @@ def test_pipeline():
             if seq["score"] > rel_thres_dict[row[config.KEY_REL]]:
                 obj = seq["token_str"]
                 if obj == config.EMPTY_TOKEN:
-                    obj = ''
-
-                wikidata_id = util.disambiguation_baseline(obj)
-                objects_wikiid.append(wikidata_id)
+                    objects_wikiid.append(config.EMPTY_STR)
+                    objects = [config.EMPTY_STR]
+                    break
+                else:
+                    wikidata_id = util.disambiguation_baseline(obj)
+                    objects_wikiid.append(wikidata_id)
                 objects.append(obj)
+        if config.EMPTY_STR in objects:
+            objects = [config.EMPTY_STR]
 
         result_row = {
             "SubjectEntityID": row["SubjectEntityID"],
@@ -141,9 +204,7 @@ def test_pipeline():
     print("filtered entity number: ", num_filtered)
     # Save the results
     logger.info(f"Saving the results to \"{args.output}\"...")
-    with open(args.output, "w") as f:
-        for result in results:
-            f.write(json.dumps(result) + "\n")
+    util.file_write_json_line(args.output, results)
     logger.info(f"Start Evaluate ...")
     evaluate(args.output, args.test_fn)
 
@@ -152,15 +213,20 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run the Model with Question and Fill-Mask Prompts"
     )
+
     parser.add_argument(
-        "-m",
-        "--pretrain_model_name",
+        "--model_save_dir",
         type=str,
-        default="bert-base-cased",
         help="HuggingFace model name (default: bert-base-cased)",
     )
     parser.add_argument(
-        "--bin_dir",
+        "--model_best_dir",
+        type=str,
+        help="HuggingFace model name (default: bert-base-cased)",
+    )
+
+    parser.add_argument(
+        "--model_load_dir",
         type=str,
         help="HuggingFace model name (default: bert-base-cased)",
     )
@@ -174,7 +240,7 @@ if __name__ == "__main__":
         "-k",
         "--top_k",
         type=int,
-        default=5,
+        default=100,
         help="Top k prompt outputs (default: 100)",
     )
     parser.add_argument(
@@ -233,12 +299,7 @@ if __name__ == "__main__":
         default=32,
         help="Batch size for the model. (default:32)",
     )
-    parser.add_argument(
-        "--test_batch_size",
-        type=int,
-        default=32,
-        help="Batch size for the model. (default:32)",
-    )
+
     parser.add_argument(
         "--mode",
         type=str,
@@ -247,28 +308,8 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    bin_save_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
-
-    if os.path.exists(args.bin_dir):
-        bert_config = transformers.AutoConfig.from_pretrained(args.bin_dir)
-        bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
-            args.bin_dir, config=bert_config
-        )
-        bert_tokenizer = transformers.AutoTokenizer.from_pretrained(args.bin_dir)
-    else:
-        bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
-        # print(bert_config)
-        bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
-            args.pretrain_model_name, config=bert_config
-        )
-        bert_tokenizer = transformers.AutoTokenizer.from_pretrained(
-            pretrained_model_name_or_path=args.pretrain_model_name
-        )
-    bert_collator = transformers.DataCollatorForTokenClassification(
-        tokenizer=bert_tokenizer,
-        padding="max_length",
-        max_length=config.FM_MAX_LENGTH,
-    )
+    tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
 
     if "train" in args.mode:
         train()

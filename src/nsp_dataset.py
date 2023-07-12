@@ -16,7 +16,7 @@ import pickle
 import config
 import util
 
-pickle_dir = f'{config.RES_PATH}\\pickle'
+pickle_dir = f'{config.RES_DIR}\\pickle'
 if not os.path.exists(pickle_dir):
     os.makedirs(pickle_dir)
 

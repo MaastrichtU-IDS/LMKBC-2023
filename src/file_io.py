@@ -20,8 +20,14 @@ def read_lm_kbc_jsonl(file_path: Union[str, Path]) -> List[Dict]:
     rows = []
     with open(file_path, "r") as f:
         for line in f:
-            row = json.loads(line)
-            rows.append(row)
+            try:
+                row = json.loads(line)
+                rows.append(row)
+            except Exception as e:
+                # print(e.with_traceback())
+                # row = ''
+                pass
+
     return rows
 
 
@@ -34,7 +40,7 @@ def read_lm_kbc_jsonl_to_df(file_path: Union[str, Path]) -> pd.DataFrame:
     return df
 
 
-def save_df_to_jsonl(file_path: Union[str, Path], df : pd.DataFrame):
+def save_df_to_jsonl(file_path: Union[str, Path], df: pd.DataFrame):
     """
     Saves the dataframe into a jsonl file.
     """

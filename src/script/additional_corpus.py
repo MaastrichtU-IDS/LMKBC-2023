@@ -1,7 +1,9 @@
 import json
 import os
+import random
 import sys
 import requests
+from tqdm import tqdm
 import transformers
 import wikipedia
 
@@ -12,6 +14,11 @@ sys.path.append(parent_dir)
 
 import config
 import util
+from multiprocessing import Process
+from multiprocessing import Pool
+
+token_path = f"{config.RES_DIR}/tokenizer/bert"
+tokenizer = transformers.AutoTokenizer.from_pretrained(token_path)
 
 
 def build_entity_set_from_dataset(fns):
@@ -41,6 +48,27 @@ def get_additional_sentence(entity_set):
         data = requests.get(url).json()
 
 
+def get_text(entity_list):
+    content_list = []
+    for entity in tqdm(entity_list):
+        wiki_titles = wikipedia.search(entity)
+        for title in wiki_titles:
+            try:
+                wiki_page = wikipedia.summary(title)
+            except:
+                # print("not wiki page")
+                pass
+
+            content = wiki_page
+            content_list.append(content)
+    local_sentence_fn = (
+        f'{config.RES_DIR}/res/additional_corpus/{int(random.random*10000)}.txt'
+    )
+    with open(local_sentence_fn, 'w') as f:
+        s = '\n'.join(content_list)
+        f.writelines(s)
+
+
 if __name__ == "__main__":
     # bert_tokenizer = transformers.AutoTokenizer.from_pretrained(
     #     pretrained_model_name_or_path="bert-base-cased"
@@ -52,6 +80,12 @@ if __name__ == "__main__":
     # tokenizer_path = f'{config.RES_PATH}/tokenizer/bert'
     # tokenizer.save_pretrained(tokenizer_path)
     # print("save tokenizer success")
-
-    wiki = wikipedia.summary("province of China", sentences=200)
-    print(wiki)
+    local_sentence_fn = f'{config.RES_DIR}/sentence.txt'
+    sentence_list = []
+    with open(f'{config.RES_DIR}/tokenizer/bert/added_tokens.json') as f:
+        entity_dict = json.load(f)
+    entity_set = entity_dict.keys()
+    entity_set = list(entity_set)
+    worker_size = 10
+    with Pool(processes=worker_size) as pool:
+        pool.map(get_text, entity_set, chunksize=len(entity_set) / worker_size)

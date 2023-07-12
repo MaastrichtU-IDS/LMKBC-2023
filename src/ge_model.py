@@ -13,25 +13,18 @@ from tqdm import tqdm
 import torch
 from torch.utils.data import Dataset
 import transformers
-from transformers import pipeline, BertModel, GPT2TokenizerFast
+from transformers import pipeline, GPT2TokenizerFast
 import os
-from ge_dataset import GEDataset
 import config
 from evaluate import evaluate
 from file_io import read_lm_kbc_jsonl
 import util
 
 
-from transformers import (
-    Trainer,
-    TrainingArguments,
-)
+from transformers import Trainer, TrainingArguments, AutoTokenizer
 
 
 task = "text-generation"
-KEY_OBJS = "ObjectEntities"
-KEY_REL = "Relation"
-KEY_SUB = "SubjectEntity"
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -  %(message)s",
     datefmt="%m/%d/%Y %H:%M:%S",
@@ -39,9 +32,51 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-entity_set = set()
-entity_fn = f"{config.DATA_DIR}/entity_set.json"
-print(torch.cuda.is_available())
+
+class GEDataset(Dataset):
+    def __init__(self, tokenizer: AutoTokenizer, data_fn, template_fn) -> None:
+        super().__init__()
+
+        max_sentence_length = 0
+        max_obj_length = 0
+        self.data = []
+        train_data = util.file_read_json_line(data_fn)
+        prompt_templates = util.file_read_prompt(template_fn)
+
+        for row in train_data:
+            relation = row['Relation']
+            prompt_template = prompt_templates[relation]
+            object_entities = row['ObjectEntities']
+            subject = row["SubjectEntity"]
+            # if subject not in tokenizer.vocab:
+            #     # print("add token ", obj)
+            #     tokenizer.add_tokens(subject)
+            relation = row['Relation']
+            prompt_template = prompt_templates[relation]
+            object_entities = row['ObjectEntities']
+            # for obj in object_entities:
+            #     if obj not in tokenizer.vocab:
+            #         tokenizer.add_tokens(obj)
+            if len(object_entities) == 1 and object_entities[0] == config.EMPTY_STR:
+                object_entities = [config.EMPTY_TOKEN]
+            answers = ','.join(object_entities)
+            instantiated_example = (
+                prompt_template.format(subject_entity=subject) + f" {answers}"
+            )
+            encoded = tokenizer.encode_plus(instantiated_example)
+            # print("encoded", encoded)
+            if len(encoded['input_ids']) > max_sentence_length:
+                max_sentence_length = len(encoded['input_ids'])
+            self.data.append(encoded)
+
+        print("max_sentence_length", max_sentence_length)
+        print("max_obj_length", max_obj_length)
+
+    def __getitem__(self, index):
+        return self.data[index]
+
+    def __len__(self):
+        return len(self.data)
 
 
 def create_prompt(
@@ -49,9 +84,7 @@ def create_prompt(
     relation: str,
     prompt_templates: dict,
     instantiated_templates,
-    tokenizer,
     few_shot: int = 0,
-    task: str = "fill-mask",
 ) -> str:
     prompt_template = prompt_templates[relation]
 
@@ -74,7 +107,7 @@ def train():
     if os.path.exists(best_dir):
         print("load local model")
         bert_config = transformers.AutoConfig.from_pretrained(best_dir)
-        model: BertModel = transformers.AutoModelForCausalLM.from_pretrained(
+        model = transformers.OPTForCausalLM.from_pretrained(
             best_dir, config=bert_config
         )
         # tokenizer = transformers.AutoTokenizer.from_pretrained(
@@ -84,11 +117,13 @@ def train():
         print("load remote model")
         bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
         # print(bert_config)
-        model = transformers.AutoModelForCausalLM.from_pretrained(
+        model = transformers.OPTForCausalLM.from_pretrained(
             args.pretrain_model_name, config=bert_config
         )
     tokenizer = transformers.AutoTokenizer.from_pretrained(
-        pretrained_model_name_or_path=args.pretrain_model_name, padding_side='left'
+        pretrained_model_name_or_path=args.pretrain_model_name,
+        padding_side='left',
+        padding=True,
     )
     data_collator = transformers.DataCollatorForLanguageModeling(
         tokenizer=tokenizer,
@@ -99,7 +134,7 @@ def train():
     # tokenizer = AutoTokenizer.from_pretrained("facebook/opt-1.3b")
     # model = AutoModelForCausalLM.from_pretrained("facebook/opt-1.3b")
 
-    # dataset = LineByLineTextDataset(
+    # dataset = transformers.LineByLineTextDataset(
     #     tokenizer=tokenizer,
     #     file_path="./text.txt",
     #     block_size=128,
@@ -134,14 +169,15 @@ def train():
         learning_rate=args.learning_rate,
         # load_best_model_at_end=True,
         warmup_ratio=0.1,
-        evaluation_strategy='epoch',
+        logging_strategy='epoch'
+        # evaluation_strategy='epoch',
     )
 
     trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=train_dataset,
-        eval_dataset=dev_dataset,
+        # eval_dataset=dev_dataset,
         data_collator=data_collator,
     )
     # compute_metrics=compute_metrics)
@@ -207,31 +243,16 @@ def test_pipeline():
             relation=row["Relation"],
             prompt_templates=prompt_templates,
             instantiated_templates=relation_instantiated,
-            tokenizer=tokenizer,
             few_shot=args.few_shot,
-            task=task,
         )
         for row in test_rows
     ]
 
-    entity_escape_set = set()
-    entity_in_set = set()
-    for row in test_rows:
-        objs = row[KEY_OBJS]
-        for obj in objs:
-            if obj in entity_set or obj in tokenizer.vocab:
-                entity_in_set.add(obj)
-            else:
-                entity_escape_set.add(obj)
-
-    print("escaped entity number: ", len(entity_escape_set))
-    print("entity_in_set", len(entity_in_set))
-    "1 2 3 [maxk] [mask] [mask] 4  5 6"
-    # Run the model
     logger.info(f"Running the model...")
 
     outputs = tqdm(
-        pipe(prompts, batch_size=args.test_batch_size, max_length=config.GE_MAX_LENGTH)
+        pipe(prompts, batch_size=args.test_batch_size, max_length=config.GE_MAX_LENGTH),
+        total=len(prompts),
     )
     logger.info(f"End the model...")
     results = []
@@ -242,16 +263,12 @@ def test_pipeline():
         objects = qa_answer.split(",")
         objects = [answer.strip() for answer in objects]
         objects = list(set(objects))
+        if config.EMPTY_TOKEN in objects:
+            objects = [config.EMPTY_STR]
         # for entity in objects:
         #     wikidata_id = util.disambiguation_baseline(entity)
         #     objects_wikiid.append(wikidata_id)
         is_in = []
-        for obj in objects:
-            if obj in entity_set or obj in tokenizer.vocab:
-                is_in.append(1)
-            else:
-                is_in.append(0)
-
         result_row = {
             "SubjectEntityID": row["SubjectEntityID"],
             "SubjectEntity": row["SubjectEntity"],
@@ -273,17 +290,6 @@ def test_pipeline():
 
     logger.info(f"Start Evaluate ...")
     evaluate(args.output, args.test_fn)
-
-
-def build_entity_set(fn):
-    with open(args.train_fn, "r") as file:
-        for line in file:
-            line_json = json.loads(line)
-            object_entities = line_json['ObjectEntities']
-            subject = line_json["SubjectEntity"]
-
-            entity_set.add(subject)
-            entity_set.update(object_entities)
 
 
 if __name__ == "__main__":
@@ -377,17 +383,11 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if not os.path.exists(entity_fn):
-        build_entity_set(args.train_fn)
-        build_entity_set(args.dev_fn)
-        with open(entity_fn, 'w') as f:
-            json.dump(list(entity_set), f)
-    else:
-        with open(entity_fn, 'r') as f:
-            entity_set = set(json.load(f))
-
     if "train" in args.mode:
         train()
 
     if "test" in args.mode:
         test_pipeline()
+
+    if "evaulate" in args.mode:
+        evaluate(args.output, args.test_fn)

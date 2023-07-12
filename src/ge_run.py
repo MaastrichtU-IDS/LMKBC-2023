@@ -21,8 +21,9 @@ def run():
 
     cmd_run_fillmask = f"""
 
-   python src/ge_model.py  --test_fn {config.VAL_FN} --template_fn res/question-prompts0.csv  --output {OUTPUT_FILE} --train_fn data/train.jsonl --pretrain_model_name facebook/opt-350m  --train_batch_size 16 --gpu 0    --dev_fn  data/train_tiny.jsonl --mode "tra in test" --bin_dir best_ckpt  --train_epoch 100 --test_batch_size 32 --learning_rate 5e-6 --few_shot 3
+   python src/ge_model.py  --test_fn {config.VAL_FN} --template_fn res/question-prompts0.csv  --output {OUTPUT_FILE} --train_fn data/train.jsonl --pretrain_model_name facebook/opt-350m  --train_batch_size 16 --gpu 0    --dev_fn  data/train_tiny.jsonl --mode "tr ain  test ev aulate" --bin_dir best_ckpt  --train_epoch 50 --test_batch_size 32 --learning_rate 5e-5 --few_shot 3
 
+   
     """
 
     print(cmd_run_fillmask)

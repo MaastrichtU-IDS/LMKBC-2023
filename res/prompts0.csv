@@ -1,0 +1,22 @@
+Relation,PromptTemplate
+BandHasMember,{subject_entity} is a music band that includes  {mask_token} as a singer or player.
+CityLocatedAtRiver,the city {subject_entity} is near at the {mask_token} river.
+CompanyHasParentOrganisation,The company {mask_token} is the parent organization of {subject_entity} company.
+CountryBordersCountry,the country {subject_entity} borders the country {mask_token}.
+CountryHasOfficialLanguage,The country {subject_entity} use {mask_token} has the official language.
+CountryHasStates,The country {subject_entity} includes {mask_token} as the state or province.
+FootballerPlaysPosition, The football players {subject_entity} plays as a {mask_token} in football.
+PersonCauseOfDeath,The person {subject_entity} died due to {mask_token}.
+PersonHasAutobiography,The person {subject_entity} authored an autobiography titled {mask_token}.
+PersonHasEmployer,The person {subject_entity} works for the person {mask_token}.
+PersonHasNoblePrize,THe Professor or Doctor {subject_entity} has been awarded the Nobel Prize in {mask_token}.
+PersonHasNumberOfChildren,The person {subject_entity} has {mask_token} number of children.
+PersonHasPlaceOfDeath,The person {subject_entity} died in the area {mask_token}.
+PersonHasProfession,The person {subject_entity} works as a {mask_token} job.
+PersonHasSpouse,The person {subject_entity} is married to the person {mask_token}.
+PersonPlaysInstrument,The person {subject_entity} plays the {mask_token} instrument.
+PersonSpeaksLanguage,The person {subject_entity} speaks the language {mask_token}.
+RiverBasinsCountry,{subject_entity} river basin is located in the country {mask_token}.
+SeriesHasNumberOfEpisodes,The series {subject_entity} has number {mask_token} episodes.
+StateBordersState,The province or state {subject_entity} borders another state or province {mask_token}.
+CompoundHasParts,The chemical {subject_entity} is composed of the chemical {mask_token}.

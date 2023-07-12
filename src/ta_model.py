@@ -13,7 +13,6 @@ from transformers import (
     BertModel,
 )
 import os
-from fm_dataset import MLMDataset
 import config
 from evaluate import evaluate
 import util
@@ -44,7 +43,7 @@ class TADataset(Dataset):
 
         for entity in entity_set:
             tokens = tokenizer_origin.tokenize(entity)
-            sentence_token = tokenizer_origin.tokenize('is split into')
+            sentence_token = tokenizer_origin.tokenize('is equal to the following:')
             label_tokens = [entity] + sentence_token + tokens
             input_tokens = [tokenizer_origin.mask_token] + sentence_token + tokens
 
@@ -192,7 +191,7 @@ def test_pipeline():
     logger.info(f"End the model...")
     results = []
     num_filtered = 0
-    rel_thres_fn = f"{config.RES_PATH}/relation-threshold.json"
+    rel_thres_fn = f"{config.RES_DIR}/relation-threshold.json"
     if os.path.exists(rel_thres_fn):
         with open(rel_thres_fn, 'r') as f:
             rel_thres_dict = json.load(f)
