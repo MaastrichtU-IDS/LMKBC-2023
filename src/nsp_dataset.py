@@ -27,53 +27,41 @@ class NSPDataset(Dataset):
     def __init__(self, tokenizer: BertTokenizerFast, data_fn, kg_fn) -> None:
         super().__init__()
 
-        base_name = os.path.basename(data_fn)
-        # base_dir = os.path.dirname(data_fn)
-        pickle_fn = f'{pickle_dir}\\nsp_{base_name}.pickle'
-        self.tokenizer = tokenizer
-        if os.path.exists(pickle_fn) and False:
-            with open(pickle_fn, 'rb') as f:
-                self.data = pickle.load(f)
-        else:
-            self.data = []
-            # print(data_fn)
-            train_data = util.file_read_json_line(data_fn)
-            # print(train_data[0])
-            max_length = 0
-            kg = util.build_knowledge_graph(data_fn=kg_fn)
-            for row in train_data:
-                given_subject = row['given_subject']
-                given_object = row['given_object']
-                triple = row['triple']
-                label = row['label']
-                subject_sentence = self.given_to_sentence(given_subject)
-                object_sentence = self.given_to_sentence(given_object)
-                triple_sentence = self.triple_to_sentence(*triple)
-                text = f"{subject_sentence} while {object_sentence}"
-                encoded = tokenizer.encode_plus(
-                    text=text,
-                    text_pair=triple_sentence,
-                    return_tensors='pt',
-                    padding="max_length",
-                    max_length=config.FM_MAX_LENGTH,
-                )
-                input_ids = encoded['input_ids'].squeeze()
-                attention_mask = encoded['attention_mask'].squeeze()
-                token_type_ids = encoded['token_type_ids'].squeeze()
-                if (l := len(input_ids)) > max_length:
-                    max_length = l
-                item = {
-                    'input_ids': input_ids,
-                    'attention_mask': attention_mask,
-                    'token_type_ids': token_type_ids,
-                    "label": torch.tensor(label),
-                }
+        self.data = []
+        # print(data_fn)
+        train_data = util.file_read_json_line(data_fn)
+        # print(train_data[0])
+        max_length = 0
+        kg = util.build_knowledge_graph(data_fn=kg_fn)
+        for row in train_data:
+            triple = row['triple']
+            label = row['label']
+            subject_sentence = self.given_to_sentence(given_subject)
+            object_sentence = self.given_to_sentence(given_object)
+            triple_sentence = self.triple_to_sentence(*triple)
+            text = f"{subject_sentence} while {object_sentence}"
+            encoded = tokenizer.encode_plus(
+                text=text,
+                text_pair=triple_sentence,
+                return_tensors='pt',
+                padding="max_length",
+                max_length=config.FM_MAX_LENGTH,
+            )
+            input_ids = encoded['input_ids'].squeeze()
+            attention_mask = encoded['attention_mask'].squeeze()
+            token_type_ids = encoded['token_type_ids'].squeeze()
+            if (l := len(input_ids)) > max_length:
+                max_length = l
+            item = {
+                'input_ids': input_ids,
+                'attention_mask': attention_mask,
+                'token_type_ids': token_type_ids,
+                "label": torch.tensor(label),
+            }
 
-                self.data.append(item)
-            with open(pickle_fn, 'wb') as f:
-                pickle.dump(self.data, f)
-            print("max_sentence_length", max_length)
-            # print("max_obj_length", max_obj_length)
+            self.data.append(item)
+        print("max_sentence_length", max_length)
+        # print("max_obj_length", max_obj_length)
 
     def __getitem__(self, index):
         return self.data[index]

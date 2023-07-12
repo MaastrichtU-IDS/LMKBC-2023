@@ -53,9 +53,6 @@ class MLMDataset(Dataset):
                 label_ids = [
                     obj_id if t == tokenizer.mask_token_id else -100 for t in input_ids
                 ]
-                if len(self.data) % 500 == 0:
-                    print("input_sentence", input_sentence)
-                    print("obj", obj, obj_id, tokenizer.convert_ids_to_tokens(obj_id))
 
                 item = {
                     "labels": label_ids,
@@ -74,10 +71,18 @@ class MLMDataset(Dataset):
 
 
 def train():
+    # if os.path.exists(args.model_load_dir):
+    # print(f"using existing model {args.model_load_dir}")
     bert_config = transformers.AutoConfig.from_pretrained(args.model_load_dir)
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
     )
+    # else:
+    #     print(f"using huggingface  model {args.model_load_dir}")
+    #     bert_config = transformers.AutoConfig.from_pretrained(config.bert_base_cased)
+    #     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
+    #         config.bert_base_cased, config=bert_config
+    #     )
 
     is_train = os.path.isdir(args.model_load_dir)
 
@@ -87,9 +92,6 @@ def train():
     bert_collator = util.DataCollatorKBC(
         tokenizer=bert_tokenizer,
     )
-    print(f"train dataset size: {len(train_dataset)}")
-    # we extend the mask window only for training set, in evaluation, we only really care about the object tokens themselves;
-    # In these cases, we set ``extend_len'' to 0
     dev_dataset = MLMDataset(
         data_fn=args.dev_fn,
         tokenizer=bert_tokenizer,
@@ -128,13 +130,9 @@ def train():
         tokenizer=bert_tokenizer,
     )
 
-    # compute_metrics=compute_metrics)
-
     trainer.train()
-
     trainer.save_model(output_dir=args.model_best_dir)
     print(f"model_best_dir: ", args.model_best_dir)
-    # print(dev_results)
 
 
 def test_pipeline():
@@ -230,6 +228,13 @@ if __name__ == "__main__":
         type=str,
         help="HuggingFace model name (default: bert-base-cased)",
     )
+
+    # parser.add_argument(
+    #     "--pretrin_model",
+    #     type=str,
+    #     help="HuggingFace model name (default: bert-base-cased)",
+    # )
+
     parser.add_argument(
         "-i", "--test_fn", type=str, required=True, help="Input test file (required)"
     )

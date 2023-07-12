@@ -21,6 +21,7 @@ GE_MAX_LENGTH = 512
 
 bert_base_cased = 'bert-base-cased'
 bert_large_cased = 'bert-large-cased'
+
 opt_350m = 'opt-350m'
 
 TRAIN_FN = f'{DATA_DIR}/train.jsonl'

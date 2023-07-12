@@ -149,13 +149,10 @@ def check_kg(kg: dict, key, relation):
     if FROM not in kg[key]:
         kg[key][FROM] = dict()
 
-    if TO not in kg[key]:
-        kg[key][TO] = dict()
-    kg[key][TO][relation] = set()
-
-    if FROM not in kg[key]:
-        kg[key][FROM] = dict()
-    kg[key][FROM][relation] = set()
+    if relation not in kg[key][TO]:
+        kg[key][TO][relation] = set()
+    if relation not in kg[key][FROM]:
+        kg[key][FROM][relation] = set()
 
 
 def build_knowledge_graph(data_fn, kg=None):
@@ -167,13 +164,9 @@ def build_knowledge_graph(data_fn, kg=None):
         object_entities = row['ObjectEntities']
         subject = row["SubjectEntity"]
         check_kg(kg, subject, relation)
-        if relation not in kg[subject][TO]:
-            kg[subject][TO][relation] = set()
         kg[subject][TO][relation].update(object_entities)
-
-        for obj in object_entities:
-            check_kg(kg, obj, relation)
-            kg[subject][FROM][relation].add(subject)
+        for entity in object_entities:
+            kg[entity][FROM][relation].add(subject)
     print('length of subjects ', len(kg))
     return kg
 

@@ -65,8 +65,6 @@ def train():
     # )
     train_dataset = NSPDataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
     print(f"train dataset size: {len(train_dataset)}")
-    # we extend the mask window only for training set, in evaluation, we only really care about the object tokens themselves;
-    # In these cases, we set ``extend_len'' to 0
     dev_dataset = NSPDataset(data_fn=args.dev_fn, tokenizer=bert_tokenizer)
     bert_model.resize_token_embeddings(len(bert_tokenizer))
 

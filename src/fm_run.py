@@ -21,8 +21,8 @@ if not os.path.exists(model_save_dir):
     os.makedirs(model_save_dir)
 
 model_load_dir = 'bin/pretrain_fill-mask/bert-base-cased/best_ckpt'
-# model_load_dir = config.bert_base_cased
-model_load_dir = model_best_dir
+model_load_dir = config.bert_base_cased
+# model_load_dir = model_best_dir
 
 
 def run():
