@@ -70,22 +70,22 @@ class NSPDataset(Dataset):
             subject = row[config.KEY_SUB]
             # generate the contenx sentence of a giving subject entity
             subject_context = self.generate_sentence_from_context(subject)
-
+            prompt = self.prompt_templates[relation]
             # Iterate over each object entity and label in parallel
             for obj, label in zip(object_entities, object_labels):
                 # translate a triple into a sentence using a prompt
                 # a example of prompt:
                 # {subject_entity} is a city located at the {mask_token} river.
                 # the Netherlands borders Germany, Belgium and Demark 
-                triple_sentence = prompt.format(
-                    subject=subject, relation=relation, object=obj
+                query_sentence = prompt.format(
+                    subject_entity=subject,mask_token=obj
                 )
                 # generate the contenx sentence of a giving object entity
                 object_context = self.generate_sentence_from_context(obj)
                 context = f"{subject_context} while {object_context}"
                 encoded = tokenizer.encode_plus(
                     text=context,
-                    text_pair=triple_sentence,
+                    text_pair=query_sentence,
                 )
 
                 # Truncate encoded inputs if the length exceeds 500 tokens
