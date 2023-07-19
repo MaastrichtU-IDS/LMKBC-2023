@@ -48,6 +48,7 @@ example of lines of the file of train set
     "TrueObjectEntities": [        "Uganda"    ]
 }
 '''
+
 class NSPDataset(Dataset):
     def __init__(self, tokenizer: BertTokenizer, data_fn, kg, template_fn) -> None:
         super().__init__()
@@ -75,6 +76,7 @@ class NSPDataset(Dataset):
                 # translate a triple into a sentence using a prompt
                 # a example of prompt:
                 # {subject_entity} is a city located at the {mask_token} river.
+                # the Netherlands borders Germany, Belgium and Demark 
                 triple_sentence = prompt.format(
                     subject=subject, relation=relation, object=obj
                 )
@@ -244,6 +246,7 @@ def evaluate():
 
     # softmax to judgee easily
     predictions = util.softmax(predicts.predictions, axis=1)
+    # [0.1,0.9]
     # the first column (predictions[:, 0]) is the confidence score of not correct and the second column (predictions[:, 1]) is the confidence score of correctness
     pre_score = predictions[:, 1]
     print(pre_score[:10])
