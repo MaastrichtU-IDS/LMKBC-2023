@@ -13,6 +13,7 @@ import config
 import util
 import transformers
 
+
 with open(f'{config.RES_DIR}/tokenizer/bert/added_tokens.json') as f:
     entity_dic_jt = json.load(f)
 

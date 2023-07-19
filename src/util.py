@@ -11,6 +11,7 @@ from transformers import BertTokenizerFast
 import config
 
 from typing import List, Union, Dict, Any, Optional, Mapping
+import numpy as np
 
 local_cache_path = f'{config.RES_DIR}/item_cache.json'
 local_cache = dict()
@@ -89,13 +90,13 @@ def flat_list(data_list: list):
     return datas
 
 
-def file_write_json_line(data_fn, results, mode='auto'):
+def file_write_json_line(data_fn, results, mode='w'):
     results = flat_list(results)
     json_text_list = [json.dumps(aj, cls=SetEncoder) for aj in results]
     file_write_line(data_fn, json_text_list, mode)
 
 
-def file_write_line(data_fn, results, mode='auto'):
+def file_write_line(data_fn, results, mode='w'):
     if mode == 'auto':
         mode = 'a' if os.path.exists(data_fn) else 'w'
     with open(data_fn, mode) as f:
@@ -137,38 +138,46 @@ def recover_mask_word_func(mask_word, bert_tokenizer):
     return word_resume
 
 
-TO = 'to'
-FROM = 'from'
+class KnowledgeGraph:
+    def __init__(self, data_fn, kg=None):
+        train_line = file_read_json_line(data_fn)
+        self.kg = dict() if kg is None else kg
+        for row in train_line:
+            relation = row['Relation']
+            object_entities = row['ObjectEntities']
+            subject = row["SubjectEntity"]
+            self.add_triple(subject, relation, object_entities)
 
+    def ensure_relation_exists(self, key, relation):
+        if key not in self.kg:
+            self.kg[key] = dict()
+        if config.TO_KG not in self.kg[key]:
+            self.kg[key][config.TO_KG] = dict()
+        if config.FROM_KG not in self.kg[key]:
+            self.kg[key][config.FROM_KG] = dict()
 
-def check_kg(kg: dict, key, relation):
-    if key not in kg:
-        kg[key] = dict()
-    if TO not in kg[key]:
-        kg[key][TO] = dict()
-    if FROM not in kg[key]:
-        kg[key][FROM] = dict()
+        if relation not in self.kg[key][config.TO_KG]:
+            self.kg[key][config.TO_KG][relation] = set()
+        if relation not in self.kg[key][config.FROM_KG]:
+            self.kg[key][config.FROM_KG][relation] = set()
 
-    if relation not in kg[key][TO]:
-        kg[key][TO][relation] = set()
-    if relation not in kg[key][FROM]:
-        kg[key][FROM][relation] = set()
+    def add_triple(self, subject, relation, obj):
+        if not isinstance(obj, (list, set)):
+            obj = [obj]
+        self.ensure_relation_exists(subject, relation)
+        self.kg[subject][config.TO_KG][relation].update(obj)
+        for entity in obj:
+            self.ensure_relation_exists(entity, relation)
+            self.kg[entity][config.FROM_KG][relation].add(subject)
 
+    def __getitem__(self, index):
+        if index in self.kg:
+            return self.kg[index]
+        else:
+            return None
 
-def build_knowledge_graph(data_fn, kg=None):
-    train_line = file_read_json_line(data_fn)
-    if kg is None:
-        kg = dict()
-    for row in train_line:
-        relation = row['Relation']
-        object_entities = row['ObjectEntities']
-        subject = row["SubjectEntity"]
-        check_kg(kg, subject, relation)
-        kg[subject][TO][relation].update(object_entities)
-        for entity in object_entities:
-            kg[entity][FROM][relation].add(subject)
-    print('length of subjects ', len(kg))
-    return kg
+    def __contains__(self, item):
+        return item in self.kg
 
 
 class DataCollatorKBC:
@@ -213,6 +222,12 @@ def tokenize_sentence(tokenizer, input_sentence: str):
     attention_mask = [0 if v == tokenizer.mask_token else 1 for v in input_tokens]
 
     return input_ids, attention_mask
+
+
+def softmax(x, axis=0):
+    x_max = np.max(x)
+    e_x = np.exp(x - x_max)
+    return e_x / np.sum(e_x, axis=axis, keepdims=True)
 
 
 if __name__ == "__main__":

@@ -34,7 +34,7 @@ logger = logging.getLogger(__name__)
 print(torch.cuda.is_available())
 
 
-class PREMLMDataset(Dataset):
+class PreFMDataset(Dataset):
     def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:
         super().__init__()
         self.data = []
@@ -44,6 +44,7 @@ class PREMLMDataset(Dataset):
             exists = row['exists']
             input_tokens = [tokenizer.cls_token] + row['tokens'] + [tokenizer.sep_token]
             exists_ids = tokenizer.convert_tokens_to_ids(exists)
+            # generate masking-combination, for example, a sentence contains three entities, e.g. (a,b,c). We can select one,multiple or all of them, that is (a),(b),(c),(a,b),(a,c),etc. Different permutation scheme may provides different performance
             # exists_ids_thin = random.sample(exists_ids, min(10, len(exists_ids)))
             # select_ids_list = list(
             #     itertools.permutations(
@@ -53,6 +54,43 @@ class PREMLMDataset(Dataset):
             # select_ids_list = random.sample(
             #     select_ids_list, min(1, len(select_ids_list))
             # )
+            select_ids_list = [exists_ids]
+            input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
+            for select_ids in select_ids_list:
+                # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
+                label_ids = [x if x in select_ids else -100 for x in input_ids]
+                #  in input id sequences, the weight of masked tokens will  be zero. That means the vector of masked tokens in input_ids will not be considered in predicting the mask entities in label_ids.
+                attention_mask = [0 if x in select_ids else 1 for x in input_ids]
+                # replace the id of entities in input_ids with the mask_token_id
+                input_ids_t = [
+                    tokenizer.mask_token_id if x in select_ids else x for x in input_ids
+                ]
+                item = {
+                    "input_ids": input_ids_t,
+                    "labels": label_ids,
+                    "attention_mask": attention_mask,
+                }
+                self.data.append(item)
+
+        random.shuffle(self.data)
+
+    def __getitem__(self, index):
+        return self.data[index]
+
+    def __len__(self):
+        return len(self.data)
+
+
+class PreNSPDataset(Dataset):
+    def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:
+        super().__init__()
+        self.data = []
+        train_data = util.file_read_json_line(data_fn)
+        self.tokenizer = tokenizer
+        for row in train_data:
+            exists = row['exists']
+            input_tokens = [tokenizer.cls_token] + row['tokens'] + [tokenizer.sep_token]
+            exists_ids = tokenizer.convert_tokens_to_ids(exists)
             select_ids_list = [exists_ids]
             input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
             for select_ids in select_ids_list:
@@ -84,7 +122,7 @@ def train():
     )
     bert_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
 
-    train_dataset = PREMLMDataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
+    train_dataset = PreFMDataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
     bert_collator = util.DataCollatorKBC(
         tokenizer=bert_tokenizer,
     )

@@ -27,23 +27,39 @@ class MLMDataset(Dataset):
     def __init__(self, tokenizer: BertTokenizerFast, data_fn, template_fn) -> None:
         super().__init__()
         self.data = []
+
+        # Read the training data from a JSON file
         train_data = util.file_read_json_line(data_fn)
+
+        # Read the prompt templates from a file
         prompt_templates = util.file_read_prompt(template_fn)
+
+        # Iterate over each row in the training data
         for row in train_data:
             relation = row['Relation']
             prompt_template = prompt_templates[relation]
             object_entities = row['ObjectEntities']
             subject = row["SubjectEntity"]
+
+            # Iterate over each object entity
             for obj in object_entities:
                 if obj == '':
                     obj = config.EMPTY_TOKEN
+
+                # Create an input sentence by formatting the prompt template
                 input_sentence = prompt_template.format(
                     subject_entity=subject, mask_token=tokenizer.mask_token
                 )
+
+                # Convert the object entity to its corresponding ID
                 obj_id = tokenizer.convert_tokens_to_ids(obj)
+
+                # Tokenize the input sentence using the tokenizer
                 input_ids, attention_mask = util.tokenize_sentence(
                     tokenizer, input_sentence
                 )
+
+                # Create label IDs where the masked token corresponds to the object ID
                 label_ids = [
                     obj_id if t == tokenizer.mask_token_id else -100 for t in input_ids
                 ]
@@ -53,6 +69,7 @@ class MLMDataset(Dataset):
                     "input_ids": input_ids,
                     "attention_mask": attention_mask,
                 }
+
                 self.data.append(item)
 
         print(self.data[0])
@@ -65,8 +82,6 @@ class MLMDataset(Dataset):
 
 
 def train():
-    # if os.path.exists(args.model_load_dir):
-    # print(f"using existing model {args.model_load_dir}")
     bert_config = transformers.AutoConfig.from_pretrained(args.model_load_dir)
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
@@ -78,21 +93,29 @@ def train():
     #         config.bert_base_cased, config=bert_config
     #     )
 
+    # is_train can be used to resume train process in formal training
     is_train = os.path.isdir(args.model_load_dir)
-
+    # Create the training dataset using the MLMDataset class, providing the train data file, tokenizer, and template file
     train_dataset = MLMDataset(
         data_fn=args.train_fn, tokenizer=bert_tokenizer, template_fn=args.template_fn
     )
+
+    # Create a data collator for batching and padding the data during training
     bert_collator = util.DataCollatorKBC(
         tokenizer=bert_tokenizer,
     )
+
+    # Create the development dataset using the MLMDataset class, providing the dev data file, tokenizer, and template file
     dev_dataset = MLMDataset(
         data_fn=args.dev_fn,
         tokenizer=bert_tokenizer,
         template_fn=args.template_fn,
     )
+
+    # Resize the token embeddings of the BERT model to match the tokenizer's vocabulary size
     bert_model.resize_token_embeddings(len(bert_tokenizer))
 
+    # Set up the training arguments for the model
     training_args = transformers.TrainingArguments(
         output_dir=args.model_save_dir,
         overwrite_output_dir=True,
@@ -115,6 +138,7 @@ def train():
         no_cuda=False,
     )
 
+    # Create a trainer object for training the model
     trainer = transformers.Trainer(
         model=bert_model,
         data_collator=bert_collator,
@@ -130,11 +154,15 @@ def train():
 
 
 def test_pipeline():
+    # Load the configuration for the trained BERT model from the specified directory
     bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
+
+    # Load the trained BERT model for masked language modeling
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_best_dir, config=bert_config
     )
 
+    # Create a pipeline for the specified task using the loaded BERT model and tokenizer
     pipe = pipeline(
         task=task,
         model=bert_model,
@@ -142,10 +170,16 @@ def test_pipeline():
         top_k=args.top_k,
         device=args.gpu,
     )
+
+    # Read the prompt templates from the specified file
     prompt_templates = util.file_read_prompt(args.template_fn)
+
+    # Read the test data rows from the specified file
     test_rows = util.file_read_json_line(args.test_fn)
+
     prompts = []
     for row in test_rows:
+        # Generate a prompt for each test row using the corresponding template
         prompt = prompt_templates[row["Relation"]].format(
             subject_entity=row["SubjectEntity"],
             mask_token=bert_tokenizer.mask_token,
@@ -154,11 +188,16 @@ def test_pipeline():
 
     logger.info(f"Running the model...")
 
+    # Run the model on the generated prompts in batches
     outputs = pipe(prompts, batch_size=args.train_batch_size * 4)
+
     logger.info(f"End the model...")
+
     results = []
-    num_filtered = 0
     rel_thres_fn = f"{config.RES_DIR}/relation-threshold.json"
+
+    # use the saved threshold of each relationship
+    # a adaptive threshold or tok-k function is are the works
     if os.path.exists(rel_thres_fn):
         with open(rel_thres_fn, 'r') as f:
             rel_thres_dict = json.load(f)
@@ -168,23 +207,34 @@ def test_pipeline():
     for row, output, prompt in zip(test_rows, outputs, prompts):
         objects_wikiid = []
         objects = []
+
         for seq in output:
+            # Check if the relation is present in the relation-threshold dictionary
             if row[config.KEY_REL] not in rel_thres_dict:
                 print(f"{row[config.KEY_REL]} not in rel_thres_dict")
+
+                # Assign a threshold value for the relation if it's not present
                 rel_thres_dict[row[config.KEY_REL]] = args.threshold
+
+            # Filter the output sequence based on the relation threshold
             if seq["score"] > rel_thres_dict[row[config.KEY_REL]]:
                 obj = seq["token_str"]
+
                 if obj == config.EMPTY_TOKEN:
                     objects_wikiid.append(config.EMPTY_STR)
                     objects = [config.EMPTY_STR]
                     break
                 else:
+                    # Perform disambiguation using a baseline method for the object
                     wikidata_id = util.disambiguation_baseline(obj)
                     objects_wikiid.append(wikidata_id)
+
                 objects.append(obj)
+
         if config.EMPTY_STR in objects:
             objects = [config.EMPTY_STR]
 
+        # Create a result row with the subject entity, object entities, and relation
         result_row = {
             "SubjectEntityID": row["SubjectEntityID"],
             "SubjectEntity": row["SubjectEntity"],
@@ -193,10 +243,11 @@ def test_pipeline():
             "Relation": row["Relation"],
         }
         results.append(result_row)
-    print("filtered entity number: ", num_filtered)
-    # Save the results
+
+    # Save the results to the specified output file
     logger.info(f"Saving the results to \"{args.output}\"...")
     util.file_write_json_line(args.output, results)
+
     logger.info(f"Start Evaluate ...")
     evaluate(args.output, args.test_fn)
 

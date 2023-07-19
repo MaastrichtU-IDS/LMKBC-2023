@@ -1,13 +1,36 @@
 import os
 import config
 
-RUN_OUTPUT_NAME = "test_run-bert.jsonl"
-OUTPUT_FILE = f'{config.OUTPUT_DIR}/{RUN_OUTPUT_NAME}'
+task = "next-sentence"
+
+RUN_OUTPUT_NAME = "{task}.jsonl"
+OUTPUT_DIR = f'{config.OUTPUT_DIR}/{task}'
+OUTPUT_FILE = f'{OUTPUT_DIR}/{RUN_OUTPUT_NAME}'
+
+import torch
 
 
-VAL_FILE = f'{config.DATA_DIR}/triple_classification_val.jsonl'
-TRAIN_FILE = f'{config.DATA_DIR}/triple_classification_train.jsonl'
-DEV_FILE = f'{config.DATA_DIR}/triple_classification_dev.jsonl'
+pretrain_model_name = config.bert_base_cased
+
+print(torch.cuda.is_available())
+model_save_dir = f"{config.BIN_DIR}/{task}/{pretrain_model_name}"
+model_best_dir = model_save_dir + "/best_ckpt"
+
+if not os.path.exists(OUTPUT_DIR):
+    os.makedirs(OUTPUT_DIR)
+if not os.path.exists(model_save_dir):
+    os.makedirs(model_save_dir)
+
+model_load_dir = 'bin/pretrain_fill-mask/bert-base-cased/best_ckpt'
+# model_load_dir = config.bert_base_cased
+# model_load_dir = model_best_dir
+
+
+# train_fn = 'output/filled-mask/train.jsonl'
+# dev_fn = 'output/filled-mask/dev.jsonl'
+
+train_fn = 'output/filled-mask/filled-mask-train.jsonl'
+dev_fn = 'output/filled-mask/filled-mask-valid.jsonl'
 
 
 def run():
@@ -16,7 +39,8 @@ def run():
     #     '''
 
     cmd_run_fillmask = f"""
-   python src/nsp_model.py  --test_fn {VAL_FILE} --template_fn res/prompts.csv  --output {OUTPUT_FILE} --train_fn {TRAIN_FILE} --pretrain_model_name bert-base-cased  --train_batch_size 16 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {DEV_FILE} --mode "train test" --bin_dir best_ckpt  --train_epoch 1 --test_batch_size 64 --learning_rate 4e-5
+    
+   python src/nsp_model.py  --test_fn {dev_fn} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {train_fn}  --train_batch_size 16 --gpu 0 --top_k 15 --threshold 0.1  --dev_fn   {dev_fn} --mode "train  test" --train_epoch 20 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
     
     """
 

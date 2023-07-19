@@ -12,21 +12,17 @@ import torch
 from torch.utils.data import Dataset
 import transformers
 from transformers import (
-    AutoTokenizer,
-    AutoModelForMaskedLM,
     pipeline,
     BertTokenizer,
-    BertForMaskedLM,
     BertModel,
 )
 import os
-from nsp_dataset import NSPDataset
 import config
 from evaluate import combine_scores_per_relation, evaluate_per_sr_pair
 from file_io import read_lm_kbc_jsonl
 import util
 
-import sklearn.metrics as metrics
+from sklearn import metrics
 
 task = 'nsp'
 logging.basicConfig(
@@ -37,41 +33,141 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def train():
-    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
-    best_dir = f"{output_dir}/{args.bin_dir}"
-    if os.path.exists(best_dir):
-        bert_config = transformers.AutoConfig.from_pretrained(best_dir)
-        bert_model: BertModel = (
-            transformers.BertForNextSentencePrediction.from_pretrained(
-                best_dir, config=bert_config
-            )
-        )
+prompt = '{subject} has {relation} with {object}'
 
-        bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
-    else:
-        bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
-        # print(bert_config)
-        bert_model = transformers.BertForNextSentencePrediction.from_pretrained(
-            args.pretrain_model_name, config=bert_config
-        )
-        bert_tokenizer: BertTokenizer = transformers.AutoTokenizer.from_pretrained(
-            pretrained_model_name_or_path=args.pretrain_model_name
-        )
-    # bert_collator = transformers.DataCollatorForLanguageModeling(
-    #     tokenizer=bert_tokenizer,
-    #     padding="max_length",
-    #     max_length=config.MAX_LENGTH,
+
+'''
+example of lines of the file of train set
+{
+    "SubjectEntityID": "Q225",
+    "SubjectEntity": "Bosnia and Herzegovina",
+    "ObjectEntitiesID": [        "Q115",        "Q1036"    ],
+    "ObjectEntities": [        "Ethiopia",        "Uganda"    ],
+    "Relation": "CountryBordersCountry",
+    "ObjectLabels": [        0,        1    ],
+    "TrueObjectEntities": [        "Uganda"    ]
+}
+'''
+class NSPDataset(Dataset):
+    def __init__(self, tokenizer: BertTokenizer, data_fn, kg, template_fn) -> None:
+        super().__init__()
+        self.data = []  
+        self.kg = kg 
+        train_data = util.file_read_json_line(
+            data_fn
+        )  # Read the training data from the file
+        self.miss_entity_count = 0  # Initialize a counter for missing entities
+        self.prompt_templates = util.file_read_prompt(
+            template_fn
+        )  # Read prompt templates from a file
+
+        # Iterate over each row in the training data
+        for row in train_data:
+            object_entities = row[config.KEY_OBJS]
+            object_labels = row[config.OBJLABELS_KEY]
+            relation = row[config.KEY_REL]
+            subject = row[config.KEY_SUB]
+            # generate the contenx sentence of a giving subject entity
+            subject_context = self.generate_sentence_from_context(subject)
+
+            # Iterate over each object entity and label in parallel
+            for obj, label in zip(object_entities, object_labels):
+                # translate a triple into a sentence using a prompt
+                # a example of prompt:
+                # {subject_entity} is a city located at the {mask_token} river.
+                triple_sentence = prompt.format(
+                    subject=subject, relation=relation, object=obj
+                )
+                # generate the contenx sentence of a giving object entity
+                object_context = self.generate_sentence_from_context(obj)
+                context = f"{subject_context} while {object_context}"
+                encoded = tokenizer.encode_plus(
+                    text=context,
+                    text_pair=triple_sentence,
+                )
+
+                # Truncate encoded inputs if the length exceeds 500 tokens
+                # 
+                if len(encoded['input_ids']) > 500:
+                    encoded['input_ids'] = encoded['input_ids'][-500:]
+                    encoded['token_type_ids'] = encoded['token_type_ids'][-500:]
+                    encoded['attention_mask'] = encoded['attention_mask'][-500:]
+
+                encoded['labels'] = label
+                self.data.append(encoded)
+
+        print("self.miss_entity_count", self.miss_entity_count)
+
+    def __getitem__(self, index):
+        return self.data[index]  # Retrieve an item from the dataset based on the index
+
+    def __len__(self):
+        return len(self.data)  # Return the length of the dataset
+
+    def generate_sentence_from_context(self, entity: str):
+        # Generate a sentence from the entity's context
+        if entity not in self.kg:
+            self.miss_entity_count += 1  # Increment the missing entity count
+            return 'no context'
+
+        sentence_list = []  
+        
+        # from_relations stores the subject entitys of giving entity
+        # for instance, (entity_of_from_relations, predicate, giving entity)
+        from_relations = self.kg[entity][config.FROM_KG]
+        # Generate sentences from 'from_relations'
+        for relation, objects in from_relations.items():
+            template = self.prompt_templates[relation]
+            objects_str = ', '.join(objects)
+            sentence = template.format(subject_entity=objects_str, mask_token=entity)
+            sentence_list.append(sentence)
+
+        # to_relations stores the object entitys of giving entity
+        to_relations = self.kg[entity][config.TO_KG]
+        # for instance, (giving entity, predicate, entity_of_from_relations)
+        # Generate sentences from 'to_relations'
+        for relation, objects in to_relations.items():
+            # template prompt
+            template = self.prompt_templates[relation]
+            objects_str = ', '.join(objects)
+            sentence = template.format(subject_entity=entity, mask_token=objects_str)
+            sentence_list.append(sentence)
+
+        return ' and '.join(sentence_list)
+
+
+def train():
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_load_dir)
+    bert_model: BertModel = transformers.BertForNextSentencePrediction.from_pretrained(
+        args.model_load_dir, config=bert_config
+    )
+    # bert_tokenizer = transformers.AutoTokenizer.from_pretrained( args.model_load_dir)
+    # tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_load_dir)
+
+    # data_collator = transformers.DataCollatorForLanguageModeling(
+    #     tokenizer=bert_tokenizer, mlm=False
     # )
-    train_dataset = NSPDataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
+    train_dataset = NSPDataset(
+        tokenizer=bert_tokenizer,
+        data_fn=args.train_fn,
+        kg=kg,
+        template_fn=args.template_fn,
+    )
     print(f"train dataset size: {len(train_dataset)}")
-    dev_dataset = NSPDataset(data_fn=args.dev_fn, tokenizer=bert_tokenizer)
+    dev_dataset = NSPDataset(
+        tokenizer=bert_tokenizer,
+        data_fn=args.dev_fn,
+        kg=kg,
+        template_fn=args.template_fn,
+    )
+
     bert_model.resize_token_embeddings(len(bert_tokenizer))
 
     training_args = transformers.TrainingArguments(
-        output_dir=output_dir,
+        output_dir=args.model_save_dir,
         overwrite_output_dir=True,
-        evaluation_strategy='epoch',
+        # evaluation_strategy='epoch',
         per_device_train_batch_size=args.train_batch_size,
         per_device_eval_batch_size=64,
         eval_accumulation_steps=8,
@@ -83,16 +179,15 @@ def train():
         save_strategy='epoch',
         save_total_limit=2,
         fp16=True,
-        dataloader_num_workers=0,
-        auto_find_batch_size=False,
-        greater_is_better=False,
-        load_best_model_at_end=True,
-        no_cuda=False,
+        # dataloader_num_workers=0,
+        # auto_find_batch_size=False,
+        # greater_is_better=False,
+        # load_best_model_at_end=True,
     )
 
     trainer = transformers.Trainer(
         model=bert_model,
-        # data_collator=bert_collator,
+        # data_collator=data_collator,
         train_dataset=train_dataset,
         args=training_args,
         eval_dataset=dev_dataset,
@@ -100,29 +195,32 @@ def train():
     )
     # compute_metrics=compute_metrics)
     trainer.train()
-    trainer.save_model(output_dir=best_dir)
+    trainer.save_model(output_dir=args.model_best_dir)
     # bert_tokenizer.save_pretrained(args.bin_dir)
-    dev_results = trainer.evaluate(dev_dataset)
-    # trainer.model
-    print(f"dev results: ")
-    print(dev_results)
+    # dev_results = trainer.evaluate(dev_dataset)
+    # # trainer.model
+    # print(f"dev results: ")
+    # print(dev_results)
 
 
-def filter():
-    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
-    best_dir = f"{output_dir}/{args.bin_dir}"
-
-    bert_config = transformers.AutoConfig.from_pretrained(best_dir)
+def evaluate():
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
     bert_model: BertModel = transformers.BertForNextSentencePrediction.from_pretrained(
-        best_dir, config=bert_config
+        args.model_best_dir, config=bert_config
     )
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
-
-    test_dataset = NSPDataset(data_fn=args.test_fn, tokenizer=bert_tokenizer)
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_best_dir)
+    dev_dataset = NSPDataset(
+        data_fn=args.test_fn,
+        tokenizer=bert_tokenizer,
+        kg=kg,
+        template_fn=args.template_fn,
+    )
     bert_model.resize_token_embeddings(len(bert_tokenizer))
-
+    data_collator = transformers.DataCollatorForLanguageModeling(
+        tokenizer=bert_tokenizer
+    )
     training_args = transformers.TrainingArguments(
-        output_dir=output_dir,
+        output_dir=args.model_save_dir,
         overwrite_output_dir=True,
         evaluation_strategy='epoch',
         per_device_train_batch_size=args.train_batch_size,
@@ -146,71 +244,20 @@ def filter():
     trainer = transformers.Trainer(
         model=bert_model,
         args=training_args,
-        eval_dataset=test_dataset,
+        # eval_dataset=dev_dataset,
         tokenizer=bert_tokenizer,
     )
+    # obtain the raw confidence score of each triple
+    predicts = trainer.predict(dev_dataset)
 
-    predicts = trainer.predict(test_dataset)
-    print(predicts)
-    pre = np.argmax(predicts.predictions, axis=-1)
-    label_ids = predicts.label_ids.reshape(-1, 1)
-    print("pre shape", pre.shape)
-    print("label_ids shape", label_ids.shape)
-    print("positive label", np.sum(label_ids == 1))
-    print("positive pre", np.sum(pre == 1))
-    precision = metrics.precision_score(label_ids, pre)
-    recall = metrics.recall_score(label_ids, pre)
-    f1 = metrics.f1_score(label_ids, pre)
-    print("precision: ", precision)
-    print("recall: ", recall)
-    print("f1: ", f1)
+    # softmax to judgee easily
+    predictions = util.softmax(predicts.predictions, axis=1)
+    # the first column (predictions[:, 0]) is the confidence score of not correct and the second column (predictions[:, 1]) is the confidence score of correctness
+    pre_score = predictions[:, 1]
+    print(pre_score[:10])
+    # if the confidence score of correctnesss over the threshold, set it to 1 elsewise 0
+    pre = np.where(pre_score > 0.9995, 1, 0)
 
-
-def predict():
-    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
-    best_dir = f"{output_dir}/{args.bin_dir}"
-
-    bert_config = transformers.AutoConfig.from_pretrained(best_dir)
-    bert_model: BertModel = transformers.BertForNextSentencePrediction.from_pretrained(
-        best_dir, config=bert_config
-    )
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
-
-    test_dataset = NSPDataset(data_fn=args.test_fn, tokenizer=bert_tokenizer)
-    bert_model.resize_token_embeddings(len(bert_tokenizer))
-
-    training_args = transformers.TrainingArguments(
-        output_dir=output_dir,
-        overwrite_output_dir=True,
-        evaluation_strategy='epoch',
-        per_device_train_batch_size=args.train_batch_size,
-        per_device_eval_batch_size=64,
-        eval_accumulation_steps=8,
-        learning_rate=args.learning_rate,
-        num_train_epochs=args.train_epoch,
-        warmup_ratio=0.1,
-        logging_dir=config.LOGGING_DIR,
-        logging_strategy='epoch',
-        save_strategy='epoch',
-        save_total_limit=2,
-        fp16=True,
-        dataloader_num_workers=0,
-        auto_find_batch_size=False,
-        greater_is_better=False,
-        load_best_model_at_end=True,
-        no_cuda=False,
-    )
-
-    trainer = transformers.Trainer(
-        model=bert_model,
-        args=training_args,
-        eval_dataset=test_dataset,
-        tokenizer=bert_tokenizer,
-    )
-
-    predicts = trainer.predict(test_dataset)
-    print(predicts)
-    pre = np.argmax(predicts.predictions, axis=-1)
     label_ids = predicts.label_ids.reshape(-1, 1)
     print("pre shape", pre.shape)
     print("label_ids shape", label_ids.shape)
@@ -228,18 +275,30 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run the Model with Question and Fill-Mask Prompts"
     )
+
     parser.add_argument(
-        "-m",
-        "--pretrain_model_name",
-        type=str,
-        default="bert-base-cased",
-        help="HuggingFace model name (default: bert-base-cased)",
-    )
-    parser.add_argument(
-        "--bin_dir",
+        "--model_save_dir",
         type=str,
         help="HuggingFace model name (default: bert-base-cased)",
     )
+    parser.add_argument(
+        "--model_best_dir",
+        type=str,
+        help="HuggingFace model name (default: bert-base-cased)",
+    )
+
+    parser.add_argument(
+        "--model_load_dir",
+        type=str,
+        help="HuggingFace model name (default: bert-base-cased)",
+    )
+
+    # parser.add_argument(
+    #     "--pretrin_model",
+    #     type=str,
+    #     help="HuggingFace model name (default: bert-base-cased)",
+    # )
+
     parser.add_argument(
         "-i", "--test_fn", type=str, required=True, help="Input test file (required)"
     )
@@ -250,14 +309,14 @@ if __name__ == "__main__":
         "-k",
         "--top_k",
         type=int,
-        default=5,
+        default=100,
         help="Top k prompt outputs (default: 100)",
     )
     parser.add_argument(
         "-t",
         "--threshold",
         type=float,
-        default=0.5,
+        default=0.1,
         help="Probability threshold (default: 0.5)",
     )
 
@@ -283,13 +342,7 @@ if __name__ == "__main__":
         required=True,
         help="CSV file containing fill-mask prompt templates (required)",
     )
-    parser.add_argument(
-        "-f",
-        "--few_shot",
-        type=int,
-        default=5,
-        help="Number of few-shot examples (default: 5)",
-    )
+
     parser.add_argument(
         "--train_fn",
         type=str,
@@ -315,12 +368,7 @@ if __name__ == "__main__":
         default=32,
         help="Batch size for the model. (default:32)",
     )
-    parser.add_argument(
-        "--test_batch_size",
-        type=int,
-        default=32,
-        help="Batch size for the model. (default:32)",
-    )
+
     parser.add_argument(
         "--mode",
         type=str,
@@ -329,9 +377,14 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-
+    # tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
+    # bert_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
+    # data_collator = transformers.DataCollatorForLanguageModeling(
+    #     tokenizer=bert_tokenizer
+    # )
+    kg = util.KnowledgeGraph(args.train_fn)
     if "train" in args.mode:
         train()
 
     if "test" in args.mode:
-        predict()
+        evaluate()

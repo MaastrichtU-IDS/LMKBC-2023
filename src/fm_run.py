@@ -1,10 +1,9 @@
 import os
 import config
 
-RUN_OUTPUT_NAME = "filled-mask.jsonl"
+RUN_OUTPUT_NAME = "filled-mask-valid.jsonl"
 OUTPUT_DIR = f'{config.OUTPUT_DIR}/filled-mask'
 OUTPUT_FILE = f'{OUTPUT_DIR}/{RUN_OUTPUT_NAME}'
-TEST_FILE = f'{config.DATA_DIR}/val.jsonl'
 
 import torch
 
@@ -21,8 +20,8 @@ if not os.path.exists(model_save_dir):
     os.makedirs(model_save_dir)
 
 model_load_dir = 'bin/pretrain_fill-mask/bert-base-cased/best_ckpt'
-model_load_dir = config.bert_base_cased
-# model_load_dir = model_best_dir
+# model_load_dir = config.bert_base_cased
+model_load_dir = model_best_dir
 
 
 def run():

@@ -48,9 +48,7 @@ def f1_score(p: float, r: float) -> float:
 
 
 def rows_to_dict(rows: List[Dict]) -> Dict:
-    return {
-        (r["SubjectEntity"], r["Relation"]): set(r["ObjectEntities"]) for r in rows
-    }
+    return {(r["SubjectEntity"], r["Relation"]): set(r["ObjectEntities"]) for r in rows}
 
 
 def evaluate_per_sr_pair(pred_rows, gt_rows) -> List[Dict[str, float]]:
@@ -82,12 +80,15 @@ def evaluate_per_sr_pair(pred_rows, gt_rows) -> List[Dict[str, float]]:
 
 
 def evaluate(output, test_fn):
+    #  read json file
     pred_rows = read_lm_kbc_jsonl(output)
     gt_rows = read_lm_kbc_jsonl(test_fn)
 
+    # calculate the precision and recall score of each triple
     scores_per_sr_pair = evaluate_per_sr_pair(pred_rows, gt_rows)
+    # calculate the precision and recall score of each relation
     scores_per_relation = combine_scores_per_relation(scores_per_sr_pair)
-
+    # calculate average score
     scores_per_relation["*** Average ***---"] = {
         "p": sum([x["p"] for x in scores_per_relation.values()])
         / len(scores_per_relation),
@@ -96,17 +97,21 @@ def evaluate(output, test_fn):
         "f1": sum([x["f1"] for x in scores_per_relation.values()])
         / len(scores_per_relation),
     }
+
     scores_per_relation_pd = pd.DataFrame(scores_per_relation)
 
     print(scores_per_relation_pd.transpose().round(3))
 
+    # add a new field which indicate if the predicted object is true of false
+    # the correctness of predicted object can be used in Next-Sentence task, if applicable
     assign_labels = assign_label(pred_rows, gt_rows)
 
-    util.file_write_json_line(output, assign_labels)
+    util.file_write_json_line(output, assign_labels, 'w')
 
 
 def assign_label(pred_rows, gt_rows) -> List:
     pred_dict = rows_to_dict(pred_rows)
+    # return as {(subject_entity,relation):object_entity}
     gt_dict = rows_to_dict(gt_rows)
 
     for row in pred_rows:
@@ -115,6 +120,7 @@ def assign_label(pred_rows, gt_rows) -> List:
         subject = row["SubjectEntity"]
         object_labels = []
         gts = gt_dict[(subject, relation)]
+        #  if the predicted object is correct, then mark as 1, elsewise 0
         for pred in preds:
             if pred in gts:
                 object_labels.append(1)

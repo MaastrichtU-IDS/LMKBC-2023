@@ -11,7 +11,6 @@ LOGGING_DIR = f"{ROOT_PATH}/logging"
 
 
 EMPTY_TOKEN = 'Empty'
-NULL_TOKEN = 'null'
 EMPTY_STR = ''
 
 MASK_TOKEN_SIZE = 50
@@ -24,6 +23,8 @@ bert_large_cased = 'bert-large-cased'
 
 opt_350m = 'opt-350m'
 
+PRETRAIN_FN = f'{DATA_DIR}/pretrain_corpus.jsonl'
+
 TRAIN_FN = f'{DATA_DIR}/train.jsonl'
 TRAIN_TINY_FN = f'{DATA_DIR}/train_tiny.jsonl'
 VAL_FN = f'{DATA_DIR}/val.jsonl'
@@ -31,6 +32,10 @@ VAL_FN = f'{DATA_DIR}/val.jsonl'
 KEY_OBJS = "ObjectEntities"
 KEY_REL = "Relation"
 KEY_SUB = "SubjectEntity"
+OBJLABELS_KEY = 'ObjectLabels'
+
+FROM_KG = 'from'
+TO_KG = 'to'
 
 TOKENIZER_PATH = 'res/tokenizer/bert'
 check_dir_list = [
