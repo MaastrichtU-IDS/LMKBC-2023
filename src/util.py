@@ -140,7 +140,10 @@ def recover_mask_word_func(mask_word, bert_tokenizer):
 
 class KnowledgeGraph:
     def __init__(self, data_fn, kg=None):
+        # read train file, each line is a josn object
         train_line = file_read_json_line(data_fn)
+        # if parameter kg is none, create a new dict object. 
+        # else use the parameter kg. 
         self.kg = dict() if kg is None else kg
         for row in train_line:
             relation = row['Relation']
@@ -148,26 +151,42 @@ class KnowledgeGraph:
             subject = row["SubjectEntity"]
             self.add_triple(subject, relation, object_entities)
 
-    def ensure_relation_exists(self, key, relation):
-        if key not in self.kg:
-            self.kg[key] = dict()
-        if config.TO_KG not in self.kg[key]:
-            self.kg[key][config.TO_KG] = dict()
-        if config.FROM_KG not in self.kg[key]:
-            self.kg[key][config.FROM_KG] = dict()
+    def ensure_key_exists_for_entity(self, entity, relation):
+        # make sure the basic key for each entity exists
+        if entity not in self.kg:
+            self.kg[entity] = dict()
+        if config.TO_KG not in self.kg[entity]:
+            self.kg[entity][config.TO_KG] = dict()
+        if config.FROM_KG not in self.kg[entity]:
+            self.kg[entity][config.FROM_KG] = dict()
 
-        if relation not in self.kg[key][config.TO_KG]:
-            self.kg[key][config.TO_KG][relation] = set()
-        if relation not in self.kg[key][config.FROM_KG]:
-            self.kg[key][config.FROM_KG][relation] = set()
+        if relation not in self.kg[entity][config.TO_KG]:
+            self.kg[entity][config.TO_KG][relation] = set()
+        if relation not in self.kg[entity][config.FROM_KG]:
+            self.kg[entity][config.FROM_KG][relation] = set()
 
     def add_triple(self, subject, relation, obj):
+        # for example: 
+        # {
+        #     "The Netherlands": {
+        #         "to": {
+        #             "CountryBordersCountry": [
+        #                 "Germany"
+        #             ]
+        #         },
+        #         "from": {
+        #             "CountryBordersCountry": [
+        #                 "Belgium"
+        #             ]
+        #         }
+        #     }
+        # }
         if not isinstance(obj, (list, set)):
             obj = [obj]
-        self.ensure_relation_exists(subject, relation)
+        self.ensure_key_exists_for_entity(subject, relation)
         self.kg[subject][config.TO_KG][relation].update(obj)
         for entity in obj:
-            self.ensure_relation_exists(entity, relation)
+            self.ensure_key_exists_for_entity(entity, relation)
             self.kg[entity][config.FROM_KG][relation].add(subject)
 
     def __getitem__(self, index):

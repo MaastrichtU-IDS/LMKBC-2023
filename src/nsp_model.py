@@ -99,10 +99,10 @@ class NSPDataset(Dataset):
         print("self.miss_entity_count", self.miss_entity_count)
 
     def __getitem__(self, index):
-        return self.data[index]  # Retrieve an item from the dataset based on the index
+        return self.data[index]
 
     def __len__(self):
-        return len(self.data)  # Return the length of the dataset
+        return len(self.data)  
 
     def generate_sentence_from_context(self, entity: str):
         # Generate a sentence from the entity's context
@@ -132,8 +132,10 @@ class NSPDataset(Dataset):
             objects_str = ', '.join(objects)
             sentence = template.format(subject_entity=entity, mask_token=objects_str)
             sentence_list.append(sentence)
-
+        # join the sentence of triples into a sentence
+        # for example, ['a relate to b','b relate to c'] into 'a relate to b and b relate to c'
         return ' and '.join(sentence_list)
+
 
 
 def train():
@@ -145,9 +147,6 @@ def train():
     # tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
     bert_tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_load_dir)
 
-    # data_collator = transformers.DataCollatorForLanguageModeling(
-    #     tokenizer=bert_tokenizer, mlm=False
-    # )
     train_dataset = NSPDataset(
         tokenizer=bert_tokenizer,
         data_fn=args.train_fn,
@@ -179,46 +178,39 @@ def train():
         save_strategy='epoch',
         save_total_limit=2,
         fp16=True,
-        # dataloader_num_workers=0,
-        # auto_find_batch_size=False,
-        # greater_is_better=False,
         # load_best_model_at_end=True,
     )
 
     trainer = transformers.Trainer(
         model=bert_model,
-        # data_collator=data_collator,
         train_dataset=train_dataset,
         args=training_args,
         eval_dataset=dev_dataset,
         tokenizer=bert_tokenizer,
     )
-    # compute_metrics=compute_metrics)
+
     trainer.train()
     trainer.save_model(output_dir=args.model_best_dir)
-    # bert_tokenizer.save_pretrained(args.bin_dir)
     # dev_results = trainer.evaluate(dev_dataset)
-    # # trainer.model
     # print(f"dev results: ")
     # print(dev_results)
 
 
 def evaluate():
+    # load model from saved checkpoints in training stage
     bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
     bert_model: BertModel = transformers.BertForNextSentencePrediction.from_pretrained(
         args.model_best_dir, config=bert_config
     )
     bert_tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_best_dir)
+
     dev_dataset = NSPDataset(
         data_fn=args.test_fn,
         tokenizer=bert_tokenizer,
         kg=kg,
         template_fn=args.template_fn,
     )
-    bert_model.resize_token_embeddings(len(bert_tokenizer))
-    data_collator = transformers.DataCollatorForLanguageModeling(
-        tokenizer=bert_tokenizer
-    )
+
     training_args = transformers.TrainingArguments(
         output_dir=args.model_save_dir,
         overwrite_output_dir=True,
@@ -377,11 +369,7 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    # tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
-    # bert_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
-    # data_collator = transformers.DataCollatorForLanguageModeling(
-    #     tokenizer=bert_tokenizer
-    # )
+    # build knowledge graph from train set
     kg = util.KnowledgeGraph(args.train_fn)
     if "train" in args.mode:
         train()
