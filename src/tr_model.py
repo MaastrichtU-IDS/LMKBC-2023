@@ -107,13 +107,6 @@ def train():
         entity_set_train,
     )
     print(f"train dataset size: {len(train_dataset)}")
-    # we extend the mask window only for training set, in evaluation, we only really care about the object tokens themselves;
-    # In these cases, we set ``extend_len'' to 0
-    # dev_dataset = TADataset(
-    #     tokenizer_origin,
-    #     tokenizer_enhance,
-    #     entity_set,
-    # )
     bert_model.resize_token_embeddings(len(tokenizer_enhance))
 
     training_args = transformers.TrainingArguments(
@@ -148,12 +141,7 @@ def train():
     # compute_metrics=compute_metrics)
     trainer.train()
     trainer.save_model(output_dir=best_dir)
-    # bert_tokenizer.save_pretrained(args.bin_dir)
-    # dev_results = trainer.evaluate(dev_dataset)
-    # trainer.model
-    # print(f"dev results: ")
-    # print(dev_results)
-
+ 
 
 def test_pipeline():
     bert_config = transformers.AutoConfig.from_pretrained(best_dir)
@@ -180,8 +168,6 @@ def test_pipeline():
         prompts.append(prompt)
         # entity_set.update(row[KEY_OBJS])
 
-    print("escaped entity number: ", len(entity_escape_set))
-    print("entity_in_set number: ", len(entity_in_set))
     # print("entity_escape_set", entity_escape_set)
     "1 2 3 [maxk] [mask] [mask] 4  5 6"
     # Run the model
