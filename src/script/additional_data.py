@@ -369,10 +369,10 @@ def official_language():
 
 if __name__ == "__main__":
     # test_ah()
-    # multi_process_genenrate()
-    official_language()
+    multi_process_genenrate()
+    # official_language()
     # clean_file(used_fn)
-    # dataset_optimize()
+    dataset_optimize()
     # sample_dev_dataset()
     # nsp_sample_dev_dataset()
     # test_tokenizer()

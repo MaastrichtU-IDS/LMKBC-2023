@@ -75,29 +75,24 @@ class TADataset(Dataset):
 
 def train():
     tokenizer_origin = transformers.AutoTokenizer.from_pretrained(
-        pretrained_model_name_or_path=args.pretrain_model_name
+        pretrained_model_name_or_path=config.bert_large_cased
     )
     tokenizer_enhance = transformers.AutoTokenizer.from_pretrained(
         config.TOKENIZER_PATH
     )
-    if os.path.exists(best_dir):
-        bert_config = transformers.AutoConfig.from_pretrained(best_dir)
-        bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
-            best_dir, config=bert_config
-        )
-    else:
-        bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
-        # print(bert_config)
-        bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
-            args.pretrain_model_name, config=bert_config
-        )
+
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_load_dir)
+    # print(bert_config)
+    bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
+        args.model_load_dir, config=bert_config
+    )
 
     bert_collator = transformers.DataCollatorForTokenClassification(
         tokenizer=tokenizer_enhance,
         padding="max_length",
         max_length=config.TA_MAX_LENGTH,
     )
-    with open('res/tokenizer/bert/added_tokens.json') as f:
+    with open(f'{config.TOKENIZER_PATH}/added_tokens.json') as f:
         entity_dict = json.load(f)
 
     entity_set_train = entity_dict.keys()
@@ -110,7 +105,7 @@ def train():
     bert_model.resize_token_embeddings(len(tokenizer_enhance))
 
     training_args = transformers.TrainingArguments(
-        output_dir=output_dir,
+        output_dir=args.model_save_dir,
         overwrite_output_dir=True,
         # evaluation_strategy='epoch',
         per_device_train_batch_size=args.train_batch_size,
@@ -140,131 +135,12 @@ def train():
     )
     # compute_metrics=compute_metrics)
     trainer.train()
-    trainer.save_model(output_dir=best_dir)
+    trainer.save_model(output_dir=args.model_best_dir)
  
-
-def test_pipeline():
-    bert_config = transformers.AutoConfig.from_pretrained(best_dir)
-    bert_model = transformers.AutoModelForMaskedLM.from_pretrained(
-        best_dir, config=bert_config
-    )
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(best_dir)
-
-    pipe = pipeline(
-        task=task,
-        model=bert_model,
-        tokenizer=bert_tokenizer,
-        top_k=args.top_k,
-        device=args.gpu,
-    )
-    prompt_templates = util.file_read_prompt(args.template_fn)
-    test_rows = util.file_read_json_line(args.test_fn)
-    prompts = []
-    for row in test_rows:
-        prompt = prompt_templates[row["Relation"]].format(
-            subject_entity=row["SubjectEntity"],
-            mask_token=bert_tokenizer.mask_token,
-        )
-        prompts.append(prompt)
-        # entity_set.update(row[KEY_OBJS])
-
-    # print("entity_escape_set", entity_escape_set)
-    "1 2 3 [maxk] [mask] [mask] 4  5 6"
-    # Run the model
-    logger.info(f"Running the model...")
-
-    outputs = pipe(prompts, batch_size=args.test_batch_size)
-    logger.info(f"End the model...")
-    results = []
-    num_filtered = 0
-    rel_thres_fn = f"{config.RES_DIR}/relation-threshold.json"
-    if os.path.exists(rel_thres_fn):
-        with open(rel_thres_fn, 'r') as f:
-            rel_thres_dict = json.load(f)
-    else:
-        rel_thres_dict = dict()
-
-    for row, output, prompt in zip(test_rows, outputs, prompts):
-        objects_wikiid = []
-        objects = []
-        # print()
-        # print(row[KEY_OBJS])
-        for seq in output:
-            # if row[KEY_REL] in printed_relation:
-            # print("seq", seq)
-            if row[config.KEY_REL] not in rel_thres_dict:
-                print(f"{row[config.KEY_REL]} not in rel_thres_dict")
-                rel_thres_dict[row[config.KEY_REL]] = args.threshold
-            if seq["score"] > rel_thres_dict[row[config.KEY_REL]]:
-                obj = seq["token_str"]
-                if obj == config.EMPTY_TOKEN:
-                    obj = ''
-                # if obj not in entity_set:
-                #     num_filtered += 1
-                #     continue
-                wikidata_id = util.disambiguation_baseline(obj)
-                objects_wikiid.append(wikidata_id)
-                objects.append(obj)
-
-        result_row = {
-            "SubjectEntityID": row["SubjectEntityID"],
-            "SubjectEntity": row["SubjectEntity"],
-            "ObjectEntitiesID": objects_wikiid,
-            "ObjectEntities": objects,
-            "Relation": row["Relation"],
-        }
-        results.append(result_row)
-    print("filtered entity number: ", num_filtered)
-    # Save the results
-    output_fn = f"{config.OUTPUT_DIR}/{args.pretrain_model_name}_ressult.jsonl"
-    # if not os.path.exists(output_dir):
-    #     os.makedirs(output_dir)
-    logger.info(f"Saving the results to \"{args.output}\"...")
-    with open(args.output, "w") as f:
-        for result in results:
-            f.write(json.dumps(result) + "\n")
-
-    with open(rel_thres_fn, 'w') as f:
-        json.dump(rel_thres_dict, f)
-    logger.info(f"Start Evaluate ...")
-    evaluate(args.output, args.test_fn)
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run the Model with Question and Fill-Mask Prompts"
-    )
-    parser.add_argument(
-        "-m",
-        "--pretrain_model_name",
-        type=str,
-        default="bert-base-cased",
-        help="HuggingFace model name (default: bert-base-cased)",
-    )
-    parser.add_argument(
-        "--bin_dir",
-        type=str,
-        help="HuggingFace model name (default: bert-base-cased)",
-    )
-    parser.add_argument(
-        "-i", "--test_fn", type=str, required=True, help="Input test file (required)"
-    )
-    parser.add_argument(
-        "-o", "--output", type=str, required=True, help="Output file (required)"
-    )
-    parser.add_argument(
-        "-k",
-        "--top_k",
-        type=int,
-        default=5,
-        help="Top k prompt outputs (default: 100)",
-    )
-    parser.add_argument(
-        "-t",
-        "--threshold",
-        type=float,
-        default=0.1,
-        help="Probability threshold (default: 0.5)",
     )
 
     parser.add_argument(
@@ -283,19 +159,22 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "-fp",
-        "--template_fn",
+        "--model_save_dir",
         type=str,
-        required=True,
-        help="CSV file containing fill-mask prompt templates (required)",
+        help="HuggingFace model name (default: bert-base-cased)",
+    )
+    parser.add_argument(
+        "--model_best_dir",
+        type=str,
+        help="HuggingFace model name (default: bert-base-cased)",
     )
 
     parser.add_argument(
-        "--train_fn",
+        "--model_load_dir",
         type=str,
-        required=True,
-        help="CSV file containing train data for few-shot examples (required)",
+        help="HuggingFace model name (default: bert-base-cased)",
     )
+
     parser.add_argument(
         "--train_epoch",
         type=int,
@@ -303,12 +182,6 @@ if __name__ == "__main__":
         help="CSV file containing train data for few-shot examples (required)",
     )
 
-    parser.add_argument(
-        "--dev_fn",
-        type=str,
-        required=True,
-        help="CSV file containing train data for few-shot examples (required)",
-    )
     parser.add_argument(
         "--train_batch_size",
         type=int,
@@ -321,21 +194,7 @@ if __name__ == "__main__":
         default=32,
         help="Batch size for the model. (default:32)",
     )
-    parser.add_argument(
-        "--mode",
-        type=str,
-        default="train eval test",
-        help="Batch size for the model. (default:32)",
-    )
 
     args = parser.parse_args()
-    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    best_dir = f"{output_dir}/{args.bin_dir}"
-
-    if "train" in args.mode:
-        train()
-
-    if "test" in args.mode:
-        test_pipeline()
+   
+    train()

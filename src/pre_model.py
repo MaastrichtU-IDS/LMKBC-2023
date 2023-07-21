@@ -128,8 +128,7 @@ def train():
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
     )
-    tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
 
     train_dataset = PreFMDataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
     bert_collator = util.DataCollatorKBC(
@@ -171,8 +170,8 @@ def train():
     )
     # compute_metrics=compute_metrics)
     trainer.train()
-    trainer.save_model(output_dir=best_ckpt_dir)
-    print(f"best_ckpt_dir: ", best_ckpt_dir)
+    trainer.save_model(output_dir=args.model_best_dir)
+    print(f"best_ckpt_dir: ", args.model_best_dir)
     # print(dev_results)
 
 
@@ -192,24 +191,9 @@ if __name__ == "__main__":
         help="HuggingFace model name (default: bert-base-cased)",
     )
     parser.add_argument(
-        "-i", "--test_fn", type=str, required=True, help="Input test file (required)"
-    )
-    parser.add_argument(
-        "-o", "--output", type=str, required=True, help="Output file (required)"
-    )
-    parser.add_argument(
-        "-k",
-        "--top_k",
-        type=int,
-        default=100,
-        help="Top k prompt outputs (default: 100)",
-    )
-    parser.add_argument(
-        "-t",
-        "--threshold",
-        type=float,
-        default=0.1,
-        help="Probability threshold (default: 0.5)",
+        "--model_best_dir",
+        type=str,
+        help="HuggingFace model name (default: bert-base-cased)",
     )
 
     parser.add_argument(
@@ -228,14 +212,6 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "-fp",
-        "--template_fn",
-        type=str,
-        required=True,
-        help="CSV file containing fill-mask prompt templates (required)",
-    )
-
-    parser.add_argument(
         "--train_fn",
         type=str,
         required=True,
@@ -249,27 +225,13 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--dev_fn",
-        type=str,
-        required=True,
-        help="CSV file containing train data for few-shot examples (required)",
-    )
-    parser.add_argument(
         "--train_batch_size",
         type=int,
         default=32,
         help="Batch size for the model. (default:32)",
     )
 
-    parser.add_argument(
-        "--mode",
-        type=str,
-        default="train eval test",
-        help="Batch size for the model. (default:32)",
-    )
 
     args = parser.parse_args()
-    best_ckpt_dir = args.model_save_dir + "/best_ckpt"
-    tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
-    if "train" in args.mode:
-        train()
+
+    train()

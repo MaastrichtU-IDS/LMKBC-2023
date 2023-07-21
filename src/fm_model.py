@@ -236,13 +236,13 @@ def test_pipeline():
         results.append(result_row)
 
     # Save the results to the specified output file
-    logger.info(f"Saving the results to \"{args.output}\"...")
-    util.file_write_json_line(args.output, results)
+    logger.info(f"Saving the results to \"{args.output_fn}\"...")
+    util.file_write_json_line(args.output_fn, results)
 
     logger.info(f"Start Evaluate ...")
-    evaluate.evaluate(args.output, args.test_fn)
+    evaluate.evaluate(args.output_fn, args.test_fn)
 
-    evaluate.assign_label(args.output, args.test_fn)
+    evaluate.assign_label(args.output_fn, args.test_fn)
   
 
 def test_pipeline_origin():
@@ -337,13 +337,13 @@ def test_pipeline_origin():
         results.append(result_row)
 
     # Save the results to the specified output file
-    logger.info(f"Saving the results to \"{args.output}\"...")
-    util.file_write_json_line(args.output, results)
+    logger.info(f"Saving the results to \"{args.output_fn}\"...")
+    util.file_write_json_line(args.output_fn, results)
 
     logger.info(f"Start Evaluate ...")
-    evaluate.evaluate(args.output, args.test_fn)
+    evaluate.evaluate(args.output_fn, args.test_fn)
 
-    evaluate.assign_label(args.output, args.test_fn)
+    evaluate.assign_label(args.output_fn, args.test_fn)
 
 
 # def topk_process(input_list):
@@ -368,12 +368,12 @@ def test_pipeline_origin():
 
     
 def adaptive_top_k():
-    origin_result_dict = evaluate.evaluate(args.output, args.test_fn)
+    origin_result_dict = evaluate.evaluate(args.output_fn, args.test_fn)
     predefine_fine = 'res/object_number.tsv'
     with open(predefine_fine) as f:
         topk = csv.DictReader(f, delimiter="\t")
         topk_max_dict = { row["Relation"]:eval(row['Val'])[1] for row in topk}
-    pred_rows = util.file_read_json_line(args.output)
+    pred_rows = util.file_read_json_line(args.output_fn)
     groud_rows = util.file_read_json_line(args.test_fn)
     relation_list_pred = dict()
     relation_list_groud = dict()
@@ -411,7 +411,11 @@ def adaptive_top_k():
     
 
     origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
-
+    result_dict = {
+        "args":args.__dict__,
+        "metric":origin_result_dict
+        }
+    util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
     scores_per_relation_pd = pd.DataFrame(origin_result_dict)
     print(scores_per_relation_pd.transpose().round(2))
 
@@ -445,17 +449,12 @@ if __name__ == "__main__":
         help="HuggingFace model name (default: bert-base-cased)",
     )
 
-    # parser.add_argument(
-    #     "--pretrin_model",
-    #     type=str,
-    #     help="HuggingFace model name (default: bert-base-cased)",
-    # )
 
     parser.add_argument(
         "-i", "--test_fn", type=str, required=True, help="Input test file (required)"
     )
     parser.add_argument(
-        "-o", "--output", type=str, required=True, help="Output file (required)"
+        "-o", "--output_fn", type=str, required=True, help="Output file (required)"
     )
     parser.add_argument(
         "-k",

@@ -29,6 +29,7 @@ TRAIN_FN = f'{DATA_DIR}/train.jsonl'
 TRAIN_TINY_FN = f'{DATA_DIR}/train_tiny.jsonl'
 VAL_FN = f'{DATA_DIR}/val.jsonl'
 
+RESULT_FN= f'{RES_DIR}/results.jsonl'
 KEY_OBJS = "ObjectEntities"
 KEY_REL = "Relation"
 KEY_SUB = "SubjectEntity"
@@ -37,7 +38,8 @@ OBJLABELS_KEY = 'ObjectLabels'
 FROM_KG = 'from'
 TO_KG = 'to'
 
-TOKENIZER_PATH = 'res/tokenizer/bert'
+TOKENIZER_PATH = f'{RES_DIR}/tokenizer/bert'
+
 check_dir_list = [
     BIN_DIR,
     OUTPUT_DIR,
