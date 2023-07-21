@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 import random
@@ -32,7 +33,7 @@ token_path = f"{config.RES_DIR}/tokenizer/bert"
 tokenizer = transformers.AutoTokenizer.from_pretrained(token_path)
 
 MAX_LENGTH = 500
-MIN_LENGTH = 3
+MIN_LENGTH = 10
 
 from ahocorapy.keywordtree import KeywordTree
 
@@ -76,14 +77,14 @@ def split_paragraph(text: str):
 
     return lines
 
-
+split_sentence_set= {'.',';'}
 def split_paragraph_tokens(tokens: list):
     lines = []
 
     while len(tokens) > MAX_LENGTH:
         index = -1
         for i in range(MAX_LENGTH, MIN_LENGTH, -1):
-            if tokens[i] == '.':
+            if tokens[i] in split_sentence_set:
                 index = i
                 break
         if index == -1:
@@ -137,13 +138,13 @@ def generate_data_process_fm_ah(origin_data_list):
                 max_token = k
                 max_count = v
         token_ratio = (len(max_token) * max_count) / float(len(line))
-        if token_ratio > 0.6:
+        if token_ratio > 0.3:
             print(max_token, "        ", line)
             continue
 
         exists_tokens = set((map(lambda x: x[0], results)))
         min_token_count = min(list(map(lambda x: entity_dict[x], exists_tokens)))
-        if min_token_count < 200:
+        if min_token_count < 100:
             for key in exists_tokens:
                 entity_dict[key] += 1
             item = {
@@ -219,23 +220,27 @@ def dataset_optimize():
                     sentence = jl['sentence'].split('.lt;')[0]
                     sentence = sentence.replace('\n', '')
                     tokens = tokenizer.tokenize(sentence)
-
+                    if len(tokens) < MIN_LENGTH:
+                        continue
                     if len(tokens) > MAX_LENGTH:
                         long_count += 1
                         token_list = split_paragraph_tokens(tokens)
                         for toke_sub_list in token_list:
-                            token_exists = []
+                            if len(toke_sub_list) > MAX_LENGTH:
+                                # print("toke_sub_list  ",toke_sub_list)
+                                continue
+                            token_exists = set()
                             for token in toke_sub_list:
                                 if token in entity_dict:
-                                    token_exists.append(token)
-                            if len(token_exists) < 1:
+                                    token_exists.add(token)
+                            if len(token_exists) < 2:
                                 continue
                             min_count = min(
                                 map(lambda x: entity_dic_jt[x], token_exists)
                             )
                             if min_count < 20:
                                 item = {
-                                    "exists": token_exists,
+                                    "exists": list(token_exists),
                                     "tokens": toke_sub_list,
                                 }
                                 for e in token_exists:
@@ -251,7 +256,7 @@ def dataset_optimize():
                         result.append(item)
             all_lens += len(result)
             print("result", len(result))
-            util.file_write_json_line(final_corpus_fn, result)
+            util.file_write_json_line(final_corpus_fn, result,'auto')
     print("all_lens ", all_lens)
     print("long_count ", long_count)
     k_count = 0
@@ -349,12 +354,26 @@ def test_ah():
     print(rs)
 
 
+def official_language():
+    official_language_fn = 'res/additional_corpus/official_language.txt'
+    with open(official_language_fn) as f:
+        csv_dict = csv.DictReader(f)
+        result=[]
+        for row in csv_dict: 
+            country = row['Country'].strip().replace('&nbsp;','')
+            language = row['Official'].strip().split(' ')
+            result .append((country,language))
+    print(result)
+
+
+
 if __name__ == "__main__":
     # test_ah()
     # multi_process_genenrate()
+    official_language()
     # clean_file(used_fn)
     # dataset_optimize()
     # sample_dev_dataset()
-    nsp_sample_dev_dataset()
+    # nsp_sample_dev_dataset()
     # test_tokenizer()
     # dataset_reorder()

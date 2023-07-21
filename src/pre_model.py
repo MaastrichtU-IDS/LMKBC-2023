@@ -40,21 +40,25 @@ class PreFMDataset(Dataset):
         self.data = []
         train_data = util.file_read_json_line(data_fn)
         self.tokenizer = tokenizer
+        max_length = 0 
+        printable= True
         for row in train_data:
             exists = row['exists']
             input_tokens = [tokenizer.cls_token] + row['tokens'] + [tokenizer.sep_token]
             exists_ids = tokenizer.convert_tokens_to_ids(exists)
             # generate masking-combination, for example, a sentence contains three entities, e.g. (a,b,c). We can select one,multiple or all of them, that is (a),(b),(c),(a,b),(a,c),etc. Different permutation scheme may provides different performance
-            # exists_ids_thin = random.sample(exists_ids, min(10, len(exists_ids)))
-            # select_ids_list = list(
-            #     itertools.permutations(
-            #         exists_ids_thin, max(1, int(len(exists_ids_thin) * 0.6))
-            #     )
-            # )
-            # select_ids_list = random.sample(
-            #     select_ids_list, min(1, len(select_ids_list))
-            # )
-            select_ids_list = [exists_ids]
+            select_ids_list = [] 
+            for i in range(len(exists)//2):
+                select_ids_list.append(random.sample(
+                exists, max(1, len(exists)//2) 
+                ))
+
+            if printable:
+                print("exists",exists)
+                print("input_tokens",input_tokens)
+            if len(input_tokens) > max_length:
+                max_length = len(input_tokens)
+                print("row",row)
             input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
             for select_ids in select_ids_list:
                 # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
@@ -70,10 +74,13 @@ class PreFMDataset(Dataset):
                     "labels": label_ids,
                     "attention_mask": attention_mask,
                 }
+                if printable:
+                    print("item",item)
+                    printable = False
                 self.data.append(item)
 
         random.shuffle(self.data)
-
+        print("max_length",max_length)
     def __getitem__(self, index):
         return self.data[index]
 
@@ -91,6 +98,7 @@ class PreNSPDataset(Dataset):
             exists = row['exists']
             input_tokens = [tokenizer.cls_token] + row['tokens'] + [tokenizer.sep_token]
             exists_ids = tokenizer.convert_tokens_to_ids(exists)
+            exists_ids = random.sample(exists_ids, max(len(exists_ids)//2,1) )
             select_ids_list = [exists_ids]
             input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
             for select_ids in select_ids_list:
@@ -120,6 +128,7 @@ def train():
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
     )
+    tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
     bert_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
 
     train_dataset = PreFMDataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
@@ -262,6 +271,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     best_ckpt_dir = args.model_save_dir + "/best_ckpt"
     tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
-
     if "train" in args.mode:
         train()

@@ -50,13 +50,42 @@ def count_emapt_and_other():
     print("empty_count", empty_count)
 
 
+def get_all_entity(fn = None):
+    if fn is not None:
+        lines = util.file_read_json_line(fn)
+    else:
+        lines = all_line
+    entity_set = set()
+    for row in lines:
+        object_entities = row['ObjectEntities']
+        subject = row["SubjectEntity"]
+        entity_set.add(subject)
+        entity_set.update(object_entities)
+    return entity_set
+
+
 def collect_entity():
     entity_fn = f'{config.RES_DIR}/additional_corpus/entity.txt'
     # entity_1_set = [t.replace("\"", "") for t in list(entity_set)]
     util.file_write_line(entity_fn, list(entity_dic_jt.keys()), mode='w')
 
+def negave_vocabulary():
+    true_entity = get_all_entity()
+    
+    output_fm_train = "output/filled-mask/filled-mask-train.jsonl"
+    output_fm_valid = "output/filled-mask/filled-mask-valid.jsonl"
+    predict_entity_train = get_all_entity(output_fm_train)
+    predict_entity_valid = get_all_entity(output_fm_valid)
+    false_entity =(predict_entity_train| predict_entity_valid) -  true_entity
+    print(false_entity)
+    entity_fn = f'data/negave_vocabulary.json'
+    with open(entity_fn,'w') as f:
+        json.dump(list(false_entity),f)
+
+
 
 if __name__ == "__main__":
     # count_object()
     # count_emapt_and_other()
-    collect_entity()
+    # collect_entity()
+    negave_vocabulary()

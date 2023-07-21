@@ -102,26 +102,18 @@ def create_prompt(
 
 
 def train():
-    output_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
-    best_dir = f"{output_dir}/{args.bin_dir}"
-    if os.path.exists(best_dir):
-        print("load local model")
-        bert_config = transformers.AutoConfig.from_pretrained(best_dir)
-        model = transformers.OPTForCausalLM.from_pretrained(
-            best_dir, config=bert_config
-        )
-        # tokenizer = transformers.AutoTokenizer.from_pretrained(
-        #     pretrained_model_name_or_path=best_dir, padding_side='left'
-        # )
-    else:
-        print("load remote model")
-        bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
-        # print(bert_config)
-        model = transformers.OPTForCausalLM.from_pretrained(
-            args.pretrain_model_name, config=bert_config
-        )
+
+    print("load local model")
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_load_dir)
+    model = transformers.OPTForCausalLM.from_pretrained(
+        args.model_load_dir, config=bert_config
+    )
+    # tokenizer = transformers.AutoTokenizer.from_pretrained(
+    #     pretrained_model_name_or_path=best_dir, padding_side='left'
+    # )
+
     tokenizer = transformers.AutoTokenizer.from_pretrained(
-        pretrained_model_name_or_path=args.pretrain_model_name,
+        pretrained_model_name_or_path=args.model_load_dir,
         padding_side='left',
         padding=True,
     )
@@ -160,7 +152,7 @@ def train():
     # tokenizer.save(best_dir)
     # model.resize_token_embeddings(len(tokenizer))
     training_args = TrainingArguments(
-        output_dir=output_dir,
+        output_dir=args.model_save_dir,
         overwrite_output_dir=True,
         num_train_epochs=args.train_epoch,
         per_device_train_batch_size=args.train_batch_size,
@@ -182,7 +174,7 @@ def train():
     )
     # compute_metrics=compute_metrics)
     trainer.train()
-    trainer.save_model(output_dir=best_dir)
+    trainer.save_model(output_dir=args.model_best_dir)
     # bert_tokenizer.save_pretrained(args.bin_dir)
     dev_results = trainer.evaluate(dev_dataset)
     # trainer.model
@@ -191,27 +183,19 @@ def train():
 
 
 def test_pipeline():
-    model_dir = f"{config.BIN_DIR}/{task}/{args.pretrain_model_name}"
-    best_dir = f"{model_dir}/{args.bin_dir}"
-    print(model_dir)
-    if os.path.exists(best_dir):
-        print("load local model")
-        bert_config = transformers.AutoConfig.from_pretrained(best_dir)
-        model = transformers.AutoModelForCausalLM.from_pretrained(
-            best_dir, config=bert_config
-        )
-        # tokenizer = transformers.AutoTokenizer.from_pretrained(
-        #     best_dir, padding_side='left'
-        # )
-    else:
-        print("load remote model")
-        bert_config = transformers.AutoConfig.from_pretrained(args.pretrain_model_name)
-        # print(bert_config)
-        model = transformers.AutoModelForCausalLM.from_pretrained(
-            args.pretrain_model_name, config=bert_config
-        )
+
+
+    print("load local model")
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
+    model = transformers.AutoModelForCausalLM.from_pretrained(
+        args.model_best_dir, config=bert_config
+    )
+    # tokenizer = transformers.AutoTokenizer.from_pretrained(
+    #     best_dir, padding_side='left'
+    # )
+
     tokenizer = transformers.AutoTokenizer.from_pretrained(
-        args.pretrain_model_name, padding_side='left'
+        config.opt_350m, padding_side='left'
     )
 
     instantiated_templates = []
@@ -380,6 +364,26 @@ if __name__ == "__main__":
         default=3,
         help="Batch size for the model. (default:32)",
     )
+
+
+
+    parser.add_argument(
+        "--model_save_dir",
+        type=str,
+        help="HuggingFace model name (default: bert-base-cased)",
+    )
+    parser.add_argument(
+        "--model_best_dir",
+        type=str,
+        help="HuggingFace model name (default: bert-base-cased)",
+    )
+
+    parser.add_argument(
+        "--model_load_dir",
+        type=str,
+        help="HuggingFace model name (default: bert-base-cased)",
+    )
+
 
     args = parser.parse_args()
 

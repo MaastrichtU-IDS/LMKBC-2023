@@ -57,22 +57,31 @@ class NSPDataset(Dataset):
         train_data = util.file_read_json_line(
             data_fn
         )  # Read the training data from the file
-        self.miss_entity_count = 0  # Initialize a counter for missing entities
+        self.miss_context_count = 0  # Initialize a counter for missing entities
         self.prompt_templates = util.file_read_prompt(
             template_fn
         )  # Read prompt templates from a file
 
         # Iterate over each row in the training data
+        printable = True
         for row in train_data:
+            if args.is_debug and printable:
+                print("row ", row)
             object_entities = row[config.KEY_OBJS]
             object_labels = row[config.OBJLABELS_KEY]
             relation = row[config.KEY_REL]
             subject = row[config.KEY_SUB]
+            if subject == '':
+                subject = config.EMPTY_TOKEN
             # generate the contenx sentence of a giving subject entity
-            subject_context = self.generate_sentence_from_context(subject)
+            subject_context_list = self.context_list_of_entity(subject)
+            if args.is_debug and printable:
+                print("subject_context_list   ", subject_context_list)
             prompt = self.prompt_templates[relation]
             # Iterate over each object entity and label in parallel
             for obj, label in zip(object_entities, object_labels):
+                if obj == '':
+                    obj = config.EMPTY_TOKEN
                 # translate a triple into a sentence using a prompt
                 # a example of prompt:
                 # {subject_entity} is a city located at the {mask_token} river.
@@ -80,14 +89,28 @@ class NSPDataset(Dataset):
                 query_sentence = prompt.format(
                     subject_entity=subject,mask_token=obj
                 )
+                if args.is_debug and printable:
+                    print("subject_entity   ", subject)
+                    print("obj   ", obj)
+                    print("query_sentence   ", query_sentence)
                 # generate the contenx sentence of a giving object entity
-                object_context = self.generate_sentence_from_context(obj)
-                context = f"{subject_context} while {object_context}"
+                object_context_list = self.context_list_of_entity(obj)
+                context_list=subject_context_list+object_context_list
+                context_list = random.sample(context_list, min(30,len(context_list)))
+     
+                context = ' and '.join(context_list)
                 encoded = tokenizer.encode_plus(
                     text=context,
                     text_pair=query_sentence,
                 )
-
+                if args.is_debug:
+                    if  len(context_list) == 0:
+                        self.miss_context_count+=1
+                    if printable:
+                        print ("context---------------", context)
+                        print ("query_sentence--------------",query_sentence)
+                        print()
+                        printable=False
                 # Truncate encoded inputs if the length exceeds 500 tokens
                 # 
                 if len(encoded['input_ids']) > 500:
@@ -98,7 +121,7 @@ class NSPDataset(Dataset):
                 encoded['labels'] = label
                 self.data.append(encoded)
 
-        print("self.miss_entity_count", self.miss_entity_count)
+        print("self.miss_entity_count", self.miss_context_count)
 
     def __getitem__(self, index):
         return self.data[index]
@@ -106,20 +129,19 @@ class NSPDataset(Dataset):
     def __len__(self):
         return len(self.data)  
 
-    def generate_sentence_from_context(self, entity: str):
-        # Generate a sentence from the entity's context
-        if entity not in self.kg:
-            self.miss_entity_count += 1  # Increment the missing entity count
-            return 'no context'
-
+    def context_list_of_entity(self, entity: str):
         sentence_list = []  
+        # Generate a sentence from the entity's context
+        if entity not in self.kg or entity == config.EMPTY_STR:
+            return sentence_list
         
         # from_relations stores the subject entitys of giving entity
         # for instance, (entity_of_from_relations, predicate, giving entity)
         from_relations = self.kg[entity][config.FROM_KG]
         # Generate sentences from 'from_relations'
         for relation, objects in from_relations.items():
-            template = self.prompt_templates[relation]
+            # remove . at the end of the line
+            template = self.prompt_templates[relation][:-1]
             objects_str = ', '.join(objects)
             sentence = template.format(subject_entity=objects_str, mask_token=entity)
             sentence_list.append(sentence)
@@ -130,13 +152,13 @@ class NSPDataset(Dataset):
         # Generate sentences from 'to_relations'
         for relation, objects in to_relations.items():
             # template prompt
-            template = self.prompt_templates[relation]
+            template = self.prompt_templates[relation][:-1]
             objects_str = ', '.join(objects)
             sentence = template.format(subject_entity=entity, mask_token=objects_str)
             sentence_list.append(sentence)
         # join the sentence of triples into a sentence
         # for example, ['a relate to b','b relate to c'] into 'a relate to b and b relate to c'
-        return ' and '.join(sentence_list)
+        return sentence_list
 
 
 
@@ -231,7 +253,7 @@ def evaluate():
         dataloader_num_workers=0,
         auto_find_batch_size=False,
         greater_is_better=False,
-        load_best_model_at_end=True,
+        load_best_model_at_end=False,
         no_cuda=False,
     )
 
@@ -245,13 +267,14 @@ def evaluate():
     predicts = trainer.predict(dev_dataset)
 
     # softmax to judgee easily
+    print(predicts.predictions[:10])
     predictions = util.softmax(predicts.predictions, axis=1)
     # [0.1,0.9]
     # the first column (predictions[:, 0]) is the confidence score of not correct and the second column (predictions[:, 1]) is the confidence score of correctness
     pre_score = predictions[:, 1]
     print(pre_score[:10])
     # if the confidence score of correctnesss over the threshold, set it to 1 elsewise 0
-    pre = np.where(pre_score > 0.9995, 1, 0)
+    pre = np.where(pre_score > 0.99995, 1, 0)
 
     label_ids = predicts.label_ids.reshape(-1, 1)
     print("pre shape", pre.shape)
@@ -331,6 +354,13 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
+        "--is_debug",
+        type=bool,
+        default=False,
+        help="GPU ID, (default: -1, i.e., using CPU)",
+    )
+
+    parser.add_argument(
         "-fp",
         "--template_fn",
         type=str,
@@ -370,7 +400,7 @@ if __name__ == "__main__":
         default="train eval test",
         help="Batch size for the model. (default:32)",
     )
-
+    # print = util.Printer()
     args = parser.parse_args()
     # build knowledge graph from train set
     kg = util.KnowledgeGraph(args.train_fn)

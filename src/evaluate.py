@@ -79,6 +79,48 @@ def evaluate_per_sr_pair(pred_rows, gt_rows) -> List[Dict[str, float]]:
     return sorted(results, key=lambda x: (x["Relation"], x["SubjectEntity"]))
 
 
+
+def evaluate_list(gt_rows, pred_rows):
+
+    # calculate the precision and recall score of each triple
+    scores_per_sr_pair = evaluate_per_sr_pair(pred_rows, gt_rows)
+    # calculate the precision and recall score of each relation
+    scores_per_relation = combine_scores_per_relation(scores_per_sr_pair)
+    # calculate average score
+    scores_per_relation["Average"] = {
+        "p": sum([x["p"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
+        "r": sum([x["r"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
+        "f1": sum([x["f1"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
+    }
+
+    # scores_per_relation_pd = pd.DataFrame(scores_per_relation)
+    return scores_per_relation
+
+
+
+def evaluate_pure(output, test_fn):
+    #  read json file
+    pred_rows = read_lm_kbc_jsonl(output)
+    gt_rows = read_lm_kbc_jsonl(test_fn)
+
+    # calculate the precision and recall score of each triple
+    scores_per_sr_pair = evaluate_per_sr_pair(pred_rows, gt_rows)
+    # calculate the precision and recall score of each relation
+    scores_per_relation = combine_scores_per_relation(scores_per_sr_pair)
+    # calculate average score
+    scores_per_relation["Average"] = {
+        "p": sum([x["p"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
+        "r": sum([x["r"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
+        "f1": sum([x["f1"] for x in scores_per_relation.values()])
+        / len(scores_per_relation),
+    }
+    return  scores_per_relation
+
 def evaluate(output, test_fn):
     #  read json file
     pred_rows = read_lm_kbc_jsonl(output)
@@ -89,7 +131,7 @@ def evaluate(output, test_fn):
     # calculate the precision and recall score of each relation
     scores_per_relation = combine_scores_per_relation(scores_per_sr_pair)
     # calculate average score
-    scores_per_relation["*** Average ***---"] = {
+    scores_per_relation["Average"] = {
         "p": sum([x["p"] for x in scores_per_relation.values()])
         / len(scores_per_relation),
         "r": sum([x["r"] for x in scores_per_relation.values()])
@@ -101,15 +143,16 @@ def evaluate(output, test_fn):
     scores_per_relation_pd = pd.DataFrame(scores_per_relation)
 
     print(scores_per_relation_pd.transpose().round(3))
-
+    return  scores_per_relation
     # add a new field which indicate if the predicted object is true of false
     # the correctness of predicted object can be used in Next-Sentence task, if applicable
-    assign_labels = assign_label(pred_rows, gt_rows)
-
-    util.file_write_json_line(output, assign_labels, 'w')
 
 
-def assign_label(pred_rows, gt_rows) -> List:
+
+def assign_label(output_fn, test_fn) -> List:
+    pred_rows = read_lm_kbc_jsonl(output_fn)
+    gt_rows = read_lm_kbc_jsonl(test_fn)
+
     pred_dict = rows_to_dict(pred_rows)
     # return as {(subject_entity,relation):object_entity}
     gt_dict = rows_to_dict(gt_rows)
@@ -130,6 +173,7 @@ def assign_label(pred_rows, gt_rows) -> List:
         row["ObjectLabels"] = object_labels
         row["TrueObjectEntities"] = gts
 
+    util.file_write_json_line(output_fn, pred_rows, 'w')
     return pred_rows
 
 

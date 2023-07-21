@@ -21,9 +21,9 @@ if not os.path.exists(OUTPUT_DIR):
 if not os.path.exists(model_save_dir):
     os.makedirs(model_save_dir)
 
-model_load_dir = 'bin/pretrain_fill-mask/bert-base-cased/best_ckpt'
+# model_load_dir = 'bin/pretrain_fill-mask/bert-base-cased/best_ckpt'
 # model_load_dir = config.bert_base_cased
-# model_load_dir = model_best_dir
+model_load_dir = model_best_dir
 
 
 # train_fn = 'output/filled-mask/train.jsonl'
@@ -40,7 +40,7 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python src/nsp_model.py  --test_fn {dev_fn} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {train_fn}  --train_batch_size 16 --gpu 0 --top_k 15 --threshold 0.1  --dev_fn   {dev_fn} --mode "train  test" --train_epoch 20 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
+   python src/nsp_model.py  --test_fn {dev_fn} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {train_fn}  --train_batch_size 16 --gpu 0 --top_k 15 --threshold 0.1  --dev_fn   {dev_fn} --mode "tra in  test" --train_epoch 10  --is_debug true --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
     
     """
 

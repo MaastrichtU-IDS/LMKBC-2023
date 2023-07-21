@@ -65,10 +65,13 @@ def line_to_json(line: str):
 
 def file_read_json_line(data_fn):
     train_data = []
-    with open(data_fn, "r") as file:
-        lines = file.readlines()
-        for line in lines:
-            train_data.extend(line_to_json(line))
+    try:
+        with open(data_fn, "r") as file:
+            lines = file.readlines()
+            for line in lines:
+                train_data.append(json.loads (line))
+    except :
+        print(line)
 
     return train_data
 
@@ -165,7 +168,7 @@ class KnowledgeGraph:
         if relation not in self.kg[entity][config.FROM_KG]:
             self.kg[entity][config.FROM_KG][relation] = set()
 
-    def add_triple(self, subject, relation, obj):
+    def add_triple(self, subject, relation, object_entities):
         # for example: 
         # {
         #     "The Netherlands": {
@@ -181,11 +184,16 @@ class KnowledgeGraph:
         #         }
         #     }
         # }
-        if not isinstance(obj, (list, set)):
-            obj = [obj]
+        if subject == config.EMPTY_STR:
+            return 
+        if not isinstance(object_entities, (list, set)):
+            object_entities = [object_entities]
+
         self.ensure_key_exists_for_entity(subject, relation)
-        self.kg[subject][config.TO_KG][relation].update(obj)
-        for entity in obj:
+        self.kg[subject][config.TO_KG][relation].update(object_entities)
+        for entity in object_entities:
+            if entity == '':
+                continue 
             self.ensure_key_exists_for_entity(entity, relation)
             self.kg[entity][config.FROM_KG][relation].add(subject)
 
@@ -253,3 +261,16 @@ if __name__ == "__main__":
     list_1 = [[1], [1, 2], [[1], [2], [2, 3, [4, 5, [7]]]]]
     list_flat = flat_list(list_1)
     print(list_flat)
+
+
+class Printer:
+    def __init__(self, times):
+        self.times=times
+        self.channel_times=dict()
+
+    def __call__(self, obj, channel='default'):
+        if channel not in self.channel_times:
+            self.channel_times[channel]=self.times
+        if self.channel_times[channel] > 0:
+            print(obj)
+            self.channel_times[channel]-=1
