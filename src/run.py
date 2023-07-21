@@ -63,6 +63,7 @@ def run_fillmask():
 
 
 if __name__ == "__main__":
+    print("hello docker")
     run_token_redefine()
     run_pretrain_filled_mask()
     run_fillmask()
