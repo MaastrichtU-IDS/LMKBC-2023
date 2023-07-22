@@ -9,6 +9,10 @@ RES_DIR = f"{ROOT_PATH}/res"
 BIN_DIR = f"{ROOT_PATH}/bin"
 LOGGING_DIR = f"{ROOT_PATH}/logging"
 
+CACHE_DIR = f"{ROOT_PATH}/cache"  
+
+TRANSFOER_CACHE_DIR = f'{CACHE_DIR}/transformers/'
+
 
 EMPTY_TOKEN = 'Empty'
 EMPTY_STR = ''

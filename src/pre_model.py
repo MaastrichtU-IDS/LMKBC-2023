@@ -17,8 +17,11 @@ from transformers import (
     PreTrainedTokenizer,
 )
 import os
+
+
 import itertools
 import config
+os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
 from evaluate import evaluate
 import util
 import tqdm
@@ -33,6 +36,7 @@ logger = logging.getLogger(__name__)
 
 print(torch.cuda.is_available())
 
+os.environ['TRANSFORMERS_CACHE'] = 'cache/transformers/'
 
 class PreFMDataset(Dataset):
     def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:

@@ -13,7 +13,9 @@ from transformers import (
     BertModel,
 )
 import os
+
 import config
+os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
 from evaluate import evaluate
 import util
 

@@ -12,8 +12,9 @@ import transformers
 from transformers import pipeline, BertTokenizerFast, BertModel
 import os
 
-import config
 
+import config
+os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
 import evaluate
 # from evaluate import evaluate
 import util
