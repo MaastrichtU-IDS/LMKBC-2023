@@ -31,7 +31,7 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn data/train.jsonl --train_batch_size 256 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {config.VAL_FN} --mode "tra in test" --train_epoch 5 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
+   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn data/train.jsonl --train_batch_size 256 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {config.VAL_FN} --mode "tr ain test" --train_epoch 5 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
     
     """
 

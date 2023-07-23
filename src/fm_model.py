@@ -201,13 +201,13 @@ def test_pipeline():
     logger.info(f"End the model...")
 
     results = []
-    rel_thres_fn = f"{config.RES_DIR}/relation-threshold.json"
-
-    for row, output, prompt in zip(test_rows, outputs, prompts):
+    for row, output in tqdm(zip(test_rows, outputs), total=len(test_rows)):
         objects_wikiid = []
         objects = []
+        scores=[]
         for seq in output:
             obj = seq["token_str"]
+            score = seq["score"]
             # if obj in negative_vocabulary:
             #     continue
 
@@ -218,10 +218,12 @@ def test_pipeline():
                 # break
             # else:
                 # Perform disambiguation using a baseline method for the object
-            wikidata_id = util.disambiguation_baseline(obj)
+            # wikidata_id = util.disambiguation_baseline(obj)
+            wikidata_id=0
             objects_wikiid.append(wikidata_id)
 
             objects.append(obj)
+            scores.append(score)
 
         # if config.EMPTY_STR in objects:
         #     objects = [config.EMPTY_STR]
@@ -233,6 +235,7 @@ def test_pipeline():
             "ObjectEntitiesID": objects_wikiid,
             "ObjectEntities": objects,
             "Relation": row["Relation"],
+            "ObjectEntitiesScore":scores
         }
         results.append(result_row)
 
@@ -367,7 +370,7 @@ def test_pipeline_origin():
 
 #     return best_topk,best_f1
 
-    
+
 def adaptive_top_k():
     origin_result_dict = evaluate.evaluate(args.output_fn, args.test_fn)
     predefine_fine = 'res/object_number.tsv'
@@ -419,6 +422,65 @@ def adaptive_top_k():
     util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
     scores_per_relation_pd = pd.DataFrame(origin_result_dict)
     print(scores_per_relation_pd.transpose().round(2))
+
+
+
+def adaptive_threshold():
+    origin_result_dict = evaluate.evaluate(args.output_fn, args.test_fn)
+    predefine_fine = 'res/object_number.tsv'
+    with open(predefine_fine) as f:
+        topk = csv.DictReader(f, delimiter="\t")
+        topk_max_dict = { row["Relation"]:eval(row['Val'])[1] for row in topk}
+    threshold_initial_dict = dict()
+    for k,v in topk_max_dict.items():
+        threshold_initial_dict[k] = 1/float(v)
+    pred_rows = util.file_read_json_line(args.output_fn)
+    groud_rows = util.file_read_json_line(args.test_fn)
+    relation_list_pred = dict()
+    relation_list_groud = dict()
+    best_topk_dict=dict()
+    for row in pred_rows:
+        relation = row['Relation']
+        if relation not in relation_list_pred:
+            relation_list_pred[relation]=[]
+        relation_list_pred[relation].append(row)
+
+    for row in groud_rows:
+        relation = row['Relation']
+        if relation not in relation_list_groud:
+            relation_list_groud[relation]=[]
+        relation_list_groud[relation].append(row)
+
+    for relation, pred_list in tqdm(relation_list_pred.items()):
+        groud_list = relation_list_groud[relation]
+        origin_topk = topk_max_dict[relation]
+        best_f1=0
+        origin_threshold = threshold_initial_dict[relation]
+        best_threshold=0
+        for i in range(1,int((origin_threshold*3)/0.05),1):
+            threshold = 0.05*i
+            for row in pred_list:
+                row['ObjectEntities'] =list(map(lambda t:t[1], filter(lambda t: t[0]>=threshold, zip(row['ObjectEntitiesScore'],  row['ObjectEntities']))))
+            f1 = evaluate.evaluate_list(groud_list, pred_list)[relation]['f1']
+            if f1> best_f1:
+                best_f1=f1
+                best_threshold =threshold
+        best_topk_dict[relation] = [best_threshold,best_f1] 
+        origin_result_dict[relation]["best_threshold"]=best_threshold
+        origin_result_dict[relation]["best_f1"]=best_f1
+        origin_result_dict[relation]["best_threshold"]=origin_threshold
+    
+
+    origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    result_dict = {
+        "args":args.__dict__,
+        "metric":origin_result_dict
+        }
+    util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
+    scores_per_relation_pd = pd.DataFrame(origin_result_dict)
+    print(scores_per_relation_pd.transpose().round(2))
+
+
 
     # for relation, v in best_topk_dict.items():
     #     print(relation,v[1],v[0], topk_max_dict[relation] )
@@ -539,4 +601,4 @@ if __name__ == "__main__":
 
     if "test" in args.mode:
         test_pipeline()
-        adaptive_top_k()
+        adaptive_threshold()
