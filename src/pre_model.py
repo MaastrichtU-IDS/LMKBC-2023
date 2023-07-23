@@ -51,28 +51,28 @@ class PreFMDataset(Dataset):
             input_tokens = [tokenizer.cls_token] + row['tokens'] + [tokenizer.sep_token]
             exists_ids = tokenizer.convert_tokens_to_ids(exists)
             # generate masking-combination, for example, a sentence contains three entities, e.g. (a,b,c). We can select one,multiple or all of them, that is (a),(b),(c),(a,b),(a,c),etc. Different permutation scheme may provides different performance
+            input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
+            entity_index_ids = [i for i, v in enumerate(input_ids) if v in exists_ids]
             select_ids_list = [] 
-            for i in range(len(exists)//2):
-                select_ids_list.append(random.sample(
-                exists, max(1, len(exists)//2) 
-                ))
-
+            for i in range(len(entity_index_ids)//2):
+                select_ids_list.append(tuple(random.sample(
+                entity_index_ids, max(1, len(entity_index_ids)//2) 
+                )))
             if printable:
                 print("exists",exists)
                 print("input_tokens",input_tokens)
             if len(input_tokens) > max_length:
                 max_length = len(input_tokens)
                 print("row",row)
-            input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
-            for select_ids in select_ids_list:
+         
+            for mask_ids in select_ids_list:
                 # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
-                label_ids = [x if x in select_ids else -100 for x in input_ids]
+                # label_ids = [-100]*len(input_ids)
+                label_ids = [v if i in mask_ids else -100  for i, v in enumerate(input_ids)]
                 #  in input id sequences, the weight of masked tokens will  be zero. That means the vector of masked tokens in input_ids will not be considered in predicting the mask entities in label_ids.
-                attention_mask = [0 if x in select_ids else 1 for x in input_ids]
+                attention_mask =[0 if i in mask_ids else 1  for i, v in enumerate(input_ids)]
                 # replace the id of entities in input_ids with the mask_token_id
-                input_ids_t = [
-                    tokenizer.mask_token_id if x in select_ids else x for x in input_ids
-                ]
+                input_ids_t = [tokenizer.mask_token_id if i in mask_ids else v  for i, v in enumerate(input_ids)]
                 item = {
                     "input_ids": input_ids_t,
                     "labels": label_ids,
@@ -90,6 +90,17 @@ class PreFMDataset(Dataset):
 
     def __len__(self):
         return len(self.data)
+    def _mask_index_replace(input_list, mask_ids,replace_obj,else_obj=None):
+        result = []
+        for i,v in enumerate(mask_ids):
+            if i in mask_ids:
+                result.append(replace_obj)
+            elif else_obj is not None:
+                result.append(else_obj)
+            else:
+                 result.append(v)
+        return result
+
 
 
 class PreNSPDataset(Dataset):

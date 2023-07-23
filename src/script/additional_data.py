@@ -22,12 +22,12 @@ from sklearn.model_selection import train_test_split
 
 
 xml_fn = f'{config.RES_DIR}/additional_corpus/simplewiki-20211001-pages-articles-multistream.xml'
-destination_fn = f"{config.RES_DIR}/additional_corpus/contain_words.txt"
+contain_words = f"{config.RES_DIR}/additional_corpus/contain_words.txt"
 used_fn = f"{config.RES_DIR}/additional_corpus/py_1.txt"
 token_fn = f"{config.RES_DIR}/additional_corpus/token_count.txt"
-final_corpus_fn = f"{config.RES_DIR}/additional_corpus/fm_pretrain_2.txt"
-pretrain_fm_fn = f"{config.RES_DIR}/additional_corpus/fm_pretrain_0.txt"
-corpus_json_order_fn = f"{config.RES_DIR}/additional_corpus/fm_pretrain_1.txt"
+fm_pretrain_2 = f"{config.RES_DIR}/additional_corpus/fm_pretrain_2.txt"
+fm_pretrain_0 = f"{config.RES_DIR}/additional_corpus/fm_pretrain_0.txt"
+fm_pretrain_1 = f"{config.RES_DIR}/additional_corpus/fm_pretrain_1.txt"
 
 token_path = f"{config.RES_DIR}/tokenizer/bert"
 tokenizer = transformers.AutoTokenizer.from_pretrained(token_path)
@@ -119,7 +119,12 @@ def generate_data_process_fm_ah(origin_data_list):
 
     result_list = []
     for line in tqdm(origin_data_list):
-        if len(line) < 200:
+        # if len(line) < 100:
+        #     continue
+        line_space_num = float(line.count(' '))
+        if line_space_num<20:
+            if line_space_num > 15:
+                print(line) 
             continue
         results = kwtree.search_all(line)
         results = list(results)
@@ -127,24 +132,25 @@ def generate_data_process_fm_ah(origin_data_list):
             continue
         entity_count = dict()
         # results  [[a,10],[a,20]]
+        all_entity_length = 0
+        line_space_num = float(line.count(' '))
         for entity, start in results:
             if entity not in entity_count:
                 entity_count[entity] = 0
-            entity_count[entity] += 1
-        max_token = ""
+            entity_count[entity] += len(entity)
+            all_entity_length+= len(entity)
         max_count = 0
         for k, v in entity_count.items():
             if v > max_count:
-                max_token = k
                 max_count = v
-        token_ratio = (len(max_token) * max_count) / float(len(line))
-        if token_ratio > 0.3:
-            print(max_token, "        ", line)
+        token_ratio = (max_count) / line_space_num
+        all_token_ratio = all_entity_length/ line_space_num
+        if token_ratio > 0.5 or all_token_ratio>0.9:
             continue
 
         exists_tokens = set((map(lambda x: x[0], results)))
         min_token_count = min(list(map(lambda x: entity_dict[x], exists_tokens)))
-        if min_token_count < 100:
+        if min_token_count < 300: 
             for key in exists_tokens:
                 entity_dict[key] += 1
             item = {
@@ -185,21 +191,21 @@ def generate_data_process_nsp_ah(origin_data_list):
 
 
 def dataset_reorder():
-    lines: list = util.file_read_json_line(pretrain_fm_fn)
+    lines: list = util.file_read_json_line(fm_pretrain_0)
     # lines = lines[: len(lines) // 4]
     lines.sort(key=lambda x: len(x['exists']), reverse=True)
-    util.file_write_json_line(corpus_json_order_fn, lines)
+    util.file_write_json_line(fm_pretrain_1, lines)
 
 
 def dataset_optimize():
     dataset_reorder()
     for k in entity_dic_jt.keys():
         entity_dic_jt[k] = 0
-    if os.path.exists(final_corpus_fn):
-        os.remove(final_corpus_fn)
+    if os.path.exists(fm_pretrain_2):
+        os.remove(fm_pretrain_2)
     all_lens = 0
     long_count = 0
-    with open(corpus_json_order_fn) as f:
+    with open(fm_pretrain_1) as f:
         while True:
             lines = f.readlines(1_000_000_000)
             if len(lines) == 0:
@@ -216,7 +222,7 @@ def dataset_optimize():
                 sentence = jl['sentence']
 
                 min_count = min(map(lambda x: entity_dic_jt[x], exists))
-                if min_count < 20:
+                if min_count < 50:
                     sentence = jl['sentence'].split('.lt;')[0]
                     sentence = sentence.replace('\n', '')
                     tokens = tokenizer.tokenize(sentence)
@@ -233,12 +239,10 @@ def dataset_optimize():
                             for token in toke_sub_list:
                                 if token in entity_dict:
                                     token_exists.add(token)
-                            if len(token_exists) < 2:
+                            if len(token_exists) < 1:
                                 continue
-                            min_count = min(
-                                map(lambda x: entity_dic_jt[x], token_exists)
-                            )
-                            if min_count < 20:
+                            min_count = min(                                map(lambda x: entity_dic_jt[x], token_exists)                             )
+                            if min_count < 50:
                                 item = {
                                     "exists": list(token_exists),
                                     "tokens": toke_sub_list,
@@ -256,7 +260,7 @@ def dataset_optimize():
                         result.append(item)
             all_lens += len(result)
             print("result", len(result))
-            util.file_write_json_line(final_corpus_fn, result,'auto')
+            util.file_write_json_line(fm_pretrain_2, result,'auto')
     print("all_lens ", all_lens)
     print("long_count ", long_count)
     k_count = 0
@@ -273,13 +277,13 @@ def multi_process_genenrate():
     buffer_size = 500_000_000
     n_size = str(buffer_size / (8 * 1024**3))
     print("batch file size " + n_size + "GB")
-    if os.path.exists(pretrain_fm_fn):
-        os.remove(pretrain_fm_fn)
-    f_size = os.path.getsize(destination_fn)
+    if os.path.exists(fm_pretrain_0):
+        os.remove(fm_pretrain_0)
+    f_size = os.path.getsize(contain_words)
     all_iteration = f_size // buffer_size
     print(f"all_iteration {all_iteration}")
     current_index = 1
-    with open(destination_fn, 'r') as f:
+    with open(contain_words, 'r') as f:
         while True:
             f_lines = f.readlines(buffer_size)
             if len(f_lines) == 0:
@@ -294,7 +298,7 @@ def multi_process_genenrate():
             ]
             # results = [Generate_data_process(f_lines)]
             result_list = pool.map(generate_data_process_fm_ah, chunks)
-            util.file_write_json_line(pretrain_fm_fn, result_list, 'auto')
+            util.file_write_json_line(fm_pretrain_0, result_list, 'auto')
             print(f"current/all  {current_index}/{all_iteration}")
             current_index += 1
             # util.file_write_json_line(corpus_3_fn, all_list)
@@ -303,21 +307,6 @@ def multi_process_genenrate():
             if v == 0:
                 k_count += 1
         print("unsen_key_count", k_count)
-
-
-def test_pool():
-    def sum_list(data):
-        r = []
-        for i in data:
-            r.append(i**2)
-        return r
-
-    pool = Pool(8)
-    f_lines = [[1, 2, 3], [2, 3, 4], [3, 4, 5], [4, 5, 6]]
-    chunk_size = 2
-    chunks = [f_lines[i : i + n] for i in range(0, len(f_lines), chunk_size)]
-    results = pool.map(generate_data_process, chunks)
-
 
 def test_tokenizer():
     line = 'Fiordland is on the west coast, but is in the Southland, New ZealandSouthland Region rather than the West Coast Region.'
@@ -369,7 +358,7 @@ def official_language():
 
 if __name__ == "__main__":
     # test_ah()
-    multi_process_genenrate()
+    # multi_process_genenrate()
     # official_language()
     # clean_file(used_fn)
     dataset_optimize()

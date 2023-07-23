@@ -14,14 +14,14 @@ task = "pretrain_fill-mask"
 print(torch.cuda.is_available())
 model_save_dir = f"{config.BIN_DIR}/{task}/{pretrain_model_name}"
 final_corpus_fn = f"{config.RES_DIR}/additional_corpus/fm_pretrain_2.txt"
-
+model_best_dir = model_save_dir+'/best_ckpt'
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 if not os.path.exists(model_save_dir):
     os.makedirs(model_save_dir)
 
 # model_load_dir = f'{model_save_dir}/best_ckpt'
-model_load_dir = config.bert_base_cased
+model_load_dir = config.bert_tiny
 
 
 def run():
@@ -31,8 +31,9 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python src/pre_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts.csv  --output {OUTPUT_FILE} --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu 0 --top_k 30 --threshold 0.1  --dev_fn  data/train_tiny.jsonl --mode "train test eva ulate" --train_epoch 20 --learning_rate 6e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir}
-    
+   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu  0  --train_epoch 10 --learning_rate 3e-5   --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
+
+
     """
 
     print(cmd_run_fillmask)
