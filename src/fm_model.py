@@ -532,8 +532,8 @@ if __name__ == "__main__":
     tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
     bert_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
     negative_vocabulary_fn = f'data/negave_vocabulary.json'
-    with open(negative_vocabulary_fn) as f:
-        negative_vocabulary = set(json.load(f))
+    #with open(negative_vocabulary_fn) as f:
+    #    negative_vocabulary = set(json.load(f))
     if "train" in args.mode:
         train()
 
