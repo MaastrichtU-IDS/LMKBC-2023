@@ -455,23 +455,35 @@ def adaptive_threshold():
         groud_list = relation_list_groud[relation]
         origin_topk = topk_max_dict[relation]
         best_f1=0
+        best_precision = 0
+        best_recal= 0 
         origin_threshold = threshold_initial_dict[relation]
         best_threshold=0
-        for i in range(1,int((origin_threshold*3)/0.05),1):
-            threshold = 0.05*i
+        threshold_step = 0.01
+        for i in range(1,int((origin_threshold*3)/threshold_step),1):
+            threshold = threshold_step*i
             for row in pred_list:
                 row['ObjectEntities'] =list(map(lambda t:t[1], filter(lambda t: t[0]>=threshold, zip(row['ObjectEntitiesScore'],  row['ObjectEntities']))))
-            f1 = evaluate.evaluate_list(groud_list, pred_list)[relation]['f1']
+            eval_dict = evaluate.evaluate_list(groud_list, pred_list)[relation]
+            f1 = eval_dict['f1']
+            p = eval_dict['p']
+            r = eval_dict['r']
             if f1> best_f1:
                 best_f1=f1
                 best_threshold =threshold
+                best_precision= p 
+                best_recal= r
         best_topk_dict[relation] = [best_threshold,best_f1] 
         origin_result_dict[relation]["best_threshold"]=best_threshold
         origin_result_dict[relation]["best_f1"]=best_f1
-        origin_result_dict[relation]["best_threshold"]=origin_threshold
+        origin_result_dict[relation]["best_precision"]=best_precision
+        origin_result_dict[relation]["best_recal"]=best_recal
+        origin_result_dict[relation]["origin_threshold"]=origin_threshold
     
 
     origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
     result_dict = {
         "args":args.__dict__,
         "metric":origin_result_dict
