@@ -58,6 +58,7 @@ class PreFMDataset(Dataset):
                 select_ids_list.append(tuple(random.sample(
                 entity_index_ids, max(1, len(entity_index_ids)//2) 
                 )))
+
             if printable:
                 print("exists",exists)
                 print("input_tokens",input_tokens)
