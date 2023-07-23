@@ -54,7 +54,7 @@ class PreFMDataset(Dataset):
             select_ids_list = [] 
             for i in range(len(exists)//2):
                 select_ids_list.append(random.sample(
-                exists, max(1, len(exists)//2) 
+                exists_ids, max(1, len(exists_ids)//2) 
                 ))
 
             if printable:

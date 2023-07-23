@@ -33,7 +33,7 @@ def run_pretrain_filled_mask():
     final_corpus_fn = f"{config.RES_DIR}/additional_corpus/fm_pretrain_2.txt"
     cmd_pretrain_filled_mask = f"""
     
-   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu {args.gpu}   --train_epoch 40 --learning_rate 3e-5   --model_load_dir {last_best_dir} --model_save_dir {pfm_model_save_dir} --model_best_dir  {pfm_model_best_dir}
+   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu {args.gpu}   --train_epoch 10 --learning_rate 3e-5   --model_load_dir {last_best_dir} --model_save_dir {pfm_model_save_dir} --model_best_dir  {pfm_model_best_dir}
     
     """
     last_best_dir =  pfm_model_best_dir
@@ -88,16 +88,19 @@ if __name__ == "__main__":
         run_pretrain_filled_mask()
         run_file_mask()
 
-    if "train_tr" in args.mode:
+    if "train_tr_fm" in args.mode:
         run_token_redefine()
         run_file_mask()
         
-    if "train_pfm" in args.mode:
+    if "train_pfm_fm" in args.mode:
         run_pretrain_filled_mask()
         run_file_mask()
 
     if "train_fm" in args.mode:
         run_file_mask()
+
+    if "train_pfm" in args.mode:
+        run_pretrain_filled_mask()
 
     if "test" in args.mode:
         test_fn=args.test_fn 
