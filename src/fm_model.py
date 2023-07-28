@@ -29,7 +29,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-print(torch.cuda.is_available())
+print("GPU ", torch.cuda.is_available())
 
 with open(config.TOKENIZER_PATH+"/added_tokens.json") as f:
     additional_token_dict = json.load(f)

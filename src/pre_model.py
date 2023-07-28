@@ -122,8 +122,9 @@ class PreFM_wiki_Dataset(Dataset):
             # generate masking-combination, for example, a sentence contains three entities, e.g. (a,b,c). We can select one,multiple or all of them, that is (a),(b),(c),(a,b),(a,c),etc. Different permutation scheme may provides different performance
             entity_index_ids = [i for i, v in enumerate(input_ids) if v in entity_set_ids]
             random.shuffle(entity_index_ids)
-            if args.mask_special:
+            if 'fold' in args.mask_strategy:
                 select_index_list = self._mask_random(entity_index_ids)
+            elif 'single' in args.mask_strategy
             else:
                 select_index_list =[random.sample(range(1,len(input_ids)-1), 0.15*len(input_ids))]
 
@@ -159,6 +160,11 @@ class PreFM_wiki_Dataset(Dataset):
         split_size = min(5, len(entity_index_ids))
         chunk_size = math.ceil(len(entity_index_ids) / split_size )
         select_index_list = [entity_index_ids[i*chunk_size:(i+1)*chunk_size] for i in range(split_size)]
+        return select_index_list
+    
+    def _mask_random_single(self, entity_index_ids):
+        mask_size = max(1, len(entity_index_ids)//5)
+        select_index_list =[random.sample(entity_index_ids, mask_size]
         return select_index_list
     
 
@@ -304,9 +310,9 @@ if __name__ == "__main__":
         help="GPU ID, (default: -1, i.e., using CPU)",
     )
     parser.add_argument(
-        "--mask_special",
-        type=bool,
-        default=True,
+        "--mask_strategy",
+        type=str,
+        default="single",
         help="GPU ID, (default: -1, i.e., using CPU)",
     )
 
