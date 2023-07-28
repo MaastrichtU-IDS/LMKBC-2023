@@ -98,12 +98,17 @@ def file_write_json_line(data_fn, results, mode='w'):
     json_text_list = [json.dumps(aj, cls=SetEncoder) for aj in results]
     file_write_line(data_fn, json_text_list, mode)
 
+def file_delete(fp):
+    if os.path.exists(fp):
+        os.remove(fp)
 
 def file_write_line(data_fn, results, mode='w'):
     if mode == 'auto':
         mode = 'a' if os.path.exists(data_fn) else 'w'
     with open(data_fn, mode) as f:
         text = '\n'.join(results)
+        if mode == 'a':
+            text = '\n'+text
         f.write(text)
 
 

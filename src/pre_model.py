@@ -1,3 +1,4 @@
+import math
 import json
 import argparse
 import logging
@@ -24,7 +25,7 @@ import config
 os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
 from evaluate import evaluate
 import util
-import tqdm
+from tqdm import tqdm
 
 task = "pretrain_filled_mask"
 logging.basicConfig(
@@ -103,6 +104,82 @@ class PreFMDataset(Dataset):
         return result
 
 
+class PreFM_wiki_Dataset(Dataset):
+    def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:
+        super().__init__()
+        self.data = []
+        train_data = util.file_read_json_line(data_fn)
+        self.tokenizer = tokenizer
+        max_length = 0 
+        printable= True
+        for row in tqdm(train_data):
+            entities = row['entities']
+            sentence= row['sentence']
+            tokens = row['tokens']
+            input_ids = tokenizer.convert_tokens_to_ids(tokens)
+            entity_ids = tokenizer.convert_tokens_to_ids(entities)
+            entity_set_ids = set(entity_ids)
+            # generate masking-combination, for example, a sentence contains three entities, e.g. (a,b,c). We can select one,multiple or all of them, that is (a),(b),(c),(a,b),(a,c),etc. Different permutation scheme may provides different performance
+            entity_index_ids = [i for i, v in enumerate(input_ids) if v in entity_set_ids]
+            random.shuffle(entity_index_ids)
+            if args.mask_special:
+                select_index_list = self._mask_random(entity_index_ids)
+            else:
+                select_index_list =[random.sample(range(1,len(input_ids)-1), 0.15*len(input_ids))]
+
+            if printable:
+                print("exists",entities)
+                print("input_tokens",tokenizer.convert_ids_to_tokens(input_ids))
+            if len(input_ids) > max_length:
+                max_length = len(input_ids)
+                print("row",row)
+         
+            for mask_index in select_index_list:
+                # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
+                # label_ids = [-100]*len(input_ids)
+                label_ids = [v if i in mask_index else -100  for i, v in enumerate(input_ids)]
+                #  in input id sequences, the weight of masked tokens will  be zero. That means the vector of masked tokens in input_ids will not be considered in predicting the mask entities in label_ids.
+                attention_mask =[0 if i in mask_index else 1  for i, v in enumerate(input_ids)]
+                # replace the id of entities in input_ids with the mask_token_id
+                input_ids_t = [tokenizer.mask_token_id if i in mask_index else v  for i, v in enumerate(input_ids)]
+                item = {
+                    "input_ids": input_ids_t,
+                    "labels": label_ids,
+                    "attention_mask": attention_mask,
+                }
+                if printable:
+                    print("item",item)
+                    printable = False
+                self.data.append(item)
+
+        random.shuffle(self.data)
+        print("max_length",max_length)
+
+    def _mask_random(self, entity_index_ids):
+        split_size = min(5, len(entity_index_ids))
+        chunk_size = math.ceil(len(entity_index_ids) / split_size )
+        select_index_list = [entity_index_ids[i*chunk_size:(i+1)*chunk_size] for i in range(split_size)]
+        return select_index_list
+    
+
+    def __getitem__(self, index):
+        return self.data[index]
+
+    def __len__(self):
+        return len(self.data)
+    def _mask_index_replace(input_list, mask_ids,replace_obj,else_obj=None):
+        result = []
+        for i,v in enumerate(mask_ids):
+            if i in mask_ids:
+                result.append(replace_obj)
+            elif else_obj is not None:
+                result.append(else_obj)
+            else:
+                 result.append(v)
+        return result
+
+
+
 
 class PreNSPDataset(Dataset):
     def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:
@@ -146,7 +223,7 @@ def train():
     )
     bert_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
 
-    train_dataset = PreFMDataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
+    train_dataset = PreFM_wiki_Dataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
     bert_collator = util.DataCollatorKBC(
         tokenizer=bert_tokenizer,
     )
@@ -224,6 +301,12 @@ if __name__ == "__main__":
         "--gpu",
         type=int,
         default=0,
+        help="GPU ID, (default: -1, i.e., using CPU)",
+    )
+    parser.add_argument(
+        "--mask_special",
+        type=bool,
+        default=True,
         help="GPU ID, (default: -1, i.e., using CPU)",
     )
 

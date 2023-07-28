@@ -3,6 +3,7 @@ import json
 import os
 import random
 import sys
+from regex import cache_all
 import requests
 from torch import return_types
 from tqdm import tqdm
@@ -396,6 +397,11 @@ wiki_shrink = f'{config.RES_DIR}/wikidata/shrink'
 wiki_shrink_0 = f'{config.RES_DIR}/wikidata/shrink_0'
 wiki_shrink_1 = f'{config.RES_DIR}/wikidata/shrink_1'
 wiki_sentence_leval = f'{config.RES_DIR}/wikidata/sentence_leval'
+wiki_sentence_leval_json = f'{config.RES_DIR}/wikidata/sentence_leval,json'
+wiki_sentence_sorted = f'{config.RES_DIR}/wikidata/sentence_sorted'
+wiki_token_size = f'{config.RES_DIR}/wikidata/token_size'
+wiki_sentence_filter_entity_size = f'{config.RES_DIR}/wikidata/sentence_filter_entity_size'
+wiki_sentence_filter_entity_size_json = f'{config.RES_DIR}/wikidata/sentence_filter_entity_size.json'
 
 def mp_shrink_sentence(rows):
     # print("rows", len(rows))
@@ -541,11 +547,139 @@ def wiki_data_display():
     print(dataset[1000]['entity'])
 
 
+
+
+def wiki_filter_entity_size_single():
+    dataset = Dataset.load_from_disk(wiki_sentence_sorted)
+
+
+def wiki_filter_entity_size_simple():
+ 
+    dataset = util.file_read_json_line(wiki_token_size)
+    for row in dataset:
+        entities=row['entities']
+        sentence=row['sentence']
+        tokens= row['tokens']
+        min_count = min([entity_dict[e] for e in entities])
+        if min_count > 50:
+            continue
+        tokens = tokenizer.tokenize(sentence)
+        if len(tokens>500):
+            continue
+        for e in entities:
+            entity_dict[e]+=1
+
+    zero_entity_number=0
+    for k,v in entity_dict.items():
+        if v == 0:
+            zero_entity_number +=1 
+    print("zero_entity_number",zero_entity_number)
+    # dataset.save_to_disk(wiki_sentence_filter_entity_size)
+    util.file_delete(wiki_sentence_filter_entity_size_json)
+    dataset.to_json(wiki_sentence_filter_entity_size_json)
+
+
+
+def wiki_filter_token_length():
+
+    def map_func(rows):
+        entity_list=rows['entities']
+        sentence_list=rows['sentence']
+        # print(rows['entity_size'])
+        token_list = []
+        sentences = [] 
+        for sentence in sentence_list:
+            sentence = sentence.replace('\n','')
+            tokens = tokenizer.tokenize(sentence)
+            token_list.append(tokens)
+            sentences.append(sentence)
+        rows['tokens']=token_list
+        rows['sentence'] = sentences
+        return rows
+    
+    def filter_func(rows):
+        # print("rows", len(rows))
+        # entity_list=rows['entities']
+        sentence_list=rows['sentence']
+        token_list = rows['tokens']
+        # print(rows['entity_size'])
+        result=[]
+        for tokens  in token_list:
+            if  len(tokens) < 500:
+                result.append(True)
+            else:
+                result.append(False)
+        return result
+
+    dataset = Dataset.load_from_disk(wiki_sentence_sorted)
+    print(dataset.num_rows)
+    print(dataset.column_names)
+    dataset = dataset.map(map_func,
+                batched=True,
+                batch_size=100_000,
+                num_proc=10
+                )
+    dataset = dataset.filter(filter_func,
+                batched=True,
+                batch_size=100_000,
+                num_proc=10
+                )
+    print(dataset.num_rows)
+    print(dataset.column_names)
+    dataset.save_to_disk(wiki_token_size,
+                         num_proc=10)
+
+
+def wiki_filter_entity_size():
+    def wiki_filter_sentence(rows):
+        # print("rows", len(rows))
+        entity_list=rows['entities']
+        sentence_list=rows['sentence']
+        # print(rows['entity_size'])
+        result=[]
+        for entities, sentence in zip(entity_list,sentence_list):
+            min_count = min([entity_dict[e] for e in entities])
+            if  min_count < 50:
+                for e in entities:
+                    entity_dict[e]+=1
+                result.append(True)
+            else:
+                result.append(False)
+
+        return result
+
+
+    dataset = Dataset.load_from_disk(wiki_token_size)
+    print(dataset.num_rows)
+    print(dataset.column_names)
+    dataset = dataset.filter(wiki_filter_sentence,
+                batched=True,
+                batch_size=100_000,
+                # num_proc=10
+                )
+    print(dataset.num_rows)
+    print(dataset.column_names)
+    zero_entity_number=0
+    for k,v in entity_dict.items():
+        if v == 0:
+            zero_entity_number +=1 
+    print("zero_entity_number",zero_entity_number)
+    # dataset.save_to_disk(wiki_sentence_filter_entity_size)
+    util.file_delete(wiki_sentence_filter_entity_size_json)
+    dataset.to_json(wiki_sentence_filter_entity_size_json)
+  
+def wiki_sort():
+    dataset = Dataset.from_json(wiki_sentence_leval_json)
+    dataset = dataset.sort(  
+        column_names="entity_size" ,
+                 reverse=True
+               )
+    dataset.save_to_disk(wiki_sentence_sorted)
+
 def wiki_data_flatten():
     dataset = DatasetDict.load_from_disk(wiki_shrink_1)
-    # sentence_dataset =  DatasetDict.load_from_disk(wiki_sentence_leval)
-    sentence_dataset= Dataset()
-    sentence_dataset.fro
+    if os.path.exists(wiki_sentence_leval_json):
+        os.remove(wiki_sentence_leval_json)
     record_list=[]
     for row in tqdm(dataset['train']):
         sentence_list = row['sentence']
@@ -557,13 +691,19 @@ def wiki_data_flatten():
                 continue
             item={
                 'sentence':sentence,
-                'entities': entity
+                'entities': entity,
+                "entity_size":len(entity)
                 }    
+            # sentence_dataset.add_item(item)
             record_list.append(item)
-            sentence_dataset.
-    ds = Dataset.from_list(record_list)
-    sentence_dataset['train']= ds
-    sentence_dataset.save_to_disk(wiki_sentence_leval)
+        if len(record_list) % 10_000_000 == 0:
+            util.file_write_json_line(wiki_sentence_leval_json,record_list,'auto')
+            record_list=[]
+    util.file_write_json_line(wiki_sentence_leval_json,record_list,'auto')
+            # sentence_dataset.flatten_indices(r)
+    # ds = Dataset.from_list(record_list)
+    # sentence_dataset['train']= sentence_dataset
+    # sentence_dataset.to_(wiki_sentence_leval)
 
 
 def wiki_data():
@@ -659,4 +799,7 @@ if __name__ == "__main__":
     # shrink_file()
     # wiki_filter()
     # display_zero_entity()
-    wiki_data_flatten()
+    # wiki_data_flatten()
+    # wiki_sort()
+    wiki_filter_entity_size()
+    # wiki_filter_token_length()
