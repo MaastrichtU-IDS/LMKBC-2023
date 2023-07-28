@@ -4,9 +4,11 @@ import os
 import random
 import sys
 import requests
+from torch import return_types
 from tqdm import tqdm
 import transformers
 import wikipedia
+import glob
 
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), 'src'))
 print("parent path ", parent_dir)
@@ -20,9 +22,12 @@ from multiprocessing import Pool, Manager
 import numpy as np
 from sklearn.model_selection import train_test_split
 
+from datasets import load_dataset,DatasetDict,Dataset,arrow_dataset
+
+
 
 xml_fn = f'{config.RES_DIR}/additional_corpus/simplewiki-20211001-pages-articles-multistream.xml'
-contain_words = f"{config.RES_DIR}/additional_corpus/contain_words.txt"
+preprocess_2 = f"{config.RES_DIR}/additional_corpus/preprocess_2.txt"
 used_fn = f"{config.RES_DIR}/additional_corpus/py_1.txt"
 token_fn = f"{config.RES_DIR}/additional_corpus/token_count.txt"
 fm_pretrain_2 = f"{config.RES_DIR}/additional_corpus/fm_pretrain_2.txt"
@@ -40,12 +45,13 @@ from ahocorapy.keywordtree import KeywordTree
 kwtree = KeywordTree()
 
 manager = Manager()
-entity_dict = manager.dict()
+mp_entity_dict = manager.dict()
 with open(f'{config.RES_DIR}/tokenizer/bert/added_tokens.json') as f:
     entity_dic_jt = json.load(f)
-
+entity_dict = dict()
 entity_set_train = entity_dic_jt.keys()
 for key in entity_dic_jt.keys():
+    mp_entity_dict[key] = 0
     entity_dict[key] = 0
     kwtree.add(key)
 
@@ -109,7 +115,7 @@ def sentence_length(text: str):
 
 
 def generate_data_process_fm_ah(origin_data_list):
-    global entity_dict
+    global mp_entity_dict
     # line_list = []
     # for line in origin_data_list:
     #     if line.count(' ') > MAX_LENGTH:
@@ -119,16 +125,16 @@ def generate_data_process_fm_ah(origin_data_list):
 
     result_list = []
     for line in tqdm(origin_data_list):
-        # if len(line) < 100:
-        #     continue
+        if len(line) < 100:
+            continue
         line_space_num = float(line.count(' '))
         if line_space_num<20:
-            if line_space_num > 15:
-                print(line) 
+            # if line_space_num > 15:
+            #     print(line) 
             continue
         results = kwtree.search_all(line)
         results = list(results)
-        if results is None or len(results) == 0:
+        if results is None or len(results)  <1:
             continue
         entity_count = dict()
         # results  [[a,10],[a,20]]
@@ -149,10 +155,10 @@ def generate_data_process_fm_ah(origin_data_list):
             continue
 
         exists_tokens = set((map(lambda x: x[0], results)))
-        min_token_count = min(list(map(lambda x: entity_dict[x], exists_tokens)))
-        if min_token_count < 300: 
+        min_token_count = min(list(map(lambda x: mp_entity_dict[x], exists_tokens)))
+        if min_token_count < 1300: 
             for key in exists_tokens:
-                entity_dict[key] += 1
+                mp_entity_dict[key] += 1
             item = {
                 "exists": exists_tokens,
                 'sentence': line,
@@ -163,7 +169,7 @@ def generate_data_process_fm_ah(origin_data_list):
 
 
 def generate_data_process_nsp_ah(origin_data_list):
-    global entity_dict
+    global mp_entity_dict
     line_list = []
     for line in origin_data_list:
         if len(line) > MAX_LENGTH:
@@ -177,10 +183,10 @@ def generate_data_process_nsp_ah(origin_data_list):
         if results is None or len(results) == 0:
             continue
         exists_tokens = list(map(lambda x: x[0], results))
-        min_token_count = min(list(map(lambda x: entity_dict[x], exists_tokens)))
+        min_token_count = min(list(map(lambda x: mp_entity_dict[x], exists_tokens)))
         if len(exists_tokens) > 1 or min_token_count < 20:
             for key in exists_tokens:
-                entity_dict[key] += 1
+                mp_entity_dict[key] += 1
             item = {
                 "exists": exists_tokens,
                 'sentence': line,
@@ -220,9 +226,11 @@ def dataset_optimize():
             for jl in tqdm(data_list):
                 exists = set(jl['exists'])
                 sentence = jl['sentence']
-
+                sentence=sentence.replace('[[','')
+                sentence=sentence.replace(']]','')
+                sentence=sentence.replace('|',' ')
                 min_count = min(map(lambda x: entity_dic_jt[x], exists))
-                if min_count < 50:
+                if min_count < 100:
                     sentence = jl['sentence'].split('.lt;')[0]
                     sentence = sentence.replace('\n', '')
                     tokens = tokenizer.tokenize(sentence)
@@ -237,12 +245,12 @@ def dataset_optimize():
                                 continue
                             token_exists = set()
                             for token in toke_sub_list:
-                                if token in entity_dict:
+                                if token in mp_entity_dict:
                                     token_exists.add(token)
                             if len(token_exists) < 1:
                                 continue
                             min_count = min(                                map(lambda x: entity_dic_jt[x], token_exists)                             )
-                            if min_count < 50:
+                            if min_count < 100:
                                 item = {
                                     "exists": list(token_exists),
                                     "tokens": toke_sub_list,
@@ -279,11 +287,11 @@ def multi_process_genenrate():
     print("batch file size " + n_size + "GB")
     if os.path.exists(fm_pretrain_0):
         os.remove(fm_pretrain_0)
-    f_size = os.path.getsize(contain_words)
+    f_size = os.path.getsize(preprocess_2)
     all_iteration = f_size // buffer_size
     print(f"all_iteration {all_iteration}")
     current_index = 1
-    with open(contain_words, 'r') as f:
+    with open(preprocess_2, 'r') as f:
         while True:
             f_lines = f.readlines(buffer_size)
             if len(f_lines) == 0:
@@ -303,7 +311,7 @@ def multi_process_genenrate():
             current_index += 1
             # util.file_write_json_line(corpus_3_fn, all_list)
         k_count = 0
-        for k, v in entity_dict.items():
+        for k, v in mp_entity_dict.items():
             if v == 0:
                 k_count += 1
         print("unsen_key_count", k_count)
@@ -343,16 +351,292 @@ def test_ah():
     print(rs)
 
 
-def official_language():
-    official_language_fn = 'res/additional_corpus/official_language.txt'
-    with open(official_language_fn) as f:
-        csv_dict = csv.DictReader(f)
-        result=[]
-        for row in csv_dict: 
-            country = row['Country'].strip().replace('&nbsp;','')
-            language = row['Official'].strip().split(' ')
-            result .append((country,language))
-    print(result)
+
+
+
+def clean_sentence(sentence:str):
+    s = "In 2005, the SABC announced proposed the creation of two complementary regional television channels, SABC4 and SABC5, to emphasise indigenous languages.lt;refgt;http:allafrica.comstories200506150754.html South Africa: ICASA Grants the Public Broadcaster Licences to Cater for Marginalized Languages, AllAfrica , 15 June 2005lt;refgt; SABC4, based in Mafikeng, was to be broadcast in Tswana languageTswana , Sesotho languageSesotho , Pedi languagePedi , Tsonga languageTsonga , Venda languageVenda , and Afrikaans, to the northern provinces of the country, while SABC5, based in Cape Town, was to broadcast in Xhosa languageXhosa , Zulu languageZulu , Southern Ndebele languageNdebele , and Swazi languageSwazi , as well as Afrikaans, to the southern provinces. Unlike other SABC TV services, SABC4 and SABC5 were not to be available via satellite.lt;refgt;http:www.news24.comSouthAfricaPoliticsSABCsreadytoroll20050314 SABCs ready to roll, News24 websiteNews24 , 14 March 2005lt;refgt; Apart from soundbites on news or current affairs programmes, no Englishlanguage programming would be shown on either channel.lt;refgt;https:variety.com2005scenemarketsfestivalssabcaddschannels1117924696 SABC adds channels, Variety magazineVariety , 19 June 2005lt;refgt; However, the plans fell through and in 2015, the SABC stated that it would launch two new channels, SABC News and SABC Encore.lt;refgt;http:www.channel24.co.zaTVNewsHlaudiSABCwillnowstartDTTwith5TVchannels20150520 Hlaudi: SABC will now start DTT with 5 TV channels, News24 websiteNews24 , 20 May 2015lt;refgt;\n"
+
+def check_row(row):
+    result = kwtree.search(row['text'])
+    return result is not None 
+
+def split_text(row):
+    sentences = row['text'].split('.')
+    sentence_list = []
+    for sentence in sentences:
+        # if len(sentence) <50:
+        #     continue
+        result = kwtree.search(sentence)
+        if result is not None: 
+            sentence_list.append( sentence)
+    row['text'] = sentence_list
+    # return 
+
+def length_check(row):
+    # result = list(kwtree.search_all(row['text']))
+    return len(row['text']) > 30
+
+
+
+def wiki_sentence_count():
+    wiki_splitted = f'{config.RES_DIR}/wikidata/splited'
+    # dataset.save_to_disk(wiki_origin_dir)
+    dataset = DatasetDict.load_from_disk(wiki_splitted)
+    sentence_count = 0
+    # dataset = dataset.map(function = lambda x : sentence_count=sentence_count+len(x['text']), 
+    #                         batched=True,
+    #                     #  batch_size=1000
+    #                         num_proc=5
+    #                         )
+    print("sentence_count", sentence_count)
+
+wiki_origin_dir  = f'{config.RES_DIR}/wikidata/origin'
+wiki_shrink = f'{config.RES_DIR}/wikidata/shrink'
+wiki_shrink_0 = f'{config.RES_DIR}/wikidata/shrink_0'
+wiki_shrink_1 = f'{config.RES_DIR}/wikidata/shrink_1'
+wiki_sentence_leval = f'{config.RES_DIR}/wikidata/sentence_leval'
+
+def mp_shrink_sentence(rows):
+    # print("rows", len(rows))
+    text_list= rows['sentence']
+    # print("text_list", len(text_list))
+    sentence_s = []
+    entity_s = []
+    new_rows = dict()
+    for i in range(len(text_list)):
+        text = text_list[i]
+        sentences = text.split('.')
+        sentence_list=[]
+        entity_list=[]
+        for s in sentences:
+            result = kwtree.search_all(s)
+            entity_set = set([e for e, s in result])
+            if len(entity_set) == 0: 
+                continue
+            sentence_list.append(s)
+            entity_list.append(list(entity_set))
+        sentence_s.append(sentence_list)
+        entity_s.append(entity_list)
+    new_rows['sentence']= sentence_s
+    new_rows['entity']= entity_s
+    return new_rows
+
+
+def shrink_sentence(rows):
+    # print("rows", len(rows))
+    text_list= rows['sentence']
+    entity_list=rows['sentence']
+    # print("text_list", len(text_list))
+    sentence_s = []
+    entity_s = []
+    new_rows = dict()
+    for i in range(len(text_list)):
+        text = text_list[i]
+        # sentences = text.split('.')
+        sentence_list=[]
+        entity_list
+        for s in sentences:
+            result = kwtree.search_all(s)
+            entity_set = set([e for e, s in result])
+            if len(entity_set) == 0:
+                continue
+            min_count = min([entity_dict[e] for e in entity_set])
+            if result is not None and min_count < 50:
+                for e in entity_set:
+                    entity_dict[e]+=1
+                sentence_list.append(s)
+        sentence_s.append(sentence_list)
+    new_rows['sentence']= sentence_s
+    return new_rows
+
+
+def save_orivin():
+    dd = DatasetDict.load_from_disk(wiki_origin_dir)
+    dd.save_to_disk(wiki_shrink)
+
+def mp_shrink_text(rows):
+    # print("rows", len(rows))
+    text_list= rows['text']
+    # print("text_list", len(text_list))
+    sentence_s = []
+    for i in range(len(text_list)):
+        text = text_list[i]
+        sentences = text.split('.')
+        sentence_list=[]
+        for s in sentences:
+            result = kwtree.search(s)
+            if result is not None:
+                sentence_list.append(s)
+        sentence_s.append(sentence_list)
+    rows['sentence']= sentence_s
+    del rows['text']
+    return rows
+
+
+def wiki_filter():
+    dd = DatasetDict.load_from_disk(wiki_shrink_0)
+    print(dd.column_names)
+
+def count_entity(rows):
+    # print("rows", len(rows))
+    text_list= rows['sentence']
+    # print("text_list", len(text_list))
+    sentence_s = []
+    new_rows = dict()
+    for i in range(len(text_list)):
+        sentences = text_list[i]
+        # print("text",len(text))
+        # sentences = text.split('.')
+        sentence_list=[]
+        for s in sentences:
+            result = kwtree.search_all(s)
+            entity_set = set([e for e, s in result])
+            if len(entity_set) == 0:
+                continue
+            for e in entity_set:
+                entity_dict[e]+=1
+                # sentence_list.append(s)
+            # min_count = min([entity_dict[e] for e in entity_set])
+            # if result is not None and min_count < 50:
+            #     for e in entity_set:
+            #         entity_dict[e]+=1
+            #     sentence_list.append(s)
+        # sentence_s.append(sentence_list)
+    # new_rows['sentence']= sentence_s
+    # return new_rows
+
+def display_zero_entity():
+    dd = DatasetDict.load_from_disk(wiki_shrink_1)
+    dd1 = dd.map(function = count_entity,
+           batched=True,
+           batch_size=1000,
+        #    num_proc=15,
+           )
+    zero_entity_number=0
+    for k,v in entity_dict.items():
+        if v == 0:
+            zero_entity_number +=1 
+    print("zero_entity_number",zero_entity_number)
+
+def shrink_file():
+    dd = DatasetDict.load_from_disk(wiki_shrink_0)
+    dd1 = dd.map(function = mp_shrink_sentence,
+           batched=True,
+           batch_size=1000,
+           num_proc=15,
+           )
+    # zero_entity_number = 
+    # dd1.set_format()()
+    dd1.save_to_disk(wiki_shrink_1)
+
+def wiki_data_display():
+    dd = DatasetDict.load_from_disk(wiki_sentence_leval)
+    ds=dd['train']
+    print(ds[1000]['sentnece'])
+    print(ds[1000]['entities'])
+
+    dataset = DatasetDict.load_from_disk(wiki_sentence_filter)['train']
+    print(dataset[1000]['text'])
+    print(dataset[1000]['entity'])
+
+
+def wiki_data_flatten():
+    dataset = DatasetDict.load_from_disk(wiki_shrink_1)
+    # sentence_dataset =  DatasetDict.load_from_disk(wiki_sentence_leval)
+    sentence_dataset= Dataset()
+    sentence_dataset.fro
+    record_list=[]
+    for row in tqdm(dataset['train']):
+        sentence_list = row['sentence']
+        entity_list = row['entity']
+        for entity, sentence in zip(entity_list,sentence_list):
+            # result = kwtree.search_all(sentence)
+            # entity_set = set([e for e, s in result])
+            if len(entity) == 0:
+                continue
+            item={
+                'sentence':sentence,
+                'entities': entity
+                }    
+            record_list.append(item)
+            sentence_dataset.
+    ds = Dataset.from_list(record_list)
+    sentence_dataset['train']= ds
+    sentence_dataset.save_to_disk(wiki_sentence_leval)
+
+
+def wiki_data():
+    dataset = DatasetDict.load_from_disk(wiki_filter)
+    print(dataset.column_names)
+    print(dataset.num_rows)
+    dataset = dataset.map(function = sentence_check, 
+                             batched=True,
+                             batch_size=100,
+                             num_proc=10,
+                            # return_dict=False 
+                             )
+    
+    # dataset = dataset.filter(function = check_row, 
+    #                         #  batched=True,
+    #                         #  batch_size=1000
+    #                         num_proc=10
+    #                          )
+    print(dataset.num_rows)
+    print(dataset['train'][0])
+
+    dataset.save_to_disk(wiki_sentence_filter)
+    # print(dataset["train"]["text"][:10])
+    # print(dataset)
+
+def sentence_check(rows):
+
+    text_list = rows['text']
+    if len(text_list) == 0:
+        print(" empty")
+        return
+    rows['entity'] = []
+    for i, text in enumerate(text_list):
+        # if len(sentence) <50:
+        #     continue
+        # text = text[text]
+        sentence_list = []
+        entity_list=[]
+        sentences = text.split('.')
+        for sentence in sentences:
+            result = kwtree.search_all(sentence)
+            if result is not None: 
+                # if len(list(result)) > 30:
+                sentence_list.append( text)
+                entity_list.append([e for e,s in result])
+                # entity_set = set([e for e,s in result])
+                # min_num = 100
+                # for e in entity_set:
+                #     if entity_dict[e] < min_num:
+                #         min_num = entity_dict[e]
+                # if min_num <100:
+                #     for e in entity_set:
+                #         entity_dict[e] +=1
+                #     sentence_list.append( sentence)
+        text_list[i]= sentence_list
+        rows['entity'].append(sentence_list)
+    return rows
+
+def wiki_mp(fp):
+    basename = os.path.basename (fp)
+    # dataset = arrow_dataset.ArrowReader(fp)
+    # dataset.read_table()
+    dataset = dataset.map(function = sentence_check)
+    dataset.save_to_disk(f'{config.RES_DIR}/wikidata/splited_mp/{basename}')
+
+
+def wiki_multi_process():
+    number_process = 10
+    pool = Pool(number_process)
+    wiki_origin_dir  = f'{config.RES_DIR}/wikidata/splited/train'
+    files = glob.glob (f'{wiki_origin_dir}/data*.arrow')
+    print (files)
+    pool.map(wiki_mp,files)
 
 
 
@@ -361,8 +645,18 @@ if __name__ == "__main__":
     # multi_process_genenrate()
     # official_language()
     # clean_file(used_fn)
-    dataset_optimize()
+    # dataset_optimize()
     # sample_dev_dataset()
     # nsp_sample_dev_dataset()
     # test_tokenizer()
     # dataset_reorder()
+    # wiki_data()
+    # wiki_multi_process()
+    # wiki_sentence_count()
+    # wiki_data_filter()
+    # wiki_data_display()
+    # save_orivin()
+    # shrink_file()
+    # wiki_filter()
+    # display_zero_entity()
+    wiki_data_flatten()

@@ -1,15 +1,17 @@
 import csv
+import itertools
 import json
 import argparse
 import logging
 import random
 import pandas as pd
+from tokenizers import Tokenizer
 
 import torch
 from torch.utils.data import Dataset
 from tqdm.auto import tqdm
 import transformers
-from transformers import pipeline, BertTokenizerFast, BertModel
+from transformers import BertTokenizer, pipeline, BertTokenizerFast, BertModel, BertPreTrainedModel,BertForMaskedLM
 import os
 
 
@@ -29,6 +31,8 @@ logger = logging.getLogger(__name__)
 
 print(torch.cuda.is_available())
 
+with open(config.TOKENIZER_PATH+"/added_tokens.json") as f:
+    additional_token_dict = json.load(f)
 
 class MLMDataset(Dataset):
     def __init__(self, tokenizer: BertTokenizerFast, data_fn, template_fn) -> None:
@@ -88,11 +92,157 @@ class MLMDataset(Dataset):
         return len(self.data)
 
 
+
+class MLM_Multi_Dataset(Dataset):
+    def __init__(self, tokenizer: BertTokenizerFast, data_fn, template_fn) -> None:
+        super().__init__()
+        self.data = []
+
+        # Read the training data from a JSON file
+        train_data = util.file_read_json_line(data_fn)
+
+        # Read the prompt templates from a file
+        prompt_templates = util.file_read_prompt(template_fn)
+
+        # Iterate over each row in the training data
+        for row in train_data:
+            relation = row['Relation']
+            prompt_template = prompt_templates[relation]
+            object_entities = row['ObjectEntities']
+            subject = row["SubjectEntity"]
+
+            # Iterate over each object entity
+            for obj in object_entities:
+                if obj == '':
+                    obj = config.EMPTY_TOKEN
+                obj_tokens = tokenizer.tokenize(obj)
+                if len(obj_tokens)> config.mask_length:
+                    obj_tokens =obj_tokens[:config.mask_length]
+                elif len(obj_tokens)< config.mask_length:
+                    obj_tokens=obj_tokens+[tokenizer.pad_token] * (config.mask_length-len(obj_tokens))
+                # Create an input sentence by formatting the prompt template
+                input_sentence = prompt_template.format(
+                    subject_entity=subject, mask_token=' '.join([tokenizer.mask_token] * config.mask_length)
+                )
+
+                # Convert the object entity to its corresponding ID
+                obj_id = tokenizer.convert_tokens_to_ids(obj_tokens)
+
+                input_ids = tokenizer.encode(input_sentence)
+                attention_mask = [0 if v == tokenizer.mask_token_id else 1 for v in input_ids]
+                mask_index= [ i for i,v in enumerate(input_ids) if v == tokenizer.mask_token_id]
+                # Create label IDs where the masked token corresponds to the object ID
+                label_ids = [
+                    obj_id[i-mask_index[0]] if t == tokenizer.mask_token_id else -100 for i, t in enumerate(input_ids)
+                ]
+
+                item = {
+                    "labels": label_ids,
+                    "input_ids": input_ids,
+                    "attention_mask": attention_mask,
+                }
+
+                self.data.append(item)
+        random.shuffle(self.data)
+        print(self.data[0])
+
+    def __getitem__(self, index):
+        return self.data[index]
+
+    def __len__(self):
+        return len(self.data)
+
+
+def token_layer(model:BertForMaskedLM):
+    # BertForMaskedLM.get_input_embeddings()
+    # BertForMaskedLM.set_input_embeddings()
+    num_new_tokens = len(enhance_tokenizer.vocab)
+    model.resize_token_embeddings(num_new_tokens)
+
+    old_token_embedding = model.get_input_embeddings()
+
+    old_num_tokens, old_embedding_dim = old_token_embedding.weight.shape
+    old_output_embedding =  model.get_output_embeddings()
+    print("old_output_embedding  ", old_output_embedding.weight.data.dtype)
+    print("old_output_embedding  ", old_output_embedding.weight.data.shape)
+    old_output_dim_0, old_output_dim_1 =   old_output_embedding.weight.shape
+    # new_embeddings = torch.nn.Module()
+    new_token_embeddings = torch.nn.Embedding(
+         num_new_tokens, old_embedding_dim
+    )
+    new_output_embeddings = torch.nn.Linear(
+         old_output_dim_1, old_output_dim_0, dtype= old_output_embedding.weight.dtype
+    )
+    print("new_output_embeddings  ", new_output_embeddings.weight.data.dtype)
+    print("new_output_embeddings  ", new_output_embeddings.weight.data.shape)
+    # embedding_laye_dictr =embedding_layer . state_dict()
+    # print("embedding_laye_dictr",embedding_laye_dictr.keys())
+    # embedding_laye_dictr['weight']=new_embeddings.state_dict()['weight']
+    # new_embeddings.load_state_dict(embedding_laye_dictr)
+
+    # Creating new embedding layer with more entries
+    # new_embeddings.weight = torch.nn.Parameter(old_num_tokens+num_new_tokens, old_embedding_dim)
+ 
+    # Setting device and type accordingly
+    new_output_embeddings = new_output_embeddings.to(
+        old_output_embedding.weight.device,
+        dtype=old_output_embedding.weight.dtype,
+    )
+    new_token_embeddings = new_token_embeddings.to(
+        old_token_embedding.weight.device,
+        dtype=old_token_embedding.weight.dtype,
+    )
+
+    # Copying the old entries
+    # new_token_embeddings.weight.data[:old_num_tokens, :] = old_token_embedding.weight.data[
+    #     :old_num_tokens, :    ]
+    # new_output_embeddings.weight.data[:, :old_num_tokens] = old_output_embedding.weight.data[
+    #     :, :    old_num_tokens]
+    
+    # old_position = model.get_position_embeddings()
+    # position_dim_0, position_dim_1 = old_position.weight.shape
+    # position_dim_0_new = position_dim_0+len(additional_token_dict)
+    # new_position = torch.nn.Embedding(
+    #      position_dim_0_new, old_embedding_dim
+    # )
+    # new_embeddings.padding_idx = embedding_layer.clone()
+    for entity,index in additional_token_dict.items():
+        token_ids = origin_tokenizer.encode(entity)
+        new_dim =  torch.mean(old_token_embedding.weight.data[token_ids,:],0)
+        # print(new_dim.shape)
+        # new_position_token =  torch.mean(old_position.weight.data[token_ids,:],0)
+        new_output =   torch.mean(old_output_embedding.weight.data[token_ids,:],0)
+        new_output_embeddings.weight.data[index, :] =new_output
+        new_token_embeddings.weight.data[index,:] =new_dim
+        # new_position .weight.data[index,:] = new_position_token
+    print("old_token_embedding ", old_token_embedding.weight.data[2][:5])
+    print("new_token_embeddings ", new_token_embeddings.weight.data[2][:5])
+    print("new_output_embeddings ", new_output_embeddings.weight.data[2][:5])
+    print("old_output_embedding ", old_output_embedding.weight.data[2][:5])
+    model.set_input_embeddings( new_token_embeddings)
+    model.set_output_embeddings( new_output_embeddings)
+
+
+def token_layer_formal(model:BertForMaskedLM):
+    num_new_tokens = len(additional_token_dict)+old_num_tokens
+    model.resize_token_embeddings(num_new_tokens)
+    old_token_embedding = model.get_input_embeddings()
+
+    old_num_tokens, old_embedding_dim = old_token_embedding.weight.shape
+
+
+
+
+
 def train():
     bert_config = transformers.AutoConfig.from_pretrained(args.model_load_dir)
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
     )
+    if not os.path.isdir( args.model_load_dir):
+        print("repair token embedding")
+        # token_layer(bert_model)
+        # bert_model.resize_token_embeddings(len(toke))
     # else:
     #     print(f"using huggingface  model {args.model_load_dir}")
     #     bert_config = transformers.AutoConfig.from_pretrained(config.bert_base_cased)
@@ -102,25 +252,29 @@ def train():
 
     # is_train can be used to resume train process in formal training
     is_train = os.path.isdir(args.model_load_dir)
+    tokenizer = enhance_tokenizer
+    bert_model.resize_token_embeddings(len(tokenizer))
     # Create the training dataset using the MLMDataset class, providing the train data file, tokenizer, and template file
     train_dataset = MLMDataset(
-        data_fn=args.train_fn, tokenizer=bert_tokenizer, template_fn=args.template_fn
+        data_fn=args.train_fn, tokenizer=tokenizer, template_fn=args.template_fn
     )
+
+    # transformers.BertForMaskedLM()
 
     # Create a data collator for batching and padding the data during training
     bert_collator = util.DataCollatorKBC(
-        tokenizer=bert_tokenizer,
+        tokenizer=tokenizer,
     )
 
     # Create the development dataset using the MLMDataset class, providing the dev data file, tokenizer, and template file
     dev_dataset = MLMDataset(
         data_fn=args.dev_fn,
-        tokenizer=bert_tokenizer,
+        tokenizer=tokenizer,
         template_fn=args.template_fn,
     )
 
     # Resize the token embeddings of the BERT model to match the tokenizer's vocabulary size
-    bert_model.resize_token_embeddings(len(bert_tokenizer))
+    # bert_model.resize_token_embeddings(len(bert_tokenizer))
 
     # Set up the training arguments for the model
     training_args = transformers.TrainingArguments(
@@ -152,12 +306,155 @@ def train():
         train_dataset=train_dataset,
         args=training_args,
         eval_dataset=dev_dataset,
-        tokenizer=bert_tokenizer,
+        tokenizer=tokenizer,
     )
 
     trainer.train()
     trainer.save_model(output_dir=args.model_best_dir)
     print(f"model_best_dir: ", args.model_best_dir)
+
+
+
+# def format_output(model_output,tokenizer):
+#     logits = result.logits
+#     logits = torch.softmax(logits,-1)
+#     print(logits.shape)
+#     # to("cpu")
+#     logits=logits[0,mask_indexs[0]:mask_indexs[-1]]
+#     logits_topk = torch.topk(logits, 20,-1)
+#     values = logits_topk[0].to('cpu').detach().numpy()
+#     indices = logits_topk[1].to('cpu').detach().numpy() 
+#     print("indices ",indices)
+#     print("values ",values)
+#     for i,v in zip(indices,values):
+#         for ei,ev in zip(i,v):
+#             print(bert_tokenizer.convert_ids_to_tokens(int(ei)), ei,ev)
+
+#     # logits = logits_topk[mask_indexs[0]:mask_indexs[-1]]
+
+#     print(logits_topk)
+#     # input_ids.append(input_id)
+#     # prompts.append(prompt)
+
+
+def search_entity(results):
+    probability = [] 
+    for r in results:
+        # print(r)
+        token_list = list(filter(lambda x:len(x) > 0, map(lambda x:x[0], r)))
+        # print(token_list)
+        comb = list(itertools.product(*token_list))
+        probability.append(comb)
+        # probability.append()
+    return probability
+
+def predict():
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
+    bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
+        args.model_best_dir, config=bert_config
+    )
+    tokenizer =tokenizer
+    token_mapping_fp = config.RES_DIR+"/token_mapping.json"
+    with open(token_mapping_fp) as f:
+        entity_maaping = json.load(f)
+    # Resize the token embeddings of the BERT model to match the tokenizer's vocabulary size
+    # bert_model.resize_token_embeddings(len(bert_tokenizer))
+    # bert_model.forward()
+    # Set up the training arguments for the model
+    
+        # Read the prompt templates from the specified file
+    prompt_templates = util.file_read_prompt(args.template_fn)
+
+    # Read the test data rows from the specified file
+    test_rows = util.file_read_json_line(args.test_fn)
+
+    # bert_model.training=False
+    # bert_model = bert_model.to('cuda:0')
+    results = []
+    exclusive_list = {config.EMPTY_TOKEN,tokenizer.pad_token,'(',")"}
+    exclusive_ids =set( tokenizer.convert_tokens_to_ids(exclusive_list))
+
+    
+    for row in test_rows:
+        # Generate a prompt for each test row using the corresponding template
+        prompt = prompt_templates[row["Relation"]].format(
+            subject_entity=row["SubjectEntity"],
+            mask_token=' '.join([tokenizer.mask_token] *config.mask_length)
+        )
+    
+        tokens = tokenizer.tokenize(prompt)
+        # print(tokens)
+        mask_indexs = [i for i, x in enumerate(tokens) if x == tokenizer.mask_token]
+        # print(mask_indexs)
+        input_id = tokenizer.encode(prompt,  return_tensors='pt')
+        # print(tokenizer.convert_ids_to_tokens(input_id))
+        # input_id=torch.tensor(input_id).unsqueeze(0)
+        # print("input_id",input_id.shape)
+        result = bert_model.forward(input_id)
+        logits = result.logits
+        logits = torch.softmax(logits,-1)
+        # print(logits}.shape)
+        # to("cpu")
+        logits=logits[0,mask_indexs[0]:mask_indexs[-1]]
+        logits_topk = torch.topk(logits, 20,-1)
+        values = logits_topk[0].detach().numpy()
+        indices = logits_topk[1].detach().numpy()
+        mask_token_list= []
+        for i,v in zip(indices,values):
+            token_list=[]
+            score_list=[]
+            for ei,ev in zip(i,v):
+                if ev > 0.05:
+                    token_list.append(tokenizer.convert_ids_to_tokens(int(ei)))
+                    score_list.append(float(ev))
+                # print(bert_tokenizer.convert_ids_to_tokens(int(ei)), ev)
+            mask_token_list.append((token_list,score_list))
+        # logits = logits_topk[mask_indexs[0]:mask_indexs[-1]]
+        results.append(mask_token_list)
+        # print(results[0])
+    print("results" , results[:10])
+    re = search_entity(results)
+    result_list = [] 
+    print("re" , re[:10])
+    for r,row in zip(re,test_rows):
+        # print("r ", r)
+        objects = []
+        objects_wikiid=[]
+
+        for rs in r:
+            if rs[0] ==  "Empty":
+                 rs_t=["Empty"]
+            else:
+                rs_t = []
+                for t in rs:
+                    if t not in exclusive_list:
+                        rs_t.append(t)
+                    else:
+                        break
+            # print(rs)
+            # if len(rs) == 1: 
+            #     objects.append(rs[0])
+            #     continue
+            
+            key_rs = ' '.join(rs_t)
+            if key_rs not in entity_maaping:
+                continue
+            entity =  entity_maaping[key_rs][0]
+            objects.append(entity)
+
+        result_row = {
+            "SubjectEntityID": row["SubjectEntityID"],
+            "SubjectEntity": row["SubjectEntity"],
+            "ObjectEntitiesID": objects_wikiid,
+            "ObjectEntities": objects,
+            "Relation": row["Relation"],
+        }
+        result_list.append(result_row)
+    # print("result_list ",result_list[:30])
+    print(json.dumps(result_list[:10],indent = 2))
+    util.file_write_json_line(args.output_fn, result_list)
+    logger.info(f"Start Evaluate ...")
+    evaluate.evaluate(args.output_fn, args.test_fn)
 
 
 def test_pipeline():
@@ -173,7 +470,7 @@ def test_pipeline():
     pipe = pipeline(
         task=task,
         model=bert_model,
-        tokenizer=bert_tokenizer,
+        tokenizer=enhance_tokenizer,
         top_k=args.top_k,
         device=args.gpu,
     )
@@ -189,7 +486,7 @@ def test_pipeline():
         # Generate a prompt for each test row using the corresponding template
         prompt = prompt_templates[row["Relation"]].format(
             subject_entity=row["SubjectEntity"],
-            mask_token=bert_tokenizer.mask_token,
+            mask_token=enhance_tokenizer.mask_token,
         )
         prompts.append(prompt)
 
@@ -201,6 +498,7 @@ def test_pipeline():
     logger.info(f"End the model...")
 
     results = []
+    exclusive_token= {"the","of"}
     for row, output in tqdm(zip(test_rows, outputs), total=len(test_rows)):
         objects_wikiid = []
         objects = []
@@ -210,7 +508,8 @@ def test_pipeline():
             score = seq["score"]
             # if obj in negative_vocabulary:
             #     continue
-
+            if obj.startswith("##") or obj in exclusive_token:
+                continue
             if obj == config.EMPTY_TOKEN:
                 # objects_wikiid.append(config.EMPTY_STR)
                 obj = ''
@@ -262,7 +561,7 @@ def test_pipeline_origin():
     pipe = pipeline(
         task=task,
         model=bert_model,
-        tokenizer=bert_tokenizer,
+        tokenizer=enhance_tokenizer,
         top_k=args.top_k,
         device=args.gpu,
     )
@@ -278,7 +577,7 @@ def test_pipeline_origin():
         # Generate a prompt for each test row using the corresponding template
         prompt = prompt_templates[row["Relation"]].format(
             subject_entity=row["SubjectEntity"],
-            mask_token=bert_tokenizer.mask_token,
+            mask_token=enhance_tokenizer.mask_token,
         )
         prompts.append(prompt)
 
@@ -604,7 +903,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
+    enhance_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
+    origin_tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_load_dir)
     negative_vocabulary_fn = f'data/negave_vocabulary.json'
     #with open(negative_vocabulary_fn) as f:
     #    negative_vocabulary = set(json.load(f))
@@ -614,3 +914,7 @@ if __name__ == "__main__":
     if "test" in args.mode:
         test_pipeline()
         adaptive_threshold()
+
+    if "predict" in args.mode:
+        predict()
+        # adaptive_threshold()

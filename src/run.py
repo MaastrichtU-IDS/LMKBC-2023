@@ -75,8 +75,8 @@ if __name__ == "__main__":
         default='0',
         help="train test",
     )
-    #pretrain_model_name = config.bert_tiny
-    pretrain_model_name = config.bert_large_cased
+    #pretrain_model_name = config.bert_
+    pretrain_model_name = config.bert_base_cased
 
     para_dict=dict()
 

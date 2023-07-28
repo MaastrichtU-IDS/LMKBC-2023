@@ -13,6 +13,7 @@ CACHE_DIR = f"{ROOT_PATH}/cache"
 
 TRANSFOER_CACHE_DIR = f'{CACHE_DIR}/transformers/'
 
+mask_length = 3
 
 EMPTY_TOKEN = 'Empty'
 EMPTY_STR = ''

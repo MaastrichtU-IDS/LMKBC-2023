@@ -53,9 +53,9 @@ class PreFMDataset(Dataset):
             # generate masking-combination, for example, a sentence contains three entities, e.g. (a,b,c). We can select one,multiple or all of them, that is (a),(b),(c),(a,b),(a,c),etc. Different permutation scheme may provides different performance
             input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
             entity_index_ids = [i for i, v in enumerate(input_ids) if v in exists_ids]
-            select_ids_list = [] 
+            select_index_list = [] 
             for i in range(len(entity_index_ids)//2):
-                select_ids_list.append(tuple(random.sample(
+                select_index_list.append(tuple(random.sample(
                 entity_index_ids, max(1, len(entity_index_ids)//2) 
                 )))
 
@@ -66,14 +66,14 @@ class PreFMDataset(Dataset):
                 max_length = len(input_tokens)
                 print("row",row)
          
-            for mask_ids in select_ids_list:
+            for mask_index in select_index_list:
                 # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
                 # label_ids = [-100]*len(input_ids)
-                label_ids = [v if i in mask_ids else -100  for i, v in enumerate(input_ids)]
+                label_ids = [v if i in mask_index else -100  for i, v in enumerate(input_ids)]
                 #  in input id sequences, the weight of masked tokens will  be zero. That means the vector of masked tokens in input_ids will not be considered in predicting the mask entities in label_ids.
-                attention_mask =[0 if i in mask_ids else 1  for i, v in enumerate(input_ids)]
+                attention_mask =[0 if i in mask_index else 1  for i, v in enumerate(input_ids)]
                 # replace the id of entities in input_ids with the mask_token_id
-                input_ids_t = [tokenizer.mask_token_id if i in mask_ids else v  for i, v in enumerate(input_ids)]
+                input_ids_t = [tokenizer.mask_token_id if i in mask_index else v  for i, v in enumerate(input_ids)]
                 item = {
                     "input_ids": input_ids_t,
                     "labels": label_ids,

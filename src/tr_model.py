@@ -41,19 +41,16 @@ class TADataset(Dataset):
         super().__init__()
         self.data = []
         max_sentence_length = 0
-        prompt = '{origin_word} is split into {tokens}'
-
         for entity in entity_set:
             tokens = tokenizer_origin.tokenize(entity)
-            sentence_token = tokenizer_origin.tokenize('is equal to the following:')
-            label_tokens = [entity] + sentence_token + tokens
-            input_tokens = [tokenizer_origin.mask_token] + sentence_token + tokens
-
-            label_ids = tokenizer_enhance.convert_tokens_to_ids(label_tokens)
+            tokens_id = tokenizer_origin.convert_tokens_to_ids(tokens)
+            sentence_token = tokenizer_origin.tokenize(' is equal to ')
+            input_tokens = [entity] + sentence_token + [tokenizer_origin.mask_token]*len(tokens)
             input_ids = tokenizer_enhance.convert_tokens_to_ids(input_tokens)
-            attention_mask = [
-                0 if v == tokenizer_enhance.mask_token else 1 for v in input_tokens
-            ]
+
+            label_ids = [x if x in tokens_id else -100 for x in input_ids]
+            
+            attention_mask = [0 if x in tokens_id else 1 for x in input_ids]
             # encoded_sentence = tokenizer.encode_plus(text=input_sentence)
 
             if len(input_ids) > max_sentence_length:
@@ -62,7 +59,7 @@ class TADataset(Dataset):
             item = {
                 "labels": label_ids,
                 "input_ids": input_ids,
-                # "attention_mask": attention_mask,
+                "attention_mask": attention_mask,
             }
             self.data.append(item)
 
