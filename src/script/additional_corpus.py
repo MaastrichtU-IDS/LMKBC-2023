@@ -7,6 +7,7 @@ import requests
 from tqdm import tqdm
 import transformers
 import wikipedia
+from glob import glob
 
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), 'src'))
 print("parent path ", parent_dir)
@@ -285,28 +286,10 @@ def count_word():
     print("token_frequency",token_frequency)
     return  token_frequency
 
-
-
-def wikidata():
-    from datasets import load_dataset
-
-
-    # Download the Wikipedia dataset
-    dataset = load_dataset('wikipedia', '20220301.en')
-    print(dataset.column_names)
-    print(dataset.num_rows)
-    dataset.filter(lambda x: len(x["text"]) >1000)
-    print(dataset["train"]["text"][:10])
-    # print(dataset)
-    # Save the dataset to a file (optional)
-    # dataset.save_to_disk(f'{config.RES_DIR}/wikipedia_dataset')
-
-
-
-if __name__ == "__main__":
-    # bert_tokenizer = transformers.AutoTokenizer.from_pretrained(
-    #     pretrained_model_name_or_path="bert-base-cased"
-    # )
+def entitys():
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(
+        pretrained_model_name_or_path="bert-base-cased"
+    )
     # entity_set = build_entity_set_from_dataset([config.TRAIN_FN, config.VAL_FN])
     # print("start building entity set")
     # tokenizer = extend_tokenizer(entity_set, bert_tokenizer)
@@ -314,6 +297,18 @@ if __name__ == "__main__":
     # tokenizer_path = f'{config.RES_PATH}/tokenizer/bert'
     # tokenizer.save_pretrained(tokenizer_path)
     # print("save tokenizer success")
+
+def collect_specify_entity():
+    collect_entity_pattern = {
+        
+        }
+    for filename in glob(f'{config.RES_DIR}/silver/*.jsonl', recursive=True):
+        print(filename)
+
+
+
+if __name__ == "__main__":
+
     # nobel_prize()
     # official_language()
     # count_token_length()
@@ -321,5 +316,5 @@ if __name__ == "__main__":
     # country_state()
     # refresh_tokenizer()
     # wiki_download()
-    wikidata()
+    collect_specify_entity()
     # river_city()

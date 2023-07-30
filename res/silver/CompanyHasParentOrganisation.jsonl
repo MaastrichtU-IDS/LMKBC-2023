@@ -1,0 +1,816 @@
+{"SubjectEntity": "AOL", "ObjectEntities": ["Verizon"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hyundai Motor Company", "ObjectEntities": ["Hyundai"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Yuanta Securities", "ObjectEntities": ["Yuanta Financial Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Visual Concepts", "ObjectEntities": ["Take-Two Interactive"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Montblanc", "ObjectEntities": ["Richemont"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Urban Decay", "ObjectEntities": ["L\u2019Or\u00e9al"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ASCII Media Works", "ObjectEntities": ["Kadokawa Group Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "His Master's Voice", "ObjectEntities": ["Warner Music Group", "EMI", "RCA Records", "JVC"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ActewAGL", "ObjectEntities": ["AGL Energy", "Jemena", "Government of the Australian Capital Territory"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sukhoi Design Bureau", "ObjectEntities": ["Sukhoi"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Alipay", "ObjectEntities": ["Alibaba Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Nadeo", "ObjectEntities": ["Ubisoft"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Veuve Clicquot", "ObjectEntities": ["LVMH"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pitsos", "ObjectEntities": ["BSH Hausger\u00e4te GmbH"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ray-Ban", "ObjectEntities": ["Luxottica"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Viz Media", "ObjectEntities": ["Shogakukan"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Gazprom Armenia", "ObjectEntities": ["Gazprom"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TNT", "ObjectEntities": ["Gazprom-Media"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Citibank Berhad", "ObjectEntities": ["Citigroup", "Citibank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "R&R Ice Cream Deutschland", "ObjectEntities": ["Froneri"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ArcelorMittal Ghent", "ObjectEntities": ["ArcelorMittal (Belgium)"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Rothmans, Benson & Hedges", "ObjectEntities": ["Philip Morris International"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Misr Spinning and Weaving Company", "ObjectEntities": ["Q68167327"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Steiner-Optik", "ObjectEntities": ["Beretta Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Lamborghini Trattori", "ObjectEntities": ["SAME Deutz-Fahr"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Icon Comics", "ObjectEntities": ["Marvel Comics"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Wuhan Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bulgari", "ObjectEntities": ["LVMH"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Siemens Gamesa Renewable Energy A/S", "ObjectEntities": ["Siemens Gamesa"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Frontier Works", "ObjectEntities": ["Animate"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Dunkin' Donuts", "ObjectEntities": ["Inspire Brands"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Imperial Chemical Industries", "ObjectEntities": ["AkzoNobel"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SABIC", "ObjectEntities": ["Saudi Aramco"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q1004409", "ObjectEntities": ["Magyar Telekom"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hitachi Rail STS", "ObjectEntities": ["Hitachi"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Carmel Winery", "ObjectEntities": ["Jewish Agency for Israel"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Celebrity Cruises", "ObjectEntities": ["Royal Caribbean Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cuban National Center for Sex Education", "ObjectEntities": ["Ministry of Public Health"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Luminate", "ObjectEntities": ["Penske Media Corporation", "Eldridge"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CheapTickets", "ObjectEntities": ["Expedia Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Jacuzzi", "ObjectEntities": ["Apollo Global Management", "Investindustrial"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hanshin Electric Railway", "ObjectEntities": ["Hankyu Hanshin Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Crunchyroll", "ObjectEntities": ["Funimation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Yale Materials Handling Corporation", "ObjectEntities": ["North American Coal Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bre-X", "ObjectEntities": ["Freeport-McMoRan"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Siemens Sector Energy", "ObjectEntities": ["Siemens"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Gesellschaft f\u00fcr Neue Musik", "ObjectEntities": ["International Society for Contemporary Music"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hot", "ObjectEntities": ["Altice Europe"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ports of Auckland", "ObjectEntities": ["Auckland Council"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "KS-Europe", "ObjectEntities": ["Otto Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Simon & Schuster", "ObjectEntities": ["CBS Corporation", "Viacom", "Gulf and Western Industries", "Paramount Communications", "Paramount Global"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q1801213", "ObjectEntities": ["RAL Deutsches Institut f\u00fcr G\u00fctesicherung und Kennzeichnung"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Vitaphone", "ObjectEntities": ["Warner Bros."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Watcom", "ObjectEntities": ["Sybase"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q12218696", "ObjectEntities": ["Q12188926"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "stc Kuwait", "ObjectEntities": ["Saudi Telecom Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q12048770", "ObjectEntities": ["Austrian Northwestern Railway"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Transcentrum bus", "ObjectEntities": ["ARRIVA holding \u010cesk\u00e1 republika"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ooredoo Palestine", "ObjectEntities": ["Ooredoo"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Object Technology International", "ObjectEntities": ["IBM"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q12218551", "ObjectEntities": ["ADQ"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Lanzhou Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "KGI Securities", "ObjectEntities": ["China Development Financial Holding Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HUAYU Automotive Systems Company Limited", "ObjectEntities": ["SAIC Motor"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Nanning Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Nanchang Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Taishin Securities", "ObjectEntities": ["Taishin Financial Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Hohhot Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hotai Leasing", "ObjectEntities": ["Hotai Motor"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Harbin Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Waterland Securities Co., Ltd.", "ObjectEntities": ["IBF Financial Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Taiyuan Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q10982617", "ObjectEntities": ["Egyptian General Petroleum Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Guangzhou Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Xinhua Daily Media Group", "ObjectEntities": ["People's Government of Jiangsu Province"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "XinhuaNet", "ObjectEntities": ["Xinhua News Agency"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Jih Sun Securities", "ObjectEntities": ["Jih Sun Financial Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Kunming Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Taoyuan International Airport Services Limited", "ObjectEntities": ["China Airlines", "China Airlines Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SinoPac Securities", "ObjectEntities": ["SinoPac Financial Holdings Company Limited"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Shenyang Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "\u010cesk\u00e1 pr\u016fmyslov\u00e1 zdravotn\u00ed poji\u0161\u0165ovna", "ObjectEntities": ["Ministry of Labour and Social Affairs"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "XING", "ObjectEntities": ["Brother Industries"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Dimension Extreme", "ObjectEntities": ["The Weinstein Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Central China Railway", "ObjectEntities": ["Central China Industrial Development Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Xi'an Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Qingzang Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "U-Bank", "ObjectEntities": ["First International Bank Of Israel Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ABC Heinz Indonesia", "ObjectEntities": ["Kraft Heinz"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "IPC Systems", "ObjectEntities": ["The Gores Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sears Outlet", "ObjectEntities": ["Franchise Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Lviv State Aircraft Repair Plant", "ObjectEntities": ["Ukrainian Defense Industry"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bitium", "ObjectEntities": ["Alphabet Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q20391210", "ObjectEntities": ["National Service Products Organization"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hannaux Benzion", "ObjectEntities": ["Q20419516"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Moldovagaz", "ObjectEntities": ["Gazprom"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "EVN", "ObjectEntities": ["EVN Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Virgin Voyages", "ObjectEntities": ["Virgin Group", "Bain Capital"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Flagler Global Logistics", "ObjectEntities": ["Florida East Coast Industries"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "MileIQ", "ObjectEntities": ["Microsoft"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Finsbury", "ObjectEntities": ["WPP plc"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pink", "ObjectEntities": ["Victoria's Secret"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ekuinas", "ObjectEntities": ["Q113537163"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "partypoker", "ObjectEntities": ["Entain"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "New Classics Media", "ObjectEntities": ["Tencent"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "BizBooks", "ObjectEntities": ["Albatros Media"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Fight Nights Global", "ObjectEntities": ["Ziyavudin Magomedov"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "GDH 559", "ObjectEntities": ["GMM Grammy", "Hub Ho Hin Bangkok"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Barclay", "ObjectEntities": ["Universal Music Group", "Universal Music France", "PolyGram S.A. France"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Volgograd Tractor Factory", "ObjectEntities": ["Rostec"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wissenschaft im Dialog", "ObjectEntities": ["B\u00fcrger schaffen Wissen"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Telecoms & Internet converged Services & Protocols for Advanced Networks", "ObjectEntities": ["European Telecommunications Standards Institute"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "International Bills Finance Corporation", "ObjectEntities": ["IBF Financial Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Praxis", "ObjectEntities": ["Maxeda"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Adventures by Disney", "ObjectEntities": ["Disneyland, Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Autostrade per l'Italia", "ObjectEntities": ["Atlantia S.p.A.", "Istituto per la Ricostruzione Industriale"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Neviot", "ObjectEntities": ["The Central Bottling Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Penguin Random House", "ObjectEntities": ["Bertelsmann"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Carello", "ObjectEntities": ["Magneti Marelli"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Churchill Falls (Labrador) Corporation Limited", "ObjectEntities": ["Nalcor Energy"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Disneyland, Inc.", "ObjectEntities": ["Disney Parks, Experiences and Products"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Dream Quest Images", "ObjectEntities": ["Walt Disney Pictures"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Safran Ceramics", "ObjectEntities": ["Safran"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Huggies", "ObjectEntities": ["Kimberly-Clark"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "International Nuclear Services", "ObjectEntities": ["Nuclear Decommissioning Authority"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "True Corporation", "ObjectEntities": ["Charoen Pokphand", "Telenor"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Soci\u00e9t\u00e9 Mini\u00e8re et Metallurgique Pe\u00f1arroya", "ObjectEntities": ["IM\u00c9TAL"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sports Experts", "ObjectEntities": ["Forzani Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Unipublic", "ObjectEntities": ["Amaury Sport Organisation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wafa Assurance", "ObjectEntities": ["Attijariwafa Bank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Walt Disney Travel Company", "ObjectEntities": ["Walt Disney Parks and Resorts U.S."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Antica Gelateria del Corso", "ObjectEntities": ["Froneri"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Picchiotti", "ObjectEntities": ["Perini Navi"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cooperativa Autotrasporti Pratesi", "ObjectEntities": ["Compagnia Toscana Trasporti Nord"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Genertel", "ObjectEntities": ["Generali Italia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Natural Power", "ObjectEntities": ["Stellantis Italy"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q3893301", "ObjectEntities": ["Panini Comics"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Societ\u00e0 Autostrada Ligure Toscana", "ObjectEntities": ["Q3943631"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q3964909", "ObjectEntities": ["Eni"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Barclays Global Investors", "ObjectEntities": ["Barclays"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Parke-Davis", "ObjectEntities": ["Pfizer", "Warner\u2013Lambert"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Polestar", "ObjectEntities": ["Volvo Cars", "Geely"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Transvision", "ObjectEntities": ["Trans Corp", "CT Corpora"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Lenhydroproject", "ObjectEntities": ["RusHydro"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "First North", "ObjectEntities": ["Nasdaq, Inc. ICR nasdaq data factory"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "State enterprise Kharkiv Machinery Plant \"FED\"", "ObjectEntities": ["Ukrainian Defense Industry"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "AES Andes", "ObjectEntities": ["AES Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "AVCREC", "ObjectEntities": ["Amazon"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Airwave", "ObjectEntities": ["Motorola Solutions"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Al-Dawood Air", "ObjectEntities": ["Al-Dawood Air"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Aqua-Aston Hospitality", "ObjectEntities": ["Marriott Vacations Worldwide Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ashdod Oil Refineries", "ObjectEntities": ["Paz Oil Company Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Barnes & Noble College Booksellers", "ObjectEntities": ["Barnes & Noble"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Blue Cross Blue Shield of Michigan", "ObjectEntities": ["Blue Cross Blue Shield Association"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Borden Dairy Company", "ObjectEntities": ["Kohlberg Kravis Roberts"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Botswana Power Corporation", "ObjectEntities": ["Government of Botswana"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CaptionMax", "ObjectEntities": ["3Play Media"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Carlton & United Breweries", "ObjectEntities": ["SABMiller"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Chengdu Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Crossword Bookstores", "ObjectEntities": ["Shoppers Stop"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cyber University", "ObjectEntities": ["SoftBank Group", "\u5225"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cypress Communications", "ObjectEntities": ["Arcapita"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "DiscoVision", "ObjectEntities": ["MCA Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Disney Character Voices International", "ObjectEntities": ["The Walt Disney Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Earth Airlines", "ObjectEntities": ["Earth Airlines"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ecogen Energy", "ObjectEntities": ["EnergyAustralia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SB Creative", "ObjectEntities": ["SB Media Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Enbridge Pipelines", "ObjectEntities": ["Enbridge"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "First Chicago Bank", "ObjectEntities": ["JPMorgan Chase"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Renfe Fabricaci\u00f3n y Mantenimiento", "ObjectEntities": ["Renfe Operadora"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Gujarat Gas Limited", "ObjectEntities": ["Gujarat State Petroleum Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Flow", "ObjectEntities": ["Telecom Argentina"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Expal", "ObjectEntities": ["Rheinmetall AG"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Homelite Corporation", "ObjectEntities": ["Techtronic Industries"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Jinan Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Shanghai Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "I. Magnin", "ObjectEntities": ["Bullock's", "Federated Department Stores"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ImageAmerica", "ObjectEntities": ["Google"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "InSinkErator", "ObjectEntities": ["Emerson Electric"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Jack & Jones", "ObjectEntities": ["Bestseller"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Zhengzhou Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Jaguar Land Rover", "ObjectEntities": ["Q56303208"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Metropolitan Waterworks Authority", "ObjectEntities": ["Ministry of Interior of Thailand"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "idit", "ObjectEntities": ["Dan Hotels  Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q6605259", "ObjectEntities": ["Berman's Bakery"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q6620454", "ObjectEntities": ["Elbit Systems Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q6644031", "ObjectEntities": ["Strauss Group Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q6657098", "ObjectEntities": ["Menora Mivtachim Holdings Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Provincial Waterworks Authority", "ObjectEntities": ["Ministry of Interior of Thailand"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Lukoil-Bulgaria", "ObjectEntities": ["Lukoil"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q12407284", "ObjectEntities": ["Amidar The Israeli National Public Housing Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q12408471", "ObjectEntities": ["Discount Investment Corp. Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q12408545", "ObjectEntities": ["Israel Discount Bank Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Nitsba", "ObjectEntities": ["Airport City Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Alila Hotels and Resorts", "ObjectEntities": ["Hyatt Hotels Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q12699277", "ObjectEntities": ["PTS Media Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Energo-Pro Georgia", "ObjectEntities": ["Energo-Pro"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "GMM Media", "ObjectEntities": ["GMM Grammy", "GMM Channel Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ITV Cymru Wales", "ObjectEntities": ["ITV plc"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tam Jai International Company Limited", "ObjectEntities": ["TORIDOLL"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HK Television Entertainment", "ObjectEntities": ["PCCW Limited"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "comma", "ObjectEntities": ["s.Oliver"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hilfskomitee der Evangelisch-Lutherischen Deutschen aus Polen", "ObjectEntities": ["Protestant Church in Germany"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "E.SUN Securities Co., Ltd", "ObjectEntities": ["E.Sun Financial Holding Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Huawei Device Co., Ltd.", "ObjectEntities": ["Huawei"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Evergreen Aviation Technologies", "ObjectEntities": ["Evergreen Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Senao International", "ObjectEntities": ["Chunghwa Telecom"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wasu Media", "ObjectEntities": ["Wasu Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q16130813", "ObjectEntities": ["Anheuser-Busch InBev"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Naphtha Israel Petroleum Corp. Ltd.", "ObjectEntities": ["Q6829157"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "RT\u00c9 Sport", "ObjectEntities": ["RT\u00c9"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Yonhap News TV", "ObjectEntities": ["Yonhap News Agency"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "KT Sat", "ObjectEntities": ["KT Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "BrickLink", "ObjectEntities": ["The Lego Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Golden Moustache", "ObjectEntities": ["M6 Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tanganyika Concessions Limited", "ObjectEntities": ["Zambesia Exploring"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Grant Prideco", "ObjectEntities": ["Weatherford International", "National Oilwell Varco"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Rock 'n Roll Records", "ObjectEntities": ["Warner Music Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wufoo", "ObjectEntities": ["SurveyMonkey"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Zubaan", "ObjectEntities": ["Kali for Women"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Carlton Video", "ObjectEntities": ["Carlton Communications"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "LeasePlan UK", "ObjectEntities": ["LeasePlan Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ingram Content Group", "ObjectEntities": ["Ingram Industries"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Montana's BBQ & Bar", "ObjectEntities": ["Recipe Unlimited"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tianhong Asset Management Co., Ltd", "ObjectEntities": ["Ant Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Gansu Lanke Petrochemical Hi-Tech Equipment Company Limited", "ObjectEntities": ["Sinomach"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Meadow Gold Dairies", "ObjectEntities": ["Dean Foods"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Yissum Research Development Company of the Hebrew University", "ObjectEntities": ["Hebrew University of Jerusalem"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wyman-Gordon", "ObjectEntities": ["Precision Castparts Corp."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "StrongLoop", "ObjectEntities": ["IBM"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Nigerian Bulk Electricity PLC", "ObjectEntities": ["Nigerian Bulk Electricity PLC"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Seplat Petroleum Development Company", "ObjectEntities": ["Seplat Petroleum Development Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Soul Muzik", "ObjectEntities": ["Soul Muzik"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Street Rhymes Studios", "ObjectEntities": ["Street Rhymes Studios"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sidnawy and products selling", "ObjectEntities": ["Q20419516"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q17637594", "ObjectEntities": ["Q3946436"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Taiwan Airport Service Co., Ltd.", "ObjectEntities": ["China Airlines", "China Airlines Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Evergreen Airline Services Corp.", "ObjectEntities": ["EVA Air"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Grafton Entertainment", "ObjectEntities": ["Grafton Entertainment"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Garelick Farms", "ObjectEntities": ["Dean Foods"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Elbit Limited", "ObjectEntities": ["Elron Ventures Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Blades Technology", "ObjectEntities": ["Pratt & Whitney"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Malam-team Ltd.", "ObjectEntities": ["Arad Investment & Industrial Development Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Mascom", "ObjectEntities": ["Econet Wireless"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ryu ga Gotoku Studio", "ObjectEntities": ["Sega"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Annapurna Labs", "ObjectEntities": ["Amazon"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cathay Securities", "ObjectEntities": ["Cathay Financial Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Small Giant Games", "ObjectEntities": ["Zynga"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "WAKEONE", "ObjectEntities": ["CJ ENM"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Studio Dragon", "ObjectEntities": ["CJ E&M"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q32130389", "ObjectEntities": ["Union Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "MAC TV", "ObjectEntities": ["JOJ Media House"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Slovensk\u00e1 produk\u010dn\u00e1", "ObjectEntities": ["JOJ Media House"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Magical roof", "ObjectEntities": ["JOJ Media House"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pivovar Louny", "ObjectEntities": ["Heineken"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CloudMinds", "ObjectEntities": ["SoftBank Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Foodora", "ObjectEntities": ["Delivery Hero"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Annapurna Interactive", "ObjectEntities": ["Annapurna Pictures"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "bp pulse", "ObjectEntities": ["BP"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Thun 1794", "ObjectEntities": ["Atlas Immobilia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pra\u017esk\u00e9 Vodovody a Kanalizace", "ObjectEntities": ["Veolia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cruise", "ObjectEntities": ["General Motors"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Gigantti", "ObjectEntities": ["Elkj\u00f8p"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pod Point", "ObjectEntities": ["EDF Energy"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Scottish and Southern Electricity Networks", "ObjectEntities": ["SSE plc"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "frogi", "ObjectEntities": ["Yedioth Ahronoth Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q43295471", "ObjectEntities": ["Neto Malinda Trading Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HEAG mobiTram Verwaltungs-GmbH", "ObjectEntities": ["HEAG mobilo GmbH"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "On", "ObjectEntities": ["On Holding AG"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Feelgood&iStage", "ObjectEntities": ["Feelgood Scene Film og TV"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Celltrion Entertainment", "ObjectEntities": ["Celltrion"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Warner Bros. Pictures Animation", "ObjectEntities": ["Warner Bros. Discovery"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Myriad International Holdings", "ObjectEntities": ["Naspers"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Compa\u00f1\u00eda Alemana Transatl\u00e1ntica de Electricidad", "ObjectEntities": ["AEG"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Amazon Air", "ObjectEntities": ["Amazon"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Link Motion", "ObjectEntities": ["Link Motion Inc"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sir Kensington\u2019s", "ObjectEntities": ["Unilever"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bandai Namco Arts", "ObjectEntities": ["Bandai Namco Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ginori 1735", "ObjectEntities": ["Kering"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "AMCO", "ObjectEntities": ["Ministry of Economy and Finance"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q48804982", "ObjectEntities": ["Sony Pictures"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Veritas Communications", "ObjectEntities": ["Irish Catholic Bishops' Conference"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Andaz", "ObjectEntities": ["Hyatt Hotels Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Literature Limited", "ObjectEntities": ["Tencent"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Twilfit", "ObjectEntities": ["Change of Scandinavia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "UPMC Pinnacle", "ObjectEntities": ["University of Pittsburgh Medical Center"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "EP Cargo", "ObjectEntities": ["Energetick\u00fd a pr\u016fmyslov\u00fd holding", "EP Energy"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cleverlance Enterprise Solutions", "ObjectEntities": ["Invinit Group", "Aricoma Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "LokoTrain", "ObjectEntities": ["Energetick\u00fd a pr\u016fmyslov\u00fd holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CAD Studio (Arkance Systems)", "ObjectEntities": ["ARKANCE SAS"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Stay Inspired Capital", "ObjectEntities": ["Onewayhope"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Metrostav Development", "ObjectEntities": ["Metrostav"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CzechToll", "ObjectEntities": ["PPF Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q53994135", "ObjectEntities": ["Prague"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Technologie hlavn\u00edho m\u011bsta Prahy", "ObjectEntities": ["Prague"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Dell Boomi", "ObjectEntities": ["Dell Technologies"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Walt Disney Parks, Experiences and Consumer Products", "ObjectEntities": ["The Walt Disney Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Area 1 Security", "ObjectEntities": ["Cloudflare"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Beta Media", "ObjectEntities": ["Beta Corp"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Beta F&B", "ObjectEntities": ["Beta Corp"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Beta Paint", "ObjectEntities": ["Beta Corp"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Beta Health", "ObjectEntities": ["Beta Corp"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Beta Beauty", "ObjectEntities": ["Beta Corp"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Beta Entertainment", "ObjectEntities": ["Beta Corp"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "GMM BRAVO", "ObjectEntities": ["GMM Grammy"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TIAA Bank", "ObjectEntities": ["TIAA"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SunTrust Bank Nigeria Limited", "ObjectEntities": ["SunTrust Bank Nigeria Limited"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Desjardins General Insurance", "ObjectEntities": ["Desjardins Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "STU, Co., Ltd.", "ObjectEntities": ["Setouchi DMO"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Chevron Nigeria", "ObjectEntities": ["Chevron Nigeria"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Conoil", "ObjectEntities": ["Conoil"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Teraju", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Policybazaar", "ObjectEntities": ["PB Fintech Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q55650336", "ObjectEntities": ["Zoko enterprises"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Granite Hacarmel Investments Ltd.", "ObjectEntities": ["Azrieli Group Ltd", "Supergas Energy Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "MTR Company (Macau)", "ObjectEntities": ["MTR Corporation Limited"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Mluvii", "ObjectEntities": ["O2 Czech Republic"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Eurosoftware", "ObjectEntities": ["GK SOFTWARE AG"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "FATME", "ObjectEntities": ["Setemer Societ\u00e0 Elettro Telefonica Meridionale"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Eldorado", "ObjectEntities": ["Unilever"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Milford Haven Dock and Railway Company", "ObjectEntities": ["Thomas W. Ward Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CoinMarketCap", "ObjectEntities": ["Binance"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Black Label", "ObjectEntities": ["DC Comics"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Victory Games", "ObjectEntities": ["Avalon Hill"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TVN Warner Bros. Discovery", "ObjectEntities": ["Warner Bros. Discovery International"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pfizer en Suisse", "ObjectEntities": ["Pfizer"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Forssa-yhti\u00f6", "ObjectEntities": ["Finlayson"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tavex Oy", "ObjectEntities": ["Tavex Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q56524282", "ObjectEntities": ["Bollor\u00e9"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "VinFast", "ObjectEntities": ["Vingroup"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TYPO3 Company", "ObjectEntities": ["TYPO3 Association"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Men's Wearhouse", "ObjectEntities": ["Tailored Brands"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ABSA Group Limited", "ObjectEntities": ["Barclays"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Rakuten Mobile", "ObjectEntities": ["Rakuten"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Nickel Od\u00e9on Productions", "ObjectEntities": ["Nickelodeon"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Brodiaea Inc", "ObjectEntities": ["Harvard Management Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Transdev Finland", "ObjectEntities": ["Transdev Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "k kiosk", "ObjectEntities": ["Valora"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Energikundservice Sverige", "ObjectEntities": ["Fortum Sverige"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Vinhomes Joint Stock Company", "ObjectEntities": ["Vingroup"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Buzz Bingo", "ObjectEntities": ["Caledonia Investments"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Servelec", "ObjectEntities": ["The Access Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cadbury Nigeria Plc", "ObjectEntities": ["Mondelez International"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ASC Shipbuilding", "ObjectEntities": ["BAE Systems Australia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "McDonald's Philippines", "ObjectEntities": ["McDonald\u2019s", "Alliance Global Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q60841092", "ObjectEntities": ["La Fondiaria Assicurazioni"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q60841636", "ObjectEntities": ["La Fondiaria Assicurazioni"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Lloyd Italico", "ObjectEntities": ["Assicurazioni Generali"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q61116071", "ObjectEntities": ["Roshen"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bonbonetti Choco", "ObjectEntities": ["Roshen"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Petronas Dagangan", "ObjectEntities": ["Petronas"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q61125748", "ObjectEntities": ["Rami Levi Chain Stores Hashikma Marketing 2006 Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q61126345", "ObjectEntities": ["Elbit Systems Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SOU a SO\u0160 S\u010cMSD", "ObjectEntities": ["Svaz \u010desk\u00fdch a moravsk\u00fdch spot\u0159ebn\u00edch dru\u017estev"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Orano", "ObjectEntities": ["Government of France"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HansaMatrix Ventspils", "ObjectEntities": ["HansaMatrix"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HansaMatrix Innovation", "ObjectEntities": ["HansaMatrix"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HansaMatrix P\u0101rogre SIA", "ObjectEntities": ["HansaMatrix"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "EVgo", "ObjectEntities": ["NRG Energy"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Xfinity Mobile", "ObjectEntities": ["Xfinity"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "495 Productions", "ObjectEntities": ["RTL Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Vogue Pattern Company", "ObjectEntities": ["Butterick Publishing Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kay Jewelers", "ObjectEntities": ["Sterling Jewelers"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Boeing NeXt", "ObjectEntities": ["Boeing"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway Construction Corporation", "ObjectEntities": ["State-owned Assets Supervision and Administration Commission of the State Council"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SKAD", "ObjectEntities": ["Rusal"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Swiss Smile", "ObjectEntities": ["Jacobs Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Xiaomi Youpin", "ObjectEntities": ["Xiaomi"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Geek Toys", "ObjectEntities": ["Geek Pictures"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bell Hub", "ObjectEntities": ["Bell Resources"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bell Renewables", "ObjectEntities": ["Bell Resources"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bell Batteries", "ObjectEntities": ["Bell Resources"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Parler", "ObjectEntities": ["Starboard"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Setrag", "ObjectEntities": ["Compagnie mini\u00e8re de l'Ogoou\u00e9"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Heimanuta", "ObjectEntities": ["Jewish National Fund"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Moviefone", "ObjectEntities": ["AOL", "MoviePass"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "N.Y.D. Company", "ObjectEntities": ["New York Dock Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Dori Media", "ObjectEntities": ["Dori Media Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Old London Foods", "ObjectEntities": ["B&G Foods"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ontotext", "ObjectEntities": ["Sirma Group Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Oxford Bookstore", "ObjectEntities": ["Apeejay Surrendra Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pet, Inc.", "ObjectEntities": ["Pillsbury Company", "PepsiAmericas"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Peters Ice Cream", "ObjectEntities": ["Froneri"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Premium Wine Brands", "ObjectEntities": ["Pernod Ricard"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Puget Sound Agricultural Company", "ObjectEntities": ["Hudson's Bay Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Purity Distilling Company", "ObjectEntities": ["United States Industrial Alcohol"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "GlaxoSmithKline Biologicals", "ObjectEntities": ["GlaxoSmithKline"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Saipem Nigeria", "ObjectEntities": ["Saipem Nigeria"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q7406457", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SelectaVision", "ObjectEntities": ["RCA Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sirtris Pharmaceuticals", "ObjectEntities": ["GlaxoSmithKline"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Star Song Communications", "ObjectEntities": ["Disney Music Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sword and Sorcery Studios", "ObjectEntities": ["White Wolf Publishing"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Therm-a-Rest", "ObjectEntities": ["Cascade Designs"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "time:matters", "ObjectEntities": ["Lufthansa Cargo"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Titan Magazines", "ObjectEntities": ["Titan Publishing Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Warner Bros. Discovery Latin America", "ObjectEntities": ["Warner Bros. Discovery International"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Vision TV", "ObjectEntities": ["1+1 media"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Vino Volo", "ObjectEntities": ["Paradies Lagard\u00e8re"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Warner Bros. Pictures", "ObjectEntities": ["Warner Bros."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "William Underwood Company", "ObjectEntities": ["B&G Foods"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Workers Beer Company", "ObjectEntities": ["Battersea and Wandsworth Trades Union Council"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "\u00e2ge", "ObjectEntities": ["Avex Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway 12th Bureau Group Co., Ltd.", "ObjectEntities": ["China Railway Construction Corporation Limited"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Eletronorte", "ObjectEntities": ["Eletrobras"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ARRIVA vlaky", "ObjectEntities": ["Arriva Transport \u010cesk\u00e1 republika"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q10845994", "ObjectEntities": ["China Telecommunications Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Now News", "ObjectEntities": ["Now TV"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CTBC Securities", "ObjectEntities": ["CTBC Financial Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Railway \u00dcr\u00fcmqi Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cathay Securities Investment Trust", "ObjectEntities": ["Cathay Financial Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "FreshChoice", "ObjectEntities": ["Progressive Enterprises"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "United technologies electronic controls", "ObjectEntities": ["United Technologies Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "The Security Printing Corporation (Bangladesh) Ltd.", "ObjectEntities": ["Bangladesh Bank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kongsberg Oil & Gas Technologies", "ObjectEntities": ["Kongsberg Gruppen"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Chance", "ObjectEntities": ["Chance Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HPCC Systems", "ObjectEntities": ["LexisNexis"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Engie IT", "ObjectEntities": ["Engie"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Apeks", "ObjectEntities": ["Aqua Lung/La Spirotechnique"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Arriva UK Bus", "ObjectEntities": ["Arriva"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Oaks Hotels, Resorts & Suites", "ObjectEntities": ["Minor Hotels"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bai Brands", "ObjectEntities": ["The American Bottling Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "NYX Professional Makeup", "ObjectEntities": ["L\u2019Or\u00e9al"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Steel Wool Studios", "ObjectEntities": ["Pixar"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CDPQ Infra", "ObjectEntities": ["Caisse de d\u00e9p\u00f4t et placement du Qu\u00e9bec"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "BBC Studios", "ObjectEntities": ["BBC"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wink Bingo", "ObjectEntities": ["888 Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Equa bank", "ObjectEntities": ["Raiffeisenbank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Jinwen Railway Corporation", "ObjectEntities": ["Zhejiang Communications Investment Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Apollo Survey & Research", "ObjectEntities": ["Want Want China Times Media Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "AUTO.RIA", "ObjectEntities": ["Q64698538"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Platform Beer Company", "ObjectEntities": ["Anheuser-Busch InBev"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Port Harcourt Electricity Distribution Company", "ObjectEntities": ["Port Harcourt Electricity Distribution Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Department of Petroleum Resources", "ObjectEntities": ["Department of Petroleum Resources"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pixonic", "ObjectEntities": ["My.Games"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "The Walt Disney Company (China)", "ObjectEntities": ["The Walt Disney Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Iran Tractor Foundry Company", "ObjectEntities": ["Iran Tractor Manufacturing Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Luhansk Mint", "ObjectEntities": ["Q12118605"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kvartal", "ObjectEntities": ["Q30966105"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Snowcrest Israel", "ObjectEntities": ["Tnuva"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q25491358", "ObjectEntities": ["Knauf"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TMoment", "ObjectEntities": ["Tai Entertainment", "Mono Technology"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kostafilm", "ObjectEntities": ["Yellow, Black and White"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Fushun Special Steel", "ObjectEntities": ["Dongbei Special Steel"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Interamerican", "ObjectEntities": ["Achmea Bank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cineflex", "ObjectEntities": ["General Dynamics Mission Systems"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wuhan Iron and Steel (joint-stock)", "ObjectEntities": ["Baoshan Iron & Steel"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Meishan Iron and Steel", "ObjectEntities": ["Baoshan Iron & Steel"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Extreme Music", "ObjectEntities": ["Sony Music Publishing"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Seeker", "ObjectEntities": ["Group Nine Media"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ikeja Electric", "ObjectEntities": ["Ikeja Electric"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Claro Telecom Participa\u00e7\u00f5es S.A.", "ObjectEntities": ["Am\u00e9rica M\u00f3vil", "Claro"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Zip2", "ObjectEntities": ["Compaq"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "NBC Sports Group", "ObjectEntities": ["NBCUniversal Television and Streaming"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "AliMusic", "ObjectEntities": ["Alibaba Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "21Plus", "ObjectEntities": ["President Chain Store Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Providence Russe", "ObjectEntities": ["Forges de la Providence"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Moneta Stavebn\u00ed Spo\u0159itelna", "ObjectEntities": ["Moneta Money Bank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q28942370", "ObjectEntities": ["Sain (Records) Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "GE Power", "ObjectEntities": ["General Electric"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "\u010cS do domu", "ObjectEntities": ["\u010cesk\u00e1 spo\u0159itelna"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Factoring \u010cesk\u00e9 spo\u0159itelny", "ObjectEntities": ["\u010cesk\u00e1 spo\u0159itelna"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Realitn\u00ed spole\u010dnost \u010cesk\u00e9 spo\u0159itelny", "ObjectEntities": ["\u010cesk\u00e1 spo\u0159itelna"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ResMed (Australia)", "ObjectEntities": ["ResMed"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Yahoo Inc.", "ObjectEntities": ["Verizon", "Apollo Global Management"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Aeolus Tyre", "ObjectEntities": ["ChemChina"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Metabiota", "ObjectEntities": ["Metabiota (Cameroon)"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Jensen Hughes", "ObjectEntities": ["Gryphon Investors"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q30526669", "ObjectEntities": ["Unilever"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Scott Fetzer Company", "ObjectEntities": ["Berkshire Hathaway"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Mint Mobile", "ObjectEntities": ["Ultra Mobile"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Whistle", "ObjectEntities": ["Mars, Incorporated"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "American Eagle", "ObjectEntities": ["Federal Cartridge"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Xetron", "ObjectEntities": ["Northrop Grumman"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Manipal University Dubai", "ObjectEntities": ["Manipal University"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Revel Audio", "ObjectEntities": ["Harman International Industries"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tereos Participations", "ObjectEntities": ["Tereos"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CNIM Air Space", "ObjectEntities": ["Constructions industrielles de la M\u00e9diterran\u00e9e"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Mango Excellent Media Co., Ltd.", "ObjectEntities": ["Hunan Broadcasting System"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Taiwan Aircraft Maintenance and Engineering Company", "ObjectEntities": ["China Airlines", "China Airlines Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "VCNC", "ObjectEntities": ["Socar"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q65252532", "ObjectEntities": ["Israel Aerospace Industries Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Yi Fang Tea", "ObjectEntities": ["Q66196430"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Inter RAO - Electric Power Plants", "ObjectEntities": ["\u0418\u041d\u0422\u0415\u0420 \u0420\u0410\u041e \u0415\u042d\u0421"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q66287165", "ObjectEntities": ["Rosneftegaz"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Technicolor Delivery Technologies", "ObjectEntities": ["Technicolor SA"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "We Believe In God", "ObjectEntities": ["Onewayhope", "Victory Today", "Get Through The Week"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Nacon", "ObjectEntities": ["Nacon"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "PlayStation Productions", "ObjectEntities": ["Sony Interactive Entertainment"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Warner Bros. (F.E.) Inc., Taiwan Branch", "ObjectEntities": ["Warner Bros. Far East Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kabad Entertainment", "ObjectEntities": ["Kabad Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Dynasty Aerotech International Corp.", "ObjectEntities": ["China Airlines", "China Airlines Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Goldwind Australia", "ObjectEntities": ["Goldwind"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Dhudiya Pictures", "ObjectEntities": ["Dhudiya Entertainment"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q68167416", "ObjectEntities": ["National Service Products Organization"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Al Ahram Beverages Company", "ObjectEntities": ["Heineken"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q68284487", "ObjectEntities": ["Rafael Advanced Defense Systems"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Shaham Sources of Execution", "ObjectEntities": ["Mekorot Water Company Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Emerson Electric Nederland B.V.", "ObjectEntities": ["Emerson Electric"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Emtec Colleges Limited", "ObjectEntities": ["Nottingham College"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Heladhanavi Limited", "ObjectEntities": ["Hemas Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Midland Brick", "ObjectEntities": ["Boral"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "RATCH-Australia", "ObjectEntities": ["RATCH Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "GMM Nonstick Coatings", "ObjectEntities": ["Showa Denko"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Coney Island Brewing Co.", "ObjectEntities": ["Boston Beer Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Deloitte US", "ObjectEntities": ["Deloitte"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Deloitte & Touche LLP", "ObjectEntities": ["Deloitte"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Paramount Global", "ObjectEntities": ["National Amusements"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Viva Energy", "ObjectEntities": ["Vitol"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "StreamYard, Inc.", "ObjectEntities": ["Hopin Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Habana Labs", "ObjectEntities": ["Intel"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Motherhood Maternity", "ObjectEntities": ["Destination Maternity Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Taiping Insurance (HK) Company Limited", "ObjectEntities": ["China Taiping Insurance Holdings"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Thiess Pty Ltd", "ObjectEntities": ["CIMIC Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q83950904", "ObjectEntities": ["Soci\u00e9t\u00e9 G\u00e9n\u00e9rale"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Beijing Metro Operation Administration Corporation Limited", "ObjectEntities": ["Beijing Metro Construction Administration Corporation Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "WildBrain Spark", "ObjectEntities": ["WildBrain"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "31st Union", "ObjectEntities": ["2K Games"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CWB National Leasing", "ObjectEntities": ["Canadian Western Bank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bangladesh Gas Fields Company Limited", "ObjectEntities": ["Petrobangla"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Defence Industries Limited", "ObjectEntities": ["Canadian Industries Limited"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TUB Meuse Grand Sud", "ObjectEntities": ["Transdev"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Morphe", "ObjectEntities": ["General Atlantic"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "NM Money", "ObjectEntities": ["Notemachine"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "FlyLAL Charters Estonia", "ObjectEntities": ["Small Planet Airlines"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Uchi.ru", "ObjectEntities": ["VK"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Lun\u00e9o", "ObjectEntities": ["Transdev"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Packcity Japan", "ObjectEntities": ["Quadient"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Spreadtrum Communications, Inc.", "ObjectEntities": ["Tsinghua Unigroup"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "npm, Inc.", "ObjectEntities": ["GitHub Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q89278533", "ObjectEntities": ["Aberdeen Standard Investment"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "DurBel Music Publishing", "ObjectEntities": ["DurBel Music Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hashnet", "ObjectEntities": ["Asadal"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Puradelta Lestari", "ObjectEntities": ["Sinar Mas Land"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tuvunu", "ObjectEntities": ["Macedonian Thrace Brewery"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Taylors", "ObjectEntities": ["Countrywide"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bell Property Group", "ObjectEntities": ["Bell Resources"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hellenic Waste Recycling S.A.", "ObjectEntities": ["Kostoulas Recycling"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Gh Antaios S.A.", "ObjectEntities": ["Kostoulas Recycling"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Containers S.A.", "ObjectEntities": ["Kostoulas Recycling"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hellenic Recycling S.A.", "ObjectEntities": ["Kostoulas Recycling"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bangladesh Petroleum Exploration and Production Company Limited", "ObjectEntities": ["Petrobangla"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Edgenuity", "ObjectEntities": ["WELD"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hachette India", "ObjectEntities": ["Hachette"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "McDonald's Pakistan", "ObjectEntities": ["McDonald\u2019s"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Watercare Services", "ObjectEntities": ["Auckland Council"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Jio Platforms", "ObjectEntities": ["Reliance Industries Limited"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Stellantis France", "ObjectEntities": ["Stellantis"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Evergrande (marque)", "ObjectEntities": ["Evergrande Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "BAE Systems H\u00e4gglunds", "ObjectEntities": ["BAE Systems AB"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "BAE Systems Bofors", "ObjectEntities": ["BAE Systems AB"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bravo Savings Network", "ObjectEntities": ["BravoSconto.it", "BravoGutschein.de", "BravoPromo.fr", "BravoDescuento.es", "BravoKupony.pl", "BravoDeal.com", "BravoVoucher.co.uk"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "EY-Parthenon", "ObjectEntities": ["Ernst & Young"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wikimedia, LLC", "ObjectEntities": ["Wikimedia Foundation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Eagle Printing Ink Company", "ObjectEntities": ["Sun Chemical"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Oliver Footwear", "ObjectEntities": ["Honeywell (Australia)"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Compagnie du Congo pour le Commerce et l'Industrie", "ObjectEntities": ["Soci\u00e9t\u00e9 G\u00e9n\u00e9rale de Belgique"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "POCO", "ObjectEntities": ["Xiaomi"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "The PrEP Clinic", "ObjectEntities": ["Ontario Prevention Clinic"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Neenah Paper", "ObjectEntities": ["Neenah, Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Unulax Consulting", "ObjectEntities": ["Unulax"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Charlotte Tilbury Beauty", "ObjectEntities": ["Puig"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Funimation UK", "ObjectEntities": ["Funimation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sumo Group", "ObjectEntities": ["Tencent Games"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tesla Energy", "ObjectEntities": ["Tesla, Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q106879264", "ObjectEntities": ["STC Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Astex Pharmaceuticals", "ObjectEntities": ["Otsuka Pharmaceutical"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Chevron Lubricants Lanka", "ObjectEntities": ["Chevron Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Starschema", "ObjectEntities": ["HCL Enterprise", "HCL Technologies"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Voyah", "ObjectEntities": ["Dongfeng Motor Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hotcool Technology", "ObjectEntities": ["Rekoo"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ubisoft CRC", "ObjectEntities": ["Ubisoft"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q107303705", "ObjectEntities": ["Saudi Aramco"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "First Hungarian Type Foundry", "ObjectEntities": ["Stempel Type Foundry"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "United Biomedical, Inc., Asia", "ObjectEntities": ["United Biomedical Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Binari Sonori", "ObjectEntities": ["Keywords Studios"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bagley Argentina S.A.", "ObjectEntities": ["Danone", "Grupo Arcor"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cartocor", "ObjectEntities": ["Grupo Arcor"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Leighton Contractors (Asia) Limited", "ObjectEntities": ["Leighton Asia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sony Semiconductor Solutions Corporation", "ObjectEntities": ["Sony Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Leighton India Contractors Private Limited", "ObjectEntities": ["Leighton Asia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ExxonMobil Nigeria", "ObjectEntities": ["ExxonMobil Nigeria"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Freisinger Stadtwerke Wohnbau und Verwaltungs-GmbH", "ObjectEntities": ["Freisinger Stadtwerke"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Freisinger Stadtwerke Parkhaus und Verkehrs-GmbH", "ObjectEntities": ["Freisinger Stadtwerke"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Freisinger Stadtwerke Versorgungs-GmbH", "ObjectEntities": ["Freisinger Stadtwerke"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Freisinger Stadtwerke Forschungs- und Projekt-GmbH", "ObjectEntities": ["Freisinger Stadtwerke"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Freisinger Wohnbau GmbH & Co. Immobilien KG", "ObjectEntities": ["Freisinger Stadtwerke Wohnbau und Verwaltungs-GmbH"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Radyo Pilipino Corporation", "ObjectEntities": ["Radyo Pilipino Media Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Mystic89", "ObjectEntities": ["Mystic Story"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Newsounds Broadcasting Network, Inc.", "ObjectEntities": ["Bombo Radyo Philippines"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Volue", "ObjectEntities": ["Arendals Fossekompani"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kismet Acquisition Two Corp", "ObjectEntities": ["Kismet Capital Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kismet Acquisition One Corp", "ObjectEntities": ["Kismet Capital Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kismet Acquisition Three Corp", "ObjectEntities": ["Kismet Capital Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "LiveWire", "ObjectEntities": ["Harley-Davidson"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Culina Group", "ObjectEntities": ["Unternehmensgruppe Theo M\u00fcller S.e.c.s."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Adani Enterprises", "ObjectEntities": ["Adani Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Polsat Box", "ObjectEntities": ["Cyfrowy Polsat"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q107972860", "ObjectEntities": ["Brasseries et Glaci\u00e8res Internationales"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Media Prima Audio", "ObjectEntities": ["Media Prima"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Philippine Radio Corporation", "ObjectEntities": ["Radyo Pilipino Media Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Consolidated Broadcasting System Inc.", "ObjectEntities": ["Bombo Radyo Philippines"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Beacon Communications Systems, Inc.", "ObjectEntities": ["Radyo Pilipino Media Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Scandalli Brasil", "ObjectEntities": ["Scandalli"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "City Center Parking", "ObjectEntities": ["Impark"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "NBRHD Kitchens", "ObjectEntities": ["Reef Technology"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bright Now! Dental", "ObjectEntities": ["Smile Brands"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Monarch Dental", "ObjectEntities": ["Smile Brands"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Castle Dental", "ObjectEntities": ["Smile Brands"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Midwest Dental", "ObjectEntities": ["Smile Brands"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Merit Dental", "ObjectEntities": ["Smile Brands"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Mondovi Dental", "ObjectEntities": ["Smile Brands"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Gentle Dental", "ObjectEntities": ["InterDent"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SmileKeepers", "ObjectEntities": ["InterDent"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Blue Oak Dental", "ObjectEntities": ["InterDent"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Mishorim Development", "ObjectEntities": ["Midland Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Jockey Club Racecourses", "ObjectEntities": ["Jockey Club"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Klinikum Westbrandenburg GmbH", "ObjectEntities": ["Klinikum Ernst von Bergmann"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Crophle", "ObjectEntities": ["Apex Infosys India"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Architecture and Building Press", "ObjectEntities": ["Ministry of Housing and Urban-Rural Development of the People's Republic of China"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q97530943", "ObjectEntities": ["The Utusan Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "RMIT Training", "ObjectEntities": ["RMIT University"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wirecard Bank AG", "ObjectEntities": ["Wirecard"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Wirecard Card Solutions Ltd", "ObjectEntities": ["Wirecard"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CardSystems Middle East", "ObjectEntities": ["Wirecard"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q98521615", "ObjectEntities": ["AngloGold Ashanti"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Visible", "ObjectEntities": ["Verizon"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HiPhi", "ObjectEntities": ["Human Horizons"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Exyte", "ObjectEntities": ["M+W"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Evolveo", "ObjectEntities": ["Abacus Electric"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bonnier Books UK", "ObjectEntities": ["Q10432918"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q103959797", "ObjectEntities": ["Aker Solutions", "Tampella Power"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ternian Insurance Group LLC", "ObjectEntities": ["AXIS Capital"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Palestine Telecommunications Company", "ObjectEntities": ["Paltel Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Guangdong Intercity Railway Operation Co., Ltd.", "ObjectEntities": ["Guangzhou Metro Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ramot Tel Aviv University", "ObjectEntities": ["Tel Aviv University"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Square Eats", "ObjectEntities": ["Verbosec"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Abr Arvan", "ObjectEntities": ["Fanup"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Waterloo Junction Railway", "ObjectEntities": ["Grand Trunk Railway"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Citro\u00ebn India", "ObjectEntities": ["Stellantis"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Levdeo", "ObjectEntities": ["Yema Auto"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tom Ford", "ObjectEntities": ["Est\u00e9e Lauder Companies"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Prodways Group", "ObjectEntities": ["Q3117424"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Epic Energy", "ObjectEntities": ["Queensland Investment Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "THY Opet Havacilik Yakitlari A.S.", "ObjectEntities": ["Turkish Airlines", "OPET"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q105620070", "ObjectEntities": ["Air Canada"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TGS Yer Hizmetleri", "ObjectEntities": ["Turkish Airlines"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TURKISH DO&CO", "ObjectEntities": ["Turkish Airlines"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Turkish Airlines Inc., Japan Branch", "ObjectEntities": ["Turkish Airlines"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Turkish Opet Aviation Fuels Co", "ObjectEntities": ["Turkish Airlines"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Dhaka Mass Transit Company Limited", "ObjectEntities": ["Road Transport and Highways Division"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Unulax Finance", "ObjectEntities": ["Unulax"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Appetite by Random House", "ObjectEntities": ["Random House of Canada"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Nickelodeon Networks", "ObjectEntities": ["Paramount Media Networks"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sendwave", "ObjectEntities": ["WorldRemit"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Vincere", "ObjectEntities": ["The Access Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Searchlight Television", "ObjectEntities": ["Searchlight Pictures"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ITD Vietnam", "ObjectEntities": ["ITD World"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Shanghai ZOZO Co., Ltd.", "ObjectEntities": ["ZOZO"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "T&R Productions, LLC", "ObjectEntities": ["RIA Novosti"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "UNFT News", "ObjectEntities": ["4NFT Media"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Radiant Solutions", "ObjectEntities": ["Maxar Technologies"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Shueisha Games", "ObjectEntities": ["Shueisha"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Mercury", "ObjectEntities": ["Sproot"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Flora", "ObjectEntities": ["Sproot"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "EasyCinema", "ObjectEntities": ["easyGroup"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Midland Credit Management, Inc.", "ObjectEntities": ["Encore Capital Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Kyoto Research Park", "ObjectEntities": ["Q107411720"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Leonardo DRS", "ObjectEntities": ["Leonardo"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HAY", "ObjectEntities": ["Herman Miller"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Atlas Literary", "ObjectEntities": ["Atlas Entertainment"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Brainy Bunch", "ObjectEntities": ["Malakat Eco Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Skeb Inc.", "ObjectEntities": ["Skeb Ventures, Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "YouTube", "ObjectEntities": ["Google"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "African Urban Associates", "ObjectEntities": ["African Urban Institute"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "T Media Tech LLC", "ObjectEntities": ["Trump Media & Technology Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "PTS Bookcafe Sdn. Bhd.", "ObjectEntities": ["PTS Media Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "New Chapter", "ObjectEntities": ["Procter & Gamble"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Egyptian General for Tourism and Hotels", "ObjectEntities": ["Q20419516"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "BOOKS FUTURE", "ObjectEntities": ["IRH Press"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Setel Ventures", "ObjectEntities": ["Petronas Dagangan"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Setel Express", "ObjectEntities": ["Petronas Dagangan"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Warner Bros. Discovery India", "ObjectEntities": ["Warner Bros. Discovery Asia-Pacific"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Malakat Food", "ObjectEntities": ["Malakat Eco Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Proletariat", "ObjectEntities": ["Blizzard Entertainment"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Backlinko LLC", "ObjectEntities": ["Semrush"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Fordyce Lumber Company", "ObjectEntities": ["Crossett-Watzek-Gates"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Harris Computer Systems", "ObjectEntities": ["Concurrent Computer Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Nintendo Pictures", "ObjectEntities": ["Nintendo"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Zero Hail Deductible", "ObjectEntities": ["Hail Industries LLC"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Finsbury Glover Hering", "ObjectEntities": ["WPP plc"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Apple Studios", "ObjectEntities": ["Apple"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Disney General Entertainment Content", "ObjectEntities": ["The Walt Disney Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "MxV Rail", "ObjectEntities": ["Association of American Railroads"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Edmond de Rothschild Heritage", "ObjectEntities": ["Edmond de Rothschild Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "XOM Materials", "ObjectEntities": ["Kl\u00f6ckner & Co SE"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Hankyu Hanshin Department Stores, Inc.", "ObjectEntities": ["H2O Retailing"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "H\u01b0ng Th\u1ecbnh Land", "ObjectEntities": ["H\u01b0ng Th\u1ecbnh"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cogeco Media", "ObjectEntities": ["Cogeco"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TuneCore Japan", "ObjectEntities": ["TuneCore", "Wano"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Banc Cambria", "ObjectEntities": ["Monmouthshire Building Society"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Maranon Capital", "ObjectEntities": ["Eldridge"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Urban Road Transport SA", "ObjectEntities": ["Transport for Athens"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Migu", "ObjectEntities": ["China Mobile"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Guangzhou Tram Co., Ltd.", "ObjectEntities": ["Guangzhou Metro Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "PayPay Asset Management", "ObjectEntities": ["Z Financial Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pineapple Street Studios", "ObjectEntities": ["Audacy, Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Illuminarium Atlanta", "ObjectEntities": ["Illuminarium Experiences"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Syria Stream", "ObjectEntities": ["Syria TV"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Canon Computer Systems", "ObjectEntities": ["Canon Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Shriram Properties", "ObjectEntities": ["Shriram Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Adani Wilmar", "ObjectEntities": ["Wilmar International", "Adani Enterprises"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ICICIdirect", "ObjectEntities": ["ICICI Bank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Incepta Vaccine Limited", "ObjectEntities": ["Incepta Pharmaceuticals"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Malakat Mall", "ObjectEntities": ["Malakat Eco Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Streamable Inc.", "ObjectEntities": ["Hopin Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Attendify", "ObjectEntities": ["Hopin Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "LocalTak", "ObjectEntities": ["ASHAS"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Quearn", "ObjectEntities": ["ASHAS"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Sibyl", "ObjectEntities": ["Epik"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Praktiker", "ObjectEntities": ["Praktiker", "Technopolis"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "General Re Corporation", "ObjectEntities": ["Berkshire Hathaway"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "General Reinsurance Corporation", "ObjectEntities": ["General Re Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "General Reinsurance AG", "ObjectEntities": ["General Re Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Great Lakes Fleet", "ObjectEntities": ["Canadian National Railway"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Aramco Chemicals Company", "ObjectEntities": ["Saudi Aramco"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "MaiaSpace", "ObjectEntities": ["ArianeGroup"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "AMBUSH", "ObjectEntities": ["New Guards Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Asahi Holdings (Australia) Pty Ltd", "ObjectEntities": ["Asahi Breweries"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "MGI", "ObjectEntities": ["BGI Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China CICC Wealth Management Securities Company Limited", "ObjectEntities": ["China International Capital Corp"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Oncoatlas", "ObjectEntities": ["Atlas Biomed"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Change of Scandinavia", "ObjectEntities": ["Asian Import"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q119380926", "ObjectEntities": ["Nintendo"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Buka Mitra Indonesia", "ObjectEntities": ["Bukalapak"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Buka Pengadaan Indonesia", "ObjectEntities": ["Bukalapak"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Buka Investasi Bersama", "ObjectEntities": ["Bukalapak"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Five Jack", "ObjectEntities": ["Bukalapak"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Subic EnerZone Corporation", "ObjectEntities": ["Aboitiz Power"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Clark Electric Distribution Company", "ObjectEntities": ["Meralco"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q119880173", "ObjectEntities": ["Fleishman-Hillard"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Pick Network", "ObjectEntities": ["Infocomm Media Development Authority of Singapore"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TUI Nederland", "ObjectEntities": ["TUI Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "RBC Ventures Inc.", "ObjectEntities": ["Royal Bank of Canada"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q120497859", "ObjectEntities": ["Azerbaijan Investment Holding"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Allvest GmbH", "ObjectEntities": ["Allianz SE"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Frauscher Sensor Technology India", "ObjectEntities": ["Frauscher Sensor Technology"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "DONGKUK STEEL GROUP", "ObjectEntities": ["Dongkuk Steel"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "MoneyMan", "ObjectEntities": ["ID Finance"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Millet Mountain Group", "ObjectEntities": ["Lafuma Groupe"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cosmos Hotel Management", "ObjectEntities": ["Daiwa House Industry"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Nexon Games Co., Ltd.", "ObjectEntities": ["NEXON Korea"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "The Qt Company Oy", "ObjectEntities": ["Qt Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "The Qt Company", "ObjectEntities": ["Qt Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Union Electric Power Company", "ObjectEntities": ["North American Company", "Ameren Missouri"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ashmore Investment Management Limited", "ObjectEntities": ["Ashmore Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Abena AB", "ObjectEntities": ["Abena"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "China Life Insurance (Overseas)", "ObjectEntities": ["China Life Insurance Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Match Group", "ObjectEntities": ["Match Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "MyCIA", "ObjectEntities": ["Healthyfood srl"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Ipex Pipelines Australia", "ObjectEntities": ["Fletcher Building"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Coop Invest A/S", "ObjectEntities": ["Coop amba"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Natu.Care", "ObjectEntities": ["MoreGrowth"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "LifeAndMyFinances", "ObjectEntities": ["MoreGrowth"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q119132733", "ObjectEntities": ["IJM Corporation Berhad"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Avant Money", "ObjectEntities": ["Bankinter"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "livedoor", "ObjectEntities": ["Minkabu The Infonoid, Inc."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113537070", "ObjectEntities": ["Malaysian Prime Minister's Department", "Q113537149"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113537149", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113537154", "ObjectEntities": ["Companies Commission of Malaysia", "Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113537163", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113537166", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113537168", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113537171", "ObjectEntities": ["Prime Minister's Office of Malaysia"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Tugikuru", "ObjectEntities": ["SB Creative"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113669482", "ObjectEntities": ["Q113669619"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113669619", "ObjectEntities": ["Minister of Finance Incorporated"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113882824", "ObjectEntities": ["Q59050165"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Armonia Italy Fund", "ObjectEntities": ["Arm\u00f2nia SGR"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Poggemeyer Design Group", "ObjectEntities": ["Kleinfelder"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Vitosha Wine", "ObjectEntities": ["Umesh Prasad Holding EOOD"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Siam Bioscience", "ObjectEntities": ["Crown Property Bureau"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q114390566", "ObjectEntities": ["Public Investment Fund"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Energetics", "ObjectEntities": ["VSE Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "National Starch", "ObjectEntities": ["Ingredion"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Columbus Life insurance Company", "ObjectEntities": ["Western & Southern Financial Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "The Western & Southern Life Insurance Company", "ObjectEntities": ["Western & Southern Financial Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "The Lafayette Life Insurance Company", "ObjectEntities": ["Western & Southern Financial Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Touchstone Investments", "ObjectEntities": ["Western & Southern Financial Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Eagle Realty Group, LLC", "ObjectEntities": ["Western & Southern Financial Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Fort Washington Investment Advisors, Inc.", "ObjectEntities": ["Western & Southern Financial Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Duferco Travi e Profilati", "ObjectEntities": ["Duferco"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "John Lane Company", "ObjectEntities": ["The Bodley Head"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "W&S Financial Group Distributors, Inc.", "ObjectEntities": ["Western & Southern Financial Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "FactSquared", "ObjectEntities": ["FiscalNote"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Esfahan Province Electricity Distribution Company", "ObjectEntities": ["TAVANIR"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Reitan Retail", "ObjectEntities": ["Reitan AS"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q115322562", "ObjectEntities": ["Delta Motor Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Almacenes \u00c9xito", "ObjectEntities": ["Grupo \u00c9xito"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "iBoysoft", "ObjectEntities": ["Chengdu Aibo Tech Co., Ltd."], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Shwapno", "ObjectEntities": ["Advanced Chemical Industries"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Central Maine Power Company", "ObjectEntities": ["Avangrid"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Genesis", "ObjectEntities": ["Digital Currency Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Elexon", "ObjectEntities": ["National Grid ESO"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "CBS Entertainment Group", "ObjectEntities": ["Paramount Global"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "SP Manweb Plc", "ObjectEntities": ["SP Energy Networks"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "LP Gas Limited", "ObjectEntities": ["Bangladesh Petroleum Corporation"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "COGNOSPHERE", "ObjectEntities": ["miHoYo"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Puget Sound News Co.", "ObjectEntities": ["American News Company"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Solution F", "ObjectEntities": ["Green Corp Konnection"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Foundry", "ObjectEntities": ["Digital Currency Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TradeBlock", "ObjectEntities": ["CoinDesk"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "HQ", "ObjectEntities": ["Digital Currency Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ATFX Connect", "ObjectEntities": ["ATFX", "AT Global Markets"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Payperse", "ObjectEntities": ["fleksa"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q116724819", "ObjectEntities": ["Mitsui & Co."], "Relation": "CompanyHasParentOrganisation"}

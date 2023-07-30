@@ -54,3 +54,90 @@ check_dir_list = [
 for d in check_dir_list:
     if not os.path.exists(d):
         os.mkdir(d)
+
+relation_entity_type_dict =  {
+            "CompanyHasParentOrganisation": [
+                "Company",
+                "Company"
+            ],
+            "CountryBordersCountry": [
+                "Country",
+                "Country"
+            ],
+            "CountryHasOfficialLanguage": [
+                "Country",
+                "Language"
+            ],
+            "PersonHasNumberOfChildren": [
+                "Person",
+                "Number"
+            ],
+            "PersonHasPlaceOfDeath": [
+                "Person",
+                "City"
+            ],
+            "PersonHasProfession": [
+                "Person",
+                "Profession"
+            ],
+            "PersonPlaysInstrument": [
+                "Person",
+                "Instrument"
+            ],
+            "PersonSpeaksLanguage": [
+                "Person",
+                "Language"
+            ],
+            "RiverBasinsCountry": [
+                "River",
+                "Country"
+            ],
+            "SeriesHasNumberOfEpisodes": [
+                "Series",
+                "Number"
+            ],
+            "StateBordersState": [
+                "State",
+                "State"
+            ],
+            "BandHasMember": [
+                "Band",
+                "Person"
+            ],
+            "CityLocatedAtRiver": [
+                "City",
+                "River"
+            ],
+            "FootballerPlaysPosition": [
+                "Person",
+                "Position"
+            ],
+            "PersonCauseOfDeath": [
+                "Person",
+                "Cause"
+            ],
+            "PersonHasAutobiography": [
+                "Person",
+                "Autobiography"
+            ],
+            "PersonHasEmployer": [
+                "Person",
+                "Company"
+            ],
+            "PersonHasNoblePrize": [
+                "Person",
+                "Prize"
+            ],
+            "PersonHasSpouse": [
+                "Person",
+                "Person"
+            ],
+            "CountryHasStates": [
+                "Country",
+                "State"
+            ],
+            "CompoundHasParts": [
+                "Compound",
+                "Part"
+            ]
+            }

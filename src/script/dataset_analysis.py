@@ -8,6 +8,7 @@ print("parent path ", parent_dir)
 print('cwd path', os.getcwd())
 sys.path.append(parent_dir)
 
+from glob import glob
 
 import config
 import util
@@ -19,12 +20,20 @@ with open(f'{config.RES_DIR}/tokenizer/bert/added_tokens.json') as f:
 
 train_line = util.file_read_json_line(config.TRAIN_FN)
 val_line = util.file_read_json_line(config.VAL_FN)
-all_line = train_line + val_line
+all_gold_lines = train_line + val_line
+
+origin_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
+
+
+def refresh_tokenizer(entity_set:set):
+    origin_tokenizer.add_tokens(list(entity_set))
+    origin_tokenizer.save_pretrained(config.TOKENIZER_PATH)
+
 
 
 def count_object():
     null_count = 0
-    for line in all_line:
+    for line in all_gold_lines:
         obj_list = line[config.KEY_OBJS]
         if len(obj_list) == 0:
             null_count += 1
@@ -33,7 +42,7 @@ def count_object():
 
 def count_emapt():
     empty_count = 0
-    for line in all_line:
+    for line in all_gold_lines:
         obj_list = line[config.KEY_OBJS]
         for obj in obj_list:
             if obj == config.EMPTY_TOKEN:
@@ -43,7 +52,7 @@ def count_emapt():
 
 def count_emapt_and_other():
     empty_count = 0
-    for line in all_line:
+    for line in all_gold_lines:
         obj_list = line[config.KEY_OBJS]
         if '' in obj_list and len(obj_list) > 1:
             empty_count += 1
@@ -54,7 +63,7 @@ def get_all_entity(fn = None):
     if fn is not None:
         lines = util.file_read_json_line(fn)
     else:
-        lines = all_line
+        lines = all_gold_lines
     entity_set = set()
     for row in lines:
         object_entities = row['ObjectEntities']
@@ -82,10 +91,348 @@ def negave_vocabulary():
     with open(entity_fn,'w') as f:
         json.dump(list(false_entity),f)
 
+def print_relation_dict():
+    relation_dict=dict()
+    for line in all_gold_lines:
+        relation = line[config.KEY_REL]
+        if relation not in relation_dict:
+            relation_dict[relation] =["person","person"]
+        if len(relation_dict) ==21:
+            print(json.dumps(relation_dict,indent =4))
+            break
+
+def is_wiki_id(aStr:str):
+    return  (aStr.startswith('Q') and str.isdigit(aStr[1:]))
+
+
+def collect_entity_pretrain():
+    # exclude_entities = {}
+    # exclude_entities = {"Person"}
+    sub_type ={s for s,_ in  config.relation_entity_type_dict.values()}
+    obj_type ={o for s, o in  config.relation_entity_type_dict.values()}
+    # s_type = sub_type - obj_type
+    # exclude_entities = exclude_entities | s_type
+    # exclude_entities = {'Series', 'Compound', 'Band', 'Person'}
+    exclude_entities = {'Compound', 'Band', 'Person'}
+    print("exclude_entities",exclude_entities)
+    exclude_subject={"RiverBasinsCountry"}
+    give_up_relation = {"SeriesHasNumberOfEpisodes" }
+    silver_lines = []
+    file_name_list = glob(f'{config.RES_DIR}/silver/*.jsonl', recursive=True)
+    print("file_name_list", len(file_name_list))
+    for filename in file_name_list:
+        with open(filename) as f:
+            lines = util.file_read_json_line(filename)
+            silver_lines.extend(lines)
+    gold_dict, gold_entity_sentence = count_entity_distribution(all_gold_lines,
+                                          exclude_entities=exclude_entities,
+                                          merge_subject=True
+                                          )
+    siler_dict,silver_entity_sentence = count_entity_distribution(silver_lines,
+                                           exclude_entities = exclude_entities,
+                                            merge_subject=True,
+                                            exclude_subject=exclude_subject,
+                                            give_up_relation=give_up_relation
+                                            )
+
+    for k, v in siler_dict.items():
+        siler_dict[k] =set(filter(lambda x: not is_wiki_id(x), v) )
+    if 'Number' in siler_dict:
+        siler_dict['Number'] = set(filter(lambda x: str.isdigit(x), siler_dict['Number']))
+    # print(siler_dict['River'])
+    result_dict=dict()
+    for k in gold_dict.keys():
+        if k in siler_dict:
+            result_dict[k] = gold_dict[k] | siler_dict[k]
+        else:
+            result_dict[k] = gold_dict[k]
+
+    entity_type_dict = dict()
+    for k, v in result_dict.items():
+        for vi in v:
+            entity_type_dict[vi] = k
+    
+    entity_set = set.union(* [set(e) for e in result_dict.values()])
+    entity_remove = set()
+    for e in entity_set:
+            for m in entity_set:
+                if e == m:
+                    continue
+                if e in m.split() and entity_type_dict[e] == entity_type_dict[m]:
+                    # print(e," , ",m, " , " ,entity_type_dict[e])
+                    entity_remove.add(m)
+
+    entity_set -= entity_remove
+    for k, v in result_dict.items():
+        v-=entity_remove
+    entity_sentence = gold_entity_sentence|silver_entity_sentence
+    less_type=set()
+    for e in entity_remove:
+        if len(e) > 10:
+            print(e, entity_type_dict[e])
+    # for e in entity_set:
+    #     if len(e) < 5:
+    #         less_type.add(entity_type_dict[e])
+    #         print(e, entity_type_dict[e])
+    #         print(entity_sentence[e])
+    #         print()
+    print(less_type)
+    print(result_dict.keys() - less_type)
+    # display_entity_dict(gold_dict,remove_tokenizer=True)
+    # display_entity_dict(result_dict,remove_tokenizer=True)
+    display_entity_dict(result_dict)
+    # count_entity_distribution(all_lines)
+
+
+
+    entity_fp = f'{config.RES_DIR}/entity_for_pretrain.json'
+    for k, v in result_dict.items():
+        result_dict[k] = list(v)
+    with open(entity_fp, mode='w') as f:
+        json.dump(result_dict,f,indent=2,sort_keys=True)
+
+
+    # refresh_tokenizer(entity_set)
+
+
+
+def merge_dict(dict_list):
+    result_dict=dict()
+    for aDict in dict_list:
+        for k in aDict.keys():
+            if k in result_dict:
+                result_dict[k] = set(aDict[k]) |set(result_dict[k])
+            else:
+                result_dict[k] = aDict[k]
+    return result_dict
+        
+
+def display_entity_contains(gold_dict, siler_dict,entity_type_dict):
+
+    entity_type_gold_dict = dict()
+    for k, v in gold_dict.items():
+        for vi in v:
+            entity_type_gold_dict[vi] = k
+    entity_type_silver_dict = dict()
+    for k, v in siler_dict.items():
+        for vi in v:
+            entity_type_silver_dict[vi] = k
+    source_dict= dict()
+    
+    for k, v in entity_type_dict.items():
+        source_dict[k] = ''
+        if k in entity_type_gold_dict:
+            source_dict[k] += " gold "
+        if k in entity_type_silver_dict:
+            source_dict[k] += " silver "
+
+    entity_remove = set()
+    short_count_dict=dict()
+    long_count_dict = dict()
+    for e in entity_type_dict.keys():
+            for m in entity_type_dict.keys():
+                if e == m:
+                    continue
+                if e in m.split() and entity_type_dict[e] == entity_type_dict[m]:
+                    # print(e, " , ",source_dict[e], " , ", m, " , " ,entity_type_dict[e], " , ", source_dict[m])
+                    if source_dict[e] not in short_count_dict:
+                        short_count_dict[source_dict[e]] =1
+                    else:
+                        short_count_dict[source_dict[e]]+=1
+
+                    if source_dict[m] not in long_count_dict:
+                        long_count_dict[source_dict[m]] =1
+                    else:
+                        long_count_dict[source_dict[m]] +=1
+    print("short_count_dict", short_count_dict)
+    print("long_count_dict", long_count_dict)
+
+
+def get_silver_lines():
+    silver_lines=[]
+    file_name_list = glob(f'{config.RES_DIR}/silver/*.jsonl', recursive=True)
+    print("file_name_list", len(file_name_list))
+    for filename in file_name_list:
+        with open(filename) as f:
+            lines = util.file_read_json_line(filename)
+            silver_lines.extend(lines)
+    return silver_lines
+
+def collect_entity_for_tokenizer():
+    exclude_entities = {"Person"}
+    sub_type ={s for s,_ in  config.relation_entity_type_dict.values()}
+    obj_type ={o for s, o in  config.relation_entity_type_dict.values()}
+    sub_only_type = sub_type - obj_type
+    silver_lines = get_silver_lines()
+
+    gold_dict, gold_entity_sentence = count_entity_distribution(all_gold_lines,
+                                        #   exclude_entities=exclude_entities,
+                                          merge_subject=True
+                                          )
+    siler_dict,silver_entity_sentence = count_entity_distribution(silver_lines,
+                                        #    exclude_entities = exclude_entities,
+                                            merge_subject=False,
+                                            # exclude_subject=exclude_subject,
+                                            # give_up_relation=give_up_relation
+                                            )
+    result_dict=merge_dict([gold_dict,siler_dict])
+    for sub in sub_only_type:
+        del result_dict[sub]
+    print(sub_only_type)
+    display_entity_dict(result_dict)
+    entity_fp = f'{config.RES_DIR}/entity_for_tokenizer.json'
+    for k, v in result_dict.items():
+        result_dict[k] = list(v)
+    with open(entity_fp, mode='w') as f:
+        json.dump(result_dict,f,indent=2,sort_keys=True)
+    entity_set = set.union(* [set(e) for e in result_dict.values()])
+    refresh_tokenizer(entity_set)
+
+def collect_entity_for_pretrain():
+    exclude_entities = {}
+    exclude_entities = {"Person"}
+    sub_type ={s for s,_ in  config.relation_entity_type_dict.values()}
+    obj_type ={o for s, o in  config.relation_entity_type_dict.values()}
+    sub_only_type = sub_type - obj_type
+    # exclude_entities = exclude_entities | s_type
+    # exclude_entities = {'Series', 'Compound', 'Band', 'Person'}
+    # exclude_entities = {'Person'}
+    print("exclude_entities",exclude_entities)
+    exclude_subject={"RiverBasinsCountry"}
+    give_up_relation = {"SeriesHasNumberOfEpisodes" }
+    silver_lines = []
+    file_name_list = glob(f'{config.RES_DIR}/silver/*.jsonl', recursive=True)
+    print("file_name_list", len(file_name_list))
+    for filename in file_name_list:
+        with open(filename) as f:
+            lines = util.file_read_json_line(filename)
+            silver_lines.extend(lines)
+    gold_dict, gold_entity_sentence = count_entity_distribution(all_gold_lines,
+                                          exclude_entities=exclude_entities,
+                                          merge_subject=True
+                                          )
+    siler_dict,silver_entity_sentence = count_entity_distribution(silver_lines,
+                                           exclude_entities = exclude_entities,
+                                            merge_subject=True,
+                                            # exclude_subject=exclude_subject,
+                                            # give_up_relation=give_up_relation
+                                            )
+    
+    result_dict=merge_dict([gold_dict,siler_dict])
+
+    # entity_type_dict = dict()
+    # for k, v in result_dict.items():
+    #     for vi in v:
+    #         entity_type_dict[vi] = k
+
+    # display_entity_contains(gold_dict,siler_dict,entity_type_dict)
+    # entity_set = set.union(* [set(e) for e in result_dict.values()])
+
+    # entity_sentence = gold_entity_sentence|silver_entity_sentence
+    # less_type=set()
+    # for e in entity_remove:
+    #     if len(e) > 10:
+    #         print(e, entity_type_dict[e])
+    # for e in entity_set:
+    #     if len(e) < 5:
+    #         less_type.add(entity_type_dict[e])
+    #         print(e, entity_type_dict[e])
+    #         print(entity_sentence[e])
+    #         print()
+    # print(less_type)
+    # print(result_dict.keys() - less_type)
+    # display_entity_dict(gold_dict,remove_tokenizer=True)
+    # display_entity_dict(result_dict,remove_tokenizer=True)
+    display_entity_dict(result_dict)
+    # count_entity_distribution(all_lines)
+    entity_fp = f'{config.RES_DIR}/entity_for_pretrain.json'
+    for k, v in result_dict.items():
+        result_dict[k] = list(v)
+    with open(entity_fp, mode='w') as f:
+        json.dump(result_dict,f,indent=2,sort_keys=True)
+
+    
+    
+ 
+
+
+def display_entity_dict(entity_dict):
+    all_size=0  
+    for k,v in entity_dict.items():
+ 
+        print(f"{k}   {len(v)}")
+        all_size+=len(v)
+ 
+    print("entity size is ",all_size)
+    print()
+
+def count_entity_distribution(all_lines,
+                              exclude_entities={},
+                              remove_tokenizer=True,
+                              merge_subject = False,
+                              exclude_subject={},
+                              give_up_relation={}
+                              ):
+    entity_dict =dict()
+    entity_sentence = dict()
+    for line in all_lines:
+        relation = line[config.KEY_REL]
+        if relation in give_up_relation:
+            # print(relation)
+            continue
+    
+        objs = line[config.KEY_OBJS]
+        sub = line[config.KEY_SUB]
+        sub_type, obj_type = config.relation_entity_type_dict[relation]
+        if merge_subject and relation not in exclude_subject:
+            # print(relation, exclude_subject)
+            if sub_type not in exclude_entities:
+                if sub_type not in  entity_dict:
+                    entity_dict[sub_type] = set()
+                entity_dict[sub_type].add(sub)
+                entity_sentence[sub] = line
+
+        if obj_type not in exclude_entities:
+            if obj_type not in  entity_dict:
+                entity_dict[obj_type] = set()         
+            entity_dict[obj_type].update(objs)
+            for obj in objs:
+                entity_sentence[obj] = line
+        # if 'Number' in entity_dict:
+        #     entity_dict['Number'] = set(filter(lambda x: str.isdigit(x), entity_dict['Number']))
+        # for k, v in entity_dict.items():
+        #     entity_dict[k] =set(filter(lambda x: not is_wiki_id(x), v) )
+
+    if remove_tokenizer:
+        for k,v in entity_dict.items():
+            entity_dict[k]-= origin_tokenizer.vocab.keys()
+            if '' in entity_dict[k]:
+                entity_dict[k].remove('')
+            
+            # entity_set = set()
+            # for entity in entity_dict[k]:
+            #     if r'\u' in entity:
+            #         entity = entity.replace(r'\u',r'\\u')
+            #         entity  = entity.encode('utf8').decode('unicode-escape')  
+            #     entity_set.add(entity)
+            # entity_dict[k] = entity_set
+        entity_remove = set()
+
+    # for e in entity_set:
+    #         for m in entity_set:
+    #             if e == m:
+    #                 continue
+    #             if e in m.split() and entity_type_dict[e] == entity_type_dict[m]:
+    #                 # print(e," , ",m, " , " ,entity_type_dict[e])
+    #                 entity_remove.add(m)
+
+    # entity_set -= entity_remove
+    # for k, v in result_dict.items():
+    #     v-=entity_remove
+
+    return entity_dict,entity_sentence
 
 
 if __name__ == "__main__":
-    # count_object()
-    # count_emapt_and_other()
-    # collect_entity()
-    negave_vocabulary()
+    collect_entity_for_pretrain()
+    # collect_entity_for_tokenizer()

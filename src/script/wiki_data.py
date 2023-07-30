@@ -1,6 +1,3 @@
-
-
-
 import csv
 import json
 import os
@@ -13,7 +10,7 @@ from tqdm import tqdm
 import transformers
 import wikipedia
 import glob
-
+import re
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), 'src'))
 print("parent path ", parent_dir)
 print('cwd path', os.getcwd())
@@ -27,320 +24,59 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 from datasets import load_dataset,DatasetDict,Dataset,arrow_dataset
+import datasets
+entity_for_pretrain_fp = f'{config.RES_DIR}/entity_for_pretrain.json'
 
-token_path = f"{config.RES_DIR}/tokenizer/bert"
-tokenizer = transformers.AutoTokenizer.from_pretrained(token_path)
-
-MAX_LENGTH = 500
-MIN_LENGTH = 10
-
+enhance_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
 from ahocorapy.keywordtree import KeywordTree
 
-kwtree = KeywordTree()
 
-manager = Manager()
-mp_entity_dict = manager.dict()
-with open(f'{config.RES_DIR}/tokenizer/bert/added_tokens.json') as f:
+
+with open(entity_for_pretrain_fp) as f:
     entity_dic_jt = json.load(f)
-entity_dict = dict()
-entity_set_train = entity_dic_jt.keys()
-for key in entity_dic_jt.keys():
-    mp_entity_dict[key] = 0
-    entity_dict[key] = 0
-    kwtree.add(key)
+
+entity_set = set.union(*[set(e) for e in entity_dic_jt.values()])
+print("entity_set",len(entity_set))
+
+kwtree = KeywordTree()
+for entity_type, entity_list in entity_dic_jt.items():
+    for entity in entity_list:
+        if entity_type in {"Autobiography","Series"}:
+            kwtree.add(entity)
+        else:
+            kwtree.add(f" {entity} ")
 
 kwtree.finalize()
 
-wiki_origin_dir  = f'{config.RES_DIR}/wikidata/origin'
-wiki_shrink = f'{config.RES_DIR}/wikidata/shrink'
-wiki_shrink_0 = f'{config.RES_DIR}/wikidata/shrink_0'
-wiki_shrink_1 = f'{config.RES_DIR}/wikidata/shrink_1'
-wiki_sentence_leval = f'{config.RES_DIR}/wikidata/sentence_leval'
-wiki_sentence_leval_json = f'{config.RES_DIR}/wikidata/sentence_leval,json'
-wiki_sentence_sorted = f'{config.RES_DIR}/wikidata/sentence_sorted'
-wiki_token_size = f'{config.RES_DIR}/wikidata/token_size'
-wiki_sentence_filter_entity_size = f'{config.RES_DIR}/wikidata/sentence_filter_entity_size'
-wiki_sentence_filter_entity_size_json = f'{config.RES_DIR}/wikidata/sentence_filter_entity_size.json'
-
-def mp_shrink_sentence(rows):
-    # print("rows", len(rows))
-    text_list= rows['sentence']
-    # print("text_list", len(text_list))
-    sentence_s = []
-    entity_s = []
-    new_rows = dict()
-    for i in range(len(text_list)):
-        text = text_list[i]
-        sentences = text.split('.')
-        sentence_list=[]
-        entity_list=[]
-        for s in sentences:
-            result = kwtree.search_all(s)
-            entity_set = set([e for e, s in result])
-            if len(entity_set) == 0: 
-                continue
-            sentence_list.append(s)
-            entity_list.append(list(entity_set))
-        sentence_s.append(sentence_list)
-        entity_s.append(entity_list)
-    new_rows['sentence']= sentence_s
-    new_rows['entity']= entity_s
-    return new_rows
+entity_dict = dict()
+for key in entity_set:
+    entity_dict[key] = 0
 
 
-def shrink_sentence(rows):
-    # print("rows", len(rows))
-    text_list= rows['sentence']
-    entity_list=rows['sentence']
-    # print("text_list", len(text_list))
-    sentence_s = []
-    entity_s = []
-    new_rows = dict()
-    for i in range(len(text_list)):
-        text = text_list[i]
-        # sentences = text.split('.')
-        sentence_list=[]
-        entity_list
-        for s in sentences:
-            result = kwtree.search_all(s)
-            entity_set = set([e for e, s in result])
-            if len(entity_set) == 0:
-                continue
-            min_count = min([entity_dict[e] for e in entity_set])
-            if result is not None and min_count < 50:
-                for e in entity_set:
-                    entity_dict[e]+=1
-                sentence_list.append(s)
-        sentence_s.append(sentence_list)
-    new_rows['sentence']= sentence_s
-    return new_rows
+label= "no_person"
+origin_dir  = f'{config.RES_DIR}/wikidata/origin'
 
+if not os.path.exists( f'{config.RES_DIR}/wikidata/{label}'):
+    os.mkdir(f'{config.RES_DIR}/wikidata/{label}')
 
-def save_orivin():
-    dd = DatasetDict.load_from_disk(wiki_origin_dir)
-    dd.save_to_disk(wiki_shrink)
-
-def mp_shrink_text(rows):
-    # print("rows", len(rows))
-    text_list= rows['text']
-    # print("text_list", len(text_list))
-    sentence_s = []
-    for i in range(len(text_list)):
-        text = text_list[i]
-        sentences = text.split('.')
-        sentence_list=[]
-        for s in sentences:
-            result = kwtree.search(s)
-            if result is not None:
-                sentence_list.append(s)
-        sentence_s.append(sentence_list)
-    rows['sentence']= sentence_s
-    del rows['text']
-    return rows
-
-
-def wiki_filter():
-    dd = DatasetDict.load_from_disk(wiki_shrink_0)
-    print(dd.column_names)
-
-def count_entity(rows):
-    # print("rows", len(rows))
-    text_list= rows['sentence']
-    # print("text_list", len(text_list))
-    sentence_s = []
-    new_rows = dict()
-    for i in range(len(text_list)):
-        sentences = text_list[i]
-        # print("text",len(text))
-        # sentences = text.split('.')
-        sentence_list=[]
-        for s in sentences:
-            result = kwtree.search_all(s)
-            entity_set = set([e for e, s in result])
-            if len(entity_set) == 0:
-                continue
-            for e in entity_set:
-                entity_dict[e]+=1
-                # sentence_list.append(s)
-            # min_count = min([entity_dict[e] for e in entity_set])
-            # if result is not None and min_count < 50:
-            #     for e in entity_set:
-            #         entity_dict[e]+=1
-            #     sentence_list.append(s)
-        # sentence_s.append(sentence_list)
-    # new_rows['sentence']= sentence_s
-    # return new_rows
-
-def display_zero_entity():
-    dd = DatasetDict.load_from_disk(wiki_shrink_1)
-    dd1 = dd.map(function = count_entity,
-           batched=True,
-           batch_size=1000,
-        #    num_proc=15,
-           )
-    zero_entity_number=0
-    for k,v in entity_dict.items():
-        if v == 0:
-            zero_entity_number +=1 
-    print("zero_entity_number",zero_entity_number)
-
-def shrink_file():
-    dd = DatasetDict.load_from_disk(wiki_shrink_0)
-    dd1 = dd.map(function = mp_shrink_sentence,
-           batched=True,
-           batch_size=1000,
-           num_proc=15,
-           )
-    # zero_entity_number = 
-    # dd1.set_format()()
-    dd1.save_to_disk(wiki_shrink_1)
-
-def wiki_data_display():
-    dd = DatasetDict.load_from_disk(wiki_sentence_leval)
-    ds=dd['train']
-    print(ds[1000]['sentnece'])
-    print(ds[1000]['entities'])
-
-    dataset = DatasetDict.load_from_disk(wiki_sentence_filter)['train']
-    print(dataset[1000]['text'])
-    print(dataset[1000]['entity'])
+sentence_dir  = f'{config.RES_DIR}/wikidata/{label}/sentence'
+sort_dir  = f'{config.RES_DIR}/wikidata/{label}/sort'
+tokenize_dir  = f'{config.RES_DIR}/wikidata/{label}/tokenize'
+filter_dir  = f'{config.RES_DIR}/wikidata/{label}/filter'
+# filter_dir  = f'{config.RES_DIR}/wikidata/filter'
+flatten_sentence_fp = f'{config.RES_DIR}/wikidata/{label}/sentence_leval.json'
+filtered_fp = f'{config.RES_DIR}/wikidata/{label}/filter.json'
 
 
 
 
-def wiki_filter_entity_size_single():
-    dataset = Dataset.load_from_disk(wiki_sentence_sorted)
 
-
-def wiki_filter_entity_size_simple():
- 
-    dataset = util.file_read_json_line(wiki_token_size)
-    for row in dataset:
-        entities=row['entities']
-        sentence=row['sentence']
-        tokens= row['tokens']
-        min_count = min([entity_dict[e] for e in entities])
-        if min_count > 50:
-            continue
-        tokens = tokenizer.tokenize(sentence)
-        if len(tokens>500):
-            continue
-        for e in entities:
-            entity_dict[e]+=1
-
-    zero_entity_number=0
-    for k,v in entity_dict.items():
-        if v == 0:
-            zero_entity_number +=1 
-    print("zero_entity_number",zero_entity_number)
-    # dataset.save_to_disk(wiki_sentence_filter_entity_size)
-    util.file_delete(wiki_sentence_filter_entity_size_json)
-    dataset.to_json(wiki_sentence_filter_entity_size_json)
-
-
-
-def wiki_filter_token_length():
-
-    def map_func(rows):
-        entity_list=rows['entities']
-        sentence_list=rows['sentence']
-        # print(rows['entity_size'])
-        token_list = []
-        sentences = [] 
-        for sentence in sentence_list:
-            sentence = sentence.replace('\n','')
-            tokens = tokenizer.tokenize(sentence)
-            token_list.append(tokens)
-            sentences.append(sentence)
-        rows['tokens']=token_list
-        rows['sentence'] = sentences
-        return rows
-    
-    def filter_func(rows):
-        # print("rows", len(rows))
-        # entity_list=rows['entities']
-        sentence_list=rows['sentence']
-        token_list = rows['tokens']
-        # print(rows['entity_size'])
-        result=[]
-        for tokens  in token_list:
-            if  len(tokens) < 500:
-                result.append(True)
-            else:
-                result.append(False)
-        return result
-
-    dataset = Dataset.load_from_disk(wiki_sentence_sorted)
-    print(dataset.num_rows)
-    print(dataset.column_names)
-    dataset = dataset.map(map_func,
-                batched=True,
-                batch_size=100_000,
-                num_proc=10
-                )
-    dataset = dataset.filter(filter_func,
-                batched=True,
-                batch_size=100_000,
-                num_proc=10
-                )
-    print(dataset.num_rows)
-    print(dataset.column_names)
-    dataset.save_to_disk(wiki_token_size,
-                         num_proc=10)
-
-
-def wiki_filter_entity_size():
-    def wiki_filter_sentence(rows):
-        # print("rows", len(rows))
-        entity_list=rows['entities']
-        sentence_list=rows['sentence']
-        # print(rows['entity_size'])
-        result=[]
-        for entities, sentence in zip(entity_list,sentence_list):
-            min_count = min([entity_dict[e] for e in entities])
-            if  min_count < 20:
-                for e in entities:
-                    entity_dict[e]+=1
-                result.append(True)
-            else:
-                result.append(False)
-
-        return result
-
-
-    dataset = Dataset.load_from_disk(wiki_token_size)
-    print(dataset.num_rows)
-    print(dataset.column_names)
-    dataset = dataset.filter(wiki_filter_sentence,
-                batched=True,
-                batch_size=100_000,
-                # num_proc=10
-                )
-    print(dataset.num_rows)
-    print(dataset.column_names)
-    zero_entity_number=0
-    for k,v in entity_dict.items():
-        if v == 0:
-            zero_entity_number +=1 
-    print("zero_entity_number",zero_entity_number)
-    # dataset.save_to_disk(wiki_sentence_filter_entity_size)
-    util.file_delete(wiki_sentence_filter_entity_size_json)
-    dataset.to_json(wiki_sentence_filter_entity_size_json)
-  
-def wiki_sort():
-    dataset = Dataset.from_json(wiki_sentence_leval_json)
-    dataset = dataset.sort(  
-        column_names="entity_size" ,
-                 reverse=True
-               )
-    dataset.save_to_disk(wiki_sentence_sorted)
-
-def wiki_data_flatten():
-    dataset = DatasetDict.load_from_disk(wiki_shrink_1)
-    if os.path.exists(wiki_sentence_leval_json):
-        os.remove(wiki_sentence_leval_json)
+def data_flatten():
+    if os.path.exists(flatten_sentence_fp):
+        os.remove(flatten_sentence_fp)
+    dataset = Dataset.load_from_disk(sentence_dir)
     record_list=[]
-    for row in tqdm(dataset['train']):
+    for row in tqdm(dataset):
         sentence_list = row['sentence']
         entity_list = row['entity']
         for entity, sentence in zip(entity_list,sentence_list):
@@ -355,110 +91,231 @@ def wiki_data_flatten():
                 }    
             # sentence_dataset.add_item(item)
             record_list.append(item)
-        if len(record_list) % 10_000_000 == 0:
-            util.file_write_json_line(wiki_sentence_leval_json,record_list,'auto')
+        if len(record_list) % 1_000_000 == 0:
+            util.file_write_json_line(flatten_sentence_fp,record_list,'auto')
             record_list=[]
-    util.file_write_json_line(wiki_sentence_leval_json,record_list,'auto')
-            # sentence_dataset.flatten_indices(r)
-    # ds = Dataset.from_list(record_list)
-    # sentence_dataset['train']= sentence_dataset
-    # sentence_dataset.to_(wiki_sentence_leval)
+    util.file_write_json_line(flatten_sentence_fp,record_list,'auto')
 
 
-def wiki_data():
-    dataset = DatasetDict.load_from_disk(wiki_filter)
-    print(dataset.column_names)
-    print(dataset.num_rows)
-    dataset = dataset.map(function = sentence_check, 
-                             batched=True,
-                             batch_size=100,
-                             num_proc=10,
-                            # return_dict=False 
-                             )
+
+
     
-    # dataset = dataset.filter(function = check_row, 
-    #                         #  batched=True,
-    #                         #  batch_size=1000
-    #                         num_proc=10
-    #                          )
-    print(dataset.num_rows)
-    print(dataset['train'][0])
-
-    dataset.save_to_disk(wiki_sentence_filter)
-    # print(dataset["train"]["text"][:10])
-    # print(dataset)
-
-def sentence_check(rows):
-
-    text_list = rows['text']
-    if len(text_list) == 0:
-        print(" empty")
-        return
-    rows['entity'] = []
-    for i, text in enumerate(text_list):
-        # if len(sentence) <50:
-        #     continue
-        # text = text[text]
-        sentence_list = []
-        entity_list=[]
-        sentences = text.split('.')
-        for sentence in sentences:
-            result = kwtree.search_all(sentence)
-            if result is not None: 
-                # if len(list(result)) > 30:
-                sentence_list.append( text)
-                entity_list.append([e for e,s in result])
-                # entity_set = set([e for e,s in result])
-                # min_num = 100
-                # for e in entity_set:
-                #     if entity_dict[e] < min_num:
-                #         min_num = entity_dict[e]
-                # if min_num <100:
-                #     for e in entity_set:
-                #         entity_dict[e] +=1
-                #     sentence_list.append( sentence)
-        text_list[i]= sentence_list
-        rows['entity'].append(sentence_list)
-    return rows
-
-def wiki_mp(fp):
-    basename = os.path.basename (fp)
-    # dataset = arrow_dataset.ArrowReader(fp)
-    # dataset.read_table()
-    dataset = dataset.map(function = sentence_check)
-    dataset.save_to_disk(f'{config.RES_DIR}/wikidata/splited_mp/{basename}')
+def split_sentence():
+    def mp_shrink_sentence(rows):
+        # print("rows", len(rows))
+        text_list= rows['text']
+        # print("text_list", len(text_list))
+        sentence_s = []
+        entity_s = []
+        new_rows = dict()
+        for text  in text_list:
+            sentences = text.split('.')
+            sentence_list=[]
+            entity_list=[]
+            for s in sentences:
+                # if r'\u' in s:
+                #     s = s.replace(r'\u',r'\\u')
+                #     s  = s.encode('utf8').decode('unicode-escape')  
+                result = kwtree.search_all(s)
+                entity_set = set([e.strip() for e, _  in result])
+                if len(entity_set) <2: 
+                    continue
+                sentence_list.append(s)
+                entity_list.append(list(entity_set))
+            sentence_s.append(sentence_list)
+            entity_s.append(entity_list)
+        new_rows['sentence']= sentence_s
+        new_rows['entity']= entity_s
+        return new_rows
 
 
-def wiki_multi_process():
-    number_process = 10
-    pool = Pool(number_process)
-    wiki_origin_dir  = f'{config.RES_DIR}/wikidata/splited/train'
-    files = glob.glob (f'{wiki_origin_dir}/data*.arrow')
-    print (files)
-    pool.map(wiki_mp,files)
+    dd = DatasetDict.load_from_disk(origin_dir)
+    # dd.cleanup_cache_files()
+    dd:Dataset =dd['train']
+    # split text into sentences
 
+    dd = dd.map(function = mp_shrink_sentence,
+        batched=True,
+        batch_size=10000,
+        num_proc=15,
+        )
+    dd.save_to_disk(sentence_dir,
+    num_proc=10
+    )
+    dd.cleanup_cache_files()
+
+def sort_dataset():
+    dd =  Dataset.from_json(flatten_sentence_fp)
+    dd = dd.sort(  
+            column_names="entity_size" ,
+            reverse=True
+        )
+    dd.save_to_disk(sort_dir)
+    dd.cleanup_cache_files()
+
+def tokenize_dataset():
+
+    re_multiple_space = re.compile(' +')
+    def mp_tokenize(rows):
+        entity_list=rows['entities']
+        sentence_list=rows['sentence']
+        # print(rows['entity_size'])
+        token_list = []
+        sentence_array = [] 
+        for sentence in sentence_list:
+            # sentence = sentence.replace('\n',' ')
+            string_one_space = re_multiple_space.sub(' ', sentence)
+            tokens = enhance_tokenizer.tokenize(string_one_space)
+            token_list.append(tokens)
+            sentence_array.append(string_one_space)
+        rows['tokens']=token_list
+        rows['sentence'] = sentence_array
+        return rows
+
+    dd =  Dataset.load_from_disk(sort_dir)
+    dd = dd.map(  mp_tokenize,
+        batched=True,
+        batch_size=10000,
+        num_proc=15,
+        )
+    dd.save_to_disk(tokenize_dir,
+                       num_proc=10)
+    dd.cleanup_cache_files()
+
+def filter_dataset():
+    def mp_filter_sentence(rows):
+        # print("rows", len(rows))
+        entity_list=rows['entities']
+        sentence_list=rows['sentence']
+        token_list = rows['tokens']
+        # print(rows['entity_size'])
+        result=[]
+        for tokens, entities, sentence in zip(token_list, entity_list,sentence_list):
+            if len(tokens) > 500:
+                result.append(False)
+                continue
+            entities = set([e for e in entities])
+            min_count = min([entity_dict[e] for e in entities])
+            if  min_count < 20:
+                for e in entities:
+                    entity_dict[e]+=1
+                result.append(True)
+            else:
+                result.append(False)
+
+        return result
+
+
+    dd =  Dataset.load_from_disk(tokenize_dir)
+    dd = dd.filter(mp_filter_sentence,
+            batched=True,
+            batch_size=100_000,
+            # num_proc=10
+            )
+    dd.save_to_disk(filter_dir)
+    dd.cleanup_cache_files()
+    zero_entity_number=0
+    for k,v in entity_dict.items():
+        if v == 0:
+            zero_entity_number +=1 
+    print("zero_entity_number",zero_entity_number)
+
+def display_entity_distribution():
+
+    def mp(rows):
+        # print("rows", len(rows))
+        entity_list=rows['entities']
+        sentence_list=rows['sentence']
+        token_list = rows['tokens']
+        # print(rows['entity_size'])
+        # result=[]
+        for tokens, entities, sentence in zip(token_list, entity_list,sentence_list):
+            entities = set([e for e in entities])
+            for e in entities:
+                if e in entity_dict:
+                    entity_dict[e]+=1 
+
+    entity_type_dict = dict()
+    for k, v in entity_dic_jt.items():
+        for vi in v:
+            entity_type_dict[vi] = k 
+    # Q20937
+    dd =  Dataset.load_from_disk(filter_dir)
+    print("num_rows", dd.num_rows)
+    dd = dd.map(mp,
+            batched=True,
+            batch_size=100_000,
+            # num_proc=10
+            )
+    
+    zero_entity_number=0
+    entity_collection= list()
+    type_count_dict=dict()
+    for k,v in entity_dict.items():
+        if v == 0:
+            zero_entity_number +=1 
+        if v<5:
+            entity_collection.append(k)
+            entity_type = entity_type_dict[k]
+            if entity_type not in type_count_dict:
+                type_count_dict[entity_type] = []
+            type_count_dict[entity_type].append(k)
+    # print("type_count_dict", json.dumps(type_count_dict,indent=2))
+    print("entity_collection",len(entity_collection))
+    for k,v in type_count_dict.items():
+        print(k,len(v))
+    # for k,v in type_count_dict.items():
+    #     print(k, v[:50])
+    #     print()
+    # print("entity_collection",entity_collection[:100])
+    print("zero_entity_number", zero_entity_number)
+
+
+def export_dataset():
+    dd =  Dataset.load_from_disk(filter_dir)
+
+    util.file_delete(filtered_fp)
+
+    dd.to_json(filtered_fp)
+    dd.cleanup_cache_files()
+
+def wiki_pipeline():
+    print("start split text")
+    # split_sentence()
+    # flatten sentences into records
+    print("start flatten dataset")
+    data_flatten()
+    # sort the sentence desc according to entities
+    print("start sorting  according entity size")
+    sort_dataset()
+
+    print("start tokenizing sentence ")
+    tokenize_dataset()
+    
+    # calibrate  
+    print("start filtering long sentence ")
+    filter_dataset()
+
+    print("start exporting json file ")
+    export_dataset()
+
+    # display_entity_distribution()
+
+
+def tree_test():
+    s = 'Ko\u0161ice Region'
+    result = kwtree.search_all(s)
+    print(list(result))
+
+def test_unicode():
+    title ="Minamiky\\u016bsh\\u016b"
+    normal_title = title.encode('utf8').decode('unicode-escape')
+    print(normal_title)
 
 
 if __name__ == "__main__":
-    # test_ah()
-    # multi_process_genenrate()
-    # official_language()
-    # clean_file(used_fn)
-    # dataset_optimize()
-    # sample_dev_dataset()
-    # nsp_sample_dev_dataset()
-    # test_tokenizer()
-    # dataset_reorder()
-    # wiki_data()
-    # wiki_multi_process()
-    # wiki_sentence_count()
-    # wiki_data_filter()
-    # wiki_data_display()
-    # save_orivin()
-    # shrink_file()
-    # wiki_filter()
-    # display_zero_entity()
-    # wiki_data_flatten()
-    # wiki_sort()
-    wiki_filter_entity_size()
-    # wiki_filter_token_length()
+    # wiki_pipeline()
+    # tree_test()
+    display_entity_distribution()
+    # test_unicode()
+

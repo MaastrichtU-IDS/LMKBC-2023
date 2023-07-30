@@ -1,0 +1,211 @@
+{"SubjectEntity": "Abkhazia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Abkhaz", "Russian"]}
+{"SubjectEntity": "Afghanistan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Persian", "", "Pashto"]}
+{"SubjectEntity": "Albania", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Albanian"]}
+{"SubjectEntity": "Algeria", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "Berber"]}
+{"SubjectEntity": "Andorra", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Catalan"]}
+{"SubjectEntity": "Angola", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Antigua and Barbuda", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Argentina", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Armenia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Armenian"]}
+{"SubjectEntity": "Artsakh", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Armenian", "Russian"]}
+{"SubjectEntity": "Australia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Austria", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["German"]}
+{"SubjectEntity": "Azerbaijan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Azerbaijani"]}
+{"SubjectEntity": "Bahamas", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Bahrain", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Bangladesh", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Bengali"]}
+{"SubjectEntity": "Barbados", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Belarus", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Belarusian", "Russian"]}
+{"SubjectEntity": "Belgium", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Dutch", "French", "German"]}
+{"SubjectEntity": "Belize", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Benin", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Bhutan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Dzongkha"]}
+{"SubjectEntity": "Bolivia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Castilian", "", "Aymara", "Araona", "Baure", "B\u00e9siro", "", "Canichana", "Cavine\u00f1o", "Cayubaba", "Ch\u00e1cobo", "Chim\u00e1n", "Ese", "Ejja", "Guaran\u00ed", "Guarasu'we", "Guarayu", "Itonama", "Leco", "Machajuyai-Kallawaya", "Machineri", "Maropa", "Moje\u00f1o-Ignaciano", "Moje\u00f1o-Trinitario", "Mor\u00e9", "Moset\u00e9n", "Movima", "Pacawara", "Puquina", "Quechua", "Sirion\u00f3", "Tacana", "Tapiet\u00e9", "Toromona", "Uru-Chipaya", "Weenhayek", "Yaminawa", "Yuki", "Yuracar\u00e9", "Zamuco"]}
+{"SubjectEntity": "Bosnia and Herzegovina", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None", "(Bosnian"]}
+{"SubjectEntity": "Botswana", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Brazil", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Brunei", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Malay"]}
+{"SubjectEntity": "Bulgaria", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Bulgarian"]}
+{"SubjectEntity": "Burkina Faso", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Burundi", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French", "Kirundi", "English"]}
+{"SubjectEntity": "Cambodia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Khmer"]}
+{"SubjectEntity": "Cameroon", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "French"]}
+{"SubjectEntity": "Canada", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "", "French"]}
+{"SubjectEntity": "Cape Verde", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Central African Republic", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French", "Sango"]}
+{"SubjectEntity": "Chad", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "French"]}
+{"SubjectEntity": "Chile", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Chilean", "Spanish"]}
+{"SubjectEntity": "China", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Standard", "Chinese"]}
+{"SubjectEntity": "Christmas Island", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Cocos  Islands", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Colombia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Comoros", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "Comorian", "French"]}
+{"SubjectEntity": "Cook Islands", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Costa Rica", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Croatia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Croatian"]}
+{"SubjectEntity": "Cuba", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Cyprus", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Greek", "Turkish"]}
+{"SubjectEntity": "Czech Republic", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Czech", "Slovak"]}
+{"SubjectEntity": "Democratic Republic of the Congo", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Denmark", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Danish"]}
+{"SubjectEntity": "Djibouti", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "French"]}
+{"SubjectEntity": "Dominica", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Dominican Republic", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "East Timor", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese", "Tetum"]}
+{"SubjectEntity": "Ecuador", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish", "Quechua"]}
+{"SubjectEntity": "Egypt", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "El Salvador", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Equatorial Guinea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French", "Portuguese", "Spanish"]}
+{"SubjectEntity": "Eritrea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Tigrinya"]}
+{"SubjectEntity": "Estonia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Estonian"]}
+{"SubjectEntity": "Eswatini", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Swazi"]}
+{"SubjectEntity": "Ethiopia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Afar", "Amharic", "Oromo", "Somali", "Tigrinya"]}
+{"SubjectEntity": "Federated States of Micronesia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Fiji", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Fijian", "Fiji", "Hindi"]}
+{"SubjectEntity": "Finland", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Finnish", "Swedish"]}
+{"SubjectEntity": "France", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Gabon", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Gambia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Georgia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Georgian"]}
+{"SubjectEntity": "Germany", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["German"]}
+{"SubjectEntity": "Ghana", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Greece", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Greek"]}
+{"SubjectEntity": "Grenada", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Guatemala", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Guinea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Guinea-Bissau", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Guyana", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Haiti", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French", "Haitian", "Creole"]}
+{"SubjectEntity": "Honduras", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Hungary", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Hungarian"]}
+{"SubjectEntity": "Iceland", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Icelandic", "Icelandic", "Sign", "Language"]}
+{"SubjectEntity": "India", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Hindi", "English"]}
+{"SubjectEntity": "Indonesia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Indonesian"]}
+{"SubjectEntity": "Iran", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Persian"]}
+{"SubjectEntity": "Iraq", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "Kurdish"]}
+{"SubjectEntity": "Ireland", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Irish", "English"]}
+{"SubjectEntity": "Israel", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Hebrew"]}
+{"SubjectEntity": "Italy", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Italian"]}
+{"SubjectEntity": "Ivory Coast", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Jamaica", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Japan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Jordan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Kazakhstan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Kazakh", "Russian"]}
+{"SubjectEntity": "Kenya", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Swahili"]}
+{"SubjectEntity": "Kiribati", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Kosovo", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Albanian", "Serbian"]}
+{"SubjectEntity": "Kuwait", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Standard", "Arabic"]}
+{"SubjectEntity": "Kyrgyzstan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Kyrgyz", "Russian"]}
+{"SubjectEntity": "Laos", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Lao"]}
+{"SubjectEntity": "Latvia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Latvian"]}
+{"SubjectEntity": "Lebanon", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Lesotho", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Sotho", "English"]}
+{"SubjectEntity": "Liberia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Libya", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Liechtenstein", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["German"]}
+{"SubjectEntity": "Lithuania", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Lithuanian"]}
+{"SubjectEntity": "Luxembourg", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French", "German", "Luxembourgish"]}
+{"SubjectEntity": "Madagascar", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French", "Malagasy"]}
+{"SubjectEntity": "Malawi", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Chichewa"]}
+{"SubjectEntity": "Malaysia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Malay"]}
+{"SubjectEntity": "Maldives", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Dhivehi"]}
+{"SubjectEntity": "Mali", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Malta", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Maltese", "English"]}
+{"SubjectEntity": "Marshall Islands", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Mauritania", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Mauritius", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Mauritian", "Creole", "(Also", "known", "as", "'Morisien')"]}
+{"SubjectEntity": "Mexico", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Moldova", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Romanian"]}
+{"SubjectEntity": "Monaco", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Mongolia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Mongolian"]}
+{"SubjectEntity": "Montenegro", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Montenegrin"]}
+{"SubjectEntity": "Morocco", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "Berber"]}
+{"SubjectEntity": "Mozambique", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Myanmar", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Burmese"]}
+{"SubjectEntity": "Namibia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Nauru", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Nauruan"]}
+{"SubjectEntity": "Nepal", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Nepali"]}
+{"SubjectEntity": "Netherlands", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Dutch"]}
+{"SubjectEntity": "New Zealand", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "has", "de", "facto", "status", "Maori", "language", "New", "Zealand", "Sign", "Language"]}
+{"SubjectEntity": "Nicaragua", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Niger", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Nigeria", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Niue", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Niuean"]}
+{"SubjectEntity": "Norfolk Island", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Norfuk"]}
+{"SubjectEntity": "North Korea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Korean"]}
+{"SubjectEntity": "North Macedonia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Macedonian", "Albanian"]}
+{"SubjectEntity": "Northern Cyprus", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Turkish"]}
+{"SubjectEntity": "Norway", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Norwegian", "Sami", "languages"]}
+{"SubjectEntity": "Oman", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Pakistan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Urdu", "English"]}
+{"SubjectEntity": "Palau", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Palauan"]}
+{"SubjectEntity": "Palestine", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Panama", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Papua New Guinea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Hiri", "Motu", "PNG", "Sign", "Language", "Tok", "Pisin"]}
+{"SubjectEntity": "Paraguay", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish", "Guaran\u00ed"]}
+{"SubjectEntity": "Peru", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Peruvian", "Spanish", "Quechua", "Aymara", "Ash\u00e1ninka"]}
+{"SubjectEntity": "Philippines", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Filipino", "English"]}
+{"SubjectEntity": "Poland", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Polish"]}
+{"SubjectEntity": "Portugal", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Qatar", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Republic of the Congo", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Romania", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Romanian"]}
+{"SubjectEntity": "Russia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Russian"]}
+{"SubjectEntity": "Rwanda", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "French", "Kinyarwanda", "Swahili"]}
+{"SubjectEntity": "Sahrawi Arab Democratic Republic", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Tamazight", "Arabic", "Spanish"]}
+{"SubjectEntity": "Saint Kitts and Nevis", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Saint Lucia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Saint Vincent and the Grenadines", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Samoa", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "San Marino", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Italian"]}
+{"SubjectEntity": "S\u00e3o Tom\u00e9 and Pr\u00edncipe", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Saudi Arabia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Senegal", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Serbia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Serbian"]}
+{"SubjectEntity": "Seychelles", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "French", "Seychellois", "Creole"]}
+{"SubjectEntity": "Sierra Leone", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Singapore", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Malay", "Mandarin", "Chinese", "Tamil"]}
+{"SubjectEntity": "Slovakia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Slovak"]}
+{"SubjectEntity": "Slovenia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Slovene"]}
+{"SubjectEntity": "Solomon Islands", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Somalia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Somali"]}
+{"SubjectEntity": "Somaliland", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "English", "Somali"]}
+{"SubjectEntity": "South Africa", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Afrikaans", "English", "Southern", "Ndebele", "Sotho", "Northern", "Sotho", "Swazi", "Tsonga", "Tswana", "Venda", "Xhosa", "Zulu"]}
+{"SubjectEntity": "South Korea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Korean", "Korean", "Sign", "Language"]}
+{"SubjectEntity": "South Ossetia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Ossetian", "Russian"]}
+{"SubjectEntity": "South Sudan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Sovereign Military Order of Malta", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Italian"]}
+{"SubjectEntity": "Spain", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Sri Lanka", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Sinhala", "Tamil"]}
+{"SubjectEntity": "Sudan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "English"]}
+{"SubjectEntity": "Suriname", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Dutch"]}
+{"SubjectEntity": "Sweden", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Swedish"]}
+{"SubjectEntity": "Switzerland", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French", "(Bern"]}
+{"SubjectEntity": "Syria", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Taiwan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Tajikistan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Tajik"]}
+{"SubjectEntity": "Tanzania", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Swahili", "English"]}
+{"SubjectEntity": "Thailand", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Thai"]}
+{"SubjectEntity": "Togo", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Tokelau", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Tokelauan"]}
+{"SubjectEntity": "Tonga", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Tongan"]}
+{"SubjectEntity": "Transnistria", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Moldovan", "Russian", "Ukrainian"]}
+{"SubjectEntity": "Trinidad and Tobago", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Tunisia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Turkey", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Turkish"]}
+{"SubjectEntity": "Turkmenistan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Turkmen"]}
+{"SubjectEntity": "Tuvalu", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Tuvaluan", "English"]}
+{"SubjectEntity": "Uganda", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Swahili"]}
+{"SubjectEntity": "Ukraine", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Ukrainian"]}
+{"SubjectEntity": "United Arab Emirates", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "United Kingdom and Crown dependencies etc.", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "United States", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Uruguay", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None", "", "Uruguayan", "Sign", "Language"]}
+{"SubjectEntity": "Uzbekistan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Uzbek"]}
+{"SubjectEntity": "Vanuatu", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "French", "Bislama"]}
+{"SubjectEntity": "Vatican City", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Italian", "Latin"]}
+{"SubjectEntity": "Venezuela", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish", "Venezuelan", "Sign", "Language"]}
+{"SubjectEntity": "Vietnam", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Vietnamese"]}
+{"SubjectEntity": "Yemen", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Zambia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Zimbabwe", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Chewa", "Chibarwe", "English", "Kalanga", "Khoisan", "Nambya", "Ndau", "Ndebele", "Shangani", "Shona", "Sign", "language", "Sotho", "Tonga", "Tswana", "Venda", "Xhosa"]}

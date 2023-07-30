@@ -1,0 +1,989 @@
+{"SubjectEntity": "Wilhelm R\u00f6ntgen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Jacobus Henricus van 't Hoff", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Emil Adolf von Behring", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Sully Prudhomme", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Henry Dunant", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Fr\u00e9d\u00e9ric Passy", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Hendrik Lorentz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Pieter Zeeman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Hermann Emil Fischer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ronald Ross", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Theodor Mommsen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "\u00c9lie Ducommun", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Charles Albert Gobat", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Henri Becquerel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Pierre Curie", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Marie Curie", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Svante Arrhenius", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Niels Ryberg Finsen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Bj\u00f8rnstjerne Bj\u00f8rnson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Randal Cremer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Lord Rayleigh", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "William Ramsay", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ivan Pavlov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Fr\u00e9d\u00e9ric Mistral", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Jos\u00e9 Echegaray", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Institut de Droit International", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Philipp Lenard", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Adolf von Baeyer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Robert Koch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Henryk Sienkiewicz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Bertha von Suttner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "J. J. Thomson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Henri Moissan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Camillo Golgi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Santiago Ram\u00f3n y Cajal", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Giosu\u00e8 Carducci", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Theodore Roosevelt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Albert Abraham Michelson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Eduard Buchner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Charles Louis Alphonse Laveran", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Rudyard Kipling", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Ernesto Teodoro Moneta", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Louis Renault", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Gabriel Lippmann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Ernest Rutherford", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "\u00c9lie Metchnikoff", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Paul Ehrlich", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Rudolf Christoph Eucken", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Klas Pontus Arnoldson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Fredrik Bajer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Karl Ferdinand Braun", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Guglielmo Marconi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Wilhelm Ostwald", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Emil Theodor Kocher", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Selma Lagerl\u00f6f", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Auguste Marie Fran\u00e7ois Beernaert", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Paul-Henri-Benjamin d'Estournelles de Constant", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Johannes Diderik van der Waals", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Otto Wallach", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Albrecht Kossel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Paul Heyse", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "International Peace Bureau", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Wilhelm Wien", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Marie Sk\u0142odowska-Curie", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Allvar Gullstrand", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Maurice Maeterlinck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Tobias Asser", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Alfred Hermann Fried", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Gustaf Dal\u00e9n", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Victor Grignard", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Paul Sabatier", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Alexis Carrel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Gerhart Hauptmann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Elihu Root", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Heike Kamerlingh Onnes", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Alfred Werner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Charles Richet", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Rabindranath Tagore", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Henri La Fontaine", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Max von Laue", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Theodore William Richards", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Robert B\u00e1r\u00e1ny", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "William Henry Bragg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "William Lawrence Bragg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Richard Willst\u00e4tter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Romain Rolland", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Verner von Heidenstam", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Charles Glover Barkla", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Karl Adolph Gjellerup", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Henrik Pontoppidan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "International Committee of the Red Cross", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize", "Nobel Peace Prize", "Nobel Peace Prize"]}
+{"SubjectEntity": "Max Planck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Fritz Haber", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Johannes Stark", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Jules Bordet", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Carl Spitteler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Woodrow Wilson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Charles \u00c9douard Guillaume", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Walther Nernst", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "August Krogh", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Knut Hamsun", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "L\u00e9on Bourgeois", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Albert Einstein", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Frederick Soddy", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Anatole France", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Hjalmar Branting", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Christian Lous Lange", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Niels Bohr", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Francis William Aston", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Archibald Hill", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Otto Fritz Meyerhof", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jacinto Benavente", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Fridtjof Nansen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert Andrews Millikan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Fritz Pregl", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Frederick Banting", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "John Macleod", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "W. B. Yeats", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Manne Siegbahn", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Willem Einthoven", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "W\u0142adys\u0142aw Reymont", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "James Franck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Gustav Ludwig Hertz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Richard Adolf Zsigmondy", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "George Bernard Shaw", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Austen Chamberlain", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Charles G. Dawes", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Jean Baptiste Perrin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Theodor Svedberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Johannes Fibiger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Grazia Deledda", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Aristide Briand", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Gustav Stresemann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Arthur Compton", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Charles Thomson Rees Wilson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Heinrich Otto Wieland", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Julius Wagner-Jauregg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Henri Bergson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Ferdinand Buisson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Ludwig Quidde", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Owen Willans Richardson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Adolf Otto Reinhold Windaus", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Charles Nicolle", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Sigrid Undset", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Louis de Broglie", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Arthur Harden", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Hans von Euler-Chelpin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Christiaan Eijkman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Frederick Gowland Hopkins", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Thomas Mann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Frank B. Kellogg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "C. V. Raman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Hans Fischer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Karl Landsteiner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Sinclair Lewis", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Nathan S\u00f6derblom", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Carl Bosch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Friedrich Bergius", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Otto Heinrich Warburg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Erik Axel Karlfeldt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Jane Addams", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Nicholas Murray Butler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Werner Heisenberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Irving Langmuir", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Charles Scott Sherrington", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Edgar Adrian", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "John Galsworthy", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Erwin Schr\u00f6dinger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Paul Dirac", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Thomas Hunt Morgan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ivan Bunin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Norman Angell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Harold Urey", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "George Whipple", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "George Minot", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "William P. Murphy", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Luigi Pirandello", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Arthur Henderson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "James Chadwick", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Fr\u00e9d\u00e9ric Joliot-Curie", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ir\u00e8ne Joliot-Curie", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Hans Spemann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Carl von Ossietzky", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Victor Francis Hess", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Carl David Anderson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Peter Debye", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Henry Hallett Dale", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Otto Loewi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Eugene O'Neill", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Carlos Saavedra Lamas", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Clinton Davisson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "George Paget Thomson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Norman Haworth", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Paul Karrer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Albert Szent-Gy\u00f6rgyi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Roger Martin du Gard", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "The Viscount Cecil of Chelwood", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Enrico Fermi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Richard Kuhn [b]", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Corneille Heymans", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Pearl S. Buck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Nansen International Office For Refugees", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Ernest Lawrence", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Adolf Butenandt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "[b]Leopold Ru\u017ei\u010dka", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Gerhard Domagk [b]", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Frans Eemil Sillanp\u00e4\u00e4", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Otto Stern", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "George de Hevesy", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Henrik Dam", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Edward Adelbert Doisy", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Isidor Isaac Rabi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Otto Hahn", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Joseph Erlanger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Herbert Spencer Gasser", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Johannes Vilhelm Jensen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Wolfgang Pauli", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Artturi Ilmari Virtanen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Alexander Fleming", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ernst Boris Chain", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Howard Florey", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Gabriela Mistral", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Cordell Hull", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Percy Williams Bridgman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "James B. Sumner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "John Howard Northrop", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Wendell Meredith Stanley", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Hermann Joseph Muller", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Hermann Hesse", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Emily Greene Balch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "John Mott", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Edward Victor Appleton", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Robert Robinson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Carl Ferdinand Cori", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Gerty Cori", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Bernardo Houssay", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Andr\u00e9 Gide", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Friends Service Council", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "American Friends Service Committee", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Patrick Blackett", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Arne Tiselius", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Paul Hermann M\u00fcller", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "T. S. Eliot", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "None [c]", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Hideki Yukawa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "William Giauque", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Walter Rudolf Hess", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ant\u00f3nio Egas Moniz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "William Faulkner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "John Boyd Orr", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "C. F. Powell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Otto Diels", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Kurt Alder", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Philip Showalter Hench", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Edward Calvin Kendall", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Tadeus Reichstein", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Bertrand Russell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Ralph Bunche", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "John Cockcroft", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Ernest Walton", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Edwin McMillan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Glenn T. Seaborg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Max Theiler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "P\u00e4r Lagerkvist", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "L\u00e9on Jouhaux", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Felix Bloch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Edward Mills Purcell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Archer John Porter Martin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Richard Laurence Millington Synge", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Selman Waksman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Fran\u00e7ois Mauriac", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Albert Schweitzer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Frits Zernike", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Hermann Staudinger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Hans Adolf Krebs", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Fritz Albert Lipmann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Winston Churchill", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "George Marshall", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Max Born", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Walther Bothe", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Linus Pauling", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry", "Nobel Peace Prize"]}
+{"SubjectEntity": "John Franklin Enders", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Frederick Chapman Robbins", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Thomas Huckle Weller", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ernest Hemingway", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "United Nations High Commissioner for Refugees", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize", "Nobel Peace Prize"]}
+{"SubjectEntity": "Willis Lamb", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Polykarp Kusch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Vincent du Vigneaud", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Hugo Theorell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Halld\u00f3r Laxness", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "John Bardeen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics", "Nobel Prize in Physics"]}
+{"SubjectEntity": "Walter Houser Brattain", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "William Shockley", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Cyril Norman Hinshelwood", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Nikolay Semyonov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Andr\u00e9 Fr\u00e9d\u00e9ric Cournand", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Werner Forssmann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Dickinson W. Richards", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Juan Ram\u00f3n Jim\u00e9nez", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Chen Ning Yang", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Tsung-Dao Lee", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "The Lord Todd", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Daniel Bovet", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Albert Camus", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Lester B. Pearson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Pavel Cherenkov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Ilya Frank", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Igor Tamm", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Frederick Sanger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry", "Nobel Prize in Chemistry"]}
+{"SubjectEntity": "George Wells Beadle", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Edward Lawrie Tatum", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Joshua Lederberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Boris Pasternak [d]", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Dominique Pire", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Emilio G. Segr\u00e8", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Owen Chamberlain", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Jaroslav Heyrovsk\u00fd", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Arthur Kornberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Severo Ochoa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Salvatore Quasimodo", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Philip Noel-Baker", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Donald A. Glaser", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Willard Libby", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Frank Macfarlane Burnet", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Peter Medawar", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Saint-John Perse", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Albert Lutuli", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert Hofstadter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Rudolf M\u00f6ssbauer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Melvin Calvin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Georg von B\u00e9k\u00e9sy", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ivo Andri\u0107", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Dag Hammarskj\u00f6ld", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Lev Landau", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Max Perutz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "John Kendrew", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Francis Crick", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "James D. Watson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Maurice Wilkins", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "John Steinbeck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Eugene Wigner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Maria Goeppert-Mayer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "J. Hans D. Jensen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Karl Ziegler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Giulio Natta", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "John Eccles", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Alan Lloyd Hodgkin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Andrew Huxley", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Giorgos Seferis", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "League of Red Cross societies", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Charles Hard Townes", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Nikolay Basov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Alexander Prokhorov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Dorothy Hodgkin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Konrad Emil Bloch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Feodor Felix Konrad Lynen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jean-Paul Sartre [e]", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Martin Luther King Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Sin-Itiro Tomonaga", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Julian Schwinger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Richard Feynman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Robert Burns Woodward", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Fran\u00e7ois Jacob", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Andr\u00e9 Michel Lwoff", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jacques Monod", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Mikhail Sholokhov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "United Nations International Children's Emergency Fund (UNICEF)", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Alfred Kastler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Robert S. Mulliken", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Francis Peyton Rous", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Charles Brenton Huggins", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Shmuel Yosef Agnon", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Nelly Sachs", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Hans Bethe", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Manfred Eigen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ronald George Wreyford Norrish", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "George Porter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ragnar Granit", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Haldan Keffer Hartline", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "George Wald", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Miguel \u00c1ngel Asturias", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Luis Walter Alvarez", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Lars Onsager", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Robert W. Holley", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Har Gobind Khorana", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Marshall Warren Nirenberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Yasunari Kawabata", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Ren\u00e9 Cassin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Murray Gell-Mann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Derek Barton", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Odd Hassel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Max Delbr\u00fcck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Alfred Hershey", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Salvador Luria", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Samuel Beckett", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "International Labour Organization", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Ragnar Frisch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Jan Tinbergen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Hannes Alfv\u00e9n", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Louis N\u00e9el", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Luis Federico Leloir", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Julius Axelrod", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ulf von Euler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Bernard Katz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Aleksandr Solzhenitsyn", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Norman Borlaug", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Paul Samuelson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Dennis Gabor", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Gerhard Herzberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Earl Wilbur Sutherland Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Pablo Neruda", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Willy Brandt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Simon Kuznets", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Leon Cooper", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John Robert Schrieffer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Christian B. Anfinsen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Stanford Moore", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "William Howard Stein", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Gerald Edelman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Rodney Robert Porter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Heinrich B\u00f6ll", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "John Hicks", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Kenneth Arrow", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Leo Esaki", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Ivar Giaever", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Brian David Josephson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Ernst Otto Fischer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Geoffrey Wilkinson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Karl von Frisch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Konrad Lorenz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Nikolaas Tinbergen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Patrick White", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Henry Kissinger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Le Duc Tho [f]", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Wassily Leontief", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Martin Ryle", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Antony Hewish", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Paul Flory", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Albert Claude", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Christian de Duve", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "George Emil Palade", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Eyvind Johnson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Harry Martinson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Se\u00e1n MacBride", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Eisaku Sat\u014d", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Gunnar Myrdal", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Friedrich Hayek", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Aage Bohr", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Ben Roy Mottelson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "James Rainwater", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John Cornforth", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Vladimir Prelog", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "David Baltimore", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Renato Dulbecco", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Howard Martin Temin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Eugenio Montale", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Andrei Sakharov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Leonid Kantorovich", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Tjalling Koopmans", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Burton Richter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Samuel C. C. Ting", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "William Lipscomb", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Baruch Samuel Blumberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Daniel Carleton Gajdusek", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Saul Bellow", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Betty Williams", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Mairead Maguire", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Milton Friedman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Philip Warren Anderson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Nevill Francis Mott", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John Hasbrouck Van Vleck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Ilya Prigogine", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Roger Guillemin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Andrew Schally", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Rosalyn Sussman Yalow", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Vicente Aleixandre", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Amnesty International", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Bertil Ohlin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "James Meade", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Pyotr Kapitsa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Arno Allan Penzias", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Robert Woodrow Wilson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Peter D. Mitchell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Werner Arber", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Daniel Nathans", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Hamilton O. Smith", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Isaac Bashevis Singer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Anwar Sadat", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Menachem Begin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Herbert A. Simon", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Sheldon Lee Glashow", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Abdus Salam", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Steven Weinberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Herbert C. Brown", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Georg Wittig", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Allan McLeod Cormack", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Godfrey Hounsfield", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Odysseas Elytis", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Mother Teresa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Theodore Schultz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Arthur Lewis", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "James Cronin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Val Logsdon Fitch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Paul Berg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Walter Gilbert", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Baruj Benacerraf", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jean Dausset", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "George Davis Snell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Czes\u0142aw Mi\u0142osz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Adolfo P\u00e9rez Esquivel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Lawrence Klein", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Nicolaas Bloembergen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Arthur Leonard Schawlow", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Kai Siegbahn", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Kenichi Fukui", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Roald Hoffmann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Roger Wolcott Sperry", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "David H. Hubel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Torsten Wiesel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Elias Canetti", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "James Tobin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Kenneth G. Wilson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Aaron Klug", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Sune Bergstr\u00f6m", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Bengt I. Samuelsson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "John Vane", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Gabriel Garc\u00eda M\u00e1rquez", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Alva Myrdal", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Alfonso Garc\u00eda Robles", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "George Stigler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Subrahmanyan Chandrasekhar", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "William Alfred Fowler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Henry Taube", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Barbara McClintock", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "William Golding", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Lech Wa\u0142\u0119sa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "G\u00e9rard Debreu", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Carlo Rubbia", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Simon van der Meer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Robert Bruce Merrifield", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Niels Kaj Jerne", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Georges J. F. K\u00f6hler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "C\u00e9sar Milstein", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jaroslav Seifert", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Desmond Tutu", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Richard Stone", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Klaus von Klitzing", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Herbert A. Hauptman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Jerome Karle", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Michael Stuart Brown", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Joseph L. Goldstein", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Claude Simon", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "International Physicians for the Prevention of Nuclear War", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Franco Modigliani", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Ernst Ruska", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Gerd Binnig", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Heinrich Rohrer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Dudley R. Herschbach", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Yuan T. Lee", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "John Polanyi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Stanley Cohen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Rita Levi-Montalcini", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Wole Soyinka", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Elie Wiesel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "James M. Buchanan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Johannes Georg Bednorz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Karl Alexander M\u00fcller", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Donald J. Cram", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Jean-Marie Lehn", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Charles J. Pedersen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Susumu Tonegawa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Joseph Brodsky", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "\u00d3scar Arias", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert Solow", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Leon M. Lederman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Melvin Schwartz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Jack Steinberger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Johann Deisenhofer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Robert Huber", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Hartmut Michel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "James W. Black", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Gertrude B. Elion", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "George H. Hitchings", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Naguib Mahfouz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "United Nations Peace-Keeping Forces", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Maurice Allais", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Norman Ramsey Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Hans Georg Dehmelt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Wolfgang Paul", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Sidney Altman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Thomas Cech", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "J. Michael Bishop", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Harold E. Varmus", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Camilo Jos\u00e9 Cela", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Tenzin Gyatso (The 14th Dalai Lama)", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Trygve Haavelmo", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Jerome Isaac Friedman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Henry Way Kendall", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Richard E. Taylor", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Elias James Corey", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Joseph Murray", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "E. Donnall Thomas", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Octavio Paz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Mikhail Gorbachev", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Harry Markowitz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Merton Miller", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "William F. Sharpe", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Pierre-Gilles de Gennes", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Richard R. Ernst", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Erwin Neher", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Bert Sakmann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Nadine Gordimer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Aung San Suu Kyi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Ronald Coase", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Georges Charpak", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Rudolph A. Marcus", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Edmond H. Fischer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Edwin G. Krebs", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Derek Walcott", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Rigoberta Mench\u00fa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Gary Becker", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Russell Alan Hulse", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Joseph Hooton Taylor Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Kary Mullis", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Michael Smith", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Richard J. Roberts", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Phillip Allen Sharp", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Toni Morrison", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Nelson Mandela", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "F. W. de Klerk", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert Fogel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Douglass North", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Bertram Brockhouse", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Clifford Shull", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "George Andrew Olah", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Alfred G. Gilman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Martin Rodbell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Kenzabur\u014d \u014ce", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Yasser Arafat", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Shimon Peres", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Yitzhak Rabin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "John Harsanyi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "John Forbes Nash Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Reinhard Selten", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Martin Lewis Perl", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Frederick Reines", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Paul J. Crutzen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Mario J. Molina", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Frank Sherwood Rowland", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Edward B. Lewis", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Christiane N\u00fcsslein-Volhard", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Eric F. Wieschaus", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Seamus Heaney", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Joseph Rotblat", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Pugwash Conferences on Science and World Affairs", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert Lucas Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "David Lee", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Douglas Osheroff", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Robert Coleman Richardson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Robert F. Curl Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Harry Kroto", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Richard Smalley", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Peter C. Doherty", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Rolf M. Zinkernagel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Wis\u0142awa Szymborska", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Carlos Filipe Ximenes Belo", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Jos\u00e9 Ramos-Horta", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "James Mirrlees", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "William Vickrey", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Steven Chu", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Claude Cohen-Tannoudji", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "William Daniel Phillips", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Paul D. Boyer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "John E. Walker", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Jens Christian Skou", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Stanley B. Prusiner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Dario Fo", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "International Campaign to Ban Landmines", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Jody Williams", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert C. Merton", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Myron Scholes", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Robert B. Laughlin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Horst Ludwig St\u00f6rmer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Daniel C. Tsui", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Walter Kohn", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "John Pople", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Robert F. Furchgott", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Louis Ignarro", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ferid Murad", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jos\u00e9 Saramago", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "John Hume", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "David Trimble", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Amartya Sen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Gerard 't Hooft", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Martinus J. G. Veltman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Ahmed Zewail", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "G\u00fcnter Blobel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "G\u00fcnter Grass", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "M\u00e9decins Sans Fronti\u00e8res", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert Mundell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Jack Kilby", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Zhores Alferov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Herbert Kroemer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Alan J. Heeger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Alan MacDiarmid", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Hideki Shirakawa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Arvid Carlsson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Paul Greengard", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Eric Kandel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Gao Xingjian", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Kim Dae-jung", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "James Heckman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Daniel McFadden", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Eric Allin Cornell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Wolfgang Ketterle", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Carl Wieman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "William Standish Knowles", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ry\u014dji Noyori", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Karl Barry Sharpless", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry", "Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Leland H. Hartwell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Tim Hunt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Paul Nurse", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "V. S. Naipaul", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "United Nations", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Kofi Annan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "George Akerlof", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Michael Spence", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Joseph Stiglitz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Riccardo Giacconi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Raymond Davis Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Masatoshi Koshiba", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John Fenn", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Koichi Tanaka", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Kurt W\u00fcthrich", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Sydney Brenner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "H. Robert Horvitz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "John Sulston", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Imre Kert\u00e9sz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Jimmy Carter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Daniel Kahneman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Vernon L. Smith", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Alexei Alexeyevich Abrikosov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Vitaly Ginzburg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Anthony James Leggett", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Peter Agre", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Roderick MacKinnon", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Paul Lauterbur", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Peter Mansfield", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "J. M. Coetzee", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Shirin Ebadi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert F. Engle", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Clive Granger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "David Gross", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Hugh David Politzer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Frank Wilczek", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Aaron Ciechanover", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Avram Hershko", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Irwin Rose", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Richard Axel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Linda B. Buck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Elfriede Jelinek", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Wangari Maathai", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Finn E. Kydland", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Edward C. Prescott", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Roy J. Glauber", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John L. Hall", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Theodor W. H\u00e4nsch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Yves Chauvin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Robert H. Grubbs", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Richard R. Schrock", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Barry Marshall", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Robin Warren", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Harold Pinter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "International Atomic Energy Agency", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Mohamed ElBaradei", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Robert Aumann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Thomas Schelling", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "John C. Mather", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "George Smoot", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Roger D. Kornberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Andrew Fire", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Craig Mello", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Orhan Pamuk", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Muhammad Yunus", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Grameen Bank", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Edmund Phelps", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Albert Fert", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Peter Gr\u00fcnberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Gerhard Ertl", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Mario Capecchi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Martin Evans", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Oliver Smithies", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Doris Lessing", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Intergovernmental Panel on Climate Change", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Al Gore", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Leonid Hurwicz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Eric Maskin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Roger Myerson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Yoichiro Nambu", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Makoto Kobayashi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Toshihide Maskawa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Osamu Shimomura", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Martin Chalfie", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Roger Y. Tsien", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Harald zur Hausen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Fran\u00e7oise Barr\u00e9-Sinoussi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Luc Montagnier", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "J. M. G. Le Cl\u00e9zio", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Martti Ahtisaari", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Paul Krugman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Charles K. Kao", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Willard S. Boyle", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "George E. Smith", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Venkatraman Ramakrishnan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Thomas A. Steitz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ada Yonath", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Elizabeth Blackburn", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Carol W. Greider", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jack W. Szostak", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Herta M\u00fcller", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Barack  Obama", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Elinor Ostrom", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Oliver E. Williamson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Andre Geim", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Konstantin Novoselov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Richard F. Heck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ei-ichi Negishi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Akira Suzuki", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Robert G. Edwards", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Mario Vargas Llosa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Liu Xiaobo [g]", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Peter A. Diamond", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Dale T.  Mortensen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Christopher A.  Pissarides", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Saul Perlmutter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Adam G. Riess", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Brian Schmidt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Dan Shechtman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Bruce Beutler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jules A. Hoffmann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ralph M.  Steinman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Tomas Transtr\u00f6mer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Ellen Johnson Sirleaf", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Leymah Gbowee", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Tawakel Karman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Thomas J. Sargent", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Christopher A. Sims", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Serge Haroche", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "David  J. Wineland", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Brian K. Kobilka", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Robert J. Lefkowitz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "John B. Gurdon", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Shinya Yamanaka", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Mo Yan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "European Union", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Alvin E. Roth", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Lloyd S. Shapley", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Fran\u00e7ois Englert", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Peter W. Higgs", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Martin Karplus", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Michael Levitt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Arieh Warshel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "James E. Rothman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Randy W. Schekman", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Thomas C. S\u00fcdhof", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Alice Munro", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Organisation for the Prohibition of Chemical Weapons", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Eugene F. Fama", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Lars Peter Hansen", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Robert J. Shiller", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Isamu Akasaki", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Hiroshi Amano", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Shuji Nakamura", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Eric Betzig", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Stefan Hell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "William Moerner", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "John O'Keefe", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "May-Britt Moser", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Edvard  Moser", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Patrick Modiano", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Kailash Satyarthi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Malala Yousafzai", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Jean Tirole", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Takaaki Kajita", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Arthur B. McDonald", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Tomas Lindahl", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Paul L. Modrich", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Aziz Sancar", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "William C. Campbell", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Satoshi \u014cmura", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Tu Youyou", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Svetlana Alexievich", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Tunisian National Dialogue Quartet", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Angus Deaton", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "David J. Thouless", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Duncan Haldane", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John M. Kosterlitz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Jean-Pierre Sauvage", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Fraser Stoddart", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Ben Feringa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Yoshinori Ohsumi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Bob Dylan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Juan Manuel Santos", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Oliver Hart", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Bengt R. Holmstr\u00f6m", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Rainer Weiss", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Barry Barish", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Kip Thorne", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Jacques Dubochet", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Joachim Frank", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Richard Henderson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Jeffrey C. Hall", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Michael Rosbash", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Michael W. Young", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Kazuo Ishiguro", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "International Campaign to Abolish Nuclear Weapons", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Richard Thaler", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Arthur Ashkin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "G\u00e9rard Mourou", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Donna Strickland", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Frances H. Arnold", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "George P. Smith", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Greg Winter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "James P. Allison", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Tasuku Honjo", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Olga Tokarczuk[h]", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Denis Mukwege", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Nadia Murad", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "William Nordhaus", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Paul Romer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "James Peebles", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Michel Mayor", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Didier Queloz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John B. Goodenough", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "M. Stanley Whittingham", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Akira Yoshino", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "William Kaelin Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Peter J. Ratcliffe", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Gregg L. Semenza", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Peter Handke", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Abiy Ahmed", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Abhijit Banerjee", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Esther Duflo", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Michael Kremer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Roger Penrose", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Reinhard Genzel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Andrea M. Ghez", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Emmanuelle Charpentier", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Jennifer Doudna", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Harvey J. Alter", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Michael Houghton", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Charles M. Rice", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Louise Gl\u00fcck", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "World Food Programme", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Paul R. Milgrom", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Robert B. Wilson", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Giorgio Parisi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Klaus Hasselmann", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Syukuro Manabe", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Benjamin List", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "David MacMillan", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "David Julius", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ardem Patapoutian", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Abdulrazak Gurnah", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Maria Ressa", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Dmitry Muratov", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "David Card", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Joshua D. Angrist", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Guido W. Imbens", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Alain Aspect", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John Clauser", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Anton Zeilinger", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Carolyn R. Bertozzi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Morten P. Meldal", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Svante P\u00e4\u00e4bo", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Annie Ernaux", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Ales Bialiatski", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Memorial", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Centre for Civil Liberties", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Ben S. Bernanke", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Douglas W. Diamond", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Philip H. Dybvig", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
+{"SubjectEntity": "Physics", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Chemistry", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Physiologyor Medicine", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Literature", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Peace", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Economics", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize for Economics"]}
