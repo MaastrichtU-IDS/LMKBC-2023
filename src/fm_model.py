@@ -775,14 +775,14 @@ def adaptive_threshold():
         best_topk_dict[relation] = [best_threshold,best_f1] 
         origin_result_dict[relation]["best_threshold"]=best_threshold
         origin_result_dict[relation]["best_f1"]=best_f1
-        origin_result_dict[relation]["best_precision"]=best_precision
-        origin_result_dict[relation]["best_recal"]=best_recal
-        origin_result_dict[relation]["origin_threshold"]=origin_threshold
+        #origin_result_dict[relation]["best_precision"]=best_precision
+        #origin_result_dict[relation]["best_recal"]=best_recal
+        #origin_result_dict[relation]["origin_threshold"]=origin_threshold
     
 
     origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
-    origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
-    origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    #origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    #origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
     result_dict = {
         "args":args.__dict__,
         "metric":origin_result_dict

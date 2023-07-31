@@ -124,7 +124,8 @@ class PreFM_wiki_Dataset(Dataset):
             random.shuffle(entity_index_ids)
             if 'fold' in args.mask_strategy:
                 select_index_list = self._mask_random(entity_index_ids)
-            elif 'single' in args.mask_strategy
+            elif 'single' in args.mask_strategy:
+                select_index_list = self._mask_random_single(entity_index_ids)
             else:
                 select_index_list =[random.sample(range(1,len(input_ids)-1), 0.15*len(input_ids))]
 
@@ -133,7 +134,7 @@ class PreFM_wiki_Dataset(Dataset):
                 print("input_tokens",tokenizer.convert_ids_to_tokens(input_ids))
             if len(input_ids) > max_length:
                 max_length = len(input_ids)
-                print("row",row)
+                #print("row",row)
          
             for mask_index in select_index_list:
                 # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
@@ -163,8 +164,9 @@ class PreFM_wiki_Dataset(Dataset):
         return select_index_list
     
     def _mask_random_single(self, entity_index_ids):
+        
         mask_size = max(1, len(entity_index_ids)//5)
-        select_index_list =[random.sample(entity_index_ids, mask_size]
+        select_index_list =[random.sample(entity_index_ids, mask_size)]
         return select_index_list
     
 
