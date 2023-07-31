@@ -14,7 +14,9 @@ task = "pretrain_fill-mask"
 print(torch.cuda.is_available())
 model_save_dir = f"{config.BIN_DIR}/{task}/{pretrain_model_name}"
 # final_corpus_fn = f"{config.RES_DIR}/additional_corpus/fm_pretrain_2.txt"
-final_corpus_fn = f"{config.RES_DIR}/wikidata/sentence_filter_entity_size.json"
+final_corpus_fn = f"{config.RES_DIR}/wikidata/no_person_serises/filter.json"
+
+# res/wikidata/no_person_serises/filter.json
 model_best_dir = model_save_dir+'/best_ckpt'
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
@@ -22,7 +24,7 @@ if not os.path.exists(model_save_dir):
     os.makedirs(model_save_dir)
 
 # model_load_dir = f'{model_save_dir}/best_ckpt'
-model_load_dir = config.bert_large_cased
+model_load_dir = config.bert_base_cased
 
 
 def run():

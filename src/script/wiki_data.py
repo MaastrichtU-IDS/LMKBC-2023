@@ -163,7 +163,7 @@ def tokenize_dataset():
         token_list = []
         sentence_array = [] 
         for sentence in sentence_list:
-            # sentence = sentence.replace('\n',' ')
+            sentence = sentence.replace('\n',' ')
             string_one_space = re_multiple_space.sub(' ', sentence)
             tokens = enhance_tokenizer.tokenize(string_one_space)
             token_list.append(tokens)
@@ -195,10 +195,12 @@ def filter_dataset():
                 result.append(False)
                 continue
             entities = set([e for e in entities])
-            min_count = min([entity_dict[e] for e in entities])
+            min_count = min([entity_dict[e]  if e in entity_dict else 100 for e in entities])
+            entity_count = len([e  for e in entities if e in entity_dict])
             if  min_count < 10:
                 for e in entities:
-                    entity_dict[e]+=1
+                    if e in entity_dict:
+                        entity_dict[e]+=1
                 result.append(True)
             else:
                 result.append(False)
@@ -322,7 +324,7 @@ def test_tokenizer():
 if __name__ == "__main__":
     wiki_pipeline()
     # tree_test()
-    # display_entityd_distribution()
+    # display_entity_distribution()
     # test_unicode()
     # test_tokenizer()
 
