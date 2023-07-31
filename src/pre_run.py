@@ -34,7 +34,7 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu  0  --train_epoch 10 --learning_rate 3e-5   --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
+   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu  0  --train_epoch 10 --learning_rate 3e-5  --mask_strategy single  --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
 
 
     """
