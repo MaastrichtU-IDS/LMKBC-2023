@@ -5,8 +5,8 @@
 {"SubjectEntity": "Montblanc", "ObjectEntities": ["Richemont"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Urban Decay", "ObjectEntities": ["L\u2019Or\u00e9al"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "ASCII Media Works", "ObjectEntities": ["Kadokawa Group Holdings"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "His Master's Voice", "ObjectEntities": ["Warner Music Group", "EMI", "RCA Records", "JVC"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "ActewAGL", "ObjectEntities": ["AGL Energy", "Jemena", "Government of the Australian Capital Territory"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "His Master's Voice", "ObjectEntities": ["EMI", "Warner Music Group", "JVC", "RCA Records"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ActewAGL", "ObjectEntities": ["Government of the Australian Capital Territory", "AGL Energy", "Jemena"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Sukhoi Design Bureau", "ObjectEntities": ["Sukhoi"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Alipay", "ObjectEntities": ["Alibaba Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Nadeo", "ObjectEntities": ["Ubisoft"], "Relation": "CompanyHasParentOrganisation"}
@@ -16,7 +16,7 @@
 {"SubjectEntity": "Viz Media", "ObjectEntities": ["Shogakukan"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Gazprom Armenia", "ObjectEntities": ["Gazprom"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "TNT", "ObjectEntities": ["Gazprom-Media"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Citibank Berhad", "ObjectEntities": ["Citigroup", "Citibank"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Citibank Berhad", "ObjectEntities": ["Citibank", "Citigroup"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "R&R Ice Cream Deutschland", "ObjectEntities": ["Froneri"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "ArcelorMittal Ghent", "ObjectEntities": ["ArcelorMittal (Belgium)"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Rothmans, Benson & Hedges", "ObjectEntities": ["Philip Morris International"], "Relation": "CompanyHasParentOrganisation"}
@@ -48,7 +48,7 @@
 {"SubjectEntity": "Hot", "ObjectEntities": ["Altice Europe"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Ports of Auckland", "ObjectEntities": ["Auckland Council"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "KS-Europe", "ObjectEntities": ["Otto Group"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Simon & Schuster", "ObjectEntities": ["CBS Corporation", "Viacom", "Gulf and Western Industries", "Paramount Communications", "Paramount Global"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Simon & Schuster", "ObjectEntities": ["Viacom", "Gulf and Western Industries", "Paramount Communications", "Paramount Global", "CBS Corporation"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q1801213", "ObjectEntities": ["RAL Deutsches Institut f\u00fcr G\u00fctesicherung und Kennzeichnung"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Vitaphone", "ObjectEntities": ["Warner Bros."], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Watcom", "ObjectEntities": ["Sybase"], "Relation": "CompanyHasParentOrganisation"}
@@ -95,7 +95,7 @@
 {"SubjectEntity": "Hannaux Benzion", "ObjectEntities": ["Q20419516"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Moldovagaz", "ObjectEntities": ["Gazprom"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "EVN", "ObjectEntities": ["EVN Group"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Virgin Voyages", "ObjectEntities": ["Virgin Group", "Bain Capital"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Virgin Voyages", "ObjectEntities": ["Bain Capital", "Virgin Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Flagler Global Logistics", "ObjectEntities": ["Florida East Coast Industries"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "MileIQ", "ObjectEntities": ["Microsoft"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Finsbury", "ObjectEntities": ["WPP plc"], "Relation": "CompanyHasParentOrganisation"}
@@ -105,15 +105,15 @@
 {"SubjectEntity": "New Classics Media", "ObjectEntities": ["Tencent"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "BizBooks", "ObjectEntities": ["Albatros Media"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Fight Nights Global", "ObjectEntities": ["Ziyavudin Magomedov"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "GDH 559", "ObjectEntities": ["GMM Grammy", "Hub Ho Hin Bangkok"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Barclay", "ObjectEntities": ["Universal Music Group", "Universal Music France", "PolyGram S.A. France"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "GDH 559", "ObjectEntities": ["Hub Ho Hin Bangkok", "GMM Grammy"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Barclay", "ObjectEntities": ["PolyGram S.A. France", "Universal Music Group", "Universal Music France"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Volgograd Tractor Factory", "ObjectEntities": ["Rostec"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Wissenschaft im Dialog", "ObjectEntities": ["B\u00fcrger schaffen Wissen"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Telecoms & Internet converged Services & Protocols for Advanced Networks", "ObjectEntities": ["European Telecommunications Standards Institute"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "International Bills Finance Corporation", "ObjectEntities": ["IBF Financial Holdings"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Praxis", "ObjectEntities": ["Maxeda"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Adventures by Disney", "ObjectEntities": ["Disneyland, Inc."], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Autostrade per l'Italia", "ObjectEntities": ["Atlantia S.p.A.", "Istituto per la Ricostruzione Industriale"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Autostrade per l'Italia", "ObjectEntities": ["Istituto per la Ricostruzione Industriale", "Atlantia S.p.A."], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Neviot", "ObjectEntities": ["The Central Bottling Company"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Penguin Random House", "ObjectEntities": ["Bertelsmann"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Carello", "ObjectEntities": ["Magneti Marelli"], "Relation": "CompanyHasParentOrganisation"}
@@ -139,7 +139,7 @@
 {"SubjectEntity": "Q3964909", "ObjectEntities": ["Eni"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Barclays Global Investors", "ObjectEntities": ["Barclays"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Parke-Davis", "ObjectEntities": ["Pfizer", "Warner\u2013Lambert"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Polestar", "ObjectEntities": ["Volvo Cars", "Geely"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Polestar", "ObjectEntities": ["Geely", "Volvo Cars"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Transvision", "ObjectEntities": ["Trans Corp", "CT Corpora"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Lenhydroproject", "ObjectEntities": ["RusHydro"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "First North", "ObjectEntities": ["Nasdaq, Inc. ICR nasdaq data factory"], "Relation": "CompanyHasParentOrganisation"}
@@ -158,7 +158,7 @@
 {"SubjectEntity": "Carlton & United Breweries", "ObjectEntities": ["SABMiller"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "China Railway Chengdu Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Crossword Bookstores", "ObjectEntities": ["Shoppers Stop"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Cyber University", "ObjectEntities": ["SoftBank Group", "\u5225"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Cyber University", "ObjectEntities": ["\u5225", "SoftBank Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Cypress Communications", "ObjectEntities": ["Arcapita"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "DiscoVision", "ObjectEntities": ["MCA Inc."], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Disney Character Voices International", "ObjectEntities": ["The Walt Disney Company"], "Relation": "CompanyHasParentOrganisation"}
@@ -174,7 +174,7 @@
 {"SubjectEntity": "Homelite Corporation", "ObjectEntities": ["Techtronic Industries"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "China Railway Jinan Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "China Railway Shanghai Group", "ObjectEntities": ["China State Railway Group"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "I. Magnin", "ObjectEntities": ["Bullock's", "Federated Department Stores"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "I. Magnin", "ObjectEntities": ["Federated Department Stores", "Bullock's"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "ImageAmerica", "ObjectEntities": ["Google"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "InSinkErator", "ObjectEntities": ["Emerson Electric"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Jack & Jones", "ObjectEntities": ["Bestseller"], "Relation": "CompanyHasParentOrganisation"}
@@ -214,7 +214,7 @@
 {"SubjectEntity": "BrickLink", "ObjectEntities": ["The Lego Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Golden Moustache", "ObjectEntities": ["M6 Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Tanganyika Concessions Limited", "ObjectEntities": ["Zambesia Exploring"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Grant Prideco", "ObjectEntities": ["Weatherford International", "National Oilwell Varco"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Grant Prideco", "ObjectEntities": ["National Oilwell Varco", "Weatherford International"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Rock 'n Roll Records", "ObjectEntities": ["Warner Music Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Wufoo", "ObjectEntities": ["SurveyMonkey"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Zubaan", "ObjectEntities": ["Kali for Women"], "Relation": "CompanyHasParentOrganisation"}
@@ -312,7 +312,7 @@
 {"SubjectEntity": "Teraju", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Policybazaar", "ObjectEntities": ["PB Fintech Ltd"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q55650336", "ObjectEntities": ["Zoko enterprises"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Granite Hacarmel Investments Ltd.", "ObjectEntities": ["Azrieli Group Ltd", "Supergas Energy Ltd"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Granite Hacarmel Investments Ltd.", "ObjectEntities": ["Supergas Energy Ltd", "Azrieli Group Ltd"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "MTR Company (Macau)", "ObjectEntities": ["MTR Corporation Limited"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Mluvii", "ObjectEntities": ["O2 Czech Republic"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Eurosoftware", "ObjectEntities": ["GK SOFTWARE AG"], "Relation": "CompanyHasParentOrganisation"}
@@ -342,7 +342,7 @@
 {"SubjectEntity": "Servelec", "ObjectEntities": ["The Access Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Cadbury Nigeria Plc", "ObjectEntities": ["Mondelez International"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "ASC Shipbuilding", "ObjectEntities": ["BAE Systems Australia"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "McDonald's Philippines", "ObjectEntities": ["McDonald\u2019s", "Alliance Global Group"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "McDonald's Philippines", "ObjectEntities": ["Alliance Global Group", "McDonald\u2019s"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q60841092", "ObjectEntities": ["La Fondiaria Assicurazioni"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q60841636", "ObjectEntities": ["La Fondiaria Assicurazioni"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Lloyd Italico", "ObjectEntities": ["Assicurazioni Generali"], "Relation": "CompanyHasParentOrganisation"}
@@ -373,7 +373,7 @@
 {"SubjectEntity": "Parler", "ObjectEntities": ["Starboard"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Setrag", "ObjectEntities": ["Compagnie mini\u00e8re de l'Ogoou\u00e9"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Heimanuta", "ObjectEntities": ["Jewish National Fund"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Moviefone", "ObjectEntities": ["AOL", "MoviePass"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Moviefone", "ObjectEntities": ["MoviePass", "AOL"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "N.Y.D. Company", "ObjectEntities": ["New York Dock Company"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Dori Media", "ObjectEntities": ["Dori Media Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Old London Foods", "ObjectEntities": ["B&G Foods"], "Relation": "CompanyHasParentOrganisation"}
@@ -439,7 +439,7 @@
 {"SubjectEntity": "Kvartal", "ObjectEntities": ["Q30966105"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Snowcrest Israel", "ObjectEntities": ["Tnuva"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q25491358", "ObjectEntities": ["Knauf"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "TMoment", "ObjectEntities": ["Tai Entertainment", "Mono Technology"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "TMoment", "ObjectEntities": ["Mono Technology", "Tai Entertainment"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Kostafilm", "ObjectEntities": ["Yellow, Black and White"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Fushun Special Steel", "ObjectEntities": ["Dongbei Special Steel"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Interamerican", "ObjectEntities": ["Achmea Bank"], "Relation": "CompanyHasParentOrganisation"}
@@ -462,7 +462,7 @@
 {"SubjectEntity": "Factoring \u010cesk\u00e9 spo\u0159itelny", "ObjectEntities": ["\u010cesk\u00e1 spo\u0159itelna"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Realitn\u00ed spole\u010dnost \u010cesk\u00e9 spo\u0159itelny", "ObjectEntities": ["\u010cesk\u00e1 spo\u0159itelna"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "ResMed (Australia)", "ObjectEntities": ["ResMed"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Yahoo Inc.", "ObjectEntities": ["Verizon", "Apollo Global Management"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Yahoo Inc.", "ObjectEntities": ["Apollo Global Management", "Verizon"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Aeolus Tyre", "ObjectEntities": ["ChemChina"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Metabiota", "ObjectEntities": ["Metabiota (Cameroon)"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Jensen Hughes", "ObjectEntities": ["Gryphon Investors"], "Relation": "CompanyHasParentOrganisation"}
@@ -549,7 +549,7 @@
 {"SubjectEntity": "Evergrande (marque)", "ObjectEntities": ["Evergrande Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "BAE Systems H\u00e4gglunds", "ObjectEntities": ["BAE Systems AB"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "BAE Systems Bofors", "ObjectEntities": ["BAE Systems AB"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Bravo Savings Network", "ObjectEntities": ["BravoSconto.it", "BravoGutschein.de", "BravoPromo.fr", "BravoDescuento.es", "BravoKupony.pl", "BravoDeal.com", "BravoVoucher.co.uk"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bravo Savings Network", "ObjectEntities": ["BravoSconto.it", "BravoDeal.com", "BravoKupony.pl", "BravoPromo.fr", "BravoGutschein.de", "BravoDescuento.es", "BravoVoucher.co.uk"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "EY-Parthenon", "ObjectEntities": ["Ernst & Young"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Wikimedia, LLC", "ObjectEntities": ["Wikimedia Foundation"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Eagle Printing Ink Company", "ObjectEntities": ["Sun Chemical"], "Relation": "CompanyHasParentOrganisation"}
@@ -566,7 +566,7 @@
 {"SubjectEntity": "Q106879264", "ObjectEntities": ["STC Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Astex Pharmaceuticals", "ObjectEntities": ["Otsuka Pharmaceutical"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Chevron Lubricants Lanka", "ObjectEntities": ["Chevron Corporation"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Starschema", "ObjectEntities": ["HCL Enterprise", "HCL Technologies"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Starschema", "ObjectEntities": ["HCL Technologies", "HCL Enterprise"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Voyah", "ObjectEntities": ["Dongfeng Motor Corporation"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Hotcool Technology", "ObjectEntities": ["Rekoo"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Ubisoft CRC", "ObjectEntities": ["Ubisoft"], "Relation": "CompanyHasParentOrganisation"}
@@ -574,7 +574,7 @@
 {"SubjectEntity": "First Hungarian Type Foundry", "ObjectEntities": ["Stempel Type Foundry"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "United Biomedical, Inc., Asia", "ObjectEntities": ["United Biomedical Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Binari Sonori", "ObjectEntities": ["Keywords Studios"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Bagley Argentina S.A.", "ObjectEntities": ["Danone", "Grupo Arcor"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Bagley Argentina S.A.", "ObjectEntities": ["Grupo Arcor", "Danone"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Cartocor", "ObjectEntities": ["Grupo Arcor"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Leighton Contractors (Asia) Limited", "ObjectEntities": ["Leighton Asia"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Sony Semiconductor Solutions Corporation", "ObjectEntities": ["Sony Group"], "Relation": "CompanyHasParentOrganisation"}
@@ -709,7 +709,7 @@
 {"SubjectEntity": "Syria Stream", "ObjectEntities": ["Syria TV"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Canon Computer Systems", "ObjectEntities": ["Canon Inc."], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Shriram Properties", "ObjectEntities": ["Shriram Group"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Adani Wilmar", "ObjectEntities": ["Wilmar International", "Adani Enterprises"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Adani Wilmar", "ObjectEntities": ["Adani Enterprises", "Wilmar International"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "ICICIdirect", "ObjectEntities": ["ICICI Bank"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Incepta Vaccine Limited", "ObjectEntities": ["Incepta Pharmaceuticals"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Malakat Mall", "ObjectEntities": ["Malakat Eco Group"], "Relation": "CompanyHasParentOrganisation"}
@@ -718,7 +718,7 @@
 {"SubjectEntity": "LocalTak", "ObjectEntities": ["ASHAS"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Quearn", "ObjectEntities": ["ASHAS"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Sibyl", "ObjectEntities": ["Epik"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Praktiker", "ObjectEntities": ["Praktiker", "Technopolis"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Praktiker", "ObjectEntities": ["Technopolis", "Praktiker"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "General Re Corporation", "ObjectEntities": ["Berkshire Hathaway"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "General Reinsurance Corporation", "ObjectEntities": ["General Re Corporation"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "General Reinsurance AG", "ObjectEntities": ["General Re Corporation"], "Relation": "CompanyHasParentOrganisation"}
@@ -767,7 +767,7 @@
 {"SubjectEntity": "livedoor", "ObjectEntities": ["Minkabu The Infonoid, Inc."], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q113537070", "ObjectEntities": ["Malaysian Prime Minister's Department", "Q113537149"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q113537149", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "Q113537154", "ObjectEntities": ["Companies Commission of Malaysia", "Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "Q113537154", "ObjectEntities": ["Malaysian Prime Minister's Department", "Companies Commission of Malaysia"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q113537163", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q113537166", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q113537168", "ObjectEntities": ["Malaysian Prime Minister's Department"], "Relation": "CompanyHasParentOrganisation"}
@@ -811,6 +811,6 @@
 {"SubjectEntity": "Foundry", "ObjectEntities": ["Digital Currency Group"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "TradeBlock", "ObjectEntities": ["CoinDesk"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "HQ", "ObjectEntities": ["Digital Currency Group"], "Relation": "CompanyHasParentOrganisation"}
-{"SubjectEntity": "ATFX Connect", "ObjectEntities": ["ATFX", "AT Global Markets"], "Relation": "CompanyHasParentOrganisation"}
+{"SubjectEntity": "ATFX Connect", "ObjectEntities": ["AT Global Markets", "ATFX"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Payperse", "ObjectEntities": ["fleksa"], "Relation": "CompanyHasParentOrganisation"}
 {"SubjectEntity": "Q116724819", "ObjectEntities": ["Mitsui & Co."], "Relation": "CompanyHasParentOrganisation"}

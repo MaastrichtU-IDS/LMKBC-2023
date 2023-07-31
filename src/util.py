@@ -20,20 +20,23 @@ if os.path.exists(local_cache_path):
 
 
 # Disambiguation baseline
-def disambiguation_baseline(item):
-    if item in local_cache:
-        return local_cache[item]
+def disambiguation_baseline(entity_label):
+    if entity_label in local_cache:
+        return local_cache[entity_label]
     try:
-        url = f"https://www.wikidata.org/w/api.php?action=wbsearchentities&search={item}&language=en&format=json"
+        url = f"https://www.wikidata.org/w/api.php?action=wbsearchentities&search={entity_label}&language=en&format=json"
         data = requests.get(url).json()
         # Return the first id (Could upgrade this in the future)
         first_id = data['search'][0]['id']
-        local_cache[item] = first_id
-        with open(local_cache_path, "w") as f:
-            json.dump(local_cache, f)
+        local_cache[entity_label] = first_id
         return first_id
     except:
-        return item
+        return entity_label
+    
+def save_entity_id():
+    with open(local_cache_path, "w") as f:
+        json.dump(local_cache, f, indent = 2)
+
 
 
 # Read prompt templates from a CSV file

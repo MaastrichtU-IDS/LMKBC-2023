@@ -53,7 +53,7 @@ for key in entity_set:
     entity_dict[key] = 0
 
 
-label= "no_person"
+label= "no_person_serises"
 origin_dir  = f'{config.RES_DIR}/wikidata/origin'
 
 if not os.path.exists( f'{config.RES_DIR}/wikidata/{label}'):
@@ -196,7 +196,7 @@ def filter_dataset():
                 continue
             entities = set([e for e in entities])
             min_count = min([entity_dict[e] for e in entities])
-            if  min_count < 20:
+            if  min_count < 10:
                 for e in entities:
                     entity_dict[e]+=1
                 result.append(True)
@@ -284,13 +284,13 @@ def wiki_pipeline():
     # split_sentence()
     # flatten sentences into records
     print("start flatten dataset")
-    data_flatten()
+    # data_flatten()
     # sort the sentence desc according to entities
     print("start sorting  according entity size")
-    sort_dataset()
+    # sort_dataset()
 
     print("start tokenizing sentence ")
-    tokenize_dataset()
+    # tokenize_dataset()
     
     # calibrate  
     print("start filtering long sentence ")
@@ -299,7 +299,7 @@ def wiki_pipeline():
     print("start exporting json file ")
     export_dataset()
 
-    # display_entity_distribution()
+    display_entity_distribution()
 
 
 def tree_test():
@@ -312,10 +312,17 @@ def test_unicode():
     normal_title = title.encode('utf8').decode('unicode-escape')
     print(normal_title)
 
+def test_tokenizer():
+    tokens = ['0','1','adsfsd']
+    ids = enhance_tokenizer.convert_tokens_to_ids(tokens)
+    print(ids)
+    print(enhance_tokenizer.convert_ids_to_tokens(ids))
+
 
 if __name__ == "__main__":
-    # wiki_pipeline()
+    wiki_pipeline()
     # tree_test()
-    display_entity_distribution()
+    # display_entityd_distribution()
     # test_unicode()
+    # test_tokenizer()
 

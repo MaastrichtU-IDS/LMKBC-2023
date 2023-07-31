@@ -100,9 +100,9 @@
 {"SubjectEntity": "Raymond Four", "ObjectEntities": ["World War I"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Algernon Charles Swinburne", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Didier Ratsiraka", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Karl Becker", "ObjectEntities": ["influenza", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Karl Becker", "ObjectEntities": ["cancer", "influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Abhakara Kiartivongse", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Robert Anderson", "ObjectEntities": ["influenza", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Robert Anderson", "ObjectEntities": ["cancer", "influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Osborne Reynolds", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Tanikaze Kajinosuke", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "A. Piatt Andrew", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
@@ -175,7 +175,7 @@
 {"SubjectEntity": "Joe Hall", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jack MacGowran", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Harry Anderson", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Vittorio Alfieri", "ObjectEntities": ["influenza", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Vittorio Alfieri", "ObjectEntities": ["myocardial infarction", "influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jack Caffery", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George Bent", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George Raymond Dallas Moor", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
@@ -314,7 +314,7 @@
 {"SubjectEntity": "Estelita Rodriguez", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Willem van Konijnenburg", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Frederick Cayley Robinson", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "George Kennedy", "ObjectEntities": ["influenza", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "George Kennedy", "ObjectEntities": ["myocardial infarction", "influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Georges Victor Antoine Gratet-Duplessis", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Gloria Grey", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Gustavus Cheyney Doane", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
@@ -322,7 +322,7 @@
 {"SubjectEntity": "Henry Ragas", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Hippolyte Morestin", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jean-Baptiste Berger", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John T. Ford", "ObjectEntities": ["influenza", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John T. Ford", "ObjectEntities": ["myocardial infarction", "influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Monna Delza", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Rafael Bol\u00edvar Coronado", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Q3563901", "ObjectEntities": ["influenza"], "Relation": "PersonCauseOfDeath"}
@@ -404,7 +404,7 @@
 {"SubjectEntity": "Rosa Lobato de Faria", "ObjectEntities": ["anemia"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Constance Worth", "ObjectEntities": ["anemia"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Adam Beck", "ObjectEntities": ["anemia"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Simon Monjack", "ObjectEntities": ["anemia", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Simon Monjack", "ObjectEntities": ["myocardial infarction", "anemia"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Levi Knight Fuller", "ObjectEntities": ["anemia"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Peter Zezel", "ObjectEntities": ["anemia"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Girolamo Maria Gotti", "ObjectEntities": ["anemia"], "Relation": "PersonCauseOfDeath"}
@@ -780,7 +780,7 @@
 {"SubjectEntity": "Istv\u00e1n Sz\u00e1szy", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Palma Guill\u00e9n y S\u00e1nchez", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "J\u00fcrgen Moll", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John Nicholson", "ObjectEntities": ["traffic collision", "traffic collision"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John Nicholson", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paolo Barison", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Enrico Sabbatini", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "L\u00e1szl\u00f3 Toller", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
@@ -1355,7 +1355,7 @@
 {"SubjectEntity": "St\u00e5le Hoff", "ObjectEntities": ["multiple sclerosis"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Norman P. Barry", "ObjectEntities": ["multiple sclerosis"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Edith Whetnall", "ObjectEntities": ["myasthenia gravis"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Ben Davidson", "ObjectEntities": ["myasthenia gravis", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Ben Davidson", "ObjectEntities": ["cancer", "myasthenia gravis"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Larry Tucker", "ObjectEntities": ["multiple sclerosis", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paris Theodore", "ObjectEntities": ["multiple sclerosis"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Luigi Gozzi", "ObjectEntities": ["multiple sclerosis"], "Relation": "PersonCauseOfDeath"}
@@ -2914,7 +2914,7 @@
 {"SubjectEntity": "Q7939568", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Oskar Berkowicz", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "W\u0142adys\u0142aw Jagusztyn", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Tadeusz Kunicki", "ObjectEntities": ["traffic collision", "traffic collision"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Tadeusz Kunicki", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Zygmunt \u0141akomiec", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Lucjan Szenwald", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Marek Lusztig", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
@@ -3159,7 +3159,7 @@
 {"SubjectEntity": "Robert Busnel", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pierre Jacobsen", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pierre Lacans", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Pierre Michelin", "ObjectEntities": ["traffic collision", "traffic collision"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Pierre Michelin", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pierre Rinaldi", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pierre Scize", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pio H. Laporte", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
@@ -5035,7 +5035,7 @@
 {"SubjectEntity": "Alvin Dark", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Andr\u00e9 Quilis", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Andr\u00e9e Debar", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Tony Booth", "ObjectEntities": ["Alzheimer's disease", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Tony Booth", "ObjectEntities": ["cancer", "Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Aracy de Carvalho Guimar\u00e3es Rosa", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Audrey Callaghan, Baroness Callaghan of Cardiff", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Amos Kenan", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
@@ -5618,13 +5618,13 @@
 {"SubjectEntity": "Forrest Gregg", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Osbert Sitwell", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Houbolt", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Bill Dana", "ObjectEntities": ["Parkinson's disease", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Bill Dana", "ObjectEntities": ["disease", "Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paul Fussell", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "William Vance", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Fernand Nault", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Fitzhugh L. Fulton", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George Jonas", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Peter Brown", "ObjectEntities": ["Parkinson's disease", "Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Peter Brown", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "William Boyd", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Santiago \u00c1lvarez", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George Coulouris", "ObjectEntities": ["Parkinson's disease", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -6436,7 +6436,7 @@
 {"SubjectEntity": "Jocelyn Newman", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John David Wilson", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Hermon", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John Hill", "ObjectEntities": ["Alzheimer's disease", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John Hill", "ObjectEntities": ["cancer", "Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Jay O'Connor", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Mantley", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Noakes", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
@@ -6647,7 +6647,7 @@
 {"SubjectEntity": "Michael DeBose", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michael Fainstat", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michael Hurll", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Michael Jackson", "ObjectEntities": ["Parkinson's disease", "Parkinson's disease", "myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Michael Jackson", "ObjectEntities": ["Parkinson's disease", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michael Pitfield", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michael Tree", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Mick Clark", "ObjectEntities": ["Parkinson's disease"], "Relation": "PersonCauseOfDeath"}
@@ -6788,7 +6788,7 @@
 {"SubjectEntity": "Hope Garber", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Meyera E. Oberndorf", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michael Fleisher", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Michael Fox", "ObjectEntities": ["Alzheimer's disease", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Michael Fox", "ObjectEntities": ["cancer", "Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Mike Pasker", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Miller Williams", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Milt Graff", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
@@ -6895,7 +6895,7 @@
 {"SubjectEntity": "Walter Edward Weaver", "ObjectEntities": ["September 11 attacks"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Takashi Ogawa", "ObjectEntities": ["September 11 attacks"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michael Chung Ou", "ObjectEntities": ["September 11 attacks"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Michael Francis Lynch", "ObjectEntities": ["September 11 attacks", "September 11 attacks"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Michael Francis Lynch", "ObjectEntities": ["September 11 attacks"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Terence A. McShane", "ObjectEntities": ["September 11 attacks"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Martin E. McWilliams", "ObjectEntities": ["September 11 attacks"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robert Parro", "ObjectEntities": ["September 11 attacks"], "Relation": "PersonCauseOfDeath"}
@@ -7544,7 +7544,7 @@
 {"SubjectEntity": "Andr\u00e9e Chedid", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Molly Picon", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Kay Starr", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Arlene Francis", "ObjectEntities": ["Alzheimer's disease", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Arlene Francis", "ObjectEntities": ["cancer", "Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dragoslav \u0160ekularac", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Tony Haygarth", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Peter Falk", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
@@ -7841,7 +7841,7 @@
 {"SubjectEntity": "Gerry Ashmore", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Vic Elford", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Innes Ireland", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Trevor Taylor", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Trevor Taylor", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Mike MacDowel", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Bobby Grim", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Len Sutton", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -7867,10 +7867,10 @@
 {"SubjectEntity": "Hedley Bull", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "G\u00e9za Vermes", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robin Gibb", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Moshe Dayan", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Moshe Dayan", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Gloria Stuart", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Zenna Henderson", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Richard Wright", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Richard Wright", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Aleksey Tolstoy", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Chick Corea", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Manuel Noriega", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -7986,7 +7986,7 @@
 {"SubjectEntity": "Valdemar Carabina", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Yafa Yarkoni", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George Knobel", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Gerry Anderson", "ObjectEntities": ["Alzheimer's disease", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Gerry Anderson", "ObjectEntities": ["disease", "Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pierre Michelot", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Frank Brian", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carmen Condo", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
@@ -8240,7 +8240,7 @@
 {"SubjectEntity": "J. T. Rutherford", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jack Greene", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jan Lindhardt", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Susan Brown", "ObjectEntities": ["Alzheimer's disease", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Susan Brown", "ObjectEntities": ["disease", "Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Selma Jeanne Cohen", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Mell Lazarus", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John DiFronzo", "ObjectEntities": ["Alzheimer's disease"], "Relation": "PersonCauseOfDeath"}
@@ -8658,7 +8658,7 @@
 {"SubjectEntity": "Michael Curtiz", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Gustav Leonhardt", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Bob Mathias", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Nanni Loy", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Nanni Loy", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dino Risi", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Elio Petri", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carole Caldwell Graebner", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -9448,7 +9448,7 @@
 {"SubjectEntity": "Monk Montgomery", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jack Kemp", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Florencio Campomanes", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Jacques Martin", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Jacques Martin", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Don Siegel", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jean Hersholt", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Bruno Metsu", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -9679,7 +9679,7 @@
 {"SubjectEntity": "Caroline Beaune", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Cathal Goulding", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Ike Cole", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Charles Keating", "ObjectEntities": ["cancer", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Charles Keating", "ObjectEntities": ["disease", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Charles Macaulay", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Charles Pettigrew", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Charlie Auffray", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -10049,10 +10049,10 @@
 {"SubjectEntity": "Ren\u00e9 Burri", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Larry Davis", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Heinz Schilcher", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John Locke", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John Locke", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Erno Paasilinna", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Denis Ravera", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Dennis Young", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Dennis Young", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Kresten Bjerre", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Graham Clark", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Diana Bellamy", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -10423,7 +10423,7 @@
 {"SubjectEntity": "Georgy Taratorkin", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jackson Tate", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jean Ter-Merguerian", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Tikhon", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Tikhon", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Tiihon", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Willi Tokarev", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Margaret Tallichet", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -10837,7 +10837,7 @@
 {"SubjectEntity": "Longin von Klin", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Lonny Kellner", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Lothrop Stoddard", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Louis Martin", "ObjectEntities": ["cancer", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Louis Martin", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Louis Pradel", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Louis W. Ballard", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Louis van Dijk", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -11052,7 +11052,7 @@
 {"SubjectEntity": "J\u00f3n Sigur\u00f0sson", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Ian McDonald", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Fernand Sastre", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Lina Romay", "ObjectEntities": ["cancer", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Lina Romay", "ObjectEntities": ["disease", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Doris Singleton", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jaros\u0142aw Kukulski", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Howard Cruse", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -11324,7 +11324,7 @@
 {"SubjectEntity": "Bahaedin Adab", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "James Parrish", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Lee Roy Caffey", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Balint Vazsonyi", "ObjectEntities": ["cancer", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Balint Vazsonyi", "ObjectEntities": ["disease", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Barbara Boggs Sigmund", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Barbara Jelavich", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Barbara March", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -11434,7 +11434,7 @@
 {"SubjectEntity": "Peter Schat", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Ossi Urchs", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paul Erdman", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Tony Greig", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Tony Greig", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "William Lucas Distant", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Amar Suloev", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pare Lorentz", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -11637,7 +11637,7 @@
 {"SubjectEntity": "Brian Barron", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Patti Deutsch", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michael Stevens", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Michael Wilson", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Michael Wilson", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michel B\u00e9r\u00e9govoy", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michel Corajoud", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michel Cournot", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -12525,7 +12525,7 @@
 {"SubjectEntity": "Carol Ann Abrams", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carol Jerrems", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carol Patrice Christ", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Carol Reed", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Carol Reed", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carol Weiss King", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carolyn Rodgers", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carolyn See", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -12762,7 +12762,7 @@
 {"SubjectEntity": "Ulrich Hahnen", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Jacno", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Vladimir Peniakoff", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Mario Moreno", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Mario Moreno", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Thor Hansen", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Sophie Dessus", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Thomas Meighan", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -13404,7 +13404,7 @@
 {"SubjectEntity": "Chris Kreski", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Corrado Pani", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Cosimo Cinieri", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Dan Hicks", "ObjectEntities": ["cancer", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Dan Hicks", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Richard G. Stern", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Delia Vaccarello", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Didi Perego", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -13469,9 +13469,9 @@
 {"SubjectEntity": "Dave Diles", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dave Hill", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dave Line", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Dave O'Brien", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Dave O'Brien", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dave Smalley", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Dave Smith", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Dave Smith", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dave Somerville", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "David Alexander", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "David Anderle", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -13522,7 +13522,7 @@
 {"SubjectEntity": "Dennis Clifton", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dennis Cross", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dennis Davis", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Dennis Green", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Dennis Green", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dennis Murphy", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Dennis Tinerino", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Denny Martin Flinn", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -14067,7 +14067,7 @@
 {"SubjectEntity": "Joe Wendryhoski", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Joel Ryce-Menuhin", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Albery", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John Baker", "ObjectEntities": ["cancer", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John Baker", "ObjectEntities": ["disease", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Bates", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Belgrave", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Beltz", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -14112,7 +14112,7 @@
 {"SubjectEntity": "John Reames", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Rosenberger", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Rugee", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John S. Carter", "ObjectEntities": ["cancer", "cholera"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John S. Carter", "ObjectEntities": ["cholera", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John S. Lekson", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Sanders", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "John Sandes", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -14127,7 +14127,7 @@
 {"SubjectEntity": "John Wicks", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Johnnie Mae Matthews", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Johnny Beazley", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Johnny Byrne", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Johnny Byrne", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Johnny De Fazio", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Johnny Downs", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Johnny Kucks", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -14236,7 +14236,7 @@
 {"SubjectEntity": "Paul King Jewett", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paul Mees", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paul Murphy", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Paul Richards", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Paul Richards", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paul Shirtliff", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paula Bauersmith", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Elaine Shore", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -14911,7 +14911,7 @@
 {"SubjectEntity": "George E. Ohr", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George Fazio", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George G. Blackburn", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "George Garrett", "ObjectEntities": ["cancer", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "George Garrett", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George Howard, Baron Howard of Henderskelfe", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George L. Brown", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "George L. Kelling", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -15070,7 +15070,7 @@
 {"SubjectEntity": "Richard Crooks", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Richard Everett Dorr", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Richard Goldwater", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Richard Gordon", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Richard Gordon", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Richard Greenwell", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Richard John Sutton", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Richard Lyons", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -15109,7 +15109,7 @@
 {"SubjectEntity": "Robert Miller", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robert N. Gorman", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robert Ridgely", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Robert Robinson", "ObjectEntities": ["cancer", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Robert Robinson", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robert Squirrel Lester", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robert St Leger Fowler", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robert Teeter", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -15497,7 +15497,7 @@
 {"SubjectEntity": "Sacha Bulthuis", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Harold Jack Bloom", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Ranik Halle", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Antonis Papadopoulos", "ObjectEntities": ["cancer", "cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Antonis Papadopoulos", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Inmaculada Cruz", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Lilanta Lykiardopoulou", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Mar\u00eda Xos\u00e9 Cimadevila", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -15815,7 +15815,7 @@
 {"SubjectEntity": "Joaqu\u00edn del R\u00edo Zambrana", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Wu Bing'an", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Clemens", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John Mack", "ObjectEntities": ["cancer", "cholera"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John Mack", "ObjectEntities": ["cholera", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Bettina Gilois", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robert Bradshaw Wilmot-Sitwell", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Augusto Ib\u00e1\u00f1ez Guzm\u00e1n", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -17040,7 +17040,7 @@
 {"SubjectEntity": "Bruce Tufeld", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Nechama Biderman", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Baki Komsuoglu", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Brian Moore", "ObjectEntities": ["cancer", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Brian Moore", "ObjectEntities": ["disease", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Q60694293", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Louis Brooks", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Tommy Dwyer", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -17519,7 +17519,7 @@
 {"SubjectEntity": "Tatsuji Fuse", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Robert Saladrigas", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Efron Etkin", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Tom Adams", "ObjectEntities": ["cancer", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Tom Adams", "ObjectEntities": ["myocardial infarction", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Killer Tim Brooks", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Fernando Jim\u00e9nez del Oso", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Rollin' Hard", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -19643,7 +19643,7 @@
 {"SubjectEntity": "Sunhwa-gun", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Crown Prince Uigyeong", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Grandprince Jeongwon", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Jeongjong", "ObjectEntities": ["disease", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Jeongjong", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Paul Maye", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Seongjong", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Munjong of Goryeo", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
@@ -19707,7 +19707,7 @@
 {"SubjectEntity": "Yvonne Verbeeck", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Connie Gilchrist", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Franca Sozzani", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Sheila Allen", "ObjectEntities": ["disease", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Sheila Allen", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pak Yong-sun", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Phyllis Curtin", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Ina van Faassen", "ObjectEntities": ["disease"], "Relation": "PersonCauseOfDeath"}
@@ -20186,7 +20186,7 @@
 {"SubjectEntity": "Myra Cohn Livingston", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Aureliano G\u00f3mez Vizca\u00edno", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Maria da Concei\u00e7\u00e3o Moita", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Alexander Crombie", "ObjectEntities": ["cancer", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Alexander Crombie", "ObjectEntities": ["disease", "cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Q106521728", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Ram\u00f3n Gar\u00edn Fern\u00e1ndez de Pi\u00e9rola", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "William Henry Cook", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
@@ -22664,7 +22664,7 @@
 {"SubjectEntity": "Michel Peissel", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Arthur Augustus Zimmerman", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Richard Kiel", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John Smith", "ObjectEntities": ["myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John Smith", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Angelo Infanti", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Cyril M. Kornbluth", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Vicente Gonz\u00e1lez Lizondo", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -23010,7 +23010,7 @@
 {"SubjectEntity": "Valentin Galochkin", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Mississippi John Hurt", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Afonso Dhlakama", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Lima Barreto", "ObjectEntities": ["myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Lima Barreto", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Marco Solfrini", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Pink Anderson", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Donald Cook", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -23519,7 +23519,7 @@
 {"SubjectEntity": "Princess Charlotte of Prussia", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "G\u00fcnther Rall", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Georg Stumme", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Richard Baer", "ObjectEntities": ["myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Richard Baer", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Conrad Veidt", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Max Schreck", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Randy Savage", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -24376,7 +24376,7 @@
 {"SubjectEntity": "George Jessel", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Charilaos Florakis", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Franjo \u0160eper", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "John Phillips", "ObjectEntities": ["myocardial infarction", "disease"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "John Phillips", "ObjectEntities": ["disease", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "William Desmond", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Andrew Sherratt", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Gamal El-Ghitani", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -25365,7 +25365,7 @@
 {"SubjectEntity": "Clarence Hudson White", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Melville Fuller", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "IZ the Wiz", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Richard Tucker", "ObjectEntities": ["myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Richard Tucker", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Richard Speck", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Vladimir Bagirov", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Stuart Erwin", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -25579,7 +25579,7 @@
 {"SubjectEntity": "Ahmed S\u00e9kou Tour\u00e9", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Andrey Vyshinsky", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Michael Kamen", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Peter Graves", "ObjectEntities": ["myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Peter Graves", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Adolf Erik Nordenski\u00f6ld", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Mohammed Rafi", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Emperor Taish\u014d", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -27668,7 +27668,7 @@
 {"SubjectEntity": "Hermenegildo S\u00e1bat", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Ray Henderson", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Adam Darius", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Murali", "ObjectEntities": ["myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Murali", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Nikola\u00ef Sokolov", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Arturo Rawson", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Butch Reed", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -28354,7 +28354,7 @@
 {"SubjectEntity": "Anthony Clark", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Serge\u012d Evgen\u02b9evich Kle\u012dnenberg", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Yury Iosifovich Koval", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Sergey Kozlov", "ObjectEntities": ["myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Sergey Kozlov", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Yakov Kostyukovsky", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Marian Kociniak", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Varis Kr\u016bmi\u0146\u0161", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
@@ -28461,7 +28461,7 @@
 {"SubjectEntity": "Herman Stegeman", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Miguel Guti\u00e9rrez", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carlitos Mora", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
-{"SubjectEntity": "Carlos Castro", "ObjectEntities": ["myocardial infarction", "myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Carlos Castro", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carlos D\u00edaz de Mendoza", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carlos Esteban Deive", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
 {"SubjectEntity": "Carlos Llopis", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}

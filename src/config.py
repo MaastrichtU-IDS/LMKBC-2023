@@ -39,6 +39,8 @@ KEY_OBJS = "ObjectEntities"
 KEY_REL = "Relation"
 KEY_SUB = "SubjectEntity"
 OBJLABELS_KEY = 'ObjectLabels'
+KEY_SUB_ID='SubjectEntityID'
+KEY_OBJS_ID= 'ObjectEntitiesID'
 
 FROM_KG = 'from'
 TO_KG = 'to'
