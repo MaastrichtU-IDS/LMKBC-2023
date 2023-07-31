@@ -56,3 +56,12 @@ best_ckpt_dir:  /workspace/persistent/LMKBC-2023/bin/train_full/pretrain_fill_ma
    python /workspace/persistent/LMKBC-2023/src/pre_model.py   --train_fn /workspace/persistent/LMKBC-2023/res/additional_corpus/fm_pretrain_2.txt  --train_batch_size 16 --gpu 0   --train_epoch 10 --learning_rate 3e-5   --model_load_dir bert-large-cased --model_save_dir /workspace/persistent/LMKBC-2023/bin/train_full/pretrain_fill_mask/bert-large-cased --model_best_dir  /workspace/persistent/LMKBC-2023/bin/train_full/pretrain_fill_mask/bert-large-cased/best_ckpt
     
     
+  File "src/run.py", line 87
+    default="default
+                   ^
+SyntaxError: EOL while scanning string literal
+usage: run.py [-h] [--mode MODE] [--gpu GPU] [--load_dir LOAD_DIR]
+              [--label LABEL]
+run.py: error: unrecognized arguments: --load_model bert-base-cased
+usage: run.py [-h] [--mode MODE] [--gpu GPU] [--load_dir LOAD_DIR] [--label LABEL]
+run.py: error: unrecognized arguments: --mode[pfm,fm]
