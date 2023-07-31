@@ -95,7 +95,7 @@
 {"SubjectEntity": "Catherine II of Russia", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "John VIII Palaiologos", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Andronikos III Palaiologos", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Solomon", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Solomon", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Konstantinos Laskaris", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "William the Conqueror", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sejong the Great", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -118,7 +118,7 @@
 {"SubjectEntity": "Louis the Pious", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ludwig II of Bavaria", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Darius I of Persia", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "King Arthur", "ObjectEntities": ["monarch", "monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "King Arthur", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ahmed Shahe Durrani", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Diadumenian", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Airlangga", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -244,7 +244,7 @@
 {"SubjectEntity": "Baal-Eser I", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Luli", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Hugh I, Duke of Burgundy", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Marcus", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Marcus", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Zoilos I", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Michael the Brave", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anne, Queen of Great Britain", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -879,7 +879,7 @@
 {"SubjectEntity": "Ba", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Tato", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gwenllian ferch Gruffydd", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Laodice", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Laodice", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Laodice IV", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Otto I, Count of Savoy", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ine", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -932,7 +932,7 @@
 {"SubjectEntity": "Martin I of Sicily", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Frederick III the Simple", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Kh\u1ea3i \u0110\u1ecbnh", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Antiochis", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Antiochis", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Eadbald of Kent", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Oswiu of Northumbria", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Hori II", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -1341,7 +1341,7 @@
 {"SubjectEntity": "Gezo", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Osberht", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Eriba-Marduk", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Indravarman II", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Indravarman II", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Malichus II", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Domangart mac Domnaill", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yohannes II", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -1404,7 +1404,7 @@
 {"SubjectEntity": "Taromai", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dharanindravarman II", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ebana", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Seleucus", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Seleucus", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nebuchadnezzar IV", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Zhao Mo", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Hananchi", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -1498,7 +1498,7 @@
 {"SubjectEntity": "Bouchard V of Vend\u00f4me", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gruffydd Maelor I", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Halparunta", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "L\u00ea Trung T\u00f4ng", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "L\u00ea Trung T\u00f4ng", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "L\u00ea Thu\u1ea7n T\u00f4ng", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "M\u1ea1c M\u1eadu H\u1ee3p", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "L\u00ea \u00dd T\u00f4ng", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -1631,7 +1631,7 @@
 {"SubjectEntity": "Michael of Trebizond", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Enhegal", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mzilikazi", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Javanshir", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Javanshir", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Eric the Pagan", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Thyus", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "C\u00e1elbad", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -1668,7 +1668,7 @@
 {"SubjectEntity": "Crimthann mac Fidaig", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Niall Gl\u00fandub", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "M\u00e1el Coba mac \u00c1edo", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Diarmait mac Cerbaill", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Diarmait mac Cerbaill", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "\u00c1ed Uaridnach", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ainmuire mac S\u00e9tnai", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Suibne Menn", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -1854,12 +1854,12 @@
 {"SubjectEntity": "Peter I of Arborea", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Fulk of Vend\u00f4me", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Idris Alooma", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Orodes I of Elymais", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Orodes I of Elymais", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Osei Yaw Akoto", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sisillius I", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Alexander II of Imereti", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Obodas II", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Donyo Dorje", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Donyo Dorje", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Antiochus", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Marius of Britain", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q2047257", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -1965,7 +1965,7 @@
 {"SubjectEntity": "Lud son of Heli", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mesh-ki-ang-gasher", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Penamon", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Owain ap Dyfnwal", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Owain ap Dyfnwal", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Veera Ballala II", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Polemon II of Pontus", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "John III of Vend\u00f4me", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -2639,7 +2639,7 @@
 {"SubjectEntity": "Boles\u0142aw Januszowic", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Boles\u0142aw V of Warsaw", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aedh Ua Conchobair", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Gleb Svyatoslavich", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Gleb Svyatoslavich", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4154133", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dervish Khan", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dyfnwal Moelmud", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -2983,7 +2983,7 @@
 {"SubjectEntity": "Antipater II of Macedon", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Rascuporis", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dandi Mahadevi", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Jaya Indravarman IV", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Jaya Indravarman IV", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ushshi", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Elfwine", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Kumaragupta III", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -3446,7 +3446,7 @@
 {"SubjectEntity": "Gabinius", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Moe Makosso Tchinkosso", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Jelena Mrnjav\u010devi\u0107", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sena", "ObjectEntities": ["monarch", "monarch"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sena", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gariba II", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viren", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Guttika", "ObjectEntities": ["monarch"], "Relation": "PersonHasProfession"}
@@ -3741,7 +3741,7 @@
 {"SubjectEntity": "Charles K. Kao", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Melvil Dewey", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Frank Malina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "The Doctor", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "The Doctor", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Guglielmo Marconi", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Francis Bacon", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Konstantin Eduardovich Tsiolkovskii", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -4754,7 +4754,7 @@
 {"SubjectEntity": "Gustav Lorentzen", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sun Laiyan", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Muhammad Kurd Ali", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Peter Wright", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Peter Wright", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Henri Longchambon", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Henri Sabatier", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Henry Gascoyne Maurice", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5109,17 +5109,17 @@
 {"SubjectEntity": "Zulqarnaj Aldamzjarov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Olga Aleinikova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Tatyana Aleynikova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Aleksandrov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Aleksandrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Semyon Aleksandrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Rudolf Aleksakhin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Alekseyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Alekseyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksey Alekseyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Anatoly Alekseyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Anatoly Alekseyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Veniamin Alekseyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Denis Alekseyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Yevgeny Alekseyev", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Alekseyev", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Tatyana Alekseyeva", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Yevgeny Alekseyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Alekseyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Tatyana Alekseyeva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksy", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ivan Aleksinskiy", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Aleutsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5161,10 +5161,10 @@
 {"SubjectEntity": "Nataliya Ananyeva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Alla Anarov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergei Mikhailovich Andoniev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Valery Andreyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Valery Andreyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Andreyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Andreyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Fyodor Andreyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Fyodor Andreyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yekaterina Andreyeva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4066021", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valery Androsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5296,7 +5296,7 @@
 {"SubjectEntity": "Volodymyr Bolshakov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "M. M. Bongard", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Oleksandr Bondarenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Viktor Bondarenko", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Viktor Bondarenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Bondarko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Bondar", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Bondar", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5494,7 +5494,7 @@
 {"SubjectEntity": "Robert D. Baird", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Georgy Byushgens", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4101594", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Pyotr Vavilov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Pyotr Vavilov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Georgy Vagner", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Piotr Ivanovitch Vagner", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Elga Vadetskaya", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5514,15 +5514,15 @@
 {"SubjectEntity": "Yevgeniya Vanina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anri Vartanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Varshavsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Vasilyev", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valery Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Vasilyev", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Igor Vasilyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Igor Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Leonid Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Mikhail Vasilyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Vasilyev", "ObjectEntities": ["scientist", "scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Mikhail Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Vasilyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Tatyana Vasilyeva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ruslan Vasilyevsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5589,7 +5589,7 @@
 {"SubjectEntity": "Fyodor Gorokhov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4145830", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Gorsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Ivan Gorsky", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Ivan Gorsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Gorshkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Georgy Gorshkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Iosif Gorshkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5620,7 +5620,7 @@
 {"SubjectEntity": "Vladimir Gribkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4148907", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vyacheslav Gribovsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Konstantin Grigorovich", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Konstantin Grigorovich", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Grigoryev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Jelena Grigorjeva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4149444", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5631,7 +5631,7 @@
 {"SubjectEntity": "Boris Griftsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Grishin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yakov Grishin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Gromov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Gromov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nelli Gromova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Gruzinov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Alexander Grunauer", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5680,8 +5680,8 @@
 {"SubjectEntity": "Yevgeny Davidson", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Edoeard Gazalievitsj Davletov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4153733", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Mikhail Davydov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Davydov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Mikhail Davydov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Davydov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "F\u0259rid H\u0259s\u0259n o\u011flu Dada\u015fov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4153994", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "B. K. Dalgat", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5778,7 +5778,7 @@
 {"SubjectEntity": "Vladimir Vinogradov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Konstantin Vinogradov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Vinogradov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Pyotr Vinogradov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Pyotr Vinogradov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Vinogradov-Volzhinsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Tatiana Vinokur", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "A. V. Vinter", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5815,7 +5815,7 @@
 {"SubjectEntity": "Q4122801", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Boris Volzhenkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Volzhensky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Volkov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Volkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Volkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Eduard Volkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Larisa Volkova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5908,7 +5908,7 @@
 {"SubjectEntity": "Nikolay Yevtikhiyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Eger", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Yegolin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Yegorov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Yegorov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ilya Yegorov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yevhen Yehorov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Yelayev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -5963,7 +5963,7 @@
 {"SubjectEntity": "Dmitry Zhuzhikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Zhuykov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Reg\u012bna \u017duka", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Anatoly Zhukov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Anatoly Zhukov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Zhukov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Pyotr Zhukov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nadezhda Zhukova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6099,14 +6099,14 @@
 {"SubjectEntity": "Marat Zajnullin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Zaytsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vadim Zaytsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Zaytsev", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Zaytsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Philipp Adamovich Zaitzev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Zaytsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Galina Zaytseva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Zalunin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4186059", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yevgeny Zamyatin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Zamyatin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Zamyatin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Zaozersky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Zapadov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4187133", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6181,13 +6181,13 @@
 {"SubjectEntity": "Q4195716", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4195766", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Natalya Ivanishcheva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Ivanov", "ObjectEntities": ["scientist", "scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksey Ivanov", "ObjectEntities": ["scientist", "scientist", "scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Ivanov", "ObjectEntities": ["scientist", "scientist", "scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksey Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gavriil Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gennady Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Ivanov", "ObjectEntities": ["scientist", "scientist", "scientist", "scientist", "scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Pyotr Ivanov", "ObjectEntities": ["scientist", "scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Pyotr Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Svyatoslav Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Timur Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Lyudmila Ivanova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6206,7 +6206,7 @@
 {"SubjectEntity": "Vyacheslav Ignatyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4197787", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Evgeniy Aleksandrovitsj Igoesjev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Izotov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Izotov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Zaiga Ikere", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "I. K. Ilishkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Illarionov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6274,7 +6274,7 @@
 {"SubjectEntity": "Mikhail Kazakov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Boris Kazansky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Peter Evgen\u02b9evich Kazansky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Pyotr Kazansky", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Pyotr Kazansky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Leonid Kazantsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4207902", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Kazantsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6342,7 +6342,7 @@
 {"SubjectEntity": "Sergey Karpachyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Karpenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4215749", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Anatoly Karpov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Anatoly Karpov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "O. Karpukhin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4216012", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4216104", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6363,7 +6363,7 @@
 {"SubjectEntity": "Vasili\u012d Filippovich Kakhovski\u012d", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Arnold Katz", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4218027", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Kashin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Kashin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4218315", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Kashchenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q\u00e4y\u00fcm Nas\u0131yri", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6442,7 +6442,7 @@
 {"SubjectEntity": "Andrey Kostikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4235364", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Emil Kostin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Kostochkin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Kostochkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Kostrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Kostyrya", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksey Kostyakov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6500,7 +6500,7 @@
 {"SubjectEntity": "Valery Kiryushin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4221963", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gennady Kiselyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Kiselyov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Kiselyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Grigory Kisunko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Platon Kititsyn", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Kitov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6536,7 +6536,7 @@
 {"SubjectEntity": "Viktor Kobylyansky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dmitry Kobyakov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4225357", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Kovalevsky", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Kovalevsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Kovalevsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Boris Kovalenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valentin Kovalenkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6545,10 +6545,10 @@
 {"SubjectEntity": "Q4225522", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Jan Kowalski", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ivan Kovalchenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Kovalyov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Kovalyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gennady Kovalyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Igor Kovalyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Kovalyov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Kovalyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ivan Ivanovich Kovach", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "V. A. Kovda", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4225873", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6646,7 +6646,7 @@
 {"SubjectEntity": "Q4255050", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Linar Lat\u0131ypof", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4255482", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksey Lebedev", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksey Lebedev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valery Lebedev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Lebedev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gleb Lebedev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6660,7 +6660,7 @@
 {"SubjectEntity": "Q4256366", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4256369", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Levin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Levin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Levin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Levin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4256552", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Oleg Levitsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6675,7 +6675,7 @@
 {"SubjectEntity": "Arkady S. Lelej", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Oscar Lemm", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yakov Lentsman", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksey Leontyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksey Leontyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Andrey Leontyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valery Leontyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4259041", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6795,7 +6795,7 @@
 {"SubjectEntity": "Neonila Krinichnaya", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Krichevsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Kenneth R. Valpey", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Mikhail Krishtal", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Mikhail Krishtal", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4241625", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4241903", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Kruglov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6808,7 +6808,7 @@
 {"SubjectEntity": "Q4242662", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4242698", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Andrey Krylov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Krylov", "ObjectEntities": ["scientist", "scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Krylov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Georgy Krylov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ivan Krylov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikita Krylov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6832,7 +6832,7 @@
 {"SubjectEntity": "Aleksey Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Bronislav Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Ivan Kuznetsov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Ivan Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Igor Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Pobisk Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Pyotr Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6845,7 +6845,7 @@
 {"SubjectEntity": "Era Kuznetsova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4245247", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Kuzmenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vasily Kuzmin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vasily Kuzmin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4245493", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4245810", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4245839", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -6895,7 +6895,7 @@
 {"SubjectEntity": "Q4289768", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Melnik", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Melnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Mel'nikov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Mel'nikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4289905", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Svetlana Melnikova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "\u0116mmanuil Mendelevich", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7015,7 +7015,7 @@
 {"SubjectEntity": "Q4310177", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Myakinkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Myasnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Myasnikov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Myasnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vyacheslav Myasnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4311576", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Alexander Nagolkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7067,8 +7067,8 @@
 {"SubjectEntity": "Q4318203", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vera Stepanovna Nechayeva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4319612", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vasily Makarov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Makarov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vasily Makarov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Makarov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Grigory Makarov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Igor Mikhajlovich Makarov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolai Makarov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7095,11 +7095,11 @@
 {"SubjectEntity": "Hryhoriy Matets", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Malinin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Malinin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Malinin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Malinin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Malinin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4277830", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Natalia Malinovskaya", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Viktor Malkov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Viktor Malkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Igor Malov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4278106", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Igor Maly", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7159,10 +7159,10 @@
 {"SubjectEntity": "Q4284401", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4284428", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4284431", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Boris Matveyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Boris Matveyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valery Matveyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Matveyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Matveyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Matveyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4284569", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Tamara Matveyeva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4284775", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7217,7 +7217,7 @@
 {"SubjectEntity": "Q4330839", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valentin Ovsyannikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4330915", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Lev Ovchinnikov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Lev Ovchinnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Fedor Ovchinnykov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Hovhannes Hovhannisyan", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "P. M.  Ogibalov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7240,7 +7240,7 @@
 {"SubjectEntity": "Aleksandr Orishev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4336601", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Orlov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Dmitry Orlov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Dmitry Orlov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ivan Orlov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Orlov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nicholas Orlov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7309,17 +7309,17 @@
 {"SubjectEntity": "Q4371646", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Ponomaryov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4372279", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Popov", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ardalion Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Popov", "ObjectEntities": ["scientist", "scientist", "scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vyacheslav Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gavriil Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gennady Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Hennadiy Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Ivan Popov", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Popov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Ivan Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Pyotr Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Popov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ovagim Porksheian", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Germogen Sergeevich Pospelov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dmitry Pospelov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7591,7 +7591,7 @@
 {"SubjectEntity": "Q4345660", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4346167", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Parfyonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Parfyonov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Parfyonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4346243", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yefim Passov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "A. A. Pautkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7629,7 +7629,7 @@
 {"SubjectEntity": "Rem Petrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Petrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4360865", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Yury Petrov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Yury Petrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4361655", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Boris Petukhov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4361914", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7705,7 +7705,7 @@
 {"SubjectEntity": "Vladimir Sogrin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yelena Sozina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Soyfer", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Andrey Sokolov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Andrey Sokolov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ivan Sokolov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Sokolov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4427231", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -7795,7 +7795,7 @@
 {"SubjectEntity": "Q4457586", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4457781", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Michael Titarenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Titov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Titov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4458398", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yelizaveta Tikheyeva", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4458552", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -8002,7 +8002,7 @@
 {"SubjectEntity": "Yevgeny Semyonkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vadim Semenov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4415792", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Semyonov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Semyonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yelena Senichkina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Evgeny Sepp", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ksenia Serbina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -8052,7 +8052,7 @@
 {"SubjectEntity": "Aleksey Sitnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Skaballanovich", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4421647", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Lev Skvortsov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Lev Skvortsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4421767", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Karol Skibi\u0144ski", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4421961", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -8724,7 +8724,7 @@
 {"SubjectEntity": "Q4536667", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4536744", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q4536803", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Yakovlev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Yakovlev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Yakovlev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Yakovlev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Yakovlev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -8773,7 +8773,7 @@
 {"SubjectEntity": "Charles A. Holloway", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Charles Abercrombie Smith", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Charles Albert Keeley", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Charles Anderson", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Charles Anderson", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Charles Bailyn", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Charles Edward Stevens", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Charles F. Wagner", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -11091,7 +11091,7 @@
 {"SubjectEntity": "Q12088753", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q12089613", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Zhanna Vozianova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Volkov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Volkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q12090500", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q12090612", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q12093080", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -11867,7 +11867,7 @@
 {"SubjectEntity": "Q12537986", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Yerofeyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q12538136", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Kim", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Kim", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Ganzhara", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Werner", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q12538388", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -12695,7 +12695,7 @@
 {"SubjectEntity": "Josefino Comiso", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Maria Carlita Rex-Doran", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mr. Nobody", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Pedro Escuro", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Pedro Escuro", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Rafael Dineros Guerrero III", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Roberto del Rosario", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q12977400", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -12861,7 +12861,7 @@
 {"SubjectEntity": "Q13032927", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q13032928", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q13032939", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Zakharov", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Zakharov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q13032950", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q13033005", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q13033086", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13178,7 +13178,7 @@
 {"SubjectEntity": "Stanislav Vompersky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15065130", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mina Vydrya", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Vysotsky", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Vysotsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15065162", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15065186", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vil Galejev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13195,7 +13195,7 @@
 {"SubjectEntity": "Q15065379", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Glushchenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Golod", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Golubev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Golubev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Evgeni\u012d Danilovich Gol'dberg", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "A. Kh. Gol\u02b9msten", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15065498", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13207,7 +13207,7 @@
 {"SubjectEntity": "Q15065572", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Andrey Grigorenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15065588", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Mikhail Grigoryev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Mikhail Grigoryev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Grinevetsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Igor Grinshpun", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Persi Gurvich", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13219,7 +13219,7 @@
 {"SubjectEntity": "Gennady A. Denezhkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15065831", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Ditmar", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Dmitriyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Dmitriyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ivan Dmitriyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Dmitriyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Dmitrievsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13268,7 +13268,7 @@
 {"SubjectEntity": "Boris Kadikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15068068", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ignaty Kazakov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Kazarinov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Kazarinov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Kazin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksey Kalashnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Kalinichenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13312,7 +13312,7 @@
 {"SubjectEntity": "Q15070640", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15070653", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Kuznetsov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vera Kuzmina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dmitriy Kukin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15070727", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13458,7 +13458,7 @@
 {"SubjectEntity": "Yakov Serebriisky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15079453", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15079455", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Boris Peters", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Boris Peters", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Boris Vladimirovich Semichov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Semyon Anatolyevich Semyonov-Zuser", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15080539", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13506,7 +13506,7 @@
 {"SubjectEntity": "Anatoly Remnyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Rumyantsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15090732", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "N. S. Romanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "N. S. Romanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Rzhevskiy", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Rozenberg", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15091001", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13662,7 +13662,7 @@
 {"SubjectEntity": "Zaurbek Kurazovich Mal\u02b9sagov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15689545", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Giovanni Battista Ermacora", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Erik Nord", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Erik Nord", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15696098", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Tsirelson", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15696257", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13685,7 +13685,7 @@
 {"SubjectEntity": "Marcel Delage", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "S.  Bondi", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Friedrich Gro\u00dfmann", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Andrey Popov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Andrey Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Lee G. Pondrom", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15827454", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15827455", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13724,7 +13724,7 @@
 {"SubjectEntity": "Christian Gotfried Hummel", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Almaz Sharman", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksey Gagarin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Kuznetsov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Kuznetsov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nagim Isjbulatov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q15965950", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yuri Vysheslavtsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13815,7 +13815,7 @@
 {"SubjectEntity": "Wu Meirong", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Wu Zhongwei", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Lu Jun", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Yevgeny Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Yevgeny Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mitar Peru\u0161i\u0107", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16082610", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Irena Arsi\u0107", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -13961,7 +13961,7 @@
 {"SubjectEntity": "Aleksandr Portnov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Benuan Briskin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ninel Vladimirova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Vereshchagin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Vereshchagin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Yevdokimov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Zlobin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Jos\u00e9 F. Cordero", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14022,7 +14022,7 @@
 {"SubjectEntity": "Abbas \u0130ftixari", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Abbas\u0259li Abbas\u0259liyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Abdulla H\u0259\u015fimov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Adil Bagirov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Adil Bagirov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Adil\u0259 Abbasova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Akif S\u00fcleymanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Al\u0131\u015f Qas\u0131mov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14250,7 +14250,7 @@
 {"SubjectEntity": "M\u0259mm\u0259d Adilov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Artsrun Hovhannisyan", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "M\u0259mm\u0259d \u00c7\u0131raqov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Mammad Aliyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Mammad Aliyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "M\u0259mm\u0259dk\u0259rim Quliyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "M\u0259mm\u0259dta\u011f\u0131 \u0130brahim o\u011flu C\u0259f\u0259rov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "M\u0259ntiq C\u0259f\u0259rov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14313,7 +14313,7 @@
 {"SubjectEntity": "Sad\u0131q Sad\u0131qzad\u0259", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sad\u0131q V\u0259kilov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sad\u0131q \u015e\u00fck\u00fcrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sahib Ahmadov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sahib Ahmadov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sahib\u0259 Qafarova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sakit H\u00fcseynov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Salat\u0131n \u018fhm\u0259dli", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14378,7 +14378,7 @@
 {"SubjectEntity": "Az\u0259r Namazov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Solmaz M\u0259h\u0259rr\u0259mova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "S\u0259fiyar Musayev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "H\u00fcseyn \u018fhm\u0259dov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "H\u00fcseyn \u018fhm\u0259dov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yusif Ismayilov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ziya Hac\u0131zad\u0259", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "M\u0259mm\u0259d Rzayev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14443,7 +14443,7 @@
 {"SubjectEntity": "Q16435130", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16435175", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16435188", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Borovsky", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Borovsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16435323", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16435354", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16435363", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14556,7 +14556,7 @@
 {"SubjectEntity": "Vytenis Buzas", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nguy\u1ec5n T\u00e0i Thu", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aldo Malavasi Filho", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Valentin Andreyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Valentin Andreyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksey Artemyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Am\u00e9rico Maurano", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Andr\u00e9 Tosello", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14760,7 +14760,7 @@
 {"SubjectEntity": "Q16629769", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Vesyolkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Vikulov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Vishnevsky", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Vishnevsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Marat Vlasov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16631291", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Fyodor Volkenstein", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14787,7 +14787,7 @@
 {"SubjectEntity": "Q16639644", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Grigor Grzik", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16639730", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Grigoryev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Grigoryev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Grishayev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16640061", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Goodilin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14806,7 +14806,7 @@
 {"SubjectEntity": "Q16644905", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16647195", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16647730", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Yegorov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Yegorov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16648192", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Yeryomin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yadira I. Vega Cant\u00fa", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14821,7 +14821,7 @@
 {"SubjectEntity": "Ilya Zlatkin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16654289", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Khamzat Ibrahimov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Andrey Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Andrey Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16654979", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16655371", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Il'ichev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -14999,7 +14999,7 @@
 {"SubjectEntity": "Isidor Obergard", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q16682339", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Akim Aleksyeevich Olesnitsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Boris Orekhov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Boris Orekhov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Grigorii Orlov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Petr Osetrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Magomed-Efendi Osmanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -15502,7 +15502,7 @@
 {"SubjectEntity": "Andra Kalna\u010da", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Andrew Quintero", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Russell A. Livigni", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Deryugin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Deryugin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "John Frederick Clarke", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Bychkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Lyudmila Belozerova", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -15567,7 +15567,7 @@
 {"SubjectEntity": "Henrik Renqvist", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q17384584", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Boris K\u00f6rber", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Valentin Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Valentin Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q17384661", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "I. I\ufe20U\ufe21.  Koropachinski\u012d", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Matti \u00c4yr\u00e4p\u00e4\u00e4", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -15908,11 +15908,11 @@
 {"SubjectEntity": "Anatoly Byshevsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Friedrich Vater", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Bruce Mason", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Antonov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Antonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Portnyagin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q17722843", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "John Richard Anthony Pearson", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Pyotr Afanasyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Pyotr Afanasyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q17746497", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nataliya Podalyak", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Kichina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -16015,7 +16015,7 @@
 {"SubjectEntity": "Vera Konstantinovna Andreeva-Shile\u012dko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q18241900", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q18242499", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Anatoly Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Anatoly Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yevgeniya Ilyukhina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q18243251", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q18243493", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -16063,7 +16063,7 @@
 {"SubjectEntity": "Q18740622", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q18740759", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yuly Erpsher", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Ildus Ilishev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Kasprzhak", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Krinin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -16113,7 +16113,7 @@
 {"SubjectEntity": "Irina Vladimirovna Stahl", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dmitry Yakubovich", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Kryukov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Valery Maksimov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Valery Maksimov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Shlyk", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q18786334", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q18786343", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -16607,7 +16607,7 @@
 {"SubjectEntity": "Arne Bredesen", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Ratimov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q19815775", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Dmitry Krasilnikov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Dmitry Krasilnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Lyubavin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Antonio Moniz de Souza", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Carsten Reinemann", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -16661,7 +16661,7 @@
 {"SubjectEntity": "Q19908184", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q19908186", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q19908192", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Kolesnikov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Kolesnikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Anatoly Kondratyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q19908233", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Rafgat Valiyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -16775,7 +16775,7 @@
 {"SubjectEntity": "Q19909916", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vasily Kedrinsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q19909953", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksey Kiselyov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksey Kiselyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q19910017", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Eduard Manukyan", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q19910075", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -17852,7 +17852,7 @@
 {"SubjectEntity": "Afanasy Dyakonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q20623509", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Prokopy Yefremov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vasily Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vasily Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nyurgun Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Spiridon Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q20624056", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -17866,7 +17866,7 @@
 {"SubjectEntity": "Innokenty Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q20626318", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q20626368", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Samsonov", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Samsonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q20626465", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q20626487", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q20626676", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -18173,7 +18173,7 @@
 {"SubjectEntity": "Vasily Baranov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21088758", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21088790", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Belov", "ObjectEntities": ["scientist", "scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Belov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Belov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21089082", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21089108", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -18248,7 +18248,7 @@
 {"SubjectEntity": "Boris Anatolievich Dolgoshein", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Nikolay Dubovitsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Yeremin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Yerofeyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Yerofeyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Feofil Yerofeyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Konstantin Zhdanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Mikhail Zhdanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -18260,11 +18260,11 @@
 {"SubjectEntity": "Vladimir Zdornov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21098967", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21098970", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Zinovyev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Zinovyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Zlomanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Zolotov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21099025", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Dmitry Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Dmitry Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Varnava Ignatyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21099129", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21099150", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -18280,13 +18280,13 @@
 {"SubjectEntity": "Vladimir Kasyanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21099361", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21099691", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Mikhail Kiselyov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Mikhail Kiselyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21100533", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Klimashko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "A. P. Klinchin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21100899", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valentin Kozlov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Komarov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Komarov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Boris Kononov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21101891", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Sergey Korotkov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -18485,7 +18485,7 @@
 {"SubjectEntity": "Mikhail Pridorogin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Andrey Pravednikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21154104", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Leonid Popov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Leonid Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vitaly Popov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "V. A. Ponomarenko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Valentin Polonsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -18755,7 +18755,7 @@
 {"SubjectEntity": "Q21637852", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21637911", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21638044", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Viktor Grigoryev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Viktor Grigoryev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21638391", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "V. Z. Gulisashvili", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21638623", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -18765,7 +18765,7 @@
 {"SubjectEntity": "Vladimir Dyakonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Viktor Yevseyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21639201", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Valentin Yegorov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Valentin Yegorov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Emelyanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21639309", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21639428", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -18774,7 +18774,7 @@
 {"SubjectEntity": "Q21639662", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21639743", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Yury Zudov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Pavel Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Pavel Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Gabriella Imposti", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Atabay Ishanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q21639983", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -19195,7 +19195,7 @@
 {"SubjectEntity": "V\u00e4in\u00f6 Nurmimaa", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Veikko Palosuo", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Markus Sandholm", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Viktor Aleksandrov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Viktor Aleksandrov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Bozhko", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Pyotr Kovalyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q22696863", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -19351,7 +19351,7 @@
 {"SubjectEntity": "Q22918777", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Vladimir Kremenetsky", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksandr Kudryavtsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Mikhail Kuzmin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Mikhail Kuzmin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "O. V.  Kuropatkina", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q22918834", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q22918835", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -19463,7 +19463,7 @@
 {"SubjectEntity": "Dyan deNapoli", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q23656152", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q23656156", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Sergey Leonov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Sergey Leonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q23656164", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q23656168", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q23656176", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -19775,7 +19775,7 @@
 {"SubjectEntity": "Vincent Barry", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "H\u00e9l\u00e8ne Menegaldo", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q23936109", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Viktor Vorobyov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Viktor Vorobyov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Adolf Theodor Hahn", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "J\u00f3zef Piszczek", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Bohdan Dobrza\u0144ski", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -20096,7 +20096,7 @@
 {"SubjectEntity": "Q24924870", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q24924907", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q24924927", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Vladimir Lebedev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Lebedev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Al\u02b9fred Frit\ufe20s\ufe21evich Polis", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Grozdan Dimitrov Velikov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q24924974", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -20753,7 +20753,7 @@
 {"SubjectEntity": "Q25647043", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Dmitry Kazantsev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q25647049", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Ivan Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Ivan Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Fyodor Gordeyev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q25647063", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q25647265", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -20949,7 +20949,7 @@
 {"SubjectEntity": "Ephraim Laurence Palmer", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Christoph Helmchen", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q27689349", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Vinogradov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Vinogradov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "\u0130lhan Aksay", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Charles Baden-Fuller", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Stefan Gress", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -21014,7 +21014,7 @@
 {"SubjectEntity": "Ajmal Khan", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Satomi Soejima", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q27918326", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Yury Ivanov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Yury Ivanov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q27919142", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q27919161", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q27919162", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -21936,7 +21936,7 @@
 {"SubjectEntity": "Q29358813", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q29358822", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Lyudmila Gruzberg", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Nikolay Gushchin", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Nikolay Gushchin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Areg Dabagyan", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q29358856", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Irina Donnik", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -23604,7 +23604,7 @@
 {"SubjectEntity": "Q40006937", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q40006998", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q40007084", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Aleksandr Gusev", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Aleksandr Gusev", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Aleksey Zhukov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q40009964", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q40010013", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -25149,7 +25149,7 @@
 {"SubjectEntity": "Q50221156", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q50221923", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q50223088", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Anatoly Fyodorov", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Anatoly Fyodorov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q50225432", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Q50246288", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Pavla Melkov\u00e1", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
@@ -27639,7 +27639,7 @@
 {"SubjectEntity": "Miguel R. Olivas-Lujan", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Jim Holland", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Andrew Zammit Mangion", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
-{"SubjectEntity": "Tim Wilkinson", "ObjectEntities": ["scientist", "scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Tim Wilkinson", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Jerry Hatfield", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Joseph Zinker", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
 {"SubjectEntity": "Engywook", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}

@@ -242,7 +242,7 @@
 {"SubjectEntity": "Cyriaque Rivieyran", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Nadine Trintignant", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "G\u00e9rard Genette", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Robert", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Robert", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean Desmarets", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "J\u00f3zef Bem", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre Nora", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -279,7 +279,7 @@
 {"SubjectEntity": "Alain-Ren\u00e9 Lesage", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Catherine Tanvier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Viktor Lazlo", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Rachel", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Rachel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Rose Philippine Duchesne", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Martin Bouquet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Yael Dayan", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -470,7 +470,7 @@
 {"SubjectEntity": "Giorgos Seferis", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre Dac", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "James FitzJames, 1st Duke of Berwick", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Paul Faure", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Paul Faure", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Cardinal Mazarin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Camillo Benso di Cavour", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9tienne Lamotte", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -610,7 +610,7 @@
 {"SubjectEntity": "Matilda II", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fr\u00e9d\u00e9ric Auguste Bartholdi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Lwoff", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Eli Cohen", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Eli Cohen", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Francis Lai", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Albert Soboul", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Margit Bara", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -622,7 +622,7 @@
 {"SubjectEntity": "Antoine Laurent de Jussieu", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Edouard Lalo", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Maurois", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Maria Schneider", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Maria Schneider", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Elle Macpherson", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Olivier Jean-Marie", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Florian Guillou", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -699,7 +699,7 @@
 {"SubjectEntity": "Pierre Cloarec", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Marie Cavada", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Bernhard Karlgren", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Antoine Galland", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Antoine Galland", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Kseniya Rappoport", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Cl\u00e9ment Guillon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Tegbesu", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -776,7 +776,7 @@
 {"SubjectEntity": "Innocent V", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Juana I of Castile", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Janez Drnov\u0161ek", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Pierre Petit", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Pierre Petit", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "S\u00e9bastien Bourdais", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "S\u00e9bastien Buemi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Viggo Mortensen", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -859,7 +859,7 @@
 {"SubjectEntity": "Perrine Pelen", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charlotte Sophie of Aldenburg", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jacqueline Roque", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean Lannes", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean Lannes", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Beno\u00eete Groult", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Adrienne Monnier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jonas Malheiro Savimbi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1090,7 +1090,7 @@
 {"SubjectEntity": "Mich\u00e8le Mercier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Vera Wang", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jacqueline Boyer", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Louis Renault", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Louis Renault", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Adriana Sklena\u0159\u00edkov\u00e1", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9dith Cresson", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Louise \u00c9lisabeth of France", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1112,7 +1112,7 @@
 {"SubjectEntity": "Maria Amalia of Naples and Sicily", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Marie Leszczy\u0144ska", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Bhimrao Ramji Ambedkar", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Margaret of France", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Margaret of France", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Emmanuelle Vaugier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Joan II, Countess of Burgundy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jeanne d'\u00c9vreux", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1150,7 +1150,7 @@
 {"SubjectEntity": "Anne-Marie David", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "St\u00e9phanie Foretz", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Sandrine Bonnaire", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "S\u00e9verine", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "S\u00e9verine", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Sonia Delaunay", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Marie Laurencin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Louise de Keroual, Duchess of Portsmouth", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1246,7 +1246,7 @@
 {"SubjectEntity": "Marie-Ang\u00e9lique Memmie Le Blanc", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Martine Brochard", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9douard-Alfred Martel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "\u00c9douard Andr\u00e9", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "\u00c9douard Andr\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9douard Roche", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ariel Besse", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9douard Lartet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1291,7 +1291,7 @@
 {"SubjectEntity": "Patrick Bruel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9ric Bernard", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Yves Saint Laurent", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Paul Belmondo", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Paul Belmondo", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Harry Schell", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Yves Giraud-Cabantous", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Henri Pescarolo", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1342,7 +1342,7 @@
 {"SubjectEntity": "Marcel Balsa", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Robert La Caze", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Guelfi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Andr\u00e9 Simon", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Andr\u00e9 Simon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Aldo Gordini", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles Pozzi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Mike Sparken", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1352,7 +1352,7 @@
 {"SubjectEntity": "Jean Alesi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Bernard Collomb", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Roger Loyer", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jacques Villeneuve", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jacques Villeneuve", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Gilles Villeneuve", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Clement IV", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9rik Comas", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1600,7 +1600,7 @@
 {"SubjectEntity": "\u00c9douard Le Roy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9douard Louis Trouessart", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9douard Lucas", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "\u00c9douard Michelin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "\u00c9douard Michelin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9douard Mignan", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9douard Montoute", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9douard Moull\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -1708,7 +1708,7 @@
 {"SubjectEntity": "Wladyslaw Michal Zaleski", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Yao Junior S\u00e8naya", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Victor-Adolphe Malte-Brun", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Henri Gr\u00e9goire", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Henri Gr\u00e9goire", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Hacine Cherifi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Marc Levy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7ois Roberday", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -2051,12 +2051,12 @@
 {"SubjectEntity": "Abdoulaye Sessouma", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Abdoulaye Seye", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Abdoulaye S\u00e9kou Sow", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Abdoulaye Traor\u00e9", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Abdoulaye Traor\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Abdourahman Waberi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Patrick Bauchau", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Claude Van Damme", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Florinda Bolkan", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean Giraud", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean Giraud", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Grand Duke Ferdinand III, Grand Duke of Tuscany", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Papiss Ciss\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Alfred de Vigny", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -2197,7 +2197,7 @@
 {"SubjectEntity": "Teddy Tamgho", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Eugenia Martinet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Marie-Bernard Cl\u00e9ment", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Louis Marin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Louis Marin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jacques Hilling", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Marc Fontaine", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7ois Chopart", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -2450,7 +2450,7 @@
 {"SubjectEntity": "Alma S\u00f6derhjelm", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7ois II, Duke of Longueville", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Michel P\u00e9rin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Princess Louise of Orl\u00e9ans", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Princess Louise of Orl\u00e9ans", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Eug\u00e8ne Dadi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Laurence Bily", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Anne Bragance", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -2615,7 +2615,7 @@
 {"SubjectEntity": "Alberto Santos-Dumont", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Alpha Oumar Konar\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Modibo Ke\u00efta", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Moussa Traor\u00e9", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Moussa Traor\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Michel Legrand", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jacopo Bellini", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Henri Fabre", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -2638,7 +2638,7 @@
 {"SubjectEntity": "Claude-Louis Navier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Beji Caid Essebsi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Beno\u00eet Paul \u00c9mile Clapeyron", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Charles Garnier", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Charles Garnier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Abel Gance", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Nicolae Iorga", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Vincent d'Indy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -2712,7 +2712,7 @@
 {"SubjectEntity": "Lockroy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Peter I", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean Martinon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Mohamed Fofana", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Mohamed Fofana", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "F\u00e9lix Danjou", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Georges Gillet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Isabelle Stengers", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -3194,7 +3194,7 @@
 {"SubjectEntity": "Lino Ventura", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Sacha Guitry", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Alfredo Casella", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Guillaume Bri\u00e7onnet", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Guillaume Bri\u00e7onnet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Agoli-agbo", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Baptiste Gourion", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Nguyen Le", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -3209,10 +3209,10 @@
 {"SubjectEntity": "Louis Dunoyer de Segonzac", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ludovic Castard", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Serge-Junior Martinsson Ngouali", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Victor de Broglie", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Victor de Broglie", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Nicolas Rolin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Bettina Rheims", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Pierre Vernier", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Pierre Vernier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Mahaut of Albon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ahmad al-Tayyeb", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Stanislav Kostka Neumann", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -3394,7 +3394,7 @@
 {"SubjectEntity": "Adrien Douady", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Guillaume Widmer", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Adrien Duport", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Adrien Duvillard", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Adrien Duvillard", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Adrien Fainsilber", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Adrien Finck", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "William T\u00e9choueyres", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -3618,7 +3618,7 @@
 {"SubjectEntity": "Sandra Laoura", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Delwa Kassir\u00e9 Koumakoye", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Thomas Ebbesen", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean-Pierre Boyer", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean-Pierre Boyer", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7oise de Graffigny", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Clara Reeve", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Isabelle Duchesnay", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -4057,7 +4057,7 @@
 {"SubjectEntity": "Marie Durand", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ren\u00e9 Leriche", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jacques Villon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Amadou Ciss\u00e9", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Amadou Ciss\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charlotte Delbo", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Amadou Gaoh", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Mordecai Richler", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -4462,7 +4462,7 @@
 {"SubjectEntity": "Pierre-Gabriel Buffardin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ibrahim Boubacar Ke\u00efta", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jules Andr\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean Robin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean Robin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ede Horn", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Pierre Jouyet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre Chayrigu\u00e8s", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -4763,7 +4763,7 @@
 {"SubjectEntity": "Thomas Couture", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Aur\u00e9lien Chedjou", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Enzo Fern\u00e1ndez", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Georges Lacombe", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Georges Lacombe", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Kilian Patour", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre Matisse", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Siegfried", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -5087,7 +5087,7 @@
 {"SubjectEntity": "Andr\u00e9 Chorda", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "William I of Bures", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ito Morabito", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Andr\u00e9 Ch\u00e9ron", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Andr\u00e9 Ch\u00e9ron", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "M\u00e9lanie de Pourtal\u00e8s", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles de Lorraine de Vaud\u00e9mont", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "L\u00e9on Groc", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -5116,14 +5116,14 @@
 {"SubjectEntity": "Victoria Wright", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Kamil Zayatte", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Deutsch", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Andr\u00e9 Devaux", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Andr\u00e9 Devaux", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Edward J. Perkins", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jacques Abbadie", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Dewavrin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Dufraisse", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Duchesne", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Dunoyer de Segonzac", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Andr\u00e9 Durand", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Andr\u00e9 Durand", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Dupeyrat", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Durom\u00e9a", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Walther Straram", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -5498,7 +5498,7 @@
 {"SubjectEntity": "Michel Caillaud", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jacques Santini", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Aristide Cavaill\u00e9-Coll", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Pierre Fournier", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Pierre Fournier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Sergei Winogradsky", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Joseph Kessel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Max Aub", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -5542,7 +5542,7 @@
 {"SubjectEntity": "Sebasti\u00e3o Salgado", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Louison Bobet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Louis Pierre Vieillot", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jacques Martin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jacques Martin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Louis Deibler", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Oskar Backlund", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "L\u00e9on Ashkenazi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -6095,7 +6095,7 @@
 {"SubjectEntity": "Igor Markevitch", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles Patin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Boniface Louis Riquetti de Mirabeau", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Georges Jacob", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Georges Jacob", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Sergio Cabrera", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Leducq", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Michel Saloff Coste", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -6357,7 +6357,7 @@
 {"SubjectEntity": "Aline Marie Raynal", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Herv\u00e9 Robert Thuet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pascal Mah\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Antoine Dubois", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Antoine Dubois", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Nicolas Gillet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Joseph Epstein", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Alain Lambert", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -6509,7 +6509,7 @@
 {"SubjectEntity": "Jean-Louis Cazes", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Alexandre Arnoux", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Antoine Isaac Silvestre de Sacy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean-Baptiste Lemoyne", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean-Baptiste Lemoyne", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Vladimir Cosma", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "James Louis Sobieski", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Eva Ionesco", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -6592,7 +6592,7 @@
 {"SubjectEntity": "Louis Moyse", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9-Marie Charue", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Catherine Leterrier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Andr\u00e9 Martin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Andr\u00e9 Martin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Bernard Laidebeur", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Patrick Le Lay", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Martineau", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -6642,7 +6642,7 @@
 {"SubjectEntity": "Andr\u00e9 Pierre Louis Dupuy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jules Destr\u00e9e", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Pirro", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Andr\u00e9 Pr\u00e9vost", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Andr\u00e9 Pr\u00e9vost", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "F\u00e9lix Marie Charles Texier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Halyna Kuzmenko", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Raison", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -6742,7 +6742,7 @@
 {"SubjectEntity": "Ella Maillart", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fadhma A\u00eft Mansour", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Mariama B\u00e2", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Camille Laurens", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Camille Laurens", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Madeleine de Souvr\u00e9, marquise de Sabl\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude-\u00c9tienne Michel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Sophie Ristaud Cottin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -7455,7 +7455,7 @@
 {"SubjectEntity": "Claude de Rohan-Gi\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jorge Hourton", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jules Porg\u00e8s", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Boubacar Diallo", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Boubacar Diallo", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charlotte Morel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Marie-Pierre Leray", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Iv\u00e1n Cepeda Castro", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -7661,7 +7661,7 @@
 {"SubjectEntity": "Claude Ignace Fran\u00e7ois Michaud", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Hippolyte Aucouturier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Robert Ballaman", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Bechara El Khoury", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Bechara El Khoury", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7ois Billoux", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Philippe S\u00e9guin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Nino Maisuradze", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -7752,13 +7752,13 @@
 {"SubjectEntity": "Jean-Luc Delpech", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Gaspard Gourgaud", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Louis Faidherbe", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean-Bernard L\u00e9vy", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean-Bernard L\u00e9vy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Auguste Albert", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Daniel Reiner", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Simon Arnauld de Pomponne", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude Fran\u00e7ois de Malet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre de Molins", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Henri Wallon", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Henri Wallon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ad\u00e9la\u00efde Filleul, Marquise de Souza-Botelho", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Gabriela Adame\u0219teanu", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Philippe Chatrier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -8021,7 +8021,7 @@
 {"SubjectEntity": "Andr\u00e9 Bjerke", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Auguste Franchomme", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles Louis Joseph Vandame", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Andr\u00e9 Bloch", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Andr\u00e9 Bloch", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Andr\u00e9 Bloc", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Agnes Mary Frances Duclaux", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Maurice-Adolphe Gaidon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -8191,7 +8191,7 @@
 {"SubjectEntity": "Tristan Garcia", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Denis Blondin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles Arnold Tournemire", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jacques Morel", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jacques Morel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Catherine Flemming", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jacques-Ars\u00e8ne d'Arsonval", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles Armand Picquenard", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -8470,7 +8470,7 @@
 {"SubjectEntity": "Leuthard I of Paris", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Aleksey Pleshcheyev", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Bertrand Pontalis", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Fran\u00e7ois Blondel", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Fran\u00e7ois Blondel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ernst Moerman", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Albert Geoffroy Saint-Hilaire", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Bernard Z\u00e9nier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -8510,7 +8510,7 @@
 {"SubjectEntity": "Eustace Chapuys", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Dimitri Tikovoi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Odilon Barrot", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Henri Martin", "ObjectEntities": ["French", "French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Henri Martin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Henri Ren\u00e9 Guieu", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Antonio Lafreri", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean Rustin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -8548,7 +8548,7 @@
 {"SubjectEntity": "Francesco Fa\u00e0 di Bruno", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fabrice Fior\u00e8se", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Henri Bonnefoy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Pierre Morel", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Pierre Morel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Philippe Lefebvre", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Philippe Desportes", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Michel Drach", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -9030,7 +9030,7 @@
 {"SubjectEntity": "Olivier Latry", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Raymond Duchamp-Villon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jaroslav \u010cern\u00fd", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean Cousin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean Cousin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Philippe Petit", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Maurice de Broglie", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Honor\u00e9 V, Prince of Monaco", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -9077,7 +9077,7 @@
 {"SubjectEntity": "La Grande Sophie", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Prosper Louis, 7th Duke of Arenberg", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Guillaume Schnaebel\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Prince Henri d'Orl\u00e9ans", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Prince Henri d'Orl\u00e9ans", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Francine Racette", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Guy H\u00e9raud", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Elisabeth Labrousse", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -9093,7 +9093,7 @@
 {"SubjectEntity": "Aristide Bruant", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Olivier de Kersauson", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Henriette Puig-Roget", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Bruno Martini", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Bruno Martini", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Henry Sydney, 1st Earl of Romney", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Thomas Balvay", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "\u00c9tienne de Veniard, Sieur de Bourgmont", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -9566,7 +9566,7 @@
 {"SubjectEntity": "Moishe Rosen", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Artur London", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Alexandre Gu\u00e9niot", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean-Marie Abgrall", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean-Marie Abgrall", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Hichem Rostom", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Michel Yachvili", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Pierre Soli\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -9786,7 +9786,7 @@
 {"SubjectEntity": "Alexis", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ehsan Naraghi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Alexis Jenni", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Alfred Agache", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Alfred Agache", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Bernhard Ayglerius", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Kazimir Hnatow", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Hong Jong-u", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -10378,8 +10378,8 @@
 {"SubjectEntity": "Pierre-Marie-Alexis Millardet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Lucien Lesna", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jan Lambrecht Domien Sleeckx", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Fran\u00e7ois Fournier", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Henri Cohen", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Fran\u00e7ois Fournier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Henri Cohen", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Vladimir A\u00eftoff", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Frederick Stafford", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean Crotti", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -11103,7 +11103,7 @@
 {"SubjectEntity": "Pierre Molinier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Karim Noureldin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles Hindenlang", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Pierre Laffitte", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Pierre Laffitte", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Michael L\u00f6wy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Edmond Bour", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ivar Ekeland", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -11647,7 +11647,7 @@
 {"SubjectEntity": "Pierre Lacoste", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Edmond Weiskopf", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Eszter Babarczy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Henri Simon", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Henri Simon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Henri Plagnol", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude Antoine Colombot", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean Fayard", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -12580,9 +12580,9 @@
 {"SubjectEntity": "Michel H\u00e9non", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Baba Sy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Roger Salnot", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Paul Guillaume", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Paul Guillaume", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Bernard-Roger, Count of Bigorre", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean-Baptiste Barri\u00e8re", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean-Baptiste Barri\u00e8re", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Philippe Yac\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7ois-Xavier Fabre", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Gaston I, Count of Foix", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -12912,7 +12912,7 @@
 {"SubjectEntity": "Audrey Lamy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Audr\u00e4y Tuzolana", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Marc Barbezat", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Charles Lavigne", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Charles Lavigne", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Victor Cadet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ren\u00e9 Tartara", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Erzs\u00e9bet Andics", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -13749,7 +13749,7 @@
 {"SubjectEntity": "Rostanh de Merguas", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Joseph Decaisne", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Franck Biancheri", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Paul Meyer", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Paul Meyer", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Haider Ackermann", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fabienne Godet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre Rosenberg", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -14049,7 +14049,7 @@
 {"SubjectEntity": "Roland Nungesser", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jimmy Jean-Louis", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles Julien Brianchon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean-Baptiste Morin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean-Baptiste Morin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7ois Bruhat", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Robert Waseige", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Roland de la Poype", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -14250,7 +14250,7 @@
 {"SubjectEntity": "Gregori Chmara", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Serge H\u00e9lan", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Robert Aron", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Francis Perrin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Francis Perrin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles de Mazade", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre Puiseux", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre Marc Gaston de L\u00e9vis, Duke of L\u00e9vis", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -14265,7 +14265,7 @@
 {"SubjectEntity": "Enzo Reale", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Georges Desbons", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "El Hadji Ba", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "El Hadji Diouf", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "El Hadji Diouf", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Nicaise Ellebaudt", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Emmanuel Moire", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "D\u00e1niel Em\u0151dy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -14928,7 +14928,7 @@
 {"SubjectEntity": "R\u00f3bert Falus", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "L\u00e1szl\u00f3 Farag\u00f3", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Raymond Glaszmann", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Dominique You", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Dominique You", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Pierre Henri Larthomas", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ferenc Feh\u00e9r", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Guillaume de Montmorency-Thor\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -16275,7 +16275,7 @@
 {"SubjectEntity": "Daouda Bangoura", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Daouda Jabi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Henri Capitant", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Daouda Sow", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Daouda Sow", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "No\u00ebl Alexandre", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Lajos Marton", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Darko Anic", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -17036,7 +17036,7 @@
 {"SubjectEntity": "Hugues II. de Sade", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Dorothea Trudel", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Fran\u00e7ois de Gondi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Alexis de Garaud\u00e9", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Alexis de Garaud\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "St\u00e9phane Yerasimos", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean Baudlot", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Louis Lepic", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -17107,7 +17107,7 @@
 {"SubjectEntity": "Denise Becker", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Denise Marie Fran\u00e7ois-Geiger", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Victoria Nuland", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "S\u00e9bastien Faure", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "S\u00e9bastien Faure", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Jean-Claude Mignon", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Dennis Collins", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Moshe Lazar", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -17570,7 +17570,7 @@
 {"SubjectEntity": "Louis Herman De Koninck", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7ois Noudelmann", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles d'\u00c9vreux", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Christian Fr\u00e9mont", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Christian Fr\u00e9mont", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ferdinand Lemaire", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "George Archainbaud", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Gisbert N\u00e4ther", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -17735,7 +17735,7 @@
 {"SubjectEntity": "Ibrahim Chaibou", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Clarisse Nicoi\u034f\u0308dski", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Charles Kuentz", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Idrissa Traor\u00e9", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Idrissa Traor\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude-Adrien Nonnotte", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude Charles Pierquin de Gembloux", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude-Carloman de Rulhi\u00e8re", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -18027,7 +18027,7 @@
 {"SubjectEntity": "Ernst Friedrich Weidner", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Louis-Guillaume P\u00e9cour", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Marie Mergey", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Michel Laurent", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Michel Laurent", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Sacha Pito\u00ebff", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Ernst Honigmann", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Lambert Massart", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -18128,7 +18128,7 @@
 {"SubjectEntity": "Claude Montana", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude N\u2019Goran", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude Paris", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Claude Pascal", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Claude Pascal", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude Papi", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude Onesta", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Claude Pichois", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -18416,7 +18416,7 @@
 {"SubjectEntity": "J\u00e1nos Antal Kazinczy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "J\u00e1nos \u00c1rp\u00e1d Kazinczy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Gyula Kelemen", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Philippe Breton", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Philippe Breton", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Mich\u00e8le Reverdy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Fran\u00e7ois-Jo\u00ebl Thiollier", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Germaine Dieterlen", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -19180,7 +19180,7 @@
 {"SubjectEntity": "Jean-Nicolas Corvisart", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Guillaume Franc", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Raymond Leb\u00e8gue", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Jean S\u00e9guy", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Jean S\u00e9guy", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Simone Collinet", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Marie Georges Humbert", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Herv\u00e9 Tour\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
@@ -19420,7 +19420,7 @@
 {"SubjectEntity": "Georges Lombard", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Georges Lubin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Georges Lote", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
-{"SubjectEntity": "Georges Martin", "ObjectEntities": ["French", "French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Georges Martin", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Georges Marty", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Georges Mator\u00e9", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
 {"SubjectEntity": "Georges Moineau", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}

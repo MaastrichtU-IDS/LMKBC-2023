@@ -12,12 +12,15 @@ FM ='fill_mask'
 def run_token_redefine():
     # run_token_redefine
     global last_best_dir
-    tr_model_save_dir = f"{config.BIN_DIR}/{TR}/{pretrain_model_name}"
+
+    tr_model_save_dir = f"{config.BIN_DIR}/{args.label}/{TR}"
     tr_model_best_dir = tr_model_save_dir + "/best_ckpt"
 
 
     cmd_token_redefine = f"""
-   python {config.SRC_DIR}/tr_model.py    --train_batch_size 64 --gpu 0   --train_epoch 30 --learning_rate 3e-5  --model_load_dir {last_best_dir} --model_save_dir {tr_model_save_dir} --model_best_dir  {tr_model_best_dir}
+
+   python {config.SRC_DIR}/tr_model.py    --train_batch_size 128 --gpu {args.gpu}   --train_epoch 30 --learning_rate 3e-5  --model_load_dir {last_best_dir} --model_save_dir {tr_model_save_dir} --model_best_dir  {tr_model_best_dir}
+
     
     """
     last_best_dir =  tr_model_best_dir
@@ -26,11 +29,14 @@ def run_token_redefine():
 
 def run_pretrain_filled_mask():
     global last_best_dir
-    pfm_model_save_dir =f"{config.BIN_DIR}/{PFM}/{pretrain_model_name}"
-    pfm_model_best_dir = pfm_model_save_dir + "/best_ckpt"
 
+    pfm_model_save_dir =f"{config.BIN_DIR}/{args.label}/{PFM}"
+    pfm_model_best_dir = pfm_model_save_dir + "/best_ckpt"
+    final_corpus_fn = f"{config.RES_DIR}/wikidata/no_person_serises/filter.json"
     # run_pretrain_filled_mask
-    final_corpus_fn = f"{config.RES_DIR}/wikidata/sentence_filter_entity_size.json"
+
+    # final_corpus_fn = f"{config.RES_DIR}/additional_corpus/fm_pretrain_2.txt"
+
     cmd_pretrain_filled_mask = f"""
     
    python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu {args.gpu}   --train_epoch 15 --learning_rate 5e-5   --model_load_dir {last_best_dir} --model_save_dir {pfm_model_save_dir} --model_best_dir  {pfm_model_best_dir}
@@ -43,7 +49,7 @@ def run_pretrain_filled_mask():
 def run_file_mask():
     OUTPUT_FILE = f'{config.OUTPUT_DIR}/filled-mask-valid.jsonl'
 
-    fm_model_save_dir =f"{config.BIN_DIR}/{FM}/{pretrain_model_name}"
+    fm_model_save_dir =f"{config.BIN_DIR}/{args.label}/{FM}"
     fm_model_best_dir = fm_model_save_dir + "/best_ckpt"
     global last_best_dir
     global test_fn
@@ -66,7 +72,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--mode",
         type=str,
-        default='train_full',
+        default='fm',
         help="train test",
     )
     parser.add_argument(
@@ -75,32 +81,44 @@ if __name__ == "__main__":
         default='0',
         help="train test",
     )
-    #pretrain_model_name = config.bert_tiny
-    pretrain_model_name = config.bert_large_cased
+
+    parser.add_argument(
+        "--load_dir",
+        type=str,
+        default="null",
+        help="train test",
+    )
+    parser.add_argument(
+        "--label",
+        type=str,
+        default="default",
+        help="train test",
+    )
+    #pretrain_model_name = config.bert_
+   
 
     para_dict=dict()
 
     args = parser.parse_args()
-    last_best_dir = pretrain_model_name
+    args.mode=args.mode.split(',')
+    last_best_dir = args.load_dir
     test_fn = config.VAL_FN
-    if "train_full" in args.mode:
+
+    if "full" in args.mode:
         run_token_redefine()
         run_pretrain_filled_mask()
         run_file_mask()
 
-    if "train_tr_fm" in args.mode:
+    if "tr" in args.mode:
         run_token_redefine()
         run_file_mask()
         
-    if "train_pfm_fm" in args.mode:
+    if "pfm" in args.mode:
         run_pretrain_filled_mask()
         run_file_mask()
 
-    if "train_fm" in args.mode:
+    if "fm" in args.mode:
         run_file_mask()
-
-    if "train_pfm" in args.mode:
-        run_pretrain_filled_mask()
 
     if "test" in args.mode:
         test_fn=args.test_fn 

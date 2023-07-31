@@ -13,6 +13,7 @@ from glob import glob
 import config
 import util
 import transformers
+from tqdm import tqdm
 
 
 with open(f'{config.RES_DIR}/tokenizer/bert/added_tokens.json') as f:
@@ -286,7 +287,11 @@ def collect_entity_for_tokenizer():
     with open(entity_fp, mode='w') as f:
         json.dump(result_dict,f,indent=2,sort_keys=True)
     entity_set = set.union(* [set(e) for e in result_dict.values()])
-    refresh_tokenizer(entity_set)
+    # refresh_tokenizer(entity_set)
+    multi_thread_entity(entity_set)
+    # collection_ids(entity_set)
+    # entity_id_dict = get_entity_ids(entity_set)
+
 
 def collect_entity_for_pretrain():
     exclude_entities = {}
@@ -295,7 +300,7 @@ def collect_entity_for_pretrain():
     obj_type ={o for s, o in  config.relation_entity_type_dict.values()}
     sub_only_type = sub_type - obj_type
     # exclude_entities = exclude_entities | s_type
-    # exclude_entities = {'Series', 'Compound', 'Band', 'Person'}
+    exclude_entities = {'Series', 'Person','Number'}
     # exclude_entities = {'Person'}
     print("exclude_entities",exclude_entities)
     exclude_subject={"RiverBasinsCountry"}
@@ -314,7 +319,7 @@ def collect_entity_for_pretrain():
     siler_dict,silver_entity_sentence = count_entity_distribution(silver_lines,
                                            exclude_entities = exclude_entities,
                                             merge_subject=True,
-                                            # exclude_subject=exclude_subject,
+                                            exclude_subject=exclude_subject,
                                             # give_up_relation=give_up_relation
                                             )
     
@@ -432,7 +437,79 @@ def count_entity_distribution(all_lines,
 
     return entity_dict,entity_sentence
 
+def collection_ids(entity_set):
+    entity_count=0
+    for entity in tqdm(entity_set):
+        id = util.disambiguation_baseline(entity)
+        if entity_count% 100 ==0:
+            util.save_entity_id()
+    util.save_entity_id()
 
+import requests
+
+def get_entity_ids(entity_labels):
+    entity_labels= list(entity_labels)[:10]
+    url = "https://www.wikidata.org/w/api.php"
+    params = {
+        "action": "wbgetentities",
+        "format": "json",
+        "props": "info",
+        "languages": "en",
+        "titles": "|".join(entity_labels),
+    }
+    entity_id_dict = dict()
+    response = requests.get(url, params=params)
+    if response.status_code == 200:
+        data = response.json()
+        print("data",data)
+        entities = data.get("entities", {})
+        for label in entity_labels:
+            entity_data = entities.get(label, {})
+            if "title" in entity_data:
+                entity_id = entity_data["title"]
+                entity_id_dict[label] = entity_id
+        
+    else:
+        print(f"Error: Request failed with status code {response.status_code}")
+    return entity_id_dict
+
+def multi_thread_entity(entity_set):
+    import requests
+    from concurrent.futures import ThreadPoolExecutor,as_completed
+    # entity_set=list(entity_set)[10000:]
+    with ThreadPoolExecutor(max_workers=1000) as executor:
+        futures = [executor.submit(util.disambiguation_baseline, entity) for entity in tqdm(entity_set)]
+        future_entity_dict = dict()
+        for entity, future in zip(entity_set, futures):
+            future_entity_dict[future] = entity
+        entity_dict = dict()
+        for future in tqdm(as_completed(futures),total = len(entity_set)):
+            # print(future_entity_dict[future], future.result())
+        # for future in futures:
+            # result = future.result()
+            entity_dict[future_entity_dict[future]]=future.result()
+    util.save_entity_id()
+    with open(f'{config.RES_DIR}/entity_id.json','w') as f:
+        json.dump(entity_dict,f,indent = 2)
+    
+def same_id_numer():
+    with open(f'{config.RES_DIR}/entity_id.json') as f:
+        entity_id = json.load(f)
+    id_count= dict()
+    for e, i in entity_id.items():
+        if i not in id_count:
+            id_count[i] = 1
+        else:
+            id_count[i] +=1
+    redunt_number = 0
+    for i, c in id_count.items():
+        if c>1:
+            redunt_number+=1
+    print("redunt_number",redunt_number)
+
+            
 if __name__ == "__main__":
     collect_entity_for_pretrain()
     # collect_entity_for_tokenizer()
+    # collection_ids()
+    # same_id_numer()

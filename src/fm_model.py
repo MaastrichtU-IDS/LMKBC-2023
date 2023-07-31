@@ -5,7 +5,7 @@ import argparse
 import logging
 import random
 import pandas as pd
-from tokenizers import Tokenizer
+#from tokenizers import Tokenizer
 
 import torch
 from torch.utils.data import Dataset

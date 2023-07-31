@@ -24,17 +24,33 @@ import json
 
 silver_dir = f"{config.RES_DIR}/silver"
 
-def extract(fp, subject_name, object_name, predicate):
+
+def extract(item_dict):
+    fp = item_dict['fp']
+    subject_name=item_dict['subject_name']
+    object_name=item_dict['object_name']
+    predicate=item_dict['predicate']
+    sub_id_name = subject_name[:-5]
+    obj_id_name = object_name[:-5]
+
     with open(fp) as f:
         json_list = json.load(f)
+
     res_dict=dict()
-    pred_fp = silver_dir+f'/{predicate}.jsonl'
+    entity_ids_dict=dict()
+    has_id=False
     for item in json_list:
         sub = item[subject_name]
         obj = item[object_name]
+        # if sub_id_name in item:
+        #     has_id =True
+        # if has_id:
+        #     entity_ids_dict[sub] = extract_id( item[sub_id_name])
+        #     entity_ids_dict[obj] = extract_id(item[obj_id_name])
+
         if sub not in res_dict:
-            res_dict[sub] = [] 
-        res_dict[sub].append(obj)
+            res_dict[sub] = set() 
+        res_dict[sub].add(obj)
     
     res_list=[]
     for k,v in res_dict.items():
@@ -43,9 +59,14 @@ def extract(fp, subject_name, object_name, predicate):
             config.KEY_OBJS:v,
             config.KEY_REL:predicate
             }
+        # if has_id:
+        #     item[config.KEY_OBJS_ID]= [entity_ids_dict[vi] for vi in v],
+        #     item[config.KEY_SUB_ID]=entity_ids_dict[k]
+
         res_list.append(item)
     print("size of predicate is ",len(res_list))
-    util.file_write_json_line(pred_fp, res_list)
+    return res_list
+
 
 
 CountryBordersCountry = {
@@ -62,12 +83,6 @@ FootballerPlaysPosition = {
     "predicate":"FootballerPlaysPosition"
     }
 
-FootballerPlaysPosition = {
-    "fp":f"{config.RES_DIR}/additional_corpus/FootballPlayPosition_0_50000.json",
-    "subject_name":"footballerLabel",
-    "object_name":"positionLabel",
-    "predicate":"FootballerPlaysPosition"
-    }
 
 BandHasMember = {
     "fp":f"{config.RES_DIR}/additional_corpus/BandHasMember.json",
@@ -158,30 +173,58 @@ CityLocatedAtRiver ={
     "fp":f"{config.RES_DIR}/additional_corpus/CityLocatedAtRiver.json",
     "subject_name":"cityLabel",
     "object_name":"riverLabel",
-    "predicate":"CityLocatedAtRiver"
+    "predicate":"CityLocatedAtRiver",
+    
     }
 
+pre_list = [
+        CountryBordersCountry,
+        FootballerPlaysPosition,
+    CityLocatedAtRiver,
+    BandHasMember,
+    CompanyHasParentOrganisation,
+    CompoundHasParts,
+    PersonCauseOfDeath,
+    PersonHasAutobiography,
+    PersonHasEmployer,
+    PersonHasPlaceOfDeath,
+    PersonPlaysInstrument,
+    PersonSpeaksLanguage,
+    RiverBasinsCountry,
+    SeriesHasNumberOfEpisodes,
+PersonHasProfession,
+CityLocatedAtRiver,
+        ]
 
 def generate_silver_json():
-    pre_list = [
-        
-    CityLocatedAtRiver
-
-        ]
-
     for p in pre_list:
-        extract(**p)
+        res_list = extract(p)
+        pred_fp = silver_dir+f'/{p["predicate"]}.jsonl'
+        util.file_write_json_line(pred_fp, res_list)
+
+def extract_id(aUrl):
+    return aUrl.split('/')[-1]
 
 def generate_wiki_id_map():
-
-    pre_list = [
-        
-    CityLocatedAtRiver
-
-        ]
-
+    wiki_list=[] 
     for p in pre_list:
-        extract(**p)
+        p['subject_name'] = p['subject_name'].replace('Label','')
+        p['object_name'] = p['object_name'].replace('Label','')
+        res_list = extract(p)
+        wiki_list.extend(res_list)
+    entity_id_dict = dict()
+    for p in wiki_list:
+        entity_id_dict[p[config.KEY_SUB]] = extract_id(p[config.KEY_SUB])
+        for e in p[config.KEY_OBJS]:
+            entity_id_dict[e] = extract_id(e)
+        p['object_name'] = p['object_name'].replace('Label','')
+
+    pred_fp = silver_dir+f'/{p["predicate"]}.jsonl'
+    util.file_write_json_line(pred_fp, wiki_list)
+
+
+if __name__ == "__main__":
+    generate_silver_json()
         
 
 

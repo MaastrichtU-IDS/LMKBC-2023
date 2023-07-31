@@ -1,53 +1,53 @@
 {"SubjectEntity": "Marek i Wacek", "ObjectEntities": ["Marek Tomaszewski"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Bogenhauser K\u00fcnstlerkapelle", "ObjectEntities": ["Georg Pezold", "Heinrich D\u00fcll", "Heinrich Scherrer"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Bogenhauser K\u00fcnstlerkapelle", "ObjectEntities": ["Heinrich D\u00fcll", "Georg Pezold", "Heinrich Scherrer"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q894337", "ObjectEntities": ["Wolfgang Sch\u00e4fer", "Hans Hachmann"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Acoustic Ladyland", "ObjectEntities": ["Pete Wareham"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Young Legionnaire", "ObjectEntities": ["Paul Mullen"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Native Tongues", "ObjectEntities": ["Jungle Brothers"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Les \u00c9l\u00e9ments", "ObjectEntities": ["Jo\u00ebl Suhubiette"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Early Music Consort", "ObjectEntities": ["Christopher Hogwood", "James Bowman", "David Munrow"], "Relation": "BandHasMember"}
-{"SubjectEntity": "4 in Love", "ObjectEntities": ["Rainie Yang", "Sunnie Huang", "Windie Zhang"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Fintelligens", "ObjectEntities": ["Elastinen", "Iso H"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Early Music Consort", "ObjectEntities": ["David Munrow", "James Bowman", "Christopher Hogwood"], "Relation": "BandHasMember"}
+{"SubjectEntity": "4 in Love", "ObjectEntities": ["Windie Zhang", "Sunnie Huang", "Rainie Yang"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Fintelligens", "ObjectEntities": ["Iso H", "Elastinen"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The 12 cellists of the Berlin Philharmonic", "ObjectEntities": ["Stephan Koncz"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dillard and Clark", "ObjectEntities": ["Gene Clark"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Whiskeytown", "ObjectEntities": ["Ryan Adams"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Hello Pro Kensh\u016bsei", "ObjectEntities": ["Musubu Funaki", "Nanami Yanagawa", "Kaede Kaga", "Reina Yokoyama", "Ruru Dambara"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Hello Pro Kensh\u016bsei", "ObjectEntities": ["Reina Yokoyama", "Ruru Dambara", "Nanami Yanagawa", "Kaede Kaga", "Musubu Funaki"], "Relation": "BandHasMember"}
 {"SubjectEntity": "WaT", "ObjectEntities": ["Eiji Wentz"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ensemble Organum", "ObjectEntities": ["Marcel P\u00e9r\u00e8s"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Los Panchos", "ObjectEntities": ["Residente", "Alfredo Gil", "Johnny Albino", "Julito Rodr\u00edguez", "Chucho Navarro", "Ovidio Hern\u00e1ndez", "Ra\u00fal Shaw Moreno", "Chucho Navarro Jr.", "Hernando Avil\u00e9s", "Rafael Basurto Lara"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Los Panchos", "ObjectEntities": ["Johnny Albino", "Ra\u00fal Shaw Moreno", "Rafael Basurto Lara", "Ovidio Hern\u00e1ndez", "Hernando Avil\u00e9s", "Chucho Navarro Jr.", "Residente", "Chucho Navarro", "Alfredo Gil", "Julito Rodr\u00edguez"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Mihimaru GT", "ObjectEntities": ["Hiroko Akutsu"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Wellk\u00fcren", "ObjectEntities": ["Monika Well", "Barbara Well", "Notburga Well", "Veronika Well"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Gershwin Piano Quartet", "ObjectEntities": ["Nik B\u00e4rtsch", "Mischa Cheung", "Benjamin Engeli", "Andr\u00e9 Desponds", "Stefan Wirth", "Marlis Walter"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Wellk\u00fcren", "ObjectEntities": ["Barbara Well", "Monika Well", "Notburga Well", "Veronika Well"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Gershwin Piano Quartet", "ObjectEntities": ["Benjamin Engeli", "Andr\u00e9 Desponds", "Stefan Wirth", "Marlis Walter", "Nik B\u00e4rtsch", "Mischa Cheung"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Tres Coronas", "ObjectEntities": ["Rocca"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Hesp\u00e8rion XXI", "ObjectEntities": ["Jordi Savall"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Diabolus in Musica", "ObjectEntities": ["Fr\u00e9d\u00e9ric B\u00e9tous", "Domitille Vigneron", "Antoine Guerber"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Diabolus in Musica", "ObjectEntities": ["Domitille Vigneron", "Antoine Guerber", "Fr\u00e9d\u00e9ric B\u00e9tous"], "Relation": "BandHasMember"}
 {"SubjectEntity": "In Gowan Ring", "ObjectEntities": ["B'eirth"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Alaitz eta Maider", "ObjectEntities": ["Maider Zabalegi", "Alaitz Telletxea"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Alaitz eta Maider", "ObjectEntities": ["Alaitz Telletxea", "Maider Zabalegi"], "Relation": "BandHasMember"}
 {"SubjectEntity": "LFO", "ObjectEntities": ["Rich Cronin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Bulutsuzluk \u00d6zlemi", "ObjectEntities": ["Burak G\u00fcven", "Ak\u0131n Eldes", "Sunay \u00d6zg\u00fcr", "Sina Kolo\u011flu", "Nejat Yava\u015fo\u011fullar\u0131", "Gencay K\u0131ymaz", "Deniz Demir\u00f6z"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Bulutsuzluk \u00d6zlemi", "ObjectEntities": ["Burak G\u00fcven", "Sina Kolo\u011flu", "Gencay K\u0131ymaz", "Sunay \u00d6zg\u00fcr", "Deniz Demir\u00f6z", "Ak\u0131n Eldes", "Nejat Yava\u015fo\u011fullar\u0131"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Tsvety", "ObjectEntities": ["Stas Namin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Pi\u0119\u0107 Dwa D\u0119biec", "ObjectEntities": ["Hans"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Hi-Fi", "ObjectEntities": ["Mitya Fomin", "Tatiana Tereshina", "Oksana Oleshko", "Timofey Pronkin", "Q43488555"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Zeitkratzer", "ObjectEntities": ["et al.", "Frank Gratkowski", "Maurice de Martin", "Ulrich Phillipp"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Hi-Fi", "ObjectEntities": ["Timofey Pronkin", "Mitya Fomin", "Q43488555", "Oksana Oleshko", "Tatiana Tereshina"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Zeitkratzer", "ObjectEntities": ["Ulrich Phillipp", "Maurice de Martin", "Frank Gratkowski", "et al."], "Relation": "BandHasMember"}
 {"SubjectEntity": "Treat Her Right", "ObjectEntities": ["Mark Sandman"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Ten Tenors", "ObjectEntities": ["Luke Kennedy"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Kubikmaggi", "ObjectEntities": ["Ksenia Fedorova"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lovzar", "ObjectEntities": ["Makka Sagaipova"], "Relation": "BandHasMember"}
-{"SubjectEntity": "La Petite Bande", "ObjectEntities": ["Gustav Leonhardt", "Petra Noskaiov\u00e1"], "Relation": "BandHasMember"}
-{"SubjectEntity": "An\u00fana", "ObjectEntities": ["Eimear Quinn", "Lynn Hilary", "\u00d3rla Fallon", "Deirdre Shannon", "Julie Feeney", "Katie McMahon", "Michael McGlynn", "Hozier", "Tara McNeill"], "Relation": "BandHasMember"}
+{"SubjectEntity": "La Petite Bande", "ObjectEntities": ["Petra Noskaiov\u00e1", "Gustav Leonhardt"], "Relation": "BandHasMember"}
+{"SubjectEntity": "An\u00fana", "ObjectEntities": ["Julie Feeney", "Deirdre Shannon", "Michael McGlynn", "Katie McMahon", "Lynn Hilary", "Hozier", "Eimear Quinn", "\u00d3rla Fallon", "Tara McNeill"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Nocturnal Emissions", "ObjectEntities": ["Nigel Ayers"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Brathanki", "ObjectEntities": ["Halina Mlynkova"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Bonanza Banzai", "ObjectEntities": ["\u00c1kos Kov\u00e1cs"], "Relation": "BandHasMember"}
 {"SubjectEntity": "P\u0142omie\u0144 81", "ObjectEntities": ["Pezet"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Diskoteka Avariya", "ObjectEntities": ["Anna Khokhlova", "Alexey Serov", "Alexey Ryzhov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Diskoteka Avariya", "ObjectEntities": ["Alexey Ryzhov", "Alexey Serov", "Anna Khokhlova"], "Relation": "BandHasMember"}
 {"SubjectEntity": "D. Train", "ObjectEntities": ["James D-Train Williams"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sunn O)))", "ObjectEntities": ["Greg Anderson", "Stephen O'Malley"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Alamaailman Vasarat", "ObjectEntities": ["Jarno Sarkula"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Electrafixion", "ObjectEntities": ["Ian McCulloch"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Deller Consort", "ObjectEntities": ["Alfred Deller"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Studio der fr\u00fchen Musik", "ObjectEntities": ["Nigel Rogers", "Thomas Binkley", "Andrea von Ramm", "Sterling Jones", "Williard Cobb", "Richard Levitt"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Studio der fr\u00fchen Musik", "ObjectEntities": ["Andrea von Ramm", "Sterling Jones", "Nigel Rogers", "Williard Cobb", "Richard Levitt", "Thomas Binkley"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Untouchable", "ObjectEntities": ["D.Action", "Sleepy"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Smash!!", "ObjectEntities": ["Sergey Lazarev", "Vlad Topalov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Smash!!", "ObjectEntities": ["Vlad Topalov", "Sergey Lazarev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gotthard", "ObjectEntities": ["Steve Lee", "Leo Leoni"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Karelia", "ObjectEntities": ["Alex Kapranos"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Vuraj", "ObjectEntities": ["Siarzhuk Douhushau", "Andr\u00e8j E\u016ddak\u00ecma\u016d"], "Relation": "BandHasMember"}
@@ -63,35 +63,35 @@
 {"SubjectEntity": "Anarchy Club", "ObjectEntities": ["Keith Smith"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Rebecca & Fiona", "ObjectEntities": ["Rebecca Scheja"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Trolls", "ObjectEntities": ["Iggy Pop"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Ringo Starr & His All-Starr Band", "ObjectEntities": ["Ringo Starr", "Steve Lukather", "Todd Rundgren"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Fatal Bazooka", "ObjectEntities": ["Micha\u00ebl Youn", "Benjamin Morgaine", "Vincent Desagnat"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Organisation", "ObjectEntities": ["Ralf H\u00fctter", "Florian Schneider"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Ringo Starr & His All-Starr Band", "ObjectEntities": ["Steve Lukather", "Todd Rundgren", "Ringo Starr"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Fatal Bazooka", "ObjectEntities": ["Vincent Desagnat", "Benjamin Morgaine", "Micha\u00ebl Youn"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Organisation", "ObjectEntities": ["Florian Schneider", "Ralf H\u00fctter"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Krambambula", "ObjectEntities": ["Lavon Volski"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dog Blood", "ObjectEntities": ["Skrillex"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Ivanushki International", "ObjectEntities": ["Igor Sorin", "Kyrylo Turychenko", "Kirill Andreyev", "Andrey Grigorev-Appolonov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "TNMK", "ObjectEntities": ["Oleh Mykhaylyuta", "Fozzi"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Krama", "ObjectEntities": ["Andrey Lyavonchyk", "Andrej Filata\u016d", "Q6539744", "Ihar Vara\u0161kievi\u010d"], "Relation": "BandHasMember"}
-{"SubjectEntity": "[AMATORY]", "ObjectEntities": ["Igor Kapranov", "Q30346287"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Ivanushki International", "ObjectEntities": ["Kirill Andreyev", "Kyrylo Turychenko", "Andrey Grigorev-Appolonov", "Igor Sorin"], "Relation": "BandHasMember"}
+{"SubjectEntity": "TNMK", "ObjectEntities": ["Fozzi", "Oleh Mykhaylyuta"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Krama", "ObjectEntities": ["Andrej Filata\u016d", "Andrey Lyavonchyk", "Ihar Vara\u0161kievi\u010d", "Q6539744"], "Relation": "BandHasMember"}
+{"SubjectEntity": "[AMATORY]", "ObjectEntities": ["Q30346287", "Igor Kapranov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Combustible Edison", "ObjectEntities": ["Brother Cleve"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Quarashi", "ObjectEntities": ["H\u00f6ssi \u00d3lafsson"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Theodor Bastard", "ObjectEntities": ["Yana Veva", "Fedor Svoloch"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Theodor Bastard", "ObjectEntities": ["Fedor Svoloch", "Yana Veva"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q2997859", "ObjectEntities": ["Jorge Ib\u00e1\u00f1ez"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Djiboudjep", "ObjectEntities": ["Michel Tonnerre"], "Relation": "BandHasMember"}
-{"SubjectEntity": "McCarthy", "ObjectEntities": ["L\u00e6titia Sadier", "John Williamson", "Malcolm Eden", "Tim Gane"], "Relation": "BandHasMember"}
+{"SubjectEntity": "McCarthy", "ObjectEntities": ["Malcolm Eden", "L\u00e6titia Sadier", "John Williamson", "Tim Gane"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dub Trio", "ObjectEntities": ["Stu Brooks"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Emperor Penguin", "ObjectEntities": ["Carl Saff"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Headspace", "ObjectEntities": ["Damian Wilson"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Racionais MC's", "ObjectEntities": ["Mano Brown", "Edi Rock", "Ice Blue", "KL Jay"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Marea", "ObjectEntities": ["Kutxi Romero", "David D\u00edaz", "Alen Ayerdi", "C\u00e9sar Ramallo", "Eduardo Beaumont"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Racionais MC's", "ObjectEntities": ["Ice Blue", "Edi Rock", "Mano Brown", "KL Jay"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Marea", "ObjectEntities": ["Alen Ayerdi", "David D\u00edaz", "Eduardo Beaumont", "Kutxi Romero", "C\u00e9sar Ramallo"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Shazna", "ObjectEntities": ["Izam"], "Relation": "BandHasMember"}
 {"SubjectEntity": "La Gossa Sorda", "ObjectEntities": ["Josep Nadal i Sendra"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Kaka de Luxe", "ObjectEntities": ["Alaska", "Enrique Sierra", "Nacho Canut", "Carlos Berlanga", "El Zurdo"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Kaka de Luxe", "ObjectEntities": ["Nacho Canut", "Alaska", "Enrique Sierra", "Carlos Berlanga", "El Zurdo"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Kornog", "ObjectEntities": ["So\u00efg Sib\u00e9ril"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Les Ours du Scorff", "ObjectEntities": ["Lors Jouin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lilicub", "ObjectEntities": ["Catherine Diran"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lilium", "ObjectEntities": ["Pascal Humbert"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Linkup", "ObjectEntities": ["M. Pokora"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Los Chunguitos", "ObjectEntities": ["Juan Salazar Salazar", "Jos\u00e9 Salazar", "Martin"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Los Chunguitos", "ObjectEntities": ["Juan Salazar Salazar", "Martin", "Jos\u00e9 Salazar"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Stars", "ObjectEntities": ["Syd Barrett"], "Relation": "BandHasMember"}
 {"SubjectEntity": "St. Lunatics", "ObjectEntities": ["Nelly"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ultima Thule", "ObjectEntities": ["Riho Sibul"], "Relation": "BandHasMember"}
@@ -104,71 +104,71 @@
 {"SubjectEntity": "The Black Dog", "ObjectEntities": ["Ed Handley", "Andy Turner", "Ken Downie"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q2682196", "ObjectEntities": ["De Coy"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Rythem", "ObjectEntities": ["Yukari Kat\u014d", "Yui Niitsu"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Andy & Lucas", "ObjectEntities": ["Andy", "Lucas Gonz\u00e1lez G\u00f3mez"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Monolake", "ObjectEntities": ["Robert Henke", "Torsten Pr\u00f6frock"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Andy & Lucas", "ObjectEntities": ["Lucas Gonz\u00e1lez G\u00f3mez", "Andy"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Monolake", "ObjectEntities": ["Torsten Pr\u00f6frock", "Robert Henke"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Serenata Guayanesa", "ObjectEntities": ["Hern\u00e1n Gamboa"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Automatic Loveletter", "ObjectEntities": ["Juliet Simms"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Aleka's Attic", "ObjectEntities": ["River Phoenix", "Rain Phoenix"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Metro Luminal", "ObjectEntities": ["Robin Juhkental", "Kristo Rajasaare"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Autour de Lucie", "ObjectEntities": ["Val\u00e9rie Leulliot", "Fabrice Dumont", "Olivier Durand"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Metro Luminal", "ObjectEntities": ["Kristo Rajasaare", "Robin Juhkental"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Autour de Lucie", "ObjectEntities": ["Val\u00e9rie Leulliot", "Olivier Durand", "Fabrice Dumont"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Azul y Negro", "ObjectEntities": ["Carlos Garc\u00eda-Vaso"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Babas\u00f3nicos", "ObjectEntities": ["Adri\u00e1n D\u00e1rgelos"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q2884852", "ObjectEntities": ["Ant\u00f3n Reixa"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Blankass", "ObjectEntities": ["Guillaume Ledoux", "Johan Ledoux"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Blankass", "ObjectEntities": ["Johan Ledoux", "Guillaume Ledoux"], "Relation": "BandHasMember"}
 {"SubjectEntity": "CBS Orchestra", "ObjectEntities": ["Paul Shaffer"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Caramelos de Cianuro", "ObjectEntities": ["Asier Cazalis"], "Relation": "BandHasMember"}
-{"SubjectEntity": "The No WTO Combo", "ObjectEntities": ["Jello Biafra", "Krist Novoselic", "Kim Thayil", "Gina Mainwal"], "Relation": "BandHasMember"}
+{"SubjectEntity": "The No WTO Combo", "ObjectEntities": ["Krist Novoselic", "Gina Mainwal", "Kim Thayil", "Jello Biafra"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Labuat", "ObjectEntities": ["Virginia Maestro"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Pik Klakson", "ObjectEntities": ["Yegor Letov", "Yevgeny Lishchenko"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Pop Mekhanika", "ObjectEntities": ["Sergey Kuryokhin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Pochta", "ObjectEntities": ["Nail Kadyrov", "Aleksey Ionov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Pochta", "ObjectEntities": ["Aleksey Ionov", "Nail Kadyrov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Preztizh", "ObjectEntities": ["Vladislav Aleksandrov", "Dmitriy Kezhvatov", "Roman Parygin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Priklyucheniya Elektronikov", "ObjectEntities": ["Sergey Prokofyev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4386870", "ObjectEntities": ["Alexander Semyonov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Raznyie Lyudi", "ObjectEntities": ["Pavel Borisov", "Vadim Kurilev", "Mikhail Nefyodov", "Alexandr Chernetskiy"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Raznyie Lyudi", "ObjectEntities": ["Pavel Borisov", "Alexandr Chernetskiy", "Mikhail Nefyodov", "Vadim Kurilev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4392050", "ObjectEntities": ["Q4245715"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4392152", "ObjectEntities": ["Sergey Galanin", "Yevgeny Khavtan"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Retriem", "ObjectEntities": ["Q4518361"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Rok-Gruppa", "ObjectEntities": ["Yuri Shevchuk", "Alexandr Balunov", "Aleksey Gorshenev", "Mikhail Gorsheniov", "Ilya Chyort", "Andrei Knyazev", "Aleksandr Konviser", "Aleksandr Leontyev", "Yakov Tsvirkunov", "Alexandr Chernetskiy"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Rondo (group)", "ObjectEntities": ["percussion instrument", "Igor Zhirnov", "Aleksandr Ivanov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Rok-Gruppa", "ObjectEntities": ["Alexandr Balunov", "Aleksandr Konviser", "Alexandr Chernetskiy", "Yakov Tsvirkunov", "Andrei Knyazev", "Mikhail Gorsheniov", "Aleksandr Leontyev", "Ilya Chyort", "Yuri Shevchuk", "Aleksey Gorshenev"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Rondo (group)", "ObjectEntities": ["Aleksandr Ivanov", "Igor Zhirnov", "percussion instrument"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Russkaya pesnya", "ObjectEntities": ["Nadezhda Babkina"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Ryzhov - Kitaev", "ObjectEntities": ["Sergei Ryzhov", "Yury Kitaev"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Ryzhov - Kitaev", "ObjectEntities": ["Yury Kitaev", "Sergei Ryzhov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4402983", "ObjectEntities": ["Vadim Golutvin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Samotsvety", "ObjectEntities": ["Yuriy Malikov", "Georgy Vlasenko", "Elena Presnyakova", "Q15077330", "Aleksandr Nefyodov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Saint Petersburg", "ObjectEntities": ["Yevgeny Voloshchuk", "Vladimir Rekshan"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Samotsvety", "ObjectEntities": ["Q15077330", "Georgy Vlasenko", "Yuriy Malikov", "Aleksandr Nefyodov", "Elena Presnyakova"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Saint Petersburg", "ObjectEntities": ["Vladimir Rekshan", "Yevgeny Voloshchuk"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sasha and Sirozha", "ObjectEntities": ["Siarhei Mikhalok", "Aliaksiej Chackievi\u010d"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4417222", "ObjectEntities": ["Konstantin Arbenin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sierebranaja Svadba", "ObjectEntities": ["Benka"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ser'Ga", "ObjectEntities": ["Sergey Galanin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4419350", "ObjectEntities": ["Mikhail Boyarsky", "Vladimir Yermolin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4422113", "ObjectEntities": ["Alexander Gradsky", "Alexander Buinov", "Alexander Lehrman", "Q4409123", "Yuriy Fokin"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4419350", "ObjectEntities": ["Vladimir Yermolin", "Mikhail Boyarsky"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4422113", "ObjectEntities": ["Yuriy Fokin", "Q4409123", "Alexander Buinov", "Alexander Lehrman", "Alexander Gradsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4423013", "ObjectEntities": ["Alexander Gradsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Staruha Mha", "ObjectEntities": ["Roman Sidorov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Strannye Igry", "ObjectEntities": ["Nikolay Gusev", "Aleksey Rakhov", "Viktor Sologub", "Igor Cheridnik"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Strannye Igry", "ObjectEntities": ["Nikolay Gusev", "Igor Cheridnik", "Viktor Sologub", "Aleksey Rakhov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Stinky Toys", "ObjectEntities": ["Elli Medeiros"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Click", "ObjectEntities": ["E-40"], "Relation": "BandHasMember"}
 {"SubjectEntity": "A Hawk and a Hacksaw", "ObjectEntities": ["Jeremy Barnes"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Me Me Me", "ObjectEntities": ["Stephen Duffy"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Microdisney", "ObjectEntities": ["Cathal Coughlan"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Tequila", "ObjectEntities": ["Ariel Rot", "\u00c1lex de la Nuez", "Juli\u00e1n Infante", "Alejo Stivel", "Manolo Iglesias"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Tequila", "ObjectEntities": ["Manolo Iglesias", "Alejo Stivel", "\u00c1lex de la Nuez", "Juli\u00e1n Infante", "Ariel Rot"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Pantxoa eta Peio", "ObjectEntities": ["Pantxoa Karrere"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Murder, Inc.", "ObjectEntities": ["Martin Atkins"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Muzion", "ObjectEntities": ["Imposs"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Ode \u00e0 l'Acadie", "ObjectEntities": ["Isabelle Th\u00e9riault", "Monique Poirier", "Nicolas Basque", "Christian Goguen", "Patricia Richard", "Fran\u00e7ois \u00c9mond"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Offering", "ObjectEntities": ["Christian Vander", "Simon Goubert crocrodile", "Jean-Marc Jafet", "Pierre-Michel Sivadier", "Stella Vander", "Emmanuel Borghi", "Isabelle Feuillebois"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Ode \u00e0 l'Acadie", "ObjectEntities": ["Monique Poirier", "Christian Goguen", "Fran\u00e7ois \u00c9mond", "Nicolas Basque", "Isabelle Th\u00e9riault", "Patricia Richard"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Offering", "ObjectEntities": ["Emmanuel Borghi", "Isabelle Feuillebois", "Stella Vander", "Simon Goubert crocrodile", "Pierre-Michel Sivadier", "Christian Vander", "Jean-Marc Jafet"], "Relation": "BandHasMember"}
 {"SubjectEntity": ".O.rang", "ObjectEntities": ["Paul Webb"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Orquesta Riverside", "ObjectEntities": ["Anselmo Sacasas", "Jos\u00e9 Curbelo", "Miguelito Vald\u00e9s", "Guillermo Portabales", "Manuel \"Guajiro\" Mirabal", "Orlando \"Cacha\u00edto\" L\u00f3pez", "Jose\u00edto Gonz\u00e1lez"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Orquesta Riverside", "ObjectEntities": ["Orlando \"Cacha\u00edto\" L\u00f3pez", "Anselmo Sacasas", "Jos\u00e9 Curbelo", "Miguelito Vald\u00e9s", "Manuel \"Guajiro\" Mirabal", "Guillermo Portabales", "Jose\u00edto Gonz\u00e1lez"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Pine Leaf Boys", "ObjectEntities": ["Wilson Savoy"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lori Meyers", "ObjectEntities": ["Antonio L\u00f3pez"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Yin-Yang", "ObjectEntities": ["Artem Ivanov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Tapia eta Leturia", "ObjectEntities": ["Joseba Tapia", "Xabier Berasaluze"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Santa Justa Klan", "ObjectEntities": ["Natalia S\u00e1nchez", "Adri\u00e1n Rodr\u00edguez", "V\u00edctor El\u00edas", "Andr\u00e9s de la Cruz"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Tapia eta Leturia", "ObjectEntities": ["Xabier Berasaluze", "Joseba Tapia"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Santa Justa Klan", "ObjectEntities": ["Natalia S\u00e1nchez", "V\u00edctor El\u00edas", "Andr\u00e9s de la Cruz", "Adri\u00e1n Rodr\u00edguez"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Kuraia", "ObjectEntities": ["Fernando Sapo"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ffa Coffi Pawb", "ObjectEntities": ["Gruff Rhys", "Dafydd Ieuan"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Sangtra\u00eft", "ObjectEntities": ["Joaquim Mandado i Rossell", "Julio Ort\u00edn Darn\u00e9", "Josep Maria Corominas i Pla", "Guadalupe Villar Orcera", "Mart\u00edn Rodr\u00edguez Mu\u00f1oz"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Santa Sabina", "ObjectEntities": ["Rita Guerrero", "Alex Otaola", "Alfonso Figueroa", "Pablo Valero", "Patricio Iglesias", "Jacobo Lieberman"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Sangtra\u00eft", "ObjectEntities": ["Julio Ort\u00edn Darn\u00e9", "Mart\u00edn Rodr\u00edguez Mu\u00f1oz", "Josep Maria Corominas i Pla", "Guadalupe Villar Orcera", "Joaquim Mandado i Rossell"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Santa Sabina", "ObjectEntities": ["Pablo Valero", "Rita Guerrero", "Jacobo Lieberman", "Alfonso Figueroa", "Patricio Iglesias", "Alex Otaola"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sonerien Du", "ObjectEntities": ["Jean-Pierre Le Cam"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Steve Reich and Musicians", "ObjectEntities": ["Steve Reich", "Evan Ziporyn", "Glen Velez", "Jay Clayton", "David Van Tieghem", "Bob Becker", "Todd Reynolds", "Phillip Bush", "Richard Rood"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Steve Reich and Musicians", "ObjectEntities": ["Jay Clayton", "Evan Ziporyn", "Steve Reich", "Phillip Bush", "David Van Tieghem", "Todd Reynolds", "Richard Rood", "Bob Becker", "Glen Velez"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Likwit Crew", "ObjectEntities": ["King Tee"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sunz of Man", "ObjectEntities": ["Shabazz the Disciple"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Tune Up!", "ObjectEntities": ["DJ Manian"], "Relation": "BandHasMember"}
@@ -190,7 +190,7 @@
 {"SubjectEntity": "Cry of Love", "ObjectEntities": ["Audley Freed"], "Relation": "BandHasMember"}
 {"SubjectEntity": "DANGERDOOM", "ObjectEntities": ["MF DOOM"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Vesyolye Rebyata", "ObjectEntities": ["Pavel Slobodkin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "J\u00e4tk\u00e4j\u00e4tk\u00e4t", "ObjectEntities": ["Kim Rantala", "Asa", "Erno Haukkala", "Puppa J", "Joska Josafat"], "Relation": "BandHasMember"}
+{"SubjectEntity": "J\u00e4tk\u00e4j\u00e4tk\u00e4t", "ObjectEntities": ["Erno Haukkala", "Asa", "Kim Rantala", "Joska Josafat", "Puppa J"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dolly Sisters", "ObjectEntities": ["Rose Dolly", "Jenny Dolly"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Singer Vinger", "ObjectEntities": ["Hardi Volmer", "Mihkel Raud"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Black Ivory", "ObjectEntities": ["Leroy Burgess"], "Relation": "BandHasMember"}
@@ -201,17 +201,17 @@
 {"SubjectEntity": "Brass Monkey", "ObjectEntities": ["John Kirkpatrick"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Brewers Droop", "ObjectEntities": ["100 Club"], "Relation": "BandHasMember"}
 {"SubjectEntity": "CB Mass", "ObjectEntities": ["Choiza"], "Relation": "BandHasMember"}
-{"SubjectEntity": "The Telnyuk Sisters", "ObjectEntities": ["Halyna Batkovska", "Lesya Repetska"], "Relation": "BandHasMember"}
+{"SubjectEntity": "The Telnyuk Sisters", "ObjectEntities": ["Lesya Repetska", "Halyna Batkovska"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Candy 66", "ObjectEntities": ["Jean Carlo De Oliveira"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Cat's Eyes", "ObjectEntities": ["Faris Badwan"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Chairmen of the Board", "ObjectEntities": ["General Johnson"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Chantelle", "ObjectEntities": ["Olga Ta\u00f1\u00f3n"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Chapter 8", "ObjectEntities": ["Anita Baker"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Choir of Young Believers", "ObjectEntities": ["Aske Zidore", "C\u00e6cilie Trier", "Jakob Millung", "Jannis Noya Makrigiannis", "Nicolai Koch", "Frederik Nords\u00f8", "Bo Rande", "Fridolin Nords\u00f8", "Lasse Herbst"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Choir of Young Believers", "ObjectEntities": ["Lasse Herbst", "Jannis Noya Makrigiannis", "Fridolin Nords\u00f8", "Frederik Nords\u00f8", "Aske Zidore", "C\u00e6cilie Trier", "Jakob Millung", "Nicolai Koch", "Bo Rande"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Coal Porters", "ObjectEntities": ["Sid Griffin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Conjunto Primavera", "ObjectEntities": ["Nacho Galindo"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Cool for August", "ObjectEntities": ["Gordon Vaughn"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Copper family", "ObjectEntities": ["James Copper", "James Copper", "John Copper", "Ronald Copper", "Thomas Copper", "Robert James Copper"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Copper family", "ObjectEntities": ["Thomas Copper", "Ronald Copper", "James Copper", "Robert James Copper", "John Copper"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Crabby Appleton", "ObjectEntities": ["Michael Fennelly"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Critters Buggin", "ObjectEntities": ["Matt Chamberlain"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Cub Country", "ObjectEntities": ["Jeremy Chatelain"], "Relation": "BandHasMember"}
@@ -219,7 +219,7 @@
 {"SubjectEntity": "Deceptikonz", "ObjectEntities": ["Mareko"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Deep Listening Band", "ObjectEntities": ["Stuart Dempster"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Del McCoury Band", "ObjectEntities": ["Del McCoury"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Dodo and the Dodos", "ObjectEntities": ["Dodo Gad", "Steen Christiansen"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Dodo and the Dodos", "ObjectEntities": ["Steen Christiansen", "Dodo Gad"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Down 'n' Outz", "ObjectEntities": ["Joe Elliott"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Drywall", "ObjectEntities": ["Stan Ridgway", "Pietra Wexstun"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dynasty", "ObjectEntities": ["Leon Sylvers III"], "Relation": "BandHasMember"}
@@ -230,7 +230,7 @@
 {"SubjectEntity": "Fascinating A\u00efda", "ObjectEntities": ["Dillie Keane"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Fast Crew", "ObjectEntities": ["Dane Rumble"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Fat Les", "ObjectEntities": ["Alex James"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Fenn O'Berg", "ObjectEntities": ["Jim O'Rourke", "Fennesz", "Peter Rehberg"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Fenn O'Berg", "ObjectEntities": ["Peter Rehberg", "Jim O'Rourke", "Fennesz"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Fernhill", "ObjectEntities": ["Julie Murphy"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Fetchin Bones", "ObjectEntities": ["Hope Nicholls"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Fiel a la Vega", "ObjectEntities": ["Tito Auger"], "Relation": "BandHasMember"}
@@ -239,7 +239,7 @@
 {"SubjectEntity": "G&G Sindikatas", "ObjectEntities": ["Gabrielius Liaudanskas"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ana y Jaime", "ObjectEntities": ["Ana Valencia Aristiz\u00e1bal", "Jaime  Valencia Aristiz\u00e1bal"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Giants of Science", "ObjectEntities": ["Ben Salter"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Glup!", "ObjectEntities": ["Koko Stambuk", "Rodrigo Stambuk"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Glup!", "ObjectEntities": ["Rodrigo Stambuk", "Koko Stambuk"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q5576352", "ObjectEntities": ["Dickinson's Real Deal"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Goodness", "ObjectEntities": ["Carrie Akre"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gravel", "ObjectEntities": ["Tomas Sinickis"], "Relation": "BandHasMember"}
@@ -251,44 +251,44 @@
 {"SubjectEntity": "Hi-Q", "ObjectEntities": ["Mihai Sturzu"], "Relation": "BandHasMember"}
 {"SubjectEntity": "High School Football Heroes", "ObjectEntities": ["Brian Crozier"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gillman", "ObjectEntities": ["Paul Gillman"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Grupo Pesado", "ObjectEntities": ["Beto Zapata", "Jos\u00e9 Mario Elizondo Rendon"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Grupo Pesado", "ObjectEntities": ["Jos\u00e9 Mario Elizondo Rendon", "Beto Zapata"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q5886598", "ObjectEntities": ["Jota"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Homie", "ObjectEntities": ["Rivers Cuomo"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q5890961", "ObjectEntities": ["Rayka"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q5960880", "ObjectEntities": ["Quimi Portet"], "Relation": "BandHasMember"}
-{"SubjectEntity": "La Liga del Sue\u00f1o", "ObjectEntities": ["Gonzalo Torres", "Pelo Madue\u00f1o", "Johanna San Miguel"], "Relation": "BandHasMember"}
+{"SubjectEntity": "La Liga del Sue\u00f1o", "ObjectEntities": ["Gonzalo Torres", "Johanna San Miguel", "Pelo Madue\u00f1o"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sonora de Tommy Rey", "ObjectEntities": ["Tommy Rey"], "Relation": "BandHasMember"}
 {"SubjectEntity": "La Triple Nelson", "ObjectEntities": ["Christian Cary"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q5979412", "ObjectEntities": ["Manolo Garc\u00eda"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Los Encargados", "ObjectEntities": ["Daniel Melero"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Los Iracundos", "ObjectEntities": ["Eduardo Franco", "Juan Carlos Vel\u00e1zquez"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Los Iracundos", "ObjectEntities": ["Juan Carlos Vel\u00e1zquez", "Eduardo Franco"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q5980193", "ObjectEntities": ["Banin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Los Romeros de la Puebla", "ObjectEntities": ["Jos\u00e9 Manuel Moya"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Makiza", "ObjectEntities": ["Seo2"], "Relation": "BandHasMember"}
 {"SubjectEntity": "New London Consort", "ObjectEntities": ["Philip Pickett"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Orquesta Mondrag\u00f3n", "ObjectEntities": ["Javier Gurruchaga"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Opal Butterfly", "ObjectEntities": ["Lemmy Kilmister", "Simon King"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Opal Butterfly", "ObjectEntities": ["Simon King", "Lemmy Kilmister"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Capella de Ministrers", "ObjectEntities": ["Carles Magraner"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Alibi", "ObjectEntities": ["Anna Zavalskaya", "Anhelina Zavalska"], "Relation": "BandHasMember"}
-{"SubjectEntity": "KRIWI", "ObjectEntities": ["Dzmitryj Wajciuszkiewicz", "Q3918557", "Aliaksandr Pomidoroff", "Veranika Kruhlova"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Billy\u2019s Band", "ObjectEntities": ["Mikhail Zhidkikh", "Billy Novik", "Andrey Reznikov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Alibi", "ObjectEntities": ["Anhelina Zavalska", "Anna Zavalskaya"], "Relation": "BandHasMember"}
+{"SubjectEntity": "KRIWI", "ObjectEntities": ["Dzmitryj Wajciuszkiewicz", "Q3918557", "Veranika Kruhlova", "Aliaksandr Pomidoroff"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Billy\u2019s Band", "ObjectEntities": ["Andrey Reznikov", "Billy Novik", "Mikhail Zhidkikh"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sour Milk Sea", "ObjectEntities": ["Freddie Mercury"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Will Mastin Trio", "ObjectEntities": ["Sammy Davis Jr.", "Sammy Davis, Sr.", "Will Mastin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "25/17", "ObjectEntities": ["Ant", "Pale (musician)"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Will Mastin Trio", "ObjectEntities": ["Sammy Davis, Sr.", "Will Mastin", "Sammy Davis Jr."], "Relation": "BandHasMember"}
+{"SubjectEntity": "25/17", "ObjectEntities": ["Pale (musician)", "Ant"], "Relation": "BandHasMember"}
 {"SubjectEntity": "5sta Family", "ObjectEntities": ["Loya"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Africa Hitech", "ObjectEntities": ["Mark Pritchard"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Aural Planet", "ObjectEntities": ["Adam Skorupa"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Duo Zikr", "ObjectEntities": ["Igor Kalinauskas"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Exit Project", "ObjectEntities": ["Q4245715", "Maria Logofet", "Vladimir Glushko"], "Relation": "BandHasMember"}
-{"SubjectEntity": "feedback", "ObjectEntities": ["Vadim Kurilev", "Alexander Liapin", "Mikhail Nefyodov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Exit Project", "ObjectEntities": ["Maria Logofet", "Q4245715", "Vladimir Glushko"], "Relation": "BandHasMember"}
+{"SubjectEntity": "feedback", "ObjectEntities": ["Mikhail Nefyodov", "Alexander Liapin", "Vadim Kurilev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Forgive-Me-Not", "ObjectEntities": ["Viktor Kukoverov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4042669", "ObjectEntities": ["Dmitry Spirin", "Vasily Lopatin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Los Incas", "ObjectEntities": ["Jorge Milchberg"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lost in the Trees", "ObjectEntities": ["Will Hackney"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4044067", "ObjectEntities": ["Pavel Kuzin", "R\u00f3bert Sem\u00ebnovi\u010d L\u00e9nc"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4044067", "ObjectEntities": ["R\u00f3bert Sem\u00ebnovi\u010d L\u00e9nc", "Pavel Kuzin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Monsta Island Czars", "ObjectEntities": ["Godzilla vs. Megalon"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Moscow Grooves Institute", "ObjectEntities": ["Olga Rozhdestvenskaya"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Punk TV", "ObjectEntities": ["Vladimir Komarov", "Konstantin Nikonov", "Alex Kelman"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Punk TV", "ObjectEntities": ["Konstantin Nikonov", "Alex Kelman", "Vladimir Komarov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Radha Krishna Temple", "ObjectEntities": ["Mukunda Goswami"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Radio Killer", "ObjectEntities": ["Smiley"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Radio Chacha", "ObjectEntities": ["Aleksandr Ivanov"], "Relation": "BandHasMember"}
@@ -300,64 +300,64 @@
 {"SubjectEntity": "The Bakerton Group", "ObjectEntities": ["Tim Sult"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4051496", "ObjectEntities": ["Q4477816"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Vas", "ObjectEntities": ["Azam Ali"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Vlado & Isolda", "ObjectEntities": ["Vlado Kalember", "Izolda Barud\u017eija"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Vlado & Isolda", "ObjectEntities": ["Izolda Barud\u017eija", "Vlado Kalember"], "Relation": "BandHasMember"}
 {"SubjectEntity": "We Fell to Earth", "ObjectEntities": ["Wendy Rae Fowler"], "Relation": "BandHasMember"}
 {"SubjectEntity": "AVIA", "ObjectEntities": ["Nikolay Gusev", "Aleksey Rakhov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Adaptatsiya", "ObjectEntities": ["Vadim Kurilev", "Mikhail Nefyodov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Adaptatsiya", "ObjectEntities": ["Mikhail Nefyodov", "Vadim Kurilev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4057922", "ObjectEntities": ["Andrey Gorokhov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4057969", "ObjectEntities": ["Q4242300", "Q4528919", "Maria Logofet"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Alfa", "ObjectEntities": ["Vladimir Holstinin", "Aleksey Gorbashov", "Alik Granovsky", "Vitaly Dubinin", "Sergey Yefimov", "Vsevolod Coroliuc", "Igor Molchanov", "Sergey Sarychev", "Sergey Chernyakov", "Sergey Kudishin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4068228", "ObjectEntities": ["Vladimir Nazimov", "Q17385085"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Argo", "ObjectEntities": ["Giedrius Kuprevi\u010dius", "Linas Pe\u010di\u016bra"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Alfa", "ObjectEntities": ["Sergey Chernyakov", "Sergey Sarychev", "Vsevolod Coroliuc", "Vladimir Holstinin", "Sergey Yefimov", "Igor Molchanov", "Alik Granovsky", "Aleksey Gorbashov", "Sergey Kudishin", "Vitaly Dubinin"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4068228", "ObjectEntities": ["Q17385085", "Vladimir Nazimov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Argo", "ObjectEntities": ["Linas Pe\u010di\u016bra", "Giedrius Kuprevi\u010dius"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ariel", "ObjectEntities": ["Valery Yarushin", "Boris Kaplun"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Arsenal", "ObjectEntities": ["Aleksey Kozlov", "Ihor Boiko", "Q4199447"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Arsenal", "ObjectEntities": ["Aleksey Kozlov", "Q4199447", "Ihor Boiko"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4070255", "ObjectEntities": ["Q4455641"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4071509", "ObjectEntities": ["Alekse\u00ef Moguilevski", "Nikola\u00ef P\u00e9trov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4077209", "ObjectEntities": ["Timati", "Anastasia Kochetkova", "Ratmir Chichkov", "Dominick Jocker"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4071509", "ObjectEntities": ["Nikola\u00ef P\u00e9trov", "Alekse\u00ef Moguilevski"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4077209", "ObjectEntities": ["Anastasia Kochetkova", "Ratmir Chichkov", "Timati", "Dominick Jocker"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Bakhyt Kompot", "ObjectEntities": ["Vadim Stepantsov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Belorusskie pesnyary", "ObjectEntities": ["Oleg Averin", "Igor Penya", "Valery Dayneka", "Vladislav Misevich"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4086179", "ObjectEntities": ["Dmitriy Bikbaev", "Vlad Sokolovsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Bioconstructor", "ObjectEntities": ["Leonid Velichkovsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Bis-Quit", "ObjectEntities": ["Andrey Antipov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Bozg'ya Korovka", "ObjectEntities": ["Natalya Volenko", "Vladimir Volenko"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Bozg'ya Korovka", "ObjectEntities": ["Vladimir Volenko", "Natalya Volenko"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Akosh Szelevenyi Ensemble", "ObjectEntities": ["\u00c1kos Szelev\u00e9nyi"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ceilidh Ceol", "ObjectEntities": ["Q6462212"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gilgu Bonggu", "ObjectEntities": ["Bonggu", "Gilgu"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Orchestra Marrabenta Star de Mo\u00e7ambique", "ObjectEntities": ["Mingas", "Wazimbo"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Teenebelle", "ObjectEntities": ["Adelia Artamevia", "Krista Natali", "Livia Ramadhanty", "Rika Alfiany", "Stefanny Eveline", "Christabel Gavrila", "Clarensia Shieren Budiawan", "Yoriko Angeline", "Paulina Kurniawan Putri"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Fabi Silvestri Gazz\u00e9", "ObjectEntities": ["Daniele Silvestri", "Max Gazz\u00e8", "Niccol\u00f2 Fabi"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q19521410", "ObjectEntities": ["Nan\u00e1 Vasconcelos", "Joyce Moreno", "Toninho Horta"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Teenebelle", "ObjectEntities": ["Krista Natali", "Yoriko Angeline", "Stefanny Eveline", "Livia Ramadhanty", "Paulina Kurniawan Putri", "Clarensia Shieren Budiawan", "Rika Alfiany", "Christabel Gavrila", "Adelia Artamevia"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Fabi Silvestri Gazz\u00e9", "ObjectEntities": ["Niccol\u00f2 Fabi", "Max Gazz\u00e8", "Daniele Silvestri"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q19521410", "ObjectEntities": ["Joyce Moreno", "Toninho Horta", "Nan\u00e1 Vasconcelos"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Count", "ObjectEntities": ["Joe Viglione"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Tilu", "ObjectEntities": ["Mira Tilu"], "Relation": "BandHasMember"}
-{"SubjectEntity": "SixTONES", "ObjectEntities": ["Shintaro Morimoto", "Jesse Lewis", "Taiga Kyomoto", "Hokuto Matsumura", "Yugo Kochi", "Juri Tanaka"], "Relation": "BandHasMember"}
+{"SubjectEntity": "SixTONES", "ObjectEntities": ["Taiga Kyomoto", "Yugo Kochi", "Shintaro Morimoto", "Hokuto Matsumura", "Juri Tanaka", "Jesse Lewis"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Revolta Permanent", "ObjectEntities": ["Iker Villa"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Cats vs. Chicks", "ObjectEntities": ["Corky Hale", "Terry Pollard", "Ginger Smock", "Cecilia Zirl", "Vicky Zimmer"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Cats vs. Chicks", "ObjectEntities": ["Cecilia Zirl", "Vicky Zimmer", "Ginger Smock", "Corky Hale", "Terry Pollard"], "Relation": "BandHasMember"}
 {"SubjectEntity": "New York Harp Ensemble", "ObjectEntities": ["Aristid von W\u00fcrtzler"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Association des Fanfares d'Eglises (Volksberg). Ensemble de cuivres", "ObjectEntities": ["Alfred Neumann"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Lean Left", "ObjectEntities": ["et al.", "Paal Nilssen-Love", "Andy Moor", "Ken Vandermark"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Lean Left", "ObjectEntities": ["Ken Vandermark", "Paal Nilssen-Love", "Andy Moor", "et al."], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ivana & Magdalena", "ObjectEntities": ["Ivana Petkovska", "Magdalena Aleksovska"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Nika Kocharov & Young Georgian Lolitaz", "ObjectEntities": ["Nika Kocharov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Sora Tob Sakana", "ObjectEntities": ["Yuiko Konishi", "Mio Sat\u014d", "Mana Yamazaki", "F\u016bka Kanzaki", "Rei Malaika Kazama", "Natsuka Teraguchi"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Sora Tob Sakana", "ObjectEntities": ["Natsuka Teraguchi", "F\u016bka Kanzaki", "Mana Yamazaki", "Mio Sat\u014d", "Yuiko Konishi", "Rei Malaika Kazama"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Naomi Shelton & the Gospel Queens", "ObjectEntities": ["Naomi Shelton"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Malandr\u00f3meda", "ObjectEntities": ["Hevi", "Caldeirada", "O Master do Son"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Electroeyes Girls", "ObjectEntities": ["Chen GuanHui", "Sun Rui", "Chen Yin", "Mo Han", "Wang Xiaojia", "Qian Beiting", "Wang Shu", "Zhang Jiayu"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Hell in the Club", "ObjectEntities": ["Damnagoras", "Andrea Buratto", "Federico Pennazzato"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Malandr\u00f3meda", "ObjectEntities": ["Caldeirada", "O Master do Son", "Hevi"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Electroeyes Girls", "ObjectEntities": ["Qian Beiting", "Chen GuanHui", "Sun Rui", "Wang Xiaojia", "Chen Yin", "Wang Shu", "Mo Han", "Zhang Jiayu"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Hell in the Club", "ObjectEntities": ["Federico Pennazzato", "Andrea Buratto", "Damnagoras"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Equations of Eternity", "ObjectEntities": ["Eraldo Bernocchi"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Korobeyniki", "ObjectEntities": ["Aleksandr Levshin", "Vladimir Semyonov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Korobeyniki", "ObjectEntities": ["Vladimir Semyonov", "Aleksandr Levshin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gunesh", "ObjectEntities": ["Murad Sadykov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Los Bonaerenses", "ObjectEntities": ["Osvaldo Ramos", "Roberto Mancini"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q28028003", "ObjectEntities": ["Sergio Bello \"Critika\"", "Miguel Gonz\u00e1lez \"Saik\""], "Relation": "BandHasMember"}
 {"SubjectEntity": "Arcangelo", "ObjectEntities": ["Jonathan Cohen"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Color Girls", "ObjectEntities": ["Fei Qinyuan", "Hong Peiyun", "Sun Zhenni", "Yang Bingyi", "Xie Ni"], "Relation": "BandHasMember"}
-{"SubjectEntity": "(K)NoW_NAME", "ObjectEntities": ["Nikiie", "Ryuta Iida", "Makoto Miyazaki", "Sh\u016bhei Mutsuki", "Ayaka Tachibana"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Color Girls", "ObjectEntities": ["Yang Bingyi", "Hong Peiyun", "Sun Zhenni", "Xie Ni", "Fei Qinyuan"], "Relation": "BandHasMember"}
+{"SubjectEntity": "(K)NoW_NAME", "ObjectEntities": ["Sh\u016bhei Mutsuki", "Ayaka Tachibana", "Nikiie", "Ryuta Iida", "Makoto Miyazaki"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lyapis 98", "ObjectEntities": ["Siarhei Mikhalok"], "Relation": "BandHasMember"}
 {"SubjectEntity": "StimfoniYA", "ObjectEntities": ["Filipp Avgust"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Kira Lao", "ObjectEntities": ["Ilya Zinin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "New Samotsvety", "ObjectEntities": ["Inna Malikova"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Festival", "ObjectEntities": ["Mark Aizikovitch", "Dmitry Atowmjan", "Maksim Dunayevsky"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Festival", "ObjectEntities": ["Mark Aizikovitch", "Maksim Dunayevsky", "Dmitry Atowmjan"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Cesair", "ObjectEntities": ["Sophie Zaaijer"], "Relation": "BandHasMember"}
-{"SubjectEntity": "7Senses", "ObjectEntities": ["Dai Meng", "Zhang Yuge", "Kong Xiaoyin", "Zhao Yue", "Xu Jiaqi", "Xu-Yang Yuzhuo", "Chen Lin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Verbrugghen String Quartet", "ObjectEntities": ["Henri Verbrugghen", "David Eccles Nichols", "Jenny Cullen", "James Messeas"], "Relation": "BandHasMember"}
+{"SubjectEntity": "7Senses", "ObjectEntities": ["Zhao Yue", "Zhang Yuge", "Dai Meng", "Chen Lin", "Xu Jiaqi", "Kong Xiaoyin", "Xu-Yang Yuzhuo"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Verbrugghen String Quartet", "ObjectEntities": ["Henri Verbrugghen", "Jenny Cullen", "James Messeas", "David Eccles Nichols"], "Relation": "BandHasMember"}
 {"SubjectEntity": "7 Eskale", "ObjectEntities": ["Unai Iturriaga", "Igor Elortza"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Alboka", "ObjectEntities": ["Joxan Goikoetxea"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q12255138", "ObjectEntities": ["Mixel Ducau"], "Relation": "BandHasMember"}
@@ -367,16 +367,16 @@
 {"SubjectEntity": "Q12261474", "ObjectEntities": ["Jimmy Arrabit"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Kupela", "ObjectEntities": ["Anjel Larra\u00f1aga"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lorelei", "ObjectEntities": ["Asier Serrano"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Maixa ta Ixiar", "ObjectEntities": ["Maixa Lizarribar", "Ixiar Oreja"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Maixa ta Ixiar", "ObjectEntities": ["Ixiar Oreja", "Maixa Lizarribar"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q12263248", "ObjectEntities": ["Mikel Kazalis"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q12263675", "ObjectEntities": ["Niko Etxart"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q12265718", "ObjectEntities": ["Gorka Urbizu"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sasoi Ilunak", "ObjectEntities": ["Txuma Murugarren"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Zaldibobo", "ObjectEntities": ["Joseba Tapia", "Mikel Artieda", "Mixel Ducau"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Danseorkestret", "ObjectEntities": ["Jacob Andersen", "J\u00f8rgen Klubien", "Peter Andersen", "Rasmus K\u00e6rs\u00e5"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q12308316", "ObjectEntities": ["Hella Joof", "Peter Fr\u00f6din", "Martin Brygmann"], "Relation": "BandHasMember"}
-{"SubjectEntity": "\u00d8stkyst Hustlers", "ObjectEntities": ["Nikolaj Peyk", "Bossy Bo", "Jazzy H"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Estonian Guitar Octet", "ObjectEntities": ["Jaak Soo\u00e4\u00e4r", "Robert J\u00fcrjendal", "Mart Soo", "Tarvo Kaspar Toome", "T\u00f5nis Leemets"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Zaldibobo", "ObjectEntities": ["Joseba Tapia", "Mixel Ducau", "Mikel Artieda"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Danseorkestret", "ObjectEntities": ["J\u00f8rgen Klubien", "Rasmus K\u00e6rs\u00e5", "Jacob Andersen", "Peter Andersen"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q12308316", "ObjectEntities": ["Peter Fr\u00f6din", "Hella Joof", "Martin Brygmann"], "Relation": "BandHasMember"}
+{"SubjectEntity": "\u00d8stkyst Hustlers", "ObjectEntities": ["Jazzy H", "Bossy Bo", "Nikolaj Peyk"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Estonian Guitar Octet", "ObjectEntities": ["Jaak Soo\u00e4\u00e4r", "Tarvo Kaspar Toome", "Robert J\u00fcrjendal", "T\u00f5nis Leemets", "Mart Soo"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q12365039", "ObjectEntities": ["Mihkel Mattisen"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Magnetic Band", "ObjectEntities": ["Gunnar Graps"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q12370798", "ObjectEntities": ["Marek Sadam"], "Relation": "BandHasMember"}
@@ -387,62 +387,62 @@
 {"SubjectEntity": "Q12653695", "ObjectEntities": ["Matas Petrikas"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lama", "ObjectEntities": ["Natalya Dzenkiv"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Legion", "ObjectEntities": ["Aleksey Bulgakov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Severny flot", "ObjectEntities": ["Aleksandr Leontyev", "Pavel Sazhinov", "Yakov Tsvirkunov", "Q4529070", "Aleksandr Kulikov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Big Four of Thrash", "ObjectEntities": ["Metallica", "Megadeth", "Anthrax", "Slayer"], "Relation": "BandHasMember"}
-{"SubjectEntity": "The Common Linnets", "ObjectEntities": ["Ilse DeLange", "Waylon"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Severny flot", "ObjectEntities": ["Aleksandr Kulikov", "Q4529070", "Yakov Tsvirkunov", "Aleksandr Leontyev", "Pavel Sazhinov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Big Four of Thrash", "ObjectEntities": ["Metallica", "Anthrax", "Megadeth", "Slayer"], "Relation": "BandHasMember"}
+{"SubjectEntity": "The Common Linnets", "ObjectEntities": ["Waylon", "Ilse DeLange"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q15437377", "ObjectEntities": ["Daniel Gloger", "Andreas Fischer"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dry", "ObjectEntities": ["Stephen Fung", "Mark Lui"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q16035287", "ObjectEntities": ["Ivan Callot"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Chenda melam", "ObjectEntities": ["Pandi Melam", "Panchari melam", "Thayambaka", "Shinkari melam", "Ashtakshari melam", "Chempada melam"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Chenda melam", "ObjectEntities": ["Panchari melam", "Ashtakshari melam", "Pandi Melam", "Shinkari melam", "Thayambaka", "Chempada melam"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q16408790", "ObjectEntities": ["Taisi Rosenberg"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Curly Strings", "ObjectEntities": ["Jalmar Vabarna", "Eeva Talsi", "Villu Talsi", "Taavet Niller"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q16413422", "ObjectEntities": ["Lauri Nebel", "Eino M\u00e4elt", "Henno K\u00e4o", "Taivo Linna"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Curly Strings", "ObjectEntities": ["Villu Talsi", "Taavet Niller", "Jalmar Vabarna", "Eeva Talsi"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q16413422", "ObjectEntities": ["Lauri Nebel", "Eino M\u00e4elt", "Taivo Linna", "Henno K\u00e4o"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Glintshake", "ObjectEntities": ["Kate NV"], "Relation": "BandHasMember"}
 {"SubjectEntity": "AloeVera", "ObjectEntities": ["Vera Musaelyan"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Coraz\u00f3n Serrano", "ObjectEntities": ["Edita Guerrero", "Lesly \u00c1guila C\u00f3rdova"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Therr Maitz", "ObjectEntities": ["Anton Belyaev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q16640946", "ObjectEntities": ["Tony Rosado"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q16642331", "ObjectEntities": ["Irina Dubtsova", "Valentina Rubtsova", "Tatyana Gerasimova", "Q21190219"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Integral", "ObjectEntities": ["Yuri Loza", "Bari Alibasov", "Zhenya Belousov", "Dmitri Aleksandrovitch Ro\u00fabine", "Igor Sandler", "Marina Khlebnikova", "Sergej Chelobanov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q16642331", "ObjectEntities": ["Valentina Rubtsova", "Tatyana Gerasimova", "Q21190219", "Irina Dubtsova"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Integral", "ObjectEntities": ["Bari Alibasov", "Marina Khlebnikova", "Zhenya Belousov", "Sergej Chelobanov", "Dmitri Aleksandrovitch Ro\u00fabine", "Igor Sandler", "Yuri Loza"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Concert Lorrain", "ObjectEntities": ["Stephan Schultz", "Anne-Catherine Bucher"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q16666556", "ObjectEntities": ["Igor Cheridnik"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lacocha", "ObjectEntities": ["Vladimir Glushko"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q16704208", "ObjectEntities": ["Vyacheslav Petkun", "Q16693714"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q16704208", "ObjectEntities": ["Q16693714", "Vyacheslav Petkun"], "Relation": "BandHasMember"}
 {"SubjectEntity": "T\u00e9l\u00e9phone", "ObjectEntities": ["Valeriy Syutkin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q16712051", "ObjectEntities": ["Q4528100", "Q15070810"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Bolalar", "ObjectEntities": ["Tohir Sodiqov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4096032", "ObjectEntities": ["Q4392364"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Butyrka", "ObjectEntities": ["Vladimiras \u017ddamirovas"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Vezhlivy Otkaz", "ObjectEntities": ["Sergey Ryzhenko", "Andrey Solovjev", "Dmitrii Shumilov", "Pavel Karmanov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Vezhlivy Otkaz", "ObjectEntities": ["Pavel Karmanov", "Sergey Ryzhenko", "Andrey Solovjev", "Dmitrii Shumilov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Vesyolye Kartinki", "ObjectEntities": ["Q4538339"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4109957", "ObjectEntities": ["Q4254533", "Denis Yurievich Skurida"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Visokosnoye Leto", "ObjectEntities": ["Valery Yefremov", "Kris Kelmi", "Alexander Kutikov", "Alexander Sitkovetsky"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Voskreseniye", "ObjectEntities": ["Aleksey Korobkov", "Dmitry Leontyev", "Alexey Romanov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4127713", "ObjectEntities": ["Q4159664", "Pavel Usanov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4109957", "ObjectEntities": ["Denis Yurievich Skurida", "Q4254533"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Visokosnoye Leto", "ObjectEntities": ["Valery Yefremov", "Alexander Kutikov", "Alexander Sitkovetsky", "Kris Kelmi"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Voskreseniye", "ObjectEntities": ["Dmitry Leontyev", "Alexey Romanov", "Aleksey Korobkov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4127713", "ObjectEntities": ["Pavel Usanov", "Q4159664"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4128478", "ObjectEntities": ["Potap", "Q18635142"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Vykhod", "ObjectEntities": ["Sergey Selyunin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "GRAD-quartet", "ObjectEntities": ["Andrey Antipov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "The Matrixx", "ObjectEntities": ["Valery Arkadin", "Gleb Samoylov", "Dmitry Khakimov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "The Matrixx", "ObjectEntities": ["Gleb Samoylov", "Dmitry Khakimov", "Valery Arkadin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gollandiya", "ObjectEntities": ["Little"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4147181", "ObjectEntities": ["Timur Vedernikov", "Andrey Shepelyov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4147181", "ObjectEntities": ["Andrey Shepelyov", "Timur Vedernikov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gulliver", "ObjectEntities": ["Sergey Galanin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Da Budz", "ObjectEntities": ["RasKar"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4160984", "ObjectEntities": ["Vladimir Dantes", "Vadym Oliynyk"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Dialog", "ObjectEntities": ["Valery Meladze", "Kim Breitburg"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4160984", "ObjectEntities": ["Vadym Oliynyk", "Vladimir Dantes"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Dialog", "ObjectEntities": ["Kim Breitburg", "Valery Meladze"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dynamic", "ObjectEntities": ["Vladimir Kuzmin", "Ryzhov - Kitaev", "Yury Chernavsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Doctor Watson", "ObjectEntities": ["Georgiy Mamikonov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Silos", "ObjectEntities": ["Walter Salas-Humara"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4169921", "ObjectEntities": ["Andrey Vasilyev", "Vadim Kurilev", "Yevgeny Lyovin", "Mikhail Nefyodov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4169921", "ObjectEntities": ["Yevgeny Lyovin", "Vadim Kurilev", "Mikhail Nefyodov", "Andrey Vasilyev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dym", "ObjectEntities": ["Viktor Troyegubov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Dymovaya Zavesa", "ObjectEntities": ["Slimus"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4181304", "ObjectEntities": ["Valery Zhukov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4191544", "ObjectEntities": ["Konstantin Nikolsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4192514", "ObjectEntities": ["Fred Adra"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Zolotoe Koltso", "ObjectEntities": ["Nadezhda Kadysheva", "Aleksander Kostyuk"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Zolotoe Koltso", "ObjectEntities": ["Aleksander Kostyuk", "Nadezhda Kadysheva"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4195519", "ObjectEntities": ["Mikhail Zuyev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Igry", "ObjectEntities": ["Viktor Sologub", "Igor Cheridnik"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4206323", "ObjectEntities": ["Ilya Lagutenko"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Carnival", "ObjectEntities": ["Vladimir Kuzmin", "Alexander Barykin", "Yevgeny Kazantsev"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Carnival", "ObjectEntities": ["Yevgeny Kazantsev", "Alexander Barykin", "Vladimir Kuzmin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4217500", "ObjectEntities": ["Vahagn Hayrapetyan"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Katya Chekhova", "ObjectEntities": ["Sergey Pimenov", "Q55653842"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4217682", "ObjectEntities": ["Nail Kadyrov", "Q4424565"], "Relation": "BandHasMember"}
@@ -450,15 +450,15 @@
 {"SubjectEntity": "KnyaZz", "ObjectEntities": ["Andrei Knyazev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Komu Vnyz", "ObjectEntities": ["Andriy Sereda"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4241866", "ObjectEntities": ["Mikhail Faynzilberg"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Kurylev-band", "ObjectEntities": ["Nikita Zaytsev", "Vadim Kurilev", "Mikhail Nefyodov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Kurylev-band", "ObjectEntities": ["Nikita Zaytsev", "Mikhail Nefyodov", "Vadim Kurilev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lesopoval", "ObjectEntities": ["Mikhail Tanich"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4261129", "ObjectEntities": ["Q4070491", "Q4226353", "Alexey Ostashev", "Andrey Shatunovskiy"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4261129", "ObjectEntities": ["Q4226353", "Andrey Shatunovskiy", "Q4070491", "Alexey Ostashev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ruger Hauer", "ObjectEntities": ["Paperi T"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4267136", "ObjectEntities": ["Alexander Gradsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lyavony", "ObjectEntities": ["Vladimir Mulyavin", "Q4467229"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4277696", "ObjectEntities": ["Q4498155"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Malchishnik", "ObjectEntities": ["Mutabor", "Dolphin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4279985", "ObjectEntities": ["Pyotr Mamonov", "Alexey Bortnichuk"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Malchishnik", "ObjectEntities": ["Dolphin", "Mutabor"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4279985", "ObjectEntities": ["Alexey Bortnichuk", "Pyotr Mamonov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Matrosskaya Tishina", "ObjectEntities": ["German Dizhechko"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Masha and the Bears", "ObjectEntities": ["Masha Makarova"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Meridian", "ObjectEntities": ["Nadezhda Lukashevich"], "Relation": "BandHasMember"}
@@ -472,7 +472,7 @@
 {"SubjectEntity": "Weichafe", "ObjectEntities": ["Angelo Pierattini"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Jazz Warriors", "ObjectEntities": ["Orphy Robinson"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q6171930", "ObjectEntities": ["Feliciano Sald\u00edas"], "Relation": "BandHasMember"}
-{"SubjectEntity": "\u00c1lex & Christina", "ObjectEntities": ["\u00c1lex", "Christina"], "Relation": "BandHasMember"}
+{"SubjectEntity": "\u00c1lex & Christina", "ObjectEntities": ["Christina", "\u00c1lex"], "Relation": "BandHasMember"}
 {"SubjectEntity": "La Excepci\u00f3n", "ObjectEntities": ["El Langui"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Kingdom Heirs", "ObjectEntities": ["Jerry A Martin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Le Click", "ObjectEntities": ["Kayo Shekoni"], "Relation": "BandHasMember"}
@@ -495,8 +495,8 @@
 {"SubjectEntity": "MaxNormal.TV", "ObjectEntities": ["Watkin Tudor Jones"], "Relation": "BandHasMember"}
 {"SubjectEntity": "McFadden & Whitehead", "ObjectEntities": ["Gene McFadden"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Men at Large", "ObjectEntities": ["Jason Champion"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Al Massrieen", "ObjectEntities": ["Hani Shanouda", "Q12228467", "Mona Aziz"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Michael Nyman Band", "ObjectEntities": ["Michael Nyman", "Dave Lee"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Al Massrieen", "ObjectEntities": ["Q12228467", "Mona Aziz", "Hani Shanouda"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Michael Nyman Band", "ObjectEntities": ["Dave Lee", "Michael Nyman"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Mint Condition", "ObjectEntities": ["Stokley Williams", "Roger Troutman Jr."], "Relation": "BandHasMember"}
 {"SubjectEntity": "Moana and the Moahunters", "ObjectEntities": ["Moana"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Mr. Flotsam and Mr. Jetsam", "ObjectEntities": ["Malcolm McEachern", "Bentley Collingwood Hilliam"], "Relation": "BandHasMember"}
@@ -510,12 +510,12 @@
 {"SubjectEntity": "Original Concept", "ObjectEntities": ["Doctor Dr\u00e9"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Players Association", "ObjectEntities": ["Michael Brecker"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Poligamia", "ObjectEntities": ["Andr\u00e9s Cepeda"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Princess Katie & Racer Steve", "ObjectEntities": ["Princess Katie", "Racer Steve"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Princess Katie & Racer Steve", "ObjectEntities": ["Racer Steve", "Princess Katie"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Raj-Koti", "ObjectEntities": ["Saluri Koteswara Rao"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Re-Up Gang", "ObjectEntities": ["No Malice"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Sa-Ra K", "ObjectEntities": ["Om'Mas Keith"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Saxon Shore", "ObjectEntities": ["Oliver Chapoy"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Secos & Molhados", "ObjectEntities": ["Ney Matogrosso", "G\u00e9rson Conrad", "Jo\u00e3o Ricardo"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Secos & Molhados", "ObjectEntities": ["Jo\u00e3o Ricardo", "Ney Matogrosso", "G\u00e9rson Conrad"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Spinetta Jade", "ObjectEntities": ["Luis Alberto Spinetta"], "Relation": "BandHasMember"}
 {"SubjectEntity": "StillWell", "ObjectEntities": ["Q-Unique"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Almighty RSO", "ObjectEntities": ["Benzino"], "Relation": "BandHasMember"}
@@ -531,10 +531,10 @@
 {"SubjectEntity": "Twisted Method", "ObjectEntities": ["Derrick Tribbett"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Wallpaper.", "ObjectEntities": ["Eric Frederic", "Ricky Reed"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Wild Horses", "ObjectEntities": ["Jimmy Bain"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Wilson, Keppel and Betty", "ObjectEntities": ["Betty Knox", "Jack Wilson", "Joe Keppel"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Wilson, Keppel and Betty", "ObjectEntities": ["Joe Keppel", "Betty Knox", "Jack Wilson"], "Relation": "BandHasMember"}
 {"SubjectEntity": "EH Sukarra", "ObjectEntities": ["Norton"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q8843705", "ObjectEntities": ["Xabi Solano"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Fuel Fandango", "ObjectEntities": ["Alejandro Acosta", "Nita"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Fuel Fandango", "ObjectEntities": ["Nita", "Alejandro Acosta"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q9017283", "ObjectEntities": ["Sorkun"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q9058869", "ObjectEntities": ["\u00c1lvaro Henr\u00edquez"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Rock Bones", "ObjectEntities": ["Juan Ciancio"], "Relation": "BandHasMember"}
@@ -548,110 +548,110 @@
 {"SubjectEntity": "Oso Fan", "ObjectEntities": ["Juan Luis Etxeberria"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Napoka Iria", "ObjectEntities": ["Miren Narbaiza"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Nevermind Trio", "ObjectEntities": ["Hasier Oleaga"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Gu ta Gutarrak", "ObjectEntities": ["Unai Iturriaga", "Igor Elortza", "Josu Zabala Ajuriagerra"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Gu ta Gutarrak", "ObjectEntities": ["Unai Iturriaga", "Josu Zabala Ajuriagerra", "Igor Elortza"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Beira", "ObjectEntities": ["Jon Martin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Mugaldekoak", "ObjectEntities": ["Edu Zelaieta"], "Relation": "BandHasMember"}
 {"SubjectEntity": "KX", "ObjectEntities": ["Keu Agirretxea"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q32361772", "ObjectEntities": ["Yury Usachyov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q45477524", "ObjectEntities": ["Mihkel Ratt"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Blacky", "ObjectEntities": ["Elmar Liitmaa", "Angela Aak", "Andrus Lillepea", "Lea Dali Lion", "Triin Anni"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Blacky", "ObjectEntities": ["Triin Anni", "Elmar Liitmaa", "Andrus Lillepea", "Lea Dali Lion", "Angela Aak"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q47006583", "ObjectEntities": ["Barbara Laister-Ebner"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Smokey Robinson & The Miracles", "ObjectEntities": ["Smokey Robinson", "The Miracles"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Ben Harper with Charlie Musselwhite", "ObjectEntities": ["Ben Harper", "Charlie Musselwhite"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Smokey Robinson & The Miracles", "ObjectEntities": ["The Miracles", "Smokey Robinson"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Ben Harper with Charlie Musselwhite", "ObjectEntities": ["Charlie Musselwhite", "Ben Harper"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Charles Bradley & His Extraordinaires", "ObjectEntities": ["Charles Bradley"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Heilung", "ObjectEntities": ["Maria Franz"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Marta y Mic\u00f3", "ObjectEntities": ["Jos\u00e9 Mar\u00eda Mic\u00f3"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Octopus Maiden", "ObjectEntities": ["Boris Burdayev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Lirrika", "ObjectEntities": ["Boris Burdayev"], "Relation": "BandHasMember"}
-{"SubjectEntity": "District Six Jazz Band", "ObjectEntities": ["Brian Abrahams", "Russell Herman"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Chicago Pro Musica", "ObjectEntities": ["Charles Vernon", "Easley Blackwood, Jr.", "Jay Friedman", "John Bruce Yeh", "Rex Martin", "Wilbur Simpson", "George Vosburgh"], "Relation": "BandHasMember"}
-{"SubjectEntity": "BlueV", "ObjectEntities": ["Li YuQi", "Sun Rui", "Mo Han", "Wan Lina", "Lv Yi"], "Relation": "BandHasMember"}
+{"SubjectEntity": "District Six Jazz Band", "ObjectEntities": ["Russell Herman", "Brian Abrahams"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Chicago Pro Musica", "ObjectEntities": ["Charles Vernon", "Rex Martin", "Easley Blackwood, Jr.", "John Bruce Yeh", "George Vosburgh", "Jay Friedman", "Wilbur Simpson"], "Relation": "BandHasMember"}
+{"SubjectEntity": "BlueV", "ObjectEntities": ["Sun Rui", "Li YuQi", "Wan Lina", "Mo Han", "Lv Yi"], "Relation": "BandHasMember"}
 {"SubjectEntity": "HO2", "ObjectEntities": ["Feng Xinduo", "Lu Ting"], "Relation": "BandHasMember"}
-{"SubjectEntity": "AK26", "ObjectEntities": ["Giajjenno", "Hiro"], "Relation": "BandHasMember"}
+{"SubjectEntity": "AK26", "ObjectEntities": ["Hiro", "Giajjenno"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Michele Corino and his Orchestra", "ObjectEntities": ["Michele Corino"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Henry Mancini Orchestra", "ObjectEntities": ["Henry Mancini"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Astor e sua Orquestra", "ObjectEntities": ["Astor Silva"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gisela Horat Trio", "ObjectEntities": ["Gisela Horat"], "Relation": "BandHasMember"}
-{"SubjectEntity": "DDK", "ObjectEntities": ["Axel D\u00f6rner", "Jacques Demierre", "Jonas Kocher"], "Relation": "BandHasMember"}
+{"SubjectEntity": "DDK", "ObjectEntities": ["Jacques Demierre", "Jonas Kocher", "Axel D\u00f6rner"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Gysler / P\u00e9rez / Nick", "ObjectEntities": ["C\u00e9dric Gysler"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Els J\u00f3vens", "ObjectEntities": ["Pep Mirambell"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Leon Young String Chorale", "ObjectEntities": ["Leon Young"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Helem Tarbut", "ObjectEntities": ["Q65666034"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Suistamo Electricity", "ObjectEntities": ["Eero Grundstr\u00f6m"], "Relation": "BandHasMember"}
 {"SubjectEntity": "LNFT", "ObjectEntities": ["Ran Nir"], "Relation": "BandHasMember"}
-{"SubjectEntity": "F3M", "ObjectEntities": ["Hanna Ollikainen", "Viivi Sopanen", "Miranda Sahiti"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Joe Turner and his Blues Kings", "ObjectEntities": ["Big Joe Turner", "The Cues"], "Relation": "BandHasMember"}
+{"SubjectEntity": "F3M", "ObjectEntities": ["Hanna Ollikainen", "Miranda Sahiti", "Viivi Sopanen"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Joe Turner and his Blues Kings", "ObjectEntities": ["The Cues", "Big Joe Turner"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Bemb\u00e9", "ObjectEntities": ["Mar\u00eda Grazia Polanco"], "Relation": "BandHasMember"}
 {"SubjectEntity": "L'Orchestra di Giulio Libano", "ObjectEntities": ["Giulio Libano"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Angel Pocho Gatti e la sua orchestra", "ObjectEntities": ["Pino Presti", "\u00c1ngel Osvaldo Gatti"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Angel Pocho Gatti e la sua orchestra", "ObjectEntities": ["\u00c1ngel Osvaldo Gatti", "Pino Presti"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Les Goguettes", "ObjectEntities": ["Cl\u00e9mence Monnier", "Valentin Vander", "Aur\u00e9lien Merle"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q94948232", "ObjectEntities": ["Ben Zini", "Taylor Malkov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Ansamblul S\u00e2nz\u00e2ienele din Negre\u0219ti Oa\u0219", "ObjectEntities": ["Maria Tripon", "Ionu\u021b Silaghi de Oa\u0219"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q94948232", "ObjectEntities": ["Taylor Malkov", "Ben Zini"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Ansamblul S\u00e2nz\u00e2ienele din Negre\u0219ti Oa\u0219", "ObjectEntities": ["Ionu\u021b Silaghi de Oa\u0219", "Maria Tripon"], "Relation": "BandHasMember"}
 {"SubjectEntity": "OQJAV", "ObjectEntities": ["Vadik Korolev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Indian Agent", "ObjectEntities": ["Nicholas Galanin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "TwoVm Para Cristo", "ObjectEntities": ["BS El Ideologo"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Mike Stern Band", "ObjectEntities": ["Mike Stern"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Shuta Hasunuma Full Philharmonic Orchestra", "ObjectEntities": ["Roy Tamaki", "Sh\u016bta Hasunuma", "Utena Kobayashi", "Eriko Teshima", "Q108136796", "Kyoko Ikeda", "Tomoya Matsuura"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Shuta Hasunuma Full Philharmonic Orchestra", "ObjectEntities": ["Q108136796", "Sh\u016bta Hasunuma", "Roy Tamaki", "Kyoko Ikeda", "Utena Kobayashi", "Tomoya Matsuura", "Eriko Teshima"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Putti", "ObjectEntities": ["Aleksandr Chirkin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q109043388", "ObjectEntities": ["Odile Edouard", "Freddy Eichelberger"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q109677168", "ObjectEntities": ["Pavel Fahrtdinov", "Vasily Uriyevsky", "Romario", "Q109681800"], "Relation": "BandHasMember"}
-{"SubjectEntity": "HOLOSTARS", "ObjectEntities": ["Roberu Yukoku", "Miyabi Hanasaki", "Izuru Kanade", "Arurandeisu", "Rikka", "Astel Leda", "Temma Kishido", "Shien Kageyama", "Oga Aragami", "UPROAR!!", "Yatogami Fuma", "Utsugi Uyu", "Hizaki Gamma", "Minase Rio"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q109043388", "ObjectEntities": ["Freddy Eichelberger", "Odile Edouard"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q109677168", "ObjectEntities": ["Pavel Fahrtdinov", "Romario", "Q109681800", "Vasily Uriyevsky"], "Relation": "BandHasMember"}
+{"SubjectEntity": "HOLOSTARS", "ObjectEntities": ["Oga Aragami", "Astel Leda", "Rikka", "Minase Rio", "UPROAR!!", "Shien Kageyama", "Izuru Kanade", "Roberu Yukoku", "Arurandeisu", "Yatogami Fuma", "Miyabi Hanasaki", "Temma Kishido", "Hizaki Gamma", "Utsugi Uyu"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Rossiyanye", "ObjectEntities": ["Georgy Ordanovsky"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Sonans", "ObjectEntities": ["Aleksandr Pantykin", "Igor Skripkar"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Sonans", "ObjectEntities": ["Igor Skripkar", "Aleksandr Pantykin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Stereo-Zoldat", "ObjectEntities": ["Anton Adasinsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Prokhodnoi Dvor", "ObjectEntities": ["Yuri Naumov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Reddi", "ObjectEntities": ["Ihan Haydar"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q111342283", "ObjectEntities": ["musician"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Sun", "ObjectEntities": ["Anastasya Narwastu Tety Handuran", "Wyi Soo-jin", "Meilani Anatasya", "Dewita Athmarendra", "Putri Nabilla Ayuzar"], "Relation": "BandHasMember"}
-{"SubjectEntity": "BlinkStars", "ObjectEntities": ["Minarta Shantdrina Chattrine Pakpahan", "Clarissa Wu", "Katarina Keiko Salim", "Geraldyn Rizky Andriyani", "Ghezia Aiko Isaura"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Sun", "ObjectEntities": ["Anastasya Narwastu Tety Handuran", "Meilani Anatasya", "Wyi Soo-jin", "Putri Nabilla Ayuzar", "Dewita Athmarendra"], "Relation": "BandHasMember"}
+{"SubjectEntity": "BlinkStars", "ObjectEntities": ["Geraldyn Rizky Andriyani", "Katarina Keiko Salim", "Clarissa Wu", "Minarta Shantdrina Chattrine Pakpahan", "Ghezia Aiko Isaura"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Jude & Frank", "ObjectEntities": ["Jude", "Frank"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q113530521", "ObjectEntities": ["Georges Carr\u00e8re", "Paule Carr\u00e8re-Dencausse"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q113530521", "ObjectEntities": ["Paule Carr\u00e8re-Dencausse", "Georges Carr\u00e8re"], "Relation": "BandHasMember"}
 {"SubjectEntity": "L'Yriade", "ObjectEntities": ["Cyril Auvity", "L\u00e9onor de R\u00e9condo"], "Relation": "BandHasMember"}
-{"SubjectEntity": "The Ramlees", "ObjectEntities": ["Yuna", "Najwa Mahiaddin", "Liyana Fizi", "Mira Tilu"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Go Gerila!", "ObjectEntities": ["Ai.Z", "Amir Jahari", "Anas Amdan"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Alif Satar & The Locos", "ObjectEntities": ["Alif Satar", "Faliq Auri", "Tam Cobain", "Efry Arwis", "Rajwan Juni"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Bardero$", "ObjectEntities": ["C.R.O", "Homer el Mero Mero"], "Relation": "BandHasMember"}
+{"SubjectEntity": "The Ramlees", "ObjectEntities": ["Mira Tilu", "Liyana Fizi", "Najwa Mahiaddin", "Yuna"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Go Gerila!", "ObjectEntities": ["Amir Jahari", "Anas Amdan", "Ai.Z"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Alif Satar & The Locos", "ObjectEntities": ["Alif Satar", "Efry Arwis", "Rajwan Juni", "Tam Cobain", "Faliq Auri"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Bardero$", "ObjectEntities": ["Homer el Mero Mero", "C.R.O"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ensemble l'\u00c9chelle", "ObjectEntities": ["Caroline Mar\u00e7ot", "Lambert Colson", "Elise Dabrowski"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Tunnel", "ObjectEntities": ["Brendan Canty"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Trio \u00e0 cordes fran\u00e7ais", "ObjectEntities": ["G\u00e9rard Jarry", "Serge Collot", "Michel Tournus"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Trio \u00e0 cordes fran\u00e7ais", "ObjectEntities": ["G\u00e9rard Jarry", "Michel Tournus", "Serge Collot"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Jama Music", "ObjectEntities": ["Jamshid Shodiyev"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Ensemble Agl\u00e0ia", "ObjectEntities": ["Cinzia Barbagelata", "Jorge Alberto Guerrero", "Marco Diatto", "Simona Gilardi"], "Relation": "BandHasMember"}
-{"SubjectEntity": "What is Noise", "ObjectEntities": ["Joshua Burel", "Anastasia Christofakis", "Justin Page"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Fl\u00fbte Alors!", "ObjectEntities": ["Vincent Lauzer", "Marie-Laurence Primeau", "Caroline Tremblay", "Alexa Raine-Wright"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Gateway Worship Espa\u00f1ol", "ObjectEntities": ["Funky", "Kari Jobe", "Lilly Goodman", "Julissa (singer)", "Jacobo Ramos", "Miel San Marcos", "Daniel Calveti", "Christine  Shadama Declario Fern\u00e1ndez", "Coalo Zamorano", "Travy Joe", "Ingrid Rosario"], "Relation": "BandHasMember"}
-{"SubjectEntity": "dumama and kechou", "ObjectEntities": ["Gugulethu Duma", "Kerim Melik Becker"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Ensemble Agl\u00e0ia", "ObjectEntities": ["Cinzia Barbagelata", "Simona Gilardi", "Jorge Alberto Guerrero", "Marco Diatto"], "Relation": "BandHasMember"}
+{"SubjectEntity": "What is Noise", "ObjectEntities": ["Joshua Burel", "Justin Page", "Anastasia Christofakis"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Fl\u00fbte Alors!", "ObjectEntities": ["Vincent Lauzer", "Alexa Raine-Wright", "Marie-Laurence Primeau", "Caroline Tremblay"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Gateway Worship Espa\u00f1ol", "ObjectEntities": ["Ingrid Rosario", "Christine  Shadama Declario Fern\u00e1ndez", "Travy Joe", "Funky", "Miel San Marcos", "Julissa (singer)", "Coalo Zamorano", "Jacobo Ramos", "Lilly Goodman", "Daniel Calveti", "Kari Jobe"], "Relation": "BandHasMember"}
+{"SubjectEntity": "dumama and kechou", "ObjectEntities": ["Kerim Melik Becker", "Gugulethu Duma"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Syndrom Samazvanca", "ObjectEntities": ["Q103920539"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Mirage", "ObjectEntities": ["Ekaterina Boldysheva", "Aleksey Gorbashov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Mozaika", "ObjectEntities": ["Yaroslav Kesler"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4306948", "ObjectEntities": ["Egor Timofeev"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Mukhomory", "ObjectEntities": ["Sven Gundlakh", "Konstantin Zvezdochetov", "Vladimir Kara-Murza", "Sergey Mironenko"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Mukhomory", "ObjectEntities": ["Konstantin Zvezdochetov", "Vladimir Kara-Murza", "Sergey Mironenko", "Sven Gundlakh"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Muusik Seif", "ObjectEntities": ["T\u00f5nis M\u00e4gi"], "Relation": "BandHasMember"}
-{"SubjectEntity": "N.O.M.", "ObjectEntities": ["Nikolay Gusev", "Andrey Kagadeyev", "Nikolay Kopeykin", "Dmitry Tikhonov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "N.O.M.", "ObjectEntities": ["Nikolay Gusev", "Nikolay Kopeykin", "Andrey Kagadeyev", "Dmitry Tikhonov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "N.E.P.", "ObjectEntities": ["Yevgeny Lyovin"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Nastya", "ObjectEntities": ["Nastya Poleva"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Nate!", "ObjectEntities": ["Svyatoslav Zadery", "Mikhail Nefyodov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Nate!", "ObjectEntities": ["Mikhail Nefyodov", "Svyatoslav Zadery"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4315535", "ObjectEntities": ["Vladimir Sigachyov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Nogu Svelo!", "ObjectEntities": ["Maksim Pokrovsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Nol", "ObjectEntities": ["Fyodor Chistyakov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Nochnoy Prospekt", "ObjectEntities": ["Aleksey Borisov", "Ivan Sokolovsky"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Obyekt Nasmeshek", "ObjectEntities": ["Q4230640", "Ricochet", "Yevgeny Fyodorov", "Q18246226"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Obyekt Nasmeshek", "ObjectEntities": ["Q18246226", "Yevgeny Fyodorov", "Ricochet", "Q4230640"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4334501", "ObjectEntities": ["Olga Pulatova"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Optimalniy Variant", "ObjectEntities": ["Oleg Chilap"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Orizont", "ObjectEntities": ["Oleg Milstein"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4340023", "ObjectEntities": ["Q4233189", "Nastya Poleva", "Gleb Samoylov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4340023", "ObjectEntities": ["Gleb Samoylov", "Nastya Poleva", "Q4233189"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4342460", "ObjectEntities": ["Viktor Tsoi"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4344660", "ObjectEntities": ["Aleksey Paperny"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Para normalnykh", "ObjectEntities": ["Ivan Dorn", "Artem Mekh", "Q62091515"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Para normalnykh", "ObjectEntities": ["Artem Mekh", "Q62091515", "Ivan Dorn"], "Relation": "BandHasMember"}
 {"SubjectEntity": "The Wildhearts", "ObjectEntities": ["Ginger"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Weeping Willows", "ObjectEntities": ["Magnus Carlson", "Anders Hernestam", "Niko R\u00f6hlcke", "Ola Nystr\u00f6m"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Weeping Willows", "ObjectEntities": ["Ola Nystr\u00f6m", "Anders Hernestam", "Magnus Carlson", "Niko R\u00f6hlcke"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Tantsy Minus", "ObjectEntities": ["Vyacheslav Petkun"], "Relation": "BandHasMember"}
 {"SubjectEntity": "TODES", "ObjectEntities": ["Alla Duhova"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Trek", "ObjectEntities": ["Andrey Kotov", "Nastya Poleva", "Igor Skripkar"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Tri O", "ObjectEntities": ["Arkady Shilkloper", "Sergey Letov", "Aleksandr Aleksandrov", "Yuriy Parfenov", "Arkady Kirichenko"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Q4463128", "ObjectEntities": ["Igraf Yoshka", "Georgy Kvik", "Valentina Ponomaryova"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Trek", "ObjectEntities": ["Igor Skripkar", "Nastya Poleva", "Andrey Kotov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Tri O", "ObjectEntities": ["Arkady Kirichenko", "Aleksandr Aleksandrov", "Yuriy Parfenov", "Sergey Letov", "Arkady Shilkloper"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Q4463128", "ObjectEntities": ["Georgy Kvik", "Igraf Yoshka", "Valentina Ponomaryova"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Tutsi", "ObjectEntities": ["Irina Ortman", "Lesya Yaroslavskaya", "Masha Weber"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Umka and Bronevik", "ObjectEntities": ["Anna Gerasimova"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Urfin Juice", "ObjectEntities": ["Ilya Kormiltsev", "Igor Belkin", "Vladimir Nazimov", "Aleksandr Pantykin"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Urfin Juice", "ObjectEntities": ["Aleksandr Pantykin", "Igor Belkin", "Ilya Kormiltsev", "Vladimir Nazimov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4481130", "ObjectEntities": ["Q15069106"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Hronop", "ObjectEntities": ["Vadim Demidov"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q4508019", "ObjectEntities": ["Vasiliy Goncharov"], "Relation": "BandHasMember"}
@@ -659,7 +659,7 @@
 {"SubjectEntity": "Q4520109", "ObjectEntities": ["Evgeny Margulis"], "Relation": "BandHasMember"}
 {"SubjectEntity": "E.S.T.", "ObjectEntities": ["Jan Sagadeev"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Eks-BB", "ObjectEntities": ["Giya Gagua"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Elektroklub", "ObjectEntities": ["Irina Allegrova", "Igor Talkov", "Raisa Saed-Shakh", "Viktor Saltykov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Elektroklub", "ObjectEntities": ["Igor Talkov", "Irina Allegrova", "Viktor Saltykov", "Raisa Saed-Shakh"], "Relation": "BandHasMember"}
 {"SubjectEntity": "52nd Street", "ObjectEntities": ["Diane Charlemagne"], "Relation": "BandHasMember"}
 {"SubjectEntity": "707", "ObjectEntities": ["Kevin Chalfant"], "Relation": "BandHasMember"}
 {"SubjectEntity": "ALAS", "ObjectEntities": ["Gustavo Moretto"], "Relation": "BandHasMember"}
@@ -674,28 +674,28 @@
 {"SubjectEntity": "Arc Angel", "ObjectEntities": ["Jeff Cannata"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Art and Dotty Todd", "ObjectEntities": ["Art Todd", "Dotty Todd"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Ascolta", "ObjectEntities": ["Florian H\u00f6lscher"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Botellita de Jerez", "ObjectEntities": ["Sergio Arau", "Francisco Barrios (musician)", "Armando Vega Gil", "Santiago Ojeda P\u00e9rez", "Sr. Gonz\u00e1lez"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Botellita de Jerez", "ObjectEntities": ["Sr. Gonz\u00e1lez", "Santiago Ojeda P\u00e9rez", "Armando Vega Gil", "Sergio Arau", "Francisco Barrios (musician)"], "Relation": "BandHasMember"}
 {"SubjectEntity": "BMX Bandits", "ObjectEntities": ["Norman Blake"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Back Off Cupids", "ObjectEntities": ["John Reis"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Barry & the Tamerlanes", "ObjectEntities": ["Barry De Vorzon"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Soul Intent", "ObjectEntities": ["Eminem"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Beat Junkies", "ObjectEntities": ["DJ Babu", "DJ Rhettmatic", "J. Rocc"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Beat Junkies", "ObjectEntities": ["DJ Babu", "J. Rocc", "DJ Rhettmatic"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Benevento/Russo Duo", "ObjectEntities": ["Marco Benevento"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Bent Sea", "ObjectEntities": ["Dirk Verbeuren"], "Relation": "BandHasMember"}
-{"SubjectEntity": "La Trinca", "ObjectEntities": ["Toni Cruz", "Josep Maria Mainat", "Miquel \u00c0ngel Pasqual"], "Relation": "BandHasMember"}
+{"SubjectEntity": "La Trinca", "ObjectEntities": ["Toni Cruz", "Miquel \u00c0ngel Pasqual", "Josep Maria Mainat"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Kosman String Quartet", "ObjectEntities": ["Willy Benda"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Austral String Quartet", "ObjectEntities": ["Alfred Hill", "Stephen Vost Janssen"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Optimystica Orchestra", "ObjectEntities": ["Dmitriy Kezhvatov", "Denis Kuptsov", "Yevgeny Fyodorov", "Anton Vishnyakov"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Posledny Shans", "ObjectEntities": ["Sergey Ryzhenko", "Aleksandr Samoylov", "Vladimir Shchukin"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Astro Bunny", "ObjectEntities": ["L\u00e9na Cha", "Nu"], "Relation": "BandHasMember"}
-{"SubjectEntity": "Banad\u00fa", "ObjectEntities": ["Miriam Fleitas", "Ruyman Franco", "Jose Llobet", "Manuel L\u00f3pez"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Optimystica Orchestra", "ObjectEntities": ["Anton Vishnyakov", "Dmitriy Kezhvatov", "Yevgeny Fyodorov", "Denis Kuptsov"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Posledny Shans", "ObjectEntities": ["Aleksandr Samoylov", "Sergey Ryzhenko", "Vladimir Shchukin"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Astro Bunny", "ObjectEntities": ["Nu", "L\u00e9na Cha"], "Relation": "BandHasMember"}
+{"SubjectEntity": "Banad\u00fa", "ObjectEntities": ["Ruyman Franco", "Miriam Fleitas", "Jose Llobet", "Manuel L\u00f3pez"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Huntza", "ObjectEntities": ["Josune Arakistan"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Curtis String Quartet", "ObjectEntities": ["Jascha Brodsky"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q9390318", "ObjectEntities": ["Maria Pomianowska"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Zesp\u00f3\u0142 Reprezentacyjny", "ObjectEntities": ["Filip \u0141obodzi\u0144ski"], "Relation": "BandHasMember"}
-{"SubjectEntity": "S.B.D.W.", "ObjectEntities": ["Jacky Wu", "Will Liu", "Jason Zhong", "Morrison Ni"], "Relation": "BandHasMember"}
-{"SubjectEntity": "2Yoon", "ObjectEntities": ["Heo Ga-yoon", "Jeon Ji-yoon"], "Relation": "BandHasMember"}
-{"SubjectEntity": "ASOS", "ObjectEntities": ["Barbie Hsu", "Dee Hsu"], "Relation": "BandHasMember"}
+{"SubjectEntity": "S.B.D.W.", "ObjectEntities": ["Jacky Wu", "Morrison Ni", "Will Liu", "Jason Zhong"], "Relation": "BandHasMember"}
+{"SubjectEntity": "2Yoon", "ObjectEntities": ["Jeon Ji-yoon", "Heo Ga-yoon"], "Relation": "BandHasMember"}
+{"SubjectEntity": "ASOS", "ObjectEntities": ["Dee Hsu", "Barbie Hsu"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Champion Band", "ObjectEntities": ["Huang Shao-Ku", "Q29414078"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Pia Fraus", "ObjectEntities": ["Margus Voolpriit"], "Relation": "BandHasMember"}
 {"SubjectEntity": "Q11688909", "ObjectEntities": ["Jabier Muguruza"], "Relation": "BandHasMember"}

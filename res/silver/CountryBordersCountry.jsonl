@@ -1,225 +1,225 @@
-{"SubjectEntity": "Afghanistan", "ObjectEntities": ["Iran", "People's Republic of China", "Tajikistan", "Pakistan", "Turkmenistan", "Uzbekistan", "Soviet Union"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Albania", "ObjectEntities": ["North Macedonia", "Montenegro", "Serbia", "Greece", "Italy", "Kosovo", "Yugoslavia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Algeria", "ObjectEntities": ["Morocco", "Libya", "Western Sahara", "Mauritania", "Tunisia", "Niger", "Spain", "Italy", "Mali"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Andorra", "ObjectEntities": ["France", "Spain"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Angola", "ObjectEntities": ["Namibia", "Republic of the Congo", "Democratic Republic of the Congo", "Zambia", "Gabon"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Antigua and Barbuda", "ObjectEntities": ["France", "United Kingdom", "Saint Kitts and Nevis"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Argentina", "ObjectEntities": ["Bolivia", "United Kingdom", "Chile", "Brazil", "Paraguay", "Uruguay"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Armenia", "ObjectEntities": ["Turkey", "Azerbaijan", "Iran", "Georgia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Australia", "ObjectEntities": ["France", "New Zealand", "Solomon Islands", "Papua New Guinea", "East Timor", "Indonesia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Austria", "ObjectEntities": ["Slovakia", "Liechtenstein", "Switzerland", "Hungary", "Italy", "Germany", "Czech Republic", "Slovenia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Afghanistan", "ObjectEntities": ["Uzbekistan", "Soviet Union", "Turkmenistan", "Pakistan", "People's Republic of China", "Iran", "Tajikistan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Albania", "ObjectEntities": ["Serbia", "Montenegro", "North Macedonia", "Kosovo", "Greece", "Yugoslavia", "Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Algeria", "ObjectEntities": ["Niger", "Libya", "Mauritania", "Mali", "Spain", "Tunisia", "Morocco", "Western Sahara", "Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Andorra", "ObjectEntities": ["Spain", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Angola", "ObjectEntities": ["Gabon", "Republic of the Congo", "Zambia", "Namibia", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Antigua and Barbuda", "ObjectEntities": ["France", "Saint Kitts and Nevis", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Argentina", "ObjectEntities": ["Paraguay", "Uruguay", "Brazil", "Chile", "Bolivia", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Armenia", "ObjectEntities": ["Azerbaijan", "Turkey", "Iran", "Georgia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Australia", "ObjectEntities": ["Papua New Guinea", "New Zealand", "Solomon Islands", "Indonesia", "France", "East Timor"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Austria", "ObjectEntities": ["Slovenia", "Slovakia", "Switzerland", "Germany", "Czech Republic", "Liechtenstein", "Hungary", "Italy"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Austria-Hungary", "ObjectEntities": ["Russian Empire"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Azerbaijan", "ObjectEntities": ["Russia", "Armenia", "Iran", "Georgia", "Turkey", "Republic of Artsakh"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Bahrain", "ObjectEntities": ["Saudi Arabia", "Iran", "Qatar"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Bangladesh", "ObjectEntities": ["Myanmar", "India"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Barbados", "ObjectEntities": ["Guyana", "Saint Lucia", "Saint Vincent and the Grenadines", "Trinidad and Tobago"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Belarus", "ObjectEntities": ["Latvia", "Poland", "Ukraine", "Russia", "Lithuania"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Belgium", "ObjectEntities": ["Netherlands", "Kingdom of Prussia", "Germany", "Luxembourg", "United Kingdom", "France"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Belize", "ObjectEntities": ["Guatemala", "Mexico", "Honduras"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Benin", "ObjectEntities": ["Togo", "Burkina Faso", "Niger", "Nigeria"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Azerbaijan", "ObjectEntities": ["Russia", "Georgia", "Armenia", "Iran", "Republic of Artsakh", "Turkey"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Bahrain", "ObjectEntities": ["Saudi Arabia", "Qatar", "Iran"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Bangladesh", "ObjectEntities": ["India", "Myanmar"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Barbados", "ObjectEntities": ["Guyana", "Trinidad and Tobago", "Saint Vincent and the Grenadines", "Saint Lucia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Belarus", "ObjectEntities": ["Russia", "Poland", "Ukraine", "Lithuania", "Latvia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Belgium", "ObjectEntities": ["Netherlands", "Germany", "Kingdom of Prussia", "France", "Luxembourg", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Belize", "ObjectEntities": ["Mexico", "Honduras", "Guatemala"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Benin", "ObjectEntities": ["Niger", "Togo", "Nigeria", "Burkina Faso"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Bhutan", "ObjectEntities": ["India", "People's Republic of China"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Bolivia", "ObjectEntities": ["Chile", "Paraguay", "Peru", "Brazil", "Argentina"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Bosnia and Herzegovina", "ObjectEntities": ["Montenegro", "Serbia", "Croatia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Botswana", "ObjectEntities": ["South Africa", "Namibia", "Zambia", "Zimbabwe"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Brazil", "ObjectEntities": ["Guyana", "Bolivia", "Suriname", "Venezuela", "Argentina", "Peru", "Paraguay", "Uruguay", "France", "Colombia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Bolivia", "ObjectEntities": ["Paraguay", "Peru", "Brazil", "Argentina", "Chile"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Bosnia and Herzegovina", "ObjectEntities": ["Croatia", "Serbia", "Montenegro"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Botswana", "ObjectEntities": ["South Africa", "Zambia", "Namibia", "Zimbabwe"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Brazil", "ObjectEntities": ["Paraguay", "Guyana", "Peru", "Venezuela", "Argentina", "Colombia", "Suriname", "Uruguay", "Bolivia", "France"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Brunei", "ObjectEntities": ["Malaysia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Bulgaria", "ObjectEntities": ["Greece", "North Macedonia", "Serbia", "Turkey", "Romania"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Burkina Faso", "ObjectEntities": ["Ivory Coast", "Ghana", "Mali", "Niger", "Togo", "Benin"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Burundi", "ObjectEntities": ["Democratic Republic of the Congo", "Tanzania", "Rwanda"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Cambodia", "ObjectEntities": ["Laos", "Vietnam", "Thailand"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Cameroon", "ObjectEntities": ["Republic of the Congo", "Equatorial Guinea", "Gabon", "Nigeria", "Chad", "Central African Republic"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Canada", "ObjectEntities": ["France", "United States of America", "Denmark", "United States of America"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Cape Verde", "ObjectEntities": ["The Gambia", "Mauritania", "Senegal"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Central African Republic", "ObjectEntities": ["Republic of the Congo", "Chad", "Sudan", "South Sudan", "Democratic Republic of the Congo", "Cameroon"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Chad", "ObjectEntities": ["Cameroon", "Niger", "Nigeria", "Libya", "Central African Republic", "Sudan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Chile", "ObjectEntities": ["Bolivia", "Argentina", "Peru"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Colombia", "ObjectEntities": ["Haiti", "Dominican Republic", "Honduras", "Costa Rica", "Nicaragua", "Panama", "Peru", "Ecuador", "Jamaica", "Brazil", "Venezuela"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Comoros", "ObjectEntities": ["Madagascar", "Mozambique", "Seychelles", "Tanzania", "France"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Costa Rica", "ObjectEntities": ["Colombia", "Nicaragua", "Panama", "Ecuador"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Bulgaria", "ObjectEntities": ["Romania", "Serbia", "North Macedonia", "Greece", "Turkey"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Burkina Faso", "ObjectEntities": ["Niger", "Ghana", "Mali", "Benin", "Ivory Coast", "Togo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Burundi", "ObjectEntities": ["Rwanda", "Tanzania", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Cambodia", "ObjectEntities": ["Thailand", "Laos", "Vietnam"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Cameroon", "ObjectEntities": ["Equatorial Guinea", "Central African Republic", "Gabon", "Nigeria", "Chad", "Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Canada", "ObjectEntities": ["Denmark", "France", "United States of America"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Cape Verde", "ObjectEntities": ["Mauritania", "Senegal", "The Gambia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Central African Republic", "ObjectEntities": ["Chad", "South Sudan", "Republic of the Congo", "Cameroon", "Sudan", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Chad", "ObjectEntities": ["Niger", "Central African Republic", "Libya", "Nigeria", "Cameroon", "Sudan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Chile", "ObjectEntities": ["Argentina", "Bolivia", "Peru"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Colombia", "ObjectEntities": ["Honduras", "Costa Rica", "Peru", "Haiti", "Venezuela", "Panama", "Nicaragua", "Dominican Republic", "Brazil", "Jamaica", "Ecuador"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Comoros", "ObjectEntities": ["Madagascar", "Seychelles", "Tanzania", "France", "Mozambique"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Costa Rica", "ObjectEntities": ["Nicaragua", "Colombia", "Ecuador", "Panama"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Crimean Khanate", "ObjectEntities": ["Polish\u2013Lithuanian Commonwealth"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Croatia", "ObjectEntities": ["Hungary", "Montenegro", "Bosnia and Herzegovina", "Serbia", "Slovenia", "Italy"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Cuba", "ObjectEntities": ["The Bahamas", "Haiti", "Honduras", "Jamaica", "Mexico", "United Kingdom", "United States of America", "United Kingdom"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Cyprus", "ObjectEntities": ["Israel", "Syria", "United Kingdom", "Egypt", "Lebanon", "Turkey", "Northern Cyprus"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Czech Republic", "ObjectEntities": ["Poland", "Slovakia", "Austria", "Germany"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Czechoslovakia", "ObjectEntities": ["Poland", "Soviet Union", "Poland"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Democratic Republic of the Congo", "ObjectEntities": ["Angola", "Uganda", "Central African Republic", "Republic of the Congo", "Tanzania", "Zambia", "Rwanda", "South Sudan", "Burundi", "Sudan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Denmark", "ObjectEntities": ["Iceland", "Norway", "Poland", "Canada", "United Kingdom", "Sweden", "Kingdom of Denmark", "Germany"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Djibouti", "ObjectEntities": ["Eritrea", "Ethiopia", "Somalia", "Yemen"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Croatia", "ObjectEntities": ["Slovenia", "Bosnia and Herzegovina", "Serbia", "Montenegro", "Hungary", "Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Cuba", "ObjectEntities": ["Honduras", "Haiti", "Mexico", "United States of America", "Jamaica", "The Bahamas", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Cyprus", "ObjectEntities": ["Egypt", "Northern Cyprus", "Syria", "Lebanon", "Israel", "Turkey", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Czech Republic", "ObjectEntities": ["Austria", "Poland", "Germany", "Slovakia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Czechoslovakia", "ObjectEntities": ["Soviet Union", "Poland"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Democratic Republic of the Congo", "ObjectEntities": ["Central African Republic", "Rwanda", "Angola", "Burundi", "Tanzania", "Uganda", "Republic of the Congo", "South Sudan", "Sudan", "Zambia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Denmark", "ObjectEntities": ["Poland", "Canada", "Iceland", "Norway", "Germany", "Kingdom of Denmark", "Sweden", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Djibouti", "ObjectEntities": ["Ethiopia", "Somalia", "Eritrea", "Yemen"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Dominica", "ObjectEntities": ["France", "Venezuela"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Dominican Republic", "ObjectEntities": ["Colombia", "Haiti", "Netherlands", "United Kingdom", "United States of America", "Venezuela"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Dominican Republic", "ObjectEntities": ["Netherlands", "Haiti", "Venezuela", "Colombia", "United States of America", "United Kingdom"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Duchy of Courland and Semigallia", "ObjectEntities": ["Polish\u2013Lithuanian Commonwealth"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "East Timor", "ObjectEntities": ["Indonesia", "Australia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Ecuador", "ObjectEntities": ["Colombia", "Costa Rica", "Peru"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Egypt", "ObjectEntities": ["Israel", "Libya", "Sudan", "Cyprus", "Greece", "Jordan", "Saudi Arabia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "El Salvador", "ObjectEntities": ["Guatemala", "Honduras", "Nicaragua"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Empire of Japan", "ObjectEntities": ["Soviet Union", "Russian Empire", "Russian Socialist Federative Soviet Republic"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Equatorial Guinea", "ObjectEntities": ["Gabon", "Cameroon", "S\u00e3o Tom\u00e9 and Pr\u00edncipe"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Eritrea", "ObjectEntities": ["Djibouti", "Ethiopia", "Sudan", "Saudi Arabia", "Yemen"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Estonia", "ObjectEntities": ["Latvia", "Russia", "Finland", "Sweden"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "East Timor", "ObjectEntities": ["Australia", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Ecuador", "ObjectEntities": ["Colombia", "Peru", "Costa Rica"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Egypt", "ObjectEntities": ["Libya", "Saudi Arabia", "Cyprus", "Jordan", "Greece", "Israel", "Sudan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "El Salvador", "ObjectEntities": ["Nicaragua", "Honduras", "Guatemala"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Empire of Japan", "ObjectEntities": ["Russian Empire", "Soviet Union", "Russian Socialist Federative Soviet Republic"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Equatorial Guinea", "ObjectEntities": ["Cameroon", "Gabon", "S\u00e3o Tom\u00e9 and Pr\u00edncipe"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Eritrea", "ObjectEntities": ["Yemen", "Saudi Arabia", "Ethiopia", "Djibouti", "Sudan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Estonia", "ObjectEntities": ["Russia", "Finland", "Sweden", "Latvia"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Eswatini", "ObjectEntities": ["South Africa", "Mozambique"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Ethiopia", "ObjectEntities": ["Djibouti", "Eritrea", "Kenya", "Sudan", "South Sudan", "Somalia", "Somaliland"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Federated States of Micronesia", "ObjectEntities": ["Marshall Islands", "Palau", "Papua New Guinea", "United States of America"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Fiji", "ObjectEntities": ["Solomon Islands", "Tonga", "Tuvalu", "Vanuatu", "France"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Finland", "ObjectEntities": ["Sweden", "Norway", "Russia", "Estonia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "France", "ObjectEntities": ["Dominica", "Madagascar", "Mauritius", "New Zealand", "Saint Lucia", "Vanuatu", "United Kingdom", "Venezuela", "Kiribati", "Samoa", "Luxembourg", "Suriname", "Solomon Islands", "Tuvalu", "Seychelles", "Tonga", "Canada", "Germany", "Italy", "Switzerland", "Australia", "Antigua and Barbuda", "Mozambique", "Saint Kitts and Nevis", "Sint Maarten", "Monaco", "Andorra", "Belgium", "Brazil", "Spain", "Comoros", "Fiji", "United Kingdom", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Ethiopia", "ObjectEntities": ["Eritrea", "Kenya", "South Sudan", "Somalia", "Djibouti", "Sudan", "Somaliland"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Federated States of Micronesia", "ObjectEntities": ["Papua New Guinea", "Palau", "United States of America", "Marshall Islands"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Fiji", "ObjectEntities": ["Tonga", "Solomon Islands", "Tuvalu", "Vanuatu", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Finland", "ObjectEntities": ["Norway", "Russia", "Estonia", "Sweden"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "France", "ObjectEntities": ["Italy", "Samoa", "Andorra", "Comoros", "Madagascar", "Saint Lucia", "Seychelles", "Australia", "Canada", "Venezuela", "Fiji", "Germany", "Tuvalu", "Sint Maarten", "Suriname", "Vanuatu", "Mauritius", "Solomon Islands", "Saint Kitts and Nevis", "Spain", "Luxembourg", "Tonga", "Antigua and Barbuda", "New Zealand", "Dominica", "Belgium", "Switzerland", "Brazil", "Kiribati", "Monaco", "Mozambique", "United Kingdom"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Free City of Danzig", "ObjectEntities": ["Second Polish Republic"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Gabon", "ObjectEntities": ["Equatorial Guinea", "Cameroon", "Republic of the Congo", "S\u00e3o Tom\u00e9 and Pr\u00edncipe", "Angola"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Georgia", "ObjectEntities": ["Armenia", "Azerbaijan", "Turkey", "Russia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Gabon", "ObjectEntities": ["Equatorial Guinea", "Angola", "Republic of the Congo", "Cameroon", "S\u00e3o Tom\u00e9 and Pr\u00edncipe"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Georgia", "ObjectEntities": ["Azerbaijan", "Russia", "Turkey", "Armenia"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "German Democratic Republic", "ObjectEntities": ["West Germany"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Germany", "ObjectEntities": ["Belgium", "Netherlands", "France", "Switzerland", "Austria", "Luxembourg", "Poland", "United Kingdom", "Sweden", "Denmark", "Czech Republic"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Germany", "ObjectEntities": ["Netherlands", "Poland", "Belgium", "Switzerland", "Denmark", "Czech Republic", "Austria", "France", "Sweden", "Luxembourg", "United Kingdom"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Ghana", "ObjectEntities": ["Ivory Coast", "Togo", "Burkina Faso"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Greece", "ObjectEntities": ["Bulgaria", "North Macedonia", "Turkey", "Albania", "Egypt", "Libya", "Italy"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Grenada", "ObjectEntities": ["Saint Vincent and the Grenadines", "Trinidad and Tobago", "Venezuela"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Guatemala", "ObjectEntities": ["Honduras", "El Salvador", "Mexico", "Belize"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Guinea", "ObjectEntities": ["Ivory Coast", "Sierra Leone", "Liberia", "Mali", "Senegal", "Guinea-Bissau"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Greece", "ObjectEntities": ["Egypt", "Libya", "Albania", "North Macedonia", "Bulgaria", "Italy", "Turkey"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Grenada", "ObjectEntities": ["Trinidad and Tobago", "Venezuela", "Saint Vincent and the Grenadines"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Guatemala", "ObjectEntities": ["Mexico", "Honduras", "Belize", "El Salvador"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Guinea", "ObjectEntities": ["Mali", "Sierra Leone", "Senegal", "Liberia", "Guinea-Bissau", "Ivory Coast"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Guinea-Bissau", "ObjectEntities": ["Senegal", "Guinea"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Guyana", "ObjectEntities": ["Brazil", "Suriname", "Venezuela", "Barbados", "Trinidad and Tobago"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Haiti", "ObjectEntities": ["Colombia", "Dominican Republic", "The Bahamas", "Cuba", "Jamaica", "United States of America"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Honduras", "ObjectEntities": ["Colombia", "Guatemala", "Nicaragua", "El Salvador", "Belize", "Cuba", "Jamaica", "Mexico"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Hungary", "ObjectEntities": ["Croatia", "Austria", "Ukraine", "Serbia", "Slovenia", "Slovakia", "Romania"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Guyana", "ObjectEntities": ["Barbados", "Venezuela", "Brazil", "Suriname", "Trinidad and Tobago"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Haiti", "ObjectEntities": ["Cuba", "Colombia", "Dominican Republic", "United States of America", "Jamaica", "The Bahamas"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Honduras", "ObjectEntities": ["El Salvador", "Cuba", "Belize", "Nicaragua", "Colombia", "Mexico", "Jamaica", "Guatemala"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Hungary", "ObjectEntities": ["Croatia", "Slovenia", "Ukraine", "Serbia", "Romania", "Slovakia", "Austria"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Iceland", "ObjectEntities": ["Denmark", "Norway"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "India", "ObjectEntities": ["Bhutan", "Myanmar", "People's Republic of China", "Nepal", "Indonesia", "Maldives", "Sri Lanka", "Thailand", "Bangladesh", "Pakistan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Indonesia", "ObjectEntities": ["East Timor", "Papua New Guinea", "Malaysia", "India", "Palau", "Philippines", "Vietnam", "Singapore", "Australia", "Thailand"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Iran", "ObjectEntities": ["Afghanistan", "Armenia", "Azerbaijan", "Turkey", "Pakistan", "Turkmenistan", "Bahrain", "Kuwait", "Oman", "Qatar", "Saudi Arabia", "United Arab Emirates", "Iraq"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Iraq", "ObjectEntities": ["Saudi Arabia", "Syria", "Kuwait", "Jordan", "Turkey", "Iran"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Israel", "ObjectEntities": ["Cyprus", "Jordan", "Lebanon", "Egypt", "Syria"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Italy", "ObjectEntities": ["Slovenia", "Switzerland", "San Marino", "France", "Austria", "Libya", "Malta", "Montenegro", "Spain", "Tunisia", "Croatia", "Albania", "Algeria", "Vatican City", "Greece"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Ivory Coast", "ObjectEntities": ["Guinea", "Ghana", "Liberia", "Mali", "Burkina Faso"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Jamaica", "ObjectEntities": ["Cuba", "Haiti", "Honduras", "United Kingdom", "Colombia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Japan", "ObjectEntities": ["People's Republic of China", "Philippines", "South Korea", "Taiwan", "United States of America", "Russia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Jordan", "ObjectEntities": ["Israel", "Syria", "Saudi Arabia", "Iraq", "Egypt"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Kazakhstan", "ObjectEntities": ["Uzbekistan", "Turkmenistan", "People's Republic of China", "Kyrgyzstan", "Russia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Kenya", "ObjectEntities": ["Uganda", "Somalia", "Tanzania", "South Sudan", "Ethiopia", "Sudan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "India", "ObjectEntities": ["Thailand", "Myanmar", "Nepal", "Sri Lanka", "Pakistan", "People's Republic of China", "Maldives", "Bhutan", "Bangladesh", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Indonesia", "ObjectEntities": ["Thailand", "Philippines", "Malaysia", "Papua New Guinea", "Singapore", "Australia", "Palau", "Vietnam", "India", "East Timor"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Iran", "ObjectEntities": ["Iraq", "Bahrain", "Saudi Arabia", "United Arab Emirates", "Pakistan", "Afghanistan", "Turkmenistan", "Kuwait", "Armenia", "Oman", "Azerbaijan", "Turkey", "Qatar"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Iraq", "ObjectEntities": ["Syria", "Saudi Arabia", "Kuwait", "Jordan", "Iran", "Turkey"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Israel", "ObjectEntities": ["Egypt", "Syria", "Cyprus", "Jordan", "Lebanon"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Italy", "ObjectEntities": ["Croatia", "San Marino", "Slovenia", "Libya", "Vatican City", "Montenegro", "Albania", "Malta", "Switzerland", "Spain", "Algeria", "Greece", "Tunisia", "Austria", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Ivory Coast", "ObjectEntities": ["Ghana", "Mali", "Liberia", "Guinea", "Burkina Faso"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Jamaica", "ObjectEntities": ["Honduras", "Cuba", "Haiti", "Colombia", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Japan", "ObjectEntities": ["Russia", "Taiwan", "South Korea", "People's Republic of China", "United States of America", "Philippines"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Jordan", "ObjectEntities": ["Egypt", "Iraq", "Syria", "Saudi Arabia", "Israel"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Kazakhstan", "ObjectEntities": ["Russia", "Uzbekistan", "Kyrgyzstan", "Turkmenistan", "People's Republic of China"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Kenya", "ObjectEntities": ["Tanzania", "Uganda", "South Sudan", "Somalia", "Ethiopia", "Sudan"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Kingdom of Denmark", "ObjectEntities": ["Denmark"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Kingdom of Prussia", "ObjectEntities": ["Belgium", "Russian Empire"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Kingdom of Prussia", "ObjectEntities": ["Russian Empire", "Belgium"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Kingdom of Romania", "ObjectEntities": ["Second Polish Republic"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Kingdom of the Netherlands", "ObjectEntities": ["Netherlands"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Kiribati", "ObjectEntities": ["France", "Marshall Islands", "New Zealand", "Tuvalu", "United States of America", "Nauru"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Kosovo", "ObjectEntities": ["North Macedonia", "Serbia", "Montenegro", "Albania"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Kuwait", "ObjectEntities": ["Saudi Arabia", "Iraq", "Iran"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Kyrgyzstan", "ObjectEntities": ["Kazakhstan", "Uzbekistan", "Tajikistan", "People's Republic of China"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Laos", "ObjectEntities": ["Myanmar", "People's Republic of China", "Vietnam", "Thailand", "Cambodia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Latvia", "ObjectEntities": ["Estonia", "Belarus", "Sweden", "Russia", "Lithuania", "Poland"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Lebanon", "ObjectEntities": ["Syria", "Israel", "Cyprus"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Kiribati", "ObjectEntities": ["Nauru", "New Zealand", "Tuvalu", "United States of America", "France", "Marshall Islands"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Kosovo", "ObjectEntities": ["North Macedonia", "Albania", "Serbia", "Montenegro"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Kuwait", "ObjectEntities": ["Iraq", "Saudi Arabia", "Iran"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Kyrgyzstan", "ObjectEntities": ["Uzbekistan", "People's Republic of China", "Kazakhstan", "Tajikistan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Laos", "ObjectEntities": ["Myanmar", "Cambodia", "People's Republic of China", "Vietnam", "Thailand"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Latvia", "ObjectEntities": ["Russia", "Belarus", "Poland", "Estonia", "Lithuania", "Sweden"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Lebanon", "ObjectEntities": ["Israel", "Cyprus", "Syria"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Lesotho", "ObjectEntities": ["South Africa"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Liberia", "ObjectEntities": ["Ivory Coast", "Guinea", "Sierra Leone"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Libya", "ObjectEntities": ["Algeria", "Egypt", "Tunisia", "Chad", "Sudan", "Greece", "Italy", "Malta", "Niger"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Liberia", "ObjectEntities": ["Sierra Leone", "Ivory Coast", "Guinea"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Libya", "ObjectEntities": ["Egypt", "Niger", "Malta", "Chad", "Algeria", "Greece", "Tunisia", "Sudan", "Italy"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Liechtenstein", "ObjectEntities": ["Austria", "Switzerland"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Lithuania", "ObjectEntities": ["Sweden", "Russia", "Poland", "Belarus", "Latvia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Luxembourg", "ObjectEntities": ["France", "Germany", "Belgium"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Madagascar", "ObjectEntities": ["France", "Comoros", "Mozambique", "Seychelles"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Lithuania", "ObjectEntities": ["Russia", "Belarus", "Poland", "Latvia", "Sweden"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Luxembourg", "ObjectEntities": ["Germany", "Belgium", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Madagascar", "ObjectEntities": ["Comoros", "France", "Mozambique", "Seychelles"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Malawi", "ObjectEntities": ["Zambia", "Tanzania", "Mozambique"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Malaysia", "ObjectEntities": ["Indonesia", "Singapore", "Thailand", "Brunei", "Vietnam", "Philippines"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Maldives", "ObjectEntities": ["India", "Sri Lanka", "United Kingdom"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Mali", "ObjectEntities": ["Ivory Coast", "Guinea", "Niger", "Mauritania", "Burkina Faso", "Algeria", "Senegal"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Malta", "ObjectEntities": ["Italy", "Libya", "Tunisia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Marshall Islands", "ObjectEntities": ["Kiribati", "Federated States of Micronesia", "United States of America", "Nauru"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Mauritania", "ObjectEntities": ["Algeria", "Mali", "Senegal", "Morocco", "Cape Verde"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Malaysia", "ObjectEntities": ["Philippines", "Singapore", "Brunei", "Vietnam", "Thailand", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Maldives", "ObjectEntities": ["India", "United Kingdom", "Sri Lanka"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Mali", "ObjectEntities": ["Niger", "Mauritania", "Senegal", "Ivory Coast", "Algeria", "Guinea", "Burkina Faso"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Malta", "ObjectEntities": ["Libya", "Italy", "Tunisia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Marshall Islands", "ObjectEntities": ["Federated States of Micronesia", "Kiribati", "United States of America", "Nauru"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Mauritania", "ObjectEntities": ["Mali", "Senegal", "Algeria", "Cape Verde", "Morocco"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Mauritius", "ObjectEntities": ["France", "Seychelles"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Mexico", "ObjectEntities": ["Guatemala", "United States of America", "Belize", "Cuba", "Honduras", "United States of America", "United States of America", "United States of America"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Mexico", "ObjectEntities": ["Honduras", "Cuba", "Belize", "United States of America", "Guatemala"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Moldova", "ObjectEntities": ["Ukraine", "Romania"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Monaco", "ObjectEntities": ["France"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Mongolia", "ObjectEntities": ["People's Republic of China", "Russia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Montenegro", "ObjectEntities": ["Bosnia and Herzegovina", "Croatia", "Albania", "Serbia", "Italy", "Kosovo"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Morocco", "ObjectEntities": ["Algeria", "Spain", "Western Sahara", "Mauritania", "Portugal", "Spain"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Mozambique", "ObjectEntities": ["South Africa", "Malawi", "Tanzania", "Zambia", "Eswatini", "Zimbabwe", "Comoros", "Madagascar", "France"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Myanmar", "ObjectEntities": ["Thailand", "Laos", "People's Republic of China", "India", "Bangladesh"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Namibia", "ObjectEntities": ["South Africa", "Angola", "Zambia", "Botswana"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Mongolia", "ObjectEntities": ["Russia", "People's Republic of China"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Montenegro", "ObjectEntities": ["Croatia", "Bosnia and Herzegovina", "Serbia", "Albania", "Kosovo", "Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Morocco", "ObjectEntities": ["Portugal", "Mauritania", "Spain", "Algeria", "Western Sahara"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Mozambique", "ObjectEntities": ["Comoros", "Madagascar", "Zambia", "Malawi", "Tanzania", "Eswatini", "South Africa", "France", "Zimbabwe"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Myanmar", "ObjectEntities": ["India", "People's Republic of China", "Thailand", "Bangladesh", "Laos"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Namibia", "ObjectEntities": ["South Africa", "Angola", "Botswana", "Zambia"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Nauru", "ObjectEntities": ["Kiribati", "Marshall Islands"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Nepal", "ObjectEntities": ["People's Republic of China", "India"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Netherlands", "ObjectEntities": ["Belgium", "Germany", "Dominican Republic", "United Kingdom", "Saint Kitts and Nevis", "Venezuela", "Kingdom of the Netherlands"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "New Zealand", "ObjectEntities": ["France", "Australia", "Kiribati", "Samoa", "Tonga"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Nicaragua", "ObjectEntities": ["Colombia", "Costa Rica", "Honduras", "El Salvador"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Niger", "ObjectEntities": ["Algeria", "Mali", "Nigeria", "Chad", "Burkina Faso", "Benin", "Libya"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Nigeria", "ObjectEntities": ["Cameroon", "Niger", "Chad", "Benin", "S\u00e3o Tom\u00e9 and Pr\u00edncipe"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "North Korea", "ObjectEntities": ["South Korea", "Russia", "People's Republic of China"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "North Macedonia", "ObjectEntities": ["Bulgaria", "Greece", "Albania", "Serbia", "Kosovo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Nepal", "ObjectEntities": ["India", "People's Republic of China"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Netherlands", "ObjectEntities": ["Kingdom of the Netherlands", "Belgium", "Venezuela", "Saint Kitts and Nevis", "Germany", "Dominican Republic", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "New Zealand", "ObjectEntities": ["Tonga", "Australia", "Kiribati", "France", "Samoa"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Nicaragua", "ObjectEntities": ["Colombia", "Honduras", "Costa Rica", "El Salvador"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Niger", "ObjectEntities": ["Libya", "Mali", "Nigeria", "Chad", "Benin", "Algeria", "Burkina Faso"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Nigeria", "ObjectEntities": ["Niger", "Chad", "Benin", "Cameroon", "S\u00e3o Tom\u00e9 and Pr\u00edncipe"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "North Korea", "ObjectEntities": ["Russia", "People's Republic of China", "South Korea"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "North Macedonia", "ObjectEntities": ["Serbia", "Albania", "Bulgaria", "Kosovo", "Greece"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Northern Cyprus", "ObjectEntities": ["Cyprus", "Turkey", "United Kingdom"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Norway", "ObjectEntities": ["Sweden", "Finland", "Denmark", "Iceland", "United Kingdom", "Russia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Oman", "ObjectEntities": ["Yemen", "Saudi Arabia", "Iran", "Pakistan", "United Arab Emirates"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Pakistan", "ObjectEntities": ["Afghanistan", "People's Republic of China", "Iran", "Oman", "India"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Palau", "ObjectEntities": ["Indonesia", "Federated States of Micronesia", "Philippines"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Norway", "ObjectEntities": ["Russia", "Iceland", "Denmark", "Finland", "Sweden", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Oman", "ObjectEntities": ["Yemen", "Saudi Arabia", "United Arab Emirates", "Pakistan", "Iran"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Pakistan", "ObjectEntities": ["Afghanistan", "India", "People's Republic of China", "Iran", "Oman"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Palau", "ObjectEntities": ["Federated States of Micronesia", "Philippines", "Indonesia"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Palestinian National Authority", "ObjectEntities": ["State of Palestine"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Panama", "ObjectEntities": ["Colombia", "Costa Rica"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Papua New Guinea", "ObjectEntities": ["Indonesia", "Australia", "Federated States of Micronesia", "Solomon Islands"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Paraguay", "ObjectEntities": ["Bolivia", "Argentina", "Brazil"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "People's Republic of China", "ObjectEntities": ["Myanmar", "Afghanistan", "Kazakhstan", "Kyrgyzstan", "Laos", "Nepal", "Taiwan", "Mongolia", "Pakistan", "North Korea", "India", "Tajikistan", "Vietnam", "Bhutan", "Japan", "Philippines", "South Korea", "Russia", "United Kingdom"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Peru", "ObjectEntities": ["Bolivia", "Colombia", "Brazil", "Ecuador", "Chile"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Philippines", "ObjectEntities": ["People's Republic of China", "Indonesia", "Japan", "Palau", "Malaysia", "Taiwan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Poland", "ObjectEntities": ["Ukraine", "Russia", "Slovakia", "Czech Republic", "Denmark", "Germany", "Sweden", "Lithuania", "Belarus", "Czechoslovakia", "Soviet Union", "Latvia", "Czechoslovakia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Polish\u2013Lithuanian Commonwealth", "ObjectEntities": ["Crimean Khanate", "Sweden", "Duchy of Courland and Semigallia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Papua New Guinea", "ObjectEntities": ["Federated States of Micronesia", "Australia", "Solomon Islands", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Paraguay", "ObjectEntities": ["Argentina", "Bolivia", "Brazil"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "People's Republic of China", "ObjectEntities": ["Taiwan", "Myanmar", "Nepal", "Pakistan", "Vietnam", "Bhutan", "Mongolia", "Russia", "Kyrgyzstan", "Philippines", "Afghanistan", "Kazakhstan", "Japan", "Laos", "South Korea", "North Korea", "India", "Tajikistan", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Peru", "ObjectEntities": ["Chile", "Colombia", "Brazil", "Bolivia", "Ecuador"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Philippines", "ObjectEntities": ["Taiwan", "Malaysia", "Palau", "People's Republic of China", "Japan", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Poland", "ObjectEntities": ["Russia", "Belarus", "Ukraine", "Lithuania", "Soviet Union", "Slovakia", "Czechoslovakia", "Denmark", "Czech Republic", "Germany", "Latvia", "Sweden"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Polish\u2013Lithuanian Commonwealth", "ObjectEntities": ["Duchy of Courland and Semigallia", "Sweden", "Crimean Khanate"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Portugal", "ObjectEntities": ["Spain", "Morocco"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Qatar", "ObjectEntities": ["Saudi Arabia", "Bahrain", "Iran", "United Arab Emirates"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Qatar", "ObjectEntities": ["Bahrain", "Saudi Arabia", "United Arab Emirates", "Iran"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Republic of Abkhazia", "ObjectEntities": ["Russia"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Republic of Artsakh", "ObjectEntities": ["Azerbaijan"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Republic of Ireland", "ObjectEntities": ["United Kingdom"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Republic of the Congo", "ObjectEntities": ["Angola", "Cameroon", "Central African Republic", "Gabon", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Romania", "ObjectEntities": ["Bulgaria", "Serbia", "Hungary", "Ukraine", "Moldova", "Soviet Union"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Russia", "ObjectEntities": ["Azerbaijan", "United States of America", "Finland", "Estonia", "North Korea", "Mongolia", "Poland", "Georgia", "Sweden", "Turkey", "Lithuania", "Belarus", "People's Republic of China", "Kazakhstan", "Latvia", "Ukraine", "Norway", "Republic of Abkhazia", "South Ossetia", "Japan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Russian Empire", "ObjectEntities": ["Soviet Union", "Empire of Japan", "Russian Socialist Federative Soviet Republic", "Austria-Hungary", "Kingdom of Prussia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Russian Socialist Federative Soviet Republic", "ObjectEntities": ["Soviet Union", "Russian Empire", "Empire of Japan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Rwanda", "ObjectEntities": ["Tanzania", "Uganda", "Democratic Republic of the Congo", "Burundi"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Saint Kitts and Nevis", "ObjectEntities": ["Antigua and Barbuda", "Netherlands", "United Kingdom", "Venezuela", "France"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Saint Lucia", "ObjectEntities": ["France", "Barbados", "Saint Vincent and the Grenadines", "Venezuela"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Saint Vincent and the Grenadines", "ObjectEntities": ["Barbados", "Grenada", "Saint Lucia", "Trinidad and Tobago", "Venezuela"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Samoa", "ObjectEntities": ["France", "New Zealand", "Tonga", "United States of America"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Republic of the Congo", "ObjectEntities": ["Central African Republic", "Gabon", "Angola", "Cameroon", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Romania", "ObjectEntities": ["Ukraine", "Serbia", "Moldova", "Soviet Union", "Bulgaria", "Hungary"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Russia", "ObjectEntities": ["South Ossetia", "Estonia", "Norway", "Finland", "Georgia", "Mongolia", "Belarus", "Poland", "Lithuania", "Republic of Abkhazia", "Kazakhstan", "Japan", "Turkey", "Sweden", "Ukraine", "North Korea", "People's Republic of China", "United States of America", "Latvia", "Azerbaijan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Russian Empire", "ObjectEntities": ["Empire of Japan", "Soviet Union", "Austria-Hungary", "Kingdom of Prussia", "Russian Socialist Federative Soviet Republic"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Russian Socialist Federative Soviet Republic", "ObjectEntities": ["Russian Empire", "Soviet Union", "Empire of Japan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Rwanda", "ObjectEntities": ["Burundi", "Tanzania", "Uganda", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Saint Kitts and Nevis", "ObjectEntities": ["Netherlands", "Antigua and Barbuda", "Venezuela", "France", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Saint Lucia", "ObjectEntities": ["Barbados", "France", "Venezuela", "Saint Vincent and the Grenadines"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Saint Vincent and the Grenadines", "ObjectEntities": ["Barbados", "Saint Lucia", "Grenada", "Venezuela", "Trinidad and Tobago"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Samoa", "ObjectEntities": ["New Zealand", "Tonga", "France", "United States of America"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "San Marino", "ObjectEntities": ["Italy"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Saudi Arabia", "ObjectEntities": ["Bahrain", "Oman", "Iraq", "Jordan", "Kuwait", "Yemen", "United Arab Emirates", "Qatar", "Egypt", "Eritrea", "Iran", "Sudan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Second Polish Republic", "ObjectEntities": ["Free City of Danzig", "Kingdom of Romania"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Senegal", "ObjectEntities": ["The Gambia", "Guinea-Bissau", "Guinea", "Mauritania", "Cape Verde", "Mali"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Serbia", "ObjectEntities": ["Bosnia and Herzegovina", "Bulgaria", "Albania", "Montenegro", "Croatia", "Hungary", "North Macedonia", "Romania", "Kosovo"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Seychelles", "ObjectEntities": ["France", "Comoros", "Madagascar", "Mauritius", "Tanzania"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Sierra Leone", "ObjectEntities": ["Guinea", "Liberia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Saudi Arabia", "ObjectEntities": ["Yemen", "Iraq", "Egypt", "Eritrea", "Bahrain", "United Arab Emirates", "Jordan", "Iran", "Oman", "Sudan", "Kuwait", "Qatar"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Second Polish Republic", "ObjectEntities": ["Kingdom of Romania", "Free City of Danzig"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Senegal", "ObjectEntities": ["Mauritania", "Mali", "Guinea-Bissau", "The Gambia", "Cape Verde", "Guinea"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Serbia", "ObjectEntities": ["Croatia", "Bosnia and Herzegovina", "Romania", "Montenegro", "Albania", "North Macedonia", "Bulgaria", "Kosovo", "Hungary"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Seychelles", "ObjectEntities": ["Comoros", "Madagascar", "Tanzania", "Mauritius", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Sierra Leone", "ObjectEntities": ["Liberia", "Guinea"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Singapore", "ObjectEntities": ["Malaysia", "Indonesia"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Sint Maarten", "ObjectEntities": ["France"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Slovakia", "ObjectEntities": ["Austria", "Poland", "Czech Republic", "Hungary", "Ukraine"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Slovenia", "ObjectEntities": ["Italy", "Croatia", "Austria", "Hungary"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Solomon Islands", "ObjectEntities": ["France", "Australia", "Fiji", "Papua New Guinea", "Vanuatu"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Somalia", "ObjectEntities": ["Kenya", "Djibouti", "Ethiopia", "Yemen"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Slovakia", "ObjectEntities": ["Poland", "Ukraine", "Czech Republic", "Austria", "Hungary"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Slovenia", "ObjectEntities": ["Austria", "Croatia", "Italy", "Hungary"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Solomon Islands", "ObjectEntities": ["Papua New Guinea", "Australia", "Fiji", "Vanuatu", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Somalia", "ObjectEntities": ["Djibouti", "Yemen", "Ethiopia", "Kenya"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Somaliland", "ObjectEntities": ["Ethiopia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "South Africa", "ObjectEntities": ["Namibia", "Lesotho", "Botswana", "Mozambique", "Zimbabwe", "Eswatini"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "South Korea", "ObjectEntities": ["North Korea", "People's Republic of China", "Japan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "South Africa", "ObjectEntities": ["Botswana", "Eswatini", "Lesotho", "Namibia", "Mozambique", "Zimbabwe"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "South Korea", "ObjectEntities": ["People's Republic of China", "North Korea", "Japan"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "South Ossetia", "ObjectEntities": ["Russia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "South Sudan", "ObjectEntities": ["Kenya", "Sudan", "Uganda", "Ethiopia", "Central African Republic", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "South Sudan", "ObjectEntities": ["Central African Republic", "Uganda", "Kenya", "Ethiopia", "Sudan", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "South Yemen", "ObjectEntities": ["Yemen Arab Republic"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Soviet Union", "ObjectEntities": ["Russian Empire", "Empire of Japan", "Russian Socialist Federative Soviet Republic", "Poland", "Romania", "Afghanistan", "Czechoslovakia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Spain", "ObjectEntities": ["Portugal", "Morocco", "Italy", "Algeria", "Morocco", "Andorra", "United Kingdom", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Soviet Union", "ObjectEntities": ["Poland", "Romania", "Empire of Japan", "Czechoslovakia", "Afghanistan", "Russian Empire", "Russian Socialist Federative Soviet Republic"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Spain", "ObjectEntities": ["Portugal", "United Kingdom", "Algeria", "Morocco", "France", "Italy", "Andorra"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Sri Lanka", "ObjectEntities": ["India", "Maldives"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "State of Palestine", "ObjectEntities": ["Palestinian National Authority"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Sudan", "ObjectEntities": ["South Sudan", "Eritrea", "Egypt", "Ethiopia", "Libya", "Central African Republic", "Saudi Arabia", "Kenya", "Uganda", "Democratic Republic of the Congo", "Chad"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Suriname", "ObjectEntities": ["France", "Guyana", "Brazil"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Sweden", "ObjectEntities": ["Finland", "Norway", "Polish\u2013Lithuanian Commonwealth", "Germany", "Estonia", "Latvia", "Lithuania", "Poland", "Russia", "Denmark"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Switzerland", "ObjectEntities": ["Italy", "Austria", "France", "Germany", "Liechtenstein"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Syria", "ObjectEntities": ["Cyprus", "Lebanon", "Jordan", "Iraq", "Turkey", "Israel"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Sudan", "ObjectEntities": ["Egypt", "Central African Republic", "Libya", "Eritrea", "Saudi Arabia", "Kenya", "Uganda", "Chad", "South Sudan", "Ethiopia", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Suriname", "ObjectEntities": ["Guyana", "France", "Brazil"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Sweden", "ObjectEntities": ["Russia", "Poland", "Estonia", "Polish\u2013Lithuanian Commonwealth", "Lithuania", "Norway", "Germany", "Finland", "Denmark", "Latvia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Switzerland", "ObjectEntities": ["Germany", "Liechtenstein", "Austria", "France", "Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Syria", "ObjectEntities": ["Iraq", "Jordan", "Cyprus", "Lebanon", "Israel", "Turkey"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "S\u00e3o Tom\u00e9 and Pr\u00edncipe", "ObjectEntities": ["Equatorial Guinea", "Gabon", "Nigeria"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Taiwan", "ObjectEntities": ["People's Republic of China", "Japan", "Philippines"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Tajikistan", "ObjectEntities": ["Afghanistan", "Kyrgyzstan", "Uzbekistan", "People's Republic of China"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Tanzania", "ObjectEntities": ["Kenya", "Malawi", "Mozambique", "Rwanda", "Uganda", "Democratic Republic of the Congo", "Zambia", "Burundi", "Comoros", "Seychelles"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Thailand", "ObjectEntities": ["Myanmar", "Laos", "Malaysia", "India", "Cambodia", "Vietnam", "Indonesia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "The Bahamas", "ObjectEntities": ["Cuba", "Haiti", "United Kingdom", "United States of America"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Taiwan", "ObjectEntities": ["People's Republic of China", "Philippines", "Japan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Tajikistan", "ObjectEntities": ["Uzbekistan", "Kyrgyzstan", "People's Republic of China", "Afghanistan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Tanzania", "ObjectEntities": ["Comoros", "Rwanda", "Seychelles", "Malawi", "Burundi", "Uganda", "Kenya", "Zambia", "Mozambique", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Thailand", "ObjectEntities": ["Myanmar", "Malaysia", "Cambodia", "Vietnam", "India", "Laos", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "The Bahamas", "ObjectEntities": ["Cuba", "Haiti", "United States of America", "United Kingdom"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "The Gambia", "ObjectEntities": ["Senegal", "Cape Verde"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Togo", "ObjectEntities": ["Ghana", "Benin", "Burkina Faso"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Tonga", "ObjectEntities": ["France", "Fiji", "New Zealand", "Samoa", "United States of America"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Trinidad and Tobago", "ObjectEntities": ["Barbados", "Grenada", "Guyana", "Saint Vincent and the Grenadines", "Venezuela"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Tunisia", "ObjectEntities": ["Algeria", "Libya", "Italy", "Malta"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Turkey", "ObjectEntities": ["Bulgaria", "Greece", "Georgia", "Armenia", "Azerbaijan", "Iran", "Iraq", "Syria", "Cyprus", "Russia", "Ukraine", "Northern Cyprus"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Turkmenistan", "ObjectEntities": ["Afghanistan", "Kazakhstan", "Iran", "Uzbekistan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Tuvalu", "ObjectEntities": ["France", "Fiji", "Kiribati"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Uganda", "ObjectEntities": ["Kenya", "Democratic Republic of the Congo", "Rwanda", "Tanzania", "South Sudan", "Sudan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Ukraine", "ObjectEntities": ["Poland", "Hungary", "Turkey", "Moldova", "Romania", "Belarus", "Slovakia", "Russia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "United Arab Emirates", "ObjectEntities": ["Saudi Arabia", "Iran", "Qatar", "Oman"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "United Kingdom", "ObjectEntities": ["France", "Cyprus", "Republic of Ireland", "The Bahamas", "Cuba", "Dominican Republic", "Jamaica", "Germany", "Denmark", "Belgium", "Netherlands", "Antigua and Barbuda", "Venezuela", "Argentina", "Maldives", "Norway", "Saint Kitts and Nevis", "United States of America", "Spain", "France", "France", "Northern Cyprus", "Cuba", "People's Republic of China"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "United States of America", "ObjectEntities": ["Russia", "Canada", "Mexico", "The Bahamas", "Cuba", "Dominican Republic", "Haiti", "Japan", "Kiribati", "Marshall Islands", "Federated States of Micronesia", "Samoa", "Tonga", "United Kingdom", "Venezuela", "Mexico", "Mexico", "Mexico", "Canada"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Togo", "ObjectEntities": ["Benin", "Ghana", "Burkina Faso"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Tonga", "ObjectEntities": ["New Zealand", "Fiji", "United States of America", "France", "Samoa"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Trinidad and Tobago", "ObjectEntities": ["Barbados", "Guyana", "Grenada", "Venezuela", "Saint Vincent and the Grenadines"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Tunisia", "ObjectEntities": ["Malta", "Libya", "Algeria", "Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Turkey", "ObjectEntities": ["Iraq", "Russia", "Ukraine", "Syria", "Bulgaria", "Cyprus", "Armenia", "Greece", "Iran", "Northern Cyprus", "Azerbaijan", "Georgia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Turkmenistan", "ObjectEntities": ["Uzbekistan", "Kazakhstan", "Iran", "Afghanistan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Tuvalu", "ObjectEntities": ["Kiribati", "France", "Fiji"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Uganda", "ObjectEntities": ["Rwanda", "Tanzania", "Kenya", "South Sudan", "Sudan", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Ukraine", "ObjectEntities": ["Russia", "Belarus", "Poland", "Romania", "Moldova", "Slovakia", "Hungary", "Turkey"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "United Arab Emirates", "ObjectEntities": ["Oman", "Saudi Arabia", "Qatar", "Iran"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "United Kingdom", "ObjectEntities": ["Cuba", "Norway", "Netherlands", "Venezuela", "Germany", "Denmark", "Cyprus", "The Bahamas", "Republic of Ireland", "Saint Kitts and Nevis", "Spain", "Northern Cyprus", "France", "Antigua and Barbuda", "Belgium", "Argentina", "People's Republic of China", "Dominican Republic", "United States of America", "Maldives", "Jamaica"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "United States of America", "ObjectEntities": ["Russia", "Tonga", "Cuba", "Canada", "Haiti", "Venezuela", "United Kingdom", "Mexico", "Dominican Republic", "Japan", "Federated States of Micronesia", "Kiribati", "Samoa", "The Bahamas", "Marshall Islands"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Uruguay", "ObjectEntities": ["Argentina", "Brazil"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Uzbekistan", "ObjectEntities": ["Kazakhstan", "Kyrgyzstan", "Afghanistan", "Tajikistan", "Turkmenistan"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Vanuatu", "ObjectEntities": ["France", "Fiji", "Solomon Islands"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Uzbekistan", "ObjectEntities": ["Kyrgyzstan", "Turkmenistan", "Afghanistan", "Kazakhstan", "Tajikistan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Vanuatu", "ObjectEntities": ["France", "Solomon Islands", "Fiji"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Vatican City", "ObjectEntities": ["Italy"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Venezuela", "ObjectEntities": ["France", "Guyana", "Brazil", "Dominica", "Dominican Republic", "Grenada", "United Kingdom", "Netherlands", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Trinidad and Tobago", "United States of America", "Colombia"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Vietnam", "ObjectEntities": ["Laos", "People's Republic of China", "Cambodia", "Indonesia", "Malaysia", "Thailand"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Venezuela", "ObjectEntities": ["Netherlands", "Saint Lucia", "Guyana", "Dominica", "Grenada", "Saint Kitts and Nevis", "Colombia", "Dominican Republic", "United States of America", "Brazil", "Trinidad and Tobago", "France", "Saint Vincent and the Grenadines", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Vietnam", "ObjectEntities": ["Malaysia", "Cambodia", "People's Republic of China", "Thailand", "Laos", "Indonesia"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "West Germany", "ObjectEntities": ["German Democratic Republic"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Western Sahara", "ObjectEntities": ["Algeria", "Morocco"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Yemen", "ObjectEntities": ["Oman", "Saudi Arabia", "Eritrea", "Somalia", "Djibouti"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Western Sahara", "ObjectEntities": ["Morocco", "Algeria"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Yemen", "ObjectEntities": ["Eritrea", "Saudi Arabia", "Djibouti", "Somalia", "Oman"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Yemen Arab Republic", "ObjectEntities": ["South Yemen"], "Relation": "CountryBordersCountry"}
 {"SubjectEntity": "Yugoslavia", "ObjectEntities": ["Albania"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Zambia", "ObjectEntities": ["Malawi", "Mozambique", "Angola", "Namibia", "Democratic Republic of the Congo", "Tanzania", "Zimbabwe", "Botswana"], "Relation": "CountryBordersCountry"}
-{"SubjectEntity": "Zimbabwe", "ObjectEntities": ["South Africa", "Mozambique", "Zambia", "Botswana"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Zambia", "ObjectEntities": ["Angola", "Malawi", "Tanzania", "Botswana", "Zimbabwe", "Namibia", "Mozambique", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Zimbabwe", "ObjectEntities": ["South Africa", "Botswana", "Zambia", "Mozambique"], "Relation": "CountryBordersCountry"}

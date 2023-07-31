@@ -115,17 +115,21 @@ class PreFM_wiki_Dataset(Dataset):
         for row in tqdm(train_data):
             entities = row['entities']
             sentence= row['sentence']
-            tokens = row['tokens']
+            tokens = [tokenizer.cls_token]+ row['tokens']+[tokenizer.sep_token]
             input_ids = tokenizer.convert_tokens_to_ids(tokens)
             entity_ids = tokenizer.convert_tokens_to_ids(entities)
-            entity_set_ids = set(entity_ids)
+            entity_ids = set(filter(lambda x: x!= tokenizer.unk_token_id, entity_ids))
+            entity_set_ids = entity_ids
             # generate masking-combination, for example, a sentence contains three entities, e.g. (a,b,c). We can select one,multiple or all of them, that is (a),(b),(c),(a,b),(a,c),etc. Different permutation scheme may provides different performance
             entity_index_ids = [i for i, v in enumerate(input_ids) if v in entity_set_ids]
+            if len(entity_index_ids) == 0:
+                continue
             random.shuffle(entity_index_ids)
             if 'fold' in args.mask_strategy:
-                select_index_list = self._mask_random(entity_index_ids)
+
+                select_index_list = self._mask_fold(entity_index_ids)
             elif 'single' in args.mask_strategy:
-                select_index_list = self._mask_random_single(entity_index_ids)
+                select_index_list = self._mask_single(entity_index_ids)
             else:
                 select_index_list =[random.sample(range(1,len(input_ids)-1), 0.15*len(input_ids))]
 
@@ -137,6 +141,8 @@ class PreFM_wiki_Dataset(Dataset):
                 #print("row",row)
          
             for mask_index in select_index_list:
+                if len(mask_index) == 0:
+                    raise Exception("mask index is zero")
                 # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
                 # label_ids = [-100]*len(input_ids)
                 label_ids = [v if i in mask_index else -100  for i, v in enumerate(input_ids)]
@@ -157,14 +163,15 @@ class PreFM_wiki_Dataset(Dataset):
         random.shuffle(self.data)
         print("max_length",max_length)
 
-    def _mask_random(self, entity_index_ids):
+    def _mask_fold(self, entity_index_ids):
         split_size = min(5, len(entity_index_ids))
         chunk_size = math.ceil(len(entity_index_ids) / split_size )
         select_index_list = [entity_index_ids[i*chunk_size:(i+1)*chunk_size] for i in range(split_size)]
         return select_index_list
     
-    def _mask_random_single(self, entity_index_ids):
-        
+
+    def _mask_single(self, entity_index_ids):
+
         mask_size = max(1, len(entity_index_ids)//5)
         select_index_list =[random.sample(entity_index_ids, mask_size)]
         return select_index_list
