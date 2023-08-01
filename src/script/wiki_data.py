@@ -194,9 +194,11 @@ def filter_dataset():
             if len(tokens) > 500:
                 result.append(False)
                 continue
-            entities = set([e for e in entities])
-            min_count = min([entity_dict[e]  if e in entity_dict else 100 for e in entities])
-            entity_count = len([e  for e in entities if e in entity_dict])
+            entities = set([e for e in entities if e in entity_dict])
+            if len(entities) <2:
+                continue
+            min_count = min([entity_dict[e] for e in entities])
+
             if  min_count < 10:
                 for e in entities:
                     if e in entity_dict:
@@ -283,16 +285,16 @@ def export_dataset():
 
 def wiki_pipeline():
     print("start split text")
-    # split_sentence()
+    split_sentence()
     # flatten sentences into records
     print("start flatten dataset")
-    # data_flatten()
+    data_flatten()
     # sort the sentence desc according to entities
     print("start sorting  according entity size")
-    # sort_dataset()
+    sort_dataset()
 
     print("start tokenizing sentence ")
-    # tokenize_dataset()
+    tokenize_dataset()
     
     # calibrate  
     print("start filtering long sentence ")

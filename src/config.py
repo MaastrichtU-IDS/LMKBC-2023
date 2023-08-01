@@ -1,15 +1,16 @@
 import os
 
 ROOT_PATH = str(os.path.abspath(os.path.dirname(__file__)).split("/src")[0])
+os.chdir(ROOT_PATH)
 
-SRC_DIR = f"{ROOT_PATH}/src"
-DATA_DIR = f"{ROOT_PATH}/data"
-OUTPUT_DIR = f"{ROOT_PATH}/output"
-RES_DIR = f"{ROOT_PATH}/res"
-BIN_DIR = f"{ROOT_PATH}/bin"
-LOGGING_DIR = f"{ROOT_PATH}/logging"
+SRC_DIR = f"src"
+DATA_DIR = f"data"
+OUTPUT_DIR = f"output"
+RES_DIR = f"res"
+BIN_DIR = f"bin"
+LOGGING_DIR = f"logging"
 
-CACHE_DIR = f"{ROOT_PATH}/cache"  
+CACHE_DIR = f"cache"  
 
 TRANSFOER_CACHE_DIR = f'{CACHE_DIR}/transformers/'
 
