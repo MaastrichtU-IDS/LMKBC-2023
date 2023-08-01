@@ -1,8 +1,9 @@
 import os
 import config
+os.chdir(config.ROOT_PATH)
 
 RUN_OUTPUT_NAME = "filled-mask-valid.jsonl"
-OUTPUT_DIR = f'{config.OUTPUT_DIR}/filled-mask'
+OUTPUT_DIR = f'output/filled-mask'
 OUTPUT_FILE = f'{OUTPUT_DIR}/{RUN_OUTPUT_NAME}'
 
 import torch
@@ -11,7 +12,7 @@ import torch
 pretrain_model_name = config.bert_base_cased
 task = "fill-mask"
 print(torch.cuda.is_available())
-model_save_dir = f"{config.BIN_DIR}/{task}/{pretrain_model_name}"
+model_save_dir = f"bin/{task}/{pretrain_model_name}"
 model_best_dir = model_save_dir + "/best_ckpt"
 
 if not os.path.exists(OUTPUT_DIR):
@@ -31,7 +32,7 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {config.TRAIN_FN} --train_batch_size 256 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {config.VAL_FN} --mode "train test p redict" --train_epoch 30 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
+   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {config.TRAIN_FN} --train_batch_size 256 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {config.VAL_FN} --mode "tr ain test p redict" --train_epoch 30 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
     
     """
 

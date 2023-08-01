@@ -85,7 +85,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--load_dir",
         type=str,
-        default="null",
+        default=config.bert_base_cased,
         help="train test",
     )
     parser.add_argument(
