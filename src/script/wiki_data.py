@@ -53,7 +53,7 @@ for key in entity_set:
     entity_dict[key] = 0
 
 
-label= "no_person_serises"
+label= "Country-Language-State"
 origin_dir  = f'{config.RES_DIR}/wikidata/origin'
 
 if not os.path.exists( f'{config.RES_DIR}/wikidata/{label}'):
@@ -118,7 +118,7 @@ def split_sentence():
                 #     s  = s.encode('utf8').decode('unicode-escape')  
                 result = kwtree.search_all(s)
                 entity_set = set([e.strip() for e, _  in result])
-                if len(entity_set) <2: 
+                if len(entity_set) <1: 
                     continue
                 sentence_list.append(s)
                 entity_list.append(list(entity_set))
@@ -199,7 +199,7 @@ def filter_dataset():
                 continue
             min_count = min([entity_dict[e] for e in entities])
 
-            if  min_count < 10:
+            if  min_count < 50:
                 for e in entities:
                     if e in entity_dict:
                         entity_dict[e]+=1
@@ -262,12 +262,25 @@ def display_entity_distribution():
             entity_collection.append(k)
             entity_type = entity_type_dict[k]
             if entity_type not in type_count_dict:
-                type_count_dict[entity_type] = []
-            type_count_dict[entity_type].append(k)
+                type_count_dict[entity_type] = 0
+            type_count_dict[entity_type]+=1
+
     # print("type_count_dict", json.dumps(type_count_dict,indent=2))
     print("entity_collection",len(entity_collection))
     for k,v in type_count_dict.items():
-        print(k,len(v))
+        print(k,v)
+
+    type_count_dict.clear()
+    print()
+    # print("type_count_dict", type_count_dict)
+    for k,v in entity_dict.items():
+        entity_type = entity_type_dict[k]
+        if entity_type not in type_count_dict:
+            type_count_dict[entity_type] = 0
+        type_count_dict[entity_type]+=v
+    print('sentence of each type')
+    for k,v in type_count_dict.items():
+        print(k,v)
     # for k,v in type_count_dict.items():
     #     print(k, v[:50])
     #     print()
@@ -285,16 +298,16 @@ def export_dataset():
 
 def wiki_pipeline():
     print("start split text")
-    split_sentence()
+    # split_sentence()
     # flatten sentences into records
     print("start flatten dataset")
-    data_flatten()
+    # data_flatten()
     # sort the sentence desc according to entities
     print("start sorting  according entity size")
-    sort_dataset()
+    # sort_dataset()
 
     print("start tokenizing sentence ")
-    tokenize_dataset()
+    # tokenize_dataset()
     
     # calibrate  
     print("start filtering long sentence ")
@@ -326,7 +339,7 @@ def test_tokenizer():
 if __name__ == "__main__":
     wiki_pipeline()
     # tree_test()
-    # display_entity_distribution()
+    display_entity_distribution()
     # test_unicode()
     # test_tokenizer()
 
