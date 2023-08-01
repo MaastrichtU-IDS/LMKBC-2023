@@ -73,8 +73,7 @@ def file_read_json_line(data_fn):
             lines = file.readlines()
             for line in lines:
                 train_data.append(json.loads (line))
-    except Exception as e :
-        print(e.with_traceback())
+    except :
         print(line)
 
     return train_data

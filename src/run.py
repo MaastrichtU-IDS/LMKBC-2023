@@ -39,7 +39,7 @@ def run_pretrain_filled_mask():
 
     cmd_pretrain_filled_mask = f"""
     
-   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu {args.gpu}   --train_epoch 15 --learning_rate 5e-5   --model_load_dir {last_best_dir} --model_save_dir {pfm_model_save_dir} --model_best_dir  {pfm_model_best_dir}
+   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 32 --gpu {args.gpu}   --train_epoch 20 --learning_rate 5e-5   --model_load_dir {last_best_dir} --model_save_dir {pfm_model_save_dir} --model_best_dir  {pfm_model_best_dir}
     
     """
     last_best_dir =  pfm_model_best_dir
