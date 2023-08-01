@@ -16,7 +16,7 @@ import os
 
 
 import config
-os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
+#os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
 import evaluate
 # from evaluate import evaluate
 import util
