@@ -39,7 +39,7 @@ def run_pretrain_filled_mask():
 
     cmd_pretrain_filled_mask = f"""
     
-   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 32 --gpu {args.gpu}   --train_epoch 20 --learning_rate 5e-5   --model_load_dir {last_best_dir} --model_save_dir {pfm_model_save_dir} --model_best_dir  {pfm_model_best_dir}
+   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 32 --gpu {args.gpu}   --train_epoch {epoch_dict['pfm']} --learning_rate 5e-5  --mask_strategy {mode_dict['pfm']} --model_load_dir {last_best_dir} --model_save_dir {pfm_model_save_dir} --model_best_dir  {pfm_model_best_dir}
     
     """
     last_best_dir =  pfm_model_best_dir
@@ -56,7 +56,7 @@ def run_file_mask():
 
     cmd_run_fillmask = f"""
     
-   python {config.SRC_DIR}/fm_model.py  --test_fn {test_fn} --template_fn res/prompts0.csv  --output_fn {OUTPUT_FILE} --train_fn {config.DATA_DIR}/train.jsonl --train_batch_size 64 --gpu {args.gpu}  --top_k 30 --threshold 0.1  --dev_fn  {config.DATA_DIR}/train_tiny.jsonl --mode "train test" --train_epoch 50 --learning_rate 5e-5 --model_load_dir {last_best_dir} --model_save_dir {fm_model_save_dir} --model_best_dir  {fm_model_best_dir}
+   python {config.SRC_DIR}/fm_model.py  --test_fn {test_fn} --template_fn res/prompts0.csv  --output_fn {OUTPUT_FILE} --train_fn {config.DATA_DIR}/train.jsonl --train_batch_size 64 --gpu {args.gpu}  --top_k 30 --threshold 0.1  --dev_fn  {config.DATA_DIR}/train_tiny.jsonl --mode "train test" --train_epoch {epoch_dict['fm']} --learning_rate 5e-5 --model_load_dir {last_best_dir} --model_save_dir {fm_model_save_dir} --model_best_dir  {fm_model_best_dir}
     
     """
     # last_best_dir =  pfm_model_best_dir
@@ -70,9 +70,15 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--mode",
+        "--task",
         type=str,
         default='fm',
+        help="train test",
+    )
+    parser.add_argument(
+        "--mode",
+        type=str,
+        default='random,',
         help="train test",
     )
     parser.add_argument(
@@ -94,33 +100,50 @@ if __name__ == "__main__":
         default="default",
         help="train test",
     )
+    parser.add_argument(
+        "--epoch",
+        type=str,
+        default="50",
+        help="train test",
+    )
     #pretrain_model_name = config.bert_
    
 
     para_dict=dict()
 
     args = parser.parse_args()
+    args.task=args.task.split(',')
+    args.epoch = args.epoch.split(',')
     args.mode=args.mode.split(',')
+    assert len(args.task) == len(args.task) 
+    
+    epoch_dict = dict()
+    for t,e in zip(args.task,args.epoch):
+        epoch_dict[t] = e 
+    mode_dict = dict()
+    for t,m in zip(args.task,args.mode):
+        mode_dict[t] = m
+        
     last_best_dir = args.load_dir
     test_fn = config.VAL_FN
 
-    if "full" in args.mode:
+    if "full" in args.task:
         run_token_redefine()
         run_pretrain_filled_mask()
         run_file_mask()
 
-    if "tr" in args.mode:
+    if "tr" in args.task:
         run_token_redefine()
         run_file_mask()
         
-    if "pfm" in args.mode:
+    if "pfm" in args.task:
         run_pretrain_filled_mask()
         run_file_mask()
 
-    if "fm" in args.mode:
+    if "fm" in args.task:
         run_file_mask()
 
-    if "test" in args.mode:
+    if "test" in args.task:
         test_fn=args.test_fn 
         run_file_mask()
                

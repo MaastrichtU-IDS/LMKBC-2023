@@ -37,7 +37,7 @@ logger = logging.getLogger(__name__)
 
 print(torch.cuda.is_available())
 
-os.environ['TRANSFORMERS_CACHE'] = 'cache/transformers/'
+#os.environ['TRANSFORMERS_CACHE'] = 'cache/transformers/'
 
 class PreFMDataset(Dataset):
     def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:
@@ -130,8 +130,10 @@ class PreFM_wiki_Dataset(Dataset):
                 select_index_list = self._mask_fold(entity_index_ids)
             elif 'single' in args.mask_strategy:
                 select_index_list = self._mask_single(entity_index_ids)
+            elif "random" in args.mask_strategy:
+                select_index_list =[random.sample(range(1,len(input_ids)-1), max(1,int(0.15*len(input_ids))))]
             else:
-                select_index_list =[random.sample(range(1,len(input_ids)-1), 0.15*len(input_ids))]
+                raise Exception("no mask strategy")
 
             if printable:
                 print("exists",entities)
@@ -322,7 +324,7 @@ if __name__ == "__main__":
         "--mask_strategy",
         type=str,
         default="single",
-        help="GPU ID, (default: -1, i.e., using CPU)",
+        help="single,fold,random",
     )
 
     parser.add_argument(
