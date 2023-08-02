@@ -241,9 +241,9 @@ def train():
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
     )
-    if not os.path.isdir( args.model_load_dir):
+    if not os.path.isdir( args.model_load_dir) and args.token_recode:
         print("repair token embedding")
-        token_layer(bert_model)
+        # token_layer(bert_model)
         # bert_model.resize_token_embeddings(len(toke))
     # else:
     #     print(f"using huggingface  model {args.model_load_dir}")
@@ -783,15 +783,15 @@ def adaptive_threshold():
     
 
     origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
-    #origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
-    #origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
     result_dict = {
         "args":args.__dict__,
         "metric":origin_result_dict
         }
     util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
     scores_per_relation_pd = pd.DataFrame(origin_result_dict)
-    print(scores_per_relation_pd.transpose().round(2).to_string(max_cols=10))
+    print(scores_per_relation_pd.transpose().round(2).to_string(max_cols=12))
 
 
 
@@ -871,6 +871,13 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
+        "--token_recode",
+        type=bool,
+        default=False,
+        help="CSV file containing fill-mask prompt templates (required)",
+    )
+
+    parser.add_argument(
         "--train_fn",
         type=str,
         required=True,
@@ -878,7 +885,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--train_epoch",
-        type=int,
+        type=float,
         default=10,
         help="CSV file containing train data for few-shot examples (required)",
     )

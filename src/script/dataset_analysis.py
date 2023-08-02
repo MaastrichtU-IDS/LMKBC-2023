@@ -300,7 +300,8 @@ def collect_entity_for_pretrain():
     obj_type ={o for s, o in  config.relation_entity_type_dict.values()}
     sub_only_type = sub_type - obj_type
     # exclude_entities = exclude_entities | s_type
-    exclude_entities = {'Series', 'Person','Number'}
+    exclude_entities = {'Series', 'Person','Number','Instrument','Position','Profession','Band','Company'}
+    include_entities ={'State','Country','Language'}
     # exclude_entities = {'Person'}
     print("exclude_entities",exclude_entities)
     exclude_subject={"RiverBasinsCountry"}
@@ -313,13 +314,12 @@ def collect_entity_for_pretrain():
             lines = util.file_read_json_line(filename)
             silver_lines.extend(lines)
     gold_dict, gold_entity_sentence = count_entity_distribution(all_gold_lines,
-                                          exclude_entities=exclude_entities,
-                                          merge_subject=True
+                                          merge_subject=True,
+                                          include_entities=include_entities,
                                           )
     siler_dict,silver_entity_sentence = count_entity_distribution(silver_lines,
-                                           exclude_entities = exclude_entities,
                                             merge_subject=True,
-                                            exclude_subject=exclude_subject,
+                                            include_entities=include_entities,
                                             # give_up_relation=give_up_relation
                                             )
     
@@ -372,11 +372,10 @@ def display_entity_dict(entity_dict):
     print()
 
 def count_entity_distribution(all_lines,
-                              exclude_entities={},
                               remove_tokenizer=True,
                               merge_subject = False,
-                              exclude_subject={},
-                              give_up_relation={}
+                              include_entities={},
+                              give_up_relation={},
                               ):
     entity_dict =dict()
     entity_sentence = dict()
@@ -389,15 +388,15 @@ def count_entity_distribution(all_lines,
         objs = line[config.KEY_OBJS]
         sub = line[config.KEY_SUB]
         sub_type, obj_type = config.relation_entity_type_dict[relation]
-        if merge_subject and relation not in exclude_subject:
+        if merge_subject:
             # print(relation, exclude_subject)
-            if sub_type not in exclude_entities:
+            if sub_type  in include_entities:
                 if sub_type not in  entity_dict:
                     entity_dict[sub_type] = set()
                 entity_dict[sub_type].add(sub)
                 entity_sentence[sub] = line
 
-        if obj_type not in exclude_entities:
+        if obj_type  in include_entities:
             if obj_type not in  entity_dict:
                 entity_dict[obj_type] = set()         
             entity_dict[obj_type].update(objs)
@@ -504,7 +503,7 @@ def same_id_numer():
     redunt_number = 0
     for i, c in id_count.items():
         if c>1:
-            redunt_number+=1
+            redunt_number+=c
     print("redunt_number",redunt_number)
 
             
