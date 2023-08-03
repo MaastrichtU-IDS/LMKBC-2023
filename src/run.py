@@ -48,7 +48,7 @@ def start_tasks(para_list):
         run_file_mask(fm)
 
 def task_0():
-    pfm_epoch = 30
+    pfm_epoch = 20
     fm_epoch = 50
     # pfm_epoch = 0.001
     # fm_epoch = 0.001
