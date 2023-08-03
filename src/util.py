@@ -8,6 +8,8 @@ import requests
 import torch
 from transformers import BertTokenizerFast
 
+print("getcwd", os.getcwd())
+
 import config as config
 
 from typing import List, Union, Dict, Any, Optional, Mapping

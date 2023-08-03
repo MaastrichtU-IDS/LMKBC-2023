@@ -18,11 +18,8 @@ from transformers import (
     PreTrainedTokenizer,
 )
 import os
-
-
 import itertools
 import config
-os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
 from evaluate import evaluate
 import util
 from tqdm import tqdm
@@ -110,7 +107,8 @@ class PreFM_wiki_Dataset(Dataset):
 
     def _mask_single(self, entity_index_ids):
 
-        mask_size = max(1, len(entity_index_ids)//5)
+        # mask_size = max(1, len(entity_index_ids)//7)
+        mask_size = 1
         select_index_list =[random.sample(entity_index_ids, mask_size)]
         return select_index_list
     
