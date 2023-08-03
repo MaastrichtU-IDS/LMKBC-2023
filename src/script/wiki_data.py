@@ -10,8 +10,8 @@ from tqdm import tqdm
 import transformers
 import wikipedia
 import glob
-import re
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), 'src'))
+import re
 print("parent path ", parent_dir)
 print('cwd path', os.getcwd())
 sys.path.append(parent_dir)
@@ -196,10 +196,10 @@ def filter_dataset():
                 continue
             entities = set([e for e in entities if e in entity_dict])
             if len(entities) <2:
+                result.append(False)
                 continue
             min_count = min([entity_dict[e] for e in entities])
-
-            if  min_count < 50:
+            if  min_count < 100:
                 for e in entities:
                     if e in entity_dict:
                         entity_dict[e]+=1
@@ -339,7 +339,7 @@ def test_tokenizer():
 if __name__ == "__main__":
     wiki_pipeline()
     # tree_test()
-    display_entity_distribution()
+    # display_entity_distribution()
     # test_unicode()
     # test_tokenizer()
 

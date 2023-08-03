@@ -34,7 +34,7 @@ PRETRAIN_FN = f'{DATA_DIR}/pretrain_corpus.jsonl'
 TRAIN_FN = f'{DATA_DIR}/train.jsonl'
 TRAIN_TINY_FN = f'{DATA_DIR}/train_tiny.jsonl'
 VAL_FN = f'{DATA_DIR}/val.jsonl'
-
+prompt_fp = f'res/prompts0.csv'
 RESULT_FN= f'{RES_DIR}/results.jsonl'
 KEY_OBJS = "ObjectEntities"
 KEY_REL = "Relation"

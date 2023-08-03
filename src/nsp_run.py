@@ -1,5 +1,5 @@
-import os
 import config
+import os
 
 task = "next-sentence"
 
