@@ -8,7 +8,7 @@ import requests
 import torch
 from transformers import BertTokenizerFast
 
-import src.config as config
+import config as config
 
 from typing import List, Union, Dict, Any, Optional, Mapping
 import numpy as np

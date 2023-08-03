@@ -169,7 +169,7 @@ class PreNSPDataset(Dataset):
         return len(self.data)
 
 
-def train():
+def train_fm():
     bert_config = transformers.AutoConfig.from_pretrained(args.model_load_dir)
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
@@ -219,6 +219,60 @@ def train():
     trainer.save_model(output_dir=args.model_best_dir)
     print(f"best_ckpt_dir: ", args.model_best_dir)
     # print(dev_results)
+
+
+def train_sentence_validition():
+    bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
+    bert_model: transformers.AutoModelForSequenceClassification = transformers.AutoModelForSequenceClassification.from_pretrained(
+        args.model_best_dir, config=bert_config
+    )
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
+
+    train_dataset = PreFM_wiki_Dataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
+    bert_collator = util.DataCollatorKBC(
+        tokenizer=bert_tokenizer,
+    )
+    bert_model.forword()
+    # collator = DataCollatorForLanguageModeling()
+    print(f"train dataset size: {len(train_dataset)}")
+    bert_model.resize_token_embeddings(len(bert_tokenizer))
+
+    training_args = transformers.TrainingArguments(
+        output_dir=args.model_save_dir,
+        overwrite_output_dir=True,
+        # evaluation_strategy='epoch',
+        per_device_train_batch_size=args.train_batch_size,
+        per_device_eval_batch_size=64,
+        # eval_accumulation_steps=8,
+        learning_rate=args.learning_rate,
+        num_train_epochs=args.train_epoch,
+        warmup_ratio=0.1,
+        logging_dir=config.LOGGING_DIR,
+        logging_strategy='epoch',
+        save_strategy='epoch',
+        save_total_limit=2,
+        fp16=True,
+        dataloader_num_workers=0,
+        auto_find_batch_size=False,
+        greater_is_better=False,
+        # load_best_model_at_end=True,
+        no_cuda=False,
+    )
+
+    trainer = transformers.Trainer(
+        model=bert_model,
+        data_collator=bert_collator,
+        train_dataset=train_dataset,
+        args=training_args,
+        # eval_dataset=dev_dataset,
+        tokenizer=bert_tokenizer,
+    )
+    # compute_metrics=compute_metrics)
+    trainer.train()
+    trainer.save_model(output_dir=args.model_best_dir)
+    print(f"best_ckpt_dir: ", args.model_best_dir)
+    # print(dev_results)
+
 
 
 if __name__ == "__main__":
