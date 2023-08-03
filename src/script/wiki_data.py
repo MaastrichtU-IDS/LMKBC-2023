@@ -25,13 +25,13 @@ from sklearn.model_selection import train_test_split
 
 from datasets import load_dataset,DatasetDict,Dataset,arrow_dataset
 import datasets
-entity_for_pretrain_fp = f'{config.RES_DIR}/entity_for_pretrain.json'
+
 
 enhance_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
 from ahocorapy.keywordtree import KeywordTree
 
 
-
+entity_for_pretrain_fp = f'{config.RES_DIR}/entity_for_pretrain.json'
 with open(entity_for_pretrain_fp) as f:
     entity_dic_jt = json.load(f)
 

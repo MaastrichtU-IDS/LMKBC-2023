@@ -501,44 +501,7 @@ def test_pipeline():
 
     results = []
     exclusive_token= {"the","of"}
-    for row, output in tqdm(zip(test_rows, outputs), total=len(test_rows)):
-        objects_wikiid = []
-        objects = []
-        scores=[]
-        for seq in output:
-            obj = seq["token_str"]
-            score = seq["score"]
-            # if obj in negative_vocabulary:
-            #     continue
-            if obj.startswith("##") or obj in exclusive_token:
-                continue
-            if obj == config.EMPTY_TOKEN:
-                # objects_wikiid.append(config.EMPTY_STR)
-                obj = ''
-                # objects = [config.EMPTY_STR]
-                # break
-            # else:
-                # Perform disambiguation using a baseline method for the object
-            # wikidata_id = util.disambiguation_baseline(obj)
-            wikidata_id=0
-            objects_wikiid.append(wikidata_id)
-
-            objects.append(obj)
-            scores.append(score)
-
-        # if config.EMPTY_STR in objects:
-        #     objects = [config.EMPTY_STR]
-
-        # Create a result row with the subject entity, object entities, and relation
-        result_row = {
-            "SubjectEntityID": row["SubjectEntityID"],
-            "SubjectEntity": row["SubjectEntity"],
-            "ObjectEntitiesID": objects_wikiid,
-            "ObjectEntities": objects,
-            "Relation": row["Relation"],
-            "ObjectEntitiesScore":scores
-        }
-        results.append(result_row)
+    results = util.assemble_result(test_rows, outputs)
 
     # Save the results to the specified output file
     logger.info(f"Saving the results to \"{args.output_fn}\"...")

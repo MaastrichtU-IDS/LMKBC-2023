@@ -118,53 +118,6 @@ class PreFM_wiki_Dataset(Dataset):
 
     def __len__(self):
         return len(self.data)
-    def _mask_index_replace(input_list, mask_ids,replace_obj,else_obj=None):
-        result = []
-        for i,v in enumerate(mask_ids):
-            if i in mask_ids:
-                result.append(replace_obj)
-            elif else_obj is not None:
-                result.append(else_obj)
-            else:
-                 result.append(v)
-        return result
-
-
-
-
-class PreNSPDataset(Dataset):
-    def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:
-        super().__init__()
-        self.data = []
-        train_data = util.file_read_json_line(data_fn)
-        self.tokenizer = tokenizer
-        for row in train_data:
-            exists = row['exists']
-            input_tokens = [tokenizer.cls_token] + row['tokens'] + [tokenizer.sep_token]
-            exists_ids = tokenizer.convert_tokens_to_ids(exists)
-            exists_ids = random.sample(exists_ids, max(len(exists_ids)//2,1) )
-            select_ids_list = [exists_ids]
-            input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
-            for select_ids in select_ids_list:
-                label_ids = [x if x in select_ids else -100 for x in input_ids]
-                attention_mask = [0 if x in select_ids else 1 for x in input_ids]
-                input_ids_t = [
-                    tokenizer.mask_token_id if x in select_ids else x for x in input_ids
-                ]
-                item = {
-                    "input_ids": input_ids_t,
-                    "labels": label_ids,
-                    "attention_mask": attention_mask,
-                }
-                self.data.append(item)
-
-        random.shuffle(self.data)
-
-    def __getitem__(self, index):
-        return self.data[index]
-
-    def __len__(self):
-        return len(self.data)
 
 
 def train_fm():
@@ -178,59 +131,6 @@ def train_fm():
     bert_collator = util.DataCollatorKBC(
         tokenizer=bert_tokenizer,
     )
-    # collator = DataCollatorForLanguageModeling()
-    print(f"train dataset size: {len(train_dataset)}")
-    bert_model.resize_token_embeddings(len(bert_tokenizer))
-
-    training_args = transformers.TrainingArguments(
-        output_dir=args.model_save_dir,
-        overwrite_output_dir=True,
-        # evaluation_strategy='epoch',
-        per_device_train_batch_size=args.train_batch_size,
-        per_device_eval_batch_size=64,
-        # eval_accumulation_steps=8,
-        learning_rate=args.learning_rate,
-        num_train_epochs=args.train_epoch,
-        warmup_ratio=0.1,
-        logging_dir=config.LOGGING_DIR,
-        logging_strategy='epoch',
-        save_strategy='epoch',
-        save_total_limit=2,
-        fp16=True,
-        dataloader_num_workers=0,
-        auto_find_batch_size=False,
-        greater_is_better=False,
-        # load_best_model_at_end=True,
-        no_cuda=False,
-    )
-
-    trainer = transformers.Trainer(
-        model=bert_model,
-        data_collator=bert_collator,
-        train_dataset=train_dataset,
-        args=training_args,
-        # eval_dataset=dev_dataset,
-        tokenizer=bert_tokenizer,
-    )
-    # compute_metrics=compute_metrics)
-    trainer.train()
-    trainer.save_model(output_dir=args.model_best_dir)
-    print(f"best_ckpt_dir: ", args.model_best_dir)
-    # print(dev_results)
-
-
-def train_sentence_validition():
-    bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
-    bert_model: transformers.AutoModelForSequenceClassification = transformers.AutoModelForSequenceClassification.from_pretrained(
-        args.model_best_dir, config=bert_config
-    )
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
-
-    train_dataset = PreFM_wiki_Dataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
-    bert_collator = util.DataCollatorKBC(
-        tokenizer=bert_tokenizer,
-    )
-    bert_model.forword()
     # collator = DataCollatorForLanguageModeling()
     print(f"train dataset size: {len(train_dataset)}")
     bert_model.resize_token_embeddings(len(bert_tokenizer))
@@ -338,4 +238,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    train()
+    train_fm()

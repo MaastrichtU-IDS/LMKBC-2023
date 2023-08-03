@@ -16,6 +16,11 @@ import config
 
 import os
 print("cwd", os.getcwd())
+import evaluate
+import pandas as pd
+from tqdm import tqdm
+
+entity_embedding_dict = dict()
 def generate_triples_from_jsonl(file_path):
     triples = []
     json_lines = util.file_read_json_line(file_path)
@@ -132,38 +137,60 @@ def find_most_similar_entities(query_embedding, entity_embeddings, k=5):
 # You can access the embeddings of the most similar entities using 'entity_embeddings[most_similar_indices]'
 
 def map_kg_space(entity, tokenizer, model,centroid_bert, centroid_word2vec):
-  with torch.no_grad():
-    bert_model.eval()
-    #print  (entity)
-    inputs = tokenizer.encode(entity, add_special_tokens=True, return_tensors='pt')
-    outputs = bert_model(inputs)
-    embedding = outputs.last_hidden_state.mean(dim=1)
-    word_bert = embedding[0]
+    if entity in entity_embedding_dict:
+        word_bert = entity_embedding_dict[entity]
+    else:
+        with torch.no_grad():
+            bert_model.eval()
+            #print  (entity)
+            inputs = tokenizer.encode(entity, add_special_tokens=True, return_tensors='pt')
+            outputs = bert_model(inputs)
+            embedding = outputs.last_hidden_state.mean(dim=1)
+            word_bert = embedding[0]
+            entity_embedding_dict[entity]=word_bert
     aligned_w2v =(word_bert - centroid_bert)@ rotation_matrix
     aligned_w2v += centroid_word2vec
     return aligned_w2v
-  
+    
 
-  def find_most_similar_entities_in_kg(entity, tokenizer, model,centroid_bert, centroid_word2vec, entity_embeddings):
+def find_most_similar_entities_in_kg(entity, tokenizer, model,centroid_bert, centroid_word2vec, entity_embeddings):
     aligned_w2v = map_kg_space(entity, tokenizer, model,centroid_bert, centroid_word2vec)
     return find_most_similar_entities(aligned_w2v, entity_embeddings, 5)
   
 
-def ranking_prompt_output(outputs, subj, relation_embeddings, relation_id):
-  ranks ={}
-  for o in outputs:
-    #print (o)
-    obj_entity= o['token_str']
-    aligned_s = map_kg_space(subj, tokenizer, model, centroid_bert, centroid_transe)
-    aligned_r = relation_embeddings[relation_id]
-    aligned_o = map_kg_space(obj_entity, tokenizer, model, centroid_bert, centroid_transe)
-    #print (aligned_s.shape, aligned_r.shape, aligned_o.shape)
-    score = transE_model.distance(aligned_s.view(1, 768), aligned_r.view(1, 768), aligned_o.view(1, 768))[0]
-    #if score <= 610.4186:
-    ranks[obj_entity]= score
-  print (ranks)
-  top_10_results = heapq.nsmallest(10, ranks, key=ranks.get)
-  return top_10_results
+def ranking_prompt_output_batch(outputs, input_rows, bias):
+    result_list=[]
+    for row, output in zip(input_rows, outputs):
+        #print (o)
+        relation = row[config.KEY_REL]
+        subject = row[config.KEY_SUB]
+        relation_id = relation_to_idx[relation]
+        thres = thresholds_rel[relation]
+        # objects  = []
+        ranks ={}
+        for seq in output:
+            obj_entity= seq['token_str']
+            aligned_s = map_kg_space(subject, tokenizer, model, centroid_bert, centroid_transe)
+            aligned_r = relation_embeddings[relation_id]
+            aligned_o = map_kg_space(obj_entity, tokenizer, model, centroid_bert, centroid_transe)
+            #print (aligned_s.shape, aligned_r.shape, aligned_o.shape)
+            score = transE_model.distance(aligned_s.view(1, 768), aligned_r.view(1, 768), aligned_o.view(1, 768))[0]
+            #if score <= 610.4186:
+            if score <= thres + bias:
+                ranks[obj_entity]= score
+        # ranks = {outputs[i]['token_str']: scores[i].item() for i in range(len(outputs)) if scores[i] <= thres + bias}
+        top_10_results = heapq.nsmallest(10, ranks, key=ranks.get)
+        result_row = {
+                "SubjectEntityID": row["SubjectEntityID"],
+                "SubjectEntity": subject,
+                # "ObjectEntitiesID": objects_wikiid,
+                "ObjectEntities": top_10_results,
+                "Relation": relation,
+            }
+        result_list.append(result_row)
+
+    return result_list
+  
 
 def ranking_prompt_output(outputs, subj, relation_embeddings, relation_id, thres= 620.4186): #tokenizer, model, centroid_bert, centroid_transe, transE_model
     aligned_s = map_kg_space(subj, tokenizer, model, centroid_bert, centroid_transe)
@@ -200,7 +227,7 @@ def train_transE(data_loader,transE_model,num_epochs =500):
     optimizer = optim.SGD(transE_model.parameters(), lr=0.01)
     loss_function = nn.MarginRankingLoss(margin=margin)
     # Training loop
-    for epoch in range(num_epochs):
+    for epoch in tqdm(range(num_epochs)):
         losses = []
         for batch_triples in data_loader:
             pos_head, pos_rel, pos_tail = batch_triples[:, 0], batch_triples[:, 1], batch_triples[:, 2]
@@ -259,7 +286,13 @@ if __name__ == '__main__':
 
     transE_model = TransE(num_entities, num_relations, embedding_dim=embedding_dim, margin=margin)
 
-    transE_model = train_transE(data_loader,transE_model,num_epochs=1)
+    trans_fp = 'bin/transE'
+    if os.path.exists(trans_fp):
+        transE_model = torch.load(trans_fp)
+    else:
+        transE_model = train_transE(data_loader,transE_model,num_epochs=500)
+        torch.save(transE_model, trans_fp)
+ 
     #  prompts.append(prompt)
     # print (prompt)
     batch_size = 2
@@ -333,37 +366,38 @@ if __name__ == '__main__':
     prompts = [ ]
     preds = []
     for row in input_rows:
-      relation =row['Relation']
-      subject_entity = row['SubjectEntity']
-      prompt_template = prompt_templates[relation]
-      prompt = prompt_template.format(subject_entity=subject_entity, mask_token=tokenizer.mask_token)
-      #break
-      if 'official language' not in prompt:
-          continue
-      #  prompts.append(prompt)
-      # print (prompt)
-      batch_size = 2
-      outputs = pipe([prompt], batch_size=batch_size)
-      results = ranking_prompt_output(outputs, subject_entity, relation_embeddings, relation_to_idx[relation], thresholds_rel[relation]-10)
-      # print (results, row['ObjectEntities'])
-      row['ObjectEntities_pred'] = results
-      preds.append(row)
+        relation =row['Relation']
+        subject_entity = row['SubjectEntity']
+        prompt_template = prompt_templates[relation]
+        prompt = prompt_template.format(subject_entity=subject_entity, mask_token=tokenizer.mask_token)
+        #break
+        prompts.append(prompt)
+        # print (prompt)
+    batch_size = 2
+    outputs = pipe(prompts, batch_size=batch_size)
+    # results = util.assemble_result(input_rows, outputs)
 
+    results = ranking_prompt_output_batch(outputs, input_rows,  bias = 50)
 
+    metrics = evaluate.evaluate_list(input_rows, results)
+
+    scores_per_relation_pd = pd.DataFrame(metrics)
+    print(scores_per_relation_pd.transpose().round(2))
     # Create prompts
-    prompts = [ ]
-    preds = []
-    for row in input_rows:
-      relation =row['Relation']
-      subject_entity = row['SubjectEntity']
-      prompt_template = prompt_templates[relation]
-      prompt = prompt_template.format(subject_entity=subject_entity, mask_token=tokenizer.mask_token)
+    # prompts = [ ]
+    # preds = []
+    # for row in input_rows:
+    #     relation =row['Relation']
+    #     subject_entity = row['SubjectEntity']
+    #     prompt_template = prompt_templates[relation]
+    #     prompt = prompt_template.format(subject_entity=subject_entity, mask_token=tokenizer.mask_token)
 
-      outputs = pipe([prompt], batch_size=batch_size)
-      results = ranking_prompt_output(outputs, subject_entity, relation_embeddings, relation_to_idx[relation], thresholds_rel[relation]-10)
-      # print (results, row['ObjectEntities'])
-      row['ObjectEntities_pred'] = results
-      preds.append(row)
+    # outputs = pipe(prompts, batch_size=batch_size)
+    # results = ranking_prompt_output(outputs, subject_entity, relation_embeddings, relation_to_idx[relation], thresholds_rel[relation]-10)
+    # exc
+    # # print (results, row['ObjectEntities'])
+    # row['ObjectEntities_pred'] = results
+    # preds.append(row)
 
 
 
