@@ -10,7 +10,7 @@ from transformers import BertTokenizerFast
 
 print("getcwd", os.getcwd())
 
-import src.config as config
+import config as config
 
 from typing import List, Union, Dict, Any, Optional, Mapping
 import numpy as np

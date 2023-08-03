@@ -48,10 +48,13 @@ def start_tasks(para_list):
         run_file_mask(fm)
 
 def task_0():
-    pfm_epoch = 20
+    pfm_epoch = 30
     fm_epoch = 50
+    # pfm_epoch = 0.001
+    # fm_epoch = 0.001
     pretrain_model = config.bert_base_cased
     pfm_input_fp="res/wikidata/Country-Language-State/filter.json"
+    
     para_list=[
         {
             "pfm":{
@@ -81,20 +84,20 @@ def task_0():
                 'pretrain_model':pretrain_model,
             }
         },
-        {
-            "pfm":{
-                "mask_strategy":"fold",
-                 "epoch":pfm_epoch,
-                'label':"fold",
-                'pretrain_model':pretrain_model,
-                 'input_fp':pfm_input_fp,
-            },
-               "fm":{
-                 "epoch":fm_epoch,
-                   'label':"fold",
-                   'pretrain_model':pretrain_model,
-            }
-        }
+        # {
+        #     "pfm":{
+        #         "mask_strategy":"fold",
+        #          "epoch":pfm_epoch,
+        #         'label':"fold",
+        #         'pretrain_model':pretrain_model,
+        #          'input_fp':pfm_input_fp,
+        #     },
+        #        "fm":{
+        #          "epoch":fm_epoch,
+        #            'label':"fold",
+        #            'pretrain_model':pretrain_model,
+        #     }
+        # }
     ]
     
     return para_list
