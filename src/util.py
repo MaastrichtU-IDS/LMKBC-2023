@@ -218,8 +218,9 @@ class KnowledgeGraph:
 
 
 class DataCollatorKBC:
-    def __init__(self, tokenizer: BertTokenizerFast):
+    def __init__(self, tokenizer: BertTokenizerFast, padding=True):
         self.tokenizer = tokenizer
+        self.padding = padding
 
     def __call__(
         self, examples: List[Union[List[int], Any, Dict[str, Any]]]
@@ -230,17 +231,19 @@ class DataCollatorKBC:
             padding=True,
             return_attention_mask=True,
         )
-        max_length = len(batch['input_ids'][0])
-        label_list = []
-        for label in batch['labels']:
-            length_diff = max_length - len(label)
-            label1 = label.copy()
-            if length_diff > 0:
-                pad_list = [-100] * (length_diff)
-                label1.extend(pad_list)
+        if self.padding:
+            max_length = len(batch['input_ids'][0])
+            label_list = []
+            for label in batch['labels']:
+                length_diff = max_length - len(label)
+                label1 = label.copy()
+                if length_diff > 0:
+                    pad_list = [-100] * (length_diff)
+                    label1.extend(pad_list)
 
-            label_list.append(label1)
-        batch['labels'] = label_list
+                label_list.append(label1)
+            batch['labels'] = label_list
+
         batch_pt = dict()
         for k, v in batch.items():
             batch_pt[k] = torch.tensor(v)
@@ -284,3 +287,34 @@ class Printer:
         if self.channel_times[channel] > 0:
             print(obj)
             self.channel_times[channel]-=1
+
+def assemble_result(origin_rows, outputs):
+    results = []
+    for row, output in zip(origin_rows, outputs):
+        objects_wikiid = []
+        objects = []
+        scores=[]
+        for seq in output:
+            obj = seq["token_str"]
+            score = seq["score"]
+            # if obj in negative_vocabulary:
+            #     continue
+            if obj.startswith("##") or obj in exclusive_token:
+                continue
+            if obj == config.EMPTY_TOKEN:
+                obj = ''
+            wikidata_id= disambiguation_baseline(obj)
+            objects_wikiid.append(wikidata_id)
+
+            objects.append(obj)
+            scores.append(score)
+        result_row = {
+            "SubjectEntityID": row["SubjectEntityID"],
+            "SubjectEntity": row["SubjectEntity"],
+            "ObjectEntitiesID": objects_wikiid,
+            "ObjectEntities": objects,
+            "Relation": row["Relation"],
+            "ObjectEntitiesScore":scores
+        }
+        results.append(result_row)
+    return results 
