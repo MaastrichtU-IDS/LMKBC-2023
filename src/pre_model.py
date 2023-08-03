@@ -37,71 +37,7 @@ logger = logging.getLogger(__name__)
 
 print(torch.cuda.is_available())
 
-os.environ['TRANSFORMERS_CACHE'] = 'cache/transformers/'
-
-class PreFMDataset(Dataset):
-    def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:
-        super().__init__()
-        self.data = []
-        train_data = util.file_read_json_line(data_fn)
-        self.tokenizer = tokenizer
-        max_length = 0 
-        printable= True
-        for row in train_data:
-            exists = row['exists']
-            input_tokens = [tokenizer.cls_token] + row['tokens'] + [tokenizer.sep_token]
-            exists_ids = tokenizer.convert_tokens_to_ids(exists)
-            # generate masking-combination, for example, a sentence contains three entities, e.g. (a,b,c). We can select one,multiple or all of them, that is (a),(b),(c),(a,b),(a,c),etc. Different permutation scheme may provides different performance
-            input_ids = tokenizer.convert_tokens_to_ids(input_tokens)
-            entity_index_ids = [i for i, v in enumerate(input_ids) if v in exists_ids]
-            select_index_list = [] 
-            for i in range(len(entity_index_ids)//2):
-                select_index_list.append(tuple(random.sample(
-                entity_index_ids, max(1, len(entity_index_ids)//2) 
-                )))
-
-            if printable:
-                print("exists",exists)
-                print("input_tokens",input_tokens)
-            if len(input_tokens) > max_length:
-                max_length = len(input_tokens)
-                print("row",row)
-         
-            for mask_index in select_index_list:
-                # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
-                # label_ids = [-100]*len(input_ids)
-                label_ids = [v if i in mask_index else -100  for i, v in enumerate(input_ids)]
-                #  in input id sequences, the weight of masked tokens will  be zero. That means the vector of masked tokens in input_ids will not be considered in predicting the mask entities in label_ids.
-                attention_mask =[0 if i in mask_index else 1  for i, v in enumerate(input_ids)]
-                # replace the id of entities in input_ids with the mask_token_id
-                input_ids_t = [tokenizer.mask_token_id if i in mask_index else v  for i, v in enumerate(input_ids)]
-                item = {
-                    "input_ids": input_ids_t,
-                    "labels": label_ids,
-                    "attention_mask": attention_mask,
-                }
-                if printable:
-                    print("item",item)
-                    printable = False
-                self.data.append(item)
-
-        random.shuffle(self.data)
-        print("max_length",max_length)
-    def __getitem__(self, index):
-        return self.data[index]
-
-    def __len__(self):
-        return len(self.data)
-    def _mask_index_replace(input_list, mask_ids,replace_obj,else_obj=None):
-        result = []
-        for i,v in enumerate(mask_ids):
-            if i in mask_ids:
-                result.append(replace_obj)
-            elif else_obj is not None:
-                result.append(else_obj)
-            else:
-                 result.append(v)
-        return result
+#os.environ['TRANSFORMERS_CACHE'] = 'cache/transformers/'
 
 
 class PreFM_wiki_Dataset(Dataset):
@@ -126,14 +62,15 @@ class PreFM_wiki_Dataset(Dataset):
                 continue
             random.shuffle(entity_index_ids)
             if 'fold' in args.mask_strategy:
-
                 select_index_list = self._mask_fold(entity_index_ids)
             elif 'single' in args.mask_strategy:
                 select_index_list = self._mask_single(entity_index_ids)
+            elif "random" in args.mask_strategy:
+                select_index_list =[random.sample(range(1,len(input_ids)-1), max(1,int(0.15*len(input_ids))))]
             else:
-                select_index_list =[random.sample(range(1,len(input_ids)-1), 0.15*len(input_ids))]
+                raise Exception("no mask strategy")
 
-            if printable:
+            if printable and False:
                 print("exists",entities)
                 print("input_tokens",tokenizer.convert_ids_to_tokens(input_ids))
             if len(input_ids) > max_length:
@@ -142,7 +79,8 @@ class PreFM_wiki_Dataset(Dataset):
          
             for mask_index in select_index_list:
                 if len(mask_index) == 0:
-                    raise Exception("mask index is zero")
+                    continue
+                    #raise Exception("mask index is zero")
                 # in label id sequences, only the loss of  masked tokens will be feedback to update the model, the loss of other tokens will be discard.
                 # label_ids = [-100]*len(input_ids)
                 label_ids = [v if i in mask_index else -100  for i, v in enumerate(input_ids)]
@@ -322,7 +260,7 @@ if __name__ == "__main__":
         "--mask_strategy",
         type=str,
         default="single",
-        help="GPU ID, (default: -1, i.e., using CPU)",
+        help="single,fold,random",
     )
 
     parser.add_argument(
@@ -333,7 +271,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--train_epoch",
-        type=int,
+        type=float,
         default=10,
         help="CSV file containing train data for few-shot examples (required)",
     )

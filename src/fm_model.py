@@ -877,7 +877,6 @@ if __name__ == "__main__":
         help="CSV file containing fill-mask prompt templates (required)",
     )
 
-
     parser.add_argument(
         "--train_fn",
         type=str,
@@ -886,7 +885,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--train_epoch",
-        type=int,
+        type=float,
         default=10,
         help="CSV file containing train data for few-shot examples (required)",
     )
