@@ -877,7 +877,6 @@ if __name__ == "__main__":
         help="CSV file containing fill-mask prompt templates (required)",
     )
 
-    token_recode
 
     parser.add_argument(
         "--train_fn",

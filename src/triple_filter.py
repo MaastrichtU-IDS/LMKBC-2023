@@ -4,28 +4,36 @@ import torch.optim as optim
 import numpy as np
 
 import json
-import jsonlines
+# import jsonlines
 
+import heapq
+
+import util
+from scipy.linalg import orthogonal_procrustes
+from sklearn.metrics.pairwise import cosine_similarity
+import transformers as t
+import config
+
+import os
+print("cwd", os.getcwd())
 def generate_triples_from_jsonl(file_path):
     triples = []
-    with jsonlines.open(file_path) as reader:
-        for line in reader:
-            subject_entity_id = line["SubjectEntity"]
-            relation = line["Relation"]
-            object_entities = line["ObjectEntities"]
+    json_lines = util.file_read_json_line(file_path)
+    for line in json_lines:
+        subject_entity_id = line["SubjectEntity"]
+        relation = line["Relation"]
+        object_entities = line["ObjectEntities"]
 
-            # Create triples for each object entity (if any)
-            for object_entity in object_entities:
-              if object_entity =="":
-                object_entity = 'No_'+relation
-              triples.append((subject_entity_id, relation, object_entity))
+        # Create triples for each object entity (if any)
+        for object_entity in object_entities:
+          if object_entity =="":
+            object_entity = 'No_'+relation
+          triples.append((subject_entity_id, relation, object_entity))
 
     return triples
 
 # Example usage:
-file_path = "/content/LMKBC-2023/data/train.jsonl"
-triples = generate_triples_from_jsonl(file_path)
-print(len(triples))
+
 
 
 def transform_to_tensors(triples, entity_id_to_idx, relation_to_idx):
@@ -86,59 +94,6 @@ class TransE(nn.Module):
         return pos_distance, neg_distance
 
 
-# Example data
-num_entities = len(entity_to_idx)
-num_relations = len(relation_to_idx)
-embedding_dim = 768
-margin = 1.0
-
-# Create DataLoader for batches of triples
-batch_size = 50
-data_loader = torch.utils.data.DataLoader(triple_idx, batch_size=batch_size, shuffle=True)
-
-# Initialize the TransE model
-transE_model = TransE(num_entities, num_relations, embedding_dim=embedding_dim, margin=margin)
-
-# Define the optimizer and loss function
-optimizer = optim.SGD(transE_model.parameters(), lr=0.01)
-loss_function = nn.MarginRankingLoss(margin=margin)
-# Training loop
-num_epochs = 500
-
-for epoch in range(num_epochs):
-    losses = []
-    for batch_triples in data_loader:
-        pos_head, pos_rel, pos_tail = batch_triples[:, 0], batch_triples[:, 1], batch_triples[:, 2]
-        neg_triples = transE_model._get_negative_sample(batch_triples)
-        neg_head, neg_rel, neg_tail = neg_triples[:, 0], neg_triples[:, 1], neg_triples[:, 2]
-
-        # Forward pass
-        pos_distance, neg_distance = transE_model(pos_head, pos_rel, pos_tail, neg_head, neg_rel, neg_tail)
-
-        # Compute the loss and backpropagate
-        loss = loss_function(pos_distance, neg_distance, -1*torch.ones_like(pos_distance))
-        losses.append(loss.item())
-
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-
-    if epoch % 50 == 0:
-        if len(losses)!=0:
-              mean_loss = np.array(losses).mean()
-              print('epoch {},\t train loss {:0.02f}'.format(epoch,mean_loss))
-        else:
-              mean_loss = 0
-
-# Get the learned embeddings
-entity_embeddings = transE_model.entity_embeddings.weight.data
-relation_embeddings = transE_model.relation_embeddings.weight.data
-
-# Print learned embeddings
-print("Entity embeddings:")
-print(entity_embeddings)
-print("Relation embeddings:")
-print(relation_embeddings)
 
 def get_distance(s_label, r_label, o_label):
   s= entity_to_idx[s_label]
@@ -149,38 +104,6 @@ def get_distance(s_label, r_label, o_label):
 def get_entity_embedding(e_label):
   e= entity_to_idx[e_label]
   return entity_embeddings[e]
-
-thresholds_rel = {}
-for r in relation_to_idx.keys():
-  print (r)
-  scores = []
-  for t in triples:
-    if t[1] == r:
-      scores.append(get_distance(t[0], t[1], t[2]).item())
-  thresholds_rel[r] = np.mean(scores, axis=0)
-
-
-bert_embeddings = []
-with torch.no_grad():
-    bert_model.eval()
-    for entity in entity_to_idx.keys():
-        #print  (entity)
-        inputs = tokenizer.encode(entity, add_special_tokens=True, return_tensors='pt')
-        outputs = bert_model(inputs)
-        embedding = outputs.last_hidden_state.mean(dim=1).numpy()[0]
-        #print(embedding)
-        bert_embeddings.append(embedding)
-
-bert_embeddings =torch.tensor(bert_embeddings)
-
-from scipy.linalg import orthogonal_procrustes
-
-rotation_matrix, _ = orthogonal_procrustes(centered_bert, centered_transe)
-
-idx_to_entity = {v: k for k, v in entity_to_idx.items()}
-
-
-from sklearn.metrics.pairwise import cosine_similarity
 
 def find_most_similar_entities(query_embedding, entity_embeddings, k=5):
     """
@@ -205,10 +128,6 @@ def find_most_similar_entities(query_embedding, entity_embeddings, k=5):
 # Example usage:
 # Assuming you have a query entity embedding 'query_embedding' and a tensor containing all entity embeddings 'entity_embeddings'
 
-# Find the 5 most similar entities
-k = 5
-most_similar_indices = find_most_similar_entities(get_entity_embedding('Russia'), entity_embeddings, k)
-
 # The indices in 'most_similar_indices' correspond to the k most similar entities in 'entity_embeddings'
 # You can access the embeddings of the most similar entities using 'entity_embeddings[most_similar_indices]'
 
@@ -229,7 +148,7 @@ def map_kg_space(entity, tokenizer, model,centroid_bert, centroid_word2vec):
     aligned_w2v = map_kg_space(entity, tokenizer, model,centroid_bert, centroid_word2vec)
     return find_most_similar_entities(aligned_w2v, entity_embeddings, 5)
   
-import heapq
+
 def ranking_prompt_output(outputs, subj, relation_embeddings, relation_id):
   ranks ={}
   for o in outputs:
@@ -271,49 +190,184 @@ def ranking_prompt_output(outputs, subj, relation_embeddings, relation_id, thres
     top_10_results = heapq.nsmallest(10, ranks, key=ranks.get)
     return top_10_results
 
-# Create prompts
-prompts = [ ]
-preds = []
-for row in input_rows:
-  relation =row['Relation']
-  subject_entity = row['SubjectEntity']
-  prompt_template = prompt_templates[relation]
-  prompt = prompt_template.format(subject_entity=subject_entity, mask_token=tokenizer.mask_token)
+def train_transE(data_loader,transE_model,num_epochs =500):
+    # Create DataLoader for batches of triples
 
-  #break
-  if 'official language' not in prompt:
-    continue
-  #  prompts.append(prompt)
-  print (prompt)
-  batch_size = 2
-  outputs = pipe([prompt], batch_size=batch_size)
-  outputs
-  results = ranking_prompt_output(outputs, subject_entity, relation_embeddings, relation_to_idx[relation], thresholds_rel[relation]-10)
-  print (results, row['ObjectEntities'])
-  row['ObjectEntities_pred'] = results
-  preds.append(row)
+    
+    # Initialize the TransE model
+ 
+    # Define the optimizer and loss function
+    optimizer = optim.SGD(transE_model.parameters(), lr=0.01)
+    loss_function = nn.MarginRankingLoss(margin=margin)
+    # Training loop
+    for epoch in range(num_epochs):
+        losses = []
+        for batch_triples in data_loader:
+            pos_head, pos_rel, pos_tail = batch_triples[:, 0], batch_triples[:, 1], batch_triples[:, 2]
+            neg_triples = transE_model._get_negative_sample(batch_triples)
+            neg_head, neg_rel, neg_tail = neg_triples[:, 0], neg_triples[:, 1], neg_triples[:, 2]
 
-  # Create prompts
-prompts = [ ]
-preds = []
-for row in input_rows:
-  relation =row['Relation']
-  subject_entity = row['SubjectEntity']
-  prompt_template = prompt_templates[relation]
-  prompt = prompt_template.format(subject_entity=subject_entity, mask_token=tokenizer.mask_token)
+            # Forward pass
+            pos_distance, neg_distance = transE_model(pos_head, pos_rel, pos_tail, neg_head, neg_rel, neg_tail)
 
-  #break
-  if 'official language' not in prompt:
-    continue
-  #  prompts.append(prompt)
-  print (prompt)
-  batch_size = 2
-  outputs = pipe([prompt], batch_size=batch_size)
-  outputs
-  results = ranking_prompt_output(outputs, subject_entity, relation_embeddings, relation_to_idx[relation], thresholds_rel[relation]-10)
-  print (results, row['ObjectEntities'])
-  row['ObjectEntities_pred'] = results
-  preds.append(row)
+            # Compute the loss and backpropagate
+            loss = loss_function(pos_distance, neg_distance, -1*torch.ones_like(pos_distance))
+            losses.append(loss.item())
+
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
+        if epoch % 50 == 0:
+            if len(losses)!=0:
+                  mean_loss = np.array(losses).mean()
+                  print('epoch {},\t train loss {:0.02f}'.format(epoch,mean_loss))
+            else:
+                  mean_loss = 0
+
+    return transE_model
+
+if __name__ == '__main__':
+    file_path = "/content/LMKBC-2023/data/train.jsonl"
+    triples = generate_triples_from_jsonl(config.TRAIN_FN)
+    print(len(triples))
+    model_name = 'bert-base-uncased'  # You can choose other variants as well
+    tokenizer:t.BertTokenizer = t.BertTokenizer.from_pretrained(model_name)
+    bert_model:t.BertModel = t.BertModel.from_pretrained(model_name)
+      # Create entity and relation mapping to indices
+    entities = set([triple[0] for triple in triples] + [triple[2] for triple in triples])
+    relations = set([triple[1] for triple in triples])
+    entity_to_idx = {entity: idx for idx, entity in enumerate(entities)}
+    relation_to_idx = {relation: idx for idx, relation in enumerate(relations)}
+
+    # Transform triples into torch tensors
+    triple_idx = transform_to_tensors(triples, entity_to_idx, relation_to_idx)
+
+    input = config.VAL_FN
+    print (f"Loading the input file \"{input}\"...")
+    input_rows = [json.loads(line) for line in open(input, "r")]
+    print (f"Loaded {len(input_rows):,} rows.")
+
+      # Example data
+    num_entities = len(entity_to_idx)
+    num_relations = len(relation_to_idx)
+    embedding_dim = 768
+    margin = 1.0
+
+    batch_size = 50
+    data_loader = torch.utils.data.DataLoader(triple_idx, batch_size=batch_size, shuffle=True)
+
+    transE_model = TransE(num_entities, num_relations, embedding_dim=embedding_dim, margin=margin)
+
+    transE_model = train_transE(data_loader,transE_model,num_epochs=1)
+    #  prompts.append(prompt)
+    # print (prompt)
+    batch_size = 2
+    model_type = 'bert-base-uncased'
+    tokenizer = t.AutoTokenizer.from_pretrained(model_type)
+    model = t.AutoModelForMaskedLM.from_pretrained(model_type)  if "bert" in model_type.lower()  else t.AutoModelForCausalLM.from_pretrained(model_type)
+    task = "fill-mask" if "bert" in model_type.lower() else "text-generation"
+
+
+    pipe = t.pipeline(task=task, model=model, tokenizer=tokenizer, top_k=50)
+
+
+        # Get the learned embeddings
+    entity_embeddings = transE_model.entity_embeddings.weight.data
+    relation_embeddings = transE_model.relation_embeddings.weight.data
+
+    thresholds_rel = {}
+    for r in relation_to_idx.keys():
+      # print (r)
+      scores = []
+      for t in triples:
+        if t[1] == r:
+          scores.append(get_distance(t[0], t[1], t[2]).item())
+    thresholds_rel[r] = np.mean(scores, axis=0)
+
+
+    # Print learned embeddings
+    # print("Entity embeddings:")
+    # print(entity_embeddings)
+    # print("Relation embeddings:")
+    # print(relation_embeddings)
+
+      
+    thresholds_rel = {}
+    for r in relation_to_idx.keys():
+      # print (r)
+      scores = []
+      for t in triples:
+        if t[1] == r:
+          scores.append(get_distance(t[0], t[1], t[2]).item())
+      thresholds_rel[r] = np.mean(scores, axis=0)
+
+
+    bert_embeddings = []
+    with torch.no_grad():
+        bert_model.eval()
+        for entity in entity_to_idx.keys():
+            #print  (entity)
+            inputs = tokenizer.encode(entity, add_special_tokens=True, return_tensors='pt')
+            outputs = bert_model(inputs)
+            embedding = outputs.last_hidden_state.mean(dim=1).numpy()[0]
+            #print(embedding)
+            bert_embeddings.append(embedding)
+
+    bert_embeddings =torch.tensor(bert_embeddings)
+    centroid_transe = torch.mean(entity_embeddings, axis=0)
+
+    centroid_bert = torch.mean(bert_embeddings, axis=0)
+    centered_bert = bert_embeddings - centroid_bert
+    centered_transe = entity_embeddings - centroid_transe
+    rotation_matrix, _ =  orthogonal_procrustes(centered_bert, centered_transe)
+
+    idx_to_entity = {v: k for k, v in entity_to_idx.items()}
+
+    # Find the 5 most similar entities
+    k = 5
+    most_similar_indices = find_most_similar_entities(get_entity_embedding('Russia'), entity_embeddings, k)
+    prompt_templates = util.file_read_prompt(config.prompt_fp)
+
+    # Create prompts
+    prompts = [ ]
+    preds = []
+    for row in input_rows:
+      relation =row['Relation']
+      subject_entity = row['SubjectEntity']
+      prompt_template = prompt_templates[relation]
+      prompt = prompt_template.format(subject_entity=subject_entity, mask_token=tokenizer.mask_token)
+      #break
+      if 'official language' not in prompt:
+          continue
+      #  prompts.append(prompt)
+      # print (prompt)
+      batch_size = 2
+      outputs = pipe([prompt], batch_size=batch_size)
+      results = ranking_prompt_output(outputs, subject_entity, relation_embeddings, relation_to_idx[relation], thresholds_rel[relation]-10)
+      # print (results, row['ObjectEntities'])
+      row['ObjectEntities_pred'] = results
+      preds.append(row)
+
+
+    # Create prompts
+    prompts = [ ]
+    preds = []
+    for row in input_rows:
+      relation =row['Relation']
+      subject_entity = row['SubjectEntity']
+      prompt_template = prompt_templates[relation]
+      prompt = prompt_template.format(subject_entity=subject_entity, mask_token=tokenizer.mask_token)
+
+      outputs = pipe([prompt], batch_size=batch_size)
+      results = ranking_prompt_output(outputs, subject_entity, relation_embeddings, relation_to_idx[relation], thresholds_rel[relation]-10)
+      # print (results, row['ObjectEntities'])
+      row['ObjectEntities_pred'] = results
+      preds.append(row)
+
+
+
+
 
 
   
