@@ -18,11 +18,8 @@ from transformers import (
     PreTrainedTokenizer,
 )
 import os
-
-
 import itertools
 import config
-os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
 from evaluate import evaluate
 import util
 from tqdm import tqdm

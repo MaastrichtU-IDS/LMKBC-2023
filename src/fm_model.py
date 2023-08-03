@@ -896,6 +896,17 @@ if __name__ == "__main__":
         required=True,
         help="CSV file containing train data for few-shot examples (required)",
     )
+    
+    parser.add_argument(
+        "--pretrain_model",
+        type=str,
+        required=config.bert_base_cased,
+        help="CSV file containing train data for few-shot examples (required)",
+    )
+        
+    
+    
+    
     parser.add_argument(
         "--train_batch_size",
         type=int,
