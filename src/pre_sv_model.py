@@ -59,6 +59,14 @@ class PreSV_wiki_Dataset(Dataset):
             sentence= row['sentence']
             tokens = [tokenizer.cls_token]+ row['tokens']+[tokenizer.sep_token]
             input_ids = tokenizer.convert_tokens_to_ids(tokens)
+            if random.random()>0.5:
+                origin_item = {
+                "input_ids": input_ids,
+                "labels": 1,
+            }
+                self.data.append(origin_item)
+                continue
+            
             entity_ids = tokenizer.convert_tokens_to_ids(entities)
             entity_ids = set(filter(lambda x: x!= tokenizer.unk_token_id, entity_ids))
 
@@ -81,19 +89,14 @@ class PreSV_wiki_Dataset(Dataset):
             input_ids_fake = input_ids[:]
             input_ids_fake[select_index] = tokenizer.convert_tokens_to_ids(replace_token)
 
-            origin_item = {
-                "input_ids": input_ids,
-                "labels": [1],
-            }
+    
             fake_item = {
                 "input_ids": input_ids_fake,
-                "labels": [0],
+                "labels": 0,
             }
             if printable:
                 print("fake_item",fake_item)
-                print("origin_item",origin_item)
                 printable = False
-            self.data.append(origin_item)
             self.data.append(fake_item)
 
         random.shuffle(self.data)
