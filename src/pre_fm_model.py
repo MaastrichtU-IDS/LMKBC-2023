@@ -99,7 +99,7 @@ class PreFM_wiki_Dataset(Dataset):
         print("max_length",max_length)
 
     def _mask_fold(self, entity_index_ids):
-        split_size = min(5, len(entity_index_ids))
+        split_size = min(7, len(entity_index_ids))
         chunk_size = math.ceil(len(entity_index_ids) / split_size )
         select_index_list = [entity_index_ids[i*chunk_size:(i+1)*chunk_size] for i in range(split_size)]
         return select_index_list
@@ -107,8 +107,8 @@ class PreFM_wiki_Dataset(Dataset):
 
     def _mask_single(self, entity_index_ids):
 
-        # mask_size = max(1, len(entity_index_ids)//7)
-        mask_size = 1
+        mask_size = max(1, len(entity_index_ids)//7)
+        # mask_size = 1
         select_index_list =[random.sample(entity_index_ids, mask_size)]
         return select_index_list
     

@@ -299,7 +299,7 @@ def assemble_result(origin_rows, outputs):
             score = seq["score"]
             # if obj in negative_vocabulary:
             #     continue
-            if obj.startswith("##") or obj in exclusive_token:
+            if obj.startswith("##"):
                 continue
             if obj == config.EMPTY_TOKEN:
                 obj = ''

@@ -124,25 +124,35 @@ def task_0():
 
 
 def task_1():
-    pfm_epoch = 10
+    cv_epoch = 20
+    pfm_epoch = 20
     fm_epoch = 50
-    # pfm_epoch = 0.001
+    # cv_epoch = 0.0001
+    # pfm_epoch = 0.0001
     # fm_epoch = 0.001
+    label = 'pfm_sc_fm'
     pretrain_model = config.bert_base_cased
     pfm_input_fp="res/wikidata/Country-Language-State/filter.json"
     
     para_list=[
         {
+            "pfm":{
+                "mask_strategy":"random",
+                 "epoch":pfm_epoch,
+                'label':label,
+                'pretrain_model':pretrain_model,
+                 'input_fp':pfm_input_fp,
+            },
             "sv":{
                 "mask_strategy":"random",
-                "epoch":pfm_epoch,
+                "epoch":cv_epoch,
                 'pretrain_model':pretrain_model,
-                'label':"random",
+                'label':label,
                 'input_fp':pfm_input_fp,
             },
                "fm":{
                  "epoch":fm_epoch,
-                'label':"random",
+                'label':label,
                 'pretrain_model':pretrain_model,
             }
         }
@@ -151,6 +161,9 @@ def task_1():
     for para in para_list:
         sv = para['sv']
         fm = para['fm']
+        pfm = para['pfm']
+        pfm_model_best_dir = run_pretrain_filled_mask(pfm)
+        sv['model_load_dir'] = pfm_model_best_dir
         sv_model_best_dir = run_pretrain_sentence_validation(sv)
         fm['model_load_dir'] = sv_model_best_dir
         run_file_mask(fm)
