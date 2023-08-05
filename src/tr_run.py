@@ -1,6 +1,6 @@
 import os
 import config
-
+print(os.getcwd())
 RUN_OUTPUT_NAME = "filled-mask.jsonl"
 OUTPUT_DIR = f'{config.OUTPUT_DIR}/filled-mask'
 OUTPUT_FILE = f'{OUTPUT_DIR}/{RUN_OUTPUT_NAME}'

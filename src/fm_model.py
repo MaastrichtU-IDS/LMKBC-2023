@@ -243,7 +243,7 @@ def train():
     )
     if not os.path.isdir( args.model_load_dir) and args.token_recode:
         print("repair token embedding")
-        # token_layer(bert_model)
+        token_layer(bert_model)
         # bert_model.resize_token_embeddings(len(toke))
     # else:
     #     print(f"using huggingface  model {args.model_load_dir}")
@@ -883,6 +883,7 @@ if __name__ == "__main__":
         default="train eval test",
         help="Batch size for the model. (default:32)",
     )
+
 
     args = parser.parse_args()
     tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'

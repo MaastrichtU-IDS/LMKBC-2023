@@ -19,6 +19,7 @@ print("cwd", os.getcwd())
 import evaluate
 import pandas as pd
 from tqdm import tqdm
+import csv
 
 entity_embedding_dict = dict()
 def generate_triples_from_jsonl(file_path):
@@ -186,6 +187,7 @@ def ranking_prompt_output_batch(outputs, input_rows, bias):
                 # "ObjectEntitiesID": objects_wikiid,
                 "ObjectEntities": top_10_results,
                 "Relation": relation,
+                'ObjectEntitiesScore':[ranks[e] for e in top_10_results],
             }
         result_list.append(result_row)
 
@@ -290,7 +292,7 @@ if __name__ == '__main__':
     if os.path.exists(trans_fp):
         transE_model = torch.load(trans_fp)
     else:
-        transE_model = train_transE(data_loader,transE_model,num_epochs=500)
+        transE_model = train_transE(data_loader,transE_model,num_epochs=2000)
         torch.save(transE_model, trans_fp)
  
     #  prompts.append(prompt)
@@ -302,7 +304,7 @@ if __name__ == '__main__':
     task = "fill-mask" if "bert" in model_type.lower() else "text-generation"
 
 
-    pipe = t.pipeline(task=task, model=model, tokenizer=tokenizer, top_k=50)
+    pipe = t.pipeline(task=task, model=model, tokenizer=tokenizer, top_k=30)
 
 
         # Get the learned embeddings
@@ -379,10 +381,75 @@ if __name__ == '__main__':
 
     results = ranking_prompt_output_batch(outputs, input_rows,  bias = 50)
 
-    metrics = evaluate.evaluate_list(input_rows, results)
+    # metrics = evaluate.evaluate_list(input_rows, results)
 
-    scores_per_relation_pd = pd.DataFrame(metrics)
-    print(scores_per_relation_pd.transpose().round(2))
+    origin_result_dict =  evaluate.evaluate_list(input_rows, results)
+    predefine_fine = 'res/object_number.tsv'
+    with open(predefine_fine) as f:
+        topk = csv.DictReader(f, delimiter="\t")
+        topk_max_dict = { row["Relation"]:eval(row['Val'])[1] for row in topk}
+    threshold_initial_dict = dict()
+    for k,v in topk_max_dict.items():
+        threshold_initial_dict[k] = 1/float(v)
+    pred_rows = results
+    groud_rows = input_rows
+    relation_list_pred = dict()
+    relation_list_groud = dict()
+    best_topk_dict=dict()
+    for row in pred_rows:
+        relation = row['Relation']
+        if relation not in relation_list_pred:
+            relation_list_pred[relation]=[]
+        relation_list_pred[relation].append(row)
+
+    for row in groud_rows:
+        relation = row['Relation']
+        if relation not in relation_list_groud:
+            relation_list_groud[relation]=[]
+        relation_list_groud[relation].append(row)
+
+    # origin_result_dict = dict()
+    for relation, pred_list in tqdm(relation_list_pred.items()):
+        groud_list = relation_list_groud[relation]
+        origin_topk = topk_max_dict[relation]
+        best_f1=0
+        best_precision = 0
+        best_recal= 0 
+        origin_threshold = threshold_initial_dict[relation]
+        best_threshold=0
+        threshold_step = 0.01
+        for i in range(1,int((origin_threshold*3)/threshold_step),1):
+            threshold = threshold_step*i
+            for row in pred_list:
+                row['ObjectEntities'] =list(map(lambda t:t[1], filter(lambda t: t[0]>=threshold, zip(row['ObjectEntitiesScore'],  row['ObjectEntities']))))
+            eval_dict = evaluate.evaluate_list(groud_list, pred_list)[relation]
+            f1 = eval_dict['f1']
+            p = eval_dict['p']
+            r = eval_dict['r']
+            if f1> best_f1:
+                best_f1=f1
+                best_threshold =threshold
+                best_precision= p 
+                best_recal= r
+        best_topk_dict[relation] = [best_threshold,best_f1] 
+        origin_result_dict[relation]["best_threshold"]=best_threshold
+        origin_result_dict[relation]["best_f1"]=best_f1
+        origin_result_dict[relation]["best_precision"]=best_precision
+        origin_result_dict[relation]["best_recal"]=best_recal
+        #origin_result_dict[relation]["origin_threshold"]=origin_threshold
+    
+
+    origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+
+    scores_per_relation_pd = pd.DataFrame(origin_result_dict)
+    print(scores_per_relation_pd.transpose().round(2).to_string(max_cols=12))
+
+
+
+    # scores_per_relation_pd = pd.DataFrame(metrics)
+    # print(scores_per_relation_pd.transpose().round(2))
     # Create prompts
     # prompts = [ ]
     # preds = []
