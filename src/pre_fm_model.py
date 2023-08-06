@@ -125,6 +125,9 @@ def train_fm():
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
     )
+    if not os.path.isdir( args.model_load_dir) and args.token_recode:
+        print("repair token embedding")
+        util.token_layer(bert_model)
     bert_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
 
     train_dataset = PreFM_wiki_Dataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
@@ -234,6 +237,15 @@ if __name__ == "__main__":
         default=32,
         help="Batch size for the model. (default:32)",
     )
+
+    parser.add_argument(
+        "--token_recode",
+        type=bool,
+        default=False,
+        help="Batch size for the model. (default:32)",
+    )
+
+    
 
 
     args = parser.parse_args()

@@ -165,77 +165,6 @@ class MLM_Multi_Dataset(Dataset):
         return len(self.data)
 
 
-def token_layer(model:BertForMaskedLM):
-    # BertForMaskedLM.get_input_embeddings()
-    # BertForMaskedLM.set_input_embeddings()
-    num_new_tokens = len(enhance_tokenizer.vocab)
-    # model.resize_token_embeddings(num_new_tokens)
-
-    old_token_embedding = model.get_input_embeddings()
-
-    old_num_tokens, old_embedding_dim = old_token_embedding.weight.shape
-    old_output_embedding =  model.get_output_embeddings()
-    print("old_output_embedding  ", old_output_embedding.weight.data.dtype)
-    print("old_output_embedding  ", old_output_embedding.weight.data.shape)
-    old_output_dim_0, old_output_dim_1 =   old_output_embedding.weight.shape
-    print()
-    # new_embeddings = torch.nn.Module()
-    new_input_embeddings = torch.nn.Embedding(
-         num_new_tokens, old_embedding_dim
-    )
-    new_output_embeddings = torch.nn.Linear(
-         old_output_dim_1, num_new_tokens, dtype= old_output_embedding.weight.dtype
-    )
-    print("new_output_embeddings  ", new_output_embeddings.weight.data.dtype)
-    print("new_output_embeddings  ", new_output_embeddings.weight.data.shape)
-    # embedding_laye_dictr =embedding_layer . state_dict()
-    # print("embedding_laye_dictr",embedding_laye_dictr.keys())
-    # embedding_laye_dictr['weight']=new_embeddings.state_dict()['weight']
-    # new_embeddings.load_state_dict(embedding_laye_dictr)
-
-    # Creating new embedding layer with more entries
-    # new_embeddings.weight = torch.nn.Parameter(old_num_tokens+num_new_tokens, old_embedding_dim)
- 
-    # Setting device and type accordingly
-    new_output_embeddings = new_output_embeddings.to(
-        old_output_embedding.weight.device,
-        dtype=old_output_embedding.weight.dtype,
-    )
-    new_input_embeddings = new_input_embeddings.to(
-        old_token_embedding.weight.device,
-        dtype=old_token_embedding.weight.dtype,
-    )
-
-    # Copying the old entries
-    new_input_embeddings.weight.data[:old_num_tokens, :] = old_token_embedding.weight.data[
-        :old_num_tokens, :    ]
-    new_output_embeddings.weight.data[:old_num_tokens, :] = old_output_embedding.weight.data[
-        :old_num_tokens, :    ]
-    
-    # old_position = model.get_position_embeddings()
-    # position_dim_0, position_dim_1 = old_position.weight.shape
-    # position_dim_0_new = position_dim_0+len(additional_token_dict)
-    # new_position = torch.nn.Embedding(
-    #      position_dim_0_new, old_embedding_dim
-    # )
-    # new_embeddings.padding_idx = embedding_layer.clone()
-    for entity,index in additional_token_dict.items():
-        token_ids = origin_tokenizer.encode(entity)
-        new_output =   torch.max(old_output_embedding.weight.data[token_ids,:],0,keepdim = True)[0]
-        new_input =  torch.max(old_token_embedding.weight.data[token_ids,:],0,keepdim = True)[0]
-    
-        new_output_embeddings.weight.data[index, :] =new_output
-        new_input_embeddings.weight.data[index,:] =new_input
-        # new_position .weight.data[index,:] = new_position_token
-    print("old_token_embedding ", old_token_embedding.weight.data[2][:5])
-    print("new_token_embeddings ", new_input_embeddings.weight.data[2][:5])
-    print("new_output_embeddings ", new_output_embeddings.weight.data[2][:5])
-    print("old_output_embedding ", old_output_embedding.weight.data[2][:5])
-    model.set_input_embeddings( new_input_embeddings)
-    model.set_output_embeddings( new_output_embeddings)
-    model.config.vocab_size = num_new_tokens
-    model.vocab_size = num_new_tokens
-
 
 def token_layer_formal(model:BertForMaskedLM):
     num_new_tokens = len(additional_token_dict)+old_num_tokens
@@ -255,7 +184,7 @@ def train():
     )
     if not os.path.isdir( args.model_load_dir) and args.token_recode:
         print("repair token embedding")
-        token_layer(bert_model)
+        util.token_layer(bert_model)
         # bert_model.resize_token_embeddings(len(toke))
     # else:
     #     print(f"using huggingface  model {args.model_load_dir}")
@@ -961,6 +890,16 @@ if __name__ == "__main__":
         default=False,
         help="Batch size for the model. (default:32)",
     )
+
+    parser.add_argument(
+        "--label",
+        type=str,
+        default='null',
+        help="Batch size for the model. (default:32)",
+    )
+
+
+    label
 
 
     args = parser.parse_args()

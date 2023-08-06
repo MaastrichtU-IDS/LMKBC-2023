@@ -32,13 +32,13 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {config.TRAIN_FN} --train_batch_size 64 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {config.VAL_FN} --mode "train test p redict" --train_epoch 5 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir} --pretrain_model {config.bert_base_cased} --silver_data false --filter false
+   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {config.TRAIN_FN} --train_batch_size 64 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {config.VAL_FN} --mode "train test p redict" --train_epoch 10 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir} --pretrain_model {config.bert_base_cased}  --silver_data true --filter false
     
     """
 
     print(cmd_run_fillmask)
     os.system(cmd_run_fillmask)
-
+   
 
 if __name__ == "__main__":
     run()
