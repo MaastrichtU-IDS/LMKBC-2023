@@ -22,7 +22,7 @@ from multiprocessing import Pool
 
 import json
 
-silver_dir = f"{config.RES_DIR}/silver"
+
 
 
 def extract(item_dict):

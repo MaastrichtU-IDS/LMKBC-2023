@@ -28,6 +28,7 @@ bert_base_cased = 'bert-base-cased'
 bert_large_cased = 'bert-large-cased'
 bert_tiny = 'prajjwal1/bert-tiny'
 opt_350m = 'facebook/opt-350m'
+silver_dir = f"res/silver"
 
 PRETRAIN_FN = f'{DATA_DIR}/pretrain_corpus.jsonl'
 

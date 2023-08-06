@@ -48,7 +48,7 @@ def f1_score(p: float, r: float) -> float:
 
 
 def rows_to_dict(rows: List[Dict]) -> Dict:
-    return {(r["SubjectEntity"], r["Relation"]): set(r["ObjectEntities"]) for r in rows}
+    return {(r["SubjectEntity"], r["Relation"]): set(r["ObjectEntitiesID"]) for r in rows}
 
 
 def evaluate_per_sr_pair(pred_rows, gt_rows) -> List[Dict[str, float]]:
