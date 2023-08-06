@@ -32,7 +32,7 @@ def run_pretrain_filled_mask(para_dict):
 
     cmd_pretrain_filled_mask = f"""
     
-   python src/pre_fm_model.py   --train_fn {input_fp}  --train_batch_size 32 --gpu 0   --train_epoch {para_dict['epoch']} --learning_rate 5e-5  --mask_strategy {para_dict['mask_strategy']} --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
+   python src/pre_fm_model.py   --train_fn {input_fp}  --train_batch_size 8 --gpu 0   --train_epoch {para_dict['epoch']} --learning_rate 5e-5  --mask_strategy {para_dict['mask_strategy']} --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
     
     """
     print(cmd_pretrain_filled_mask)
@@ -72,10 +72,10 @@ def start_tasks(para_list):
      
 
 def task_0():
-    # pfm_epoch = 20
-    # fm_epoch = 5
-    pfm_epoch = 0.00001
-    fm_epoch = 0.001
+    pfm_epoch = 20
+    fm_epoch = 5
+    # pfm_epoch = 0.00001
+    # fm_epoch = 0.001
     pretrain_model = config.bert_large_cased
     pfm_input_fp="res/wikidata/Country-Language-State/filter.json"
     
@@ -190,6 +190,6 @@ def task_1():
         
 
 if __name__ == "__main__":
-    task_list = task_0()
+    task_list = task_0()[2:]
     start_tasks(task_list)
                
