@@ -201,6 +201,6 @@ def task_1():
         
 
 if __name__ == "__main__":
-    task_list = task_0()
+    task_list = task_0()[2:]
     start_tasks(task_list)
                
