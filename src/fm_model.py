@@ -13,7 +13,7 @@ from tqdm.auto import tqdm
 import transformers
 from transformers import BertTokenizer, pipeline, BertTokenizerFast, BertModel, BertPreTrainedModel,BertForMaskedLM
 import os
-
+from glob import glob
 
 import config
 #os.environ['TRANSFORMERS_CACHE'] = config.TRANSFOER_CACHE_DIR
@@ -34,19 +34,30 @@ print("GPU ", torch.cuda.is_available())
 with open(config.TOKENIZER_PATH+"/added_tokens.json") as f:
     additional_token_dict = json.load(f)
 
+type_entity_fp =f'res/entity_for_tokenizer.json'
+type_entity_dict = json.load(open(type_entity_fp))
+for k,v in type_entity_dict.items():
+    type_entity_dict[k]=set(v)
+print('type_entity_dict',len(type_entity_dict))
+# print(type_entity_dict)
 class MLMDataset(Dataset):
-    def __init__(self, tokenizer: BertTokenizerFast, data_fn, template_fn) -> None:
+    def __init__(self, tokenizer: BertTokenizerFast, data_fn, template_fn,silver_data=False) -> None:
         super().__init__()
         self.data = []
 
         # Read the training data from a JSON file
         train_data = util.file_read_json_line(data_fn)
+        if silver_data:
+            print("silver data")
+            file_name_list = glob(f'res/silver/*.jsonl', recursive=True)
+            for fp in file_name_list:
+                train_data.extend(util.file_read_json_line(fp)) 
 
         # Read the prompt templates from a file
         prompt_templates = util.file_read_prompt(template_fn)
 
         # Iterate over each row in the training data
-        for row in train_data:
+        for row in tqdm(train_data):
             relation = row['Relation']
             prompt_template = prompt_templates[relation]
             object_entities = row['ObjectEntities']
@@ -84,6 +95,7 @@ class MLMDataset(Dataset):
                 self.data.append(item)
         random.shuffle(self.data)
         print(self.data[0])
+        print("data set size",len(self.data))
 
     def __getitem__(self, index):
         return self.data[index]
@@ -258,9 +270,10 @@ def train():
     bert_model.resize_token_embeddings(len(tokenizer))
     # Create the training dataset using the MLMDataset class, providing the train data file, tokenizer, and template file
     train_dataset = MLMDataset(
-        data_fn=args.train_fn, tokenizer=tokenizer, template_fn=args.template_fn
+        data_fn=args.train_fn, tokenizer=tokenizer, template_fn=args.template_fn,
+        silver_data=args.silver_data,
     )
-
+    print("trainset size",len(train_dataset))
     # transformers.BertForMaskedLM()
 
     # Create a data collator for batching and padding the data during training
@@ -501,7 +514,50 @@ def test_pipeline():
 
     results = []
     exclusive_token= {"the","of"}
-    results = util.assemble_result(test_rows, outputs)
+    results = []
+
+    if args.filter:
+        print('filter"')
+    for row, output in zip(test_rows, outputs):
+        objects_wikiid = []
+        objects = []
+        scores=[]
+        relation = row["Relation"]
+        entity_type = config.relation_entity_type_dict[relation][1]
+        type_entity_set = type_entity_dict[entity_type]
+        # print(entity_type,len(type_entity_set))
+        # print("type_entity_set",type_entity_set)
+        for seq in output:
+            obj = seq["token_str"]
+            score = seq["score"]
+            # if obj in negative_vocabulary:
+            #     continue
+            if args.filter:
+                # print('entity filter')
+                # print('type_entity',len(type_entity))
+                if obj not in type_entity_set:
+                    # print(obj)
+                    continue
+            if obj.startswith("##"):
+                continue
+            if obj == config.EMPTY_TOKEN:
+                obj = ''
+            
+            wikidata_id= util.disambiguation_baseline(obj)
+            objects_wikiid.append(wikidata_id)
+
+            objects.append(obj)
+            scores.append(score)
+        result_row = {
+            "SubjectEntityID": row["SubjectEntityID"],
+            "SubjectEntity": row["SubjectEntity"],
+            "ObjectEntitiesID": objects_wikiid,
+            "ObjectEntities": objects,
+            "Relation": row["Relation"],
+            "ObjectEntitiesScore":scores
+        }
+        results.append(result_row)
+
 
     # Save the results to the specified output file
     logger.info(f"Saving the results to \"{args.output_fn}\"...")
@@ -863,11 +919,18 @@ if __name__ == "__main__":
     parser.add_argument(
         "--pretrain_model",
         type=str,
-        required=config.bert_base_cased,
+        required=False,
+        default=config.bert_base_cased,
         help="CSV file containing train data for few-shot examples (required)",
     )
         
-    
+    parser.add_argument(
+        "--add_corpus",
+        type=bool,
+        required=False,
+        default=False,
+        help="CSV file containing train data for few-shot examples (required)",
+    )
     
     
     parser.add_argument(
@@ -881,6 +944,21 @@ if __name__ == "__main__":
         "--mode",
         type=str,
         default="train eval test",
+        help="Batch size for the model. (default:32)",
+    )
+
+    
+    parser.add_argument(
+        "--silver_data",
+        type=bool,
+        default=False,
+        help="Batch size for the model. (default:32)",
+    )
+
+    parser.add_argument(
+        "--filter",
+        type=bool,
+        default=False,
         help="Batch size for the model. (default:32)",
     )
 
