@@ -72,10 +72,10 @@ def start_tasks(para_list):
      
 
 def task_0():
-    # pfm_epoch = 20
-    # fm_epoch = 15
-    pfm_epoch = 0.00001
-    fm_epoch = 0.001
+    pfm_epoch = 20
+    fm_epoch = 20
+    # pfm_epoch = 0.00001
+    # fm_epoch = 0.001
     pretrain_model = config.bert_large_cased
     pfm_input_fp="res/wikidata/Country-Language-State/filter.json"
     
