@@ -321,7 +321,7 @@ def assemble_result(origin_rows, outputs):
 
 
 
-def token_layer(model:BertModel,additional_token_dict, enhance_tokenizer,origin_tokenizer):
+def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhance_tokenizer,origin_tokenizer):
     # BertForMaskedLM.get_input_embeddings()
     # BertForMaskedLM.set_input_embeddings()
     num_new_tokens = len(enhance_tokenizer.vocab)
@@ -348,6 +348,7 @@ def token_layer(model:BertModel,additional_token_dict, enhance_tokenizer,origin_
     )
     print("new_output_embeddings  ", new_output_embeddings.weight.data.dtype)
     print("new_output_embeddings  ", new_output_embeddings.weight.data.shape)
+    print("new_cls_decoder  ", new_cls_decoder.weight.data.shape)
     # embedding_laye_dictr =embedding_layer . state_dict()
     # print("embedding_laye_dictr",embedding_laye_dictr.keys())
     # embedding_laye_dictr['weight']=new_embeddings.state_dict()['weight']
@@ -372,7 +373,7 @@ def token_layer(model:BertModel,additional_token_dict, enhance_tokenizer,origin_
     new_output_embeddings.weight.data[:old_num_tokens, :] = old_output_embedding.weight.data[
         :old_num_tokens, :    ]
     cls_bias[ :old_num_tokens] = model.cls.predictions.bias.data[ :old_num_tokens] 
-    new_cls_decoder.weight.data = model.cls.predictions.decoder.weight.data[
+    new_cls_decoder.weight.data[:old_num_tokens, :] = model.cls.predictions.decoder.weight.data[
         :old_num_tokens, :    ]
     # old_position = model.get_position_embeddings()
     # position_dim_0, position_dim_1 = old_position.weight.shape
@@ -400,7 +401,7 @@ def token_layer(model:BertModel,additional_token_dict, enhance_tokenizer,origin_
     print("old_output_embedding ", old_output_embedding.weight.data[2][:5])
     model.set_input_embeddings( new_input_embeddings)
     model.set_output_embeddings( new_output_embeddings)
-    model.cls.predictions.bias =  cls_bias
+    model.cls.predictions.bias.data =  cls_bias
     model.cls.predictions.decoder =  new_cls_decoder
     model.config.vocab_size = num_new_tokens
     model.vocab_size = num_new_tokens
