@@ -32,7 +32,7 @@ def run_pretrain_filled_mask(para_dict:dict):
 
     cmd_pretrain_filled_mask = f"""
     
-   python src/pre_fm_model.py   --train_fn {input_fp}  --train_batch_size 32 --gpu 0   --train_epoch {para_dict['epoch']} --learning_rate 5e-5  --mask_strategy {para_dict.get('mask_strategy', 'random')} --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}   --token_recode {para_dict.get('token_recode',False)]}
+   python src/pre_fm_model.py   --train_fn {input_fp}  --train_batch_size 16 --gpu 0   --train_epoch {para_dict['epoch']} --learning_rate 5e-5  --mask_strategy {para_dict.get('mask_strategy', 'random')} --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}   --token_recode {para_dict.get('token_recode',False)}
     
     """
     print(cmd_pretrain_filled_mask)
@@ -48,7 +48,7 @@ def run_file_mask(para_dict):
 
     cmd_run_fillmask = f"""
     
-   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output_fn {OUTPUT_FILE}    --train_fn data/train.jsonl --train_batch_size 64 --gpu 0  --top_k 30 --threshold 0.1  --dev_fn  data/train_tiny.jsonl --mode "train test" --token_recode {para_dict.get('token_recode',False)]} --train_epoch {para_dict['epoch']} --pretrain_model {para_dict['pretrain_model']}   --learning_rate 5e-5 --model_load_dir {para_dict['model_load_dir']} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}  --silver_data {para_dict.get('silver_data',False)]} --filter {para_dict.get('filter',False)]}  --label  {para_dict['label']} 
+   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output_fn {OUTPUT_FILE}    --train_fn data/train.jsonl --train_batch_size 64 --gpu 0  --top_k 30 --threshold 0.1  --dev_fn  data/train_tiny.jsonl --mode "train test" --token_recode {para_dict.get('token_recode',False)} --train_epoch {para_dict['epoch']} --pretrain_model {para_dict['pretrain_model']}   --learning_rate 5e-5 --model_load_dir {para_dict['model_load_dir']} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}  --silver_data {para_dict.get('silver_data',False)} --filter {para_dict.get('filter',False)}  --label  {para_dict['label']} 
     
     """
     print(cmd_run_fillmask)
@@ -134,13 +134,13 @@ def task_0():
                 "mask_strategy":"random",
                 "epoch":pfm_epoch,
                 'pretrain_model':pretrain_model,
-                'label':"random",
+                'label':"pfm_baseline",
                 'input_fp':pfm_input_fp,
             },
               {
                    "task":"fm",
                  "epoch":fm_epoch,
-                     'label':"random",
+                     'label':"pfm_baseline",
                    'pretrain_model':pretrain_model,
                     'token_recode':False
             }

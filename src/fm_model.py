@@ -166,13 +166,6 @@ class MLM_Multi_Dataset(Dataset):
 
 
 
-def token_layer_formal(model:BertForMaskedLM):
-    num_new_tokens = len(additional_token_dict)+old_num_tokens
-    model.resize_token_embeddings(num_new_tokens)
-    old_token_embedding = model.get_input_embeddings()
-
-    old_num_tokens, old_embedding_dim = old_token_embedding.weight.shape
-
 
 
 
@@ -184,7 +177,7 @@ def train():
     )
     if not os.path.isdir( args.model_load_dir) and args.token_recode:
         print("repair token embedding")
-        util.token_layer(bert_model)
+        util.token_layer(bert_model, additional_token_dict,enhance_tokenizer, origin_tokenizer)
         # bert_model.resize_token_embeddings(len(toke))
     # else:
     #     print(f"using huggingface  model {args.model_load_dir}")
@@ -897,9 +890,6 @@ if __name__ == "__main__":
         default='null',
         help="Batch size for the model. (default:32)",
     )
-
-
-    label
 
 
     args = parser.parse_args()
