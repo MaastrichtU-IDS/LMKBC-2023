@@ -407,7 +407,7 @@ def test_pipeline():
 
     # Load the trained BERT model for masked language modeling
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
-        args.model_best_dir, config=bert_config,ignore_mismatched_sizes=True
+        args.model_best_dir, config=bert_config
     )
 
     # Create a pipeline for the specified task using the loaded BERT model and tokenizer
@@ -898,8 +898,6 @@ if __name__ == "__main__":
         help="Batch size for the model. (default:32)",
     )
 
-
-    label
 
 
     args = parser.parse_args()

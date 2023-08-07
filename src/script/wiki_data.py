@@ -199,7 +199,7 @@ def filter_dataset():
                 result.append(False)
                 continue
             min_count = min([entity_dict[e] for e in entities])
-            if  min_count < 30:
+            if  min_count < 100:
                 for e in entities:
                     if e in entity_dict:
                         entity_dict[e]+=1

@@ -21,8 +21,8 @@ if not os.path.exists(model_save_dir):
     os.makedirs(model_save_dir)
 
 # model_load_dir = 'bin/pretrain_fill-mask/bert-base-cased/best_ckpt'
-# model_load_dir = config.bert_base_cased
-model_load_dir = model_best_dir
+model_load_dir = config.bert_base_cased
+# model_load_dir = model_best_dir
 
 
 def run():
@@ -32,8 +32,7 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {config.TRAIN_FN} --train_batch_size 64 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {config.VAL_FN} --mode "train test p redict" --train_epoch 10 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir} --pretrain_model {config.bert_base_cased}  --silver_data true --filter false
-    
+   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {config.TRAIN_FN} --train_batch_size 64 --gpu 0 --top_k 20 --threshold 0.1  --dev_fn  {config.VAL_FN} --mode "train test p redict" --train_epoch 0.01 --learning_rate 5e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir} --pretrain_model {config.bert_base_cased}  --silver_data False  --filter false      --token_recode True
     """
 
     print(cmd_run_fillmask)
