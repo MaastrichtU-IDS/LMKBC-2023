@@ -178,7 +178,8 @@ def train():
     if not os.path.isdir( args.model_load_dir) and args.token_recode:
         print("repair token embedding")
         util.token_layer(bert_model, additional_token_dict,enhance_tokenizer, origin_tokenizer)
-        # bert_model.resize_token_embeddings(len(toke))
+    else:
+        bert_model.resize_token_embeddings(len(enhance_tokenizer))
     # else:
     #     print(f"using huggingface  model {args.model_load_dir}")
     #     bert_config = transformers.AutoConfig.from_pretrained(config.bert_base_cased)
@@ -440,7 +441,7 @@ def test_pipeline():
 
     if args.filter:
         print('filter"')
-    for row, output in zip(test_rows, outputs):
+    for row, output in tqdm(zip(test_rows, outputs),total=len(test_rows)):
         objects_wikiid = []
         objects = []
         scores=[]
@@ -484,7 +485,7 @@ def test_pipeline():
     # Save the results to the specified output file
     logger.info(f"Saving the results to \"{args.output_fn}\"...")
     util.file_write_json_line(args.output_fn, results)
-
+    util.save_entity_id()
     logger.info(f"Start Evaluate ...")
     evaluate.evaluate(args.output_fn, args.test_fn)
 
@@ -744,6 +745,16 @@ def adaptive_threshold():
 
 
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run the Model with Question and Fill-Mask Prompts"
@@ -813,8 +824,7 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--token_recode",
-        type=bool,
-        default=False,
+        type=str2bool,
         help="CSV file containing fill-mask prompt templates (required)",
     )
 
@@ -846,14 +856,7 @@ if __name__ == "__main__":
         help="CSV file containing train data for few-shot examples (required)",
     )
         
-    parser.add_argument(
-        "--add_corpus",
-        type=bool,
-        required=False,
-        default=False,
-        help="CSV file containing train data for few-shot examples (required)",
-    )
-    
+   
     
     parser.add_argument(
         "--train_batch_size",
@@ -872,15 +875,13 @@ if __name__ == "__main__":
     
     parser.add_argument(
         "--silver_data",
-        type=bool,
-        default=False,
+        type=str2bool,
         help="Batch size for the model. (default:32)",
     )
 
     parser.add_argument(
         "--filter",
-        type=bool,
-        default=False,
+        type=str2bool,
         help="Batch size for the model. (default:32)",
     )
 
@@ -893,6 +894,7 @@ if __name__ == "__main__":
 
 
     args = parser.parse_args()
+    print('args',args)
     tokenizer_dir = f'{config.RES_DIR}/tokenizer/bert'
     enhance_tokenizer = transformers.AutoTokenizer.from_pretrained(tokenizer_dir)
     origin_tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_load_dir)

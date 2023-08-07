@@ -387,12 +387,12 @@ def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhanc
         new_output =   torch.mean(old_output_embedding.weight.data[token_ids,:],0,keepdim = True)
         new_input =  torch.mean(old_token_embedding.weight.data[token_ids,:],0,keepdim = True)
         new_cls_bias = torch.mean(model.cls.predictions.bias.data[token_ids],0)
-        new_cls_decoder_data = torch.mean(model.cls.predictions.decoder.weight.data[token_ids,:],0)
+        new_cls_decoder_data = torch.mean(model.cls.predictions.decoder.weight.data[token_ids,:],0,keepdim = True)
 
         new_output_embeddings.weight.data[index, :] =new_output
         new_input_embeddings.weight.data[index,:] =new_input
         cls_bias[index] = new_cls_bias
-        new_cls_decoder.weight.data[index] = new_cls_decoder_data
+        new_cls_decoder.weight.data[index,:] = new_cls_decoder_data
        
         # new_position .weight.data[index,:] = new_position_token
     print("old_token_embedding ", old_token_embedding.weight.data[2][:5])
@@ -405,3 +405,15 @@ def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhanc
     model.cls.predictions.decoder =  new_cls_decoder
     model.config.vocab_size = num_new_tokens
     model.vocab_size = num_new_tokens
+
+
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+ 

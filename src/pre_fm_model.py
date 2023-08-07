@@ -243,7 +243,7 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--token_recode",
-        type=bool,
+        type=util.str2bool,
         default=False,
         help="Batch size for the model. (default:32)",
     )

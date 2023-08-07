@@ -24,7 +24,7 @@ val_line = util.file_read_json_line(config.VAL_FN)
 all_gold_lines = train_line + val_line
 
 origin_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
-
+enhance_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
 
 def refresh_tokenizer(entity_set:set):
     origin_tokenizer.add_tokens(list(entity_set))
@@ -292,9 +292,9 @@ def collect_entity_for_tokenizer():
         result_dict[k] = list(v)
     with open(entity_fp, mode='w') as f:
         json.dump(result_dict,f,indent=2,sort_keys=True)
-    # entity_set = set.union(* [set(e) for e in result_dict.values()])
-    # refresh_tokenizer(entity_set)
-    # multi_thread_entity(entity_set)
+    entity_set = set.union(* [set(e) for e in result_dict.values()])
+    refresh_tokenizer(entity_set)
+    multi_thread_entity(entity_set)
     # collection_ids(entity_set)
     # entity_id_dict = get_entity_ids(entity_set)
 
@@ -482,20 +482,22 @@ def multi_thread_entity(entity_set):
     import requests
     from concurrent.futures import ThreadPoolExecutor,as_completed
     # entity_set=list(entity_set)[10000:]
+    util.local_cache.clear()
     with ThreadPoolExecutor(max_workers=1000) as executor:
-        futures = [executor.submit(util.disambiguation_baseline, entity) for entity in tqdm(entity_set)]
+        futures = [(entity,executor.submit(util.disambiguation_baseline, entity)) for entity in tqdm(entity_set)]
+        futures_submit = list(map(lambda x:x[1],futures))
         future_entity_dict = dict()
-        for entity, future in zip(entity_set, futures):
+        for entity, future in futures:
             future_entity_dict[future] = entity
         entity_dict = dict()
-        for future in tqdm(as_completed(futures),total = len(entity_set)):
+        for future in tqdm(as_completed(futures_submit),total = len(entity_set)):
             # print(future_entity_dict[future], future.result())
         # for future in futures:
             # result = future.result()
             entity_dict[future_entity_dict[future]]=future.result()
     util.save_entity_id()
-    with open(f'{config.RES_DIR}/entity_id.json','w') as f:
-        json.dump(entity_dict,f,indent = 2)
+    # with open(f'{config.RES_DIR}/entity_id.json','w') as f:
+    #     json.dump(entity_dict,f,indent = 2)
     
 def same_id_numer():
     with open(f'{config.RES_DIR}/entity_id.json') as f:
@@ -512,9 +514,15 @@ def same_id_numer():
             redunt_number+=c
     print("redunt_number",redunt_number)
 
+
+def tokenize():
+    entity = 'United States of America'
+    tokens = origin_tokenizer.tokenize(entity)
+    print(tokens)
             
 if __name__ == "__main__":
     # collect_entity_for_pretrain()
     collect_entity_for_tokenizer()
     # collection_ids()
     # same_id_numer()
+    # tokenize()
