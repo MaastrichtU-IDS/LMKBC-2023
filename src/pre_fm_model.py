@@ -36,6 +36,8 @@ print(torch.cuda.is_available())
 
 #os.environ['TRANSFORMERS_CACHE'] = 'cache/transformers/'
 
+with open(config.TOKENIZER_PATH+"/added_tokens.json") as f:
+    additional_token_dict = json.load(f)
 
 class PreFM_wiki_Dataset(Dataset):
     def __init__(self, tokenizer: BertTokenizer, data_fn) -> None:
@@ -125,11 +127,12 @@ def train_fm():
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
     )
+
+    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
     if not os.path.isdir( args.model_load_dir) and args.token_recode:
         print("repair token embedding")
-        util.token_layer(bert_model)
-    bert_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
-
+        origin_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
+        util.token_layer(bert_model, additional_token_dict, bert_tokenizer, origin_tokenizer)
     train_dataset = PreFM_wiki_Dataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
     bert_collator = util.DataCollatorKBC(
         tokenizer=bert_tokenizer,

@@ -321,7 +321,7 @@ def assemble_result(origin_rows, outputs):
 
 
 
-def token_layer(model:transformers.BertForMaskedLM):
+def token_layer(model:BertModel,additional_token_dict, enhance_tokenizer,origin_tokenizer):
     # BertForMaskedLM.get_input_embeddings()
     # BertForMaskedLM.set_input_embeddings()
     num_new_tokens = len(enhance_tokenizer.vocab)
