@@ -40,18 +40,27 @@ for k,v in type_entity_dict.items():
     type_entity_dict[k]=set(v)
 print('type_entity_dict',len(type_entity_dict))
 # print(type_entity_dict)
+rel_thres_fn = f"{config.RES_DIR}/relation-threshold.json"
 class MLMDataset(Dataset):
-    def __init__(self, tokenizer: BertTokenizerFast, data_fn, template_fn,silver_data=False) -> None:
+    def __init__(self, origin_tokenizer: BertTokenizerFast,enhance_tokenizer: BertTokenizerFast,  data_fn, template_fn,
+                 silver_data=False,
+                 use_val = False
+                 ) -> None:
         super().__init__()
         self.data = []
 
         # Read the training data from a JSON file
         train_data = util.file_read_json_line(data_fn)
         if silver_data:
-            print("silver data")
-            file_name_list = glob(f'res/silver/*.jsonl', recursive=True)
-            for fp in file_name_list:
-                train_data.extend(util.file_read_json_line(fp)) 
+            # print("silver data")
+            # file_name_list = glob(f'res/silver/*.jsonl', recursive=True)
+            # for fp in file_name_list:
+            #     train_data.extend(util.file_read_json_line(fp)) 
+
+            no_test = 'res/no_test_silver.jsonl'
+            train_data.extend(util.file_read_json_line(no_test)) 
+        if args.do_test:
+            train_data.extend(util.file_read_json_line(config.VAL_FN)) 
 
         # Read the prompt templates from a file
         prompt_templates = util.file_read_prompt(template_fn)
@@ -70,20 +79,25 @@ class MLMDataset(Dataset):
 
                 # Create an input sentence by formatting the prompt template
                 input_sentence = prompt_template.format(
-                    subject_entity=subject, mask_token=tokenizer.mask_token
+                    subject_entity=subject, mask_token=origin_tokenizer.mask_token
                 )
 
                 # Convert the object entity to its corresponding ID
-                obj_id = tokenizer.convert_tokens_to_ids(obj)
+                obj_id = enhance_tokenizer.convert_tokens_to_ids(obj)
 
                 # Tokenize the input sentence using the tokenizer
-                input_ids, attention_mask = util.tokenize_sentence(
-                    tokenizer, input_sentence
-                )
+ 
+                input_tokens = origin_tokenizer.tokenize(input_sentence,add_special_tokens=True)
+                 
+                # input_tokens = tokenizer.tokenize(input_sentence)
+                input_ids = origin_tokenizer.convert_tokens_to_ids(input_tokens)
+                attention_mask = [0 if v == origin_tokenizer.mask_token else 1 for v in input_tokens]
+
+
 
                 # Create label IDs where the masked token corresponds to the object ID
                 label_ids = [
-                    obj_id if t == tokenizer.mask_token_id else -100 for t in input_ids
+                    obj_id if t == origin_tokenizer.mask_token_id else -100 for t in input_ids
                 ]
 
                 item = {
@@ -176,8 +190,12 @@ def train():
         args.model_load_dir, config=bert_config
     )
     if not os.path.isdir( args.model_load_dir) and args.token_recode:
-        print("repair token embedding")
-        util.token_layer(bert_model, additional_token_dict,enhance_tokenizer, origin_tokenizer)
+        print("recode token embedding")
+        util.token_layer(bert_model, 
+                         additional_token_dict,
+                         enhance_tokenizer=enhance_tokenizer, 
+                         origin_tokenizer=origin_tokenizer, 
+                         recode_type=args.recode_type)
     else:
         bert_model.resize_token_embeddings(len(enhance_tokenizer))
     # else:
@@ -190,11 +208,13 @@ def train():
     # is_train can be used to resume train process in formal training
     is_train = os.path.isdir(args.model_load_dir)
     tokenizer = enhance_tokenizer
-    bert_model.resize_token_embeddings(len(tokenizer))
     # Create the training dataset using the MLMDataset class, providing the train data file, tokenizer, and template file
     train_dataset = MLMDataset(
-        data_fn=args.train_fn, tokenizer=tokenizer, template_fn=args.template_fn,
+        data_fn=args.train_fn, origin_tokenizer=origin_tokenizer, 
+        enhance_tokenizer=enhance_tokenizer,
+        template_fn=args.template_fn,
         silver_data=args.silver_data,
+
     )
     print("trainset size",len(train_dataset))
     # transformers.BertForMaskedLM()
@@ -205,11 +225,11 @@ def train():
     )
 
     # Create the development dataset using the MLMDataset class, providing the dev data file, tokenizer, and template file
-    dev_dataset = MLMDataset(
-        data_fn=args.dev_fn,
-        tokenizer=tokenizer,
-        template_fn=args.template_fn,
-    )
+    # dev_dataset = MLMDataset(
+    #     data_fn=args.dev_fn,
+    #     tokenizer=tokenizer,
+    #     template_fn=args.template_fn,
+    # )
 
     # Resize the token embeddings of the BERT model to match the tokenizer's vocabulary size
     # bert_model.resize_token_embeddings(len(bert_tokenizer))
@@ -243,7 +263,7 @@ def train():
         data_collator=bert_collator,
         train_dataset=train_dataset,
         args=training_args,
-        eval_dataset=dev_dataset,
+        # eval_dataset=dev_dataset,
         tokenizer=tokenizer,
     )
 
@@ -416,8 +436,13 @@ def test_pipeline():
     # Read the prompt templates from the specified file
     prompt_templates = util.file_read_prompt(args.template_fn)
 
-    # Read the test data rows from the specified file
-    test_rows = util.file_read_json_line(args.test_fn)
+    if args.do_test:
+        test_fn = args.test_fn
+    else:
+        test_fn = args.valid_fn
+    test_rows = util.file_read_json_line(test_fn)
+    
+        
 
     prompts = []
     for row in test_rows:
@@ -441,6 +466,18 @@ def test_pipeline():
 
     if args.filter:
         print('filter"')
+
+    if os.path.exists(rel_thres_fn):
+        with open(rel_thres_fn, 'r') as f:
+            rel_thres_dict = json.load(f)
+    else:
+        rel_thres_dict = dict()
+    negative_vocabulary = {'[CLS]'}
+    topk_dict = dict()
+    predefine_fine = 'res/object_number.tsv'
+    with open(predefine_fine) as f:
+        topk = csv.DictReader(f, delimiter="\t")
+        topk_dict = { row["Relation"]:eval(row['Val']) for row in topk}
     for row, output in tqdm(zip(test_rows, outputs),total=len(test_rows)):
         objects_wikiid = []
         objects = []
@@ -449,12 +486,18 @@ def test_pipeline():
         entity_type = config.relation_entity_type_dict[relation][1]
         type_entity_set = type_entity_dict[entity_type]
         # print(entity_type,len(type_entity_set))
-        # print("type_entity_set",type_entity_set)
+        # print(relation, len(type_entity_set))
+        entity_count = 0
+        min_t, max_t = topk_dict[relation]
         for seq in output:
             obj = seq["token_str"]
             score = seq["score"]
-            # if obj in negative_vocabulary:
-            #     continue
+            if  args.do_test:
+                if score < rel_thres_dict[relation]:
+                    break
+            if obj in negative_vocabulary:
+                continue
+
             if args.filter:
                 # print('entity filter')
                 # print('type_entity',len(type_entity))
@@ -463,14 +506,31 @@ def test_pipeline():
                     continue
             if obj.startswith("##"):
                 continue
-            if obj == config.EMPTY_TOKEN:
-                obj = ''
-            
-            wikidata_id= util.disambiguation_baseline(obj)
-            objects_wikiid.append(wikidata_id)
+            # if len(objects) > max_t*2:
+            #     break
+            if entity_type ==  "Number":
+                if not str.isdigit(obj):
+                    continue
+                if relation  == "PersonHasNumberOfChildren" and int(obj) >10:
+                    continue
+                wikidata_id = obj
 
+            elif obj == config.EMPTY_TOKEN:
+                if min_t == 0:
+                    obj = ''
+                    wikidata_id = ''
+                else:
+                    continue
+            else:
+                # if entity_type in {"Person", 'Company','Language','City'}
+                if obj not in type_entity_set:
+                    continue
+                wikidata_id= util.disambiguation_baseline(obj)
+
+            objects_wikiid.append(wikidata_id)
             objects.append(obj)
             scores.append(score)
+            entity_count+=1
         result_row = {
             "SubjectEntityID": row["SubjectEntityID"],
             "SubjectEntity": row["SubjectEntity"],
@@ -487,141 +547,18 @@ def test_pipeline():
     util.file_write_json_line(args.output_fn, results)
     util.save_entity_id()
     logger.info(f"Start Evaluate ...")
-    evaluate.evaluate(args.output_fn, args.test_fn)
-
-    evaluate.assign_label(args.output_fn, args.test_fn)
-  
-
-def test_pipeline_origin():
-    # Load the configuration for the trained BERT model from the specified directory
-    bert_config = transformers.AutoConfig.from_pretrained(args.model_best_dir)
-
-    # Load the trained BERT model for masked language modeling
-    bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
-        args.model_best_dir, config=bert_config
-    )
-
-    # Create a pipeline for the specified task using the loaded BERT model and tokenizer
-    pipe = pipeline(
-        task=task,
-        model=bert_model,
-        tokenizer=enhance_tokenizer,
-        top_k=args.top_k,
-        device=args.gpu,
-    )
-
-    # Read the prompt templates from the specified file
-    prompt_templates = util.file_read_prompt(args.template_fn)
-
-    # Read the test data rows from the specified file
-    test_rows = util.file_read_json_line(args.test_fn)
-
-    prompts = []
-    for row in test_rows:
-        # Generate a prompt for each test row using the corresponding template
-        prompt = prompt_templates[row["Relation"]].format(
-            subject_entity=row["SubjectEntity"],
-            mask_token=enhance_tokenizer.mask_token,
-        )
-        prompts.append(prompt)
-
-    logger.info(f"Running the model...")
-
-    # Run the model on the generated prompts in batches
-    outputs = pipe(prompts, batch_size=args.train_batch_size * 4)
-
-    logger.info(f"End the model...")
-
-    results = []
-    rel_thres_fn = f"{config.RES_DIR}/relation-threshold.json"
-
-    # use the saved threshold of each relationship
-    # a adaptive threshold or tok-k function is are the works
-    if os.path.exists(rel_thres_fn):
-        with open(rel_thres_fn, 'r') as f:
-            rel_thres_dict = json.load(f)
-    else:
-        rel_thres_dict = dict()
-
-    for row, output, prompt in zip(test_rows, outputs, prompts):
-        objects_wikiid = []
-        objects = []
-
-        for seq in output:
-            # Check if the relation is present in the relation-threshold dictionary
-            if row[config.KEY_REL] not in rel_thres_dict:
-                print(f"{row[config.KEY_REL]} not in rel_thres_dict")
-
-                # Assign a threshold value for the relation if it's not present
-                rel_thres_dict[row[config.KEY_REL]] = args.threshold
-
-            # Filter the output sequence based on the relation threshold
-            if seq["score"] > rel_thres_dict[row[config.KEY_REL]]:
-                obj = seq["token_str"]
-
-                if obj == config.EMPTY_TOKEN:
-                    objects_wikiid.append(config.EMPTY_STR)
-                    objects = [config.EMPTY_STR]
-                    break
-                else:
-                    # Perform disambiguation using a baseline method for the object
-                    wikidata_id = util.disambiguation_baseline(obj)
-                    objects_wikiid.append(wikidata_id)
-
-                objects.append(obj)
-
-        if config.EMPTY_STR in objects:
-            objects = [config.EMPTY_STR]
-
-        # Create a result row with the subject entity, object entities, and relation
-        result_row = {
-            "SubjectEntityID": row["SubjectEntityID"],
-            "SubjectEntity": row["SubjectEntity"],
-            "ObjectEntitiesID": objects_wikiid,
-            "ObjectEntities": objects,
-            "Relation": row["Relation"],
-        }
-        results.append(result_row)
-
-    # Save the results to the specified output file
-    logger.info(f"Saving the results to \"{args.output_fn}\"...")
-    util.file_write_json_line(args.output_fn, results)
-
-    logger.info(f"Start Evaluate ...")
-    evaluate.evaluate(args.output_fn, args.test_fn)
-
-    evaluate.assign_label(args.output_fn, args.test_fn)
-
-
-# def topk_process(input_list):
-#     relation, pred_list = input_list
-#     predefine_fine = 'res/object_number.tsv'
-#     with open(predefine_fine) as f:
-#         topk = csv.DictReader(f, delimiter="\t")
-#         topk_max_dict = { row["Relation"]:eval(row['Val'])[1] for row in topk}
-#     groud_list = relation_list_groud[relation]
-#     origin_topk = topk_max_dict[relation]
-#     best_f1=0
-#     best_topk=0
-#     for i in tqdm(range(origin_topk*2,origin_topk//2,-1)):
-#         for row in pred_list:
-#             row['ObjectEntities'] = row['ObjectEntities'][:i]
-#         f1 = evaluate.evaluate_list(groud_list, pred_list)[relation]['f1']
-#         if f1> best_f1:
-#             best_f1=f1
-#             best_topk =i
-
-#     return best_topk,best_f1
-
+    # evaluate.evaluate(args.output_fn, args.test_fn)
+    if args.do_valid:
+        evaluate.assign_label(args.output_fn, args.valid_fn)
 
 def adaptive_top_k():
-    origin_result_dict = evaluate.evaluate(args.output_fn, args.test_fn)
+    origin_result_dict = evaluate.evaluate(args.output_fn, args.valid_fn)
     predefine_fine = 'res/object_number.tsv'
     with open(predefine_fine) as f:
         topk = csv.DictReader(f, delimiter="\t")
         topk_max_dict = { row["Relation"]:eval(row['Val'])[1] for row in topk}
     pred_rows = util.file_read_json_line(args.output_fn)
-    groud_rows = util.file_read_json_line(args.test_fn)
+    groud_rows = util.file_read_json_line(args.valid_fn)
     relation_list_pred = dict()
     relation_list_groud = dict()
     best_topk_dict=dict()
@@ -647,6 +584,7 @@ def adaptive_top_k():
                 continue
             for row in pred_list:
                 row['ObjectEntities'] = row['ObjectEntities'][:i]
+                row['ObjectEntitiesID'] = row['ObjectEntitiesID'][:i]
             f1 = evaluate.evaluate_list(groud_list, pred_list)[relation]['f1']
             if f1> best_f1:
                 best_f1=f1
@@ -664,12 +602,12 @@ def adaptive_top_k():
         }
     util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
     scores_per_relation_pd = pd.DataFrame(origin_result_dict)
-    print(scores_per_relation_pd.transpose().round(2))
+    print(scores_per_relation_pd.transpose().round(2).to_string(max_cols=12))
 
 
 
 def adaptive_threshold():
-    origin_result_dict = evaluate.evaluate(args.output_fn, args.test_fn)
+    origin_result_dict = evaluate.evaluate(args.output_fn, args.valid_fn)
     predefine_fine = 'res/object_number.tsv'
     with open(predefine_fine) as f:
         topk = csv.DictReader(f, delimiter="\t")
@@ -678,7 +616,7 @@ def adaptive_threshold():
     for k,v in topk_max_dict.items():
         threshold_initial_dict[k] = 1/float(v)
     pred_rows = util.file_read_json_line(args.output_fn)
-    groud_rows = util.file_read_json_line(args.test_fn)
+    groud_rows = util.file_read_json_line(args.valid_fn)
     relation_list_pred = dict()
     relation_list_groud = dict()
     best_topk_dict=dict()
@@ -694,6 +632,8 @@ def adaptive_threshold():
             relation_list_groud[relation]=[]
         relation_list_groud[relation].append(row)
 
+    relation_threshold_dict = dict()
+    print('threshold_initial_dict',threshold_initial_dict)
     for relation, pred_list in tqdm(relation_list_pred.items()):
         groud_list = relation_list_groud[relation]
         origin_topk = topk_max_dict[relation]
@@ -703,10 +643,19 @@ def adaptive_threshold():
         origin_threshold = threshold_initial_dict[relation]
         best_threshold=0
         threshold_step = 0.01
-        for i in range(1,int((origin_threshold*3)/threshold_step),1):
+        for i in range(1,int(1//threshold_step)):
             threshold = threshold_step*i
+
             for row in pred_list:
-                row['ObjectEntities'] =list(map(lambda t:t[1], filter(lambda t: t[0]>=threshold, zip(row['ObjectEntitiesScore'],  row['ObjectEntities']))))
+                score_index = 0 
+                for i, score in enumerate(row['ObjectEntitiesScore']):
+                    if score <= threshold:
+                        score_index = i
+                        break
+
+                row['ObjectEntities'] =row['ObjectEntities'][:score_index]
+                row['ObjectEntitiesID'] =row['ObjectEntitiesID'][:score_index]
+
             eval_dict = evaluate.evaluate_list(groud_list, pred_list)[relation]
             f1 = eval_dict['f1']
             p = eval_dict['p']
@@ -716,14 +665,21 @@ def adaptive_threshold():
                 best_threshold =threshold
                 best_precision= p 
                 best_recal= r
+
+  
+        
+        relation_threshold_dict[relation] = best_threshold
         best_topk_dict[relation] = [best_threshold,best_f1] 
-        origin_result_dict[relation]["best_threshold"]=best_threshold
-        origin_result_dict[relation]["best_f1"]=best_f1
+     
         origin_result_dict[relation]["best_precision"]=best_precision
         origin_result_dict[relation]["best_recal"]=best_recal
+        origin_result_dict[relation]["best_f1"]=best_f1
+        origin_result_dict[relation]["best_threshold"]=best_threshold
+       
         #origin_result_dict[relation]["origin_threshold"]=origin_threshold
-    
 
+    with open(rel_thres_fn,'w') as f:
+        json.dump(relation_threshold_dict,f,indent = 2)
     origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
     origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
     origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
@@ -733,7 +689,7 @@ def adaptive_threshold():
         }
     util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
     scores_per_relation_pd = pd.DataFrame(origin_result_dict)
-    print(scores_per_relation_pd.transpose().round(2).to_string(max_cols=12))
+    print(scores_per_relation_pd.transpose().round(4).to_string(max_cols=12))
 
 
 
@@ -847,6 +803,13 @@ if __name__ == "__main__":
         required=True,
         help="CSV file containing train data for few-shot examples (required)",
     )
+    parser.add_argument(
+        "--valid_fn",
+        type=str,
+        required=True,
+        help="CSV file containing train data for few-shot examples (required)",
+    )
+    
     
     parser.add_argument(
         "--pretrain_model",
@@ -865,20 +828,31 @@ if __name__ == "__main__":
         help="Batch size for the model. (default:32)",
     )
 
-    parser.add_argument(
-        "--mode",
-        type=str,
-        default="train eval test",
-        help="Batch size for the model. (default:32)",
-    )
-
-    
+      
     parser.add_argument(
         "--silver_data",
         type=str2bool,
         help="Batch size for the model. (default:32)",
     )
 
+    parser.add_argument(
+        "--do_train",
+        type=str2bool,
+        default = False,
+        help="Batch size for the model. (default:32)",
+    )
+    parser.add_argument(
+        "--do_valid",
+        type=str2bool,
+        default = False,
+        help="Batch size for the model. (default:32)",
+    )
+    parser.add_argument(
+        "--do_test",
+        type=str2bool,
+        default = False,
+        help="Batch size for the model. (default:32)",
+    )
     parser.add_argument(
         "--filter",
         type=str2bool,
@@ -887,6 +861,12 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--label",
+        type=str,
+        default='null',
+        help="Batch size for the model. (default:32)",
+    )
+    parser.add_argument(
+        "--recode_type",
         type=str,
         default='null',
         help="Batch size for the model. (default:32)",
@@ -901,13 +881,16 @@ if __name__ == "__main__":
     negative_vocabulary_fn = f'data/negave_vocabulary.json'
     #with open(negative_vocabulary_fn) as f:
     #    negative_vocabulary = set(json.load(f))
-    if "train" in args.mode:
+    if  args.do_train:
         train()
 
-    if "test" in args.mode:
+    if  args.do_valid:
         test_pipeline()
+        # adaptive_top_k()
         adaptive_threshold()
 
-    if "predict" in args.mode:
-        predict()
+    if args.do_test:
+        test_pipeline()
+
+ 
         # adaptive_threshold()

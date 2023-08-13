@@ -1,0 +1,45 @@
+BandHasMember                &  0.000& 0.960 & 0.000  &     0.7387  &    0.0104 &  0.0132            
+CityLocatedAtRiver           &  0.018& 0.145 & 0.020  &     0.4058  &    0.1100 &  0.1013                      
+CompanyHasParentOrganisation &  0.060& 0.640 & 0.053  &     0.5933  &    0.6233 &  0.5773                   
+CompoundHasParts             &  0.164& 0.475 & 0.179  &     0.7987  &    0.8207 &  0.7918                   
+CountryBordersCountry        &  0.372& 0.709 & 0.443  &     0.5757  &    0.4263 &  0.4481            
+CountryHasOfficialLanguage   &  0.760& 0.685 & 0.668  &     0.8564  &    0.6873 &  0.6995        
+CountryHasStates             &  0.002& 0.076 & 0.005  &     0.1760  &    0.0607 &  0.0779        
+FootballerPlaysPosition      &  0.413& 0.143 & 0.206  &     0.1776  &    0.6700 &  0.2705        
+PersonCauseOfDeath           &  0.040& 0.012 & 0.019  &     0.6800  &    0.6800 &  0.6800        
+PersonHasAutobiography       &  0.000& 0.950 & 0.000  &     0.0000  &    0.0000 &  0.0000            
+PersonHasEmployer            &  0.000& 0.970 & 0.000  &     0.0646  &    0.0717 &  0.0317    
+PersonHasNoblePrize          &  0.000& 0.000 & 0.000  &     0.7900  &    0.6000 &  0.5433                
+PersonHasNumberOfChildren    &  0.000& 0.000 & 0.000  &     0.2675  &    0.7700 &  0.3920                    
+PersonHasPlaceOfDeath        &  0.091& 0.641 & 0.088  &     0.6364  &    0.5455 &  0.5253    
+PersonHasProfession          &  0.000& 0.700 & 0.000  &     0.1883  &    0.1008 &  0.1097        
+PersonHasSpouse              &  0.000& 0.890 & 0.000  &     0.0000  &    0.0000 &  0.0000        
+PersonPlaysInstrument        &  0.000& 0.110 & 0.000  &     0.2553  &    0.5154 &  0.3141    
+PersonSpeaksLanguage         &  0.383& 0.310 & 0.316  &     0.7007  &    0.6433 &  0.6287                      
+RiverBasinsCountry           &  0.423& 0.402 & 0.345  &     0.4953  &    0.5323 &  0.4670            
+SeriesHasNumberOfEpisodes    &  0.000& 1.000 & 0.000  &     0.0790  &    0.4300 &  0.1312                       
+StateBordersState            &  0.016& 0.132 & 0.016  &     0.0889  &    0.1684 &  0.1035                      
+*** Average ***              &  0.131& 0.474 & 0.112  &     0.4080  &    0.4031 &  0.3289                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

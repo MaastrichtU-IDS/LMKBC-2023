@@ -10,11 +10,11 @@ import torch
 
 
 pretrain_model_name = config.bert_base_cased
-task = "pretrain_fill-mask"
+task = "pretrain-val_test-recode"
 print(torch.cuda.is_available())
 model_save_dir = f"{config.BIN_DIR}/{task}/{pretrain_model_name}"
 # final_corpus_fn = f"{config.RES_DIR}/additional_corpus/fm_pretrain_2.txt"
-final_corpus_fn = f"{config.RES_DIR}/wikidata/no_person_serises/filter.json"
+final_corpus_fn = f"res/wikidata/val_test/filter.json"
 
 # res/wikidata/no_person_serises/filter.json
 model_best_dir = model_save_dir+'/best_ckpt'
@@ -34,11 +34,10 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python {config.SRC_DIR}/pre_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu  0  --train_epoch 10 --learning_rate 3e-5  --mask_strategy single  --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}
-
+   python src/pre_fm_model.py   --train_fn {final_corpus_fn}  --train_batch_size 16 --gpu  0  --train_epoch 20 --learning_rate 5e-5  --mask_strategy random  --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir} --token_recode true
 
     """
-
+    print('model_best_dir', model_best_dir)
     print(cmd_run_fillmask)
     os.system(cmd_run_fillmask)
 

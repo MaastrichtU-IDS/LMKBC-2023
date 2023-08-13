@@ -53,7 +53,7 @@ for key in entity_set:
     entity_dict[key] = 0
 
 
-label= "Country-Language-State"
+label= "silver_val_test"
 origin_dir  = f'{config.RES_DIR}/wikidata/origin'
 
 if not os.path.exists( f'{config.RES_DIR}/wikidata/{label}'):
@@ -258,7 +258,7 @@ def display_entity_distribution():
     for k,v in entity_dict.items():
         if v == 0:
             zero_entity_number +=1 
-        if v<5:
+        if v<1:
             entity_collection.append(k)
             entity_type = entity_type_dict[k]
             if entity_type not in type_count_dict:
@@ -266,7 +266,7 @@ def display_entity_distribution():
             type_count_dict[entity_type]+=1
 
     # print("type_count_dict", json.dumps(type_count_dict,indent=2))
-    print("entity_collection",len(entity_collection))
+    print("zero entity collection",len(entity_collection))
     for k,v in type_count_dict.items():
         print(k,v)
 

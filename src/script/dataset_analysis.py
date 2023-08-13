@@ -2,12 +2,17 @@ import json
 import os
 import random
 import sys
+import pandas as pd
+
+from sympy import to_cnf
+
+
 
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), 'src'))
 print("parent path ", parent_dir)
 print('cwd path', os.getcwd())
 sys.path.append(parent_dir)
-
+import evaluate as evaluate
 from glob import glob
 
 import config
@@ -20,8 +25,8 @@ with open(f'{config.RES_DIR}/tokenizer/bert/added_tokens.json') as f:
     entity_dic_jt = json.load(f)
 
 train_line = util.file_read_json_line(config.TRAIN_FN)
-val_line = util.file_read_json_line(config.VAL_FN)
-all_gold_lines = train_line + val_line
+valid_line = util.file_read_json_line(config.VAL_FN)
+all_gold_lines = train_line + valid_line
 
 origin_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
 enhance_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
@@ -300,10 +305,13 @@ def collect_entity_for_tokenizer():
 
 
 def collect_entity_for_pretrain():
+    test_silver_fp = 'res/test_silver.jsonl'
     exclude_entities = {}
     exclude_entities = {"Person"}
+    test_row = util.file_read_json_line(config.test_fp)
     sub_type ={s for s,_ in  config.relation_entity_type_dict.values()}
     obj_type ={o for s, o in  config.relation_entity_type_dict.values()}
+    all_type = sub_type|obj_type
     sub_only_type = sub_type - obj_type
     # exclude_entities = exclude_entities | s_type
     exclude_entities = {'Series', 'Person','Number','Instrument','Position','Profession','Band','Company'}
@@ -319,17 +327,23 @@ def collect_entity_for_pretrain():
         with open(filename) as f:
             lines = util.file_read_json_line(filename)
             silver_lines.extend(lines)
-    gold_dict, gold_entity_sentence = count_entity_distribution(all_gold_lines,
+    test_silver_line = util.file_read_json_line(test_silver_fp)
+    gold_dict, gold_entity_sentence = count_entity_distribution(valid_line,
                                           merge_subject=True,
-                                          include_entities=include_entities,
+                                          include_entities=all_type,
                                           )
-    siler_dict,silver_entity_sentence = count_entity_distribution(silver_lines,
+    silver_dict,silver_entity_sentence = count_entity_distribution(test_row,
                                             merge_subject=True,
-                                            include_entities=include_entities,
+                                            include_entities=all_type,
+                                            # give_up_relation=give_up_relation
+                                            )
+    test_silver_dict,silver_entity_sentence = count_entity_distribution(test_silver_line,
+                                            merge_subject=True,
+                                            include_entities=all_type,
                                             # give_up_relation=give_up_relation
                                             )
     
-    result_dict=merge_dict([gold_dict,siler_dict])
+    result_dict=merge_dict([gold_dict,silver_dict,test_silver_dict])
 
     # entity_type_dict = dict()
     # for k, v in result_dict.items():
@@ -365,6 +379,45 @@ def collect_entity_for_pretrain():
     
     
  
+def collect_entity_for_pretrain_test():
+    exclude_entities = {}
+    exclude_entities = {"Person"}
+    sub_type ={s for s,_ in  config.relation_entity_type_dict.values()}
+    obj_type ={o for s, o in  config.relation_entity_type_dict.values()}
+    all_type = sub_type| obj_type
+    sub_only_type = sub_type - obj_type
+    # exclude_entities = exclude_entities | s_type
+    exclude_entities = {'Series', 'Person','Number','Instrument','Position','Profession','Band','Company'}
+    include_entities ={'State','Country','Language'}
+    # exclude_entities = {'Person'}
+    print("exclude_entities",exclude_entities)
+    exclude_subject={"RiverBasinsCountry"}
+    give_up_relation = {"SeriesHasNumberOfEpisodes" }
+    silver_lines = []
+    file_name_list = glob(f'{config.RES_DIR}/silver/*.jsonl', recursive=True)
+    print("file_name_list", len(file_name_list))
+    for filename in file_name_list:
+        with open(filename) as f:
+            lines = util.file_read_json_line(filename)
+            silver_lines.extend(lines)
+    test_lines = util.file_read_json_line(config.test_silver_fp)
+    result_dict, gold_entity_sentence = count_entity_distribution(test_lines,
+                                          merge_subject=True,
+                                          include_entities=all_type,
+                                          merge_object=True
+                                          )
+
+    display_entity_dict(result_dict)
+    # count_entity_distribution(all_lines)
+    entity_fp = f'{config.RES_DIR}/entity_for_pretrain_test.json'
+    for k, v in result_dict.items():
+        result_dict[k] = list(v)
+    with open(entity_fp, mode='w') as f:
+        json.dump(result_dict,f,indent=2,sort_keys=True)
+
+    
+    
+ 
 
 
 def display_entity_dict(entity_dict):
@@ -380,8 +433,10 @@ def display_entity_dict(entity_dict):
 def count_entity_distribution(all_lines,
                               remove_tokenizer=True,
                               merge_subject = False,
+                               merge_object = True,
                               include_entities={},
                               give_up_relation={},
+
                               ):
     entity_dict =dict()
     entity_sentence = dict()
@@ -396,18 +451,18 @@ def count_entity_distribution(all_lines,
         sub_type, obj_type = config.relation_entity_type_dict[relation]
         if merge_subject:
             # print(relation, exclude_subject)
-            if sub_type  in include_entities:
+            if  sub_type  in include_entities:
                 if sub_type not in  entity_dict:
                     entity_dict[sub_type] = set()
                 entity_dict[sub_type].add(sub)
                 entity_sentence[sub] = line
-
-        if obj_type  in include_entities:
-            if obj_type not in  entity_dict:
-                entity_dict[obj_type] = set()         
-            entity_dict[obj_type].update(objs)
-            for obj in objs:
-                entity_sentence[obj] = line
+        if merge_object:
+            if obj_type  in include_entities:
+                if obj_type not in  entity_dict:
+                    entity_dict[obj_type] = set()         
+                entity_dict[obj_type].update(objs)
+                for obj in objs:
+                    entity_sentence[obj] = line
         # if 'Number' in entity_dict:
         #     entity_dict['Number'] = set(filter(lambda x: str.isdigit(x), entity_dict['Number']))
         # for k, v in entity_dict.items():
@@ -516,13 +571,92 @@ def same_id_numer():
 
 
 def tokenize():
-    entity = 'United States of America'
-    tokens = origin_tokenizer.tokenize(entity)
-    print(tokens)
-            
+    entity_list =["Japan", "People's Republic of China", "North Korea"]
+    for e in entity_list:
+        print(e,  origin_tokenizer.tokenize(e))
+    print(origin_tokenizer.mask_token)
+
+
+def rows_to_dict(rows):
+    return {(r["SubjectEntity"], r["Relation"]): r for r in rows}
+
+def according_test():
+    test_row = util.file_read_json_line(config.test_fp)
+    val_row = util.file_read_json_line(config.VAL_FN)
+    silver_lines = []
+    file_name_list = glob(f'{config.RES_DIR}/silver/*.jsonl', recursive=True)
+    print("file_name_list", len(file_name_list))
+    for filename in file_name_list:
+        with open(filename) as f:
+            lines = util.file_read_json_line(filename)
+            silver_lines.extend(lines)
+    test_dict = rows_to_dict(test_row)
+    val_dict = rows_to_dict(val_row)
+    silver_dict = rows_to_dict(silver_lines)
+    result_lines= []
+    for test_key in test_dict.keys():
+        if test_key in silver_dict:
+            result_lines.append(silver_dict[test_key])
+        
+    # util.file_write_json_line('res/test_silver.jsonl',result_lines)
+    test_silver_fp = 'res/test_silver.jsonl'
+    util.file_write_json_line('res/test_silver.jsonl',result_lines)
+    print(len(result_lines))
+
+
+def token_weight():
+    corpus_fp = 'res/wikidata/Country-Language-State/filter.json'
+    lines = util.file_read_json_line(corpus_fp)
+    token_count = dict()
+    for line in tqdm(lines):
+        sentence = line['sentence']
+        tokens_ids = origin_tokenizer.encode(sentence)
+        for t in tokens_ids:
+            if t not in token_count:
+                token_count[t] = 0
+            token_count[t]+=1
+    token_count_fp = config.token_count_fp
+    json.dump( token_count,open(token_count_fp,'w'),indent=2)
+
+def case_study():
+    aim_fp = 'output/filled-mask/token_recode_std/filled-mask-valid.jsonl'
+    std_lines = util.file_read_json_line(aim_fp)
+    baseline_line = 'output/filled-mask/fine-tune/filled-mask-valid.jsonl'
+    bl_lines = util.file_read_json_line(baseline_line)
+    std_dict = util.rows_to_dict(std_lines)
+    for bl in bl_lines:
+        std_line = std_dict[bl[config.KEY_SUB],bl[config.KEY_REL]]
+        if sum( bl['ObjectLabels']) < sum(std_line['ObjectLabels']):
+            print()
+            print(bl)
+            print(std_line)
+
+
+def print_result():
+    aim_fp = 'output/filled-mask/pretrain-val_test/filled-mask-valid.jsonl'
+    std_lines = util.file_read_json_line(aim_fp)
+    baseline_line = 'testrun-bert.jsonl'
+    bl_lines = util.file_read_json_line(baseline_line)
+    std_result = evaluate.evaluate_list(valid_line,std_lines)
+    bl_result = evaluate.evaluate_list(valid_line,bl_lines)
+    # std_dict = util.rows_to_dict(std_lines)
+    for bl in bl_result.keys():
+        std_line = std_result[bl]
+        bl_result[bl]['p1'] = std_line['p']
+        bl_result[bl]['r1'] = std_line['r']
+        bl_result[bl]['f11'] = std_line['f1']
+    pd_result = pd.DataFrame(bl_result)
+    print(pd_result.transpose().round(4).to_string(max_cols=12,decimal='&'))
+
 if __name__ == "__main__":
-    # collect_entity_for_pretrain()
-    collect_entity_for_tokenizer()
+    collect_entity_for_pretrain()
+    # collect_entity_for_pretrain_test()
+    # collect_entity_for_tokenizer()
     # collection_ids()
     # same_id_numer()
     # tokenize()
+    # according_test()
+    # token_weight() 
+    # print(sum([0,0,1]))
+    # print_result()
+

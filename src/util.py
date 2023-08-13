@@ -321,7 +321,7 @@ def assemble_result(origin_rows, outputs):
 
 
 
-def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhance_tokenizer,origin_tokenizer):
+def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhance_tokenizer,origin_tokenizer,recode_type):
     # BertForMaskedLM.get_input_embeddings()
     # BertForMaskedLM.set_input_embeddings()
     num_new_tokens = len(enhance_tokenizer.vocab)
@@ -382,12 +382,45 @@ def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhanc
     #      position_dim_0_new, old_embedding_dim
     # )
     # new_embeddings.padding_idx = embedding_layer.clone()
+    if recode_type == 'std':
+        tw = Token_Weight()
     for entity,index in additional_token_dict.items():
         token_ids = origin_tokenizer.encode(entity)
-        new_output =   torch.mean(old_output_embedding.weight.data[token_ids,:],0,keepdim = True)
-        new_input =  torch.mean(old_token_embedding.weight.data[token_ids,:],0,keepdim = True)
-        new_cls_bias = torch.mean(model.cls.predictions.bias.data[token_ids],0)
-        new_cls_decoder_data = torch.mean(model.cls.predictions.decoder.weight.data[token_ids,:],0,keepdim = True)
+      
+        old_output = old_output_embedding.weight.data[token_ids,:]
+        old_input = old_token_embedding.weight.data[token_ids,:]
+        old_cls_bias = model.cls.predictions.bias.data[token_ids]
+        old_cls_decoder_data = model.cls.predictions.decoder.weight.data[token_ids,:]
+
+        # print("old_output",old_output.shape)
+        # print("weight",weight.shape)
+        if recode_type == 'std':
+            weight = tw.token_weight(token_ids)
+            new_output =   torch.multiply(old_output,weight).mean(dim=0)
+            # print('new_output',new_output.shape)
+            new_input =  torch.multiply(old_input,weight).mean(dim=0)
+            # print('old_cls_bias',old_cls_bias.shape)
+            new_cls_bias = torch.multiply(old_cls_bias,weight).mean()
+            # print('new_cls_bias',new_cls_bias.shape)
+            new_cls_decoder_data =torch.multiply(old_cls_decoder_data,weight).mean(dim=0)
+        elif recode_type == 'mean':
+            new_output =   torch.mean(old_output,0,keepdim = True)
+            new_input =  torch.mean(old_input,0,keepdim = True)
+            new_cls_bias = torch.mean(old_cls_bias)
+            new_cls_decoder_data = torch.mean(old_cls_decoder_data,0,keepdim = True)
+        elif recode_type == 'min':
+            new_output =   torch.min(old_output,0,keepdim = True)[0]
+            new_input =  torch.min(old_input,0,keepdim = True)[0]
+            new_cls_bias = torch.min(old_cls_bias)
+            new_cls_decoder_data = torch.min(old_cls_decoder_data,0,keepdim = True)[0]
+        elif recode_type == 'max':
+            new_output =   torch.max(old_output,0,keepdim = True)[0]
+            new_input =  torch.max(old_input,0,keepdim = True)[0]
+            new_cls_bias = torch.max(old_cls_bias)
+            new_cls_decoder_data = torch.max(old_cls_decoder_data,0,keepdim = True)[0]
+        else:
+            raise Exception('recode_type should be in (max. min,std, mean)')
+
 
         new_output_embeddings.weight.data[index, :] =new_output
         new_input_embeddings.weight.data[index,:] =new_input
@@ -406,6 +439,26 @@ def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhanc
     model.config.vocab_size = num_new_tokens
     model.vocab_size = num_new_tokens
 
+class Token_Weight:
+    def __init__(self):
+        self._weight:dict = json.load(open(config.token_count_fp))
+    def token_weight(self, token_ids:list):
+        count_ids = [1/self._weight[str(i)]**2 if str(i) in self._weight else 0.00001 for i in token_ids]
+        count_tensor = torch.tensor(count_ids)
+
+        std = torch.std(count_tensor)
+        mean_c = torch.mean(count_tensor)
+        n1 = (count_tensor-mean_c)/std
+
+
+        # count_softmax = torch.softmax(count_tensor,dim=0)
+
+        # min_c = torch.min(count_tensor)
+        # max_c =  torch.max(count_tensor)
+        # n1 = (count_tensor - min_c)/(max_c - min_c)
+        return n1.unsqueeze(0).t()
+
+   
 
 def str2bool(v):
     if isinstance(v, bool):
@@ -417,3 +470,6 @@ def str2bool(v):
     else:
         raise argparse.ArgumentTypeError('Boolean value expected.')
  
+
+def rows_to_dict(rows):
+    return {(r["SubjectEntity"], r["Relation"]): r for r in rows}

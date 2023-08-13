@@ -35,7 +35,9 @@ PRETRAIN_FN = f'{DATA_DIR}/pretrain_corpus.jsonl'
 TRAIN_FN = f'{DATA_DIR}/train.jsonl'
 TRAIN_TINY_FN = f'{DATA_DIR}/train_tiny.jsonl'
 VAL_FN = f'{DATA_DIR}/val.jsonl'
+test_fp = f'data/test.jsonl'
 prompt_fp = f'res/prompts0.csv'
+token_count_fp = 'res/token_count.json'
 RESULT_FN= f'{RES_DIR}/results.jsonl'
 KEY_OBJS = "ObjectEntities"
 KEY_REL = "Relation"
@@ -43,7 +45,7 @@ KEY_SUB = "SubjectEntity"
 OBJLABELS_KEY = 'ObjectLabels'
 KEY_SUB_ID='SubjectEntityID'
 KEY_OBJS_ID= 'ObjectEntitiesID'
-
+test_silver_fp = 'res/test_silver.jsonl'
 FROM_KG = 'from'
 TO_KG = 'to'
 

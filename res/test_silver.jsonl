@@ -1,0 +1,646 @@
+{"SubjectEntity": "Thailand", "ObjectEntities": ["Myanmar", "Malaysia", "Cambodia", "Vietnam", "India", "Laos", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Brazil", "ObjectEntities": ["Paraguay", "Guyana", "Peru", "Venezuela", "Argentina", "Colombia", "Suriname", "Uruguay", "Bolivia", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Poland", "ObjectEntities": ["Russia", "Belarus", "Ukraine", "Lithuania", "Soviet Union", "Slovakia", "Czechoslovakia", "Denmark", "Czech Republic", "Germany", "Latvia", "Sweden"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "East Timor", "ObjectEntities": ["Australia", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Democratic Republic of the Congo", "ObjectEntities": ["Central African Republic", "Rwanda", "Angola", "Burundi", "Tanzania", "Uganda", "Republic of the Congo", "South Sudan", "Sudan", "Zambia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Central African Republic", "ObjectEntities": ["Chad", "South Sudan", "Republic of the Congo", "Cameroon", "Sudan", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Syria", "ObjectEntities": ["Iraq", "Jordan", "Cyprus", "Lebanon", "Israel", "Turkey"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Monaco", "ObjectEntities": ["France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "San Marino", "ObjectEntities": ["Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Qatar", "ObjectEntities": ["Bahrain", "Saudi Arabia", "United Arab Emirates", "Iran"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Libya", "ObjectEntities": ["Egypt", "Niger", "Malta", "Chad", "Algeria", "Greece", "Tunisia", "Sudan", "Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Guatemala", "ObjectEntities": ["Mexico", "Honduras", "Belize", "El Salvador"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Lebanon", "ObjectEntities": ["Israel", "Cyprus", "Syria"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Iraq", "ObjectEntities": ["Syria", "Saudi Arabia", "Kuwait", "Jordan", "Iran", "Turkey"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Malaysia", "ObjectEntities": ["Philippines", "Singapore", "Brunei", "Vietnam", "Thailand", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "People's Republic of China", "ObjectEntities": ["Taiwan", "Myanmar", "Nepal", "Pakistan", "Vietnam", "Bhutan", "Mongolia", "Russia", "Kyrgyzstan", "Philippines", "Afghanistan", "Kazakhstan", "Japan", "Laos", "South Korea", "North Korea", "India", "Tajikistan", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Myanmar", "ObjectEntities": ["India", "People's Republic of China", "Thailand", "Bangladesh", "Laos"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Saint Kitts and Nevis", "ObjectEntities": ["Netherlands", "Antigua and Barbuda", "Venezuela", "France", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Dominica", "ObjectEntities": ["France", "Venezuela"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Nigeria", "ObjectEntities": ["Niger", "Chad", "Benin", "Cameroon", "S\u00e3o Tom\u00e9 and Pr\u00edncipe"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Mongolia", "ObjectEntities": ["Russia", "People's Republic of China"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Tonga", "ObjectEntities": ["New Zealand", "Fiji", "United States of America", "France", "Samoa"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Guinea-Bissau", "ObjectEntities": ["Senegal", "Guinea"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Antigua and Barbuda", "ObjectEntities": ["France", "Saint Kitts and Nevis", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Burundi", "ObjectEntities": ["Rwanda", "Tanzania", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Jordan", "ObjectEntities": ["Egypt", "Iraq", "Syria", "Saudi Arabia", "Israel"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "India", "ObjectEntities": ["Thailand", "Myanmar", "Nepal", "Sri Lanka", "Pakistan", "People's Republic of China", "Maldives", "Bhutan", "Bangladesh", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Zimbabwe", "ObjectEntities": ["South Africa", "Botswana", "Zambia", "Mozambique"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Turkey", "ObjectEntities": ["Iraq", "Russia", "Ukraine", "Syria", "Bulgaria", "Cyprus", "Armenia", "Greece", "Iran", "Northern Cyprus", "Azerbaijan", "Georgia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Eswatini", "ObjectEntities": ["South Africa", "Mozambique"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Lithuania", "ObjectEntities": ["Russia", "Belarus", "Poland", "Latvia", "Sweden"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Egypt", "ObjectEntities": ["Libya", "Saudi Arabia", "Cyprus", "Jordan", "Greece", "Israel", "Sudan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Serbia", "ObjectEntities": ["Croatia", "Bosnia and Herzegovina", "Romania", "Montenegro", "Albania", "North Macedonia", "Bulgaria", "Kosovo", "Hungary"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Federated States of Micronesia", "ObjectEntities": ["Papua New Guinea", "Palau", "United States of America", "Marshall Islands"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Bulgaria", "ObjectEntities": ["Romania", "Serbia", "North Macedonia", "Greece", "Turkey"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Cuba", "ObjectEntities": ["Honduras", "Haiti", "Mexico", "United States of America", "Jamaica", "The Bahamas", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Costa Rica", "ObjectEntities": ["Nicaragua", "Colombia", "Ecuador", "Panama"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Australia", "ObjectEntities": ["Papua New Guinea", "New Zealand", "Solomon Islands", "Indonesia", "France", "East Timor"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Jamaica", "ObjectEntities": ["Honduras", "Cuba", "Haiti", "Colombia", "United Kingdom"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Republic of the Congo", "ObjectEntities": ["Central African Republic", "Gabon", "Angola", "Cameroon", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "United Kingdom", "ObjectEntities": ["Cuba", "Norway", "Netherlands", "Venezuela", "Germany", "Denmark", "Cyprus", "The Bahamas", "Republic of Ireland", "Saint Kitts and Nevis", "Spain", "Northern Cyprus", "France", "Antigua and Barbuda", "Belgium", "Argentina", "People's Republic of China", "Dominican Republic", "United States of America", "Maldives", "Jamaica"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "United Arab Emirates", "ObjectEntities": ["Oman", "Saudi Arabia", "Qatar", "Iran"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Kenya", "ObjectEntities": ["Tanzania", "Uganda", "South Sudan", "Somalia", "Ethiopia", "Sudan"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Croatia", "ObjectEntities": ["Slovenia", "Bosnia and Herzegovina", "Serbia", "Montenegro", "Hungary", "Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Niger", "ObjectEntities": ["Libya", "Mali", "Nigeria", "Chad", "Benin", "Algeria", "Burkina Faso"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Palau", "ObjectEntities": ["Federated States of Micronesia", "Philippines", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Paraguay", "ObjectEntities": ["Argentina", "Bolivia", "Brazil"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Ivory Coast", "ObjectEntities": ["Ghana", "Mali", "Liberia", "Guinea", "Burkina Faso"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Rwanda", "ObjectEntities": ["Burundi", "Tanzania", "Uganda", "Democratic Republic of the Congo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Bolivia", "ObjectEntities": ["Paraguay", "Peru", "Brazil", "Argentina", "Chile"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Slovenia", "ObjectEntities": ["Austria", "Croatia", "Italy", "Hungary"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Hungary", "ObjectEntities": ["Croatia", "Slovenia", "Ukraine", "Serbia", "Romania", "Slovakia", "Austria"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Philippines", "ObjectEntities": ["Taiwan", "Malaysia", "Palau", "People's Republic of China", "Japan", "Indonesia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Georgia", "ObjectEntities": ["Azerbaijan", "Russia", "Turkey", "Armenia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Vatican City", "ObjectEntities": ["Italy"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Saint Lucia", "ObjectEntities": ["Barbados", "France", "Venezuela", "Saint Vincent and the Grenadines"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Romania", "ObjectEntities": ["Ukraine", "Serbia", "Moldova", "Soviet Union", "Bulgaria", "Hungary"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Togo", "ObjectEntities": ["Benin", "Ghana", "Burkina Faso"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Comoros", "ObjectEntities": ["Madagascar", "Seychelles", "Tanzania", "France", "Mozambique"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Andorra", "ObjectEntities": ["Spain", "France"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Burkina Faso", "ObjectEntities": ["Niger", "Ghana", "Mali", "Benin", "Ivory Coast", "Togo"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Estonia", "ObjectEntities": ["Russia", "Finland", "Sweden", "Latvia"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Latvia", "ObjectEntities": ["Russia", "Belarus", "Poland", "Estonia", "Lithuania", "Sweden"], "Relation": "CountryBordersCountry"}
+{"SubjectEntity": "Morocco", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "Berber"]}
+{"SubjectEntity": "Equatorial Guinea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French", "Portuguese", "Spanish"]}
+{"SubjectEntity": "Croatia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Croatian"]}
+{"SubjectEntity": "Italy", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Italian"]}
+{"SubjectEntity": "Philippines", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Filipino", "English"]}
+{"SubjectEntity": "Guinea-Bissau", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Slovakia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Slovak"]}
+{"SubjectEntity": "Sudan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "English"]}
+{"SubjectEntity": "Ghana", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Sierra Leone", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Somalia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Somali"]}
+{"SubjectEntity": "Israel", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Hebrew"]}
+{"SubjectEntity": "Mauritius", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Mauritian", "Creole", "(Also", "known", "as", "'Morisien')"]}
+{"SubjectEntity": "Samoa", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Georgia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Georgian"]}
+{"SubjectEntity": "Trinidad and Tobago", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Togo", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Russia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Russian"]}
+{"SubjectEntity": "New Zealand", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "has", "de", "facto", "status", "Maori", "language", "New", "Zealand", "Sign", "Language"]}
+{"SubjectEntity": "Indonesia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Indonesian"]}
+{"SubjectEntity": "Lithuania", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Lithuanian"]}
+{"SubjectEntity": "Mexico", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Yemen", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic"]}
+{"SubjectEntity": "Albania", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Albanian"]}
+{"SubjectEntity": "San Marino", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Italian"]}
+{"SubjectEntity": "Ukraine", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Ukrainian"]}
+{"SubjectEntity": "Argentina", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Chad", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "French"]}
+{"SubjectEntity": "East Timor", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese", "Tetum"]}
+{"SubjectEntity": "Malaysia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Malay"]}
+{"SubjectEntity": "Hungary", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Hungarian"]}
+{"SubjectEntity": "Vanuatu", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "French", "Bislama"]}
+{"SubjectEntity": "Portugal", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Portuguese"]}
+{"SubjectEntity": "Lesotho", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Sotho", "English"]}
+{"SubjectEntity": "Greece", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Greek"]}
+{"SubjectEntity": "Saint Kitts and Nevis", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Laos", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Lao"]}
+{"SubjectEntity": "Cuba", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Eritrea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Tigrinya"]}
+{"SubjectEntity": "Solomon Islands", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Bolivia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Castilian", "", "Aymara", "Araona", "Baure", "B\u00e9siro", "", "Canichana", "Cavine\u00f1o", "Cayubaba", "Ch\u00e1cobo", "Chim\u00e1n", "Ese", "Ejja", "Guaran\u00ed", "Guarasu'we", "Guarayu", "Itonama", "Leco", "Machajuyai-Kallawaya", "Machineri", "Maropa", "Moje\u00f1o-Ignaciano", "Moje\u00f1o-Trinitario", "Mor\u00e9", "Moset\u00e9n", "Movima", "Pacawara", "Puquina", "Quechua", "Sirion\u00f3", "Tacana", "Tapiet\u00e9", "Toromona", "Uru-Chipaya", "Weenhayek", "Yaminawa", "Yuki", "Yuracar\u00e9", "Zamuco"]}
+{"SubjectEntity": "Poland", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Polish"]}
+{"SubjectEntity": "Liberia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Myanmar", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Burmese"]}
+{"SubjectEntity": "France", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Montenegro", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Montenegrin"]}
+{"SubjectEntity": "South Korea", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Korean", "Korean", "Sign", "Language"]}
+{"SubjectEntity": "Brunei", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Malay"]}
+{"SubjectEntity": "Republic of the Congo", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["French"]}
+{"SubjectEntity": "Iraq", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Arabic", "Kurdish"]}
+{"SubjectEntity": "Bosnia and Herzegovina", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None", "(Bosnian"]}
+{"SubjectEntity": "Guyana", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "Nigeria", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English"]}
+{"SubjectEntity": "El Salvador", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish"]}
+{"SubjectEntity": "Andorra", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Catalan"]}
+{"SubjectEntity": "Paraguay", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish", "Guaran\u00ed"]}
+{"SubjectEntity": "Ecuador", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Spanish", "Quechua"]}
+{"SubjectEntity": "Seychelles", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "French", "Seychellois", "Creole"]}
+{"SubjectEntity": "Nauru", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["English", "Nauruan"]}
+{"SubjectEntity": "Tajikistan", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Tajik"]}
+{"SubjectEntity": "Australia", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["None"]}
+{"SubjectEntity": "Turkey", "Relation": "CountryHasOfficialLanguage", "ObjectEntities": ["Turkish"]}
+{"SubjectEntity": "Thomas M. Disch", "ObjectEntities": ["New York City"], "Relation": "PersonHasPlaceOfDeath"}
+{"SubjectEntity": "Ciro de Quadros", "ObjectEntities": ["Washington, D.C."], "Relation": "PersonHasPlaceOfDeath"}
+{"SubjectEntity": "Mary Ellen Mark", "ObjectEntities": ["New York City"], "Relation": "PersonHasPlaceOfDeath"}
+{"SubjectEntity": "Thomas R. P. Mielke", "ObjectEntities": ["Berlin"], "Relation": "PersonHasPlaceOfDeath"}
+{"SubjectEntity": "Vito Acconci", "ObjectEntities": ["New York City"], "Relation": "PersonHasPlaceOfDeath"}
+{"SubjectEntity": "Levon Helm", "ObjectEntities": ["New York City"], "Relation": "PersonHasPlaceOfDeath"}
+{"SubjectEntity": "Aleksandr Chuchalin", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Vladimir Dyakonov", "ObjectEntities": ["scientist"], "Relation": "PersonHasProfession"}
+{"SubjectEntity": "Jaimin Rajani", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Joss Favela", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Sergey Sergeevich Boldyrev", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Rita Dakota", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Sakiko Matsui", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Nadia Gold", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Anastasia Vinnikova", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Iza", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Billy Fumey", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Lena Meyer-Landrut", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Devzboi1", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Sonya Belousova", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "G.E.M.", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Torres", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Sanah Moidutty", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Kjetil Mulelid", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "James Maslow", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Jean Rondeau", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Nana Adjoa", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Tomomi Itano", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Tyler, the Creator", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Lisa LeBlanc", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Wilson Way", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Yael Eisenberg", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Emily Wolfe", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Lee Jin-ah", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Valentin Marceau", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Andrii Kovalov", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Steve Grand", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Diana Vickers", "ObjectEntities": ["trumpet"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Kajetan Borowski", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Laura Groeseneken", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Lee Jong-hyun", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Lide Hernando", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Andrea Tonoli", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Bram De Looze", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Mami Sasazaki", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Miwa", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Kato Callebaut", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Vianney", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Sophie Villy", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Shin Won-ho", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "AJ Michalka", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Lay", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Sooyoung", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Gil Bar Haddas", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Moses Sumney", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Bastian Baker", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Phillip Phillips", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Mitch Laddie", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "P.R2B", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Nahuel Pennisi", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Jackie Venson", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Dave Days", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Kygo", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Chingiz Mustafayev", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Trent Harmon", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Lali Esp\u00f3sito", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Peggy Gou", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Mar\u00eda Pel\u00e1e", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Bendik", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Andy Biersack", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "\u0141ukasz Ojdana", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Freddie", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Joonatan J\u00fcrgenson", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Tal Ramon", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Jang Jae-in", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "D\u00e1niel K\u0151v\u00e1g\u00f3", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Skylar Kergil", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Elliot Galvin", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Jacob Banks", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Sina Tkotsch", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Torgeir Standal", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Mathieu Koss", "ObjectEntities": ["guitar"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Logic", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Ivan Moshchuk", "ObjectEntities": ["piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Masked Wolf", "ObjectEntities": ["guitar", "piano"], "Relation": "PersonPlaysInstrument"}
+{"SubjectEntity": "Andrzej \u017bu\u0142awski", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Dani\u00e8le Sallenave", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Gilles de Robien", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Pat Patterson", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Duchess Diane, Duchess of W\u00fcrttemberg", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Carlos Roqu\u00e9 Alsina", "ObjectEntities": ["French"], "Relation": "PersonSpeaksLanguage"}
+{"SubjectEntity": "Nzoia River", "ObjectEntities": ["Kenya"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Ping River", "ObjectEntities": ["Thailand"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Neman", "ObjectEntities": ["Russia", "Belarus", "Lithuania"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Kasai River", "ObjectEntities": ["Angola", "Democratic Republic of the Congo"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Syr Darya", "ObjectEntities": ["Uzbekistan", "Kyrgyzstan", "Kazakhstan", "Tajikistan"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Aras River", "ObjectEntities": ["Azerbaijan", "Iran", "Turkey", "Armenia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Ye\u015fil\u0131rmak River", "ObjectEntities": ["Turkey"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Jordan River", "ObjectEntities": ["Palestine", "Syria", "Australia", "State of Palestine", "Jordan", "United States of America", "Lebanon"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "R\u00edo de la Plata", "ObjectEntities": ["Uruguay", "Argentina"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Dienvidsus\u0113ja", "ObjectEntities": ["Lithuania", "Latvia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Pshish", "ObjectEntities": ["Russia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Pilica", "ObjectEntities": ["Poland"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Gauja", "ObjectEntities": ["Belarus", "Estonia", "Lithuania", "Latvia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Neris", "ObjectEntities": ["Belarus", "Lithuania"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Morava", "ObjectEntities": ["Austria", "Czech Republic", "Slovakia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Marne", "ObjectEntities": ["France"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Khrami River", "ObjectEntities": ["Azerbaijan", "Georgia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Kofarnihon River", "ObjectEntities": ["Tajikistan"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Shinano River", "ObjectEntities": ["Japan"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Aube", "ObjectEntities": ["France"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Saar", "ObjectEntities": ["Germany", "France"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Kherlen River", "ObjectEntities": ["People's Republic of China", "Mongolia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Chelif River", "ObjectEntities": ["Algeria"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Kura River", "ObjectEntities": ["Azerbaijan", "Turkey", "Georgia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Lielupe", "ObjectEntities": ["Latvia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Nev\u0117\u017eis", "ObjectEntities": ["Lithuania"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Ems", "ObjectEntities": ["Germany", "Netherlands"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Limmat", "ObjectEntities": ["Switzerland"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Dniester", "ObjectEntities": ["Transnistria", "Ukraine", "Moldova"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Skj\u00e1lfandaflj\u00f3t", "ObjectEntities": ["Iceland"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Horyn", "ObjectEntities": ["Belarus", "Ukraine"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Drava", "ObjectEntities": ["Croatia", "Slovenia", "Austria", "Hungary", "Italy"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Great Zab", "ObjectEntities": ["Iraq", "Turkey"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Hotan River", "ObjectEntities": ["People's Republic of China"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "R\u0113zekne River", "ObjectEntities": ["Latvia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "B\u00edo B\u00edo River", "ObjectEntities": ["Chile"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Bosna", "ObjectEntities": ["Bosnia and Herzegovina"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Pechora", "ObjectEntities": ["Russia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "San", "ObjectEntities": ["Poland", "Ukraine"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Pripyat River", "ObjectEntities": ["Belarus", "Ukraine"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Naryn River", "ObjectEntities": ["Uzbekistan", "Kyrgyzstan"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Zbruch", "ObjectEntities": ["Ukraine"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Hudson River", "ObjectEntities": ["United States of America"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Supsa River", "ObjectEntities": ["Georgia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Lusatian Neisse", "ObjectEntities": ["Germany", "Czech Republic", "Poland"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Tennessee River", "ObjectEntities": ["United States of America"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Uruguay River", "ObjectEntities": ["Uruguay", "Argentina", "Brazil"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Abakan", "ObjectEntities": ["Russia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Don", "ObjectEntities": ["Russia", "France"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Vltava", "ObjectEntities": ["Czech Republic"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "G\u00f6ksun River", "ObjectEntities": ["Turkey"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Alazani", "ObjectEntities": ["Azerbaijan", "Georgia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "St. Lawrence River", "ObjectEntities": ["Canada", "United States of America"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Mondego River", "ObjectEntities": ["Portugal"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Chu River", "ObjectEntities": ["Kyrgyzstan", "Kazakhstan"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Congo", "ObjectEntities": ["Zambia", "Democratic Republic of the Congo", "Angola", "Republic of the Congo"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Sava", "ObjectEntities": ["Croatia", "Slovenia", "Bosnia and Herzegovina", "Serbia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Colorado River", "ObjectEntities": ["Mexico", "Argentina", "United States of America", "Costa Rica"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Dubna River", "ObjectEntities": ["Latvia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "D\u00e2mbovi\u021ba River", "ObjectEntities": ["Romania"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Tagus River", "ObjectEntities": ["Spain", "Portugal"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Dora Baltea", "ObjectEntities": ["Italy"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "White Nile", "ObjectEntities": ["Rwanda", "Tanzania", "Uganda", "South Sudan", "Sudan", "Democratic Republic of the Congo"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Aksu River", "ObjectEntities": ["Kyrgyzstan", "Kazakhstan", "Turkey"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Moselle", "ObjectEntities": ["Germany", "France", "Luxembourg"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Is\u00e8re", "ObjectEntities": ["France"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Velikaya River", "ObjectEntities": ["Russia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Vyatka", "ObjectEntities": ["Russia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Tiber", "ObjectEntities": ["Italy"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Korana", "ObjectEntities": ["Croatia", "Bosnia and Herzegovina"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "V\u00e9z\u00e8re", "ObjectEntities": ["France"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Ebro", "ObjectEntities": ["Spain"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Kiso River", "ObjectEntities": ["Japan"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "River Thames", "ObjectEntities": ["United Kingdom"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Saco River", "ObjectEntities": ["United States of America"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Western Bug", "ObjectEntities": ["Belarus", "Poland", "Ukraine"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Qvirila River", "ObjectEntities": ["Georgia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Batman River", "ObjectEntities": ["Turkey"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Indus River", "ObjectEntities": ["People's Republic of China", "Pakistan"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Athabasca River", "ObjectEntities": ["Canada"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Danube", "ObjectEntities": ["Croatia", "Ukraine", "Romania", "Serbia", "Moldova", "Austria", "Slovakia", "Bulgaria", "Germany", "Hungary"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Adige", "ObjectEntities": ["Italy"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Oise", "ObjectEntities": ["France", "Belgium"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "B\u00fcy\u00fck Menderes River", "ObjectEntities": ["Turkey"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Ural River", "ObjectEntities": ["Russia", "Kazakhstan"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Afrin River", "ObjectEntities": ["Turkey", "Syria"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Main", "ObjectEntities": ["Germany"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Niger River", "ObjectEntities": ["Niger", "Mali", "Nigeria", "Benin", "Guinea"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Missouri River", "ObjectEntities": ["United States of America"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Orontes River", "ObjectEntities": ["Syria", "Turkey", "Lebanon"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Ros River", "ObjectEntities": ["Ukraine"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Psel", "ObjectEntities": ["Russia", "Ukraine"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Debed", "ObjectEntities": ["Georgia", "Armenia"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Semois", "ObjectEntities": ["France", "Belgium"], "Relation": "RiverBasinsCountry"}
+{"SubjectEntity": "Heirs to the Land", "ObjectEntities": ["8"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Arde Madrid", "ObjectEntities": ["8"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "House With the Lilies", "ObjectEntities": ["24"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Sex Traffic", "ObjectEntities": ["2"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Cosmos: A Spacetime Odyssey", "ObjectEntities": ["13"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Dostoevsky", "ObjectEntities": ["8"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "The Last Moskal", "ObjectEntities": ["32"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Hap and Leonard", "ObjectEntities": ["15"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Little Britain USA", "ObjectEntities": ["6"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "The New Legends of Monkey", "ObjectEntities": ["10"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Guest from the Future", "ObjectEntities": ["5"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Dinotopia", "ObjectEntities": ["12"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Vina\u0159i", "ObjectEntities": ["32"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Welcome to Eden", "ObjectEntities": ["16"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Instynkt", "ObjectEntities": ["13"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Damo", "ObjectEntities": ["14"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Crossing Lines", "ObjectEntities": ["34"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "A Series of Unfortunate Events", "ObjectEntities": ["25"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Some Mothers Do 'Ave 'Em", "ObjectEntities": ["23"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "The Jeff Corwin Experience", "ObjectEntities": ["39"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "All Aussie Adventures", "ObjectEntities": ["21"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Mrs Wilson", "ObjectEntities": ["3"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Felizes para Sempre?", "ObjectEntities": ["10"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Jul i Svingen", "ObjectEntities": ["24"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Beloved Eun-dong", "ObjectEntities": ["16"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Oliver Twist", "ObjectEntities": ["12", "4"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Nineties", "ObjectEntities": ["6"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Salt for Life", "ObjectEntities": ["6"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "N\u00e9boa", "ObjectEntities": ["8"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Doctor Stranger", "ObjectEntities": ["20"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Self Made: Inspired by the Life of Madam C. J. Walker", "ObjectEntities": ["4"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Bodo", "ObjectEntities": ["13"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Hor\u00e1kovi", "ObjectEntities": ["39"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Conspiracy 365", "ObjectEntities": ["12"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Survivors", "ObjectEntities": ["12", "8", "38"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Kadabra", "ObjectEntities": ["26"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Deutscher", "ObjectEntities": ["4"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "The Abandoned", "ObjectEntities": ["13"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "La dama velata", "ObjectEntities": ["12"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "The Red Queen", "ObjectEntities": ["12"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Vliegende Hollanders", "ObjectEntities": ["8"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "La strada di casa", "ObjectEntities": ["12"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Elite", "ObjectEntities": ["48"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Becoming Human", "ObjectEntities": ["8"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Coma", "ObjectEntities": ["2"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "The Pillars of the Earth", "ObjectEntities": ["8"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Four Seasons in Havana", "ObjectEntities": ["4"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Superhero Landing", "ObjectEntities": ["12"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Amamiyot", "ObjectEntities": ["12"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Yallahrup F\u00e6rgeby", "ObjectEntities": ["24"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Love, Victor", "ObjectEntities": ["28"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "The Virgin Queen", "ObjectEntities": ["4"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Now Apocalypse", "ObjectEntities": ["10"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Real Humans", "ObjectEntities": ["20"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "M\u00e5ste gitt", "ObjectEntities": ["8"], "Relation": "SeriesHasNumberOfEpisodes"}
+{"SubjectEntity": "Santa Cruz de la Sierra", "ObjectEntities": ["Pirai River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Solingen", "ObjectEntities": ["Wupper"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Aberdeen", "ObjectEntities": ["River Dee", "River Don", "Aberdeen Bay"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Luxembourg", "ObjectEntities": ["Drosbach", "Q25584407", "Z\u00e9issengerbaach", "Alzette", "P\u00e9trusse"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Witten", "ObjectEntities": ["Ruhr"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Arequipa", "ObjectEntities": ["Chili River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Dushanbe", "ObjectEntities": ["Kofarnihon River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Babol", "ObjectEntities": ["Babol River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Boise", "ObjectEntities": ["Boise River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Bridgetown", "ObjectEntities": ["Caribbean Sea", "Constitution River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Damascus", "ObjectEntities": ["Barada"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Georgetown", "ObjectEntities": ["Atlantic Ocean", "Potomac River", "Demerara River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Kryvyi Rih", "ObjectEntities": ["Saksahan", "Inhulets River", "Q12114588", "Saksahan Reservoir", "Karachunivka Reservoir"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Douala", "ObjectEntities": ["Wouri River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Kota", "ObjectEntities": ["Chambal River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Butwal", "ObjectEntities": ["Tinau River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Mannheim", "ObjectEntities": ["Rhine", "Neckar"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Salto", "ObjectEntities": ["Uruguay River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Rybinsk", "ObjectEntities": ["Rybinsk Reservoir", "Volga", "Sheksna"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Tirana", "ObjectEntities": ["Lan\u00eb", "Tiran\u00eb"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Baghdad", "ObjectEntities": ["Tigris"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Wakayama", "ObjectEntities": ["Kinokawa River", "Wakayama Bay", "Shihori River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Cleveland", "ObjectEntities": ["Lake Erie", "Cuyahoga River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Odawara", "ObjectEntities": ["Sagami Bay", "Sakawa River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Obihiro", "ObjectEntities": ["Satsunai River", "Tokachi River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Toyama", "ObjectEntities": ["J\u014dganji River", "Jinz\u016b River", "Ida River", "Toyama Bay"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Trondheim", "ObjectEntities": ["Trondheimsfjord", "Nidelva"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Naha", "ObjectEntities": ["Asato River", "East China Sea", "Kokuba River", "Lake Man"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Erfurt", "ObjectEntities": ["Nesse", "Flutgraben", "Gramme", "Gera"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Zenica", "ObjectEntities": ["Bosna"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Dallas", "ObjectEntities": ["Trinity River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Liupanshui", "ObjectEntities": ["Beipan River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Kanpur", "ObjectEntities": ["Ganges"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Ulm", "ObjectEntities": ["Iller", "Danube", "Blau"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "F\u00fcrth", "ObjectEntities": ["Rednitz", "Rhine-Main-Danube Canal", "Zenn", "Regnitz", "Pegnitz"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Montevideo", "ObjectEntities": ["R\u00edo de la Plata"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Cardiff", "ObjectEntities": ["River Taff", "Bristol Channel", "River Ely"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Guangzhou", "ObjectEntities": ["Pearl River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Bridgeport", "ObjectEntities": ["Pequonnock River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Ljubljana", "ObjectEntities": ["Ljubljanica", "Sava"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Ho Chi Minh City", "ObjectEntities": ["B\u1ebfn Ngh\u00e9 Channel", "Saigon River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Hanover", "ObjectEntities": ["Ihme", "Maschsee", "Mittelland Canal", "Leine"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Duisburg", "ObjectEntities": ["Ruhr", "Rhine", "Alte Emscher", "Kleine Emscher", "Rhine\u2013Herne Canal"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Provo", "ObjectEntities": ["Provo River", "Utah Lake"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Milton Keynes", "ObjectEntities": ["River Great Ouse"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Nikopol", "ObjectEntities": ["Dnieper"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Toyonaka", "ObjectEntities": ["Kanzaki River", "Ina River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Shizuoka", "ObjectEntities": ["Port of Shimizu", "Okitsu River", "Abe River", "Suruga Bay", "Tomoe River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Shanghai", "ObjectEntities": ["Yangtze", "Huangpu River", "East China Sea", "Suzhou Creek", "Dianshan Lake"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "M\u00f6nchengladbach", "ObjectEntities": ["Knippertzbach", "Niers", "Gladbach"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Belgrade", "ObjectEntities": ["Danube", "Sava"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Kathmandu", "ObjectEntities": ["Bisnumati River", "Bagmati River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Hamburg", "ObjectEntities": ["Rethe", "Flottbek", "K\u00f6hlbrand", "Wedeler Au", "Seevekanal", "Tarpenbek", "Susebek", "North Sea", "S\u00fcderelbe", "Osterbek", "Bille", "Bredenbek", "Isebekkanal", "Saselbek", "Este", "Goldbekkanal", "Rodenbek", "Elbe", "Wandse", "Alster"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Adana", "ObjectEntities": ["Seyhan River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Numazu", "ObjectEntities": ["Ukishima numa", "Port of Numazu", "Suruga Bay", "Kise River", "Kano River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Besan\u00e7on", "ObjectEntities": ["Doubs"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Karatsu", "ObjectEntities": ["Matsuura River", "Genkai Sea"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Urayasu", "ObjectEntities": ["Sakai River", "Tokyo Bay", "Ky\u016b-Edo River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Antananarivo", "ObjectEntities": ["Ikopa River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Shushtar", "ObjectEntities": ["Karun River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Nagasaki", "ObjectEntities": ["Urakami River", "Tachibana Bay", "Nagasaki Bay"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Pite\u0219ti", "ObjectEntities": ["Arge\u0219 River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Kaliningrad", "ObjectEntities": ["Pregolya"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Bishkek", "ObjectEntities": ["Ala-Archa River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Kermanshah", "ObjectEntities": ["Qarasu River (Seimare River)"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Peterborough", "ObjectEntities": ["River Nene"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Iwakuni", "ObjectEntities": ["Nishiki River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Gujrat", "ObjectEntities": ["Chenab River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Astana", "ObjectEntities": ["Ishim"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Kurume", "ObjectEntities": ["Chikugo River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Taichung", "ObjectEntities": ["Fazi River", "Dajia River", "Luchuan Canal", "Da'an River", "Han River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Halle (Saale)", "ObjectEntities": ["Weisse Elster", "Saale"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Tsukuba", "ObjectEntities": ["Yata River", "Sakura River", "Kokai River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Lowell", "ObjectEntities": ["Concord River", "Merrimack River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Nagareyama", "ObjectEntities": ["Edo River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Nashville", "ObjectEntities": ["Cumberland River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Turin", "ObjectEntities": ["Stura di Lanzo", "Sangone", "Po", "Dora Riparia"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Fukui", "ObjectEntities": ["Kuzury\u016b River", "Sea of Japan"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Caen", "ObjectEntities": ["Orne"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Huangshi", "ObjectEntities": ["Yangtze"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Warsaw", "ObjectEntities": ["Vistula"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Bras\u00edlia", "ObjectEntities": ["Parano\u00e1 Lake", "Parano\u00e1 River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Gwalior", "ObjectEntities": ["Sonrekha River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Akita", "ObjectEntities": ["Omono River", "Asahi River", "Akita Canal", "Sea of Japan"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Maebashi", "ObjectEntities": ["Ono", "Kakumanbuchi", "Hirose River", "Tone River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Osnabr\u00fcck", "ObjectEntities": ["Hase", "Attersee (Osnabr\u00fcck)", "Rubbenbruchsee", "D\u00fcte"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Foz do Igua\u00e7u", "ObjectEntities": ["Iguazu River", "Paran\u00e1 River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Gloucester", "ObjectEntities": ["River Severn"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Denver", "ObjectEntities": ["South Platte River", "Cherry Creek"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Saint Petersburg", "ObjectEntities": ["Griboyedov Canal", "Malaya Neva", "Okhta", "Okkervil", "Krjukov Canal", "Middle Nevka", "Great Nevka", "Kronverksky Strait", "Neva", "Krestovka", "Slavyanka", "Gulf of Finland", "Obvodny Canal", "Great Neva", "Fontanka", "Moyka River", "Ekateringofka"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Preston", "ObjectEntities": ["River Ribble"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Huanggang", "ObjectEntities": ["Yangtze"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Bonn", "ObjectEntities": ["Rhine", "Melbbach"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Saratov", "ObjectEntities": ["Volga"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Surrey", "ObjectEntities": ["Boundary Bay", "Serpentine River", "Campbell River", "Fraser River", "Nicomekl River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Maseru", "ObjectEntities": ["Caledon River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Koga", "ObjectEntities": ["Watarase River", "Tone River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Boston", "ObjectEntities": ["Boston Harbor", "Neponset River", "Charles River", "Mystic River"], "Relation": "CityLocatedAtRiver"}
+{"SubjectEntity": "Den\u00edlson de Oliveira", "ObjectEntities": ["wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Shinji Kagawa", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Rapha\u00ebl Varane", "ObjectEntities": ["centre back"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Tomoaki Makino", "ObjectEntities": ["defender"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Tomoya Ugajin", "ObjectEntities": ["defender"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Hazem Emam", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Alessandro Rosa Vieira", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Jozy Altidore", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Yordi", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Andrei Arshavin", "ObjectEntities": ["midfielder", "wing half", "forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Nathan Ak\u00e9", "ObjectEntities": ["defender"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Franck Rib\u00e9ry", "ObjectEntities": ["wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Edson Buddle", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Gary Medel", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Baf\u00e9timbi Gomis", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Kevin Strootman", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Andros Townsend", "ObjectEntities": ["wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Volkan Demirel", "ObjectEntities": ["goalkeeper"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Pierre-Emerick Aubameyang", "ObjectEntities": ["centre forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "\u00c9ver Banega", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Arturo Vidal", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Sidney Govou", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Kevin De Bruyne", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Ruud van Nistelrooy", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Ahmed Hassan", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Itumeleng Khune", "ObjectEntities": ["goalkeeper"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Den\u00edlson Pereira Neves", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Pepe", "ObjectEntities": ["forward", "centre back"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Neil Etheridge", "ObjectEntities": ["goalkeeper"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Jeremain Lens", "ObjectEntities": ["wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Yossi Benayoun", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Thomas Meunier", "ObjectEntities": ["fullback"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Sebastian Kehl", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Mohamed Aboutrika", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Joe Corona", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Ali Krieger", "ObjectEntities": ["defender"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Pablo \"Amurrao\" Mouche", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Bambang Pamungkas", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Lou Macari", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Wojciech Szcz\u0119sny", "ObjectEntities": ["goalkeeper"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Fred", "ObjectEntities": ["forward", "midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Patrice Evra", "ObjectEntities": ["fullback"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Joleon Lescott", "ObjectEntities": ["centre back"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Toby Alderweireld", "ObjectEntities": ["centre back"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Mart\u00edn Cauteruccio", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Norman Whiteside", "ObjectEntities": ["midfielder", "forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Diego God\u00edn", "ObjectEntities": ["centre back"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Igor Lichnovsky", "ObjectEntities": ["defender"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Theo Walcott", "ObjectEntities": ["wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Karim Benzema", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Cristiano Ronaldo", "ObjectEntities": ["forward", "wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Philippe Coutinho", "ObjectEntities": ["wing half", "winger"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Aldo Corzo", "ObjectEntities": ["fullback", "defender"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Ezequiel Lavezzi", "ObjectEntities": ["wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Wes Morgan", "ObjectEntities": ["centre back", "fullback"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Vanderlei Luxemburgo", "ObjectEntities": ["fullback"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Sergio Ramos", "ObjectEntities": ["centre back"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Serge Aurier", "ObjectEntities": ["full back"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Jos\u00e9 Rodr\u00edguez Mart\u00ednez", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Andr\u00e9 Gomes", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Sebasti\u00e1n Eguren", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Ian Wright", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Ademir da Guia", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Alberto Gilardino", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Robert Pires", "ObjectEntities": ["midfielder", "wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Ignazio Abate", "ObjectEntities": ["fullback"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Andr\u00e9s Palop", "ObjectEntities": ["goalkeeper"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Sa\u00fal \u00d1\u00edguez", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Arjen Robben", "ObjectEntities": ["midfielder", "wing half"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Hugo S\u00e1nchez", "ObjectEntities": ["forward"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Toni Kroos", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Josuha Guilavogui", "ObjectEntities": ["midfielder"], "Relation": "FootballerPlaysPosition"}
+{"SubjectEntity": "Yordano Jose Ventura", "ObjectEntities": ["traffic collision"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Lisa Marie Presley", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Gal Costa", "ObjectEntities": ["myocardial infarction"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Muhammad Arifin Ilham", "ObjectEntities": ["cancer"], "Relation": "PersonCauseOfDeath"}
+{"SubjectEntity": "Phil Schiller", "ObjectEntities": ["Apple"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Jean Quatremer", "ObjectEntities": ["ARTE"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Cristiana L\u00f4bo", "ObjectEntities": ["TV Globo"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Jeremy Clarkson", "ObjectEntities": ["BBC"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Jeremy Bowen", "ObjectEntities": ["BBC"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Angela Ahrendts", "ObjectEntities": ["Apple"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Norman Smith", "ObjectEntities": ["BBC"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Nicholas Kay", "ObjectEntities": ["United Nations"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Tetsunari Iida", "ObjectEntities": ["University of Tokyo"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Inger Andersen", "ObjectEntities": ["World Bank", "United Nations"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Patricia Espinosa", "ObjectEntities": ["United Nations"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "John Sweeney", "ObjectEntities": ["BBC"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Jorge Fernando", "ObjectEntities": ["TV Globo"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Pedro Francke", "ObjectEntities": ["World Bank"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Stephen Fry", "ObjectEntities": ["BBC"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Toshio Okada", "ObjectEntities": ["University of Tokyo"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Jens Stoltenberg", "ObjectEntities": ["North Atlantic Treaty Organization"], "Relation": "PersonHasEmployer"}
+{"SubjectEntity": "Osamu Shimomura", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Jules Bordet", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Frank Sherwood Rowland", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Horst Ludwig St\u00f6rmer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Hannes Alfv\u00e9n", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "John Polanyi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Vladimir Prelog", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Peter J. Ratcliffe", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Felix Bloch", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Luigi Pirandello", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Hans von Euler-Chelpin", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Peter Gr\u00fcnberg", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Tu Youyou", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Lev Landau", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Rolf M. Zinkernagel", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Ernst Otto Fischer", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Aaron Ciechanover", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Nelly Sachs", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Fran\u00e7ois Jacob", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Dag Hammarskj\u00f6ld", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "John Howard Northrop", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Charles Scott Sherrington", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Erwin Neher", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Intergovernmental Panel on Climate Change", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Andr\u00e9 Fr\u00e9d\u00e9ric Cournand", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Jens Christian Skou", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Jennifer Doudna", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Fr\u00e9d\u00e9ric Mistral", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "William Golding", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Henryk Sienkiewicz", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Paul Heyse", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Harry Kroto", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Chemistry"]}
+{"SubjectEntity": "Martin Luther King Jr.", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Peace Prize"]}
+{"SubjectEntity": "Fran\u00e7ois Mauriac", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Marie Curie", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Klaus von Klitzing", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Elias Canetti", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Hans Georg Dehmelt", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Otto Loewi", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "David Lee", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Heike Kamerlingh Onnes", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Joseph Brodsky", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Jacinto Benavente", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "Alfred Hershey", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Winston Churchill", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Literature"]}
+{"SubjectEntity": "John Vane", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physiology or Medicine"]}
+{"SubjectEntity": "Wolfgang Ketterle", "Relation": "PersonHasNoblePrize", "ObjectEntities": ["Nobel Prize in Physics"]}
+{"SubjectEntity": "Haiti", "Relation": "CountryHasStates", "ObjectEntities": ["Artibonite", "Centre", "Grand'Anse", "Nippes", "Nord", "Nord-Est", "Nord-Ouest", "Ouest", "Sud", "Sud-Est"]}
+{"SubjectEntity": "Canada", "Relation": "CountryHasStates", "ObjectEntities": ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Northwest Territories", "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"]}
+{"SubjectEntity": "Mauritania", "Relation": "CountryHasStates", "ObjectEntities": ["Adrar", "Assaba", "Brakna", "Dakhlet Nouadhibou", "Gorgol", "Guidimaka", "Hodh Ech Chargui", "Hodh El Gharbi", "Inchiri", "Nouakchott-Nord", "Nouakchott-Ouest", "Nouakchott-Sud", "Tagant", "Tiris Zemmour", "Trarza"]}
+{"SubjectEntity": "Namibia", "Relation": "CountryHasStates", "ObjectEntities": ["Erongo Region", "Hardap Region", "Karas Region", "Kavango East Region", "Kavango West Region", "Khomas Region", "Kunene Region", "Ohangwena Region", "Omaheke Region", "Omusati Region", "Oshana Region", "Oshikoto Region", "Otjozondjupa Region", "Zambezi Region"]}
+{"SubjectEntity": "Bosnia and Herzegovina", "Relation": "CountryHasStates", "ObjectEntities": ["Bosnian Podrinje Canton", "Br\u010dko District", "Canton 10", "Central Bosnia Canton", "Federation of Bosnia and Herzegovina", "Herzegovina-Neretva Canton", "Posavina Canton", "Republika Srpska", "Sarajevo Canton", "Tuzla Canton", "Una-Sana Canton", "West Herzegovina Canton", "Zenica-Doboj Canton"]}
+{"SubjectEntity": "Jamaica", "Relation": "CountryHasStates", "ObjectEntities": ["Clarendon Parish", "Hanover Parish", "Kingston Parish", "Manchester Parish", "Portland Parish", "Saint Andrew", "Saint Ann Parish", "Saint Catherine Parish", "Saint Elizabeth Parish", "Saint James Parish", "Saint Mary Parish", "Saint Thomas Parish", "Trelawny Parish", "Westmoreland Parish"]}
+{"SubjectEntity": "Singapore", "Relation": "CountryHasStates", "ObjectEntities": ["Central Singapore", "North East", "North West", "South East", "South West"]}
+{"SubjectEntity": "Malta", "Relation": "CountryHasStates", "ObjectEntities": ["Attard", "Balzan", "Birgu", "Birkirkara", "Bir\u017cebbu\u0121a", "Cospicua", "Dingli", "Fgura", "Floriana", "Fontana", "G\u0127ajnsielem", "G\u0127arb", "G\u0127arg\u0127ur", "G\u0127asri", "G\u0127axaq", "Gudja", "G\u017cira", "\u0126amrun", "Iklin", "Kalkara", "Ker\u010bem", "Kirkop", "Lija", "Luqa", "Marsa", "Marsaskala", "Marsaxlokk", "Mdina", "Mellie\u0127a", "M\u0121arr", "Mosta", "Mqabba", "Msida", "Mtarfa", "Munxar", "Nadur", "Naxxar", "Paola", "Pembroke", "Piet\u00e0", "Qala", "Qormi", "Qrendi", "Rabat", "Saint Lawrence", "San \u0120wann", "Sannat", "Santa Lu\u010bija", "Santa Venera", "Senglea", "Si\u0121\u0121iewi", "Sliema", "St. Julian's", "St. Paul's Bay", "Swieqi", "Ta' Xbiex", "Tarxien", "Valletta", "Victoria", "Xag\u0127ra", "Xewkija", "Xg\u0127ajra", "\u017babbar", "\u017bebbu\u0121 Gozo", "\u017bebbu\u0121 Malta", "\u017bejtun", "\u017burrieq"]}
+{"SubjectEntity": "Saint Lucia", "Relation": "CountryHasStates", "ObjectEntities": ["Anse la Raye Quarter", "Canaries", "Castries Quarter", "Choiseul Quarter", "Dauphin Quarter", "Dennery Quarter", "Gros Islet Quarter", "Laborie Quarter", "Micoud Quarter", "Praslin Quarter", "Soufri\u00e8re Quarter", "Vieux Fort Quarter"]}
+{"SubjectEntity": "Lithuania", "Relation": "CountryHasStates", "ObjectEntities": ["Akmen\u0117 District Municipality", "Alytus City Municipality", "Alytus County", "Alytus District Municipality", "Bir\u0161tonas Municipality", "Bir\u017eai District Municipality", "Druskininkai municipality", "Elektr\u0117nai municipality", "Ignalina District Municipality", "Jonava District Municipality", "Joni\u0161kis District Municipality", "Jurbarkas District Municipality", "Kai\u0161iadorys District Municipality", "Kalvarija municipality", "Kaunas City Municipality", "Kaunas County", "Kaunas District Municipality", "Kazl\u0173 R\u016bda municipality", "K\u0117dainiai District Municipality", "Kelm\u0117 District Municipality", "Klaipeda City Municipality", "Klaip\u0117da County", "Klaip\u0117da District Municipality", "Kretinga District Municipality", "Kupi\u0161kis District Municipality", "Lazdijai District Municipality", "Marijampol\u0117 County", "Marijampol\u0117 Municipality", "Ma\u017eeikiai District Municipality", "Mol\u0117tai District Municipality", "Neringa Municipality", "Pag\u0117giai municipality", "Pakruojis District Municipality", "Palanga City Municipality", "Panev\u0117\u017eys City Municipality", "Panev\u0117\u017eys County", "Panev\u0117\u017eys District Municipality", "Pasvalys District Municipality", "Plung\u0117 District Municipality", "Prienai District Municipality", "Radvili\u0161kis District Municipality", "Raseiniai District Municipality", "Rietavas municipality", "Roki\u0161kis District Municipality", "\u0160akiai District Municipality", "\u0160al\u010dininkai District Municipality", "\u0160iauliai City Municipality", "\u0160iauliai County", "\u0160iauliai District Municipality", "\u0160ilal\u0117 District Municipality", "\u0160ilut\u0117 District Municipality", "\u0160irvintos District Municipality", "Skuodas District Municipality", "\u0160ven\u010dionys District Municipality", "Taurag\u0117 County", "Taurag\u0117 District Municipality", "Tel\u0161iai County", "Tel\u0161iai District Municipality", "Trakai District Municipality", "Ukmerg\u0117 District Municipality", "Utena County", "Utena District Municipality", "Var\u0117na District Municipality", "Vilkavi\u0161kis District Municipality", "Vilnius City Municipality", "Vilnius County", "Vilnius District Municipality", "Visaginas Municipality", "Zarasai District Municipality"]}
+{"SubjectEntity": "Burkina Faso", "Relation": "CountryHasStates", "ObjectEntities": ["Bal\u00e9 Province", "Bam Province", "Banwa Province", "Baz\u00e8ga Province", "Boucle du Mouhoun Region", "Bougouriba Province", "Boulgou", "Cascades Region", "Centre", "Centre-Est Region", "Centre-Nord Region", "Centre-Ouest Region", "Centre-Sud Region", "Como\u00e9 Province", "Est Region", "Ganzourgou Province", "Gnagna Province", "Gourma Province", "Hauts-Bassins Region", "Houet Province", "Ioba Province", "Kadiogo Province", "K\u00e9n\u00e9dougou Province", "Komondjari Province", "Kompienga Province", "Kossi Province", "Koulp\u00e9logo Province", "Kouritenga Province", "Kourw\u00e9ogo Province", "L\u00e9raba Province", "Loroum Province", "Mouhoun", "Nahouri Province", "Namentenga Province", "Nayala Province", "Nord Region, Burkina Faso", "Noumbiel Province", "Oubritenga Province", "Oudalan Province", "Passor\u00e9 Province", "Plateau-Central Region", "Poni Province", "Sahel Region", "Sangui\u00e9 Province", "Sanmatenga Province", "S\u00e9no Province", "Sissili Province", "Soum Province", "Sourou Province", "Sud-Ouest Region", "Tapoa Province", "Tuy Province", "Yagha Province", "Yatenga Province", "Ziro Province", "Zondoma Province", "Zoundw\u00e9ogo Province"]}
+{"SubjectEntity": "Gabon", "Relation": "CountryHasStates", "ObjectEntities": ["Estuaire Province", "Haut-Ogoou\u00e9 Province", "Moyen-Ogoou\u00e9 Province", "Ngouni\u00e9 Province", "Nyanga Province", "Ogoou\u00e9-Ivindo Province", "Ogoou\u00e9-Lolo Province", "Ogoou\u00e9-Maritime Province", "Woleu-Ntem Province"]}
+{"SubjectEntity": "Tonga", "Relation": "CountryHasStates", "ObjectEntities": ["Ha\u02bbapai", "\u02bbEua", "Niuas", "Tongatapu", "Vava\u02bbu"]}
+{"SubjectEntity": "Mozambique", "Relation": "CountryHasStates", "ObjectEntities": ["Cabo Delgado Province", "Gaza Province", "Inhambane Province", "Manica Province", "Maputo", "Maputo Province", "Nampula Province", "Niassa Province", "Sofala Province", "Tete Province", "Zambezia Province"]}
+{"SubjectEntity": "Bolivia", "Relation": "CountryHasStates", "ObjectEntities": ["Beni Department", "Chuquisaca Department", "Cochabamba Department", "La Paz Department", "Oruro Department", "Pando Department", "Potos\u00ed Department", "Santa Cruz Department", "Tarija Department"]}
+{"SubjectEntity": "Czech Republic", "Relation": "CountryHasStates", "ObjectEntities": ["Bene\u0161ov", "Beroun", "Blansko", "B\u0159eclav", "Brno-m\u011bsto", "Brno-venkov", "Brunt\u00e1l", "\u010cesk\u00e1 L\u00edpa", "\u010cesk\u00e9 Bud\u011bjovice", "\u010cesk\u00fd Krumlov", "Cheb", "Chomutov", "Chrudim", "D\u011b\u010d\u00edn", "Doma\u017elice", "Fr\u00fddek-M\u00edstek", "Havl\u00ed\u010dk\u016fv Brod", "Hodon\u00edn", "Hradec Kr\u00e1lov\u00e9", "Jablonec nad Nisou", "Jesen\u00edk", "Ji\u010d\u00edn", "Jihlava", "Jiho\u010desk\u00fd kraj", "Jihomoravsk\u00fd kraj", "Jind\u0159ich\u016fv Hradec", "Karlovarsk\u00fd kraj", "Karlovy Vary", "Karvin\u00e1", "Kladno", "Klatovy", "Kol\u00edn", "Kraj Vyso\u010dina", "Kr\u00e1lov\u00e9hradeck\u00fd kraj", "Krom\u011b\u0159\u00ed\u017e", "Kutn\u00e1 Hora", "Liberec", "Libereck\u00fd kraj", "Litom\u011b\u0159ice", "Louny", "M\u011bln\u00edk", "Mlad\u00e1 Boleslav", "Moravskoslezsk\u00fd kraj", "Most", "N\u00e1chod", "Nov\u00fd Ji\u010d\u00edn", "Nymburk", "Olomouc", "Olomouck\u00fd kraj", "Opava", "Ostrava-m\u011bsto", "Pardubice", "Pardubick\u00fd kraj", "Pelh\u0159imov", "P\u00edsek", "Plze\u0148-jih", "Plze\u0148-m\u011bsto", "Plze\u0148-sever", "Plze\u0148sk\u00fd kraj", "Prachatice", "Praha-v\u00fdchod", "Praha-z\u00e1pad", "Praha, Hlavn\u00ed m\u011bsto", "P\u0159erov", "P\u0159\u00edbram", "Prost\u011bjov", "Rakovn\u00edk", "Rokycany", "Rychnov nad Kn\u011b\u017enou", "Semily", "Sokolov", "Strakonice", "St\u0159edo\u010desk\u00fd kraj", "\u0160umperk", "Svitavy", "T\u00e1bor", "Tachov", "Teplice", "T\u0159eb\u00ed\u010d", "Trutnov", "Uhersk\u00e9 Hradi\u0161t\u011b", "\u00dasteck\u00fd kraj", "\u00dast\u00ed nad Labem", "\u00dast\u00ed nad Orlic\u00ed", "Vset\u00edn", "Vy\u0161kov", "\u017d\u010f\u00e1r nad S\u00e1zavou", "Zl\u00edn", "Zl\u00ednsk\u00fd kraj", "Znojmo"]}
+{"SubjectEntity": "Guinea", "Relation": "CountryHasStates", "ObjectEntities": ["Beyla Prefecture", "Boffa Prefecture", "Bok\u00e9 Prefecture", "Bok\u00e9 Region", "Conakry", "Coyah Prefecture", "Dabola Prefecture", "Dalaba Prefecture", "Dinguiraye Prefecture", "Dubr\u00e9ka Prefecture", "Faranah Prefecture", "For\u00e9cariah Prefecture", "Fria Prefecture", "Gaoual Prefecture", "Gu\u00e9ck\u00e9dou Prefecture", "Kankan Prefecture", "Kankan Region", "K\u00e9rouan\u00e9 Prefecture", "Kindia Prefecture", "Kindia Region", "Kissidougou Prefecture", "Koubia Prefecture", "Koundara Prefecture", "Kouroussa Prefecture", "Lab\u00e9 Prefecture", "Lab\u00e9 Region", "L\u00e9louma Prefecture", "Lola Prefecture", "Macenta Prefecture", "Mali Prefecture", "Mamou Prefecture", "Mamou Region", "Mandiana Prefecture", "Nz\u00e9r\u00e9kor\u00e9 Prefecture", "Nz\u00e9r\u00e9kor\u00e9 Region", "Pita Prefecture", "Siguiri Prefecture", "T\u00e9lim\u00e9l\u00e9 Prefecture", "Tougu\u00e9 Prefecture", "Yomou Prefecture"]}
+{"SubjectEntity": "Belarus", "Relation": "CountryHasStates", "ObjectEntities": ["Brest Region", "Gomel Region", "Grodno Region", "Minsk", "Minsk Region", "Mogilev Region", "Vitebsk Region"]}
+{"SubjectEntity": "Zimbabwe", "Relation": "CountryHasStates", "ObjectEntities": ["Bulawayo Province", "Harare Province", "Manicaland", "Mashonaland Central Province", "Mashonaland East Province", "Mashonaland West Province", "Masvingo Province", "Matabeleland North Province", "Matabeleland South Province", "Midlands Province"]}
+{"SubjectEntity": "Portugal", "Relation": "CountryHasStates", "ObjectEntities": ["A\u00e7ores", "Aveiro", "Beja", "Braga", "Bragan\u00e7a", "Castelo Branco", "Coimbra", "\u00c9vora", "Faro", "Guarda", "Leiria", "Lisbon", "Madeira", "Portalegre", "Porto", "Santar\u00e9m", "Set\u00fabal", "Viana do Castelo", "Vila Real", "Viseu"]}
+{"SubjectEntity": "Estonia", "Relation": "CountryHasStates", "ObjectEntities": ["Harju County", "Hiiu County", "Ida-Viru County", "J\u00e4rva County", "J\u00f5geva County", "L\u00e4\u00e4ne County", "L\u00e4\u00e4ne-Viru County", "P\u00e4rnu County", "P\u00f5lva County", "Rapla County", "Saare County", "Tartu County", "Valga County", "Viljandi County", "V\u00f5ru County"]}
+{"SubjectEntity": "Benin", "Relation": "CountryHasStates", "ObjectEntities": ["Alibori Department", "Atakora Department", "Atlantique Department", "Borgou Department", "Collines Department", "Donga Department", "Kouffo Department", "Littoral Department", "Mono Department", "Ou\u00e9m\u00e9 Department", "Plateau Department", "Zou Department"]}
+{"SubjectEntity": "Guinea-Bissau", "Relation": "CountryHasStates", "ObjectEntities": ["Bafat\u00e1", "Biombo Region", "Bolama Region", "Cacheu Region", "Gab\u00fa Region", "Leste Province", "Norte Province", "Oio Region", "Quinara Region", "Sul Province", "Tombali Region"]}
+{"SubjectEntity": "Austria", "Relation": "CountryHasStates", "ObjectEntities": ["Burgenland", "Carinthia", "Lower Austria", "Salzburg", "Styria", "Tyrol", "Upper Austria", "Vienna", "Vorarlberg"]}
+{"SubjectEntity": "Cameroon", "Relation": "CountryHasStates", "ObjectEntities": ["Adamawa", "Centre", "East", "Far North", "Littoral", "North", "Northwest", "South", "Southwest", "West"]}
+{"SubjectEntity": "Sri Lanka", "Relation": "CountryHasStates", "ObjectEntities": ["Ampara District", "Anuradhapura District", "Badulla District", "Batticaloa District", "Central Province", "Colombo District", "Eastern Province", "Galle District", "Gampaha District", "Hambantota District", "Jaffna District", "Kalutara District", "Kandy District", "Kegalle District", "Kilinochchi District", "Mannar District", "Matale District", "Matara District", "Monaragala District", "Mullaitivu District", "North Central Province", "North Western Province", "Northern Province", "Nuwara Eliya District", "Polonnaruwa District", "Puttalam District", "Ratnapura district", "Sabaragamuwa Province", "Southern Province", "Trincomalee District", "Uva Province", "Vavuniya District", "Western Province"]}
+{"SubjectEntity": "Senegal", "Relation": "CountryHasStates", "ObjectEntities": ["Dakar", "Diourbel Region", "Fatick", "Kaffrine", "Kaolack", "K\u00e9dougou", "Kolda", "Louga", "Matam", "Saint-Louis", "S\u00e9dhiou", "Tambacounda Region", "Thi\u00e8s Region", "Ziguinchor"]}
+{"SubjectEntity": "Belize", "Relation": "CountryHasStates", "ObjectEntities": ["Belize District", "Cayo District", "Corozal District", "Orange Walk District", "Stann Creek District", "Toledo District"]}
+{"SubjectEntity": "Georgia", "Relation": "CountryHasStates", "ObjectEntities": ["Adjara", "Autonomous Republic of Abkhazia", "Guria", "Imereti", "Kakheti", "Khelvachauri Municipality", "Kvemo Kartli", "Mtskheta-Mtianeti", "Racha-Lechkhumi and Kvemo Svaneti", "Samegrelo-Zemo Svaneti", "Samtskhe-Javakheti", "Senaki Municipality", "Shida Kartli", "Tbilisi"]}
+{"SubjectEntity": "Central African Republic", "Relation": "CountryHasStates", "ObjectEntities": ["Bamingui-Bangoran Prefecture", "Bangui", "Basse-Kotto Prefecture", "Haut-Mbomou Prefecture", "Haute-Kotto Prefecture", "K\u00e9mo Prefecture", "Lobaye Prefecture", "Mamb\u00e9r\u00e9-Kad\u00e9\u00ef", "Mbomou Prefecture", "Nana-Gr\u00e9bizi Economic Prefecture", "Nana-Mamb\u00e9r\u00e9 Prefecture", "Ombella-M'Poko Prefecture", "Ouaka Prefecture", "Ouham Prefecture", "Ouham-Pend\u00e9 Prefecture", "Sangha-Mba\u00e9r\u00e9", "Vakaga Prefecture"]}
+{"SubjectEntity": "Kazakhstan", "Relation": "CountryHasStates", "ObjectEntities": ["Akmola Region", "Aktobe Region", "Almaty", "Almaty Region", "Atyrau Region", "Baikonur", "East Kazakhstan Region", "Jambyl Region", "Karaganda Region", "Kostanay Region", "Kyzylorda Region", "Mangystau Region", "North Kazakhstan Region", "Nur-Sultan", "Pavlodar Region", "Turkestan Region", "West Kazakhstan Province"]}
+{"SubjectEntity": "South Africa", "Relation": "CountryHasStates", "ObjectEntities": ["Eastern Cape", "Free State", "Gauteng", "KwaZulu-Natal", "Limpopo", "Mpumalanga", "North West", "Northern Cape", "Western Cape"]}
+{"SubjectEntity": "Rwanda", "Relation": "CountryHasStates", "ObjectEntities": ["Eastern Province", "Kigali district", "Northern Province", "Southern Province", "Western Province"]}
+{"SubjectEntity": "Bahrain", "Relation": "CountryHasStates", "ObjectEntities": ["Capital", "Central", "Muharraq", "Northern", "Southern"]}
+{"SubjectEntity": "Comoros", "Relation": "CountryHasStates", "ObjectEntities": ["Anjouan", "Grande Comore", "Moh\u00e9li"]}
+{"SubjectEntity": "Morocco", "Relation": "CountryHasStates", "ObjectEntities": ["Agadir-Ida-Ou-Tanane", "Al Haouz", "Al Hoce\u00efma", "Aousserd (EH)", "Assa-Zag (EH-partial)", "Azilal", "B\u00e9ni Mellal", "B\u00e9ni Mellal-Kh\u00e9nifra", "Benslimane", "Berkane", "Berrechid", "Boujdour (EH)", "Boulemane", "Casablanca", "Casablanca-Settat", "Chefchaouen", "Chichaoua", "Chtouka-Ait Baha", "Dakhla-Oued Ed-Dahab (EH)", "Dr\u00e2a-Tafilalet", "Driouch", "El Hajeb", "El Jadida", "El Kel\u00e2a des Sraghna", "Errachidia", "Es-Semara (EH-partial)", "Essaouira", "Fahs-Anjra", "F\u00e8s", "F\u00e8s-Mekn\u00e8s", "Figuig", "Fquih Ben Salah", "Guelmim", "Guelmim-Oued Noun (EH-partial)", "Guercif", "Ifrane", "Inezgane-Ait Melloul", "Jerada", "K\u00e9nitra", "Kh\u00e9misset", "Kh\u00e9nifra", "Khouribga", "L'Oriental", "La\u00e2youne (EH)", "La\u00e2youne-Sakia El Hamra (EH-partial)", "Larache", "M\u2019diq-Fnideq", "Marrakech", "Marrakesh-Safi", "M\u00e9diouna", "Mekn\u00e8s", "Midelt", "Mohammadia", "Moulay Yacoub", "Nador", "Nouaceur", "Ouarzazate", "Oued Ed-Dahab (EH)", "Ouezzane", "Oujda-Angad", "Rabat", "Rabat-Sal\u00e9-K\u00e9nitra", "Rehamna", "Safi", "Sal\u00e9", "Sefrou", "Settat", "Sidi Bennour", "Sidi Ifni", "Sidi Kacem", "Sidi Slimane", "Skhirate-T\u00e9mara", "Souss-Massa", "Tan-Tan (EH-partial)", "Tanger-Assilah", "Tanger-T\u00e9touan-Al Hoce\u00efma", "Taounate", "Taourirt", "Tarfaya (EH-partial)", "Taroudannt", "Tata", "Taza", "T\u00e9touan", "Tinghir", "Tiznit", "Youssoufia", "Zagora"]}
+{"SubjectEntity": "Solomon Islands", "Relation": "CountryHasStates", "ObjectEntities": ["Central Province", "Choiseul Province", "Guadalcanal Province", "Honiara", "Isabel Province", "Makira-Ulawa Province", "Malaita Province", "Rennell and Bellona Province", "Temotu Province", "Western Province"]}
+{"SubjectEntity": "Mali", "Relation": "CountryHasStates", "ObjectEntities": ["Bamako", "Gao Region", "Kayes Region", "Kidal Region", "Koulikoro Region", "M\u00e9naka Region", "Mopti Region", "S\u00e9gou Region", "Sikasso Region", "Taoud\u00e9nit Region", "Tombouctou Region"]}
+{"SubjectEntity": "Laos", "Relation": "CountryHasStates", "ObjectEntities": ["Attapeu Province", "Bokeo Province", "Bolikhamsai Province", "Champasak Province", "Houaphanh Province", "Khammouane Province", "Luang Namtha Province", "Luang Prabang Province", "Oudomxay Province", "Phongsaly Province", "Sainyabuli Province", "Salavan Province", "Savannakhet Province", "Sekong Province", "Vientiane Prefecture", "Vientiane Province", "Xaisomboun", "Xaisomboun Province", "Xiangkhouang Province"]}
+{"SubjectEntity": "Jordan", "Relation": "CountryHasStates", "ObjectEntities": ["Ajloun", "Amman", "Aqaba", "Balqa", "Irbid", "Jerash", "Karak", "Ma'an", "Madaba", "Mafraq", "Tafilah", "Zarqa"]}
+{"SubjectEntity": "Somalia", "Relation": "CountryHasStates", "ObjectEntities": ["Awdal Region", "Bakool", "Banaadir", "Bari", "Bay", "Galguduud", "Gedo", "Hiran", "Lower Juba", "Lower Shebelle", "Middle Juba", "Middle Shebelle", "Mudug", "Nugal", "Sanaag Region", "Togdheer Region"]}
+{"SubjectEntity": "Nepal", "Relation": "CountryHasStates", "ObjectEntities": ["Bagmati Zone", "Bheri Zone", "Central Region", "Dhaulagiri Zone", "Eastern Development Region", "Far-Western Development Region", "Gandaki Zone", "Janakpur Zone", "Karnali Zone", "Kosi Zone", "Lumbini Zone", "Mahakali Zone", "Mechi Zone", "Mid-Western Region", "Narayani Zone", "Rapti Zone", "Sagarmatha Zone", "Seti Zone", "Western Region"]}
+{"SubjectEntity": "TNT", "ObjectEntities": ["carbon", "nitrogen", "hydrogen", "oxygen"], "Relation": "CompoundHasParts"}

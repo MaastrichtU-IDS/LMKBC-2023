@@ -2,7 +2,6 @@ Relation,PromptTemplate
 BandHasMember,{subject_entity} is a band that includes {mask_token} as a member.
 CityLocatedAtRiver,{subject_entity} is a city located at the {mask_token} river.
 CompanyHasParentOrganisation,The parent organization of {subject_entity} is {mask_token}.
-CompoundHasParts,{subject_entity} is composed of {mask_token}.
 CountryBordersCountry,{subject_entity} shares its borders with {mask_token}.
 CountryHasOfficialLanguage,The official language of {subject_entity} is {mask_token}.
 CountryHasStates,{subject_entity} includes {mask_token} as one of its states.
@@ -20,9 +19,4 @@ PersonSpeaksLanguage,{subject_entity} is able to speak {mask_token}.
 RiverBasinsCountry,{subject_entity} river basin is located in {mask_token}.
 SeriesHasNumberOfEpisodes,The series {subject_entity} has {mask_token} episodes.
 StateBordersState,{subject_entity} state shares its borders with {mask_token}.
-
-
-
-
-
-
+CompoundHasParts,{subject_entity} is composed of {mask_token}.
