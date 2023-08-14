@@ -29,7 +29,7 @@ valid_line = util.file_read_json_line(config.VAL_FN)
 all_gold_lines = train_line + valid_line
 
 origin_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
-enhance_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
+# enhance_tokenizer = transformers.AutoTokenizer.from_pretrained(config.TOKENIZER_PATH)
 
 def refresh_tokenizer(entity_set:set):
     origin_tokenizer.add_tokens(list(entity_set))
@@ -269,7 +269,9 @@ def collect_entity_for_tokenizer():
     sub_type ={s for s,_ in  config.relation_entity_type_dict.values()}
     obj_type ={o for s, o in  config.relation_entity_type_dict.values()}
     sub_only_type = sub_type - obj_type
-    silver_lines = get_silver_lines()
+    # silver_lines = get_silver_lines()
+    test_silver_fp = 'res/test_silver.jsonl'
+    silver_lines = util.file_read_json_line(test_silver_fp)
     print('silver_lines', len(silver_lines))
     gold_dict, gold_entity_sentence = count_entity_distribution(all_gold_lines,
                                         #   exclude_entities=exclude_entities,
@@ -290,7 +292,7 @@ def collect_entity_for_tokenizer():
     print('result_dict', result_dict.keys())
     # for sub in sub_only_type:
     #     del result_dict[sub]
-    print(sub_only_type)
+    # print(sub_only_type)
     display_entity_dict(result_dict)
     entity_fp = f'{config.RES_DIR}/entity_for_tokenizer.json'
     for k, v in result_dict.items():
@@ -299,7 +301,7 @@ def collect_entity_for_tokenizer():
         json.dump(result_dict,f,indent=2,sort_keys=True)
     entity_set = set.union(* [set(e) for e in result_dict.values()])
     refresh_tokenizer(entity_set)
-    multi_thread_entity(entity_set)
+    # multi_thread_entity(entity_set)
     # collection_ids(entity_set)
     # entity_id_dict = get_entity_ids(entity_set)
 
@@ -376,7 +378,11 @@ def collect_entity_for_pretrain():
     with open(entity_fp, mode='w') as f:
         json.dump(result_dict,f,indent=2,sort_keys=True)
 
-    
+def print_relation_entity_type():
+    items = sorted(config.relation_entity_type_dict.items(),key = lambda x: x[0])
+    for k,v in items:
+        s,o = v
+        print(f'{k} & {s} & {o}')
     
  
 def collect_entity_for_pretrain_test():
@@ -649,9 +655,9 @@ def print_result():
     print(pd_result.transpose().round(4).to_string(max_cols=12,decimal='&'))
 
 if __name__ == "__main__":
-    collect_entity_for_pretrain()
+    # collect_entity_for_pretrain()
     # collect_entity_for_pretrain_test()
-    # collect_entity_for_tokenizer()
+    collect_entity_for_tokenizer()
     # collection_ids()
     # same_id_numer()
     # tokenize()
@@ -659,4 +665,5 @@ if __name__ == "__main__":
     # token_weight() 
     # print(sum([0,0,1]))
     # print_result()
+    # print_relation_entity_type()
 

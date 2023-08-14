@@ -6,10 +6,10 @@ os.chdir(config.ROOT_PATH)
 import torch
 
 
-test_mode = False
-# test_mode = True
+# test_mode = False
+test_mode = True
 # label = "token_recode_std"
-label = "pretrain-token_recode_std"
+label = "pretrain-token_recode_60m"
 # label = "fine-tune"
 if test_mode:
     do_train= False
@@ -44,9 +44,9 @@ if not os.path.exists(model_save_dir):
 # model_load_dir = 'bin/pretrain_fill-mask/bert-base-cased/best_ckpt'
 # model_load_dir = 'bin/baseline/fill_mask/bert-large-cased/best_ckpt'
 # model_load_dir = 'bin/pretrain-val_test/bert-base-cased/best_ckpt'
-model_load_dir = 'bin/pretrain-val_test-recode/bert-base-cased/best_ckpt'
+# model_load_dir = 'bin/pretrain-val_test-recode/bert-base-cased/best_ckpt'
 # model_load_dir = 'bin/bert-large-cased/checkpoint-105960'
-
+model_load_dir = 'bin/pretrain-val_test-recode-60m/bert-base-cased/best_ckpt'
 model_best_dir = model_save_dir + "/best_ckpt"
 # model_best_dir = model_save_dir + "/best_ckpt"
 
@@ -58,7 +58,7 @@ def run():
 
     cmd_run_fillmask = f"""
     
-   python src/fm_model.py  --test_fn {config.test_fp} --valid_fn {config.VAL_FN}  --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {config.TRAIN_FN} --train_batch_size 64 --gpu 0 --top_k 40 --threshold 0.1  --dev_fn  {config.VAL_FN} --train_epoch 20 --learning_rate 2e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir} --pretrain_model {config.bert_base_cased}  --silver_data false  --filter false      --token_recode 0   --do_train 0   --do_valid {do_valid}  --do_test {do_test}  --recode_type std
+   python src/fm_model.py  --test_fn {config.test_fp} --valid_fn {config.VAL_FN}  --template_fn res/prompts0.csv  --output {OUTPUT_FILE} --train_fn {config.TRAIN_FN} --train_batch_size 64 --gpu -1 --top_k 40 --threshold 0.1  --dev_fn  {config.VAL_FN} --train_epoch 20 --learning_rate 2e-5 --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir} --pretrain_model {config.bert_base_cased}  --silver_data false  --filter false      --token_recode 0   --do_train 1   --do_valid {do_valid}  --do_test {do_test}  --recode_type std
 
     """
 

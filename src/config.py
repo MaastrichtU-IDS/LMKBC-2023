@@ -49,7 +49,7 @@ test_silver_fp = 'res/test_silver.jsonl'
 FROM_KG = 'from'
 TO_KG = 'to'
 
-TOKENIZER_PATH = f'{RES_DIR}/tokenizer/bert'
+TOKENIZER_PATH = f'{RES_DIR}/tokenizer/bert0'
 
 check_dir_list = [
     BIN_DIR,

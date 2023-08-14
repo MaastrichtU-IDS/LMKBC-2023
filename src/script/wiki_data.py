@@ -53,7 +53,7 @@ for key in entity_set:
     entity_dict[key] = 0
 
 
-label= "silver_val_test"
+label= "silver_val_test0"
 origin_dir  = f'{config.RES_DIR}/wikidata/origin'
 
 if not os.path.exists( f'{config.RES_DIR}/wikidata/{label}'):
