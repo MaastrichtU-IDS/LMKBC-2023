@@ -71,14 +71,19 @@ def run(args):
     # Load the model
     model_type = args.model
     logger.info(f"Loading the model \"{model_type}\"...")
-    tokenizer = AutoTokenizer.from_pretrained(model_type)
+    if 'opt' in model_type:
+        tokenizer = AutoTokenizer.from_pretrained(model_type,padding_side='left')
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(model_type)
+
+    # tokenizer = AutoTokenizer.from_pretrained(model_type)
     model = AutoModelForMaskedLM.from_pretrained(model_type)  if "bert" in model_type.lower()  else AutoModelForCausalLM.from_pretrained(model_type)
     task = "fill-mask" if "bert" in model_type.lower() else "text-generation"    
      
     
     # Read the prompt templates and train data from CSV files
     if task == "text-generation":
-        pipe = pipeline(task=task, model=model, tokenizer=tokenizer, top_k=args.top_k, device=args.gpu, fp16=args.fp16) 
+        pipe = pipeline(task=task, model=model, tokenizer=tokenizer, top_k=args.top_k, device=args.gpu) 
         logger.info(f"Reading question prompt templates from \"{args.question_prompts}\"...")
         prompt_templates = read_prompt_templates_from_csv(args.question_prompts)
     else:

@@ -132,7 +132,7 @@ def train_fm():
     if not os.path.isdir( args.model_load_dir) and args.token_recode:
         print("repair token embedding")
         origin_tokenizer = transformers.AutoTokenizer.from_pretrained(config.bert_base_cased)
-        util.token_layer(bert_model, additional_token_dict, bert_tokenizer, origin_tokenizer)
+        util.token_layer(bert_model, additional_token_dict, bert_tokenizer, origin_tokenizer,recode_type='std')
     train_dataset = PreFM_wiki_Dataset(data_fn=args.train_fn, tokenizer=bert_tokenizer)
     bert_collator = util.DataCollatorKBC(
         tokenizer=bert_tokenizer,
