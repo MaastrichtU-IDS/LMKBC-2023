@@ -191,8 +191,7 @@ def train():
     )
     if not os.path.isdir( args.model_load_dir) and args.token_recode:
         print("recode token embedding")
-        util.token_layer(bert_model, 
-                         additional_token_dict,
+        util.token_layer(bert_model,
                          enhance_tokenizer=enhance_tokenizer, 
                          origin_tokenizer=origin_tokenizer, 
                          recode_type=args.recode_type)
@@ -473,7 +472,6 @@ def test_pipeline():
     else:
         rel_thres_dict = dict()
     negative_vocabulary = {'[CLS]'}
-    topk_dict = dict()
     predefine_fine = 'res/object_number.tsv'
     with open(predefine_fine) as f:
         topk = csv.DictReader(f, delimiter="\t")
@@ -497,7 +495,6 @@ def test_pipeline():
                     break
             if obj in negative_vocabulary:
                 continue
-
             if args.filter:
                 # print('entity filter')
                 # print('type_entity',len(type_entity))
@@ -633,6 +630,7 @@ def adaptive_threshold():
         relation_list_groud[relation].append(row)
 
     relation_threshold_dict = dict()
+    relation_index= dict()
     print('threshold_initial_dict',threshold_initial_dict)
     for relation, pred_list in tqdm(relation_list_pred.items()):
         groud_list = relation_list_groud[relation]
@@ -643,6 +641,7 @@ def adaptive_threshold():
         origin_threshold = threshold_initial_dict[relation]
         best_threshold=0
         threshold_step = 0.01
+        best_index = 100
         for i in range(1,int(1//threshold_step)):
             threshold = threshold_step*i
 
@@ -665,17 +664,23 @@ def adaptive_threshold():
                 best_threshold =threshold
                 best_precision= p 
                 best_recal= r
+                best_index= score_index
 
   
-        
+        relation_index[relation] = best_index
         relation_threshold_dict[relation] = best_threshold
-        best_topk_dict[relation] = [best_threshold,best_f1] 
-     
+    
         origin_result_dict[relation]["best_precision"]=best_precision
         origin_result_dict[relation]["best_recal"]=best_recal
         origin_result_dict[relation]["best_f1"]=best_f1
         origin_result_dict[relation]["best_threshold"]=best_threshold
-       
+
+    pred_rows = util.file_read_json_line(args.output_fn)
+    for row in pred_rows:
+        relation = row[config.KEY_REL]
+        row[config.KEY_OBJS] = row[config.KEY_OBJS][:relation_index[relation]]
+        row[config.KEY_OBJS_ID] = row[config.KEY_OBJS_ID][:relation_index[relation]]
+    util.file_write_json_line(args.output_fn+'.ths',pred_rows)
         #origin_result_dict[relation]["origin_threshold"]=origin_threshold
 
     with open(rel_thres_fn,'w') as f:
@@ -689,7 +694,7 @@ def adaptive_threshold():
         }
     util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
     scores_per_relation_pd = pd.DataFrame(origin_result_dict)
-    print(scores_per_relation_pd.transpose().round(4).to_string(max_cols=12))
+    print(scores_per_relation_pd.transpose().round(3).to_string(max_cols=12))
 
 
 
@@ -854,6 +859,12 @@ if __name__ == "__main__":
         help="Batch size for the model. (default:32)",
     )
     parser.add_argument(
+        "--do_ths",
+        type=str2bool,
+        default = False,
+        help="Batch size for the model. (default:32)",
+    )
+    parser.add_argument(
         "--filter",
         type=str2bool,
         help="Batch size for the model. (default:32)",
@@ -887,6 +898,8 @@ if __name__ == "__main__":
     if  args.do_valid:
         test_pipeline()
         # adaptive_top_k()
+        adaptive_threshold()
+    if args.do_ths:
         adaptive_threshold()
 
     if args.do_test:

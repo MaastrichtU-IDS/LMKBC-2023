@@ -321,9 +321,12 @@ def assemble_result(origin_rows, outputs):
 
 
 
-def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhance_tokenizer,origin_tokenizer,recode_type):
+def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_tokenizer,recode_type):
     # BertForMaskedLM.get_input_embeddings()
     # BertForMaskedLM.set_input_embeddings()
+    with open(config.TOKENIZER_PATH+"/added_tokens.json") as f:
+        additional_token_dict = json.load(f)
+
     num_new_tokens = len(enhance_tokenizer.vocab)
     # model.resize_token_embeddings(num_new_tokens)
 
@@ -438,6 +441,7 @@ def token_layer(model:transformers.BertForMaskedLM,additional_token_dict, enhanc
     model.cls.predictions.decoder =  new_cls_decoder
     model.config.vocab_size = num_new_tokens
     model.vocab_size = num_new_tokens
+    return model
 
 class Token_Weight:
     def __init__(self):

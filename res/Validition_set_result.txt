@@ -1,30 +1,73 @@
-BandHasMember                &  0.000& 0.960 & 0.000  &     0.7387  &    0.0104 &  0.0132            
-CityLocatedAtRiver           &  0.018& 0.145 & 0.020  &     0.4058  &    0.1100 &  0.1013                      
-CompanyHasParentOrganisation &  0.060& 0.640 & 0.053  &     0.5933  &    0.6233 &  0.5773                   
-CompoundHasParts             &  0.164& 0.475 & 0.179  &     0.7987  &    0.8207 &  0.7918                   
-CountryBordersCountry        &  0.372& 0.709 & 0.443  &     0.5757  &    0.4263 &  0.4481            
-CountryHasOfficialLanguage   &  0.760& 0.685 & 0.668  &     0.8564  &    0.6873 &  0.6995        
-CountryHasStates             &  0.002& 0.076 & 0.005  &     0.1760  &    0.0607 &  0.0779        
-FootballerPlaysPosition      &  0.413& 0.143 & 0.206  &     0.1776  &    0.6700 &  0.2705        
-PersonCauseOfDeath           &  0.040& 0.012 & 0.019  &     0.6800  &    0.6800 &  0.6800        
-PersonHasAutobiography       &  0.000& 0.950 & 0.000  &     0.0000  &    0.0000 &  0.0000            
-PersonHasEmployer            &  0.000& 0.970 & 0.000  &     0.0646  &    0.0717 &  0.0317    
-PersonHasNoblePrize          &  0.000& 0.000 & 0.000  &     0.7900  &    0.6000 &  0.5433                
-PersonHasNumberOfChildren    &  0.000& 0.000 & 0.000  &     0.2675  &    0.7700 &  0.3920                    
-PersonHasPlaceOfDeath        &  0.091& 0.641 & 0.088  &     0.6364  &    0.5455 &  0.5253    
-PersonHasProfession          &  0.000& 0.700 & 0.000  &     0.1883  &    0.1008 &  0.1097        
-PersonHasSpouse              &  0.000& 0.890 & 0.000  &     0.0000  &    0.0000 &  0.0000        
-PersonPlaysInstrument        &  0.000& 0.110 & 0.000  &     0.2553  &    0.5154 &  0.3141    
-PersonSpeaksLanguage         &  0.383& 0.310 & 0.316  &     0.7007  &    0.6433 &  0.6287                      
-RiverBasinsCountry           &  0.423& 0.402 & 0.345  &     0.4953  &    0.5323 &  0.4670            
-SeriesHasNumberOfEpisodes    &  0.000& 1.000 & 0.000  &     0.0790  &    0.4300 &  0.1312                       
-StateBordersState            &  0.016& 0.132 & 0.016  &     0.0889  &    0.1684 &  0.1035                      
-*** Average ***              &  0.131& 0.474 & 0.112  &     0.4080  &    0.4031 &  0.3289                    
+BandHasMember                &  0.000& 0.960 & 0.000  &      0.123   &    0.035  &  0.026    \\         
+CityLocatedAtRiver           &  0.018& 0.145 & 0.020  &      0.262   &    0.175  &  0.128    \\                   
+CompanyHasParentOrganisation &  0.060& 0.640 & 0.053  &      0.790   &    0.620  &  0.610    \\                
+CompoundHasParts             &  0.164& 0.475 & 0.179  &      0.815   &    0.795  &  0.780    \\                
+CountryBordersCountry        &  0.372& 0.709 & 0.443  &      0.532   &    0.534  &  0.477    \\         
+CountryHasOfficialLanguage   &  0.760& 0.685 & 0.668  &      0.810   &    0.725  &  0.714    \\     
+CountryHasStates             &  0.002& 0.076 & 0.005  &      0.227   &    0.069  &  0.088    \\     
+FootballerPlaysPosition      &  0.413& 0.143 & 0.206  &      0.153   &    0.742  &  0.246    \\     
+PersonCauseOfDeath           &  0.040& 0.012 & 0.019  &      0.710   &    0.680  &  0.680    \\     
+PersonHasAutobiography       &  0.000& 0.950 & 0.000  &      0.000   &    0.000  &  0.000    \\         
+PersonHasEmployer            &  0.000& 0.970 & 0.000  &      0.231   &    0.058  &  0.039    \\ 
+PersonHasNoblePrize          &  0.000& 0.000 & 0.000  &      0.698   &    0.690  &  0.605    \\             
+PersonHasNumberOfChildren    &  0.000& 0.000 & 0.000  &      0.270   &    0.780  &  0.397    \\                 
+PersonHasPlaceOfDeath        &  0.091& 0.641 & 0.088  &      0.616   &    0.535  &  0.515    \\ 
+PersonHasProfession          &  0.000& 0.700 & 0.000  &      0.103   &    0.207  &  0.123    \\     
+PersonHasSpouse              &  0.000& 0.890 & 0.000  &      0.000   &    0.000  &  0.000    \\     
+PersonPlaysInstrument        &  0.000& 0.110 & 0.000  &      0.312   &    0.506  &  0.358    \\ 
+PersonSpeaksLanguage         &  0.383& 0.310 & 0.316  &      0.676   &    0.678  &  0.631    \\                   
+RiverBasinsCountry           &  0.423& 0.402 & 0.345  &      0.576   &    0.467  &  0.473    \\         
+SeriesHasNumberOfEpisodes    &  0.000& 1.000 & 0.000  &      0.089   &    0.450  &  0.147    \\                    
+StateBordersState            &  0.016& 0.132 & 0.016  &      0.124   &    0.149  &  0.103    \\                   
+Average                      &  0.131& 0.474 & 0.112  &      0.387   &    0.424  &  0.340    \\                 
 
 
 
+BandHasMember                 0.006  0.045  0.010                      0.01
+CityLocatedAtRiver            0.018  0.350  0.033                      0.03
+CompanyHasParentOrganisation  0.029  0.748  0.056                      0.27
+CompoundHasParts              0.144  0.964  0.248                      0.08
+CountryBordersCountry         0.099  0.921  0.176                      0.04
+CountryHasOfficialLanguage    0.056  0.848  0.103                      0.12
+CountryHasStates              0.070  0.154  0.093                      0.01
+FootballerPlaysPosition       0.075  1.085  0.140                      0.02
+PersonCauseOfDeath            0.039  0.817  0.075                      0.31
+PersonHasAutobiography        0.000  0.000  0.000                      0.00
+PersonHasEmployer             0.008  0.146  0.015                      0.03
+PersonHasNoblePrize           0.170  1.000  0.290                      0.21
+PersonHasNumberOfChildren     0.090  0.980  0.165                      0.10
+PersonHasPlaceOfDeath         0.062  0.697  0.111                      0.60
+PersonHasProfession           0.030  0.451  0.054                      0.03
+PersonHasSpouse               0.001  0.010  0.001                      0.00
+PersonPlaysInstrument         0.050  0.755  0.091                      0.07
+PersonSpeaksLanguage          0.053  0.943  0.099                      0.06
+RiverBasinsCountry            0.049  0.939  0.091                      0.22
+SeriesHasNumberOfEpisodes     0.025  0.970  0.048                      0.06
+StateBordersState             0.041  0.258  0.067                      0.01
+Average                       0.053  0.623  0.094                       NaN
 
-
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 
 

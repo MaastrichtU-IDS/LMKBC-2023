@@ -276,7 +276,7 @@ def collect_entity_for_tokenizer():
     gold_dict, gold_entity_sentence = count_entity_distribution(all_gold_lines,
                                         #   exclude_entities=exclude_entities,
                                         #   merge_subject=True,
-                                        remove_tokenizer=False,
+                                        remove_tokenizer=True,
                                         include_entities=obj_type,
                                           )
     siler_dict,silver_entity_sentence = count_entity_distribution(silver_lines,
@@ -284,7 +284,7 @@ def collect_entity_for_tokenizer():
                                             # merge_subject=False,
                                             # exclude_subject=exclude_subject,
                                             # give_up_relation=give_up_relation
-                                              remove_tokenizer=False,
+                                              remove_tokenizer=True,
                                                include_entities=obj_type,
                                             )
     print('siler_dict', siler_dict.keys())
@@ -294,11 +294,11 @@ def collect_entity_for_tokenizer():
     #     del result_dict[sub]
     # print(sub_only_type)
     display_entity_dict(result_dict)
-    entity_fp = f'{config.RES_DIR}/entity_for_tokenizer.json'
-    for k, v in result_dict.items():
-        result_dict[k] = list(v)
-    with open(entity_fp, mode='w') as f:
-        json.dump(result_dict,f,indent=2,sort_keys=True)
+    # entity_fp = f'{config.RES_DIR}/entity_for_tokenizer.json'
+    # for k, v in result_dict.items():
+    #     result_dict[k] = list(v)
+    # with open(entity_fp, mode='w') as f:
+    #     json.dump(result_dict,f,indent=2,sort_keys=True)
     entity_set = set.union(* [set(e) for e in result_dict.values()])
     refresh_tokenizer(entity_set)
     # multi_thread_entity(entity_set)
@@ -430,7 +430,7 @@ def display_entity_dict(entity_dict):
     all_size=0  
     for k,v in entity_dict.items():
  
-        print(f"{k}   {len(v)}")
+        print(f"{k} & {len(v)} \\\\")
         all_size+=len(v)
  
     print("entity size is ",all_size)

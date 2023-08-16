@@ -53,7 +53,7 @@ for key in entity_set:
     entity_dict[key] = 0
 
 
-label= "silver_val_test0"
+label= "silver_val_test"
 origin_dir  = f'{config.RES_DIR}/wikidata/origin'
 
 if not os.path.exists( f'{config.RES_DIR}/wikidata/{label}'):
@@ -199,7 +199,7 @@ def filter_dataset():
                 result.append(False)
                 continue
             min_count = min([entity_dict[e] for e in entities])
-            if  min_count < 50:
+            if  min_count < 100:
                 for e in entities:
                     if e in entity_dict:
                         entity_dict[e]+=1
@@ -280,7 +280,7 @@ def display_entity_distribution():
         type_count_dict[entity_type]+=v
     print('sentence of each type')
     for k,v in type_count_dict.items():
-        print(k,v)
+        print(f"{k} && {v} \\\\")
     # for k,v in type_count_dict.items():
     #     print(k, v[:50])
     #     print()
@@ -337,10 +337,10 @@ def test_tokenizer():
 
 
 if __name__ == "__main__":
-    wiki_pipeline()
+    # wiki_pipeline()
 
     # tree_test()
-    # display_entity_distribution()
+    display_entity_distribution()
     # test_unicode()
     # test_tokenizer()
 
