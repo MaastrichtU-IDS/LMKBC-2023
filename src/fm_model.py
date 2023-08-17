@@ -43,7 +43,6 @@ print('type_entity_dict',len(type_entity_dict))
 rel_thres_fn = f"{config.RES_DIR}/relation-threshold.json"
 class MLMDataset(Dataset):
     def __init__(self, origin_tokenizer: BertTokenizerFast,enhance_tokenizer: BertTokenizerFast,  data_fn, template_fn,
-                 silver_data=False,
                  use_val = False
                  ) -> None:
         super().__init__()
@@ -51,14 +50,6 @@ class MLMDataset(Dataset):
 
         # Read the training data from a JSON file
         train_data = util.file_read_json_line(data_fn)
-        if silver_data:
-            # print("silver data")
-            # file_name_list = glob(f'res/silver/*.jsonl', recursive=True)
-            # for fp in file_name_list:
-            #     train_data.extend(util.file_read_json_line(fp)) 
-
-            no_test = 'res/no_test_silver.jsonl'
-            train_data.extend(util.file_read_json_line(no_test)) 
         if args.do_test:
             train_data.extend(util.file_read_json_line(config.VAL_FN)) 
 
@@ -212,7 +203,6 @@ def train():
         data_fn=args.train_fn, origin_tokenizer=origin_tokenizer, 
         enhance_tokenizer=enhance_tokenizer,
         template_fn=args.template_fn,
-        silver_data=args.silver_data,
 
     )
     print("trainset size",len(train_dataset))
@@ -830,13 +820,6 @@ if __name__ == "__main__":
         "--train_batch_size",
         type=int,
         default=32,
-        help="Batch size for the model. (default:32)",
-    )
-
-      
-    parser.add_argument(
-        "--silver_data",
-        type=str2bool,
         help="Batch size for the model. (default:32)",
     )
 
