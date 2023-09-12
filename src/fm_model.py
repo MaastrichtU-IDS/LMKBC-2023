@@ -862,7 +862,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--recode_type",
         type=str,
-        default='null',
+        default='std',
         help="Batch size for the model. (default:32)",
     )
 

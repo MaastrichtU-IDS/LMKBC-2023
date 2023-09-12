@@ -298,7 +298,7 @@ def export_dataset():
 
 def wiki_pipeline():
     print("start split text")
-    # split_sentence()
+    split_sentence()
     # flatten sentences into records
     print("start flatten dataset")
     # data_flatten()
@@ -337,7 +337,7 @@ def test_tokenizer():
 
 
 if __name__ == "__main__":
-    # wiki_pipeline()
+    wiki_pipeline()
 
     # tree_test()
     display_entity_distribution()

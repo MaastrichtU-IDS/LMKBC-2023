@@ -32,7 +32,7 @@ def run_pretrain_filled_mask(para_dict:dict):
 
     cmd_pretrain_filled_mask = f"""
     
-   python src/pre_fm_model.py   --train_fn {input_fp}  --train_batch_size 16 --gpu 0   --train_epoch {para_dict['epoch']} --learning_rate 5e-5  --mask_strategy {para_dict.get('mask_strategy', 'random')} --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}   --token_recode {para_dict.get('token_recode',False)}
+   python src/pre_fm_model.py   --train_fn {input_fp}  --train_batch_size 16 --gpu 0   --train_epoch {para_dict['epoch']} --learning_rate 5e-5  --model_load_dir {model_load_dir} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}   --token_recode {para_dict.get('token_recode',False)}
     
     """
     print(cmd_pretrain_filled_mask)
@@ -48,7 +48,7 @@ def run_file_mask(para_dict):
 
     cmd_run_fillmask = f"""
     
-   python src/fm_model.py  --test_fn {config.VAL_FN} --template_fn res/prompts0.csv  --output_fn {OUTPUT_FILE}    --train_fn data/train.jsonl --train_batch_size 64 --gpu 0  --top_k 30 --threshold 0.1  --dev_fn  data/train_tiny.jsonl --mode "train test" --token_recode {para_dict.get('token_recode',False)} --train_epoch {para_dict['epoch']} --pretrain_model {para_dict['pretrain_model']}   --learning_rate 5e-5 --model_load_dir {para_dict['model_load_dir']} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}  --silver_data {para_dict.get('silver_data',False)} --filter {para_dict.get('filter',False)}  --label  {para_dict['label']} 
+   python src/fm_model.py  --test_fn {config.test_fp}  --valid_fn {config.VAL_FN}    --template_fn res/prompts0.csv  --output_fn {OUTPUT_FILE}    --train_fn data/train.jsonl --train_batch_size 64 --gpu 0  --top_k 30 --threshold 0.1  --dev_fn  data/train_tiny.jsonl  --do_train true  --do_valid true  --do_test false  --token_recode {para_dict.get('token_recode',False)} --train_epoch {para_dict['epoch']} --pretrain_model {para_dict['pretrain_model']}   --learning_rate 5e-5 --model_load_dir {para_dict['model_load_dir']} --model_save_dir {model_save_dir} --model_best_dir  {model_best_dir}   --filter {para_dict.get('filter',False)}  --label  {para_dict['label']}  --recode_type std
     
     """
     print(cmd_run_fillmask)
@@ -62,25 +62,25 @@ name_function_dict = {
 def start_tasks(para_list):
     for tasks in para_list:
         model_load_dir = None
-        for task in tasks:
+        for task_dict in tasks:
             if model_load_dir is not None:
-                task['model_load_dir']=model_load_dir
+                task_dict['model_load_dir']=model_load_dir
             else:
-                task['model_load_dir']=task['pretrain_model']
-            func = name_function_dict[task['task']]
-            model_load_dir = func(task)
+                task_dict['model_load_dir']=task_dict['pretrain_model']
+            func = name_function_dict[task_dict['task']]
+            model_load_dir = func(task_dict)
      
 
-def task_0():
-    pfm_epoch = 20
-    fm_epoch = 20
+def task_3():
+    pfm_epoch = 5
+    fm_epoch = 5
     # pfm_epoch = 0.00001
     # fm_epoch = 0.001
     pretrain_model = config.bert_large_cased
     pfm_input_fp="res/wikidata/Country-Language-State/filter.json"
     
     task_list=[
-        [
+            [
               {
                    "task":"fm",
                    "epoch":fm_epoch,
@@ -89,7 +89,7 @@ def task_0():
                    'token_recode':True,
                    'model_load_dir':pretrain_model,
           
-            } 
+                } 
             ],
             [
                 {
@@ -99,108 +99,13 @@ def task_0():
                    'pretrain_model':pretrain_model,
                    'model_load_dir':pretrain_model,
          
-            }
+                }
             ],
-                   [
-                {
-                "task":"fm",
-                 "epoch":fm_epoch,
-                'label':"silver_data",
-                   'pretrain_model':pretrain_model,
-                    'silver_data': True,
-                   'model_load_dir':pretrain_model
-            }
-            ],
-        [
-            {
-                "task":"pfm",
-                "mask_strategy":"random",
-                "epoch":pfm_epoch,
-                'pretrain_model':pretrain_model,
-                'label':"pfm_token_recode",
-                'input_fp':pfm_input_fp,
-                 'token_recode':True
-            },
-              {
-                   "task":"fm",
-                 "epoch":fm_epoch,
-                    'label':"pfm_token_recode",
-                   'pretrain_model':pretrain_model,
-            }
-        ],
-            [
-            {
-                "task":"pfm",
-                "mask_strategy":"random",
-                "epoch":pfm_epoch,
-                'pretrain_model':pretrain_model,
-                'label':"pfm_baseline",
-                'input_fp':pfm_input_fp,
-            },
-              {
-                   "task":"fm",
-                 "epoch":fm_epoch,
-                     'label':"pfm_baseline",
-                   'pretrain_model':pretrain_model,
-                    'token_recode':False
-            }
-        ],
-    ]
-
-
-    
+               
+    ]   
     return task_list
 
-
-
-def task_1():
-    cv_epoch = 20
-    pfm_epoch = 20
-    fm_epoch = 50
-    # cv_epoch = 0.0001
-    # pfm_epoch = 0.0001
-    # fm_epoch = 0.001
-    label = 'pfm_sc_fm'
-    pretrain_model = config.bert_base_cased
-    pfm_input_fp="res/wikidata/Country-Language-State/filter.json"
-    
-    para_list=[
-        {
-            "pfm":{
-                "mask_strategy":"random",
-                 "epoch":pfm_epoch,
-                'label':label,
-                'pretrain_model':pretrain_model,
-                 'input_fp':pfm_input_fp,
-            },
-            "sv":{
-                "mask_strategy":"random",
-                "epoch":cv_epoch,
-                'pretrain_model':pretrain_model,
-                'label':label,
-                'input_fp':pfm_input_fp,
-            },
-               "fm":{
-                 "epoch":fm_epoch,
-                'label':label,
-                'pretrain_model':pretrain_model,
-            }
-        }
-    ]
-    
-    for para in para_list:
-        sv = para['sv']
-        fm = para['fm']
-        pfm = para['pfm']
-        pfm_model_best_dir = run_pretrain_filled_mask(pfm)
-        sv['model_load_dir'] = pfm_model_best_dir
-        sv_model_best_dir = run_pretrain_sentence_validation(sv)
-        fm['model_load_dir'] = sv_model_best_dir
-        run_file_mask(fm)
-
-        
-
 if __name__ == "__main__":
-    task_list = task_0()[2:]
+    task_list = task_3()
     start_tasks(task_list)
                

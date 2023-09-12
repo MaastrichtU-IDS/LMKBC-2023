@@ -79,7 +79,8 @@ def run(args):
     if "bert" in model_type.lower():
         # tokenizer = AutoTokenizer.from_pretrained(model_type)
         model = AutoModelForMaskedLM.from_pretrained(model_type)
-        model = util.token_layer(model,enhance_tokenizer,origin_tokenizer,'std')
+        if args.token_recode:
+            model = util.token_layer(model,enhance_tokenizer,origin_tokenizer,'std')
         task = "fill-mask"
         pipe = pipeline(task=task, model=model, tokenizer=enhance_tokenizer, top_k=args.top_k, device=args.gpu) 
         logger.info(f"Reading fill-mask prompt templates from \"{args.fill_mask_prompts}\"...")
@@ -166,7 +167,7 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, required=True, help="Input test file (required)")
     parser.add_argument("-o", "--output", type=str, required=True, help="Output file (required)")
     parser.add_argument("-k", "--top_k", type=int, default=30, help="Top k prompt outputs (default: 100)")
-    parser.add_argument("-t", "--threshold", type=float, default=0.5, help="Probability threshold (default: 0.1)")
+    parser.add_argument("-t", "--threshold", type=float, default=0.02, help="Probability threshold (default: 0.1)")
     parser.add_argument("-g", "--gpu", type=int, default=-1, help="GPU ID, (default: -1, i.e., using CPU)")
     parser.add_argument("-qp", "--question_prompts", type=str, required=True, help="CSV file containing question prompt templates (required)")
     parser.add_argument("-fp", "--fill_mask_prompts", type=str, required=True, help="CSV file containing fill-mask prompt templates (required)")
@@ -174,6 +175,7 @@ if __name__ == "__main__":
     parser.add_argument("--train_data", type=str, required=True, help="CSV file containing train data for few-shot examples (required)")
     parser.add_argument("--batch_size", type=int, default=32, help="Batch size for the model. (default:32)")
     parser.add_argument("--fp16", action="store_true", help="Enable 16-bit model (default: False). This is ignored for BERT.")
+    parser.add_argument("--token_recode", type=util.str2bool, help="Enable 16-bit model (default: False). This is ignored for BERT.")
 
     args = parser.parse_args()
 

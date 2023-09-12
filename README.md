@@ -15,7 +15,7 @@ python src/pre_fm_model.py   --train_fn res/pretrain.jsonl  --train_batch_size 1
 ## run fine-tune task for valid set
 
 ```
-python src/fm_model.py  --test_fn data/test.jsonl --valid_fn data/val.jsonl  --template_fn res/prompts0.csv  --output output/run-valid.jsonl --train_fn data/train.jsonl --train_batch_size 64 --gpu -1 --top_k 40  --train_epoch 20 --learning_rate 2e-5 --model_load_dir  bin/pretrain/best_ckpt --model_save_dir bin/fine-tune  --model_best_dir bin/fine-tune/best_ckpt  --pretrain_model bert-base-cased   --do_train true  --do_valid true  --do_test false  
+python src/fm_model.py  --test_fn data/test.jsonl --valid_fn data/val.jsonl  --template_fn res/prompts0.csv  --output output/run-valid.jsonl --train_fn data/train.jsonl --train_batch_size 64 --gpu -1 --top_k 40  --train_epoch 20 --learning_rate 2e-5 --model_load_dir  bin/pretrain/best_ckpt --model_save_dir bin/fine-tune  --model_best_dir bin/fine-tune/best_ckpt  --pretrain_model bert-base-cased   --do_train true  --do_valid true  --do_test false   
 
 ```
 
@@ -33,7 +33,7 @@ baselines are released by official
 Running instructions for the Huggingface baselines:
  - For BERT
 
-```python src/baseline.py  --input data/val.jsonl --fill_mask_prompts res/prompts.csv --question_prompts res/question-prompts.csv  --output output/testrun-bert.jsonl --train_data data/train.jsonl --model bert-base-cased --batch_size 32 --gpu 0```
+```python src/baseline.py  --input data/val.jsonl --fill_mask_prompts res/prompts.csv --question_prompts res/question-prompts.csv  --output output/testrun-bert-token_recode.jsonl --train_data data/train.jsonl --model bert-base-cased --batch_size 32 --gpu 0 --token_recode 1 ```
 
  - For OPT-1.3b
 
@@ -42,6 +42,6 @@ Running instructions for the Huggingface baselines:
 ### Evaluation script
 
 Run instructions evaluation script:
-  * ```python src/evaluate.py -p data/val.jsonl -g output/testrun-XYZ.jsonl```
+  * ```python src/evaluate.py -p data/val.jsonl -g output/testrun-bert-token_recode.jsonl.jsonl```
 
 The first parameter hereby indicates the prediction file, the second the ground truth file.

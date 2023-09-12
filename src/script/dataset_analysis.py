@@ -611,7 +611,7 @@ def according_test():
 
 
 def token_weight():
-    corpus_fp = 'res/wikidata/Country-Language-State/filter.json'
+    corpus_fp = 'res/pretrain.jsonl'
     lines = util.file_read_json_line(corpus_fp)
     token_count = dict()
     for line in tqdm(lines):
@@ -654,16 +654,38 @@ def print_result():
     pd_result = pd.DataFrame(bl_result)
     print(pd_result.transpose().round(4).to_string(max_cols=12,decimal='&'))
 
+def find_sentences():
+    with open('res/pretrain.jsonl') as f:
+        for line in f.readlines():
+            if 'United States of America' in line and 'Canada' in line:
+                json_line = json.loads(line)
+                print(json_line['sentence'])
+                print()
+
+
+def entity_analysis():
+    train_entity_set = get_all_entity(config.TRAIN_FN)
+    valid_entity_set = get_all_entity(config.VAL_FN)
+    rate_unseen = len(valid_entity_set - train_entity_set)/len(valid_entity_set)
+    print("rate_unseen",rate_unseen)
+
+    all_entity_set = get_all_entity()
+    rate_entity = len(all_entity_set- origin_tokenizer.vocab.keys())/len(all_entity_set)
+    print("rate_complex_entity",rate_entity)
+                
+
 if __name__ == "__main__":
     # collect_entity_for_pretrain()
     # collect_entity_for_pretrain_test()
-    collect_entity_for_tokenizer()
+    # collect_entity_for_tokenizer()
     # collection_ids()
     # same_id_numer()
     # tokenize()
     # according_test()
     # token_weight() 
+    # find_sentences()
     # print(sum([0,0,1]))
     # print_result()
     # print_relation_entity_type()
+    entity_analysis()
 

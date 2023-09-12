@@ -174,7 +174,7 @@ if __name__ == "__main__":
     parser.add_argument("--train_data", type=str, required=True, help="CSV file containing train data for few-shot examples (required)")
     parser.add_argument("--batch_size", type=int, default=32, help="Batch size for the model. (default:32)")
     parser.add_argument("--fp16", action="store_true", help="Enable 16-bit model (default: False). This is ignored for BERT.")
-
+  
     args = parser.parse_args()
 
     run(args)

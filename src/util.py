@@ -69,6 +69,12 @@ def line_to_json(line: str):
 
 
 def file_read_json_line(data_fn):
+    if os.path.exists(data_fn) and os.path.isfile(data_fn):
+        with open(data_fn, "r") as file:
+            lines = file.readlines()
+            train_data = []
+            for line in lines:
+                train_data.extend(line_to_json(line))
     train_data = []
     try:
         with open(data_fn, "r") as file:
@@ -334,10 +340,10 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
     
     old_num_tokens, old_embedding_dim = old_token_embedding.weight.shape
     old_output_embedding =  model.get_output_embeddings()
-    print("old_output_embedding  ", old_output_embedding.weight.data.dtype)
-    print("old_output_embedding  ", old_output_embedding.weight.data.shape)
+    # print("old_output_embedding  ", old_output_embedding.weight.data.dtype)
+    # print("old_output_embedding  ", old_output_embedding.weight.data.shape)
     old_output_dim_0, old_output_dim_1 =   old_output_embedding.weight.shape
-    print()
+    # print()
     # new_embeddings = torch.nn.Module()
     new_input_embeddings = torch.nn.Embedding(
          num_new_tokens, old_embedding_dim
@@ -349,9 +355,9 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
     new_output_embeddings = torch.nn.Linear(
          old_output_dim_1, num_new_tokens, dtype= old_output_embedding.weight.dtype
     )
-    print("new_output_embeddings  ", new_output_embeddings.weight.data.dtype)
-    print("new_output_embeddings  ", new_output_embeddings.weight.data.shape)
-    print("new_cls_decoder  ", new_cls_decoder.weight.data.shape)
+    # print("new_output_embeddings  ", new_output_embeddings.weight.data.dtype)
+    # print("new_output_embeddings  ", new_output_embeddings.weight.data.shape)
+    # print("new_cls_decoder  ", new_cls_decoder.weight.data.shape)
     # embedding_laye_dictr =embedding_layer . state_dict()
     # print("embedding_laye_dictr",embedding_laye_dictr.keys())
     # embedding_laye_dictr['weight']=new_embeddings.state_dict()['weight']
@@ -431,10 +437,10 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
         new_cls_decoder.weight.data[index,:] = new_cls_decoder_data
        
         # new_position .weight.data[index,:] = new_position_token
-    print("old_token_embedding ", old_token_embedding.weight.data[2][:5])
-    print("new_token_embeddings ", new_input_embeddings.weight.data[2][:5])
-    print("new_output_embeddings ", new_output_embeddings.weight.data[2][:5])
-    print("old_output_embedding ", old_output_embedding.weight.data[2][:5])
+    # print("old_token_embedding ", old_token_embedding.weight.data[2][:5])
+    # print("new_token_embeddings ", new_input_embeddings.weight.data[2][:5])
+    # print("new_output_embeddings ", new_output_embeddings.weight.data[2][:5])
+    # print("old_output_embedding ", old_output_embedding.weight.data[2][:5])
     model.set_input_embeddings( new_input_embeddings)
     model.set_output_embeddings( new_output_embeddings)
     model.cls.predictions.bias.data =  cls_bias
@@ -446,6 +452,7 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
 class Token_Weight:
     def __init__(self):
         self._weight:dict = json.load(open(config.token_count_fp))
+
     def token_weight(self, token_ids:list):
         count_ids = [1/self._weight[str(i)]**2 if str(i) in self._weight else 0.00001 for i in token_ids]
         count_tensor = torch.tensor(count_ids)
@@ -453,10 +460,13 @@ class Token_Weight:
         std = torch.std(count_tensor)
         mean_c = torch.mean(count_tensor)
         n1 = (count_tensor-mean_c)/std
+        # print(n1)
+        n1 = torch.softmax(n1,dim=0)
 
-
+        # print(count_tensor)
         # count_softmax = torch.softmax(count_tensor,dim=0)
-
+        # print(count_softmax)
+        # return count_softmax.unsqueeze(0).t()
         # min_c = torch.min(count_tensor)
         # max_c =  torch.max(count_tensor)
         # n1 = (count_tensor - min_c)/(max_c - min_c)
@@ -477,3 +487,8 @@ def str2bool(v):
 
 def rows_to_dict(rows):
     return {(r["SubjectEntity"], r["Relation"]): r for r in rows}
+
+
+if __name__ == "__main__":
+    tw = Token_Weight()
+    print(tw.token_weight([1244,1311,1104,1738]))
