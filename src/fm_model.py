@@ -57,12 +57,13 @@ class MLMDataset(Dataset):
         prompt_templates = util.file_read_prompt(template_fn)
 
         # Iterate over each row in the training data
+        
         for row in tqdm(train_data):
             relation = row['Relation']
             prompt_template = prompt_templates[relation]
             object_entities = row['ObjectEntities']
             subject = row["SubjectEntity"]
-
+            sub_type, obj_type = config.relation_entity_type_dict[relation]
             # Iterate over each object entity
             for obj in object_entities:
                 if obj == '':
@@ -77,14 +78,13 @@ class MLMDataset(Dataset):
                 obj_id = enhance_tokenizer.convert_tokens_to_ids(obj)
 
                 # Tokenize the input sentence using the tokenizer
- 
-                input_tokens = origin_tokenizer.tokenize(input_sentence,add_special_tokens=True)
-                 
+                if sub_type == 'PERSON':
+                    input_ids = origin_tokenizer.encode(input_sentence)
+                else:
+                    input_ids = enhance_tokenizer.encode(input_sentence)
                 # input_tokens = tokenizer.tokenize(input_sentence)
-                input_ids = origin_tokenizer.convert_tokens_to_ids(input_tokens)
-                attention_mask = [0 if v == origin_tokenizer.mask_token else 1 for v in input_tokens]
-
-
+                # input_ids = origin_tokenizer.convert_tokens_to_ids(input_tokens)
+                attention_mask = [0 if v == origin_tokenizer.mask_token_id else 1 for v in input_ids]
 
                 # Create label IDs where the masked token corresponds to the object ID
                 label_ids = [
@@ -180,9 +180,9 @@ def train():
     bert_model: BertModel = transformers.AutoModelForMaskedLM.from_pretrained(
         args.model_load_dir, config=bert_config
     )
-    if not os.path.isdir( args.model_load_dir) and args.token_recode:
+    if not os.path.isdir( args.model_load_dir) and args.recode_type != "null":
         print("recode token embedding")
-        util.token_layer(bert_model,
+        bert_model = util.token_layer(bert_model,
                          enhance_tokenizer=enhance_tokenizer, 
                          origin_tokenizer=origin_tokenizer, 
                          recode_type=args.recode_type)
@@ -483,14 +483,8 @@ def test_pipeline():
             if  args.do_test:
                 if score < rel_thres_dict[relation]:
                     break
-            if obj in negative_vocabulary:
-                continue
-            if args.filter:
-                # print('entity filter')
-                # print('type_entity',len(type_entity))
-                if obj not in type_entity_set:
-                    # print(obj)
-                    continue
+            # if obj in negative_vocabulary:
+            #     continue
             if obj.startswith("##"):
                 continue
             # if len(objects) > max_t*2:
@@ -510,9 +504,10 @@ def test_pipeline():
                     continue
             else:
                 # if entity_type in {"Person", 'Company','Language','City'}
-                if obj not in type_entity_set:
-                    continue
+                # if obj not in type_entity_set:
+                #     continue
                 wikidata_id= util.disambiguation_baseline(obj)
+                # wikidata_id = ''
 
             objects_wikiid.append(wikidata_id)
             objects.append(obj)
@@ -537,61 +532,6 @@ def test_pipeline():
     # evaluate.evaluate(args.output_fn, args.test_fn)
     if args.do_valid:
         evaluate.assign_label(args.output_fn, args.valid_fn)
-
-def adaptive_top_k():
-    origin_result_dict = evaluate.evaluate(args.output_fn, args.valid_fn)
-    predefine_fine = 'res/object_number.tsv'
-    with open(predefine_fine) as f:
-        topk = csv.DictReader(f, delimiter="\t")
-        topk_max_dict = { row["Relation"]:eval(row['Val'])[1] for row in topk}
-    pred_rows = util.file_read_json_line(args.output_fn)
-    groud_rows = util.file_read_json_line(args.valid_fn)
-    relation_list_pred = dict()
-    relation_list_groud = dict()
-    best_topk_dict=dict()
-    for row in pred_rows:
-        relation = row['Relation']
-        if relation not in relation_list_pred:
-            relation_list_pred[relation]=[]
-        relation_list_pred[relation].append(row)
-
-    for row in groud_rows:
-        relation = row['Relation']
-        if relation not in relation_list_groud:
-            relation_list_groud[relation]=[]
-        relation_list_groud[relation].append(row)
-
-    for relation, pred_list in tqdm(relation_list_pred.items()):
-        groud_list = relation_list_groud[relation]
-        origin_topk = topk_max_dict[relation]
-        best_f1=0
-        best_topk=0
-        for i in range(origin_topk*3, 0,-1):
-            if i >= len( pred_list[0]['ObjectEntities']):
-                continue
-            for row in pred_list:
-                row['ObjectEntities'] = row['ObjectEntities'][:i]
-                row['ObjectEntitiesID'] = row['ObjectEntitiesID'][:i]
-            f1 = evaluate.evaluate_list(groud_list, pred_list)[relation]['f1']
-            if f1> best_f1:
-                best_f1=f1
-                best_topk =i
-        best_topk_dict[relation] = [best_topk,best_f1] 
-        origin_result_dict[relation]["best_topk"]=best_topk
-        origin_result_dict[relation]["best_f1"]=best_f1
-        origin_result_dict[relation]["origin_topk"]=origin_topk
-    
-
-    origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
-    result_dict = {
-        "args":args.__dict__,
-        "metric":origin_result_dict
-        }
-    util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
-    scores_per_relation_pd = pd.DataFrame(origin_result_dict)
-    print(scores_per_relation_pd.transpose().round(2).to_string(max_cols=12))
-
-
 
 def adaptive_threshold():
     origin_result_dict = evaluate.evaluate(args.output_fn, args.valid_fn)
@@ -621,7 +561,7 @@ def adaptive_threshold():
 
     relation_threshold_dict = dict()
     relation_index= dict()
-    print('threshold_initial_dict',threshold_initial_dict)
+    # print('threshold_initial_dict',threshold_initial_dict)
     for relation, pred_list in tqdm(relation_list_pred.items()):
         groud_list = relation_list_groud[relation]
         origin_topk = topk_max_dict[relation]
@@ -632,9 +572,9 @@ def adaptive_threshold():
         best_threshold=0
         threshold_step = 0.01
         best_index = 100
-        for i in range(1,int(1//threshold_step)):
+        for i in range(1,int(0.5//threshold_step)):
             threshold = threshold_step*i
-
+            # try_times=0
             for row in pred_list:
                 score_index = 0 
                 for i, score in enumerate(row['ObjectEntitiesScore']):
@@ -655,6 +595,11 @@ def adaptive_threshold():
                 best_precision= p 
                 best_recal= r
                 best_index= score_index
+                # try_times = 0
+            # else:
+            #     try_times+=1
+            #     if try_times > 3:
+            #         break
 
   
         relation_index[relation] = best_index
@@ -693,19 +638,7 @@ def adaptive_threshold():
     # # print(json.dumps(best_topk_dict, indent=4))
     # average_f1 = sum(map(lambda x:x[1], best_topk_dict.values()))/ len(best_topk_dict)
     # print("average_f1",average_f1)
-
-
-
-def str2bool(v):
-    if isinstance(v, bool):
-        return v
-    if v.lower() in ('yes', 'true', 't', 'y', '1'):
-        return True
-    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
-        return False
-    else:
-        raise argparse.ArgumentTypeError('Boolean value expected.')
-    
+    #   
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run the Model with Question and Fill-Mask Prompts"
@@ -775,7 +708,7 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--token_recode",
-        type=str2bool,
+        type=util.str2bool,
         help="CSV file containing fill-mask prompt templates (required)",
     )
 
@@ -825,31 +758,31 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--do_train",
-        type=str2bool,
+        type=util.str2bool,
         default = False,
         help="Batch size for the model. (default:32)",
     )
     parser.add_argument(
         "--do_valid",
-        type=str2bool,
+        type=util.str2bool,
         default = False,
         help="Batch size for the model. (default:32)",
     )
     parser.add_argument(
         "--do_test",
-        type=str2bool,
+        type=util.str2bool,
         default = False,
         help="Batch size for the model. (default:32)",
     )
     parser.add_argument(
         "--do_ths",
-        type=str2bool,
+        type=util.str2bool,
         default = False,
         help="Batch size for the model. (default:32)",
     )
     parser.add_argument(
         "--filter",
-        type=str2bool,
+        type=util.str2bool,
         help="Batch size for the model. (default:32)",
     )
 

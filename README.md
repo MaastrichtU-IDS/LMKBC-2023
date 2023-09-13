@@ -33,15 +33,19 @@ baselines are released by official
 Running instructions for the Huggingface baselines:
  - For BERT
 
-```python src/baseline.py  --input data/val.jsonl --fill_mask_prompts res/prompts.csv --question_prompts res/question-prompts.csv  --output output/testrun-bert-token_recode.jsonl --train_data data/train.jsonl --model bert-base-cased --batch_size 32 --gpu 0 --token_recode 1 ```
+```python src/baseline.py  --input data/val.jsonl --threshold 0.1 --fill_mask_prompts res/prompts.csv --question_prompts res/question-prompts.csv  --output output/testrun-bert-token_recode.jsonl --train_data data/train.jsonl --model bert-base-cased --batch_size 32 --gpu 0 --token_recode 1 ```
 
  - For OPT-1.3b
 
-```python src/baseline.py  --input data/val.jsonl --fill_mask_prompts res/prompts.csv --res/question_prompts question-prompts.csv  --output output/testrun-opt.jsonl --train_data data/train.jsonl --model facebook/opt-1.3b --batch_size 8 --gpu 0```
+```python src/baseline.py  --input data/val.jsonl --fill_mask_prompts res/prompts.csv --question_prompts res/question-prompts.csv  --output output/testrun-opt.jsonl --train_data data/train.jsonl --model facebook/opt-1.3b --batch_size 8 --gpu 0```
 
 ### Evaluation script
 
 Run instructions evaluation script:
-  * ```python src/evaluate.py -p data/val.jsonl -g output/testrun-bert-token_recode.jsonl.jsonl```
+  ```
+
+  python src/evaluate.py -p data/val.jsonl -g output/testrun-bert-token_recode.jsonl
+  
+  ```
 
 The first parameter hereby indicates the prediction file, the second the ground truth file.

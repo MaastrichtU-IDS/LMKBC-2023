@@ -169,7 +169,7 @@ def evaluate(output, test_fn):
 
     scores_per_relation_pd = pd.DataFrame(scores_per_relation)
 
-    print(scores_per_relation_pd.transpose().round(3))
+    # print(scores_per_relation_pd.transpose().round(3))
     return  scores_per_relation
     # add a new field which indicate if the predicted object is true of false
     # the correctness of predicted object can be used in Next-Sentence task, if applicable

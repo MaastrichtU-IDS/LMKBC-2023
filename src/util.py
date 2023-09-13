@@ -276,10 +276,10 @@ def softmax(x, axis=0):
     return e_x / np.sum(e_x, axis=axis, keepdims=True)
 
 
-if __name__ == "__main__":
-    list_1 = [[1], [1, 2], [[1], [2], [2, 3, [4, 5, [7]]]]]
-    list_flat = flat_list(list_1)
-    print(list_flat)
+# if __name__ == "__main__":
+#     list_1 = [[1], [1, 2], [[1], [2], [2, 3, [4, 5, [7]]]]]
+#     list_flat = flat_list(list_1)
+#     print(list_flat)
 
 
 class Printer:
@@ -327,7 +327,7 @@ def assemble_result(origin_rows, outputs):
 
 
 
-def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_tokenizer,recode_type):
+def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_tokenizer:transformers.BertweetTokenizer,recode_type):
     # BertForMaskedLM.get_input_embeddings()
     # BertForMaskedLM.set_input_embeddings()
     with open(config.TOKENIZER_PATH+"/added_tokens.json") as f:
@@ -391,10 +391,11 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
     #      position_dim_0_new, old_embedding_dim
     # )
     # new_embeddings.padding_idx = embedding_layer.clone()
+    print_count= 0
     if recode_type == 'std':
-        tw = Token_Weight()
+        tw = Token_Weight(origin_tokenizer)
     for entity,index in additional_token_dict.items():
-        token_ids = origin_tokenizer.encode(entity)
+        token_ids = origin_tokenizer.encode(entity,add_special_tokens=False)
       
         old_output = old_output_embedding.weight.data[token_ids,:]
         old_input = old_token_embedding.weight.data[token_ids,:]
@@ -405,13 +406,25 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
         # print("weight",weight.shape)
         if recode_type == 'std':
             weight = tw.token_weight(token_ids)
-            new_output =   torch.multiply(old_output,weight).mean(dim=0)
-            # print('new_output',new_output.shape)
-            new_input =  torch.multiply(old_input,weight).mean(dim=0)
+            new_output = torch.multiply(old_output,weight).sum(dim=0)
+            # new_output = torch.nn.functional.normalize(new_output, p=2, dim=0)
+            if len (token_ids) == 2 and print_count < 10:
+            # and Fals
+                print_count+=1
+                print('entity',entity)
+                print('tokens',origin_tokenizer.convert_ids_to_tokens(token_ids))
+                print('old_output',old_output[:,:5])
+                print('weight',weight)
+                print('new_output',new_output[:5])
+                print()
+            new_input =  torch.multiply(old_input,weight).sum(dim=0)
+            # new_input = torch.nn.functional.normalize(new_input, p=2, dim=0)
             # print('old_cls_bias',old_cls_bias.shape)
-            new_cls_bias = torch.multiply(old_cls_bias,weight).mean()
+            new_cls_bias = torch.multiply(old_cls_bias,weight).sum()
             # print('new_cls_bias',new_cls_bias.shape)
-            new_cls_decoder_data =torch.multiply(old_cls_decoder_data,weight).mean(dim=0)
+            new_cls_decoder_data =torch.multiply(old_cls_decoder_data,weight).sum(dim=0)
+            # new_cls_decoder_data = torch.nn.functional.normalize(new_cls_decoder_data, p=2, dim=0)
+            
         elif recode_type == 'mean':
             new_output =   torch.mean(old_output,0,keepdim = True)
             new_input =  torch.mean(old_input,0,keepdim = True)
@@ -428,7 +441,7 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
             new_cls_bias = torch.max(old_cls_bias)
             new_cls_decoder_data = torch.max(old_cls_decoder_data,0,keepdim = True)[0]
         else:
-            raise Exception('recode_type should be in (max. min,std, mean)')
+            raise Exception('recode_type should be in (max, min, std, mean)')
 
 
         new_output_embeddings.weight.data[index, :] =new_output
@@ -450,27 +463,48 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
     return model
 
 class Token_Weight:
-    def __init__(self):
+    def __init__(self,origin_tokenizer):
         self._weight:dict = json.load(open(config.token_count_fp))
+        self.origin_tokenizer = origin_tokenizer
 
     def token_weight(self, token_ids:list):
-        count_ids = [1/self._weight[str(i)]**2 if str(i) in self._weight else 0.00001 for i in token_ids]
-        count_tensor = torch.tensor(count_ids)
+        counts = [self._weight[str(tid)] if str(tid) in self._weight else 10000 for tid in token_ids]
+        count_tensor = torch.tensor(counts,dtype=torch.float32)
 
-        std = torch.std(count_tensor)
-        mean_c = torch.mean(count_tensor)
-        n1 = (count_tensor-mean_c)/std
-        # print(n1)
-        n1 = torch.softmax(n1,dim=0)
+        # weights = count_tensor/torch.sum(count_tensor)
+        # min_value, min_index = torch.min(weights,0)
+        # # max_value, max_index = torch.max(weights,0)
+        # weight = -1*weights
+        # weight[min_index] = 1
+        # return weight.unsqueeze(1)
 
-        # print(count_tensor)
+        weights = 1/count_tensor
+        weights = weights.pow(1/4)
+        weights = weights/torch.sum(weights)
+        return weights.unsqueeze(1)
+    
+        # tokens = self.origin_tokenizer.convert_ids_to_tokens(token_ids)
+        # weights = [len(c) -2  if c.startswith('##') else len(c) for c  in tokens]
+        # count_tensor = torch.tensor(weights).pow(1/2)
+
+        # std = torch.std(count_tensor)
+        # mean_c = torch.mean(count_tensor)
+        # n1 = (count_tensor-mean_c)/std
+   
+        # n1 = torch.softmax(n1,dim=0)
+
+   
+        # print('counts',counts)
+        # print('weights',weights)
+        # print('count_tensor',count_tensor)
+
         # count_softmax = torch.softmax(count_tensor,dim=0)
         # print(count_softmax)
         # return count_softmax.unsqueeze(0).t()
         # min_c = torch.min(count_tensor)
         # max_c =  torch.max(count_tensor)
         # n1 = (count_tensor - min_c)/(max_c - min_c)
-        return n1.unsqueeze(0).t()
+        # return n1.unsqueeze(1)
 
    
 
@@ -491,4 +525,40 @@ def rows_to_dict(rows):
 
 if __name__ == "__main__":
     tw = Token_Weight()
-    print(tw.token_weight([1244,1311,1104,1738]))
+
+    origin_tokenizer = BertTokenizerFast.from_pretrained(config.bert_base_cased)
+
+    word = 'track cyclist'
+    index_list =  origin_tokenizer.encode(word)[1:-1]
+    print(origin_tokenizer.convert_ids_to_tokens(index_list))
+    print(tw.token_weight(index_list))
+    print()
+
+    word = 'traffic collision'
+    index_list =  origin_tokenizer.encode(word)[1:-1]
+    print(origin_tokenizer.convert_ids_to_tokens(index_list))
+    print(tw.token_weight(index_list))
+    print()
+
+
+    import torch
+    import torch.nn as nn
+
+    # Define a BatchNorm layer
+    batchnorm_layer = nn.InstanceNorm1d(3)  # BatchNorm for 1D data (3 values)
+
+    # Input data (activations after convolution)
+    input_data = torch.tensor([[1.0, 2.0, 3.0],
+                            [4.0, 5.0, 6.0],
+                            [7.0, 8.0, 9.0],
+                            [10.0, 11.0, 12.0]], requires_grad=True)
+
+    # Forward pass through BatchNorm
+    output_data = batchnorm_layer(input_data)
+
+    # Print input and output
+    print("Input Data:")
+    print(input_data)
+    print("\nOutput Data:")
+    print(output_data)
+
