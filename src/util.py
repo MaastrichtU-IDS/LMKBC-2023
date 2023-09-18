@@ -462,6 +462,127 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
     model.vocab_size = num_new_tokens
     return model
 
+
+def opt_token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_tokenizer:transformers.BertweetTokenizer,recode_type):
+    # BertForMaskedLM.get_input_embeddings()
+    # BertForMaskedLM.set_input_embeddings()
+    with open(config.TOKENIZER_PATH+"/added_tokens.json") as f:
+        additional_token_dict = json.load(f)
+
+    num_new_tokens = len(enhance_tokenizer.vocab)
+    # model.resize_token_embeddings(num_new_tokens)
+
+    old_token_embedding = model.get_input_embeddings()
+    
+    old_num_tokens, old_embedding_dim = old_token_embedding.weight.shape
+    old_output_embedding =  model.get_output_embeddings()
+    # print("old_output_embedding  ", old_output_embedding.weight.data.dtype)
+    # print("old_output_embedding  ", old_output_embedding.weight.data.shape)
+    old_output_dim_0, old_output_dim_1 =   old_output_embedding.weight.shape
+    # print()
+    # new_embeddings = torch.nn.Module()
+    new_input_embeddings = torch.nn.Embedding(
+         num_new_tokens, old_embedding_dim
+    )
+    new_output_embeddings = torch.nn.Linear(
+         old_output_dim_1, num_new_tokens, dtype= old_output_embedding.weight.dtype
+    )
+    # print("new_output_embeddings  ", new_output_embeddings.weight.data.dtype)
+    # print("new_output_embeddings  ", new_output_embeddings.weight.data.shape)
+    # print("new_cls_decoder  ", new_cls_decoder.weight.data.shape)
+    # embedding_laye_dictr =embedding_layer . state_dict()
+    # print("embedding_laye_dictr",embedding_laye_dictr.keys())
+    # embedding_laye_dictr['weight']=new_embeddings.state_dict()['weight']
+    # new_embeddings.load_state_dict(embedding_laye_dictr)
+
+    # Creating new embedding layer with more entries
+    # new_embeddings.weight = torch.nn.Parameter(old_num_tokens+num_new_tokens, old_embedding_dim)
+ 
+    # Setting device and type accordingly
+    new_output_embeddings = new_output_embeddings.to(
+        old_output_embedding.weight.device,
+        dtype=old_output_embedding.weight.dtype,
+    )
+    new_input_embeddings = new_input_embeddings.to(
+        old_token_embedding.weight.device,
+        dtype=old_token_embedding.weight.dtype,
+    )
+
+    # Copying the old entries
+    new_input_embeddings.weight.data[:old_num_tokens, :] = old_token_embedding.weight.data[
+        :old_num_tokens, :    ]
+    new_output_embeddings.weight.data[:old_num_tokens, :] = old_output_embedding.weight.data[
+        :old_num_tokens, :    ]
+ 
+    # old_position = model.get_position_embeddings()
+    # position_dim_0, position_dim_1 = old_position.weight.shape
+    # position_dim_0_new = position_dim_0+len(additional_token_dict)
+    # new_position = torch.nn.Embedding(
+    #      position_dim_0_new, old_embedding_dim
+    # )
+    # new_embeddings.padding_idx = embedding_layer.clone()
+    print_count= 0
+    if recode_type == 'std':
+        tw = Token_Weight(origin_tokenizer)
+    for entity,index in additional_token_dict.items():
+        token_ids = origin_tokenizer.encode(entity,add_special_tokens=False)
+      
+        old_output = old_output_embedding.weight.data[token_ids,:]
+        old_input = old_token_embedding.weight.data[token_ids,:]
+
+        # print("old_output",old_output.shape)
+        # print("weight",weight.shape)
+        if recode_type == 'std':
+            weight = tw.token_weight(token_ids)
+            new_output = torch.multiply(old_output,weight).sum(dim=0)
+            # new_output = torch.nn.functional.normalize(new_output, p=2, dim=0)
+            if len (token_ids) == 2 and print_count < 10:
+            # and Fals
+                print_count+=1
+                print('entity',entity)
+                print('tokens',origin_tokenizer.convert_ids_to_tokens(token_ids))
+                print('old_output',old_output[:,:5])
+                print('weight',weight)
+                print('new_output',new_output[:5])
+                print()
+            new_input =  torch.multiply(old_input,weight).sum(dim=0)
+            # new_input = torch.nn.functional.normalize(new_input, p=2, dim=0)
+            # print('old_cls_bias',old_cls_bias.shape)
+     
+            
+        elif recode_type == 'mean':
+            new_output =   torch.mean(old_output,0,keepdim = True)
+            new_input =  torch.mean(old_input,0,keepdim = True)
+            new_cls_bias = torch.mean(old_cls_bias)
+            new_cls_decoder_data = torch.mean(old_cls_decoder_data,0,keepdim = True)
+        elif recode_type == 'min':
+            new_output =   torch.min(old_output,0,keepdim = True)[0]
+            new_input =  torch.min(old_input,0,keepdim = True)[0]
+            new_cls_bias = torch.min(old_cls_bias)
+            new_cls_decoder_data = torch.min(old_cls_decoder_data,0,keepdim = True)[0]
+        elif recode_type == 'max':
+            new_output =   torch.max(old_output,0,keepdim = True)[0]
+            new_input =  torch.max(old_input,0,keepdim = True)[0]
+            new_cls_bias = torch.max(old_cls_bias)
+            new_cls_decoder_data = torch.max(old_cls_decoder_data,0,keepdim = True)[0]
+        else:
+            raise Exception('recode_type should be in (max, min, std, mean)')
+
+
+        new_output_embeddings.weight.data[index, :] =new_output
+        new_input_embeddings.weight.data[index,:] =new_input
+     
+        # new_position .weight.data[index,:] = new_position_token
+    # print("old_token_embedding ", old_token_embedding.weight.data[2][:5])
+    # print("new_token_embeddings ", new_input_embeddings.weight.data[2][:5])
+    # print("new_output_embeddings ", new_output_embeddings.weight.data[2][:5])
+    # print("old_output_embedding ", old_output_embedding.weight.data[2][:5])
+    model.set_input_embeddings( new_input_embeddings)
+    model.set_output_embeddings( new_output_embeddings)
+    model.config.vocab_size = num_new_tokens
+    model.vocab_size = num_new_tokens
+    return model
+
 class Token_Weight:
     def __init__(self,origin_tokenizer):
         self._weight:dict = json.load(open(config.token_count_fp))

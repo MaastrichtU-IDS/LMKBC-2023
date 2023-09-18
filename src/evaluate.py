@@ -49,7 +49,7 @@ def f1_score(p: float, r: float) -> float:
 
 
 def rows_to_dict(rows: List[Dict]) -> Dict:
-    return {(r["SubjectEntity"], r["Relation"]): r["ObjectEntitiesID"] for r in rows}
+    return {(r["SubjectEntity"], r["Relation"]): r["ObjectEntities"] for r in rows}
 
 
 def evaluate_per_sr_pair(pred_rows, gt_rows) -> List[Dict[str, float]]:
@@ -168,9 +168,10 @@ def evaluate(output, test_fn):
     }
 
     scores_per_relation_pd = pd.DataFrame(scores_per_relation)
+    scores_per_relation_pd = scores_per_relation_pd.transpose().round(3)
 
     # print(scores_per_relation_pd.transpose().round(3))
-    return  scores_per_relation
+    return  scores_per_relation_pd
     # add a new field which indicate if the predicted object is true of false
     # the correctness of predicted object can be used in Next-Sentence task, if applicable
 

@@ -44,7 +44,7 @@ Running instructions for the Huggingface baselines:
 Run instructions evaluation script:
   ```
 
-  python src/evaluate.py -p data/val.jsonl -g output/testrun-bert-token_recode.jsonl
+  python src/evaluate.py -p data/val.jsonl -g output/text-generation/test-opt-1.3b.jsonl
   
   ```
 

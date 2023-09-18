@@ -50,6 +50,7 @@ FROM_KG = 'from'
 TO_KG = 'to'
 
 TOKENIZER_PATH = f'{RES_DIR}/tokenizer/bert'
+OPT_TOKENIZER_PATH = f'{RES_DIR}/tokenizer/opt'
 
 check_dir_list = [
     BIN_DIR,
