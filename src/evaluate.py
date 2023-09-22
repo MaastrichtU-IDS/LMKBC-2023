@@ -7,9 +7,9 @@ import numpy as np
 
 from file_io import *
 import util
-
-
-
+import csv
+from tqdm import tqdm
+import config
 
 def true_positives(preds: List, gts: List) -> int:
     tp = 0
@@ -171,7 +171,7 @@ def evaluate(output, test_fn):
     scores_per_relation_pd = scores_per_relation_pd.transpose().round(3)
 
     # print(scores_per_relation_pd.transpose().round(3))
-    return  scores_per_relation_pd
+    return  scores_per_relation
     # add a new field which indicate if the predicted object is true of false
     # the correctness of predicted object can be used in Next-Sentence task, if applicable
 
@@ -245,6 +245,114 @@ def main():
 
     print(pd.DataFrame(scores_per_relation).transpose().round(3))
 
+
+
+def adaptive_threshold(args, rel_thres_fn):
+    origin_result_dict = evaluate(args.output_fn, args.valid_fn)
+    predefine_fine = 'res/object_number.tsv'
+    with open(predefine_fine) as f:
+        topk = csv.DictReader(f, delimiter="\t")
+        topk_max_dict = { row["Relation"]:eval(row['Val'])[1] for row in topk}
+    threshold_initial_dict = dict()
+    for k,v in topk_max_dict.items():
+        threshold_initial_dict[k] = 1/float(v)
+    pred_rows = util.file_read_json_line(args.output_fn)
+    groud_rows = util.file_read_json_line(args.valid_fn)
+    relation_list_pred = dict()
+    relation_list_groud = dict()
+    best_topk_dict=dict()
+    for row in pred_rows:
+        relation = row['Relation']
+        if relation not in relation_list_pred:
+            relation_list_pred[relation]=[]
+        relation_list_pred[relation].append(row)
+
+    for row in groud_rows:
+        relation = row['Relation']
+        if relation not in relation_list_groud:
+            relation_list_groud[relation]=[]
+        relation_list_groud[relation].append(row)
+
+    relation_threshold_dict = dict()
+    relation_index= dict()
+    # print('threshold_initial_dict',threshold_initial_dict)
+    for relation, pred_list in tqdm(relation_list_pred.items()):
+        groud_list = relation_list_groud[relation]
+        origin_topk = topk_max_dict[relation]
+        best_f1=0
+        best_precision = 0
+        best_recal= 0 
+        origin_threshold = threshold_initial_dict[relation]
+        best_threshold=0
+        threshold_step = 0.01
+        best_index = 100
+        for i in range(1,int(0.5//threshold_step)):
+            threshold = threshold_step*i
+            # try_times=0
+            for row in pred_list:
+                score_index = 0 
+                for i, score in enumerate(row['ObjectEntitiesScore']):
+                    if score <= threshold:
+                        score_index = i
+                        break
+
+                row['ObjectEntities'] =row['ObjectEntities'][:score_index]
+                row['ObjectEntitiesID'] =row['ObjectEntitiesID'][:score_index]
+
+            eval_dict = evaluate.evaluate_list(groud_list, pred_list)[relation]
+            f1 = eval_dict['f1']
+            p = eval_dict['p']
+            r = eval_dict['r']
+            if f1> best_f1:
+                best_f1=f1
+                best_threshold =threshold
+                best_precision= p 
+                best_recal= r
+                best_index= score_index
+                # try_times = 0
+            # else:
+            #     try_times+=1
+            #     if try_times > 3:
+            #         break
+
+  
+        relation_index[relation] = best_index
+        relation_threshold_dict[relation] = best_threshold
+    
+        origin_result_dict[relation]["best_precision"]=best_precision
+        origin_result_dict[relation]["best_recal"]=best_recal
+        origin_result_dict[relation]["best_f1"]=best_f1
+        origin_result_dict[relation]["best_threshold"]=best_threshold
+
+    pred_rows = util.file_read_json_line(args.output_fn)
+    for row in pred_rows:
+        relation = row[config.KEY_REL]
+        row[config.KEY_OBJS] = row[config.KEY_OBJS][:relation_index[relation]]
+        row[config.KEY_OBJS_ID] = row[config.KEY_OBJS_ID][:relation_index[relation]]
+    util.file_write_json_line(args.output_fn+'.ths',pred_rows)
+        #origin_result_dict[relation]["origin_threshold"]=origin_threshold
+
+    with open(rel_thres_fn,'w') as f:
+        json.dump(relation_threshold_dict,f,indent = 2)
+    origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    result_dict = {
+        "args":args.__dict__,
+        "metric":origin_result_dict
+        }
+    util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
+    scores_per_relation_pd = pd.DataFrame(origin_result_dict)
+    print(scores_per_relation_pd.transpose().round(3).to_string(max_cols=12))
+
+
+
+    # for relation, v in best_topk_dict.items():
+    #     print(relation,v[1],v[0], topk_max_dict[relation] )
+    # # print(json.dumps(best_topk_dict, indent=4))
+    # average_f1 = sum(map(lambda x:x[1], best_topk_dict.values()))/ len(best_topk_dict)
+    # print("average_f1",average_f1)
+    #   
 
 if __name__ == "__main__":
     main()

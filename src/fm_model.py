@@ -186,6 +186,7 @@ def train():
                          enhance_tokenizer=enhance_tokenizer, 
                          origin_tokenizer=origin_tokenizer, 
                          recode_type=args.recode_type)
+        
     else:
         bert_model.resize_token_embeddings(len(enhance_tokenizer))
     # else:

@@ -8,7 +8,7 @@ This repository contains dataset for the LM-KBC challenge at ISWC 2023.
 ## run pretrain task with task_recode
 
 ```
-python src/pre_fm_model.py   --train_fn res/pretrain.jsonl  --train_batch_size 16 --gpu  0  --train_epoch 20 --learning_rate 2e-5  --mask_strategy random  --model_load_dir bert-base-cased --model_save_dir bin/pretrain --model_best_dir  bin/pretrain/best_ckpt --token_recode true 
+python src/pre_fm_model.py   --train_fn res/pretrain.jsonl  --train_batch_size 16 --gpu  0  --train_epoch 20 --learning_rate 2e-5  --mask_strategy random  --model_load_dir bert-base-cased --model_save_dir bin/pretrain --model_best_dir  bin/pretrain/best_ckpt --token_recode weight 
 
 ```
 

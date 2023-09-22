@@ -14,6 +14,8 @@ import config
 
 from typing import List, Union, Dict, Any, Optional, Mapping
 import numpy as np
+from tqdm import tqdm
+import pandas as pd
 
 local_cache_path = f'{config.RES_DIR}/item_cache.json'
 local_cache = dict()
@@ -69,20 +71,11 @@ def line_to_json(line: str):
 
 
 def file_read_json_line(data_fn):
-    if os.path.exists(data_fn) and os.path.isfile(data_fn):
-        with open(data_fn, "r") as file:
-            lines = file.readlines()
-            train_data = []
-            for line in lines:
-                train_data.extend(line_to_json(line))
     train_data = []
-    try:
-        with open(data_fn, "r") as file:
-            lines = file.readlines()
-            for line in lines:
-                train_data.append(json.loads (line))
-    except :
-        print(line)
+    with open(data_fn, "r") as file:
+        lines = file.readlines()
+        for line in lines:
+            train_data.append(json.loads (line))
 
     return train_data
 
@@ -392,7 +385,7 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
     # )
     # new_embeddings.padding_idx = embedding_layer.clone()
     print_count= 0
-    if recode_type == 'std':
+    if recode_type == 'weight':
         tw = Token_Weight(origin_tokenizer)
     for entity,index in additional_token_dict.items():
         token_ids = origin_tokenizer.encode(entity,add_special_tokens=False)
@@ -404,10 +397,35 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
 
         # print("old_output",old_output.shape)
         # print("weight",weight.shape)
-        if recode_type == 'std':
-            weight = tw.token_weight(token_ids)
-            new_output = torch.multiply(old_output,weight).sum(dim=0)
-            # new_output = torch.nn.functional.normalize(new_output, p=2, dim=0)
+        if recode_type == 'weight':
+            # weight = tw.token_weight(token_ids)
+            # new_output = torch.multiply(old_output,weight).sum(dim=0)
+            # new_output = torch.nn.functional.normalize(new_output, p=2, dim=1)
+            # if len (token_ids) == 2 and print_count < 10:
+            # # and Fals
+            #     print_count+=1
+            #     print('entity',entity)
+            #     print('tokens',origin_tokenizer.convert_ids_to_tokens(token_ids))
+            #     print('old_output',old_output[:,:5])
+            #     print('weight',weight)
+            #     print('new_output',new_output[:5])
+            #     print()
+            # new_input =  torch.multiply(old_input,weight).sum(dim=0)
+            # new_input = torch.nn.functional.normalize(new_input, p=2, dim=1)
+            # # print('old_cls_bias',old_cls_bias.shape)
+            # new_cls_bias = torch.multiply(old_cls_bias,weight).sum()
+            # # print('new_cls_bias',new_cls_bias.shape)
+            # new_cls_decoder_data =torch.multiply(old_cls_decoder_data,weight).sum(dim=0)
+            # new_cls_decoder_data = torch.nn.functional.normalize(new_cls_decoder_data, p=2, dim=1)
+            def merge_embedding_1(old_embedding,weight):
+                new_embedding = torch.multiply(old_embedding,weight)
+                # new_embedding = torch.nn.functional.normalize(new_embedding, p=2, dim=1)
+                new_embedding=new_embedding.sum(dim=0)
+                new_embedding = torch.nn.functional.normalize(new_embedding,dim=-1)
+                return new_embedding
+
+            weight = tw.token_weight(entity)
+            new_output = merge_embedding_1(old_output,weight)
             if len (token_ids) == 2 and print_count < 10:
             # and Fals
                 print_count+=1
@@ -417,19 +435,20 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
                 print('weight',weight)
                 print('new_output',new_output[:5])
                 print()
-            new_input =  torch.multiply(old_input,weight).sum(dim=0)
-            # new_input = torch.nn.functional.normalize(new_input, p=2, dim=0)
-            # print('old_cls_bias',old_cls_bias.shape)
+            new_input =  merge_embedding_1(old_input,weight)
             new_cls_bias = torch.multiply(old_cls_bias,weight).sum()
             # print('new_cls_bias',new_cls_bias.shape)
-            new_cls_decoder_data =torch.multiply(old_cls_decoder_data,weight).sum(dim=0)
-            # new_cls_decoder_data = torch.nn.functional.normalize(new_cls_decoder_data, p=2, dim=0)
+            new_cls_decoder_data =merge_embedding_1(old_cls_decoder_data,weight)
+
             
         elif recode_type == 'mean':
             new_output =   torch.mean(old_output,0,keepdim = True)
+            new_output = torch.nn.functional.normalize(new_output,dim=-1)
             new_input =  torch.mean(old_input,0,keepdim = True)
+            new_input = torch.nn.functional.normalize(new_input,dim=-1)
             new_cls_bias = torch.mean(old_cls_bias)
             new_cls_decoder_data = torch.mean(old_cls_decoder_data,0,keepdim = True)
+            new_cls_decoder_data = torch.nn.functional.normalize(new_cls_decoder_data,dim=-1)
         elif recode_type == 'min':
             new_output =   torch.min(old_output,0,keepdim = True)[0]
             new_input =  torch.min(old_input,0,keepdim = True)[0]
@@ -440,6 +459,11 @@ def token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origin_to
             new_input =  torch.max(old_input,0,keepdim = True)[0]
             new_cls_bias = torch.max(old_cls_bias)
             new_cls_decoder_data = torch.max(old_cls_decoder_data,0,keepdim = True)[0]
+            new_output = torch.nn.functional.normalize(new_output,dim=-1)
+            new_input = torch.nn.functional.normalize(new_input,dim=-1)
+            new_cls_decoder_data = torch.nn.functional.normalize(new_cls_decoder_data,dim=-1)
+
+            
         else:
             raise Exception('recode_type should be in (max, min, std, mean)')
 
@@ -522,7 +546,7 @@ def opt_token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origi
     # )
     # new_embeddings.padding_idx = embedding_layer.clone()
     print_count= 0
-    if recode_type == 'std':
+    if recode_type == 'weight':
         tw = Token_Weight(origin_tokenizer)
     for entity,index in additional_token_dict.items():
         token_ids = origin_tokenizer.encode(entity,add_special_tokens=False)
@@ -532,8 +556,8 @@ def opt_token_layer(model:transformers.BertForMaskedLM, enhance_tokenizer, origi
 
         # print("old_output",old_output.shape)
         # print("weight",weight.shape)
-        if recode_type == 'std':
-            weight = tw.token_weight(token_ids)
+        if recode_type == 'weight':
+            weight = tw.token_weight(entity)
             new_output = torch.multiply(old_output,weight).sum(dim=0)
             # new_output = torch.nn.functional.normalize(new_output, p=2, dim=0)
             if len (token_ids) == 2 and print_count < 10:
@@ -588,8 +612,21 @@ class Token_Weight:
         self._weight:dict = json.load(open(config.token_count_fp))
         self.origin_tokenizer = origin_tokenizer
 
-    def token_weight(self, token_ids:list):
-        counts = [self._weight[str(tid)] if str(tid) in self._weight else 10000 for tid in token_ids]
+    def _token_weight(self, entity:str):
+        tokens = self.origin_tokenizer.tokenize(entity)
+        if entity.count(' ') > 0:
+            token_ids = self.origin_tokenizer.convert_tokens_to_ids(tokens)
+            return self._token_weight(token_ids)
+        else:
+            weight = [1/len(tokens)]*len(tokens)
+            weight =  torch.tensor(weight,dtype=torch.float32)
+            weight = weight.unsqueeze(1)
+            return weight
+
+    def token_weight(self, entity:str):
+        token_ids = self.origin_tokenizer.encode(entity,add_special_tokens=False)
+        # print('token_ids',token_ids)
+        counts = [self._weight[str(tid)] if str(tid) in self._weight else 1000000 for tid in token_ids]
         count_tensor = torch.tensor(counts,dtype=torch.float32)
 
         # weights = count_tensor/torch.sum(count_tensor)
@@ -600,7 +637,7 @@ class Token_Weight:
         # return weight.unsqueeze(1)
 
         weights = 1/count_tensor
-        weights = weights.pow(1/4)
+        weights = weights.pow(1/8)
         weights = weights/torch.sum(weights)
         return weights.unsqueeze(1)
     
@@ -636,50 +673,140 @@ def str2bool(v):
         return True
     elif v.lower() in ('no', 'false', 'f', 'n', '0'):
         return False
+    
     else:
-        raise argparse.ArgumentTypeError('Boolean value expected.')
+        raise ValueError("Unsupported value type")
  
 
 def rows_to_dict(rows):
     return {(r["SubjectEntity"], r["Relation"]): r for r in rows}
 
 
-if __name__ == "__main__":
-    tw = Token_Weight()
 
+
+
+def adaptive_threshold(args):
+    origin_result_dict = evaluate.evaluate(args.output_fn, args.valid_fn)
+    predefine_fine = 'res/object_number.tsv'
+    with open(predefine_fine) as f:
+        topk = csv.DictReader(f, delimiter="\t")
+        topk_max_dict = { row["Relation"]:eval(row['Val'])[1] for row in topk}
+    threshold_initial_dict = dict()
+    for k,v in topk_max_dict.items():
+        threshold_initial_dict[k] = 1/float(v)
+    pred_rows = util.file_read_json_line(args.output_fn)
+    groud_rows = util.file_read_json_line(args.valid_fn)
+    relation_list_pred = dict()
+    relation_list_groud = dict()
+    best_topk_dict=dict()
+    for row in pred_rows:
+        relation = row['Relation']
+        if relation not in relation_list_pred:
+            relation_list_pred[relation]=[]
+        relation_list_pred[relation].append(row)
+
+    for row in groud_rows:
+        relation = row['Relation']
+        if relation not in relation_list_groud:
+            relation_list_groud[relation]=[]
+        relation_list_groud[relation].append(row)
+
+    relation_threshold_dict = dict()
+    relation_index= dict()
+    # print('threshold_initial_dict',threshold_initial_dict)
+    for relation, pred_list in tqdm(relation_list_pred.items()):
+        groud_list = relation_list_groud[relation]
+        origin_topk = topk_max_dict[relation]
+        best_f1=0
+        best_precision = 0
+        best_recal= 0 
+        origin_threshold = threshold_initial_dict[relation]
+        best_threshold=0
+        threshold_step = 0.01
+        best_index = 100
+        for i in range(1,int(0.5//threshold_step)):
+            threshold = threshold_step*i
+            # try_times=0
+            for row in pred_list:
+                score_index = 0 
+                for i, score in enumerate(row['ObjectEntitiesScore']):
+                    if score <= threshold:
+                        score_index = i
+                        break
+
+                row['ObjectEntities'] =row['ObjectEntities'][:score_index]
+                row['ObjectEntitiesID'] =row['ObjectEntitiesID'][:score_index]
+
+            eval_dict = evaluate.evaluate_list(groud_list, pred_list)[relation]
+            f1 = eval_dict['f1']
+            p = eval_dict['p']
+            r = eval_dict['r']
+            if f1> best_f1:
+                best_f1=f1
+                best_threshold =threshold
+                best_precision= p 
+                best_recal= r
+                best_index= score_index
+                # try_times = 0
+            # else:
+            #     try_times+=1
+            #     if try_times > 3:
+            #         break
+
+  
+        relation_index[relation] = best_index
+        relation_threshold_dict[relation] = best_threshold
+    
+        origin_result_dict[relation]["best_precision"]=best_precision
+        origin_result_dict[relation]["best_recal"]=best_recal
+        origin_result_dict[relation]["best_f1"]=best_f1
+        origin_result_dict[relation]["best_threshold"]=best_threshold
+
+    pred_rows = util.file_read_json_line(args.output_fn)
+    for row in pred_rows:
+        relation = row[config.KEY_REL]
+        row[config.KEY_OBJS] = row[config.KEY_OBJS][:relation_index[relation]]
+        row[config.KEY_OBJS_ID] = row[config.KEY_OBJS_ID][:relation_index[relation]]
+    util.file_write_json_line(args.output_fn+'.ths',pred_rows)
+        #origin_result_dict[relation]["origin_threshold"]=origin_threshold
+
+    with open(rel_thres_fn,'w') as f:
+        json.dump(relation_threshold_dict,f,indent = 2)
+    origin_result_dict["Average"]["best_f1"] =  sum([x["best_f1"] if "best_f1" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_precision"] =  sum([x["best_precision"] if "best_precision" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    origin_result_dict["Average"]["best_recal"] =  sum([x["best_recal"] if "best_recal" in x else 0 for x in origin_result_dict.values()])/(len(origin_result_dict)-1)
+    result_dict = {
+        "args":args.__dict__,
+        "metric":origin_result_dict
+        }
+    util.file_write_json_line(config.RESULT_FN, [result_dict],'auto')
+    scores_per_relation_pd = pd.DataFrame(origin_result_dict)
+    print(scores_per_relation_pd.transpose().round(3).to_string(max_cols=12))
+
+
+
+    # for relation, v in best_topk_dict.items():
+    #     print(relation,v[1],v[0], topk_max_dict[relation] )
+    # # print(json.dumps(best_topk_dict, indent=4))
+    # average_f1 = sum(map(lambda x:x[1], best_topk_dict.values()))/ len(best_topk_dict)
+    # print("average_f1",average_f1)
+    #  
+
+
+if __name__ == "__main__":
     origin_tokenizer = BertTokenizerFast.from_pretrained(config.bert_base_cased)
 
-    word = 'track cyclist'
-    index_list =  origin_tokenizer.encode(word)[1:-1]
-    print(origin_tokenizer.convert_ids_to_tokens(index_list))
-    print(tw.token_weight(index_list))
+    tw = Token_Weight(origin_tokenizer)
+
+
+    word = 'United States of America'
+    # index_list =  origin_tokenizer.encode(word)[1:-1]
+    # print(origin_tokenizer.convert_ids_to_tokens(index_list))
+    print(tw.token_weight(word))
     print()
 
-    word = 'traffic collision'
-    index_list =  origin_tokenizer.encode(word)[1:-1]
-    print(origin_tokenizer.convert_ids_to_tokens(index_list))
-    print(tw.token_weight(index_list))
-    print()
-
-
-    import torch
-    import torch.nn as nn
-
-    # Define a BatchNorm layer
-    batchnorm_layer = nn.InstanceNorm1d(3)  # BatchNorm for 1D data (3 values)
-
-    # Input data (activations after convolution)
-    input_data = torch.tensor([[1.0, 2.0, 3.0],
-                            [4.0, 5.0, 6.0],
-                            [7.0, 8.0, 9.0],
-                            [10.0, 11.0, 12.0]], requires_grad=True)
-
-    # Forward pass through BatchNorm
-    output_data = batchnorm_layer(input_data)
-
-    # Print input and output
-    print("Input Data:")
-    print(input_data)
-    print("\nOutput Data:")
-    print(output_data)
-
+    # word = 'traffic collision'
+    # index_list =  origin_tokenizer.encode(word)[1:-1]
+    # print(origin_tokenizer.convert_ids_to_tokens(index_list))
+    # print(tw.token_weight(index_list))
+    # print()

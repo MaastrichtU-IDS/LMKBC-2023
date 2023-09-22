@@ -611,7 +611,7 @@ def according_test():
 
 
 def token_weight():
-    corpus_fp = 'res/pretrain.jsonl'
+    corpus_fp = 'res/wikidata/silver_val_test/sentence_leval.json'
     lines = util.file_read_json_line(corpus_fp)
     token_count = dict()
     for line in tqdm(lines):
@@ -682,10 +682,10 @@ if __name__ == "__main__":
     # same_id_numer()
     # tokenize()
     # according_test()
-    # token_weight() 
+    token_weight() 
     # find_sentences()
     # print(sum([0,0,1]))
     # print_result()
     # print_relation_entity_type()
-    entity_analysis()
+    # entity_analysis()
 
